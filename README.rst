@@ -28,7 +28,7 @@ It is assumed that you have ``Python``, ``pip`` and ``venv`` installed.
 
     python -m venv .venv
     ./venv/Scripts/Activate.ps1
-    python -m install -r Requirements.txt
+    python -m pip install -r Requirements.txt
 
 Requirements
 ------------
@@ -50,7 +50,7 @@ You can then install packages using pip with:::
 This is the from that will be used in the rest of this document, but Windows users should keep in mind that the following
 form is recommended for them instead:::
 
-    python -m pip install
+    python -m pip install [package_name]
 
 Virtual environment
 -------------------
@@ -86,7 +86,7 @@ In order to run the development server, run the command::
 During development it is advised to run in debug mode in order to automatically restart the server after code changes
 and catch tracebacks. However, never do this in a deployment environment.
 
-The ``--app prohistonedb`` can be left out by setting the environment variable ``FLASK_APP``.
+The ``--app prohistonedb`` part can be left out of the command by setting the environment variable ``FLASK_APP``.
 
 When the server is running, by default it is bound to the localhost (127.0.0.1) with port 5000.
 
