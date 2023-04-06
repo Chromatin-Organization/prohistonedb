@@ -11,28 +11,34 @@ Installation
 TL;DR
 -----
 It is assumed that you have ``Python``, ``pip`` and ``venv`` installed.
-.. code-block::
+- Linux or macOS in a bash shell:
+    pythom -m venv .venv
+    .venv/Scripts/activate
+    pip install -r Requirements.txt
+- Windows in a cmd shell:
+    python -m venv .venv
+    .venv/Scripts/activate.bat
+    python -m pip install -r Requirements.txt
+- Windows in a PowerShell shell:
+    python -m venv .venv
+    ./venv/Scripts/Activate.ps1
+    python -m install -r Requirements.txt
 
 Requirements
 ------------
 First and foremost python needs to be installed on your system. How to install python depends on your Operating System.
 In principle |python min| should work. However, the lowest version that has been tested is |python tested|.
 You can determine the installed version of python as follows:
-.. code-block::
     python --version
 
 ``pip`` is the package manager for python. In most cases it comes with your installation, but you can verify it is
 installed using:
-.. code-block::
     pip --version
-
 You can then install packages using pip with:
-.. code-block::
     pip install [package_name]
 
 This is the from that will be used in the rest of this document, but Windows users should keep in mind that the following
 form is recommended for them instead:
-.. code-block::
     python -m pip install
 
 Virtual environment
@@ -41,7 +47,6 @@ We recommend using a virtual environment to install al the dependencies for the 
 using the ``venv`` package. ``venv`` can be installed using ``pip``.
 
 Once installed, a new virtual environment can be created as follows:
-.. code-block::
     python -m venv /path/to/venv
 
 We recommend creating a local directory ``.venv`` to store your virtual environment.
@@ -54,7 +59,6 @@ Requirements.txt
 ----------------
 The file ``Requirements.txt`` contains all the information that pip needs in order install the required packages.
 To perform this installation, use the command:
-.. code-block::
     pip install -r Requirements.txt
 
 Currently this file also contains packages used for the purpose of development and testing. In future these might be 
@@ -63,7 +67,6 @@ separated from the packages required for deployment.
 Usage
 =====
 In order to run the development server, run the command
-.. code-block::
     flask --app prohistonedb run
 
 During development it is advised to run in debug mode in order to automatically restart the server after code changes
