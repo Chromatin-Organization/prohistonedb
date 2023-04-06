@@ -1,0 +1,4 @@
+{
+    "DATABASE": "index.sqlite",
+    "METADATA_JSON": "db.json"
+}

@@ -1,0 +1,12 @@
+{% extends "base.html.j2" %}
+{% block content %}
+  <header><h1>HistoneDB</h1></header>
+  <form method="get" action="{{ url_for('search.index') }}">
+    <input type="search" name="query" id="query">
+    <input type="submit" value="Search">
+  </form>
+  <article>
+    <h2>Background</h2>
+    <p>Text.</p>
+  </article>
+{% endblock %}
