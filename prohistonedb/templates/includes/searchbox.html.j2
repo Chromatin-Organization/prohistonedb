@@ -1,6 +1,9 @@
+{# * NOTE (Tim): I have replaced the POST request type with a GET request type for now. #}
+{# ?             Do we want this as a POST or GET request? #}
+{# ! FIXME: filter options inconsistent with the navigation bar's search functionality! #}
 <div class="container col-lg-8 col-sm-12 mx-auto mt-5">
     <div class="position-relative border-radius-xl bg-white shadow mb-3 px-4 gx-5 pt-4 pb-3">
-        <form name="search" method="POST" action="{{url_for('search')}}">
+        <form name="search" method="GET" action="{{url_for('search.index')}}"> 
           <div class="input-group mb-1">
             {# * not yet sure whether to use a standard select dropdown or Bootstrap version (disabled below) #}
             {#
@@ -42,7 +45,7 @@
             {# TODO: use actual IDs from the database #}
             <span class="badge bg-light text-dark">UP000027093</span>{# example protein id #}
             <span class="badge bg-light text-dark">KCZ72620.1</span>{# example gen id #}
-            <span class="badge bg-light text-dark"><a href="/entry/A0A7X6DRI5">A0A7X6DRI5</a></span>{# example Uniprot id #}
+            <span class="badge bg-light text-dark"><a href="{{url_for('main.entry', uniprotID = 'A0A7X6DRI5')}}">A0A7X6DRI5</a></span>{# example Uniprot id #}
             <span class="badge bg-light text-dark">Candidatus Diapherotrites archaeon</span>{# example organism #}
           </div>
         </div>

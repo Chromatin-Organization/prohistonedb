@@ -152,7 +152,7 @@
                     {# single entry; loop this section #}
                     {% for r in result %}
                     <div class="row mt-3 mb-5 result-item">
-                        <h4><a href="/entry/{{r.uniprotID}}">{{r.organism}} {{r.uniprotID}}</a></h4>
+                        <h4><a href="{{ url_for('main.entry', uniprotID=r.uniprotID) }}">{{r.organism}} {{r.uniprotID}}</a></h4>
                         <div class="row">
                             <div class="col-sm-3 label"><span>Protein</span></div>
                             <div class="col-sm-9 value">
@@ -168,7 +168,7 @@
                         <div class="row">
                             <div class="col-sm-3 label"><span>Source organism</span></div>
                             <div class="col-sm-9 value">
-                                <span class="mb-0 float-start me-2">AAABBBCCC</span><span class="link"><a href="/search?organism=bla">Search this organism</a></span>
+                                <span class="mb-0 float-start me-2">AAABBBCCC</span><span class="link"><a href="{{ url_for('search.index', organism='bla') }}">Search this organism</a></span>
                             </div>
                         </div>
                     </div>

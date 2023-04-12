@@ -1,4 +1,5 @@
 {# ? navigation links hardcoded: do we need a menu tree table? #}
+{# ? NOTE (Tim): Do you mean in the sqlite database? Or do you mean as a parameter from the back-end in general? #}
 <ul class="navbar-nav navbar-nav-hover ms-auto">
     <li class="nav-item dropdown dropdown-hover mx-2">
       <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
@@ -9,7 +10,7 @@
       <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3"
       aria-labelledby="dropdownMenuPages">
       <div class="d-none d-lg-block">
-        <a href="{{url_for('categories_overview')}}" class="dropdown-item border-radius-md">
+        <a href="{{url_for('main.categories')}}" class="dropdown-item border-radius-md">
           <h6 class="dropdown-header px-0">Categories overview</h6>
         </a>
         {% for cat in categories %}
@@ -22,7 +23,7 @@
     </li>
 
     <li class="nav-item mx-2">
-      <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="MenuDocs" aria-expanded="false" href="{{url_for('pages_about')}}">
+      <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="MenuDocs" aria-expanded="false" href="{{url_for('main.about')}}">
         About
       </a>
     </li>

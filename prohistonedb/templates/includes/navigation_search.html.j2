@@ -11,7 +11,10 @@
           </a>
 
           {# TODO: decide whether to use an integrated search bar or separate element (also: separate template block file?) #}
-          <form class="w-60 d-none d-lg-block" name="search" method="GET" action="{{url_for('search')}}">
+          {# ? NOTE (Tim): Wouldn't it be better to include this extra searchbar in 'navigation.html.j2'? #}
+          {# ?             Then use a jinja if statement to determine wether it should be added or not? #}
+          {# ?             That way 1 navigation bar template would be enough. #}
+          <form class="w-60 d-none d-lg-block" name="search" method="GET" action="{{url_for('search.index')}}">
             <div class="input-group w-70 float-end">
               <select class="btn btn-sm btn-primary dropdown-toggle mb-0" name="filter" data-bs-toggle="dropdown">
                 <option value="all" selected>All types</option>
@@ -39,7 +42,7 @@
             </span>
           </button>
           <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-20" id="navigation">
-            {% include 'includes/menu-list.html.j2' %}
+            {% include 'includes/menu_list.html.j2' %}
           </div>
         </div>
       </nav>

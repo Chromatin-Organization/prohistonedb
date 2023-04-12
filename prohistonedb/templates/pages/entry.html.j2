@@ -2,17 +2,14 @@
 
 {# TODO: move data path setting to cofig.json #}
 {# TODO: implement data retrievel in back-end and remove dummy data. #}
-{# * data folder assumed to be located in /static for now, but could be changed to somewhere more logical #}
-{% set relPath = "data/" + uniprotID + "/" + uniprotID + multimerPath %}
-{% set imgPath = relPath + "/" + uniprotID %}
-
-{# * set some demo variables (will eventually be passed as args through views.py) #}
+{# * set some demo variables (will eventually be passed as args by the back-end) #}
 {% set organism = "Candidatus Diapherotrites archaeon" %}
 {% set gene = "AIC15241.1" %}
 {% set sequenceLength = 74 %}
 {% set model_order = [] %}
 
 {# * note: "entry" URL without arguments should redirect to /hexamer/rank_1 => will be replaced with dynamic updates #}
+{# * NOTE (Tim): I can take care probably take care of most of this logic in the back-end. #}
 {% if multimer is undefined %}
     {%  set multimerPath = "" %}
 {% elif multimer == "monomer" %}
@@ -20,6 +17,12 @@
 {% else %}
     {% set multimerPath = "_" + multimer %}
 {% endif %}
+
+{# * data folder assumed to be located in /static for now, but could be changed to somewhere more logical #}
+{# * NOTE (Tim): The folder with the raw data will most likely be stored within the 'instance' folder. #}
+{# *        As for the path to the entry's directory, this should be surved by the back-end. #}
+{% set relPath = "data/" + uniprotID + "/" + uniprotID + multimerPath %}
+{% set imgPath = relPath + "/" + uniprotID %}
 
 {# hexamers are too complex for relaxed optimization, so using unrelaxed #}
 {% if multimer == "hexamer" %}
@@ -142,7 +145,7 @@
                     <div class="pb-1 row">
                         <div class="col-sm-3 label"><span>Source organism</span></div>
                         <div class="col-sm-9 value">
-                            <span class="mb-0 float-start me-2">AAABBBCCC</span><span class="link"><a href="/search?q=bla">Search this organism</a></span>
+                            <span class="mb-0 float-start me-2">AAABBBCCC</span><span class="link"><a href="{{ url_for('search.index', organism='bla') }}">Search this organism</a></span>
                         </div>
                     </div>
                     <div class="pb-1 row">
@@ -154,7 +157,7 @@
                     <div class="pb-1 row">
                         <div class="col-sm-3 label"><span>UniProt</span></div>
                         <div class="col-sm-9 value">
-                            <span class="mb-0 float-start me-2">{{uniprotID}}</span><span class="link"> <a href="{{'https://www.uniprot.org/uniprotkb/' + uniprotID + '/entry'}}">go to UniProt</a></span>
+                            <span class="mb-0 float-start me-2">{{uniprotID}}</span><span class="link"> <a href="https://www.uniprot.org/uniprotkb/{{uniprotID}}/entry">go to UniProt</a></span>
                         </div>
                     </div>
                     <div class="pb-1 row">
@@ -296,6 +299,7 @@
         </div>
     </section>
 
+    {# !FIXME: Some of the DOI links aren't working. (Mitchel A.L. et al. & Mirdita M. et al.) #}
     <section id="attribution" class="pb-2 position-relative bg-gradient-dark mx-n3">
         <div class="container">
             <div class="row">
@@ -340,7 +344,7 @@
         // get model order from config.json 
         // => UPDATE: this is not the way. model_order is just the order in which AlphaFold runs the predictions, not a ranking.
         // TODO: retrieve from new histonedb metadata "branch"
-        //? NOTE (Tim): is that fetch statement working? Shouldn't some of those quotes be escaped?
+        //? NOTE (Tim): is that fetch statement working? Shouldn't some of those quotes either be escaped or changed into double quotes?
         //? NOTE (Tim): Isn't it easier if this information is served by the back-end?
         fetch('{{ url_for('static', filename = relPath + '/config.json') }}')
             .then(response => response.json())

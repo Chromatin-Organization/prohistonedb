@@ -40,5 +40,5 @@ def about():
 
 #? NOTE (Tim): I shortened the URL since we only have one categories page for now. For trailing slash see above note.
 @bp.route('/categories')
-def categories_overview():
+def categories():
   return flask.render_template('pages/categories.html.j2')
