@@ -1,0 +1,64 @@
+{% extends 'layouts/base.html.j2' %}
+
+
+{% block title %} {{siteName}} {% endblock title %}
+
+{% block body %} class="index-page bg-gray-200" {% endblock body %}
+
+{% block content %}
+
+</div></div></div>
+
+<header>
+  <div class="page-header min-vh-75 relative" style="background-image: url('{{ url_for('static', filename = 'assets/img/generative-circles-header.png' )}}'); background-repeat: no-repeat !important">
+    <span class="mask bg-gradient-secondary opacity-6"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-white pt-3 mt-n5">{{siteName}}</h1>
+          <p class="lead text-white mt-3">A database of prokaryotic histone structures predicted by AlphaFold. <br/> ProHistoneDB currently contains around 6000 histones.</p>
+        </div>
+      </div>
+
+      {% include 'includes/searchbox.html.j2' %}
+  
+  </div>
+</div>
+</header>
+
+{# main container card #}
+<div class="card card-body mx-3 mx-md-4 mt-n6">
+  <section class="my-3">
+    <!-- structure / views options -->
+    <div class="container">              
+      <div class="row py-3 mt-3">
+          <div class="col-12">
+            <h3>Background</h3>
+            <p>Abstract of "about" page.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+</div>
+
+{% endblock content %}
+
+{% block javascripts %}
+
+<!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
+<script src="{{ url_for('static', filename = 'assets/js/plugins/choices.min.js' )}}"></script>
+
+<script>
+  // update Bootstrap select dropdown button label with selected option
+  window.addEventListener('DOMContentLoaded', e => {
+    document.querySelectorAll("#searchSelect .dropdown-item").forEach(el => {
+      el.addEventListener('click', e => {
+        const toggle = document.querySelector('#searchSelect .dropdown-toggle');
+        toggle.innerHTML = e.target.innerHTML;
+      });
+    });
+  });
+</script>
+
+{% endblock javascripts %}

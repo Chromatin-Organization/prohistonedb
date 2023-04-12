@@ -1,0 +1,37 @@
+{% extends 'layouts/base.html.j2' %}
+
+
+{% block title %} {{siteName}} About {% endblock title %}
+{% block body %} class="about-us bg-gray-200" {% endblock body %}
+
+{% block header %}
+
+{% include 'includes/navigation_search.html.j2' %}
+
+{% endblock header %}
+
+{% block content %}
+
+  <header class="bg-gradient-dark">
+    <div class="page-header" style="background-image: url('{{url_for('static', filename = 'assets/img/generative-circles-header.png' )}}')">
+      <span class="mask bg-gradient-secondary opacity-6"></span>
+      <div class="container">
+        <div class="row justify-content-start">
+          <div class="col-lg-8 my-auto">
+            <h2 class="text-white">About the {{siteName}} database</h2>
+            <p class="lead mb-4 text-white opacity-8">intro text.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="card card-body mx-3 mx-md-4 mt-n6">
+    <p>Some paragraphs.</p>
+   
+  </div>
+  {% endblock content %}
+
+  {% block javascripts %}
+  {% endblock javascripts %}

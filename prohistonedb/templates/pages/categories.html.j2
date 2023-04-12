@@ -1,0 +1,52 @@
+{% extends 'layouts/base.html.j2' %}
+
+
+{% block title %} {{siteName}} Category overview {% endblock title %}
+{% block body %} class="about-us bg-gray-200" {% endblock body %}
+
+{% block header %}
+
+{% include 'includes/navigation_search.html.j2' %}
+
+{% endblock header %}
+
+{% block content %}
+
+  <header class="bg-gradient-dark">
+    <div class="page-header" style="background-image: url('{{ url_for('static', filename = 'assets/img/generative-circles-header.png' )}}')">
+      <span class="mask bg-gradient-secondary opacity-6"></span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 mx-auto my-auto">
+            <h2 class="text-white">Categories overview</h2>
+            <p class="lead mb-4 text-white opacity-8">...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="card card-body mx-3 mx-md-4 mt-n6">
+    <section class="py-7">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div class="row justify-content-start">
+              <div class="col-md-12">
+                <h3>2d cluster representation of ProHistone database</h3>
+                <p>...</p>
+              </div>
+              <div class="col-md-12 text-center">
+                <img src="{{url_for('static', filename = 'assets/img/2d_clusters.png')}}" class="col-md-9">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+  </div>
+  {% endblock content %}
+
+  {% block javascripts %}
+  {% endblock javascripts %}

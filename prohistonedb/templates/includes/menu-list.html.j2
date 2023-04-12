@@ -1,0 +1,29 @@
+{# ? navigation links hardcoded: do we need a menu tree table? #}
+<ul class="navbar-nav navbar-nav-hover ms-auto">
+    <li class="nav-item dropdown dropdown-hover mx-2">
+      <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        Categories
+        <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}" alt="down-arrow" class="arrow ms-auto ms-md-2">
+      </a>
+      <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3"
+      aria-labelledby="dropdownMenuPages">
+      <div class="d-none d-lg-block">
+        <a href="{{url_for('categories_overview')}}" class="dropdown-item border-radius-md">
+          <h6 class="dropdown-header px-0">Categories overview</h6>
+        </a>
+        {% for cat in categories %}
+          <a href="#" class="dropdown-item border-radius-md">
+            <span>{{cat}}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    </li>
+
+    <li class="nav-item mx-2">
+      <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="MenuDocs" aria-expanded="false" href="{{url_for('pages_about')}}">
+        About
+      </a>
+    </li>
+  </ul>

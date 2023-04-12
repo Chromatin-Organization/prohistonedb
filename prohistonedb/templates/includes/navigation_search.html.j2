@@ -1,0 +1,49 @@
+{# TODO: highlight current page in menu #}
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0">
+  <div class="row">
+    <div class="col-12">
+      <nav
+        class="navbar navbar-expand-lg  blur border-radius-xl top-0 mt-4 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand font-weight-bolder ms-sm-3" href="/">
+            {{siteName}}
+          </a>
+
+          {# TODO: decide whether to use an integrated search bar or separate element (also: separate template block file?) #}
+          <form class="w-60 d-none d-lg-block" name="search" method="GET" action="{{url_for('search')}}">
+            <div class="input-group w-70 float-end">
+              <select class="btn btn-sm btn-primary dropdown-toggle mb-0" name="filter" data-bs-toggle="dropdown">
+                <option value="all" selected>All types</option>
+                <option disabled>---------------------</option>
+                <option value="uniprotID">UniProt ID</option>
+                <option value="taxonomy">Taxonomy</option>
+                <option value="organism">Organism</option>
+                <option value="genID">Gen ID</option>
+                <option value="sequence">Sequence</option>
+              </select>
+              <input type="text" class="form-control bg-light ps-3"  name="q" placeholder="Search" maxlength="40" />
+              <span class="input-group-text border-0 pe-3 w-6" style="z-index: 9">
+                <i class="fas fa-search" id="search-icon"></i>
+              </span>
+            </div>
+          </form>
+
+          <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon mt-2">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-20" id="navigation">
+            {% include 'includes/menu-list.html.j2' %}
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+    </div>
+  </div>
+</div>

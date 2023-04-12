@@ -1,0 +1,221 @@
+/* overridden Bootstrap / Material UI styles */
+// body { background-color: $fresh-gray-mid !important }
+header h1, header h2 {
+    text-shadow: $text-shadow-lg;
+}
+header p {
+    text-shadow: $text-shadow;
+}
+h3 { font-size: $font-size-2xl }
+
+/* a more recognisable font for branding */
+.navbar .navbar-brand,
+.footer .footer-brand {
+    font-family: "Roboto Slab" !important;
+}
+
+/* hamburger menu */
+.navbar-toggler {
+    border: 0 !important;
+}
+
+.card { box-shadow: none }
+
+// remove pager circles
+.page-link { border: none }
+.page-link.active, .active > .page-link {
+    color: $white;
+    background-color: $primary;
+}
+
+// easier to just redefine btn-primary etc. colors
+.btn-alert { 
+    background-color: $orangey;
+    color: $white;
+
+    &:hover {
+        background-color: $orangey;
+        color: $white;
+        box-shadow: $box-shadow-secondary;
+    }
+}
+
+/* align header items on non-front pages normally? */
+.entry .page-header {
+    align-items: normal;
+}
+.page-header { 
+    background-repeat: repeat;
+    min-height: 60vh;
+}
+.search .page-header { min-height: 360px }
+
+.glossy { background: $gray-blue-gradient !important }
+.header-plain { background-color: $gray-turqoise }
+
+/* thinner bottom border/line for active form elements */
+.input-group.input-group-dynamic .form-control, .input-group.input-group-dynamic .form-control:focus, .input-group.input-group-static .form-control, .input-group.input-group-static .form-control:focus {
+    background-image: linear-gradient(0deg, $primary 1px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, #d2d2d2 1px, rgba(209, 209, 209, 0) 0);
+    border-radius: 0 !important;
+}
+
+.input-group input.form-control {
+    border-top-right-radius: $border-radius-lg !important;
+    border-bottom-right-radius: $border-radius-lg !important;
+}
+
+select.dropdown-toggle::after {
+    content: "\f107";
+    font: normal normal normal 14px/1 FontAwesome;
+    border: none;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+.nav-pills .nav-link.active { 
+    background-color: $primary;
+    color: $white;
+}
+
+// force mini scrollbar'd area (uses perfect-scrollbar.js)
+#filter-category-container {
+    height: 124px;
+    padding-top: 0.4em;
+    //border-radius: 0.5em;
+    //border: 1px solid $gray-300;
+    overflow-y: scroll;
+    box-shadow: 0 20px 10px -21px rgba(0,0,0,0.2) inset, 0 -20px 10px -21px rgba(0,0,0,0.2) inset;
+}
+// set scrollbar thumb to visible at all times
+.ps__rail-x,
+.ps__rail-y {
+  opacity: 0.6;
+}
+
+.filter-num {
+    color: $font-color;
+    background-color: $gray-100;
+    font-size: $font-size-xs;
+    font-weight: 400;
+    margin-top: .2rem;
+    padding: .25rem .6rem;
+    margin-left: 3px;
+}
+
+.result-item {
+    .label {
+        font-weight: $font-weight-bold;
+    }
+}
+
+#information {
+    .label {
+        font-size: $font-size-base;
+        color: $white;
+        font-weight: $font-weight-bold;
+    }
+
+    .value {
+        font-size: $font-size-base;
+        color: $white;
+        font-weight: normal;
+    }
+
+    a {
+        text-decoration: underline;
+        color: $white;
+    }
+
+    ul.lineage-path { 
+        list-style: none;
+        margin-left: -2rem;
+    
+        li {
+            display: inline;
+
+            &.hidden-True { display: none }
+        }
+    }
+
+    .lineage-path li:not(:last-child):after {
+        content: " > ";
+    }
+}
+
+/* HistoneDB styles */
+.legend-color {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.legend-label {
+    font-weight: $font-weight-normal;
+    font-size: $font-size-base;
+    line-height: 2.3em;
+    margin-left: 10px;
+}
+
+/* Molstar viewer */
+#viewer-container { 
+    overflow: hidden;
+    border-radius: $border-radius-xl;
+}
+
+#mspViewer {
+    display: block;
+    width: calc(100% + 315px); // change for small screens
+    height: 80vh;
+    position: relative;
+}
+
+.msp-plugin .msp-viewport {
+    background-color: #fff !important;
+}
+.msp-plugin .msp-layout-standard,
+.msp-plugin .msp-layout-top,
+.msp-plugin .msp-layout-right {
+    border: none !important;
+}
+.msp-plugin { border-radius: $border-radius-xl }
+.msp-plugin .msp-layout-top,
+.msp-plugin .msp-sequence { 
+    border-top-left-radius: $border-radius-xl;
+    border-top-right-radius: $border-radius-xl;
+}
+.msp-plugin canvas {
+    border-bottom-left-radius: $border-radius-xl;
+    border-bottom-right-radius: $border-radius-xl
+}
+
+#pae-container {
+    width: 242px;
+    height: 200px;
+    overflow: hidden;
+    background-size: 1500px; // scale to 1/2
+
+    /* at 1/2 size */
+    &.r1 { background-position: -157px 0 }
+    &.r2 { background-position: -397px 0 }
+    &.r3 { background-position: -638px 0 }
+    &.r4 { background-position: -878px 0 }
+    &.r5 { background-position: -1120px 0 }
+}
+
+#coverage-container,
+#plddt-container {
+    width: 800px;
+    height: 500px;
+    background-size: 800px;
+}
+
+#attribution p a,
+#group-information a {
+    color: $white;
+    opacity: .6;
+
+    &:hover { 
+        color: $primary;
+        opacity: 1;
+    }
+}

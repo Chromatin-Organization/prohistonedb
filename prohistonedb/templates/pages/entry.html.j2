@@ -1,0 +1,385 @@
+{% extends 'layouts/base.html.j2' %}
+
+{# TODO: move data path setting to cofig.json #}
+{# TODO: implement data retrievel in back-end and remove dummy data. #}
+{# * data folder assumed to be located in /static for now, but could be changed to somewhere more logical #}
+{% set relPath = "data/" + uniprotID + "/" + uniprotID + multimerPath %}
+{% set imgPath = relPath + "/" + uniprotID %}
+
+{# * set some demo variables (will eventually be passed as args through views.py) #}
+{% set organism = "Candidatus Diapherotrites archaeon" %}
+{% set gene = "AIC15241.1" %}
+{% set sequenceLength = 74 %}
+{% set model_order = [] %}
+
+{# * note: "entry" URL without arguments should redirect to /hexamer/rank_1 => will be replaced with dynamic updates #}
+{% if multimer is undefined %}
+    {%  set multimerPath = "" %}
+{% elif multimer == "monomer" %}
+    {%  set multimerPath = "" %}
+{% else %}
+    {% set multimerPath = "_" + multimer %}
+{% endif %}
+
+{# hexamers are too complex for relaxed optimization, so using unrelaxed #}
+{% if multimer == "hexamer" %}
+    {% set relaxedType = "unrelaxed" %}
+{% else %}
+    {% set relaxedType = "relaxed" %}
+{% endif %}
+
+{% if rank is undefined %}
+    {%  set rank = "rank_1" %}
+{% endif %}
+
+{# convert (cast) string to int #}
+{% set rankID = (rank.strip("rank_") | int) %}
+
+
+{% 
+    set lineage = [
+                {
+                    "scientificName": "Nitrososphaera viennensis",
+                    "taxonId": 1034015,
+                    "rank": "species",
+                    "hidden": true
+                },
+                {
+                    "scientificName": "Nitrososphaera",
+                    "taxonId": 497726,
+                    "rank": "genus",
+                    "hidden": false
+                },
+                {
+                    "scientificName": "Nitrososphaeraceae",
+                    "taxonId": 1033997,
+                    "rank": "family",
+                    "hidden": false
+                },
+                {
+                    "scientificName": "Nitrososphaerales",
+                    "taxonId": 1033996,
+                    "rank": "order",
+                    "hidden": false
+                },
+                {
+                    "scientificName": "Nitrososphaeria",
+                    "taxonId": 1643678,
+                    "rank": "class",
+                    "hidden": false
+                },
+                {
+                    "scientificName": "Thaumarchaeota",
+                    "taxonId": 651137,
+                    "rank": "phylum",
+                    "hidden": false
+                },
+                {
+                    "scientificName": "TACK group",
+                    "taxonId": 1783275,
+                    "rank": "no rank",
+                    "hidden": true
+                },
+                {
+                    "scientificName": "Archaea",
+                    "taxonId": 2157,
+                    "rank": "superkingdom",
+                    "hidden": false
+                },
+                {
+                    "scientificName": "cellular organisms",
+                    "taxonId": 131567,
+                    "rank": "no rank",
+                    "hidden": true
+                }
+            ]
+%}
+{%  set lineageRev = lineage.reverse() %}
+{# end demo variables #}
+
+
+{% block title %} {{siteName}} {{uniprotID}} {% endblock title %}
+
+{% block molstar %}
+    <script src="https://cdn.jsdelivr.net/npm/molstar@3.31.4/build/viewer/molstar.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/molstar@3.31.4/build/viewer/molstar.min.css" rel="stylesheet">
+{% endblock molstar %}
+
+{% block body %} class="entry bg-gray-200" {% endblock body %}
+
+{% block header %}
+    {% include 'includes/navigation_search.html.j2' %}
+{% endblock header %}
+
+{% block content %}
+
+<header>
+    <div class="page-header min-height-600 relative header-plain">
+      <div class="container">
+
+        <div class="container mt-8 opacity-9">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-white pt-3">{{ organism + " " + uniprotID }}</h2>
+                </div>
+            </div>
+            <div id="information" class="row">
+                <div class="col-12">
+                    <h3 class="text-white pt-3">Information</h3>
+
+                    <div class="pb-1 row">
+                        <div class="col-sm-3 label"><span>Protein</span></div>
+                        <div class="col-sm-9 value">
+                            <span class="mb-0">{{organism}}</span>
+                        </div>
+                    </div>
+                    <div class="pb-1 row">
+                        <div class="col-sm-3 label"><span>Gene</span></div>
+                        <div class="col-sm-9 value">
+                            <span class="mb-0">{{gene}}</span>
+                        </div>
+                    </div>
+                    <div class="pb-1 row">
+                        <div class="col-sm-3 label"><span>Source organism</span></div>
+                        <div class="col-sm-9 value">
+                            <span class="mb-0 float-start me-2">AAABBBCCC</span><span class="link"><a href="/search?q=bla">Search this organism</a></span>
+                        </div>
+                    </div>
+                    <div class="pb-1 row">
+                        <div class="col-sm-3 label"><span>Amino acids</span></div>
+                        <div class="col-sm-9 value">
+                            <span class="mb-0">{{sequenceLength}} AA</span>
+                        </div>
+                    </div>
+                    <div class="pb-1 row">
+                        <div class="col-sm-3 label"><span>UniProt</span></div>
+                        <div class="col-sm-9 value">
+                            <span class="mb-0 float-start me-2">{{uniprotID}}</span><span class="link"> <a href="{{'https://www.uniprot.org/uniprotkb/' + uniprotID + '/entry'}}">go to UniProt</a></span>
+                        </div>
+                    </div>
+                    <div class="pb-1 row">
+                        <div class="col-sm-3 label"><span>Lineage</span></div>
+                        <div class="col-sm-9 value">
+                            <span class="mb-0">
+                                <ul class="lineage-path">
+                                    {% for line in lineage %}
+                                        {% if line.hidden|e != "True" %}
+                                            <li><a href="https://uniprot.org/taxonomy/{{line.taxonId|e}}">{{line.scientificName|e}}</a></li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </div><!-- end page header -->
+  
+  <div class="card card-body mx-3 mx-md-4 mt-n6">
+    <section class="my-3">
+        <!-- structure / views options -->
+        <div class="container">              
+            <div class="row py-3 mt-3">
+                <div class="col-10 start-0">
+                    <div class="dropdown float-start me-2">
+                        <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Hexamer
+                        </a>
+
+                        <ul id="select_multimer" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            {# ? rank in link depends on rank select setting? #}
+                            {# TODO: list will be built up depending on multimer variants per structure #}
+                            <li><a class="dropdown-item" href="#">Monomer</a></li>
+                            <li><a class="dropdown-item" href="#">Dimer</a></li>
+                            <li><a class="dropdown-item" href="#">Tetramer</a></li>
+                            <li><a class="dropdown-item" href="#">Hexamer</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown float-start">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Rank 1
+                        </a>
+
+                        <ul id="select_rank" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item option-1" href="#">Rank 1</a></li>{# TODO: add "(model X)" to label (via config.json)? #}
+                            <li><a class="dropdown-item option-2" href="#">Rank 2</a></li>
+                            <li><a class="dropdown-item option-3" href="#">Rank 3</a></li>
+                            <li><a class="dropdown-item option-4" href="#">Rank 4</a></li>
+                            <li><a class="dropdown-item option-5" href="#">Rank 5</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dropdown col-2 float-end">
+                    <a class="btn btn-secondary dropdown-toggle float-end" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        Download
+                    </a>
+                    {# * on-the-fly file zipping: https://huynvk.dev/blog/download-files-and-zip-them-in-your-browsers-using-javascript #}
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">All structure data (zipped)</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container my-3">
+            <div class="row">
+                <!-- sidebar left -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <h3>3D viewer</h3>
+                    <div class="viewer-legend py-3">
+                        <h5>Model confidence:</h5>
+                        <div>
+                            <span class="legend-color" style="background-color: rgb(0, 83, 214);">&nbsp;</span>
+                            <span class="legend-label">Very high (pLDDT &gt; 90)</span>
+                        </div>
+                        <div>
+                            <span class="legend-color" style="background-color: rgb(101, 203, 243);">&nbsp;</span>
+                            <span class="legend-label">Confident (90 &gt; pLDDT &gt; 70)</span>
+                        </div>
+                        <div>
+                            <span class="legend-color" style="background-color: rgb(255, 219, 19);">&nbsp;</span>
+                            <span class="legend-label">Low (70 &gt; pLDDT &gt; 50)</span>
+                        </div>
+                        <div>
+                            <span class="legend-color" style="background-color: rgb(255, 125, 69);">&nbsp;</span>
+                            <span class="legend-label">Very low (pLDDT &lt; 50)</span>
+                        </div>
+                    </div>
+                    <p>
+                        AlphaFold produces a per-residue confidence score (pLDDT) between 0 and 100. Some regions below 50 pLDDT may be unstructured in isolation.
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row mt-3">
+                        <div id="viewer-container" class="col-lg-12"><!-- mask right sidebar Molstar viewer -->
+                            <div id="mspViewer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-lg-3">
+                    <h3>Sequence coverage &<br/>local confidence (LDDT)</h3>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row mt-3">
+                        <div class="columns medium-9">
+                            <div id="coverage-container" class="mx-auto" style="background-image: url('{{ url_for('static', filename = imgPath + '_coverage.png') }}')"></div>
+                            <div id="plddt-container" claSS="mx-auto" style="background-image: url('{{ url_for('static', filename = imgPath + '_plddt.png') }}')"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-lg-3">
+                    <h3>Predicted aligned error</h3>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row mt-3">
+                        <div id="pae-view" class="columns medium-9">
+                            <div id="pae-container" class="r{{rankID}} mx-auto" style="background-image: url('{{ url_for('static', filename = imgPath + '_PAE.png') }}')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="attribution" class="pb-2 position-relative bg-gradient-dark mx-n3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 text-start mb-5 mt-5">
+                    <h3 class="text-white z-index-1 position-relative">License and attribution</h3>
+                    <p class="text-white mt-5">
+                        Data is available for academic and commercial use, under a <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a> licence.
+                    </p>
+                    <p class="text-white">If you make use of a {{siteName}} prediction, please cite the following papers:</p>
+                    <p class="text-white">
+                        <a href="https://doi.org/10.1038/s41592-022-01488-1">Mirdita M et al. ColabFold - Making Protein folding accessible to all. <em>Nature</em> (2022)</a><br/>
+                        <a href="https://www.biorxiv.org/content/10.1101/2021.10.04.463034v2">Evans R et al. Protein complex prediction with AlphaFold-Multimer. <em>bioRxiv</em> (2021)</a><br/>
+                        <a href="https://doi.org/10.1038/s41586-021-03819-2">Jumper, J et al. Highly accurate protein structure prediction with AlphaFold. <em>Nature</em> (2021)</a><br/>
+                        <a href="https://doi.org/10.1093/bioinformatics/bty1057">Mirdita M et al. MMseqs2 desktop and local web server app for fast, interactive sequence searches. <em>Bioinformatics</em> (2019)</a><br/>
+                        <a href="https://doi.org/10.1093/nar/gkw1081">Mirdita M et al. Uniclust databases of clustered and deeply annotated protein sequences and alignments. <em>Nucleic Acid Res.</em> (2017)</a><br/>
+                        <a href="https://doi.org/10.1093/nar/gkz1035">Mitchell AL et al. MGnify: the microbiome analysis resource in 2020. <em>Nucleic Acids Research</em> (2019)</a><br/>
+                        <a href="https://doi.org/10.1371/journal.pcbi.1005659">Eastman P et al. OpenMM 7: Rapid development of high performance algorithms for molecular dynamics. <em>PLOS Comput. Biol.</em> (2017)</a>
+                    </p>
+                    <p class="text-white mt-5">AlphaFold Data Copyright (2022) DeepMind Technologies Limited.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-3">
+        <div class="container">              
+            <div class="row py-3 mt-3">
+                <div class="col-12">
+                    <h3>Disclaimer etc.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+  {% endblock content %}
+
+  {% block javascripts %}
+  
+    {# <script src="{{url_for('static', filename = 'assets/js/plugins/molstar.js' )}}"></script> #}
+
+    <script>
+        // get model order from config.json 
+        // => UPDATE: this is not the way. model_order is just the order in which AlphaFold runs the predictions, not a ranking.
+        // TODO: retrieve from new histonedb metadata "branch"
+        //? NOTE (Tim): is that fetch statement working? Shouldn't some of those quotes be escaped?
+        //? NOTE (Tim): Isn't it easier if this information is served by the back-end?
+        fetch('{{ url_for('static', filename = relPath + '/config.json') }}')
+            .then(response => response.json())
+            .then(json => {
+                console.log(json.model_order);
+                const modelOrder = json.model_order[{{rankID - 1}}];
+                console.log("modelOrder[{{rankID - 1}}]: " + modelOrder);
+
+                const myViewer = document.querySelector("#mspViewer");
+                // note: hexamers only use "unrelaxed" rank; all others use "relaxed"
+                const modelURL = "{{ url_for('static', filename = imgPath) }}" + "_{{relaxedType}}_" + "{{rank}}" + "_model_1.cif";
+
+                molstar.Viewer.create('mspViewer', {
+                    // https://molstar.org/docs/plugin/
+                    // https://molstar.org/viewer-docs/query-parameters/
+                    // https://github.com/molstar/pdbe-molstar/blob/master/index.html
+
+                    layoutIsExpanded: false, // expand to window
+                    layoutShowControls: true, // rightsidebar & sequence panel
+                    layoutShowRemoteState: false,
+                    layoutShowSequence: true,
+                    layoutShowLog: false,
+                    layoutShowLeftPanel: false,
+                    alphafoldView: true,
+
+                    // show/hide viewport buttons
+                    viewportShowExpand: true,
+                    viewportShowSelectionMode: false,
+                    viewportShowAnimation: false,
+                    viewportShowControls: false // control panel (= rightsidebar & sequence panel) toggle
+                })
+                .then(viewer => {
+                    viewer.loadStructureFromUrl(modelURL, format='mmcif'); // mmcif or pdb
+                })
+            })
+            .catch(function(err) { 
+                console.log(err);
+            });
+    
+    </script>
+
+  {% endblock javascripts %}
