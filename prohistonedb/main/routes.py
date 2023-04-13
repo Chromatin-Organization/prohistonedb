@@ -31,7 +31,3 @@ def entry(uniprotID: str):
 def about():
     """ Render the about page. """
     return flask.render_template('pages/about.html.j2')
-
-@bp.route('/categories')
-def categories():
-  return flask.render_template('pages/categories.html.j2')

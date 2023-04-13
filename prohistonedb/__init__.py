@@ -49,5 +49,8 @@ def create_app(test_config: Mapping[str, Any] = None):
     from . import search
     app.register_blueprint(search.bp)
 
+    from . import categories
+    app.register_blueprint(categories.bp)
+
     #*----- Return the constructed app -----*#
     return app
