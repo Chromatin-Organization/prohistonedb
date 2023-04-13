@@ -21,7 +21,7 @@ def index():
     """ Render the index page. """
     #? Tim: What is the purpose of setting 'segment' and 'parent'? I don't see them used in your templates.
     try:
-        return flask.render_template('pages/index.html.j2', segment='index', parent='pages')
+        return flask.render_template('pages/index.html.j2')
     except jinja2.TemplateNotFound:
         return flask.render_template('pages/index.html.j2'), 404
 

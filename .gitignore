@@ -9,3 +9,5 @@ instance/
 .vscode/
 
 .DS_Store
+
+*.codekit3
