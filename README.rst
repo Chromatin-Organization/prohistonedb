@@ -12,19 +12,19 @@ TL;DR
 -----
 It is assumed that you have ``Python``, ``pip`` and ``venv`` installed.
 
-- Linux or macOS in a bash shell:::
+- Linux or macOS in a bash shell::
 
-    pythom -m venv .venv
-    .venv/Scripts/activate
+    python3 -m venv .venv
+    source .venv/bin/activate
     pip install -r Requirements.txt
 
-- Windows in a cmd shell:::
+- Windows in a cmd shell::
 
     python -m venv .venv
     .venv/Scripts/activate.bat
     python -m pip install -r Requirements.txt
 
-- Windows in a PowerShell shell:::
+- Windows in a PowerShell shell::
 
     python -m venv .venv
     ./venv/Scripts/Activate.ps1
@@ -43,12 +43,12 @@ installed using:::
 
     pip --version
 
-You can then install packages using pip with:::
+You can then install packages using pip with::
 
     pip install [package_name]
 
 This is the from that will be used in the rest of this document, but Windows users should keep in mind that the following
-form is recommended for them instead:::
+form is recommended for them instead::
 
     python -m pip install [package_name]
 
@@ -57,7 +57,7 @@ Virtual environment
 We recommend using a virtual environment to install al the dependencies for the webhost. This is most commonly done
 using the ``venv`` package. ``venv`` can be installed using ``pip``.
 
-Once installed, a new virtual environment can be created as follows:::
+Once installed, a new virtual environment can be created as follows::
 
     python -m venv /path/to/venv
 
