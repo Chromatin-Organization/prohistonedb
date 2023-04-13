@@ -16,7 +16,7 @@ import jinja2
 from . import bp
 
 #***===== Route Definitions =====***#
-@bp.route('/overview')
+@bp.route('/overview', methods=["GET"])
 def overview():
     """ Render an overview page for all the categories. """
     return flask.render_template('pages/categories.html.j2')

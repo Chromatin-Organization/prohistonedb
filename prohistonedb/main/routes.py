@@ -27,7 +27,7 @@ def entry(uniprotID: str):
     """ Render the structure page for a specified entry. """
     return flask.render_template('pages/entry.html.j2', uniprotID = uniprotID)
 
-@bp.route('/about')
+@bp.route('/about', methods=["GET"])
 def about():
     """ Render the about page. """
     return flask.render_template('pages/about.html.j2')
