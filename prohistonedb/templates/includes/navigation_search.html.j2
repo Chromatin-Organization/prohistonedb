@@ -11,9 +11,7 @@
           </a>
 
           {# TODO: decide whether to use an integrated search bar or separate element (also: separate template block file?) #}
-          {# ? NOTE (Tim): Wouldn't it be better to include this extra searchbar in 'navigation.html.j2'? #}
-          {# ?             Then use a jinja if statement to determine wether it should be added or not? #}
-          {# ?             That way 1 navigation bar template would be enough. #}
+          {# TODO: merge the two types of search boxes and include the search box as a jinja block in naviation.html.j2 #}
           <form class="w-60 d-none d-lg-block" name="search" method="GET" action="{{url_for('search.index')}}">
             <div class="input-group w-70 float-end">
               <select class="btn btn-sm btn-primary dropdown-toggle mb-0" name="filter" data-bs-toggle="dropdown">

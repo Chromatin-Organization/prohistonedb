@@ -2,6 +2,7 @@
 
 {# TODO: move data path setting to cofig.json #}
 {# TODO: implement data retrievel in back-end and remove dummy data. #}
+{#! FIXME: molstar viewer isn't working since frontend and backend have merged. #}
 {# * set some demo variables (will eventually be passed as args by the back-end) #}
 {% set organism = "Candidatus Diapherotrites archaeon" %}
 {% set gene = "AIC15241.1" %}
@@ -344,8 +345,6 @@
         // get model order from config.json 
         // => UPDATE: this is not the way. model_order is just the order in which AlphaFold runs the predictions, not a ranking.
         // TODO: retrieve from new histonedb metadata "branch"
-        //? NOTE (Tim): is that fetch statement working? Shouldn't some of those quotes either be escaped or changed into double quotes?
-        //? NOTE (Tim): Isn't it easier if this information is served by the back-end?
         fetch('{{ url_for('static', filename = relPath + '/config.json') }}')
             .then(response => response.json())
             .then(json => {

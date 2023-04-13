@@ -25,13 +25,15 @@ def create_app(test_config: Mapping[str, Any] = None):
     app = Flask(__name__, instance_relative_config=True)
 
     #*----- Set the app's config -----*#
+    instance_dir = Path(__file__).parents[1].resolve()
+
     # First load the default config
-    app.config.from_file(Path(__file__).parents[1].absolute() / Path("default_config.json"), json.load)
+    app.config.from_file(instance_dir / Path("default_config.json"), json.load)
 
     # Then check if a test Config object is supplied to the factory
     if test_config is None:
         # If this is not a test, read the config file that is supplied in the instance folder (for safety purposes).
-        app.config.from_file("config.json", json.load, silent=True)
+        app.config.from_file(instance_dir / Path("config.json"), json.load, silent=True)
     else:
         # If this is a test, read the config options from the supplied mapping
         app.config.from_mapping(test_config)

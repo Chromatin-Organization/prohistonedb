@@ -19,11 +19,7 @@ from . import bp
 @bp.route("/", methods=["GET"])
 def index():
     """ Render the index page. """
-    #? Tim: What is the purpose of setting 'segment' and 'parent'? I don't see them used in your templates.
-    try:
-        return flask.render_template('pages/index.html.j2')
-    except jinja2.TemplateNotFound:
-        return flask.render_template('pages/index.html.j2'), 404
+    return flask.render_template('pages/index.html.j2')
 
 #TODO: Different entry pages for different multimers.
 @bp.route("/entry/<uniprotID>", methods=["GET"])
@@ -31,8 +27,6 @@ def entry(uniprotID: str):
     """ Render the structure page for a specified entry. """
     return flask.render_template('pages/entry.html.j2', uniprotID = uniprotID)
 
-#? NOTE (Tim): I removed the superfluous '/' at the end of the URL. Let me know if you planned for multiple
-#?             about pages, then I'll give it a separate blueprint.
 @bp.route('/about')
 def about():
     """ Render the about page. """
