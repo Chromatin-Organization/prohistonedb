@@ -92,6 +92,8 @@ When the server is running, by default it is bound to the localhost (127.0.0.1) 
 
 Testing
 =======
+Running tests requires the ``pytest`` package. In order to run the tests, simply run ``pytest`` in the project's root
+directory.
 
 Deployment
 ==========
