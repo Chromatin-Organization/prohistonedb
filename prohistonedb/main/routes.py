@@ -32,7 +32,6 @@ def about():
     """ Render the about page. """
     return flask.render_template('pages/about.html.j2')
 
-#? NOTE (Tim): I shortened the URL since we only have one categories page for now. For trailing slash see above note.
 @bp.route('/categories')
 def categories():
   return flask.render_template('pages/categories.html.j2')
