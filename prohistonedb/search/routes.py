@@ -21,6 +21,7 @@ def index():
     """ Process the search request and render the search results. """
     #TODO: Add Input Validation.
     #TODO: Change filters based on field types.
+    #TODO: Modify templates to correspond with expected query parameters.
     #TODO: Implement actual search functionality.
     
     args = flask.request.args
