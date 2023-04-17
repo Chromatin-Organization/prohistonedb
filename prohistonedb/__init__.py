@@ -22,13 +22,16 @@ def create_app(test_config: Mapping[str, Any] = None):
     
     #*----- Create the app -----*#
     #? We might want to change the default instance folder for deployment.
-    app = Flask(__name__, instance_relative_config=True)
+    app = Flask(__name__)
 
     #*----- Set the app's config -----*#
-    instance_dir = Path(__file__).parents[1].resolve()
+    root_dir = Path(__file__).parents[1].resolve()
+    instance_dir = Path(app.instance_path).resolve()
+    print(root_dir)
+    print(instance_dir)
 
     # First load the default config
-    app.config.from_file(instance_dir / Path("default_config.json"), json.load)
+    app.config.from_file(root_dir / Path("default_config.json"), json.load)
 
     # Then check if a test Config object is supplied to the factory
     if test_config is None:
@@ -37,6 +40,17 @@ def create_app(test_config: Mapping[str, Any] = None):
     else:
         # If this is a test, read the config options from the supplied mapping
         app.config.from_mapping(test_config)
+
+    # Assume "METADATA_JSON" and "DATABASE" are in the instance directory if tha paths are relative.
+    database = Path(app.config["DATABASE"])
+    if not database.is_absolute():
+        app.config["DATABASE"] = str(instance_dir / database)
+
+    metadata_path = Path(app.config["METADATA_JSON"])
+    if not metadata_path.is_absolute():
+        app.config["METADATA_JSON"] = str(instance_dir / metadata_path)
+
+    print(app.config)
     
     #*----- Prepare the instance folder -----*#
     Path(app.instance_path).mkdir(exist_ok=True)
