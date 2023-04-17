@@ -1,37 +1,35 @@
 {# TODO: highlight current page in menu #}
 <!-- Navbar -->
-<div class="container position-sticky z-index-sticky top-0">
+<div class="position-sticky z-index-sticky top-0">
   <div class="row">
-    <div class="col-12">
-      <nav
-        class="navbar navbar-expand-lg blur border-radius-xl top-0 mt-4 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
-        <div class="container-fluid px-0">
-          <a class="navbar-brand font-weight-bolder ms-sm-3" href="/">
-            {{siteName}}
-          </a>
+    <nav
+      class="navbar navbar-expand-xl top-0 blur z-index-fixed shadow position-absolute px-7 py-2 start-0 end-0">
+      <div class="container-fluid px-0">
+        <a class="navbar-brand font-weight-bolder ms-sm-3" href="/">
+          {{siteName}}
+        </a>
 
-          {# TODO: decide whether to use an integrated search bar or separate (floating) element #}
-          <div class="w-60 d-none d-lg-block">
-            <div class="w-70 float-end">
-              {% include 'includes/search_form.html.j2' %}
-            </div>
-          </div>
-
-          <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon mt-2">
-              <span class="navbar-toggler-bar bar1"></span>
-              <span class="navbar-toggler-bar bar2"></span>
-              <span class="navbar-toggler-bar bar3"></span>
-            </span>
-          </button>
-          <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-20" id="navigation">
-            {% include 'includes/menu_list.html.j2' %}
+        {# TODO: decide whether to use an integrated search bar or separate (floating) element #}
+        <div class="w-60 d-none d-lg-block">
+          <div class="w-70 float-end">
+            {% include 'includes/search_form.html.j2' %}
           </div>
         </div>
-      </nav>
-      <!-- End Navbar -->
-    </div>
+
+        <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon mt-2">
+            <span class="navbar-toggler-bar bar1"></span>
+            <span class="navbar-toggler-bar bar2"></span>
+            <span class="navbar-toggler-bar bar3"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-20" id="navigation">
+          {% include 'includes/menu_list.html.j2' %}
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
   </div>
 </div>
