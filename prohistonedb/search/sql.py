@@ -56,6 +56,9 @@ class FieldType(str, Enum):
         else:
             raise NotImplementedError(f"Couldn't generate sql condition for field {self}")
         
+    def __repr__(self) -> str:
+        return self.value
+        
 #***===== Filter Classes ***=====#
 class FilterABC(ABC):
     """ An Abstract Base Class for representing search filters. """
@@ -63,6 +66,14 @@ class FilterABC(ABC):
     @abc.abstractmethod
     def sql(self) -> str:
         """ Returns the SQL code that represents the search filter. """
+
+    @property
+    @abc.abstractmethod
+    def isempty(self) -> bool:
+        """ Returns whether the filter is empty. """
+
+    @abc.abstractmethod
+    def __repr__(self) -> str:
         pass
 
     def and_filter(self, other: FilterABC) -> AndFilter:
@@ -72,26 +83,6 @@ class FilterABC(ABC):
     def or_filter(self, other: FilterABC) -> OrFilter:
         """ Returns a OrFilter that combines this filter with another. """
         return OrFilter([self, other])
-
-class AndFilter(FilterABC):
-    """ A class for representing the logical AND combination of two or more search filters. """
-    def __init__(self, filters: Iterable[FilterABC]):
-        """ Takes in a Iterable of the filters that need to be logically combined. """
-        self._filters = filters
-
-    @property
-    def sql(self) -> str:
-        return "(" + ") AND (".join([filter.sql for filter in self._filters]) + ")"
-
-class OrFilter(FilterABC):
-    """ A class for representing the logical OR combination of two or more search filters. """
-    def __init__(self, filters: Iterable[FilterABC]):
-        """ Takes in a Iterable of the filters that need to be logically combined. """
-        self._filters = filters
-
-    @property
-    def sql(self) -> str:
-        return "(" + ") OR (".join([filter.sql for filter in self._filters]) + ")"
 
 class Filter(FilterABC):
     """ A class for representing a basic search filter. """
@@ -105,6 +96,47 @@ class Filter(FilterABC):
     def sql(self) -> str:
         return self._field.sql_condition(self._value)
     
+    @property
+    def isempty(self) -> bool:
+        return not self._value
+    
+    def __repr__(self) -> str:
+        return f"Filter({self._field}, {self._value})"
+
+class AndFilter(FilterABC):
+    """ A class for representing the logical AND combination of two or more search filters. """
+    def __init__(self, filters: Iterable[FilterABC]):
+        """ Takes in a Iterable of the filters that need to be logically combined. """
+        self._filters = filters
+
+    @property
+    def sql(self) -> str:
+        return "(" + ") AND (".join([filter.sql for filter in self._filters]) + ")"
+    
+    @property
+    def isempty(self) -> bool:
+        return all([filter.isempty for filter in self._filters])
+    
+    def __repr__(self) -> str:
+        return "[" + ", ".join([filter.__repr__() for filter in self._filters]) + "]"
+    
+class OrFilter(FilterABC):
+    """ A class for representing the logical OR combination of two or more search filters. """
+    def __init__(self, filters: Iterable[FilterABC]):
+        """ Takes in a Iterable of the filters that need to be logically combined. """
+        self._filters = filters
+
+    @property
+    def sql(self) -> str:
+        return "(" + ") OR (".join([filter.sql for filter in self._filters]) + ")"
+    
+    @property
+    def isempty(self) -> bool:
+        return all([filter.isempty for filter in self._filters])
+    
+    def __repr__(self) -> str:
+        return "[" + ", ".join([filter.__repr__() for filter in self._filters]) + "]"
+    
 class AnyFilter(OrFilter):
     """ A class for a search filter where any field can match the condition. """
     def __init__(self, value: str):
@@ -116,6 +148,17 @@ class AnyFilter(OrFilter):
     def sql(self) -> str:
         return super().sql
     
+    @property
+    def isempty(self) -> bool:
+        return super().isempty
+
+    def __repr__(self) -> str:
+        return super().__repr__()
+    
 #***===== Function Definitions =====***#
-def build_sql(table: str, condition: FilterABC):
-    return f"SELECT * FROM {table}\n  WHERE {condition.sql}"
+def build_sql(table: str, filter: FilterABC):
+    """ Returns SQL code for running a query on a given database under a filter. """
+    if filter.isempty:
+        return f"SELECT * FROM {table}"
+    else:
+        return f"SELECT * FROM {table}\n  WHERE {filter.sql}"
