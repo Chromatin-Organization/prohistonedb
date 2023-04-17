@@ -15,13 +15,13 @@
           <form class="w-60 d-none d-lg-block" name="search" method="GET" action="{{url_for('search.index')}}">
             <div class="input-group w-70 float-end">
               <select class="btn btn-sm btn-primary dropdown-toggle mb-0" name="filter" data-bs-toggle="dropdown">
-                <option value="all" selected>All types</option>
+                <option value="any" selected>All types</option>
                 <option disabled>---------------------</option>
-                <option value="uniprotID">UniProt ID</option>
-                <option value="taxonomy">Taxonomy</option>
-                <option value="organism">Organism</option>
-                <option value="genID">Gen ID</option>
-                <option value="sequence">Sequence</option>
+                <option value="uid">UniProt ID</option>
+                <option value="tax">Taxonomy</option>
+                <option value="org">Organism</option>
+                <option value="gid">Gen ID</option>
+                <option value="seq">Sequence</option>
               </select>
               <input type="text" class="form-control bg-light ps-3"  name="q" placeholder="Search" maxlength="40" />
               <span class="input-group-text border-0 pe-3 w-6" style="z-index: 9">

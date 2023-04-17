@@ -22,11 +22,13 @@ def index():
     """ Process the search request and render the search results. """
     #TODO: Add Input Validation. (currently just discards non standard keys)
     #TODO: Change filters based on field types.
-    #TODO: Modify templates to correspond with expected query parameters.
+    #TODO: Add compatibility for "any" search option.
     
     # Prepare some variables
     args = flask.request.args.copy()
     accepted_fields = [field.value for field in sql.FieldType]
+
+    print(args)
 
     # Convert filter=[field]&q=[value] syntax to [filter]=[value] pairs in de MultiDict
     fields = args.keys()
@@ -40,7 +42,10 @@ def index():
         if len(fields) != len(values):
             raise ValueError('"filter" and "q" should have the same number of items.')
         
-        map(lambda _f, _v: args.add(_f, _v), zip(fields, values))      
+        for field, value in zip(fields, values):
+            args.add(field, value)
+
+    print(args)
 
     # Create a combined filter from all the search conditions and generate the SQL code to search the database. 
     filters = [sql.Filter(field, value) for field, value in args.items() if field in accepted_fields]

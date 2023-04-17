@@ -1,4 +1,3 @@
-{# ! FIXME: filter options inconsistent with the navigation bar's search functionality! #}
 <div class="container col-lg-8 col-sm-12 mx-auto mt-5">
     <div class="position-relative border-radius-xl bg-white shadow mb-3 px-4 gx-5 pt-4 pb-3">
         <form name="search" method="GET" action="{{url_for('search.index')}}"> 
@@ -23,11 +22,11 @@
             
             <select class="btn btn-primary dropdown-toggle mb-0" name="filter" data-bs-toggle="dropdown">
               <option>Select search</option>
-              <option value="uniprotID">UniProt ID</option>
-              <option value="taxonomy">Taxonomy</option>
-              <option value="organism">Organism</option>
-              <option value="genID">Gen ID</option>
-              <option value="sequence">Sequence</option>
+              <option value="uid">UniProt ID</option>
+              <option value="tax">Taxonomy</option>
+              <option value="org">Organism</option>
+              <option value="gid">Gen ID</option>
+              <option value="seq">Sequence</option>
             </select>
             
             <input type="text" class="form-control bg-light ps-3" name="q" maxlength="40" />
