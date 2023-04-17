@@ -64,29 +64,25 @@ h3 { font-size: $font-size-2xl }
     border-bottom-right-radius: $border-radius-lg !important;
 }
 
-select.dropdown-toggle::after {
-    content: "\f107";
-    font: normal normal normal 14px/1 FontAwesome;
-    border: none;
-    vertical-align: middle;
-    font-weight: 600;
+form[name="search"] .arrow {
+    z-index: 9;
+    margin-left: -1.2rem !important;
 }
+select.dropdown-toggle { text-align: left }
 
 .nav-pills .nav-link.active { 
     background-color: $primary;
     color: $white;
 }
 
-// force mini scrollbar'd area (uses perfect-scrollbar.js)
+// force mini scrollbar'd area
 #filter-category-container {
     height: 124px;
     padding-top: 0.4em;
-    //border-radius: 0.5em;
-    //border: 1px solid $gray-300;
     overflow-y: scroll;
     box-shadow: 0 20px 10px -21px rgba(0,0,0,0.2) inset, 0 -20px 10px -21px rgba(0,0,0,0.2) inset;
 }
-// set scrollbar thumb to visible at all times
+// set perfect-scrollbar.js scrollbar thumb to visible at all times
 .ps__rail-x,
 .ps__rail-y {
   opacity: 0.6;
@@ -100,6 +96,10 @@ select.dropdown-toggle::after {
     margin-top: .2rem;
     padding: .25rem .6rem;
     margin-left: 3px;
+}
+
+#applied-filters-container .fa-close {
+    margin-left: 5px;
 }
 
 .result-item {

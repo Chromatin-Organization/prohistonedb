@@ -1,0 +1,19 @@
+<form name="search" method="GET" action="{{ url_for('search.index') }}"> 
+    <div class="input-group">
+        <select class="btn btn-primary dropdown-toggle mb-0" name="filter" data-bs-toggle="dropdown">
+        <option value="all" selected>All types</option>
+        <option disabled>---------------------</option>
+        <option value="uniprotID">UniProt ID</option>
+        <option value="taxonomy">Taxonomy</option>
+        <option value="organism">Organism</option>
+        <option value="genID">Gen ID</option>
+        <option value="sequence">Sequence</option>
+        </select>
+        <img src="{{ url_for('static', filename = 'assets/img/down-arrow-white.svg') }}" alt="down-arrow" class="arrow">
+    
+        <input type="text" class="form-control bg-light ps-3" name="q" maxlength="40" />
+        <span class="input-group-text border-0 pe-3 w-6" style="z-index: 9">
+            <i class="fas fa-search" id="search-icon"></i>
+        </span>
+    </div>
+</form>
