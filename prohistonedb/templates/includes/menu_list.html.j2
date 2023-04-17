@@ -1,29 +1,41 @@
-{# * Navigation links are harcoded for now. We might change this in the future. #}
 <ul class="navbar-nav navbar-nav-hover ms-auto">
-    <li class="nav-item dropdown dropdown-hover mx-2">
-      <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
-        data-bs-toggle="dropdown" aria-expanded="false">
-        Categories
-        <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}" alt="down-arrow" class="arrow ms-auto ms-md-2">
-      </a>
-      <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3"
+  <li class="nav-item dropdown dropdown-hover mx-2">
+    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      Categories
+      <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg')}}" alt="down-arrow" class="arrow ms-auto ms-md-2">
+    </a>
+    <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-sm border-radius-xl mt-0 mt-lg-3"
       aria-labelledby="dropdownMenuPages">
       <div class="d-none d-lg-block">
-        <a href="{{url_for('categories.overview')}}" class="dropdown-item border-radius-md">
+        <a href="{{url_for('categories.overview')}}" class="dropdown-item">
           <h6 class="dropdown-header px-0">Categories overview</h6>
         </a>
         {% for cat in categories %}
-          <a href="#" class="dropdown-item border-radius-md">
+          <a href="#" class="dropdown-item">
             <span>{{cat}}</span>
           </a>
         {% endfor %}
       </div>
     </div>
-    </li>
+  </li>
 
-    <li class="nav-item mx-2">
-      <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="MenuDocs" aria-expanded="false" href="{{url_for('main.about')}}">
-        About
-      </a>
-    </li>
-  </ul>
+  <li class="nav-item dropdown dropdown-hover mx-2">
+    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      About
+      <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg')}}" alt="down-arrow" class="arrow ms-auto ms-md-2">
+    </a>
+    <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-sm border-radius-xl mt-0 mt-lg-3" 
+      aria-labelledby="dropdownMenuPages">
+      <div class="d-none d-lg-block">
+        <a href="{{url_for('main.about')}}" class="dropdown-item">
+          <span>About {{siteName}}</span>
+        </a>
+        <a href="#" class="dropdown-item">
+          <span>Changelog</span>
+        </a>
+      </div>
+    </div>
+  </li>
+</ul>
