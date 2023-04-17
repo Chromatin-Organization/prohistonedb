@@ -110,6 +110,7 @@ Any local changes to this default configuration can be provided in a ``config.js
 The possible configuration settings include:
   * **DATABASE**: The location of sqllite database file. Is assumed to be in the instance directory if the path is relative.
   * **METADATA_JSON**: The location of the json file with metadata from `UniProt <https://www.uniprot.org/>`_. Is assumed to be in the instance directory if the path is relative.
+  * **CATEGORIES_JSON**: The location of the json files that specifies the histone caregories. Is assumed to be in the instance directory if the path is relative.
   * All builtin configuration values used by Flask: `documentation <https://flask.palletsprojects.com/en/2.2.x/config/#builtin-configuration-values>`_
 
 Testing

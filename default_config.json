@@ -1,4 +1,5 @@
 {
     "DATABASE": "db.sqlite",
-    "METADATA_JSON": "db.json"
+    "METADATA_JSON": "db.json",
+    "CATEGORIES_JSON": "categories.json"
 }

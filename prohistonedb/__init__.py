@@ -39,15 +39,13 @@ def create_app(test_config: Mapping[str, Any] = None):
         # If this is a test, read the config options from the supplied mapping
         app.config.from_mapping(test_config)
 
-    # Assume "METADATA_JSON" and "DATABASE" are in the instance directory if tha paths are relative.
-    database = Path(app.config["DATABASE"])
-    if not database.is_absolute():
-        app.config["DATABASE"] = str(instance_dir / database)
+    # Assume "METADATA_JSON", "CATEGORIES_JSON" and "DATABASE" are in the instance directory if the paths are relative.
+    for config_param in ["DATABASE", "METADATA_JSON", "CATEGORIES_JSON"]:
+        path = Path(app.config[config_param]) 
 
-    metadata_path = Path(app.config["METADATA_JSON"])
-    if not metadata_path.is_absolute():
-        app.config["METADATA_JSON"] = str(instance_dir / metadata_path)
-    
+        if not path.is_absolute():
+            app.config["DATABASE"] = str(instance_dir / path)
+
     #*----- Prepare the instance folder -----*#
     Path(app.instance_path).mkdir(exist_ok=True)
 
