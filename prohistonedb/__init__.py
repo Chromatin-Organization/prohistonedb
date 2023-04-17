@@ -41,6 +41,10 @@ def create_app(test_config: Mapping[str, Any] = None):
     #*----- Prepare the instance folder -----*#
     Path(app.instance_path).mkdir(exist_ok=True)
 
+    #*----- Initialize the database -----*#
+    from . import database
+    database.init_app(app)
+
     #*----- Register Blueprints -----*#
     from . import main
     app.register_blueprint(main.bp)

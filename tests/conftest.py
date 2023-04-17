@@ -28,6 +28,7 @@ import prohistonedb
 def app() -> Flask:
     """ Create an instance of the Flask app for testing. """
     #* Preparation *#
+    #TODO: Change the database that is accessed during testing.
     app = prohistonedb.create_app(
         test_config = {
             "TESTING": True,
