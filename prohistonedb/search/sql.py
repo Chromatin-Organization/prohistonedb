@@ -118,7 +118,7 @@ class AndFilter(FilterABC):
         return all([filter.isempty for filter in self._filters])
     
     def __repr__(self) -> str:
-        return "[" + ", ".join([filter.__repr__() for filter in self._filters]) + "]"
+        return "AndFilter([" + ", ".join([filter.__repr__() for filter in self._filters]) + "])"
     
 class OrFilter(FilterABC):
     """ A class for representing the logical OR combination of two or more search filters. """
@@ -135,7 +135,7 @@ class OrFilter(FilterABC):
         return all([filter.isempty for filter in self._filters])
     
     def __repr__(self) -> str:
-        return "[" + ", ".join([filter.__repr__() for filter in self._filters]) + "]"
+        return "OrFilter([" + ", ".join([filter.__repr__() for filter in self._filters]) + "])"
     
 class AnyFilter(OrFilter):
     """ A class for a search filter where any field can match the condition. """

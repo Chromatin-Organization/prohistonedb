@@ -21,17 +21,15 @@ from . import bp
 def index():
     """ Process the search request and render the search results. """
     #TODO: Add Input Validation. (currently just discards non standard keys)
-    #TODO: Change filters based on field types.
-    #TODO: Add compatibility for "any" search option.
     
     # Prepare some variables
     args = flask.request.args.copy()
-    accepted_fields = [field.value for field in sql.FieldType]
+    fields = args.keys()
 
-    print(args)
+    accepted_fields = [field.value for field in sql.FieldType]
+    accepted_fields.append("any")
 
     # Convert filter=[field]&q=[value] syntax to [filter]=[value] pairs in de MultiDict
-    fields = args.keys()
     if "filter" in fields:
         if not "q" in fields:
             raise ValueError('Search bar should return fields in "filter" together with values in "q".')
@@ -45,11 +43,26 @@ def index():
         for field, value in zip(fields, values):
             args.add(field, value)
 
-    print(args)
+    # Create filters for all the search field.
+    filters = []
+    fields = args.keys()
 
-    # Create a combined filter from all the search conditions and generate the SQL code to search the database. 
-    filters = [sql.Filter(field, value) for field, value in args.items() if field in accepted_fields]
-    sql_str = sql.build_sql("test", sql.OrFilter(filters))
+    for field in fields:
+        #! Ignore none supported fields for now. Change in future!
+        if not field in accepted_fields:
+            continue
+
+        # Create a logical OR filter per field
+        values = args.getlist(field)
+
+        if field == "any":
+            filters.append(sql.OrFilter([sql.AnyFilter(value) for value in values]))
+        else:
+            filters.append(sql.OrFilter([sql.Filter(field, value) for value in values]))
+
+    # Create a logical AND filter that combines the filters per field and generate SQL code for a database Query from it.
+    filters = sql.AndFilter(filters)
+    sql_str = sql.build_sql("test", filters)
     print(sql_str)
 
     return flask.render_template('pages/search.html.j2')
