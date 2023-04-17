@@ -27,8 +27,6 @@ def create_app(test_config: Mapping[str, Any] = None):
     #*----- Set the app's config -----*#
     root_dir = Path(__file__).parents[1].resolve()
     instance_dir = Path(app.instance_path).resolve()
-    print(root_dir)
-    print(instance_dir)
 
     # First load the default config
     app.config.from_file(root_dir / Path("default_config.json"), json.load)
@@ -49,8 +47,6 @@ def create_app(test_config: Mapping[str, Any] = None):
     metadata_path = Path(app.config["METADATA_JSON"])
     if not metadata_path.is_absolute():
         app.config["METADATA_JSON"] = str(instance_dir / metadata_path)
-
-    print(app.config)
     
     #*----- Prepare the instance folder -----*#
     Path(app.instance_path).mkdir(exist_ok=True)
