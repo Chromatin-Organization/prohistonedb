@@ -1,8 +1,9 @@
 {% extends 'layouts/base.html.j2' %}
 
-{# TODO: move data path setting to cofig.json #}
-{# TODO: implement data retrievel in back-end and remove dummy data. #}
-{#! FIXME: molstar viewer isn't working since frontend and backend have merged. #}
+{# TODO: move data path setting to config file #}
+{# TODO: implement data retrieval in back-end and remove dummy data. #}
+{# ! (MO): Molstar viewer & images are loading correctly; #}
+{# !     JS "fetch" needs the unneccessary config.json in data folder to exist (for now) #}
 {# * set some demo variables (will eventually be passed as args by the back-end) #}
 {% set organism = "Candidatus Diapherotrites archaeon" %}
 {% set gene = "AIC15241.1" %}
@@ -21,8 +22,8 @@
 
 {# * data folder assumed to be located in /static for now, but could be changed to somewhere more logical #}
 {# * NOTE (Tim): The folder with the raw data will most likely be stored within the 'instance' folder. #}
-{# *        As for the path to the entry's directory, this should be surved by the back-end. #}
-{% set relPath = "data/" + uniprotID + "/" + uniprotID + multimerPath %}
+{# *        As for the path to the entry's directory, this should be served by the back-end. #}
+{% set relPath = "/data/" + uniprotID + "/" + uniprotID + multimerPath %}
 {% set imgPath = relPath + "/" + uniprotID %}
 
 {# hexamers are too complex for relaxed optimization, so using unrelaxed #}
@@ -118,10 +119,10 @@
 {% block content %}
 
 <header>
-    <div class="page-header min-height-600 relative header-plain">
+    <div class="page-header header-plain">
       <div class="container">
 
-        <div class="container mt-8 opacity-9">
+        <div class="container mt-7 opacity-9">
             <div class="row">
                 <div class="col-12">
                     <h2 class="text-white pt-3">{{ organism + " " + uniprotID }}</h2>
@@ -209,7 +210,7 @@
                         </a>
 
                         <ul id="select_rank" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item option-1" href="#">Rank 1</a></li>{# TODO: add "(model X)" to label (via config.json)? #}
+                            <li><a class="dropdown-item option-1" href="#">Rank 1</a></li>{# TODO: add "(model X)" to label #}
                             <li><a class="dropdown-item option-2" href="#">Rank 2</a></li>
                             <li><a class="dropdown-item option-3" href="#">Rank 3</a></li>
                             <li><a class="dropdown-item option-4" href="#">Rank 4</a></li>
@@ -300,7 +301,7 @@
         </div>
     </section>
 
-    {# !FIXME: Some of the DOI links aren't working. (Mitchel A.L. et al. & Mirdita M. et al.) #}
+    {# * DOIs are correct but some are very slow to load #}
     <section id="attribution" class="pb-2 position-relative bg-gradient-dark mx-n3">
         <div class="container">
             <div class="row">
@@ -343,18 +344,17 @@
 
     <script>
         // get model order from config.json 
-        // => UPDATE: this is not the way. model_order is just the order in which AlphaFold runs the predictions, not a ranking.
+        // UPDATE: this is not the way. model_order is just the order in which AlphaFold runs the predictions, not a ranking.
         // TODO: retrieve from new histonedb metadata "branch"
         fetch('{{ url_for('static', filename = relPath + '/config.json') }}')
             .then(response => response.json())
             .then(json => {
-                console.log(json.model_order);
                 const modelOrder = json.model_order[{{rankID - 1}}];
-                console.log("modelOrder[{{rankID - 1}}]: " + modelOrder);
-
                 const myViewer = document.querySelector("#mspViewer");
-                // note: hexamers only use "unrelaxed" rank; all others use "relaxed"
-                const modelURL = "{{ url_for('static', filename = imgPath) }}" + "_{{relaxedType}}_" + "{{rank}}" + "_model_1.cif";
+                // hexamers only use "unrelaxed" rank; all others use "relaxed"
+                //const modelURL = "{{ url_for('static', filename = imgPath) }}" + "_{{relaxedType}}_" + "{{rank}}" + "_model_1.cif";
+                {# * hardcoded test cif file #}
+                const modelURL = "{{ url_for('static', filename = relPath) }}" + "/A0A7X6DRI5_relaxed_rank_1_model_3.cif";
 
                 molstar.Viewer.create('mspViewer', {
                     // https://molstar.org/docs/plugin/
