@@ -44,7 +44,7 @@ def create_app(test_config: Mapping[str, Any] = None):
         path = Path(app.config[config_param]) 
 
         if not path.is_absolute():
-            app.config["DATABASE"] = str(instance_dir / path)
+            app.config[config_param] = str(instance_dir / path)
 
     #*----- Prepare the instance folder -----*#
     Path(app.instance_path).mkdir(exist_ok=True)
