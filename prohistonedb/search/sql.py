@@ -1,4 +1,4 @@
-""" All the methods needed for  """
+""" All the methods and types needed for building SQL queries. """
 #***===== Feature Imports =====***#
 from __future__ import annotations
 
@@ -18,46 +18,7 @@ from pathlib import Path
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
-
-#***===== FieldType Enum =====***#
-class FieldType(str, Enum):
-    """ An enum indicating the field for a search filter. """
-    UNIPROT_ID = "uid"
-    ORGANISM = "org"
-    ORGANISM_ID = "oid"
-    SEQUENCE = "seq"
-    SEQUENCE_LEN = "seql"
-    CATEGORY = "cat"
-    LINEAGE = "tax"
-    PROTEIN_ID = "pid"
-    PROTEOME_ID = "pmid"
-    GEN_ID = "gid"
-    GENOME_ID = "gmid"
-
-    @property
-    def db_name(self) -> str:
-        """ Returns the name of the field in the database. """
-        return self.name.lower()
-    
-    @classmethod
-    def id_fields(cls) -> list[FieldType]:
-        """ Returns all fields that contain IDs. """
-        return [cls.UNIPROT_ID, cls.ORGANISM_ID, cls.PROTEIN_ID, cls.PROTEOME_ID, cls.GEN_ID, cls.GENOME_ID]
-    
-    def sql_condition(self, value: str):
-        """ Takes a condition for the field and returns the SQL code for it. """
-        if self is self.CATEGORY or self in self.id_fields():
-            return f"{self.db_name}='{value}'"
-        elif self in [self.ORGANISM, self.SEQUENCE, self.LINEAGE]:
-            return f"{self.db_name} LIKE '%{value}%'"
-        elif self is self.SEQUENCE_LEN:
-            values = [int(val.strip()) for val in value.split("-")]
-            return f"{self.db_name} BETWEEN {values[0]} AND {values[1]}"
-        else:
-            raise NotImplementedError(f"Couldn't generate sql condition for field {self}")
-        
-    def __repr__(self) -> str:
-        return self.value
+from ..database.types import FieldType
         
 #***===== Filter Classes ***=====#
 class FilterABC(ABC):
@@ -94,7 +55,31 @@ class Filter(FilterABC):
 
     @property
     def sql(self) -> str:
-        return self._field.sql_condition(self._value)
+        field = self._field
+        equal_fields = [
+            FieldType.UNIPROT_ID,
+            FieldType.ORGANISM_ID,
+            FieldType.CATEGORY
+        ]
+        like_fields = [
+            FieldType.ORGANISM,
+            FieldType.SEQUENCE,
+            FieldType.LINEAGE,
+            FieldType.PROTEIN_ID,
+            FieldType.PROTEOME_ID,
+            FieldType.GEN_ID,
+            FieldType.GENOME_ID
+        ]
+
+        if field in equal_fields:
+            return f"{field.db_name}='{self._value}'"
+        elif field in like_fields:
+            return f"{field.db_name} LIKE '%{self._value}%'"
+        elif field is FieldType.SEQUENCE_LEN:
+            values = [int(val.strip()) for val in self._value.split("-")]
+            return f"{field.db_name} BETWEEN {values[0]} AND {values[1]}"
+        else:
+            raise NotImplementedError(f"Couldn't generate sql condition for field {self}")
     
     @property
     def isempty(self) -> bool:
@@ -142,7 +127,7 @@ class AnyFilter(OrFilter):
     def __init__(self, value: str):
         """ Take a value to set the condition for the search filter. """
         # TODO: Add validation and type checking.
-        self._filters = [Filter(field, value) for field in FieldType.__members__.values() if not field is FieldType.SEQUENCE_LEN]
+        self._filters = [Filter(field, value) for field in FieldType.accepted_fields() if not field is FieldType.SEQUENCE_LEN]
 
     @property
     def sql(self) -> str:

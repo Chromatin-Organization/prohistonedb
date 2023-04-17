@@ -10,8 +10,8 @@ import flask
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
-from .sql import Filter, OrFilter, build_sql
 from . import sql
+from ..database.types import FieldType
 
 #***===== Blueprint Import =====***#
 from . import bp
@@ -26,7 +26,7 @@ def index():
     args = flask.request.args.copy()
     fields = args.keys()
 
-    accepted_fields = [field.value for field in sql.FieldType]
+    accepted_fields = FieldType.accepted_fields()
     accepted_fields.append("any")
 
     # Convert filter=[field]&q=[value] syntax to [filter]=[value] pairs in de MultiDict
