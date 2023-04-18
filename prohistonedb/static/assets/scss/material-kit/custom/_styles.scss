@@ -108,6 +108,12 @@ select.dropdown-toggle { text-align: left }
     }
 }
 
+// decrease th padding
+.table thead th {
+    padding: .5rem;
+}
+
+// entry
 #information {
     .label {
         font-size: $font-size-base;
