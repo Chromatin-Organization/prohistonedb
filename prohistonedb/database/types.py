@@ -33,7 +33,7 @@ class FieldType(str, Enum):
     @classmethod
     def accepted_fields(cls) -> list[str]:
         """ Returns all the str values that are accepted as field types. """
-        return cls.__members__.values()
+        return list(cls.__members__.values())
     
     @property
     def db_name(self) -> str:

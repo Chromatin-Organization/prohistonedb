@@ -1,16 +1,5 @@
 {% extends 'layouts/base.html.j2' %}
 
-{# TODO Implement search in back-end and remove dummy data #}
-{# * dummy data #}
-{% 
-    set result = [
-        {"uniprotID": "A0A7K4BZ95", "organism": "Candidatus Diapherotrites archaeon", "gene": "AIC15241.1", "length": "77"},
-        {"uniprotID": "A0A4444", "organism": "Archaeon Candidatus Diapherotrites", "gene": "FHGGHFD41.1", "length": "218"},
-        {"uniprotID": "OOOPPP33", "organism": "Diapherotrites 44.1", "gene": "4443SDSDD", "length": "512"}
-    ]
-%}
-
-
 {% block title %} {{siteName}} Search {% endblock title %}
 {% block body %} class="search bg-gray-200" {% endblock body %}
 
@@ -28,7 +17,7 @@
         <div class="row">
           <div class="col-lg-8 my-auto">
             <h2 class="text-white">Search results for {{ request.args.get('q') }}</h2>
-            <p class="mb-4 text-white">Showing 1-3 of n results</p>
+            <p class="mb-4 text-white">Showing 1-n of m results</p>
             
           </div>
         </div>
@@ -150,25 +139,25 @@
 
                     {# card view #}
                     {# single entry; loop this section #}
-                    {% for r in result %}
+                    {% for r in results %}
                     <div class="row mt-3 mb-5 result-item">
-                        <h4><a href="{{ url_for('main.entry', uniprotID=r.uniprotID) }}">{{r.organism}} {{r.uniprotID}}</a></h4>
+                        <h4><a href="{{ url_for('main.entry', uniprotID=r['uniprot_id']) }}">{{r["organism"]}} {{r["uniprot_id"]}}</a></h4>
                         <div class="row">
                             <div class="col-sm-3 label"><span>Protein</span></div>
                             <div class="col-sm-9 value">
-                                <span class="mb-0">{{r.organism}}</span>
+                                <span class="mb-0">{{r["protein_id"]}}</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-3 label"><span>Gene</span></div>
                             <div class="col-sm-9 value">
-                                <span class="mb-0">{{r.gene}}</span>
+                                <span class="mb-0">{{r["gen_id"]}}</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-3 label"><span>Source organism</span></div>
                             <div class="col-sm-9 value">
-                                <span class="mb-0 float-start me-2">AAABBBCCC</span><span class="link"><a href="{{ url_for('search.index', organism='bla') }}">Search this organism</a></span>
+                                <span class="mb-0 float-start me-2">{{r["organism"]}}</span><span class="link"><a href="{{ url_for('search.index', org=r['organism']) }}">Search this organism</a></span>
                             </div>
                         </div>
                     </div>
@@ -188,13 +177,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                        {% for r in result %}
+                        {% for r in results %}
                         <tr>
-                            <td>{{r.uniprotID}}</td>
-                            <td>{{r.organism}}</td>
-                            <td>{{r.gene}}</td>
-                            <td>AAABBBCCC</td>
-                            <td>{{r.length}} AA</td>
+                            <td>{{r["uniprot_id"]}}</td>
+                            <td>{{r["protein_id"]}}</td>
+                            <td>{{r["gen_id"]}}</td>
+                            <td>{{r["organism"]}}</td>
+                            <td>{{r["sequence_len"]}} AA</td>
                         </tr>
                         {% endfor %}
                         </tbody>

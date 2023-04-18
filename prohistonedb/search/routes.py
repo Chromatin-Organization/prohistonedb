@@ -12,6 +12,7 @@ import flask
 #*----- Local imports -----*#
 from . import sql
 from ..database.types import FieldType
+from .. import database
 
 #***===== Blueprint Import =====***#
 from . import bp
@@ -23,8 +24,10 @@ def index():
     #TODO: Add Input Validation. (currently just discards non standard keys)
     
     # Prepare some variables
+    NUM_RESULTS = 20
     args = flask.request.args.copy()
     fields = args.keys()
+    print(fields)
 
     accepted_fields = FieldType.accepted_fields()
     accepted_fields.append("any")
@@ -46,6 +49,7 @@ def index():
     # Create filters for all the search field.
     filters = []
     fields = args.keys()
+    print(fields)
 
     for field in fields:
         #! Ignore none supported fields for now. Change in future!
@@ -62,7 +66,11 @@ def index():
 
     # Create a logical AND filter that combines the filters per field and generate SQL code for a database Query from it.
     filters = sql.AndFilter(filters)
-    sql_str = sql.build_sql("test", filters)
+    sql_str = sql.build_sql("metadata", filters)
     print(sql_str)
 
-    return flask.render_template('pages/search.html.j2')
+    # Get the database connection and query the generated SQL code.
+    conn = database.get_db()
+    results = conn.execute(sql_str)
+    results = results.fetchmany(NUM_RESULTS)
+    return flask.render_template('pages/search.html.j2', results=results)

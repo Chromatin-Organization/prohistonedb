@@ -1,4 +1,6 @@
 """ All the methods and types needed for building SQL queries. """
+#! FIXME: To prevent sql injection we may want to use another method then format strings.
+
 #***===== Feature Imports =====***#
 from __future__ import annotations
 
