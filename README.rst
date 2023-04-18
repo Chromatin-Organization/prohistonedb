@@ -10,25 +10,30 @@ Installation
 ============
 TL;DR
 -----
-It is assumed that you have ``Python``, ``pip`` and ``venv`` installed.
+It is assumed that you have ``Python``, ``pip`` and ``venv`` installed and that ``db.json`` and ``categories.json``
+are located in the instance directory. In order to prepare the application, execute on of the following sets of
+commands:
 
 - Linux or macOS in a bash shell::
 
     python3 -m venv .venv
     source .venv/bin/activate
     pip install -r Requirements.txt
+    flask --app prohistonedb database create
 
 - Windows in a cmd shell::
 
     python3 -m venv .venv
     .venv/Scripts/activate.bat
     python3 -m pip install -r Requirements.txt
+    flask --app prohistonedb database create
 
 - Windows in a PowerShell shell::
 
     python3 -m venv .venv
     ./venv/Scripts/Activate.ps1
     python3 -m pip install -r Requirements.txt
+    flask --app prohistonedb database create
 
 Requirements
 ------------
@@ -47,7 +52,7 @@ You can then install packages using pip with::
 
     pip install [package_name]
 
-This is the from that will be used in the rest of this document, but Windows users should keep in mind that the following
+This is the form that will be used in the rest of this document, but Windows users should keep in mind that the following
 form is recommended for them instead::
 
     python3 -m pip install [package_name]
@@ -63,12 +68,13 @@ Once installed, a new virtual environment can be created as follows::
 
 We recommend creating a local directory ``.venv`` to store your virtual environment.
 
-How to activate your virtual environment depends on your operating system. In the case of Linux or macOS, you should run::
+How to activate your virtual environment depends on your operating system. In the case of Linux or macOS, you should
+execute the command::
 
     source /path/to/venv/bin/activate
 
-In the case of Windows you should run either ``\path\to\venv\Scripts\activate.bat`` or ``\path\to\venv\Scripts\Activate.ps1``
-depending on whether you use cmd or PowerShell.
+In the case of Windows you should run either the ``\path\to\venv\Scripts\activate.bat`` or 
+``\path\to\venv\Scripts\Activate.ps1`` file depending on whether you use cmd or PowerShell respectively.
 
 Once activated, any python command or code run will make use of the virtual environment
 and any packages installed using pip will be installed into the virtual environment.
@@ -83,6 +89,22 @@ To perform this installation, use the command:::
 Currently this file also contains packages used for the purpose of development and testing. In future these might be 
 separated from the packages required for deployment.
 
+Creating the database
+---------------------
+The server application uses an ``sqlite3`` database in order to make the entries searchable. Before running the app
+for the first time, this database must be created. It does this based on two JSON files. One that contains all the 
+metadata from UniProt (``db.json`` in the instance directory by default) and one that specifies the histone categories
+with the prefered multimer for their histones (``categories.json`` in the instance directory by default). In future
+these files will be generated or downloaded automatically, but for now these files must be placed in the configured
+location manually.
+
+Once the files have been prepared, the initial database can be created using the command::
+
+    flask --app prohistonedb database create
+
+The environment variable ``FLASK_APP`` can be set to ``prohistonedb`` in order to avoid typing the ``--app prohistonedb``
+part in any of the flask commands.
+
 Usage
 =====
 In order to run the development server, run the command::
@@ -92,15 +114,17 @@ In order to run the development server, run the command::
 During development it is advised to run in debug mode in order to automatically restart the server after code changes
 and catch tracebacks. However, never do this in a deployment environment.
 
-The ``--app prohistonedb`` part can be left out of the command by setting the environment variable ``FLASK_APP``.
+As with the database creation, the ``--app prohistonedb`` part can be left out of flask commands by setting the environment
+variable ``FLASK_APP``.
 
 The running server by default bound to the localhost (127.0.0.1) on port 5000.
 
 Instance Directory
 ==================
-Once the server is running, an instance folder will be created. The folder contains all files that are local to the
-machine that the server is deployed to. This includes files such as the sqlite database, the raw structure data and
-a ``config.json`` file.
+After launching the app for the first time, an instance folder will be created. The folder contains all files that are
+local to the machine that the server is deployed to. By default this includes the ``sqlite3`` database, the raw structure data,
+and the JSON files with the categories and metadata for building the database. It can also contain an optional
+``config.json`` file where all the default settings for the server can be changed.
 
 Config
 ======
@@ -108,9 +132,9 @@ The ``default_config.json`` file in the project's root directory contains the de
 Any local changes to this default configuration can be provided in a ``config.json`` file in the instance directory.
 
 The possible configuration settings include:
-  * **DATABASE**: The location of sqllite database file. Is assumed to be in the instance directory if the path is relative.
-  * **METADATA_JSON**: The location of the json file with metadata from `UniProt <https://www.uniprot.org/>`_. Is assumed to be in the instance directory if the path is relative.
-  * **CATEGORIES_JSON**: The location of the json files that specifies the histone caregories. Is assumed to be in the instance directory if the path is relative.
+  * **DATABASE**: The location of ``sqlite3`` database file. It is assumed to be in the instance directory if the path is relative.
+  * **METADATA_JSON**: The location of the JSON file with metadata from `UniProt <https://www.uniprot.org/>`_. It is assumed to be in the instance directory if the path is relative.
+  * **CATEGORIES_JSON**: The location of the JSON files that specifies the histone caregories. It is assumed to be in the instance directory if the path is relative.
   * All builtin configuration values used by Flask: `documentation <https://flask.palletsprojects.com/en/2.2.x/config/#builtin-configuration-values>`_
 
 Testing
@@ -119,7 +143,8 @@ Running tests requires the ``pytest`` package. In order to run the tests, simply
 directory. When contributing to the projects, please do this before any git pushes to the server to make sure everything
 is in working order.
 
-The tests run with their own server configuration which. When writing tests this is taken care of by the ``app`` fixture.
+The tests run with their own server configuration which uses a temporary ``sqlite3`` database file to avoid breaking
+the deployed database. When writing tests this is taken care of by the ``app`` fixture.
 
 Deployment
 ==========
