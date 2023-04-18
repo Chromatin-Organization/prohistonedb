@@ -9,9 +9,10 @@
         <option value="gen_id">Gen ID</option>
         <option value="seq">Sequence</option>
         </select>
-        <img src="{{ url_for('static', filename = 'assets/img/down-arrow-white.svg') }}" alt="down-arrow" class="arrow">
+        {# ! FIXME: image causes issues with :focus state of search input field #}
+        {# <img src="{{ url_for('static', filename = 'assets/img/down-arrow-white.svg') }}" alt="down-arrow" class="arrow"> #}
     
-        <input type="text" class="form-control bg-light ps-4" name="q" placeholder="Search" maxlength="40" />
+        <input type="text" class="form-control bg-light ps-2" name="q" placeholder="Search" maxlength="40" />
         <span class="input-group-text border-0 pe-3 w-6" style="z-index: 9">
             <i class="fas fa-search" id="search-icon"></i>
         </span>
