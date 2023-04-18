@@ -27,7 +27,6 @@ def index():
     NUM_RESULTS = 20
     args = flask.request.args.copy()
     fields = args.keys()
-    print(fields)
 
     accepted_fields = FieldType.accepted_fields()
     accepted_fields.append("any")
@@ -49,7 +48,6 @@ def index():
     # Create filters for all the search field.
     filters = []
     fields = args.keys()
-    print(fields)
 
     for field in fields:
         #! Ignore none supported fields for now. Change in future!
@@ -67,7 +65,6 @@ def index():
     # Create a logical AND filter that combines the filters per field and generate SQL code for a database Query from it.
     filters = sql.AndFilter(filters)
     sql_str = sql.build_sql("metadata", filters)
-    print(sql_str)
 
     # Get the database connection and query the generated SQL code.
     conn = database.get_db()
