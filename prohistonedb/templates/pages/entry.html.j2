@@ -120,70 +120,71 @@
 
 <header>
     <div class="page-header header-plain">
-      <div class="container">
+        <div class="container">
 
-        <div class="container mt-7 opacity-9">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="text-white pt-3">{{ organism + " " + uniprotID }}</h2>
-                </div>
-            </div>
-            <div id="information" class="row">
-                <div class="col-12">
-                    <h3 class="text-white pt-3">Information</h3>
-
-                    <div class="pb-1 row">
-                        <div class="col-sm-3 label"><span>Protein</span></div>
-                        <div class="col-sm-9 value">
-                            <span class="mb-0">{{organism}}</span>
-                        </div>
-                    </div>
-                    <div class="pb-1 row">
-                        <div class="col-sm-3 label"><span>Gene</span></div>
-                        <div class="col-sm-9 value">
-                            <span class="mb-0">{{gene}}</span>
-                        </div>
-                    </div>
-                    <div class="pb-1 row">
-                        <div class="col-sm-3 label"><span>Source organism</span></div>
-                        <div class="col-sm-9 value">
-                            <span class="mb-0 float-start me-2">AAABBBCCC</span><span class="link"><a href="{{ url_for('search.index', organism='bla') }}">Search this organism</a></span>
-                        </div>
-                    </div>
-                    <div class="pb-1 row">
-                        <div class="col-sm-3 label"><span>Amino acids</span></div>
-                        <div class="col-sm-9 value">
-                            <span class="mb-0">{{sequenceLength}} AA</span>
-                        </div>
-                    </div>
-                    <div class="pb-1 row">
-                        <div class="col-sm-3 label"><span>UniProt</span></div>
-                        <div class="col-sm-9 value">
-                            <span class="mb-0 float-start me-2">{{uniprotID}}</span><span class="link"> <a href="https://www.uniprot.org/uniprotkb/{{uniprotID}}/entry">go to UniProt</a></span>
-                        </div>
-                    </div>
-                    <div class="pb-1 row">
-                        <div class="col-sm-3 label"><span>Lineage</span></div>
-                        <div class="col-sm-9 value">
-                            <span class="mb-0">
-                                <ul class="lineage-path">
-                                    {% for line in lineage %}
-                                        {% if line.hidden|e != "True" %}
-                                            <li><a href="https://uniprot.org/taxonomy/{{line.taxonId|e}}">{{line.scientificName|e}}</a></li>
-                                        {% endif %}
-                                    {% endfor %}
-                                </ul>
-                            </span>
-                        </div>
+            <div class="container mt-7 opacity-9">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-white pt-3">{{ organism + " " + uniprotID }}</h2>
                     </div>
                 </div>
+                <div id="information" class="row">
+                    <div class="col-12">
+                        <h3 class="text-white pt-3">Information</h3>
+
+                        <div class="pb-1 row">
+                            <div class="col-sm-3 label"><span>Protein</span></div>
+                            <div class="col-sm-9 value">
+                                <span class="mb-0">{{organism}}</span>
+                            </div>
+                        </div>
+                        <div class="pb-1 row">
+                            <div class="col-sm-3 label"><span>Gene</span></div>
+                            <div class="col-sm-9 value">
+                                <span class="mb-0">{{gene}}</span>
+                            </div>
+                        </div>
+                        <div class="pb-1 row">
+                            <div class="col-sm-3 label"><span>Source organism</span></div>
+                            <div class="col-sm-9 value">
+                                <span class="mb-0 float-start me-2">AAABBBCCC</span><span class="link"><a href="{{ url_for('search.index', organism='bla') }}">Search this organism</a></span>
+                            </div>
+                        </div>
+                        <div class="pb-1 row">
+                            <div class="col-sm-3 label"><span>Amino acids</span></div>
+                            <div class="col-sm-9 value">
+                                <span class="mb-0">{{sequenceLength}} AA</span>
+                            </div>
+                        </div>
+                        <div class="pb-1 row">
+                            <div class="col-sm-3 label"><span>UniProt</span></div>
+                            <div class="col-sm-9 value">
+                                <span class="mb-0 float-start me-2">{{uniprotID}}</span><span class="link"> <a href="https://www.uniprot.org/uniprotkb/{{uniprotID}}/entry">go to UniProt</a></span>
+                            </div>
+                        </div>
+                        <div class="pb-1 row">
+                            <div class="col-sm-3 label"><span>Lineage</span></div>
+                            <div class="col-sm-9 value">
+                                <span class="mb-0">
+                                    <ul class="lineage-path">
+                                        {% for line in lineage %}
+                                            {% if line.hidden|e != "True" %}
+                                                <li><a href="https://uniprot.org/taxonomy/{{line.taxonId|e}}">{{line.scientificName|e}}</a></li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
-
-    </div>
-  </div><!-- end page header -->
+    </div><!-- end page header -->
+</header>
   
-  <div class="card card-body mx-3 mx-md-4 mt-n6">
+<div class="card card-body mx-3 mx-md-4 mt-n6">
     <section class="my-3">
         <!-- structure / views options -->
         <div class="container">              
@@ -335,10 +336,10 @@
             </div>
         </div>
     </section>
-  </div>
-  {% endblock content %}
+</div>
+{% endblock content %}
 
-  {% block javascripts %}
+{% block javascripts %}
   
     {# <script src="{{url_for('static', filename = 'assets/js/plugins/molstar.js' )}}"></script> #}
 
@@ -385,4 +386,4 @@
     
     </script>
 
-  {% endblock javascripts %}
+{% endblock javascripts %}
