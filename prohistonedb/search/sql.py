@@ -148,4 +148,4 @@ def build_sql(table: str, filter: FilterABC):
     if filter.isempty:
         return f"SELECT * FROM {table}"
     else:
-        return f"SELECT * FROM {table}\n  WHERE {filter.sql}"
+        return f"SELECT * FROM {table} WHERE {filter.sql}"
