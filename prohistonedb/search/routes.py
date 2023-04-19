@@ -33,25 +33,29 @@ def index():
 
     # Convert filter=[field]&q=[value] syntax to [filter]=[value] pairs in de MultiDict
     if "filter" in fields:
-        if not "q" in fields:
-            raise ValueError('Search bar should return fields in "filter" together with values in "q".')
-        
-        fields = args.poplist("filter")
-        values = args.poplist("q")
+        if "q" in fields:
+            flask.current_app.logger.debug("Found 'filter=[field]&q=[value]' syntax. Converting to '[field]=[value]' syntax...")
+            fields = args.poplist("filter")
+            values = args.poplist("q")
 
-        if len(fields) != len(values):
-            raise ValueError('"filter" and "q" should have the same number of items.')
-        
-        for field, value in zip(fields, values):
-            args.add(field, value)
+            if len(fields) == len(values):
+                for field, value in zip(fields, values):
+                    args.add(field, value)
+            else:
+                flask.current_app.logger.error('"filter" and "q" should have the same number of items.')
+        else:
+            flask.current_app.logger.error("Search bar should return fields in 'filter' together with values in 'q'.")
 
     # Create filters for all the search field.
     filters = []
     fields = args.keys()
+    flask.current_app.logger.debug(f"Valid fields: {accepted_fields}")
+    flask.current_app.logger.debug(f"Request fields (after conversion): {fields}")
 
     for field in fields:
         #! Ignore none supported fields for now. Change in future!
         if not field in accepted_fields:
+            flask.current_app.logger.debug(f"Ignoring '{field}' since it is not a valid filter.")
             continue
 
         # Create a logical OR filter per field
@@ -64,10 +68,14 @@ def index():
 
     # Create a logical AND filter that combines the filters per field and generate SQL code for a database Query from it.
     filters = sql.AndFilter(filters)
+    flask.current_app.logger.debug(f"Generated filters: {filters}")
+
     sql_str = sql.build_sql("metadata", filters)
+    flask.current_app.logger.debug(f"Generated SQL query: {sql_str}")
 
     # Get the database connection and query the generated SQL code.
     conn = database.get_db()
     results = conn.execute(sql_str)
     results = results.fetchmany(NUM_RESULTS)
+    flask.current_app.logger.debug(f"Displaying first {NUM_RESULTS} results")
     return flask.render_template('pages/search.html.j2', results=results)

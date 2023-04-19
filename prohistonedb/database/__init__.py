@@ -21,7 +21,7 @@ from .types import FieldType
 
 #***===== Functions =====***#
 def init_app(app: Flask):
-    """ Register the database teardown onto the Flask app. """
+    """ Register the database teardown and CLI commands onto the Flask app. """
     app.teardown_appcontext(teardown_db)
     app.register_blueprint(bp)
 
@@ -49,13 +49,14 @@ def create():
     """ Create a new database from json files. """
     #TODO: Automatically generate column names based on the possible FieldType values with SQL injection prevention.
     #TODO: Add CLI option for overwriting existing database file.
+    #TODO: Split functionality into functions and only call them here.
 
     # Make sure the database file does not exist yet.
     database_path = Path(flask.current_app.config["DATABASE"])
 
     if database_path.is_file():
         database_path.unlink()
-        # raise Exception("A database file already exists.")
+        raise Exception("A database file already exists.")
     
     # Create a database with empty tables.
     conn = get_db()
