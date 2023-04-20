@@ -22,7 +22,6 @@ from . import bp
 def index():
     """ Process the search request and render the search results. """
     #TODO: Add Input Validation. (currently just discards non standard keys)
-    
     # Prepare some variables
     NUM_RESULTS = 20
     args = flask.request.args.copy()
@@ -67,15 +66,15 @@ def index():
             filters.append(sql.OrFilter([sql.Filter(field, value) for value in values]))
 
     # Create a logical AND filter that combines the filters per field and generate SQL code for a database Query from it.
-    filters = sql.AndFilter(filters)
+    filter = sql.AndFilter(filters)
     flask.current_app.logger.debug(f"Generated filters: {filters}")
 
-    sql_str = sql.build_sql("metadata", filters)
-    flask.current_app.logger.debug(f"Generated SQL query: {sql_str}")
+    query = sql.SQL("metadata", filter=filter)
+    flask.current_app.logger.debug(f"Generated SQL query: {str(query)}")
 
     # Get the database connection and query the generated SQL code.
     conn = database.get_db()
-    results = conn.execute(sql_str)
+    results = query.execute(conn)
     results = results.fetchmany(NUM_RESULTS)
     flask.current_app.logger.debug(f"Displaying first {NUM_RESULTS} results")
     return flask.render_template('pages/search.html.j2', results=results)
