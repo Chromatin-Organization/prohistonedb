@@ -69,7 +69,7 @@ def index():
     filter = sql.AndFilter(filters)
     flask.current_app.logger.debug(f"Generated filters: {filters}")
 
-    query = sql.SQL("metadata", filter=filter)
+    query = sql.SQL("search", filter=filter)
     flask.current_app.logger.debug(f"Generated SQL query: {str(query)}")
 
     # Get the database connection and query the generated SQL code.

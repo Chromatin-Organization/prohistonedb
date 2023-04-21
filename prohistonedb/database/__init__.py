@@ -56,37 +56,47 @@ def create():
 
     if database_path.is_file():
         database_path.unlink()
-        raise Exception("A database file already exists.")
+        # raise Exception("A database file already exists.")
     
     # Create a database with empty tables.
     conn = get_db()
 
     conn.execute("""
         CREATE TABLE categories (
-            name PRIMARY KEY,
-            multimer NOT NULL CHECK( multimer IN ('monomer', 'dimer', 'tetramer', 'hexamer') )
+            id INTEGER PRIMARY KEY,
+            name TEXT NOT NULL,
+            multimer TEXT NOT NULL CHECK( multimer IN ('monomer', 'dimer', 'tetramer', 'hexamer') ),
+            short_name TEXT
         )
     """)
 
     conn.execute("""
         CREATE TABLE metadata (
-            uniprot_id PRIMARY KEY,
-            organism NOT NULL,
-            organism_id NOT NULL,
-            sequence NOT NULL,
-            sequence_len NOT NULL,
-            category NOT NULL,
-            lineage NOT NULL,
-            protein_id NOT NULL,
-            proteome_id NOT NULL,
-            gen_id,
-            genome_id NOT NULL,
+            uniprot_id TEXT PRIMARY KEY,
+            organism TEXT NOT NULL,
+            organism_id TEXT NOT NULL,
+            sequence TEXT NOT NULL,
+            sequence_len INTEGER NOT NULL,
+            category_id INTEGER NOT NULL,
+            lineage TEXT NOT NULL,
+            protein_id TEXT NOT NULL,
+            proteome_id TEXT NOT NULL,
+            gen_id TEXT,
+            genome_id TEXT NOT NULL,
             CHECK (LENGTH (sequence) = sequence_len),
-            FOREIGN KEY (category)
-                REFERENCES categories 
+            FOREIGN KEY (category_id)
+                REFERENCES categories(id)
         )
     """)
     conn.commit()
+
+    # Create a view for accessing the necessary data in a search
+    conn.execute("""
+        CREATE VIEW search AS
+        SELECT metadata.*, categories.name AS category
+        FROM metadata
+        LEFT JOIN categories ON metadata.category_id = categories.id
+    """)
 
     # Fill the categories table from the categories json file.
     categories_json = Path(flask.current_app.config["CATEGORIES_JSON"])
@@ -95,8 +105,24 @@ def create():
         raise Exception("Config option 'CATEGORIES_JSON' does not point to a file.")
 
     with open(categories_json, 'r') as f:
-        categories = json.load(f)
-        conn.executemany("INSERT INTO categories (name, multimer) VALUES (?, ?)", categories.items())
+        categories_json = json.load(f)
+        categories = []
+
+        for category in categories_json:
+            category_json = categories_json[category]
+
+            data = {}
+            data["name"] = category
+            data["multimer"] = category_json["preferedMultimer"]
+            if "shortName" in category_json:
+                data["short_name"] = category_json["shortName"]
+            else:
+                data["short_name"] = None
+            
+            categories.append(data)
+
+        sql = "INSERT INTO categories (name, multimer, short_name) VALUES (:name, :multimer, :short_name)"
+        conn.executemany(sql, categories)
         conn.commit()
 
     # Fill the metadata table from the metadata json file.
@@ -110,7 +136,6 @@ def create():
         metadata = []
 
         for uid in metadata_json:
-            print(uid)
             data = {}
             data[FieldType.UNIPROT_ID.db_name] = uid
 
@@ -166,32 +191,34 @@ def create():
             metadata.append(data)
         
         #TODO: Automatically generate column names based on the possible FieldType values with SQL injection prevention.        
-        sql = """ 
-            INSERT INTO metadata (
-                uniprot_id,
-                organism,
-                organism_id,
-                sequence,
-                sequence_len,
-                category,
-                lineage,
-                protein_id,
-                proteome_id,
-                gen_id,
-                genome_id
-            ) VALUES (
-                :uniprot_id,
-                :organism,
-                :organism_id,
-                :sequence,
-                :sequence_len,
-                :category,
-                :lineage,
-                :protein_id,
-                :proteome_id,
-                :gen_id,
-                :genome_id
-            )
+        sql = """INSERT INTO metadata (
+                    uniprot_id,
+                    organism,
+                    organism_id,
+                    sequence,
+                    sequence_len,
+                    category_id,
+                    lineage,
+                    protein_id,
+                    proteome_id,
+                    gen_id,
+                    genome_id
+                )
+                SELECT
+                    :uniprot_id,
+                    :organism,
+                    :organism_id,
+                    :sequence,
+                    :sequence_len,
+                    categories.id,
+                    :lineage,
+                    :protein_id,
+                    :proteome_id,
+                    :gen_id,
+                    :genome_id
+                FROM categories
+                    WHERE name = :category
         """
+        
         conn.executemany(sql, metadata)
         conn.commit()
