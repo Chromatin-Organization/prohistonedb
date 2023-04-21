@@ -31,98 +31,106 @@
                 <!-- sidebar left (search facets) -->
                 <div id="facets-container" class="col-lg-3 col-md-4 d-none d-md-block mt-3">
                     <h3>Filter by:</h3>
-
-                    <div class="row mt-3 filter-category">
-                        <div class="label"><h5>Category</h5></div>
-                        <div id="filter-category-container" class="col-10 ps-0 mb-2">
-                            <div class="form-check">
-                                {# TODO: build options from category table #}
-                                {% for cat in categories %}
-                                <div class="form-check ps-0">
-                                    <input class="form-check-input" type="checkbox" value="{{cat}}" id="categoryCheck1">
-                                    <label class="form-check-label" for="categoryCheck1">
-                                        {{cat}}
-                                    </label>
-                                    <span class="filter-num badge">
-                                        n
-                                    </span>
+                    <form name="filters" method="GET" action="{{ url_for('search.index') }}">
+                        <div class="row mt-3 filter-category">
+                            <div class="label"><h5>Category</h5></div>
+                            <div id="filter-category-container" class="col-10 ps-0 mb-2">
+                                <div class="form-check">
+                                    {# TODO: build options from category table #}
+                                    {% for cat in categories %}
+                                    <div class="form-check ps-0">
+                                        <input class="form-check-input" type="checkbox" name="cat" value="{{cat}}" id="categoryCheck{{loop.index}}">
+                                        <label class="form-check-label" for="categoryCheck{{loop.index}}">
+                                            {{cat}}
+                                        </label>
+                                        <span class="filter-num badge">
+                                            n
+                                        </span>
+                                    </div>
+                                    {% endfor %}
                                 </div>
-                                {% endfor %}
                             </div>
                         </div>
-                    </div>
 
-                    <div class="row mt-3 filter-lineage">
-                        <div class="label"><h5>Lineage</h5></div>
-                        <div class="form-check col-10">
-                            <input class="form-check-input" type="checkbox" value="" id="lineageCheck1">
-                            <label class="form-check-label" for="lineageCheck1">
-                                Archaea
-                            </label>
-                            <span class="filter-num badge">
-                                n
-                            </span>
+                        <div class="row mt-3 filter-lineage">
+                            <div class="label"><h5>Lineage</h5></div>
+                            <div class="form-check col-10">
+                                <input class="form-check-input" type="checkbox" name="tax" value="archaea" id="lineageCheck1">
+                                <label class="form-check-label" for="lineageCheck1">
+                                    Archaea
+                                </label>
+                                <span class="filter-num badge">
+                                    n
+                                </span>
+                            </div>
+                            <div class="form-check col-10">
+                                <input class="form-check-input" type="checkbox" name="tax" value="bacteria" id="lineageCheck2">
+                                <label class="form-check-label" for="lineageCheck2">
+                                    Bacteria
+                                </label>
+                                <span class="filter-num badge">
+                                    n
+                                </span>
+                            </div>
                         </div>
-                        <div class="form-check col-10">
-                            <input class="form-check-input" type="checkbox" value="" id="lineageCheck2">
-                            <label class="form-check-label" for="lineageCheck2">
-                                Bacteria
-                            </label>
-                            <span class="filter-num badge">
-                                n
-                            </span>
-                        </div>
-                    </div>
 
-                    <div class="row mt-3 filter-sequence">
-                        <div class="label"><h5>Sequence length</h5></div>
-                        <div class="form-check col-10">
-                            <input class="form-check-input" type="checkbox" value="1" id="sequenceCheck1">
-                            <label class="form-check-label" for="sequenceCheck1">
-                                1 - 200
-                            </label>
-                            <span class="filter-num badge">
-                                n
-                            </span>
+                        <div class="row mt-3 filter-sequence">
+                            <div class="label"><h5>Sequence length</h5></div>
+                            <div class="form-check col-10">
+                                <input class="form-check-input" type="checkbox" name="seql" value="1-200" id="sequenceCheck1">
+                                <label class="form-check-label" for="sequenceCheck1">
+                                    1 - 200
+                                </label>
+                                <span class="filter-num badge">
+                                    n
+                                </span>
+                            </div>
+                            <div class="form-check col-10">
+                                <input class="form-check-input" type="checkbox" name="seql" value="201-400" id="sequenceCheck2">
+                                <label class="form-check-label" for="sequenceCheck2">
+                                    201 - 400
+                                </label>
+                                <span class="filter-num badge">
+                                    n
+                                </span>
+                            </div>
+                            <div class="form-check col-10">
+                                <input class="form-check-input" type="checkbox" name="seql" value="401-600" id="sequenceCheck3">
+                                <label class="form-check-label" for="sequenceCheck3">
+                                    401 - 600
+                                </label>
+                                <span class="filter-num badge">
+                                    n
+                                </span>
+                            </div>
+                            <div class="form-check col-10">
+                                <input class="form-check-input" type="checkbox" name="seql" value="601-800" id="sequenceCheck4">
+                                <label class="form-check-label" for="sequenceCheck4">
+                                    601 - 800
+                                </label>
+                                <span class="filter-num badge">
+                                    n
+                                </span>
+                            </div>
+                            <div class="form-check col-10">
+                                <input class="form-check-input" type="checkbox" name="seql" value="801-9999" id="sequenceCheck5">
+                                <label class="form-check-label" for="sequenceCheck5">
+                                    801 -
+                                </label>
+                                <span class="filter-num badge">
+                                    n
+                                </span>
+                            </div>
                         </div>
-                        <div class="form-check col-10">
-                            <input class="form-check-input" type="checkbox" value="201" id="sequenceCheck2">
-                            <label class="form-check-label" for="sequenceCheck2">
-                                201 - 400
-                            </label>
-                            <span class="filter-num badge">
-                                n
-                            </span>
-                        </div>
-                        <div class="form-check col-10">
-                            <input class="form-check-input" type="checkbox" value="401" id="sequenceCheck3">
-                            <label class="form-check-label" for="sequenceCheck3">
-                                401 - 600
-                            </label>
-                            <span class="filter-num badge">
-                                n
-                            </span>
-                        </div>
-                        <div class="form-check col-10">
-                            <input class="form-check-input" type="checkbox" value="601" id="sequenceCheck4">
-                            <label class="form-check-label" for="sequenceCheck4">
-                                601 - 800
-                            </label>
-                            <span class="filter-num badge">
-                                n
-                            </span>
-                        </div>
-                        <div class="form-check col-10">
-                            <input class="form-check-input" type="checkbox" value="801" id="sequenceCheck5">
-                            <label class="form-check-label" for="sequenceCheck5">
-                                801 -
-                            </label>
-                            <span class="filter-num badge">
-                                n
-                            </span>
-                        </div>
-                    </div>
+
+                        {# TODO: insert hidden fields #}
+                        {% if request.args is defined and request.args|length %}
+                            <input type="hidden" name="filter" value="{{ request.args.get('filter') }}" />
+                            <input type="hidden" name="q" value="{{ request.args.get('q') }}" />
+                        {% endif %}
+                    </form>
                 </div>
+               
 
                  <div class="col-lg-9 col-md-8">
                     
@@ -196,7 +204,7 @@
             <div class="row mt-5">
                 <nav aria-label="Search results pages" class="mx-auto" style="width: auto">
                     <ul class="pagination">
-                        {# check if current page num > 1, else hide prev page link #}
+                        {# TODO: check if current page num > 1, else hide prev page link #}
                         <li class="page-item"><a class="page-link prev" href="#"><<</a></li>
                         <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -220,8 +228,33 @@
 
     <script>
         // change placeholder text to reflect we're searching within search results on the search results page
-        window.addEventListener("DOMContentLoaded", e => {
+        window.addEventListener("DOMContentLoaded", () => {
             document.querySelector('input[name="q"]').placeholder = "Search within results";
+
+            {# * set checkboxes to checked for each applied filter in query #}
+            let filterArgs = {};
+            {% if request.args is defined and request.args|length %}
+                {% for arg in request.args %}
+                    // overwrites multiple args with same name
+                    filterArgs["{{arg}}"] = "{{request.args.get(arg)}}";
+                {% endfor %}
+            {% endif %}
+            console.log(filterArgs);
+
+            const filters = document.querySelectorAll(".form-check-input");
+            filters.forEach( filter => {
+                filter.addEventListener("change", () => {
+                    document.querySelector("form[name='filters']").submit();
+                });
+                
+                for (let key in filterArgs) {    
+                    if (key === filter.name) {
+                        if (filterArgs[key] === filter.value) {
+                            filter.checked = true;
+                        }
+                    }
+                }
+            });
         });
     </script>
 
