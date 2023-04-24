@@ -21,7 +21,7 @@ from . import bp
 @bp.route("", methods=["GET"])
 def index():
     """ Process the search request and render the search results. """
-    #TODO: Add Input Validation. (currently just discards non standard keys)
+    #? Do we want to change behaviour away from discarding non-valid fields?
     # Prepare some variables
     NUM_RESULTS = 20
     args = flask.request.args.copy()
@@ -52,7 +52,7 @@ def index():
     flask.current_app.logger.debug(f"Request fields (after conversion): {fields}")
 
     for field in fields:
-        #! Ignore none supported fields for now. Change in future!
+        #? Ignore none supported fields for now. Change in future?
         if not field in accepted_fields:
             flask.current_app.logger.debug(f"Ignoring '{field}' since it is not a valid filter.")
             continue
@@ -69,12 +69,12 @@ def index():
     filter = sql.AndFilter(filters)
     flask.current_app.logger.debug(f"Generated filters: {filters}")
 
-    query = sql.SQL("search", filter=filter)
-    flask.current_app.logger.debug(f"Generated SQL query: {str(query)}")
+    # Select the necessary fields and generate the SQL query
+    query = sql.SQL(filter=filter)
 
     # Get the database connection and query the generated SQL code.
-    conn = database.get_db()
-    results = query.execute(conn)
+    db = database.get_db()
+    results = query.execute(db)
     results = results.fetchmany(NUM_RESULTS)
     flask.current_app.logger.debug(f"Displaying first {NUM_RESULTS} results")
     return flask.render_template('pages/search.html.j2', results=results)
