@@ -55,8 +55,7 @@ def create():
     database_path = Path(flask.current_app.config["DATABASE"])
 
     if database_path.is_file():
-        database_path.unlink()
-        # raise Exception("A database file already exists.")
+        raise Exception("A database file already exists.")
     
     # Create a database with empty tables.
     conn = get_db()
@@ -79,10 +78,13 @@ def create():
             sequence_len INTEGER NOT NULL,
             category_id INTEGER NOT NULL,
             lineage TEXT NOT NULL,
+            lineage_json TEXT NOT NULL,
             protein_id TEXT NOT NULL,
-            proteome_id TEXT NOT NULL,
+            proteome_id TEXT,
             gen_id TEXT,
             genome_id TEXT NOT NULL,
+            rel_path TEXT NOT NULL,
+            ranks TEXT,
             CHECK (LENGTH (sequence) = sequence_len),
             FOREIGN KEY (category_id)
                 REFERENCES categories(id)
@@ -138,11 +140,11 @@ def create():
         for uid in metadata_json:
             data = {}
             data[FieldType.UNIPROT_ID.db_name] = uid
+            uid_json = metadata_json[uid]
 
-            #TODO: Double check these with notes.
+            # Add the searchable fields
             #? Hardcoded for now. Do we want to change this?
             for field in FieldType:
-                uid_json = metadata_json[uid]
                 cross_references = uid_json["uniprot"]["uniProtKBCrossReferences"]
 
                 if field is FieldType.UNIPROT_ID:
@@ -158,15 +160,23 @@ def create():
                 elif field is FieldType.CATEGORY:
                     data[field.db_name] = uid_json["histoneDB"]["category"]
                 elif field is FieldType.LINEAGE:
-                    lineages = [lineage["scientificName"] for lineage in uid_json["uniprot"]["lineages"]]
-                    data[field.db_name] = json.dumps(lineages)
+                    lineages_full = uid_json["uniprot"]["lineages"]
+                    lineage_names = [lineage["scientificName"] for lineage in lineages_full]
+                    data[field.db_name] = json.dumps(lineage_names)
+                    data[field.db_name + "_json"] = json.dumps(lineages_full)
                 elif field is FieldType.PROTEIN_ID:
-                   ref_properties = [ref["properties"] for ref in cross_references]
-                   pids = [property["value"] for properties in ref_properties for property in properties if property["key"] == "ProteinId"]
-                   data[field.db_name] = json.dumps(pids)
+                    ref_properties = [ref["properties"] for ref in cross_references]
+                    pids = [property["value"] for ref in ref_properties for property in ref if property["key"] == "ProteinId"]
+                    if pids:
+                        data[field.db_name] = json.dumps(pids)
+                    else:
+                        data[field.db_name] = None
                 elif field is FieldType.PROTEOME_ID:
                     pmids = [ref["id"] for ref in cross_references if ref["database"] == "Proteomes"]
-                    data[field.db_name] = json.dumps(pmids)
+                    if pmids:
+                        data[field.db_name] = json.dumps(pmids)
+                    else:
+                        data[field.db_name] = None
                 elif field is FieldType.GEN_ID:
                     if not "genes" in uid_json["uniprot"].keys():
                         data[field.db_name] = None
@@ -184,10 +194,30 @@ def create():
                     data[field.db_name] = json.dumps(gids)
                 elif field is FieldType.GENOME_ID:
                     gmids = [ref["id"] for ref in cross_references if ref["database"] == "EMBL"]
-                    data[field.db_name] = json.dumps(gmids)
+                    if gmids:
+                        data[field.db_name] = json.dumps(gmids)
+                    else:
+                        data[field.db_name] = None
                 else:
                     raise Exception(f"Unknown JSON path for FieldType {field}")
             
+            # Add additional information
+            multimers = ["monomer", "dimer", "tetramer", "hexamer"]
+            multimers_json = uid_json["histoneDB"]["multimer"]
+            ranks = {}
+
+            for multimer in multimers:
+                
+                if multimer not in multimers_json or not multimers_json[multimer]:
+                    ranks["multimer"] = None
+                else:
+                    ranks_json = uid_json["histoneDB"]["rankModel"][multimer]
+                    ranks[multimer] = [ranks_json["rank_" + str(n)] for n in range(1, 6)]
+            
+            data["ranks"] = json.dumps(ranks)
+            data["rel_path"] = uid_json["histoneDB"]["relPath"]
+
+            # Apply all the fields for this uid
             metadata.append(data)
         
         #TODO: Automatically generate column names based on the possible FieldType values with SQL injection prevention.        
@@ -199,10 +229,13 @@ def create():
                     sequence_len,
                     category_id,
                     lineage,
+                    lineage_json,
                     protein_id,
                     proteome_id,
                     gen_id,
-                    genome_id
+                    genome_id,
+                    rel_path,
+                    ranks
                 )
                 SELECT
                     :uniprot_id,
@@ -212,10 +245,13 @@ def create():
                     :sequence_len,
                     categories.id,
                     :lineage,
+                    :lineage_json,
                     :protein_id,
                     :proteome_id,
                     :gen_id,
-                    :genome_id
+                    :genome_id,
+                    :rel_path,
+                    :ranks
                 FROM categories
                     WHERE name = :category
         """
