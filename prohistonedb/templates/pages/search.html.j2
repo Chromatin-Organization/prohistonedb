@@ -141,7 +141,7 @@
                     {# single entry; loop this section #}
                     {% for r in results %}
                     <div class="row mt-3 mb-5 result-item">
-                        <h4><a href="{{ url_for('main.entry', uniprotID=r['uniprot_id']) }}">{{r["organism"]}} {{r["uniprot_id"]}}</a></h4>
+                        <h4><a href="{{ url_for('main.entry', uniprot_id=r['uniprot_id']) }}">{{r["organism"]}} {{r["uniprot_id"]}}</a></h4>
                         <div class="row">
                             <div class="col-sm-3 label"><span>Protein</span></div>
                             <div class="col-sm-9 value">
