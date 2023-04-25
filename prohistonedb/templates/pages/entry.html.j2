@@ -1,33 +1,20 @@
 {% extends 'layouts/base.html.j2' %}
 
-{# TODO: move data path setting to config file #}
-{# TODO: implement data retrieval in back-end and remove dummy data. #}
 {# ! (MO): Molstar viewer & images are loading correctly; #}
 {# !     JS "fetch" needs the unneccessary config.json in data folder to exist (for now) #}
-{# * set some demo variables (will eventually be passed as args by the back-end) #}
-{% set organism = "Candidatus Diapherotrites archaeon" %}
-{% set gene = "AIC15241.1" %}
-{% set sequenceLength = 74 %}
-{% set model_order = [] %}
-
-{# * note: "entry" URL without arguments should redirect to /hexamer/rank_1 => will be replaced with dynamic updates #}
-{# * NOTE (Tim): I can take care probably take care of most of this logic in the back-end. #}
-{% if multimer is undefined %}
-    {%  set multimerPath = "" %}
-{% elif multimer == "monomer" %}
-    {%  set multimerPath = "" %}
-{% else %}
-    {% set multimerPath = "_" + multimer %}
-{% endif %}
+{% set uniprotID = entry["uniprot_id"] %}
+{% set organism = entry["organism"] %}
+{% set gene = entry["gen_id"] %}
+{% set sequenceLength = entry["sequence_len"] %}
+{% set model_order = entry["ranks"][multimer] %}
 
 {# * data folder assumed to be located in /static for now, but could be changed to somewhere more logical #}
 {# * NOTE (Tim): The folder with the raw data will most likely be stored within the 'instance' folder. #}
 {# *        As for the path to the entry's directory, this should be served by the back-end. #}
-{% set relPath = "/data/" + uniprotID + "/" + uniprotID + multimerPath %}
-{% set imgPath = relPath + "/" + uniprotID %}
+{% set imgPath = path + "/" + uniprotID %}
 
 {# hexamers are too complex for relaxed optimization, so using unrelaxed #}
-{% if multimer == "hexamer" %}
+{% if entry["ranks"][multimer] is none %}
     {% set relaxedType = "unrelaxed" %}
 {% else %}
     {% set relaxedType = "relaxed" %}
@@ -41,67 +28,8 @@
 {% set rankID = (rank.strip("rank_") | int) %}
 
 
-{% 
-    set lineage = [
-                {
-                    "scientificName": "Nitrososphaera viennensis",
-                    "taxonId": 1034015,
-                    "rank": "species",
-                    "hidden": true
-                },
-                {
-                    "scientificName": "Nitrososphaera",
-                    "taxonId": 497726,
-                    "rank": "genus",
-                    "hidden": false
-                },
-                {
-                    "scientificName": "Nitrososphaeraceae",
-                    "taxonId": 1033997,
-                    "rank": "family",
-                    "hidden": false
-                },
-                {
-                    "scientificName": "Nitrososphaerales",
-                    "taxonId": 1033996,
-                    "rank": "order",
-                    "hidden": false
-                },
-                {
-                    "scientificName": "Nitrososphaeria",
-                    "taxonId": 1643678,
-                    "rank": "class",
-                    "hidden": false
-                },
-                {
-                    "scientificName": "Thaumarchaeota",
-                    "taxonId": 651137,
-                    "rank": "phylum",
-                    "hidden": false
-                },
-                {
-                    "scientificName": "TACK group",
-                    "taxonId": 1783275,
-                    "rank": "no rank",
-                    "hidden": true
-                },
-                {
-                    "scientificName": "Archaea",
-                    "taxonId": 2157,
-                    "rank": "superkingdom",
-                    "hidden": false
-                },
-                {
-                    "scientificName": "cellular organisms",
-                    "taxonId": 131567,
-                    "rank": "no rank",
-                    "hidden": true
-                }
-            ]
-%}
+{% set lineage = entry["lineage_json"] %}
 {%  set lineageRev = lineage.reverse() %}
-{# end demo variables #}
-
 
 {% block title %} {{siteName}} {{uniprotID}} {% endblock title %}
 
@@ -347,7 +275,7 @@
         // get model order from config.json 
         // UPDATE: this is not the way. model_order is just the order in which AlphaFold runs the predictions, not a ranking.
         // TODO: retrieve from new histonedb metadata "branch"
-        fetch('{{ url_for('static', filename = relPath + '/config.json') }}')
+        fetch('{{ path + '/config.json' }}')
             .then(response => response.json())
             .then(json => {
                 const modelOrder = json.model_order[{{rankID - 1}}];
@@ -355,7 +283,7 @@
                 // hexamers only use "unrelaxed" rank; all others use "relaxed"
                 //const modelURL = "{{ url_for('static', filename = imgPath) }}" + "_{{relaxedType}}_" + "{{rank}}" + "_model_1.cif";
                 {# * hardcoded test cif file #}
-                const modelURL = "{{ url_for('static', filename = relPath) }}" + "/A0A7X6DRI5_relaxed_rank_1_model_3.cif";
+                const modelURL = "{{ path }}" + "/A0A7X6DRI5_relaxed_rank_1_model_3.cif";
 
                 molstar.Viewer.create('mspViewer', {
                     // https://molstar.org/docs/plugin/
