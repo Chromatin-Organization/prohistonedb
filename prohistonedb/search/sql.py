@@ -86,7 +86,7 @@ class CombinedFilterABC(ABC):
         """ Takes in a set of filters, ensures they are valid and stores them in self._filters. Implementers should call this with super() to ensure validation. """
         # Make sure all filters are an instance of Filter to ensure input sanitization.
         for filter in filters:
-            if not isinstance(filter, Filter):
+            if not isinstance(filter, Filter) and not isinstance(filter, CombinedFilterABC):
                 raise TypeError(f"'{filter}' is not a valid filter.")
         
         self._filters = filters
