@@ -1,7 +1,5 @@
 {% extends 'layouts/base.html.j2' %}
 
-{# ! (MO): Molstar viewer & images are loading correctly; #}
-{# !     JS "fetch" needs the unneccessary config.json in data folder to exist (for now) #}
 {% set uniprotID = entry["uniprot_id"] %}
 {% set organism = entry["organism"] %}
 {% set gene = entry["gen_id"] %}
@@ -263,19 +261,13 @@
     {# <script src="{{url_for('static', filename = 'assets/js/plugins/molstar.js' )}}"></script> #}
 
     <script>
-        // get model order from config.json 
-        // UPDATE: this is not the way. model_order is just the order in which AlphaFold runs the predictions, not a ranking.
-        // TODO: retrieve from new histonedb metadata "branch"
-        fetch('{{ path + '/config.json' }}')
-            .then(response => response.json())
-            .then(json => {
-                const modelOrder = json.model_order[{{rankID - 1}}];
                 const myViewer = document.querySelector("#mspViewer");
                 // hexamers only use "unrelaxed" rank; all others use "relaxed"
                 //const modelURL = "{{ url_for('static', filename = imgPath) }}" + "_{{relaxedType}}_" + "{{rank}}" + "_model_1.cif";
                 {# * hardcoded test cif file #}
-                {% set cif_path = path + uniprotID + '_' + relaxedType + 'rank_1_' +  entry['ranks'][multimer][rankID] + '.cif' %}
-                const modelURL = "{{ url_for('static', filename='{{cif_path}}') }}";
+                {% set cif_path = path + "/" + uniprotID + '_' + relaxedType + '_rank_1_' +  entry['ranks'][multimer][rankID] + '.cif' %}
+                //const modelURL = "{{ url_for('static', filename = cif_path) }}";
+                const modelURL = "/static/data/Atribacterota/unclassified_Atribacterota/Candidatus_Atribacteria_bacterium/A0A831SMI2/A0A831SMI2_hexamer/A0A831SMI2_unrelaxed_rank_1_model_5.cif";
 
                 molstar.Viewer.create('mspViewer', {
                     // https://molstar.org/docs/plugin/
@@ -295,14 +287,10 @@
                     viewportShowSelectionMode: false,
                     viewportShowAnimation: false,
                     viewportShowControls: false // control panel (= rightsidebar & sequence panel) toggle
-                })
-                .then(viewer => {
+                }).then(viewer => {
                     viewer.loadStructureFromUrl(modelURL, format='mmcif'); // mmcif or pdb
-                })
-            })
-            .catch(function(err) { 
-                console.log(err);
-            });
+                });
+                
     
     </script>
 
