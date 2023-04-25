@@ -165,7 +165,7 @@
                         <div class="row">
                             <div class="col-sm-3 label"><span>Source organism</span></div>
                             <div class="col-sm-9 value">
-                                <span class="mb-0 float-start me-2">{{r["organism"]}}</span><span class="link"><a href="{{ url_for('search.index', org=r['organism']) }}">Search this organism</a></span>
+                                <span class="mb-0 float-start me-2">{{r["organism"]}}</span><span class="link"><a href="{{ url_for('search.index', oid=r['organism_id']) }}">Search this organism</a></span>
                             </div>
                         </div>
                     </div>
