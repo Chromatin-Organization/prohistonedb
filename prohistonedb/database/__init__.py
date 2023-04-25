@@ -64,7 +64,7 @@ def create():
         CREATE TABLE categories (
             id INTEGER PRIMARY KEY,
             name TEXT NOT NULL,
-            multimer TEXT NOT NULL CHECK( multimer IN ('monomer', 'dimer', 'tetramer', 'hexamer') ),
+            prefered_multimer TEXT NOT NULL CHECK( prefered_multimer IN ('monomer', 'dimer', 'tetramer', 'hexamer') ),
             short_name TEXT
         )
     """)
@@ -95,7 +95,7 @@ def create():
     # Create a view for accessing the necessary data in a search
     conn.execute("""
         CREATE VIEW search AS
-        SELECT metadata.*, categories.name AS category
+        SELECT metadata.*, categories.name AS category, categories.prefered_multimer
         FROM metadata
         LEFT JOIN categories ON metadata.category_id = categories.id
     """)
@@ -115,7 +115,7 @@ def create():
 
             data = {}
             data["name"] = category
-            data["multimer"] = category_json["preferedMultimer"]
+            data["prefered_multimer"] = category_json["preferedMultimer"]
             if "shortName" in category_json:
                 data["short_name"] = category_json["shortName"]
             else:
@@ -123,7 +123,7 @@ def create():
             
             categories.append(data)
 
-        sql = "INSERT INTO categories (name, multimer, short_name) VALUES (:name, :multimer, :short_name)"
+        sql = "INSERT INTO categories (name, prefered_multimer, short_name) VALUES (:name, :prefered_multimer, :short_name)"
         conn.executemany(sql, categories)
         conn.commit()
 
@@ -209,7 +209,7 @@ def create():
             for multimer in multimers:
                 
                 if multimer not in multimers_json or not multimers_json[multimer]:
-                    ranks["multimer"] = None
+                    ranks[multimer] = None
                 else:
                     ranks_json = uid_json["histoneDB"]["rankModel"][multimer]
                     ranks[multimer] = [ranks_json["rank_" + str(n)] for n in range(1, 6)]
