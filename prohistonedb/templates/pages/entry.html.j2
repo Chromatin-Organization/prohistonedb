@@ -10,7 +10,7 @@
 {% set imgPath = path + "/" + uniprotID %}
 
 {# hexamers are too complex for relaxed optimization, so using unrelaxed #}
-{% if entry["ranks"][multimer] == "hexamer" %}
+{% if multimer == "hexamer" %}
     {% set relaxedType = "unrelaxed" %}
 {% else %}
     {% set relaxedType = "relaxed" %}
@@ -119,7 +119,6 @@
 
                     <div class="dropdown float-start">
                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            {# TODO: Change dynamically. #}
                             Rank {{rank}}
                         </a>
 
@@ -203,7 +202,7 @@
                 <div class="col-lg-9">
                     <div class="row mt-3">
                         <div id="pae-view" class="columns medium-9">
-                            <div id="pae-container" class="r{{rank}} mx-auto" style="background-image: url('{{ url_for('static', filename = imgPath + '_PAE.png') }}')">
+                            <div id="pae-container" class="r{{rank | string}} mx-auto" style="background-image: url('{{ url_for('static', filename = imgPath + '_PAE.png') }}')">
                             </div>
                         </div>
                     </div>

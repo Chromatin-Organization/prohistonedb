@@ -29,15 +29,20 @@ def index():
 #TODO: Input sanitization for multimer str.
 @bp.route("/entry/<uniprot_id>", methods=["GET"])
 @bp.route("/entry/<uniprot_id>/<multimer>", methods=["GET"])
-def entry(uniprot_id: str, multimer: Optional[str] = None, rank: Optional[int] = None):
+def entry(uniprot_id: str, multimer: Optional[str] = None):
     """ Render the structure page for a specified entry. """
     JSON_FIELDS = ["lineage", "lineage_json", "protein_id", "proteome_id", "gen_id", "genome_id", "ranks"]
 
-    if rank is None:
+    args = flask.request.args
+    if not "rank" in args:
         rank = 1
+    else:
+        rank = int(args["rank"])
 
     if rank < 1 or rank > 6:
         raise ValueError(f"'{rank}' is not a valid value for the model rank.")
+    
+    print(rank)
 
     db = database.get_db()
     query = sql.SQL(filter = sql.Filter(FieldType.UNIPROT_ID, uniprot_id))
