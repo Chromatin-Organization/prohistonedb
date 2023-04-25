@@ -16,13 +16,7 @@
     {% set relaxedType = "relaxed" %}
 {% endif %}
 
-{% if rank is undefined %}
-    {%  set rank = "rank_1" %}
-{% endif %}
-
 {# convert (cast) string to int #}
-{% set rankID = (rank.strip("rank_") | int) %}
-
 
 {% set lineage = entry["lineage_json"] %}
 {%  set lineageRev = lineage.reverse() %}
@@ -118,21 +112,20 @@
                             {# ? Since all required information should be available from the first call, we may want to ovload this to the client in the future. #}
                             {# ? Maybe add something to indicate the default option? #}
                             {% for mult in entry["multimers"] %}
-                                <li><a class="dropdown-item" href="{{ url_for('main.entry', uniprot_id=uniprotID, multimer=mult) }}">{{mult}}</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.entry', uniprot_id=uniprotID, multimer=mult, rank=rank) }}">{{mult}}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
 
-                    {# TODO: Actually change the rank dynamically #}
                     <div class="dropdown float-start">
                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                             {# TODO: Change dynamically. #}
-                            Rank 1
+                            Rank {{rank}}
                         </a>
 
                         <ul id="select_rank" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             {% for n in range(5) %}
-                                <li><a class="dropdown-item option-{{n + 1}}" href="#">Rank {{n + 1}} - {{entry["ranks"][n]}}</a></li>
+                                <li><a class="dropdown-item option-{{n + 1}}" href="{{ url_for('main.entry', uniprot_id=uniprotID, multimer=multimer, rank=(n + 1)) }}">Rank {{n + 1}} - {{entry["ranks"][n]}}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -210,7 +203,7 @@
                 <div class="col-lg-9">
                     <div class="row mt-3">
                         <div id="pae-view" class="columns medium-9">
-                            <div id="pae-container" class="r{{rankID}} mx-auto" style="background-image: url('{{ url_for('static', filename = imgPath + '_PAE.png') }}')">
+                            <div id="pae-container" class="r{{rank}} mx-auto" style="background-image: url('{{ url_for('static', filename = imgPath + '_PAE.png') }}')">
                             </div>
                         </div>
                     </div>
@@ -261,37 +254,38 @@
     {# <script src="{{url_for('static', filename = 'assets/js/plugins/molstar.js' )}}"></script> #}
 
     <script>
-                const myViewer = document.querySelector("#mspViewer");
-                // hexamers only use "unrelaxed" rank; all others use "relaxed"
-                //const modelURL = "{{ url_for('static', filename = imgPath) }}" + "_{{relaxedType}}_" + "{{rank}}" + "_model_1.cif";
-                {# * hardcoded test cif file #}
-                {% set cif_path = path + "/" + uniprotID + '_' + relaxedType + '_rank_1_' +  entry['ranks'][multimer][rankID] + '.cif' %}
-                //const modelURL = "{{ url_for('static', filename = cif_path) }}";
-                const modelURL = "/static/data/Atribacterota/unclassified_Atribacterota/Candidatus_Atribacteria_bacterium/A0A831SMI2/A0A831SMI2_hexamer/A0A831SMI2_unrelaxed_rank_1_model_5.cif";
+        // get model order from config.json 
+        // UPDATE: this is not the way. model_order is just the order in which AlphaFold runs the predictions, not a ranking.
+        // TODO: retrieve from new histonedb metadata "branch"
+        const myViewer = document.querySelector("#mspViewer");
+        // hexamers only use "unrelaxed" rank; all others use "relaxed"
+        {# * hardcoded test cif file #}
+        //const modelURL = "{{ url_for('static', filename = cif_path) }}";
+        // const modelURL = "/static/data/Atribacterota/unclassified_Atribacterota/Candidatus_Atribacteria_bacterium/A0A831SMI2/A0A831SMI2_hexamer/A0A831SMI2_unrelaxed_rank_1_model_5.cif";
+        {% set cif_path = path + "/" + uniprotID + '_' + relaxedType + '_rank_' + (rank | string) + '_' +  model_order[rank - 1] + '.cif' %}
+        const modelURL = "{{ url_for('static', filename=cif_path) }}";
 
-                molstar.Viewer.create('mspViewer', {
-                    // https://molstar.org/docs/plugin/
-                    // https://molstar.org/viewer-docs/query-parameters/
-                    // https://github.com/molstar/pdbe-molstar/blob/master/index.html
+        molstar.Viewer.create('mspViewer', {
+            // https://molstar.org/docs/plugin/
+            // https://molstar.org/viewer-docs/query-parameters/
+            // https://github.com/molstar/pdbe-molstar/blob/master/index.html
 
-                    layoutIsExpanded: false, // expand to window
-                    layoutShowControls: true, // rightsidebar & sequence panel
-                    layoutShowRemoteState: false,
-                    layoutShowSequence: true,
-                    layoutShowLog: false,
-                    layoutShowLeftPanel: false,
-                    alphafoldView: true,
+            layoutIsExpanded: false, // expand to window
+            layoutShowControls: true, // rightsidebar & sequence panel
+            layoutShowRemoteState: false,
+            layoutShowSequence: true,
+            layoutShowLog: false,
+            layoutShowLeftPanel: false,
+            alphafoldView: true,
 
-                    // show/hide viewport buttons
-                    viewportShowExpand: true,
-                    viewportShowSelectionMode: false,
-                    viewportShowAnimation: false,
-                    viewportShowControls: false // control panel (= rightsidebar & sequence panel) toggle
-                }).then(viewer => {
-                    viewer.loadStructureFromUrl(modelURL, format='mmcif'); // mmcif or pdb
-                });
-                
-    
+            // show/hide viewport buttons
+            viewportShowExpand: true,
+            viewportShowSelectionMode: false,
+            viewportShowAnimation: false,
+            viewportShowControls: false // control panel (= rightsidebar & sequence panel) toggle
+        }).then(viewer => {
+            viewer.loadStructureFromUrl(modelURL, format='mmcif'); // mmcif or pdb
+        });
     </script>
 
 {% endblock javascripts %}
