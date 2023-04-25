@@ -67,6 +67,7 @@ def index():
 
     # Create a logical AND filter that combines the filters per field and generate SQL code for a database Query from it.
     filter = sql.AndFilter(filters)
+    filter = sql.AndFilter(filters)
     flask.current_app.logger.debug(f"Generated filters: {filters}")
 
     # Select the necessary fields and generate the SQL query

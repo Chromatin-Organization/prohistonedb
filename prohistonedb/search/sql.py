@@ -16,6 +16,9 @@ from pathlib import Path
 #*----- Flask & Flask Extenstions -----*#
 import flask
 
+#*----- Flask & Flask Extenstions -----*#
+import flask
+
 #*----- External packages -----*#
 
 #*----- Custom packages -----*#
@@ -61,10 +64,13 @@ class Filter:
 
         if field in equal_fields:
             return _SQLCondition(f"{field.db_name}=?", [self._value])
+            return _SQLCondition(f"{field.db_name}=?", [self._value])
         elif field in like_fields:
+            return _SQLCondition(f"{field.db_name} LIKE ?", [f"%{self._value}%"])
             return _SQLCondition(f"{field.db_name} LIKE ?", [f"%{self._value}%"])
         elif field is FieldType.SEQUENCE_LEN:
             values = [int(val.strip()) for val in self._value.split("-")]
+            return _SQLCondition(f"{field.db_name} BETWEEN ? AND ?", values)
             return _SQLCondition(f"{field.db_name} BETWEEN ? AND ?", values)
         else:
             raise NotImplementedError(f"Couldn't generate sql condition for field {self}")
