@@ -40,10 +40,16 @@ def entry(uniprot_id: str, multimer: Optional[str] = None):
     entry = {}
 
     for key in result.keys():
+        res = result[key]
+
+        
         if key in JSON_FIELDS:
-            entry[key] = json.loads(result[key])
+            if res is None:
+                entry[key] = None
+            else:
+                entry[key] = json.loads(res)
         else:
-            entry[key] = result[key]
+            entry[key] = res
 
     entry["multimers"] = [multimer for multimer in entry["ranks"].keys() if entry["ranks"][multimer] != None]
     print(entry)
