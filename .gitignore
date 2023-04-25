@@ -12,3 +12,5 @@ instance/
 .DS_Store
 
 *.codekit3
+
+prohistonedb/static/data
