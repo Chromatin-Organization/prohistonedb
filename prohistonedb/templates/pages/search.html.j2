@@ -1,5 +1,7 @@
 {% extends 'layouts/base.html.j2' %}
 
+{% set RESULTS_PER_PAGE = 20 %}
+
 {% block title %} {{siteName}} Search {% endblock title %}
 {% block body %} class="search bg-gray-200" {% endblock body %}
 
@@ -17,8 +19,12 @@
         <div class="row">
           <div class="col-lg-8 my-auto">
             <h2 class="text-white">Search results for {{ request.args.get('q') }}</h2>
-            <p class="mb-4 text-white">Showing 1-n of m results</p>
-            
+            {% if num_results == 0 %}
+              <p class="mb-4 text-white">No results have been found.</p>
+            {% else %}
+              {% set results_min = (page - 1) * RESULTS_PER_PAGE + 1 %}
+              <p class="mb-4 text-white">Showing {{results_min}}-{{results_min + (results | length)}} of {{num_results}} results</p>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -199,20 +205,31 @@
                 </div>
             </div>
 
-            {# * dummy pager block #}
-            {# show pager if result.num_pages > 1 #}
-            <div class="row mt-5">
-                <nav aria-label="Search results pages" class="mx-auto" style="width: auto">
-                    <ul class="pagination">
-                        {# TODO: check if current page num > 1, else hide prev page link #}
-                        <li class="page-item"><a class="page-link prev" href="#"><<</a></li>
-                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link next" href="#">>></a></li>
-                    </ul>
-                </nav>
-            </div>
+            {# * Pager block. #}
+            {# ? I added first and last page buttons. Are they a good idea? #}
+            {% if max_page > 1 %}
+                <div class="row mt-5">
+                    <nav aria-label="Search results pages" class="mx-auto" style="width: auto">
+                        <ul class="pagination">
+                            {% if page > 1 %}
+                                <li class="page-item"><a class="page-link first" href="{{url_for('search.index', page=1, **request.args)}}"><<</a></li>
+                                <li class="page-item"><a class="page-link prev" href="{{url_for('search.index', page=(page-1), **request.args)}}"><</a></li>
+                            {% endif %}
+                            {% for p in range(page-2,page+3) if not p <= 0 and not p > max_page %}
+                                {% if p == page %}
+                                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">{{p}}</a></li>
+                                {% else %}
+                                    <li class="page-item"><a class="page-link" href="{{url_for('search.index', page=p, **request.args)}}">{{p}}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            {% if page < max_page %}
+                                <li class="page-item"><a class="page-link next" href="{{url_for('search.index', page=(page+1), **request.args)}}">></a></li>
+                                <li class="page-item"><a class="page-link last" href="{{url_for('search.index', page=max_page, **request.args)}}">>></a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </div>
+            {% endif %}
 
     </div>
   </div>

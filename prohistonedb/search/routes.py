@@ -1,6 +1,9 @@
 """ The routes for the search results endpoint. """
 #***===== Imports =====***#
 #*----- Standard library -----*#
+from typing import Optional
+
+import math
 
 #*----- Flask & Flask Extenstions -----*#
 import flask
@@ -19,7 +22,8 @@ from . import bp
 
 #***===== Route Definitions =====***#
 @bp.route("", methods=["GET"])
-def index():
+@bp.route("/<page>")
+def index(page: Optional[int] = None):
     """ Process the search request and render the search results. """
     #? Do we want to change behaviour away from discarding non-valid fields?
     # Prepare some variables
@@ -29,6 +33,14 @@ def index():
 
     accepted_fields = FieldType.accepted_fields()
     accepted_fields.append("any")
+
+    if page is None:
+        page = 1
+    
+    page = int(page)
+
+    if page <= 0:
+        raise ValueError(f"{page} is not a valid page number.")
 
     # Convert filter=[field]&q=[value] syntax to [filter]=[value] pairs in de MultiDict
     if "filter" in fields:
@@ -67,6 +79,7 @@ def index():
 
     # Create a logical AND filter that combines the filters per field and generate SQL code for a database Query from it.
     filter = sql.AndFilter(filters)
+    filter = sql.AndFilter(filters)
     flask.current_app.logger.debug(f"Generated filters: {filters}")
 
     # Select the necessary fields and generate the SQL query
@@ -75,6 +88,18 @@ def index():
     # Get the database connection and query the generated SQL code.
     db = database.get_db()
     results = query.execute(db)
-    results = results.fetchmany(NUM_RESULTS)
+    results = results.fetchall()
+
+    # Manage paging to fetch the correct results
+    num_results = len(results)
+    max_page = max(math.ceil(num_results / NUM_RESULTS), 1)
+
+    if page > max_page:
+        raise ValueError(f"Can't return page {page}. This request only has {max_page} pages.")
+    
+    idx_min = (page - 1) * NUM_RESULTS
+    idx_max = page * NUM_RESULTS - 1
+    results = results[idx_min:idx_max]
+    
     flask.current_app.logger.debug(f"Displaying first {NUM_RESULTS} results")
-    return flask.render_template('pages/search.html.j2', results=results)
+    return flask.render_template('pages/search.html.j2', results=results, page=page, max_page=max_page, num_results=num_results)
