@@ -46,7 +46,7 @@
                         <h2 class="text-white pt-3">{{ uniprotID }}</h2>
                     </div>
                 </div>
-                <div id="information" class="row">
+                <div id="information" class="row opacity-8">
                     <div class="col-12">
                         <h3 class="text-white pt-3">Information</h3>
 
@@ -101,7 +101,7 @@
         <!-- structure / views options -->
         <div class="container">              
             <div class="row py-3 mt-3">
-                <div class="col-10 start-0">
+                <div class="col-12 start-0">
                     <div class="dropdown float-start me-2">
                         <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                             {{multimer}}
@@ -128,16 +128,16 @@
                             {% endfor %}
                         </ul>
                     </div>
-                </div>
 
-                <div class="dropdown col-2 float-end">
-                    <a class="btn btn-secondary dropdown-toggle float-end" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                        Download
-                    </a>
-                    {# * on-the-fly file zipping: https://huynvk.dev/blog/download-files-and-zip-them-in-your-browsers-using-javascript #}
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">All structure data (zipped)</a></li>
-                    </ul>
+                    <div class="dropdown float-end">
+                        <a class="btn btn-secondary dropdown-toggle float-end" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Download
+                        </a>
+                        {# * on-the-fly file zipping: https://huynvk.dev/blog/download-files-and-zip-them-in-your-browsers-using-javascript #}
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">All structure data (zipped)</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
