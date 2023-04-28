@@ -23468,6 +23468,10 @@ h3, .h3 {
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(210, 210, 210, 0.4);
 }
 
+.btn-check:focus + .btn, .btn:focus {
+  box-shadow: none;
+}
+
 /* align header items on non-front pages normally? */
 .page-header {
   align-items: normal;

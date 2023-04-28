@@ -39,6 +39,9 @@ h3 { font-size: $font-size-2xl }
         box-shadow: $box-shadow-secondary;
     }
 }
+.btn-check:focus + .btn, .btn:focus {
+    box-shadow: none;
+}
 
 /* align header items on non-front pages normally? */
 .page-header {
