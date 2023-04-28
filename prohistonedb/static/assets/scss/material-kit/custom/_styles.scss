@@ -41,15 +41,12 @@ h3 { font-size: $font-size-2xl }
 }
 
 /* align header items on non-front pages normally? */
-.entry .page-header {
+.page-header {
     align-items: normal;
+    min-height: auto;
 }
-.page-header { 
-    background-repeat: repeat;
-    min-height: 60vh;
-}
-.search .page-header { min-height: 360px }
 
+.fluid-bg { background: $headerless-gradient; }
 .glossy { background: $gray-blue-gradient !important }
 .header-plain { background-color: $gray-turqoise }
 

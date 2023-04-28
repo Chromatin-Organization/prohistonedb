@@ -3,7 +3,7 @@
 {% set RESULTS_PER_PAGE = 20 %}
 
 {% block title %} {{siteName}} Search {% endblock title %}
-{% block body %} class="search bg-gray-200" {% endblock body %}
+{% block body %} class="search fluid-bg" {% endblock body %}
 
 {% block header %}
 
@@ -14,24 +14,26 @@
 {% block content %}
 
   <header>
-    <div class="page-header header-plain">
+    <div class="page-header pb-5">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8 my-auto">
-            <h2 class="text-white">Search results for {{ request.args.get('q') }}</h2>
-            {% if num_results == 0 %}
-              <p class="mb-4 text-white">No results have been found.</p>
-            {% else %}
-              {% set results_min = (page - 1) * RESULTS_PER_PAGE + 1 %}
-              <p class="mb-4 text-white">Showing {{results_min}}-{{results_min + (results | length)}} of {{num_results}} results</p>
-            {% endif %}
-          </div>
+        <div class="container mt-7">
+            <div class="row">
+                <div class="col-lg-8 my-auto">
+                    <h2 class="text-white pt-3">Search results for {{ request.args.get('q') }}</h2>
+                    {% if num_results == 0 %}
+                    <p class="mb-4 text-white">No results have been found.</p>
+                    {% else %}
+                    {% set results_min = (page - 1) * RESULTS_PER_PAGE + 1 %}
+                    <p class="mb-4 text-white">Showing {{results_min}}-{{results_min + (results | length)}} of {{num_results}} results</p>
+                    {% endif %}
+                </div>
+            </div>
         </div>
       </div>
     </div>
   </header>
 
-  <div class="card card-body mx-3 mx-md-4 mt-n6">
+  <div class="card card-body mx-3 mx-md-4">
      <div class="container my-3">
             <div class="row">
                 <!-- sidebar left (search facets) -->
