@@ -23422,6 +23422,63 @@ pre[class*=language-] {
   }
 }
 /* overridden Bootstrap / Material UI styles */
+/* Google fonts, locally hosted */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto_Slab/RobotoSlab-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Roboto_Slab/RobotoSlab-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/Roboto/Roboto-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
+}
+/* Roboto-Light.ttf         300 */
+/* Roboto-LightItalic.ttf   300 */
+/* Roboto-Regular.ttf       400 */
+/* Roboto-Italic.ttf        400 */
+/* Roboto-Medium.ttf        500 */
+/* Roboto-MediumItalic.ttf  500 */
+/* Roboto-Bold.ttf          700 */
+/* Roboto-BoldItalic.ttf    700 */
 header h1, header .h1, header h2, header .h2 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -23516,7 +23573,7 @@ select.dropdown-toggle {
 }
 
 #filter-category-container {
-  height: 124px;
+  height: 196px;
   padding-top: 0.4em;
   overflow-y: scroll;
   box-shadow: 0 20px 10px -21px rgba(0, 0, 0, 0.2) inset, 0 -20px 10px -21px rgba(0, 0, 0, 0.2) inset;
@@ -23549,6 +23606,7 @@ select.dropdown-toggle {
   padding: 0.5rem;
 }
 
+/* entry page */
 #information .label {
   font-size: 1rem;
   color: #fff;
@@ -23630,6 +23688,7 @@ select.dropdown-toggle {
   border-bottom-right-radius: 0.75rem;
 }
 
+/* PAE section */
 #pae-container {
   width: 242px;
   height: 200px;
@@ -23653,6 +23712,7 @@ select.dropdown-toggle {
   background-position: -1120px 0;
 }
 
+/* coverage section */
 #coverage-container,
 #plddt-container {
   width: 800px;
@@ -23660,6 +23720,7 @@ select.dropdown-toggle {
   background-size: 800px;
 }
 
+/* attribution section */
 #attribution p a,
 #group-information a {
   color: #fff;
