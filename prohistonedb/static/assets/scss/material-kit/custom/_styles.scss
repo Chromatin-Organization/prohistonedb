@@ -23,6 +23,10 @@ h3 { font-size: $font-size-2xl }
     border: 0 !important;
 }
 
+.nav-item .material-icons-round {
+    font-size: $font-size-lg;
+}
+
 .card { box-shadow: none }
 
 // remove pager circles
@@ -45,6 +49,21 @@ h3 { font-size: $font-size-2xl }
 }
 .btn-check:focus + .btn, .btn:focus {
     box-shadow: none;
+}
+/* force white caption on all occassions */
+.btn-show {
+    color: $white;
+}
+
+/* replace FontAwesome symbols with local Material Icons */
+.dropdown .dropdown-toggle:after, 
+.dropup .dropdown-toggle:after, 
+.dropstart .dropdown-toggle:after, 
+.dropend .dropdown-toggle:after {
+    content: "\e5cf";
+    font-family: "Material Icons Round";
+    font-size: $font-size-lg;
+    margin-left: 0;
 }
 
 /* align header items on non-front pages normally? */
@@ -102,8 +121,16 @@ select.dropdown-toggle { text-align: left }
     margin-left: 3px;
 }
 
-#applied-filters-container .fa-close {
-    margin-left: 5px;
+#applied-filters-container {
+    .label { 
+        vertical-align: middle;
+    }
+
+    .material-icons-round {
+        font-size: $font-size-lg;
+        vertical-align: middle;
+        margin-left: 3px;
+    }
 }
 
 .result-item {

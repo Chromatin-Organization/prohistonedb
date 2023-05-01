@@ -143,13 +143,15 @@
                  <div class="col-xl-8 col-lg-7 col-md-6">
                     
                     {# * dummy applied filters block #}
-                    <div class="d-grid gap-2 d-md-block">
+                    <div id="applied-filters-container" class="d-grid gap-2 d-md-block">
                         <span class="label">Filters:</span>
-                        <button type="button" class="btn btn-light" style="vertical-align: baseline">UniProt accession
-                            <i class="fa fa-close"></i>
+                        <button type="button" class="btn btn-light" style="vertical-align: baseline">
+                            <span class="label">UniProt accession</span>
+                            <span class="material-icons-round">disabled_by_default</span>
                         </button>
-                        <button type="button" class="btn btn-light" style="vertical-align: baseline">Nucleosomal
-                            <i class="fa fa-close"></i>
+                        <button type="button" class="btn btn-light" style="vertical-align: baseline">
+                            <span class="label">Nucleosomal</span>
+                            <span class="material-icons-round">disabled_by_default</span>
                         </button>
                     </div>
 
@@ -157,7 +159,7 @@
                     {# single entry; loop this section #}
                     {% for r in results %}
                     <div class="row mt-3 mb-5 result-item">
-                        <h4><a href="{{ url_for('main.entry', uniprot_id=r['uniprot_id']) }}">{{r["organism"]}} {{r["uniprot_id"]}}</a></h4>
+                        <h5><a href="{{ url_for('main.entry', uniprot_id=r['uniprot_id']) }}">{{r["organism"]}} {{r["uniprot_id"]}}</a></h5>
                         <div class="row">
                             <div class="col-sm-3 label"><span>Protein</span></div>
                             <div class="col-sm-9 value">
@@ -214,8 +216,8 @@
                     <nav aria-label="Search results pages" class="mx-auto" style="width: auto">
                         <ul class="pagination">
                             {% if page > 1 %}
-                                <li class="page-item"><a class="page-link first" href="{{url_for('search.index', page=1, **request.args)}}"><<</a></li>
-                                <li class="page-item"><a class="page-link prev" href="{{url_for('search.index', page=(page-1), **request.args)}}"><</a></li>
+                                <li class="page-item"><a class="page-link first material-icons-round" href="{{url_for('search.index', page=1, **request.args)}}">first_page</a></li>
+                                <li class="page-item"><a class="page-link prev material-icons-round" href="{{url_for('search.index', page=(page-1), **request.args)}}">navigate_before</a></li>
                             {% endif %}
                             {% for p in range(page-2,page+3) if not p <= 0 and not p > max_page %}
                                 {% if p == page %}
@@ -225,8 +227,8 @@
                                 {% endif %}
                             {% endfor %}
                             {% if page < max_page %}
-                                <li class="page-item"><a class="page-link next" href="{{url_for('search.index', page=(page+1), **request.args)}}">></a></li>
-                                <li class="page-item"><a class="page-link last" href="{{url_for('search.index', page=max_page, **request.args)}}">>></a></li>
+                                <li class="page-item"><a class="page-link next material-icons-round" href="{{url_for('search.index', page=(page+1), **request.args)}}">navigate_next</a></li>
+                                <li class="page-item"><a class="page-link last material-icons-round" href="{{url_for('search.index', page=max_page, **request.args)}}">last_page</a></li>
                             {% endif %}
                         </ul>
                     </nav>

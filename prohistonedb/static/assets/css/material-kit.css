@@ -23524,6 +23524,10 @@ h3, .h3 {
   border: 0 !important;
 }
 
+.nav-item .material-icons-round {
+  font-size: 1.125rem;
+}
+
 .card {
   box-shadow: none;
 }
@@ -23549,6 +23553,22 @@ h3, .h3 {
 
 .btn-check:focus + .btn, .btn:focus {
   box-shadow: none;
+}
+
+/* force white caption on all occassions */
+.btn-show {
+  color: #fff;
+}
+
+/* replace FontAwesome symbols with local Material Icons */
+.dropdown .dropdown-toggle:after,
+.dropup .dropdown-toggle:after,
+.dropstart .dropdown-toggle:after,
+.dropend .dropdown-toggle:after {
+  content: "\e5cf";
+  font-family: "Material Icons Round";
+  font-size: 1.125rem;
+  margin-left: 0;
 }
 
 /* align header items on non-front pages normally? */
@@ -23616,8 +23636,13 @@ select.dropdown-toggle {
   margin-left: 3px;
 }
 
-#applied-filters-container .fa-close {
-  margin-left: 5px;
+#applied-filters-container .label {
+  vertical-align: middle;
+}
+#applied-filters-container .material-icons-round {
+  font-size: 1.125rem;
+  vertical-align: middle;
+  margin-left: 3px;
 }
 
 .result-item .label {
