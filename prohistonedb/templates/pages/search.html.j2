@@ -37,12 +37,12 @@
      <div class="container my-3">
             <div class="row">
                 <!-- sidebar left (search facets) -->
-                <div id="facets-container" class="col-lg-3 col-md-4 d-none d-md-block mt-3">
+                <div id="facets-container" class="col-xl-4 col-lg-5 col-md-6 d-none d-md-block mt-3">
                     <h3>Filter by:</h3>
                     <form name="filters" method="GET" action="{{ url_for('search.index') }}">
                         <div class="row mt-3 filter-category">
                             <div class="label"><h5>Category</h5></div>
-                            <div id="filter-category-container" class="col-10 ps-0 mb-2">
+                            <div id="filter-category-container" class="col-11 ps-0 mb-2">
                                 <div class="form-check">
                                     {# TODO: build options from category table #}
                                     {% for cat in categories %}
@@ -140,7 +140,7 @@
                 </div>
                
 
-                 <div class="col-lg-9 col-md-8">
+                 <div class="col-xl-8 col-lg-7 col-md-6">
                     
                     {# * dummy applied filters block #}
                     <div class="d-grid gap-2 d-md-block">
