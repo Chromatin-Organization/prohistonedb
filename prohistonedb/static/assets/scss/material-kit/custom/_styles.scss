@@ -66,6 +66,12 @@ h3 { font-size: $font-size-2xl }
     margin-left: 0;
 }
 
+.form-check:not(.form-switch) .form-check-input[type=checkbox]:after {
+    content: "\e5ca";
+    font-family: "Material Icons Round";
+    font-weight: 800;
+}
+
 /* align header items on non-front pages normally? */
 .page-header {
     align-items: normal;
