@@ -91,15 +91,17 @@ def index(page: Optional[int] = None):
     results = results.fetchall()
 
     # Manage paging to fetch the correct results
-    num_results = len(results)
-    max_page = max(math.ceil(num_results / NUM_RESULTS), 1)
+    total_num_results = len(results)
+    max_page = max(math.ceil(total_num_results / NUM_RESULTS), 1)
+    flask.current_app.logger.debug(f"Total number of results: {total_num_results}.")
+    flask.current_app.logger.debug(f"Preparing page {page} out of {max_page}.")
 
     if page > max_page:
         raise ValueError(f"Can't return page {page}. This request only has {max_page} pages.")
     
     idx_min = (page - 1) * NUM_RESULTS
     idx_max = page * NUM_RESULTS - 1
-    results = results[idx_min:idx_max]
+    results = results[idx_min:(idx_max+1)]
     
-    flask.current_app.logger.debug(f"Displaying first {NUM_RESULTS} results")
-    return flask.render_template('pages/search.html.j2', results=results, page=page, max_page=max_page, num_results=num_results)
+    flask.current_app.logger.debug(f"Displaying results {idx_min} till {idx_max} for a total of {len(results)} results.")
+    return flask.render_template('pages/search.html.j2', results=results, page=page, max_page=max_page, num_results=total_num_results)
