@@ -53,5 +53,5 @@ from . import routes
 @bp.app_context_processor
 def inject_categories():
     categories = get_categories()
-    print(categories)
+    flask.current_app.logger.debug(f"Categories present in the database: {[category.name for category in categories]}")
     return {"categories": categories}

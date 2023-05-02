@@ -42,7 +42,7 @@ def entry(uniprot_id: str, multimer: Optional[str] = None):
     if rank < 1 or rank > 6:
         raise ValueError(f"'{rank}' is not a valid value for the model rank.")
     
-    print(rank)
+    flask.current_app.logger.debug(f"Currently selected rank: {rank}")
 
     db = database.get_db()
     query = sql.SQL(filter = sql.Filter(FieldType.UNIPROT_ID, uniprot_id))
