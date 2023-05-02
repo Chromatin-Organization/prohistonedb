@@ -1,0 +1,4 @@
+{% if request.args is defined and request.args|length %}
+    <input type="hidden" name="filter" value="{{ request.args.get('filter') }}" />
+    <input type="hidden" name="q" value="{{ request.args.get('q') }}" />
+{% endif %}

@@ -130,12 +130,7 @@
                                 </span>
                             </div>
                         </div>
-
-                        {# TODO: insert hidden fields #}
-                        {% if request.args is defined and request.args|length %}
-                            <input type="hidden" name="filter" value="{{ request.args.get('filter') }}" />
-                            <input type="hidden" name="q" value="{{ request.args.get('q') }}" />
-                        {% endif %}
+                        {% include 'includes/search_hidden.html.j2' %}
                     </form>
                 </div>
                
@@ -143,16 +138,27 @@
                  <div class="col-xl-8 col-lg-7 col-md-6">
                     
                     {# * dummy applied filters block #}
+                    {# TODO: show filters if applied filters > 0 #}
                     <div id="applied-filters-container" class="d-grid gap-2 d-md-block">
                         <span class="label">Filters:</span>
+                        {# TODO: loop through filters #}
                         <button type="button" class="btn btn-light" style="vertical-align: baseline">
-                            <span class="label">UniProt accession</span>
+                            <span class="caption">UniProt accession</span>
                             <span class="material-icons-round">disabled_by_default</span>
                         </button>
                         <button type="button" class="btn btn-light" style="vertical-align: baseline">
-                            <span class="label">Nucleosomal</span>
+                            <span class="caption">Nucleosomal</span>
                             <span class="material-icons-round">disabled_by_default</span>
                         </button>
+                        {# end filters loop #}
+
+                        <form name="reset-filters" method="GET" action="{{ url_for('search.index') }}" style="display: inline-block">
+                            <button type="submit" class="btn btn-alert" style="vertical-align: baseline">
+                                <span class="caption">Clear filters</span>
+                                <span class="material-icons-round">delete</span>
+                            </button>
+                            {% include 'includes/search_hidden.html.j2' %}
+                        </form>
                     </div>
 
                     {# card view #}
@@ -184,28 +190,30 @@
 
                     {# table view #}
                     {# * https://getbootstrap.com/docs/5.0/content/tables/ #}
-                    <table id="bs-table" class="table table-striped table-hover table-responsive-md" data-toggle="table">
-                        <thead>
+                    <div id="results-table" class="col-12">
+                        <table id="bs-table" class="table table-striped table-hover table-responsive-md" data-toggle="table">
+                            <thead>
+                                <tr>
+                                <th data-field="uniprotID" scope="col">UniProt ID</th>
+                                <th data-field="organism" scope="col">Protein</th>
+                                <th data-field="gene" scope="col">Gene ID</th>
+                                <th data-field="organism" scope="col">Organism</th>
+                                <th data-field="sequence" scope="col">Length</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for r in results %}
                             <tr>
-                            <th data-field="uniprotID" scope="col">UniProt ID</th>
-                            <th data-field="organism" scope="col">Protein</th>
-                            <th data-field="gene" scope="col">Gene ID</th>
-                            <th data-field="organism" scope="col">Organism</th>
-                            <th data-field="sequence" scope="col">Length</th>
+                                <td>{{r["uniprot_id"]}}</td>
+                                <td>{{r["protein_id"]}}</td>
+                                <td>{{r["gen_id"]}}</td>
+                                <td>{{r["organism"]}}</td>
+                                <td>{{r["sequence_len"]}} AA</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                        {% for r in results %}
-                        <tr>
-                            <td>{{r["uniprot_id"]}}</td>
-                            <td>{{r["protein_id"]}}</td>
-                            <td>{{r["gen_id"]}}</td>
-                            <td>{{r["organism"]}}</td>
-                            <td>{{r["sequence_len"]}} AA</td>
-                        </tr>
-                        {% endfor %}
-                        </tbody>
-                    </table>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 

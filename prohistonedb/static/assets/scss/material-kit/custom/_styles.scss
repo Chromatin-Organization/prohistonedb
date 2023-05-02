@@ -4,13 +4,19 @@
 @import 'roboto';
 @import 'material_icons_round';
 
+
+body {
+    font-size: $font-size-sm;
+}
 header h1, header h2 {
     text-shadow: $text-shadow-lg;
 }
 header p {
     text-shadow: $text-shadow;
 }
-h3 { font-size: $font-size-2xl }
+h3 { 
+    font-size: $font-size-2xl 
+}
 
 /* a more recognisable font for branding */
 .navbar .navbar-brand,
@@ -27,13 +33,19 @@ h3 { font-size: $font-size-2xl }
     font-size: $font-size-lg;
 }
 
-.card { box-shadow: none }
+.card { 
+    box-shadow: none;
+}
 
 // remove pager circles
 .page-link { border: none }
-.page-link.active, .active > .page-link {
+.page-link.active, 
+.active > .page-link {
     color: $white;
     background-color: $primary;
+}
+.page-link:focus {
+    box-shadow: none;
 }
 
 // easier to just redefine btn-primary etc. colors
@@ -71,6 +83,7 @@ h3 { font-size: $font-size-2xl }
     font-family: "Material Icons Round";
     font-weight: 800;
 }
+
 
 /* align header items on non-front pages normally? */
 .page-header {
@@ -128,7 +141,7 @@ select.dropdown-toggle { text-align: left }
 }
 
 #applied-filters-container {
-    .label { 
+    .caption { 
         vertical-align: middle;
     }
 
@@ -145,10 +158,15 @@ select.dropdown-toggle { text-align: left }
     }
 }
 
+#results-table {
+    overflow: scroll;
+}
+
 // decrease th padding
 .table thead th {
     padding: .5rem;
 }
+
 
 /* entry page */
 #information {
