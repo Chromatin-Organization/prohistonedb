@@ -135,11 +135,11 @@
                 </div>
                
 
-                 <div class="col-xl-8 col-lg-7 col-md-6">
+                 <div class="col-xl-8 col-lg-7 col-md-6 mt-3">
                     
                     {# * dummy applied filters block #}
                     {# TODO: show filters if applied filters > 0 #}
-                    <div id="applied-filters-container" class="d-grid gap-2 d-md-block">
+                    <div id="applied-filters-container" class="d-grid gap-2 d-md-block mb-4">
                         <span class="label">Filters:</span>
                         {# TODO: loop through filters #}
                         <button type="button" class="btn btn-light" style="vertical-align: baseline">
@@ -179,9 +179,15 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3 label"><span>Source organism</span></div>
+                            <div class="col-sm-3 label"><span>Organism</span></div>
                             <div class="col-sm-9 value">
                                 <span class="mb-0 float-start me-2">{{r["organism"]}}</span><span class="link"><a href="{{ url_for('search.index', oid=r['organism_id']) }}">Search this organism</a></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3 label"><span>Length</span></div>
+                            <div class="col-sm-9 value">
+                                <span class="mb-0">{{r["sequence_len"]}} AA</span>
                             </div>
                         </div>
                     </div>
@@ -194,17 +200,17 @@
                         <table id="bs-table" class="table table-striped table-hover table-responsive-md" data-toggle="table">
                             <thead>
                                 <tr>
-                                <th data-field="uniprotID" scope="col">UniProt ID</th>
-                                <th data-field="organism" scope="col">Protein</th>
-                                <th data-field="gene" scope="col">Gene ID</th>
-                                <th data-field="organism" scope="col">Organism</th>
-                                <th data-field="sequence" scope="col">Length</th>
+                                    <th data-field="uniprotID" scope="col">UniProt ID</th>
+                                    <th data-field="organism" scope="col">Protein</th>
+                                    <th data-field="gene" scope="col">Gene ID</th>
+                                    <th data-field="organism" scope="col">Organism</th>
+                                    <th data-field="sequence" scope="col">Length</th>
                                 </tr>
                             </thead>
                             <tbody>
                             {% for r in results %}
                             <tr>
-                                <td>{{r["uniprot_id"]}}</td>
+                                <td><a href="{{ url_for('main.entry', uniprot_id=r['uniprot_id']) }}">{{r["uniprot_id"]}}</a></td>
                                 <td>{{r["protein_id"]}}</td>
                                 <td>{{r["gen_id"]}}</td>
                                 <td>{{r["organism"]}}</td>
