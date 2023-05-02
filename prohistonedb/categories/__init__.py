@@ -21,7 +21,7 @@ class Category:
     """ A simple dataclass to hold a Category. If no short name is supplied, it will default to the standard name. """
     id: int
     name: str
-    prefered_multimer: str
+    preferred_multimer: str
     short_name: Optional[str] = None
 
     def __post_init__(self):

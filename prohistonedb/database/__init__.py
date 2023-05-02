@@ -12,6 +12,7 @@ import flask
 from flask import Flask
 
 #*----- Other External packages -----*#
+import click
 
 #*----- Custom packages -----*#
 
@@ -19,7 +20,7 @@ from flask import Flask
 from . import connections
 from .types import FieldType
 
-#***===== Functions =====***#
+#***===== Initialization & Teardown =====***#
 def init_app(app: Flask):
     """ Register the database teardown and CLI commands onto the Flask app. """
     app.teardown_appcontext(teardown_db)
@@ -40,23 +41,10 @@ def teardown_db(exception: Exception):
     if db is not None:
         db.close()
 
-#***===== Create Blueprint =====***#
-bp  = flask.Blueprint("database", __name__, cli_group="database")
-
-#***===== Register CLI commands =====***#
-@bp.cli.command("create")
-def create():
-    """ Create a new database from json files. """
-    #TODO: Automatically generate column names based on the possible FieldType values with SQL injection prevention.
-    #TODO: Add CLI option for overwriting existing database file.
-    #TODO: Split functionality into functions and only call them here.
-
-    # Make sure the database file does not exist yet.
-    database_path = Path(flask.current_app.config["DATABASE"])
-
-    if database_path.is_file():
-        raise Exception("A database file already exists.")
-    
+#***===== Other Functions =====***#
+#TODO: Automatically generate column names.
+def init_db():
+    """ Creates a database with empty tables and corresponding indices. """ 
     # Create a database with empty tables.
     conn = get_db()
 
@@ -64,7 +52,7 @@ def create():
         CREATE TABLE categories (
             id INTEGER PRIMARY KEY,
             name TEXT NOT NULL,
-            prefered_multimer TEXT NOT NULL CHECK( prefered_multimer IN ('monomer', 'dimer', 'tetramer', 'hexamer') ),
+            preferred_multimer TEXT NOT NULL CHECK( preferred_multimer IN ('monomer', 'dimer', 'tetramer', 'hexamer') ),
             short_name TEXT
         )
     """)
@@ -90,24 +78,35 @@ def create():
                 REFERENCES categories(id)
         )
     """)
-    conn.commit()
 
     # Create a view for accessing the necessary data in a search
     conn.execute("""
         CREATE VIEW search AS
-        SELECT metadata.*, categories.name AS category, categories.prefered_multimer
-        FROM metadata
-        LEFT JOIN categories ON metadata.category_id = categories.id
+            SELECT metadata.*, categories.name AS category, categories.preferred_multimer
+            FROM metadata
+            LEFT JOIN categories ON metadata.category_id = categories.id
     """)
 
-    # Fill the categories table from the categories json file.
+    # Commit the changes to the database
+    conn.commit()
+
+#TODO: Automatically generate column names.
+def update_db_categories():
+    """ Update the database with the data in the categories JSON file. """
+    # Get a database connection
+    conn = get_db()
+
+    # Make sure that the categories JSON file exists
     categories_json = Path(flask.current_app.config["CATEGORIES_JSON"])
 
     if not categories_json.is_file():
         raise Exception("Config option 'CATEGORIES_JSON' does not point to a file.")
 
+    # Open the categories JSON file and load the data
     with open(categories_json, 'r') as f:
         categories_json = json.load(f)
+
+        # Load all the categories data into a list
         categories = []
 
         for category in categories_json:
@@ -115,7 +114,7 @@ def create():
 
             data = {}
             data["name"] = category
-            data["prefered_multimer"] = category_json["preferedMultimer"]
+            data["preferred_multimer"] = category_json["preferredMultimer"]
             if "shortName" in category_json:
                 data["short_name"] = category_json["shortName"]
             else:
@@ -123,18 +122,29 @@ def create():
             
             categories.append(data)
 
-        sql = "INSERT INTO categories (name, prefered_multimer, short_name) VALUES (:name, :prefered_multimer, :short_name)"
+        # Execute the SQL query on the database
+        sql = "INSERT OR REPLACE INTO categories (name, preferred_multimer, short_name) VALUES (:name, :preferred_multimer, :short_name)"
         conn.executemany(sql, categories)
         conn.commit()
 
-    # Fill the metadata table from the metadata json file.
+#TODO: Automatically generate column names.
+#? The JSON paths in the metadata JSON file for the columns are currently hard-coded. Do we want to change this?
+def update_db_metadata():
+    """ Update the database with the data in the metadata JSON file.  """
+    # Get a database connection
+    conn = get_db()
+
+    # Make sure that the metadata JSON file exists
     metadata_json = Path(flask.current_app.config["METADATA_JSON"])
 
     if not metadata_json.is_file():
         raise Exception("Config option 'METADATA_JSON' does not point to a file.")
     
+    # Open the metadata JSON file and load the data
     with open(metadata_json, 'r') as f:
         metadata_json = json.load(f)
+
+        # Load all the metadata into a list
         metadata = []
 
         for uid in metadata_json:
@@ -143,7 +153,7 @@ def create():
             uid_json = metadata_json[uid]
 
             # Add the searchable fields
-            #? Hardcoded for now. Do we want to change this?
+            #* Currently hard-coded!
             for field in FieldType:
                 cross_references = uid_json["uniprot"]["uniProtKBCrossReferences"]
 
@@ -219,8 +229,8 @@ def create():
 
             # Apply all the fields for this uid
             metadata.append(data)
-        
-        #TODO: Automatically generate column names based on the possible FieldType values with SQL injection prevention.        
+
+        # Execute the SQL query on the database      
         sql = """INSERT INTO metadata (
                     uniprot_id,
                     organism,
@@ -258,3 +268,46 @@ def create():
         
         conn.executemany(sql, metadata)
         conn.commit()
+
+def delete_db():
+    db_path = Path(flask.current_app.config["DATABASE"])
+    db_path.unlink(missing_ok=True)
+
+#***===== Create Blueprint =====***#
+bp  = flask.Blueprint("database", __name__, cli_group="database")
+
+#***===== Register CLI commands =====***#
+@bp.cli.command("create")
+@click.option('-f', '--force', is_flag=True, help="Enables rewriting of the existing database file.")
+def create(force: bool = False):
+    """ Create a new database from the 'categories' and 'metadata' JSON files. """
+    if force:
+        # If overwriting is forced, delete the current database.
+        delete_db()
+    else:
+        # Otherwise, make sure the database file does not exist yet.
+        db_path = Path(flask.current_app.config["DATABASE"])
+
+        if db_path.is_file():
+            raise Exception("A database file already exists. If you want to update it, use 'flask database update' instead.")
+
+    # Create an empty database.
+    init_db()
+
+    # Fill the categories table from the categories json file.
+    update_db_categories()
+
+    # Fill the metadata table from the metadata json file.
+    update_db_metadata()
+
+@bp.cli.command("update")
+def update():
+    """ 
+        Updates the database based on the 'categories' and 'metadata' JSON files.
+        WARNING: Existing entries may be overwritten.
+    """
+    # Update the categories table from the categories json file.
+    update_db_categories()
+
+    # Update the metadata table from the metadata json file.
+    update_db_metadata()

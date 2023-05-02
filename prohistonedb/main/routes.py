@@ -64,7 +64,7 @@ def entry(uniprot_id: str, multimer: Optional[str] = None):
     entry["multimers"] = [multimer for multimer in entry["ranks"].keys() if entry["ranks"][multimer] != None]
 
     if multimer is None:
-        multimer = entry["prefered_multimer"]
+        multimer = entry["preferred_multimer"]
     
     # TODO: Better error handling
     if multimer not in entry["multimers"]:
