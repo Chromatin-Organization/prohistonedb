@@ -23517,6 +23517,10 @@ h3, .h3 {
   font-size: 1.5rem;
 }
 
+.lead {
+  font-size: 1.125rem;
+}
+
 /* a more recognisable font for branding */
 .navbar .navbar-brand,
 .footer .footer-brand {
