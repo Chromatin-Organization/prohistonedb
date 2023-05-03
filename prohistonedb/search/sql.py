@@ -32,6 +32,10 @@ class _SQLCondition:
     """ A class representing the condition in an SQL statement. """
     def __init__(self, sql_str: str, parameters: Sequence):
         self.str = sql_str
+        
+        if len(parameters) == 0:
+            raise Exception("An SQL condition needs at least 1 parameter.")
+        
         self.parameters = parameters 
 
 #***===== Filter Class =====***#
@@ -85,7 +89,7 @@ class Filter:
 
 #***===== Combined Filter ABC Class ***=====#
 class CombinedFilterABC(ABC):
-    """ An Abstract Base Class for representing search filters. """
+    """ An Abstract Base Class for representing combined search filters. """
 
     @abc.abstractmethod
     def __init__(self, filters: Iterable[Filter]) -> None:
@@ -95,6 +99,10 @@ class CombinedFilterABC(ABC):
             if not isinstance(filter, Filter) and not isinstance(filter, CombinedFilterABC):
                 raise TypeError(f"'{filter}' is not a valid filter.")
         
+        # Make sure there are at least two filters
+        if not filters or len(filters) < 2:
+            raise ValueError(f"Requires at least 2 filters, but {len(filters)} filters were supplied.")
+
         self._filters = filters
 
     @property

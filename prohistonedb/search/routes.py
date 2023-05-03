@@ -21,6 +21,9 @@ from .. import database
 #***===== Functions =====***#
 def convert_args(args: MultiDict) -> MultiDict:
     """Takes request arguments and returns a MultiDict with filter=[field]&q=[value] syntax converted to [filter]=[value] pairs. """
+    accepted_fields = FieldType.accepted_fields()
+    accepted_fields.append("any")
+    
     fields = args.keys()
 
     if "filter" in fields:
@@ -28,19 +31,24 @@ def convert_args(args: MultiDict) -> MultiDict:
             raise Exception("Search bar should return fields in 'filter' together with values in 'q'.")
 
         flask.current_app.logger.debug("Found 'filter=[field]&q=[value]' syntax. Converting to '[field]=[value]' syntax...")
-        filters = args.poplist("filter")
+        filter_fields = args.poplist("filter")
         values = args.poplist("q")
 
-        if len(filters) == len(values):
-            for filter, value in zip(filters, values):
+        if len(filter_fields) == len(values):
+            for field, value in zip(filter_fields, values):
+                # Ignore none supported fields.
+                if not field in accepted_fields:
+                    flask.current_app.logger.debug(f"Ignoring '{field}' since it is not a valid filter.")
+                    continue
+
                 args.add(filter, value)
         else:
-            flask.current_app.logger.debug(f'"filter" (length {len(filters)}) and "q" (length {len(values)}) do not have the same number of items.')
+            flask.current_app.logger.debug(f'"filter" (length {len(filter_fields)}) and "q" (length {len(values)}) do not have the same number of items.')
     
     return args
 
 #? Do we want to change behaviour away from discarding non-valid fields?
-def filter_from_args(args: MultiDict) -> Union[sql.Filter, sql.CombinedFilterABC]:
+def filter_from_args(args: MultiDict) -> Union[sql.Filter, sql.CombinedFilterABC, None]:
     """ Takes request arguments and returns a Filter to be used for an SQL query. """
     accepted_fields = FieldType.accepted_fields()
     accepted_fields.append("any")
@@ -59,15 +67,22 @@ def filter_from_args(args: MultiDict) -> Union[sql.Filter, sql.CombinedFilterABC
         # Create a logical OR filter per field
         values = args.getlist(field)
 
-        if field == "any":
+        if len(values) == 1:
+            filters.append(sql.Filter(field, values[0]))
+        elif field == "any":
             filters.append(sql.OrFilter([sql.AnyFilter(value) for value in values]))
         else:
             filters.append(sql.OrFilter([sql.Filter(field, value) for value in values]))
 
     # Create a logical AND filter that combines the filters per field and generate SQL code for a database Query from it.
-    filter = sql.AndFilter(filters)
-    flask.current_app.logger.debug(f"Generated filters: {filters}")
+    if len(filters) == 0:
+        filter = None
+    elif len(filters) == 1:
+        filter = filters[0]
+    else:
+        filter = sql.AndFilter(filters)
 
+    flask.current_app.logger.debug(f"Generated filters: {filters}")
     return filter
 
 #***===== Blueprint Import =====***#
@@ -92,8 +107,7 @@ def index(page: Optional[int] = None):
     # Pre-process query parameters into a search filter
     args = flask.request.args.copy()
 
-    if args == None or len(args) == 0:
-        args = None
+    if args == None:
         filter = None
     else:
         try:
@@ -125,4 +139,4 @@ def index(page: Optional[int] = None):
     results = results[idx_min:(idx_max+1)]
     
     flask.current_app.logger.debug(f"Displaying results {idx_min} till {idx_max} for a total of {len(results)} results.")
-    return flask.render_template('pages/search.html.j2', results=results, page=page, max_page=max_page, num_results=total_num_results)
+    return flask.render_template('pages/search.html.j2', results=results, page=page, max_page=max_page, num_results=total_num_results, req_filters=args)

@@ -145,7 +145,7 @@ class SQLiteConnection(DatabaseConnection):
     
     #*----- Other public functions -----*#
     def execute(self, sql: str, parameters: Optional[_DatabaseParameters] = None) -> SQLiteResult:
-        if parameters is None:
+        if parameters is None or len(parameters) == 0:
             return SQLiteResult(self._cursor.execute(sql))
         else:
             return SQLiteResult(self._cursor.execute(sql, parameters))

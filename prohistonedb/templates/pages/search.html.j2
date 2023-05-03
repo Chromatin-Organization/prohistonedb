@@ -137,29 +137,29 @@
 
                  <div class="col-xl-8 col-lg-7 col-md-6 mt-3">
                     
-                    {# * dummy applied filters block #}
-                    {# TODO: show filters if applied filters > 0 #}
-                    <div id="applied-filters-container" class="d-grid gap-2 d-md-block mb-4">
-                        <span class="label">Filters:</span>
-                        {# TODO: loop through filters #}
-                        <button type="button" class="btn btn-light" style="vertical-align: baseline">
-                            <span class="caption">UniProt accession</span>
-                            <span class="material-icons-round">disabled_by_default</span>
-                        </button>
-                        <button type="button" class="btn btn-light" style="vertical-align: baseline">
-                            <span class="caption">Nucleosomal</span>
-                            <span class="material-icons-round">disabled_by_default</span>
-                        </button>
-                        {# end filters loop #}
+                    {# * Applied filters block #}
+                    {% if req_filters and (req_filters | length) > 0 %}
+                        <div id="applied-filters-container" class="d-grid gap-2 d-md-block mb-4">
+                            <span class="label">Filters:</span>
+                            {% for key in req_filters.keys() %}
+                                {% for f in req_filters.getlist(key) %}
+                                    <button type="button" class="btn btn-light" style="vertical-align: baseline">
+                                        <span class="caption">{{(key | field_type)}}: {{f}}</span>
+                                        <span class="material-icons-round">disabled_by_default</span>
+                                    </button>
+                                {% endfor %}
+                            {% endfor %}
+                            {# end filters loop #}
 
-                        <form name="reset-filters" method="GET" action="{{ url_for('search.index') }}" style="display: inline-block">
-                            <button type="submit" class="btn btn-danger" style="vertical-align: baseline">
-                                <span class="caption">Clear filters</span>
-                                <span class="material-icons-round">delete</span>
-                            </button>
-                            {% include 'includes/search_hidden.html.j2' %}
-                        </form>
-                    </div>
+                            <form name="reset-filters" method="GET" action="{{ url_for('search.index') }}" style="display: inline-block">
+                                <button type="submit" class="btn btn-danger" style="vertical-align: baseline">
+                                    <span class="caption">Clear filters</span>
+                                    <span class="material-icons-round">delete</span>
+                                </button>
+                                {% include 'includes/search_hidden.html.j2' %}
+                            </form>
+                        </div>
+                    {% endif %}
 
                     {# card view #}
                     {# single entry; loop this section #}
