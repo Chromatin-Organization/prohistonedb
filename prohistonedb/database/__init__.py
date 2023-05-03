@@ -294,9 +294,12 @@ def delete_db():
 bp  = flask.Blueprint("database", __name__, cli_group="database")
 
 #***===== Register Template Filters =====***#
-@bp.app_template_filter("field_type")
-def field_type(s: str) -> FieldType:
-    return FieldType(s)
+@bp.app_template_filter("field_name")
+def field_name(s: str) -> str:
+    if s == "any":
+        return s
+    
+    return str(FieldType(s))
 
 #***===== Register CLI commands =====***#
 @bp.cli.command("create")

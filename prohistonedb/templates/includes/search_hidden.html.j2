@@ -1,4 +1,7 @@
-{% if request.args is defined and request.args|length %}
-    <input type="hidden" name="filter" value="{{ request.args.get('filter') }}" />
-    <input type="hidden" name="q" value="{{ request.args.get('q') }}" />
+{% if req_filters is defined and (req_filters | length) > 0 %}
+    {% for key in req_filters %}
+        {% for f in req_filters.getlist(key) %}
+            <input type="hidden" name="{{key}}" value="{{f}}" />
+        {% endfor %}
+    {% endfor %}
 {% endif %}

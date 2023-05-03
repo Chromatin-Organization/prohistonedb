@@ -66,13 +66,17 @@ def filter_from_args(args: MultiDict) -> Union[sql.Filter, sql.CombinedFilterABC
 
         # Create a logical OR filter per field
         values = args.getlist(field)
-
-        if len(values) == 1:
-            filters.append(sql.Filter(field, values[0]))
-        elif field == "any":
-            filters.append(sql.OrFilter([sql.AnyFilter(value) for value in values]))
+            
+        if field == "any":
+            if len(values) == 1:
+                filters.append(sql.AnyFilter(values[0]))
+            else:
+                filters.append(sql.OrFilter([sql.AnyFilter(value) for value in values]))
         else:
-            filters.append(sql.OrFilter([sql.Filter(field, value) for value in values]))
+            if len(values) == 1:
+                filters.append(sql.Filter(field, values[0]))
+            else:
+                filters.append(sql.OrFilter([sql.Filter(field, value) for value in values]))
 
     # Create a logical AND filter that combines the filters per field and generate SQL code for a database Query from it.
     if len(filters) == 0:
@@ -110,12 +114,17 @@ def index(page: Optional[int] = None):
     if args == None:
         filter = None
     else:
+        # Convert filter=[field]&q=[value] syntax to [field]=[value] syntax
         try:
             args = convert_args(args)
         except Exception as e:
             flask.current_app.logger.exception(**e)
 
-        print(args)
+        # Remove duplicates
+        for key in args.keys():
+            args.setlist(key, list(set(args.getlist(key))))
+
+        # Create a filter from the query parameters
         filter = filter_from_args(args)
 
     # Select the necessary fields and generate the SQL query
