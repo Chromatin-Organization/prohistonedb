@@ -44,10 +44,11 @@ def teardown_db(exception: Exception):
 #***===== Other Functions =====***#
 #TODO: Automatically generate column names.
 def init_db():
-    """ Creates a database with empty tables and corresponding indices. """ 
-    # Create a database with empty tables.
+    """ Creates a database with empty tables and corresponding indexes. """ 
+    # Create the database
     conn = get_db()
 
+    # Create the categories table
     conn.execute("""
         CREATE TABLE categories (
             id INTEGER PRIMARY KEY,
@@ -57,6 +58,10 @@ def init_db():
         )
     """)
 
+    # Add indexes for the categories table
+    conn.execute("CREATE INDEX idx_name ON categories(name)")
+
+    # Create the metadata table
     conn.execute("""
         CREATE TABLE metadata (
             uniprot_id TEXT PRIMARY KEY,
@@ -78,6 +83,18 @@ def init_db():
                 REFERENCES categories(id)
         )
     """)
+
+    # Add indexes for the metadata table
+    conn.execute("CREATE INDEX idx_organism ON metadata(organism)")
+    conn.execute("CREATE INDEX idx_organism_id ON metadata(organism_id)")
+    conn.execute("CREATE INDEX idx_sequence ON metadata(sequence)")
+    conn.execute("CREATE INDEX idx_sequence_len ON metadata(sequence_len)")
+    conn.execute("CREATE INDEX idx_category_id ON metadata(category_id)")
+    conn.execute("CREATE INDEX idx_lineage ON metadata(lineage)")
+    conn.execute("CREATE INDEX idx_protein_id ON metadata(protein_id)")
+    conn.execute("CREATE INDEX idx_proteome_id ON metadata(proteome_id)")
+    conn.execute("CREATE INDEX idx_gen_id ON metadata(gen_id)")
+    conn.execute("CREATE INDEX idx_genome_id ON metadata(genome_id)")
 
     # Create a view for accessing the necessary data in a search
     conn.execute("""
