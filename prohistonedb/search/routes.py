@@ -41,7 +41,7 @@ def convert_args(args: MultiDict) -> MultiDict:
                     flask.current_app.logger.debug(f"Ignoring '{field}' since it is not a valid filter.")
                     continue
 
-                args.add(filter, value)
+                args.add(field, value)
         else:
             flask.current_app.logger.debug(f'"filter" (length {len(filter_fields)}) and "q" (length {len(values)}) do not have the same number of items.')
     
@@ -115,6 +115,7 @@ def index(page: Optional[int] = None):
         except Exception as e:
             flask.current_app.logger.exception(**e)
 
+        print(args)
         filter = filter_from_args(args)
 
     # Select the necessary fields and generate the SQL query

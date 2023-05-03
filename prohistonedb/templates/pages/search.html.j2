@@ -44,7 +44,6 @@
                             <div class="label"><h5>Category</h5></div>
                             <div id="filter-category-container" class="col-11 ps-0 mb-2">
                                 <div class="form-check">
-                                    {# TODO: build options from category table #}
                                     {% for cat in categories %}
                                     <div class="form-check ps-0">
                                         <input class="form-check-input" type="checkbox" name="cat" value="{{cat}}" id="categoryCheck{{loop.index}}">
@@ -149,7 +148,6 @@
                                     </button>
                                 {% endfor %}
                             {% endfor %}
-                            {# end filters loop #}
 
                             <form name="reset-filters" method="GET" action="{{ url_for('search.index') }}" style="display: inline-block">
                                 <button type="submit" class="btn btn-danger" style="vertical-align: baseline">
