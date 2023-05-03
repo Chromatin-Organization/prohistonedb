@@ -1,7 +1,7 @@
 """ The routes for the search results endpoint. """
 #***===== Imports =====***#
 #*----- Standard library -----*#
-from typing import Optional
+from typing import Optional, Union
 
 import math
 
@@ -9,6 +9,7 @@ import math
 import flask
 
 #*----- External packages -----*#
+from werkzeug.datastructures import MultiDict
 
 #*----- Custom packages -----*#
 
@@ -17,54 +18,40 @@ from . import sql
 from ..database.types import FieldType
 from .. import database
 
-#***===== Blueprint Import =====***#
-from . import bp
-
-#***===== Route Definitions =====***#
-@bp.route("", methods=["GET"])
-@bp.route("/<page>")
-def index(page: Optional[int] = None):
-    """ Process the search request and render the search results. """
-    #? Do we want to change behaviour away from discarding non-valid fields?
-    # Prepare some variables
-    NUM_RESULTS = 20
-    args = flask.request.args.copy()
+#***===== Functions =====***#
+def convert_args(args: MultiDict) -> MultiDict:
+    """Takes request arguments and returns a MultiDict with filter=[field]&q=[value] syntax converted to [filter]=[value] pairs. """
     fields = args.keys()
 
+    if "filter" in fields:
+        if not "q" in fields:
+            raise Exception("Search bar should return fields in 'filter' together with values in 'q'.")
+
+        flask.current_app.logger.debug("Found 'filter=[field]&q=[value]' syntax. Converting to '[field]=[value]' syntax...")
+        filters = args.poplist("filter")
+        values = args.poplist("q")
+
+        if len(filters) == len(values):
+            for filter, value in zip(filters, values):
+                args.add(filter, value)
+        else:
+            flask.current_app.logger.debug(f'"filter" (length {len(filters)}) and "q" (length {len(values)}) do not have the same number of items.')
+    
+    return args
+
+#? Do we want to change behaviour away from discarding non-valid fields?
+def filter_from_args(args: MultiDict) -> Union[sql.Filter, sql.CombinedFilterABC]:
+    """ Takes request arguments and returns a Filter to be used for an SQL query. """
     accepted_fields = FieldType.accepted_fields()
     accepted_fields.append("any")
 
-    if page is None:
-        page = 1
-    
-    page = int(page)
-
-    if page <= 0:
-        raise ValueError(f"{page} is not a valid page number.")
-
-    # Convert filter=[field]&q=[value] syntax to [filter]=[value] pairs in de MultiDict
-    if "filter" in fields:
-        if "q" in fields:
-            flask.current_app.logger.debug("Found 'filter=[field]&q=[value]' syntax. Converting to '[field]=[value]' syntax...")
-            fields = args.poplist("filter")
-            values = args.poplist("q")
-
-            if len(fields) == len(values):
-                for field, value in zip(fields, values):
-                    args.add(field, value)
-            else:
-                flask.current_app.logger.error('"filter" and "q" should have the same number of items.')
-        else:
-            flask.current_app.logger.error("Search bar should return fields in 'filter' together with values in 'q'.")
-
-    # Create filters for all the search field.
     filters = []
     fields = args.keys()
     flask.current_app.logger.debug(f"Valid fields: {accepted_fields}")
     flask.current_app.logger.debug(f"Request fields (after conversion): {fields}")
 
     for field in fields:
-        #? Ignore none supported fields for now. Change in future?
+        # Ignore none supported fields.
         if not field in accepted_fields:
             flask.current_app.logger.debug(f"Ignoring '{field}' since it is not a valid filter.")
             continue
@@ -79,8 +66,42 @@ def index(page: Optional[int] = None):
 
     # Create a logical AND filter that combines the filters per field and generate SQL code for a database Query from it.
     filter = sql.AndFilter(filters)
-    filter = sql.AndFilter(filters)
     flask.current_app.logger.debug(f"Generated filters: {filters}")
+
+    return filter
+
+#***===== Blueprint Import =====***#
+from . import bp
+
+#***===== Route Definitions =====***#
+@bp.route("", methods=["GET"])
+@bp.route("/<page>")
+def index(page: Optional[int] = None):
+    """ Process the search request and render the search results. """
+    # Prepare some variables
+    NUM_RESULTS = 20
+
+    if page is None:
+        page = 1
+    
+    page = int(page)
+
+    if page <= 0:
+        raise ValueError(f"{page} is not a valid page number.")
+
+    # Pre-process query parameters into a search filter
+    args = flask.request.args.copy()
+
+    if args == None or len(args) == 0:
+        args = None
+        filter = None
+    else:
+        try:
+            args = convert_args(args)
+        except Exception as e:
+            flask.current_app.logger.exception(**e)
+
+        filter = filter_from_args(args)
 
     # Select the necessary fields and generate the SQL query
     query = sql.SQL(filter=filter)

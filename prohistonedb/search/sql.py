@@ -185,13 +185,22 @@ class SQL:
     
     def execute(self, database_connection: DatabaseConnection) -> DatabaseResult:
         """Execute the SQL query on the given database connection. """
+        # Set the basic select statement for the query
         query = f"SELECT {self._selection} FROM {self._VIEW}"
-        if not self._condition is None:
-            query += " WHERE " + self._condition.str
 
+        # Finish early if this query does not have any conditions
+        if self._condition is None:
+            flask.current_app.logger.debug(f"Generated SQL query: {query}")
+            return database_connection.execute(query)
+        
+        # Otherwise add the conditions to the sql query
+        query += " WHERE " + self._condition.str
+
+        # Log the SQL query for debugging
         sql_str = str(query)
         for param in self._condition.parameters:
             sql_str = sql_str.replace("?", f"{param}", 1)
         flask.current_app.logger.debug(f"Generated SQL query: {sql_str}")
 
+        # Execute the SQL query on the database
         return database_connection.execute(query, parameters=self._condition.parameters)
