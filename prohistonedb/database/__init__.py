@@ -18,7 +18,7 @@ import click
 
 #*----- Local imports -----*#
 from . import connections
-from .types import FieldType
+from ..search.types import FieldType
 
 #***===== Initialization & Teardown =====***#
 def init_app(app: Flask):

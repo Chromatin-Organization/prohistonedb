@@ -15,7 +15,7 @@ import flask
 #*----- Local imports -----*#
 from ..search import sql
 from .. import database
-from ..database.types import FieldType
+from ..search.types import FieldType
 
 #***===== Blueprint Import =====***#
 from . import bp
@@ -45,7 +45,7 @@ def entry(uniprot_id: str, multimer: Optional[str] = None):
     flask.current_app.logger.debug(f"Currently selected rank: {rank}")
 
     db = database.get_db()
-    query = sql.SQL(filter = sql.Filter(FieldType.UNIPROT_ID, uniprot_id))
+    query = sql.Query(filter = sql.Filter(FieldType.UNIPROT_ID, uniprot_id))
     results = query.execute(db)
     result = results.fetchone()
     entry = {}

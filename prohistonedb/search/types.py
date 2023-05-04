@@ -1,13 +1,10 @@
-""" Defines types needed for the metadata database. """
+""" A module defining all the types used for processing user input during searches. """
 #***===== Feature Imports =====***#
 from __future__ import annotations
 
 #***===== Imports =====***#
-#*----- Standard Library -----*#
+#*----- Standard library -----*#
 from enum import Enum
-
-#*----- Flask & Flask Extenstions -----*#
-import flask
 
 #*----- External packages -----*#
 

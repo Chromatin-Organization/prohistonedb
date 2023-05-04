@@ -14,22 +14,7 @@ import flask
 
 #*----- Local imports -----*#
 from .. import database
-
-#***===== Category class =====***#
-@dataclass(frozen=True)
-class Category:
-    """ A simple dataclass to hold a Category. If no short name is supplied, it will default to the standard name. """
-    id: int
-    name: str
-    preferred_multimer: str
-    short_name: Optional[str] = None
-
-    def __post_init__(self):
-        if self.short_name is None:
-            object.__setattr__(self, "short_name", self.name)
-
-    def __str__(self) -> str:
-        return self.name
+from ..database.models import Category
 
 #***===== Functions =====***#
 def get_categories() -> list[Category]:

@@ -15,7 +15,7 @@ from werkzeug.datastructures import MultiDict
 
 #*----- Local imports -----*#
 from . import sql
-from ..database.types import FieldType
+from .types import FieldType
 from .. import database
 
 #***===== Functions =====***#
@@ -128,7 +128,7 @@ def index(page: Optional[int] = None):
         filter = filter_from_args(args)
 
     # Select the necessary fields and generate the SQL query
-    query = sql.SQL(filter=filter)
+    query = sql.Query(filter=filter)
 
     # Get the database connection and query the generated SQL code.
     db = database.get_db()
