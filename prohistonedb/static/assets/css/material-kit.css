@@ -23542,6 +23542,7 @@ h3, .h3 {
 
 .page-link {
   border: none;
+  box-shadow: none;
 }
 
 .page-link.active,
@@ -23554,16 +23555,6 @@ h3, .h3 {
   box-shadow: none;
 }
 
-.btn-alert {
-  background-color: #ed6a5b;
-  color: #fff;
-}
-.btn-alert:hover {
-  background-color: #ed6a5b;
-  color: #fff;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(210, 210, 210, 0.4);
-}
-
 .btn-check:focus + .btn, .btn:focus {
   box-shadow: none;
 }
@@ -23571,6 +23562,13 @@ h3, .h3 {
 /* force white caption on all occassions */
 .btn-show {
   color: #fff;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-dark,
+.btn-danger {
+  box-shadow: none;
 }
 
 /* replace FontAwesome symbols with local Material Icons */
@@ -23791,6 +23789,10 @@ select.dropdown-toggle {
 }
 
 /* attribution section */
+#attribution p {
+  font-size: 0.875rem;
+}
+
 #attribution p a,
 #group-information a {
   color: #fff;

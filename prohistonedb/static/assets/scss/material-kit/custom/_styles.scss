@@ -41,7 +41,10 @@ h3 {
 }
 
 // remove pager circles
-.page-link { border: none }
+.page-link { 
+    border: none;
+    box-shadow: none;
+}
 .page-link.active, 
 .active > .page-link {
     color: $white;
@@ -51,23 +54,19 @@ h3 {
     box-shadow: none;
 }
 
-// easier to just redefine btn-primary etc. colors
-.btn-alert { 
-    background-color: $orangey;
-    color: $white;
 
-    &:hover {
-        background-color: $orangey;
-        color: $white;
-        box-shadow: $box-shadow-secondary;
-    }
-}
 .btn-check:focus + .btn, .btn:focus {
     box-shadow: none;
 }
 /* force white caption on all occassions */
 .btn-show {
     color: $white;
+}
+.btn-primary,
+.btn-secondary, 
+.btn-dark, 
+.btn-danger {
+    box-shadow: none;
 }
 
 /* replace FontAwesome symbols with local Material Icons */
@@ -276,6 +275,9 @@ select.dropdown-toggle { text-align: left }
 }
 
 /* attribution section */
+#attribution p {
+    font-size: $font-size-sm;
+}
 #attribution p a,
 #group-information a {
     color: $white;
