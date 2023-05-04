@@ -1,0 +1,91 @@
+{# * Requires the variables "page" and "max_page" to be set! * #}
+{# URL macro #}
+{% macro goto_page(page) %}{{url_for(request.url_rule.endpoint, page=page, **request.args)}}{% endmacro %}
+
+{# Macros for individual elements #}
+{% macro previous_page() %}
+  <li class="page-item"><a class="page-link prev material-icons-round" href="{{goto_page(page-1)}}">navigate_before</a></li>
+{% endmacro %}
+
+{% macro next_page() %}
+  <li class="page-item"><a class="page-link next material-icons-round" href="{{goto_page(page+1)}}">navigate_next</a></li>
+{% endmacro %}
+
+{% macro current_page() %}
+  <li class="page-item active" aria-current="page"><a class="page-link" href="#">{{page}}</a></li>
+{% endmacro %}
+
+{% macro page_number(page) %}
+  <li class="page-item"><a class="page-link" href="{{goto_page(page)}}">{{page}}</a></li>
+{% endmacro %}
+
+{% macro separator() %}
+  <li class="page-item"><a class="page-link" href="#">...</a></li>
+{% endmacro %}
+
+
+{# Pager Logic #}
+<div class="row mt-5">
+  <nav aria-label="Search results pages" class="mx-auto" style="width: auto">
+    <ul class="pagination">
+      {# For all pages except the first, display the previous page button. #}
+      {% if page > 1 %}
+        {{previous_page()}}
+      {% endif %}
+
+      {# Change the display of the first page number depending on whether it is the current page or not. #}
+      {% if page == 1 %}
+        {{current_page()}}
+      {% else %}
+        {{page_number(1)}}
+      {% endif %}
+
+      {# Add a seperator between the first page marker and the middle range of page numbers when appropriate. #}
+      {% if page > 3 %}
+        {{separator()}}
+      {% endif %}
+
+      {# Set-up the middle range of page numbers #}
+      {% if max_page > 3 %}
+        {# Determine the page range to display #}
+        {% if max_page <= 5 %}
+          {% set page_range = range(2, max_page) %}
+        {% elif page <= 3 %}
+          {% set page_range = range(2, 5) %}
+        {% elif page >= max_page - 2 %}
+          {% set page_range = range(max_page-3,max_page) %}
+        {% else %}
+          {% set page_range = range(page-1, page+2) %}
+        {% endif %}
+
+        {# Display the middle range of pages numbers #}
+        {% for p in page_range %}
+          {% if p == page %}
+            {{current_page()}}
+          {% else %}
+            {{page_number(p)}}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {# If there are enough pages, add a seperator between the middle range of numbers and the last page marker when appropriate. #}
+      {% if max_page > 5 and page < max_page - 2 %}
+        {{separator()}}
+      {% endif %}
+
+      {# Change the display of the laste page number depending on whether it is the current page or not. #}
+      {% if max_page != 1 %}
+        {% if page == max_page %}
+          {{current_page()}}
+        {% else %}
+          {{page_number(max_page)}}
+        {% endif %}
+      {% endif %}
+
+      {# For all pages except the last, display the next page button. #}
+      {% if page < max_page %}
+        {{next_page()}}
+      {% endif %}
+    </ul>
+  </nav>
+</div>
