@@ -23560,6 +23560,10 @@ h3, .h3 {
 }
 
 /* force white caption on all occassions */
+.btn-check:checked + .btn,
+.btn-check:active + .btn,
+.btn:active,
+.btn-active,
 .btn-show {
   color: #fff;
 }
@@ -23580,6 +23584,11 @@ h3, .h3 {
   font-family: "Material Icons Round";
   font-size: 1.125rem;
   margin-left: 0;
+}
+
+.dropdown .dropdown-menu:before {
+  content: "";
+  font-family: inherit;
 }
 
 .form-check:not(.form-switch) .form-check-input[type=checkbox]:after {
@@ -23615,6 +23624,10 @@ h3, .h3 {
 .input-group input.form-control {
   border-top-right-radius: 0.5rem !important;
   border-bottom-right-radius: 0.5rem !important;
+}
+
+.index-page .badge {
+  font-size: 0.75rem;
 }
 
 form[name=search] .arrow {

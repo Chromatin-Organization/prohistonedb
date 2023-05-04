@@ -23,8 +23,8 @@ h3 {
 
 /* a more recognisable font for branding */
 .navbar .navbar-brand,
-.footer .footer-brand {
-    font-family: "Roboto Slab" !important;
+    .footer .footer-brand {
+        font-family: "Roboto Slab" !important;
 }
 
 /* hamburger menu */
@@ -46,9 +46,9 @@ h3 {
     box-shadow: none;
 }
 .page-link.active, 
-.active > .page-link {
-    color: $white;
-    background-color: $primary;
+    .active > .page-link {
+        color: $white;
+        background-color: $primary;
 }
 .page-link:focus {
     box-shadow: none;
@@ -58,26 +58,35 @@ h3 {
 .btn-check:focus + .btn, .btn:focus {
     box-shadow: none;
 }
+
 /* force white caption on all occassions */
-.btn-show {
+.btn-check:checked + .btn,
+    .btn-check:active + .btn,
+    .btn:active,
+    .btn-active,
+    .btn-show {
     color: $white;
 }
 .btn-primary,
-.btn-secondary, 
-.btn-dark, 
-.btn-danger {
+    .btn-secondary, 
+    .btn-dark, 
+    .btn-danger {
     box-shadow: none;
 }
 
 /* replace FontAwesome symbols with local Material Icons */
 .dropdown .dropdown-toggle:after, 
-.dropup .dropdown-toggle:after, 
-.dropstart .dropdown-toggle:after, 
-.dropend .dropdown-toggle:after {
-    content: "\e5cf";
-    font-family: "Material Icons Round";
-    font-size: $font-size-lg;
-    margin-left: 0;
+    .dropup .dropdown-toggle:after, 
+    .dropstart .dropdown-toggle:after, 
+    .dropend .dropdown-toggle:after {
+        content: "\e5cf";
+        font-family: "Material Icons Round";
+        font-size: $font-size-lg;
+        margin-left: 0;
+}
+.dropdown .dropdown-menu:before {
+    content: "";
+    font-family: inherit;
 }
 
 .form-check:not(.form-switch) .form-check-input[type=checkbox]:after {
@@ -106,6 +115,10 @@ h3 {
 .input-group input.form-control {
     border-top-right-radius: $border-radius-lg !important;
     border-bottom-right-radius: $border-radius-lg !important;
+}
+
+.index-page .badge {
+    font-size: $font-size-xs;
 }
 
 form[name="search"] .arrow {
