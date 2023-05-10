@@ -123,7 +123,7 @@ class SQLiteConnection(DatabaseConnection):
 
     def connect(self):
         """ Opens a database connection. I'd recommend using the 'with' statement, but otherwise don't forget to clean-up with 'close(). """    
-        self._connection = sqlite3.connect(database=self._db_path, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
+        self._connection = sqlite3.connect(database=self._db_path)
         self._connection.row_factory = sqlite3.Row
         self._cursor = self._connection.cursor()
     

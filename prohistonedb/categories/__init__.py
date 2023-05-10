@@ -17,14 +17,14 @@ from .. import database
 from ..database.models import Category
 
 #***===== Functions =====***#
-def get_categories() -> list[Category]:
+def get_categories() -> dict[int, Category]:
     """ Returns the categories in the database from the app context. Queries the database if they haven't been set yet. """
     if "categories" not in flask.g:
         sql = "SELECT * FROM categories ORDER BY name"
         db = database.get_db()
         results = db.execute(sql)
         categories = results.fetchall()
-        flask.g.categories = [Category(**category) for category in categories]
+        flask.g.categories = {category["id"]:Category(**category) for category in categories}
     
     return flask.g.categories
 

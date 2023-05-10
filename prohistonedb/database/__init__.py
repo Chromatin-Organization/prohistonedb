@@ -19,6 +19,7 @@ import click
 #*----- Local imports -----*#
 from . import connections
 from ..search.types import FieldType
+from .models import Multimer
 
 #***===== Initialization & Teardown =====***#
 def init_app(app: Flask):
@@ -49,14 +50,17 @@ def init_db():
     conn = get_db()
 
     # Create the categories table
-    conn.execute("""
+    multimer_options =  "', '".join([multimer.value for multimer in Multimer])
+    sql = f"""
         CREATE TABLE categories (
             id INTEGER PRIMARY KEY,
             name TEXT NOT NULL,
-            preferred_multimer TEXT NOT NULL CHECK( preferred_multimer IN ('monomer', 'dimer', 'tetramer', 'hexamer') ),
+            preferred_multimer TEXT NOT NULL CHECK( preferred_multimer IN ('{multimer_options}') ),
             short_name TEXT
         )
-    """)
+    """
+    flask.current_app.logger.debug(f"Creating categories table using the query: {sql}")
+    conn.execute(sql)
 
     # Add indexes for the categories table
     conn.execute("CREATE INDEX idx_name ON categories(name)")
@@ -229,17 +233,19 @@ def update_db_metadata():
                     raise Exception(f"Unknown JSON path for FieldType {field}")
             
             # Add additional information
-            multimers = ["monomer", "dimer", "tetramer", "hexamer"]
             multimers_json = uid_json["histoneDB"]["multimer"]
             ranks = {}
 
-            for multimer in multimers:
+            for multimer in multimers_json:
+                # skip any non-valid multimers
+                try:
+                    Multimer(multimer)
+                except:
+                    flask.current_app.logger.warning(f"Unknown multimer '{multimer}' found for entry: {uid}. Skipping...")
+                    continue
                 
-                if multimer not in multimers_json or not multimers_json[multimer]:
-                    ranks[multimer] = None
-                else:
-                    ranks_json = uid_json["histoneDB"]["rankModel"][multimer]
-                    ranks[multimer] = [ranks_json["rank_" + str(n)] for n in range(1, 6)]
+                ranks_json = uid_json["histoneDB"]["rankModel"][multimer]
+                ranks[multimer] = [int(ranks_json["rank_" + str(n)].replace("model_", "")) for n in range(1, 6)]
             
             data["ranks"] = json.dumps(ranks)
             data["rel_path"] = uid_json["histoneDB"]["relPath"]
