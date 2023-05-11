@@ -254,7 +254,7 @@
             // add eventListener to both toggle buttons; check for "active" class only when clicked
             const toggles = document.querySelectorAll("#view-toggle-wrapper .nav-link");
             toggles.forEach(toggle => {
-                toggle.addEventListener("click",  function() {
+                toggle.addEventListener("click",  function(e) {
                     if (this.classList.contains("active")) {
                         return false;
                     } else {
@@ -264,6 +264,7 @@
                         document.querySelector("#view-toggle-wrapper .nav-link.active").classList.toggle("active");
                         this.classList.toggle("active"); // set inactive toggle to active
                     }
+                    e.preventDefault();
                 });
             });
            
