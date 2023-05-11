@@ -4,6 +4,7 @@
 @import 'roboto';
 @import 'material_icons_round';
 
+@import 'nouislider';
 
 body {
     font-size: $font-size-sm;
@@ -33,7 +34,29 @@ h3 {
 }
 
 .nav-item .material-icons-round {
-    font-size: $font-size-lg;
+    font-size: $font-size-base;
+
+    &:not(.active) {
+        color: $gray-500;
+    }
+}
+.nav-link.material-icons-round {
+    font-size: $font-size-xl;
+    padding: .4rem;
+
+    &.active {
+        //color: $white;
+        background-color: $gray-200;
+        border-radius: $border-radius-md;
+    }
+
+    &:not(.active) {
+        color: $gray-500;
+
+        &:hover {
+            color: $font-color;
+        }
+    }
 }
 
 .card { 
@@ -117,6 +140,11 @@ h3 {
     border-bottom-right-radius: $border-radius-lg !important;
 }
 
+/* change radio buttons to solid cicles */
+.form-check:not(.form-switch) .form-check-input[type=radio]:checked {
+    //border-width: 2px;
+}
+
 .index-page .badge {
     font-size: $font-size-xs;
 }
@@ -127,9 +155,15 @@ form[name="search"] .arrow {
 }
 select.dropdown-toggle { text-align: left }
 
+.nav-pills .nav-link
 .nav-pills .nav-link.active { 
-    background-color: $primary;
-    color: $white;
+    background-color: $white;
+    color: $headings-color;
+}
+.nav-pills .material-icons-round {
+    vertical-align: middle;
+    cursor: pointer;
+    line-height: 1.4rem;
 }
 
 // force mini scrollbar'd area
@@ -155,25 +189,29 @@ select.dropdown-toggle { text-align: left }
     margin-left: 3px;
 }
 
-#applied-filters-container {
+/* buttons with icons */
+.btn-icon {
     .caption { 
         vertical-align: middle;
     }
 
     .material-icons-round {
-        font-size: $font-size-lg;
+        font-size: $font-size-base;
         vertical-align: middle;
         margin-left: 3px;
     }
 }
 
 .result-item {
+    background-color: $gray-100;
+
     .label {
         font-weight: $font-weight-bold;
     }
 }
 
-#results-table {
+#table-view {
+    /* fit contents in available area */
     overflow: scroll;
 }
 
@@ -301,3 +339,54 @@ select.dropdown-toggle { text-align: left }
         opacity: 1;
     }
 }
+
+/* noUiSlider */
+.slider-round {
+    height: 2px;
+    border: none;
+    /* add margin for (always visible) tooltips */
+    margin-top: 2.6rem;
+    /* add padding to contain slider handles within track */
+    padding: 0 9px;
+}
+/* slider track between handles */
+.slider-round .noUi-connect {
+    background: $primary;
+}
+
+.slider-round .noUi-handle {
+    height: 18px;
+    width: 18px;
+    top: -2px   ;
+    right: -9px; /* half the width */
+    border-radius: 9px;
+    box-shadow: none;
+}
+
+.noUi-horizontal .noUi-tooltip {
+    border: none;
+    color: $font-color;
+    background-color: $gray-100;
+    padding: .15rem .6rem;
+    margin-bottom: .2rem;
+    border-radius: $border-radius-md;
+}
+
+/* flat look for track */
+.noUi-target {
+    box-shadow: none;
+    background-color: $gray-200;
+}
+
+.noUi-horizontal .noUi-handle {
+    background-color: $primary;
+}
+
+.noUi-handle {
+    border: 1px solid $primary;
+}
+
+.noUi-handle:before,
+    .noUi-handle:after {
+        display: none;
+    }
