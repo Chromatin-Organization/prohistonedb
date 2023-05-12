@@ -9,9 +9,9 @@
           {{siteName}}
         </a>
 
-        {# TODO: decide whether to use an integrated search bar or separate (floating) element #}
-        <div class="w-60 d-none d-lg-block">
-          <div class="w-70 float-end">
+        {# https://getbootstrap.com/docs/5.0/utilities/flex/ #}
+        <div class="flex-grow-1">
+          <div class="w-70 d-none d-md-block mx-auto">
             {% include 'includes/search_form.html.j2' %}
           </div>
         </div>
@@ -25,7 +25,7 @@
             <span class="navbar-toggler-bar bar3"></span>
           </span>
         </button>
-        <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-20" id="navigation">
+        <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0" id="navigation" style="flex-grow: initial !important">
           {% include 'includes/menu_list.html.j2' %}
         </div>
       </div>

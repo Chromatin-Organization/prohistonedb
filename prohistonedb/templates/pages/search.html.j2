@@ -6,9 +6,7 @@
 {% block body %} class="search fluid-bg" {% endblock body %}
 
 {% block header %}
-
-{% include 'includes/navigation_search.html.j2' %}
-
+    {% include 'includes/navigation_search.html.j2' %}
 {% endblock header %}
 
 {% block content %}
@@ -111,7 +109,7 @@
                             <span class="label">Filters:</span>
                             {% for key in req_filters.keys() %}
                                 {% for f in req_filters.getlist(key) %}
-                                    <button type="button" class="btn btn-light btn-sm btn-icon" style="vertical-align: baseline">
+                                    <button type="button" class="btn btn-light btn-sm btn-icon" style="vertical-align: baseline" title="click to remove filter">
                                         <span class="caption">{{(key | field_name)}}: {{f}}</span>
                                         <span class="material-icons-round">disabled_by_default</span>
                                     </button>
@@ -196,7 +194,7 @@
                             <tbody>
                             {% for r in results %}
                             <tr>
-                                <td><a href="{{ url_for('main.entry', uniprot_id=r['uniprot_id']) }}">{{r["uniprot_id"]}}</a></td>
+                                <td><strong><a href="{{ url_for('main.entry', uniprot_id=r['uniprot_id']) }}">{{r["uniprot_id"]}}</a></strong></td>
                                 <td>{{r["category"]}}</td>
                                 <td>{{r["protein_id"]}}</td>
                                 <td>{{r["gen_id"]}}</td>
@@ -223,8 +221,8 @@
         const seqlHidden = document.querySelector('input[name="seql"]');
 
         // initialize multirange slider
+        {# TODO: initial slider max value should be updated with max sequence length in db #}
         noUiSlider.create(seqlSlider, {
-            // load updates values if args exist
             start: [0, 1200],
             step: 10,
             margin: 20, // min. distance between min-max
@@ -237,8 +235,8 @@
         });
 
         // set hidden min-max values on slider "end" event
-        // "set" event causes an infinite page update loop
-        // "handle" is slider handle index
+        // note: "set" event causes an infinite page update loop
+        // "handle" arg is slider handle index
         seqlSlider.noUiSlider.on("end", (values, handle) => {
             // seqlHidden is disabled by default to prevent default values being used as a filter
             seqlHidden.disabled = false;
