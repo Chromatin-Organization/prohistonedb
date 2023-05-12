@@ -244,6 +244,10 @@
             //document.querySelector("form[name='filters']").submit();
         });
 
+
+        const ps = new PerfectScrollbar("#filter-category-container");
+
+
         // change placeholder text to reflect we're searching within search results on the search results page
         window.addEventListener("DOMContentLoaded", () => {
             document.querySelector('input[name="q"]').placeholder = "Search within results";

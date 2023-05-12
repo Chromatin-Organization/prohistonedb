@@ -168,10 +168,13 @@ select.dropdown-toggle { text-align: left }
 
 // force mini scrollbar'd area
 #filter-category-container {
-    height: 196px;
+    height: 190px;
     padding-top: 0.4em;
-    overflow-y: scroll;
-    box-shadow: 0 20px 10px -21px rgba(0,0,0,0.2) inset, 0 -20px 10px -21px rgba(0,0,0,0.2) inset;
+    //overflow-y: scroll;
+    //box-shadow: 0 20px 10px -21px rgba(0,0,0,0.2) inset, 0 -20px 10px -21px rgba(0,0,0,0.2) inset;
+    // perfect-scrollbar.js:
+    overflow: hidden;
+    position: relative;
 }
 // set perfect-scrollbar.js scrollbar thumb to visible at all times
 .ps__rail-x,
