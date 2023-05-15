@@ -4,6 +4,7 @@
 @import 'roboto';
 @import 'material_icons_round';
 
+@import 'nouislider';
 
 body {
     font-size: $font-size-sm;
@@ -23,8 +24,8 @@ h3 {
 
 /* a more recognisable font for branding */
 .navbar .navbar-brand,
-.footer .footer-brand {
-    font-family: "Roboto Slab" !important;
+    .footer .footer-brand {
+        font-family: "Roboto Slab" !important;
 }
 
 /* hamburger menu */
@@ -33,7 +34,29 @@ h3 {
 }
 
 .nav-item .material-icons-round {
-    font-size: $font-size-lg;
+    font-size: $font-size-base;
+
+    &:not(.active) {
+        color: $gray-500;
+    }
+}
+.nav-link.material-icons-round {
+    font-size: $font-size-xl;
+    padding: .4rem;
+
+    &.active {
+        //color: $white;
+        background-color: $gray-200;
+        border-radius: $border-radius-md;
+    }
+
+    &:not(.active) {
+        color: $gray-500;
+
+        &:hover {
+            color: $font-color;
+        }
+    }
 }
 
 .card { 
@@ -46,9 +69,9 @@ h3 {
     box-shadow: none;
 }
 .page-link.active, 
-.active > .page-link {
-    color: $white;
-    background-color: $primary;
+    .active > .page-link {
+        color: $white;
+        background-color: $primary;
 }
 .page-link:focus {
     box-shadow: none;
@@ -58,26 +81,35 @@ h3 {
 .btn-check:focus + .btn, .btn:focus {
     box-shadow: none;
 }
+
 /* force white caption on all occassions */
-.btn-show {
+.btn-check:checked + .btn,
+    .btn-check:active + .btn,
+    .btn:active,
+    .btn-active,
+    .btn-show {
     color: $white;
 }
 .btn-primary,
-.btn-secondary, 
-.btn-dark, 
-.btn-danger {
+    .btn-secondary, 
+    .btn-dark, 
+    .btn-danger {
     box-shadow: none;
 }
 
 /* replace FontAwesome symbols with local Material Icons */
 .dropdown .dropdown-toggle:after, 
-.dropup .dropdown-toggle:after, 
-.dropstart .dropdown-toggle:after, 
-.dropend .dropdown-toggle:after {
-    content: "\e5cf";
-    font-family: "Material Icons Round";
-    font-size: $font-size-lg;
-    margin-left: 0;
+    .dropup .dropdown-toggle:after, 
+    .dropstart .dropdown-toggle:after, 
+    .dropend .dropdown-toggle:after {
+        content: "\e5cf";
+        font-family: "Material Icons Round";
+        font-size: $font-size-lg;
+        margin-left: 0;
+}
+.dropdown .dropdown-menu:before {
+    content: "";
+    font-family: inherit;
 }
 
 .form-check:not(.form-switch) .form-check-input[type=checkbox]:after {
@@ -108,23 +140,41 @@ h3 {
     border-bottom-right-radius: $border-radius-lg !important;
 }
 
+/* change radio buttons to solid cicles */
+.form-check:not(.form-switch) .form-check-input[type=radio]:checked {
+    //border-width: 2px;
+}
+
+.index-page .badge {
+    font-size: $font-size-xs;
+}
+
 form[name="search"] .arrow {
     z-index: 9;
     margin-left: -1.2rem !important;
 }
 select.dropdown-toggle { text-align: left }
 
+.nav-pills .nav-link
 .nav-pills .nav-link.active { 
-    background-color: $primary;
-    color: $white;
+    background-color: $white;
+    color: $headings-color;
+}
+.nav-pills .material-icons-round {
+    vertical-align: middle;
+    cursor: pointer;
+    line-height: 1.4rem;
 }
 
 // force mini scrollbar'd area
 #filter-category-container {
-    height: 196px;
+    height: 190px;
     padding-top: 0.4em;
-    overflow-y: scroll;
-    box-shadow: 0 20px 10px -21px rgba(0,0,0,0.2) inset, 0 -20px 10px -21px rgba(0,0,0,0.2) inset;
+    //overflow-y: scroll;
+    //box-shadow: 0 20px 10px -21px rgba(0,0,0,0.2) inset, 0 -20px 10px -21px rgba(0,0,0,0.2) inset;
+    // perfect-scrollbar.js:
+    overflow: hidden;
+    position: relative;
 }
 // set perfect-scrollbar.js scrollbar thumb to visible at all times
 .ps__rail-x,
@@ -142,25 +192,29 @@ select.dropdown-toggle { text-align: left }
     margin-left: 3px;
 }
 
-#applied-filters-container {
+/* buttons with icons */
+.btn-icon {
     .caption { 
         vertical-align: middle;
     }
 
     .material-icons-round {
-        font-size: $font-size-lg;
+        font-size: $font-size-base;
         vertical-align: middle;
         margin-left: 3px;
     }
 }
 
 .result-item {
+    background-color: $gray-100;
+
     .label {
         font-weight: $font-weight-bold;
     }
 }
 
-#results-table {
+#table-view {
+    /* fit contents in available area */
     overflow: scroll;
 }
 
@@ -288,3 +342,54 @@ select.dropdown-toggle { text-align: left }
         opacity: 1;
     }
 }
+
+/* noUiSlider */
+.slider-round {
+    height: 2px;
+    border: none;
+    /* add margin for (always visible) tooltips */
+    margin-top: 2.6rem;
+    /* add padding to contain slider handles within track */
+    padding: 0 9px;
+}
+/* slider track between handles */
+.slider-round .noUi-connect {
+    background: $primary;
+}
+
+.slider-round .noUi-handle {
+    height: 18px;
+    width: 18px;
+    top: -2px   ;
+    right: -9px; /* half the width */
+    border-radius: 9px;
+    box-shadow: none;
+}
+
+.noUi-horizontal .noUi-tooltip {
+    border: none;
+    color: $font-color;
+    background-color: $gray-100;
+    padding: .15rem .6rem;
+    margin-bottom: .2rem;
+    border-radius: $border-radius-md;
+}
+
+/* flat look for track */
+.noUi-target {
+    box-shadow: none;
+    background-color: $gray-200;
+}
+
+.noUi-horizontal .noUi-handle {
+    background-color: $primary;
+}
+
+.noUi-handle {
+    border: 1px solid $primary;
+}
+
+.noUi-handle:before,
+    .noUi-handle:after {
+        display: none;
+    }
