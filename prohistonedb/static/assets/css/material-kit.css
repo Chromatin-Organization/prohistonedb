@@ -23976,6 +23976,7 @@ h3, .h3 {
   content: "\e5cf";
   font-family: "Material Icons Round";
   font-size: 1.125rem;
+  line-height: 1.125rem;
   margin-left: 0;
   border: 0;
   /* fix index page search box dropdown vertical alignment issue */
@@ -24028,18 +24029,14 @@ h3, .h3 {
   border-bottom-right-radius: 0 !important;
 }
 
+/* align search icon (submit button) */
+form[name=search] .input-group-text {
+  padding-top: 0.5em;
+}
+
 /* change radio buttons to solid cicles */
 .index-page .badge {
   font-size: 0.75rem;
-}
-
-form[name=search] .arrow {
-  z-index: 9;
-  margin-left: -1.2rem !important;
-}
-
-select.dropdown-toggle {
-  text-align: left;
 }
 
 .nav-pills .nav-link .nav-pills .nav-link.active {
