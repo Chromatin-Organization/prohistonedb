@@ -40,23 +40,23 @@
 
   {# * additional javascript #}
   <script type="text/javascript">
-      const searchTypeBtn = document.querySelector("#filter-type .caption");
-      const searchTypeOptions = document.querySelectorAll("#filter-type .dropdown-item");
-      const searchTypeHidden = document.querySelector("#filter-type input[name='filter']");
+    const searchTypeBtn = document.querySelector("#filter-type .caption");
+    const searchTypeOptions = document.querySelectorAll("#filter-type .dropdown-item");
+    const searchTypeHidden = document.querySelector("#filter-type input[name='filter']");
 
-      // set searchTypeLabel
-      searchTypeOptions.forEach(searchType => {
-        searchType.addEventListener("click",  function(e) {
-          searchTypeHidden.value = this.dataset.value;
-          searchTypeBtn.innerText = this.innerText;
-          // first deselect all options, then add class
-          searchTypeOptions.classList.remove("selected");
-          this.classList.add("selected");
+    // set searchTypeLabel
+    searchTypeOptions.forEach(searchType => {
+      searchType.addEventListener("click", function(e) {
+        searchTypeHidden.value = this.dataset.value;
+        searchTypeBtn.innerText = this.innerText;
+        // first deselect all options, then add class
+        searchTypeOptions.classList.remove("selected");
+        this.classList.add("selected");
 
-          e.preventDefault();
-        });
+        e.preventDefault();
       });
-    </script>
+    });
+  </script>
 
 </body>
 </html>

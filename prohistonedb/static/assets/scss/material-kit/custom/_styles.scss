@@ -122,6 +122,9 @@ h3 {
         font-family: "Material Icons Round";
         font-size: $font-size-lg;
         margin-left: 0;
+        border: 0;
+        /* fix index page search box dropdown vertical alignment issue */
+        vertical-align: -.255em;
 }
 .dropdown .dropdown-menu:before {
     content: "";
