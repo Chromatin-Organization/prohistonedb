@@ -1,10 +1,7 @@
 """ A blueprint for mapping to the database package. """
 #***===== Imports =====***#
 #*----- Standard Library -----*#
-from typing import Optional
-
 from pathlib import Path
-
 import json
 
 #*----- Flask & Flask Extenstions -----*#
@@ -43,67 +40,70 @@ def teardown_db(exception: Exception):
         db.close()
 
 #***===== Other Functions =====***#
-#TODO: Automatically generate column names.
+#TODO: Add automatic column names for categories table.
+#TODO: Automatically determine column names for non-searchable fields.
+#TODO: Add field info (such as variable type).
 def init_db():
     """ Creates a database with empty tables and corresponding indexes. """ 
     # Create the database
     conn = get_db()
 
     # Create the categories table
+    flask.current_app.logger.info(f"Creating the categories table.")
     multimer_options =  "', '".join([multimer.value for multimer in Multimer])
-    sql = f"""
+    conn.execute(f"""
         CREATE TABLE categories (
             id INTEGER PRIMARY KEY,
             name TEXT NOT NULL,
             preferred_multimer TEXT NOT NULL CHECK( preferred_multimer IN ('{multimer_options}') ),
-            short_name TEXT
+            short_name TEXT,
+            has_page INTEGER NOT NULL CHECK( has_page IN (0, 1) )
         )
-    """
-    flask.current_app.logger.debug(f"Creating categories table using the query: {sql}")
-    conn.execute(sql)
+    """)
 
     # Add indexes for the categories table
     conn.execute("CREATE INDEX idx_name ON categories(name)")
 
     # Create the metadata table
-    conn.execute("""
+    flask.current_app.logger.info(f"Creating the metadata table.")
+    conn.execute(f"""
         CREATE TABLE metadata (
-            uniprot_id TEXT PRIMARY KEY,
-            organism TEXT NOT NULL,
-            organism_id TEXT NOT NULL,
-            sequence TEXT NOT NULL,
-            sequence_len INTEGER NOT NULL,
+            {FieldType.UNIPROT_ID.db_name} TEXT PRIMARY KEY,
+            {FieldType.ORGANISM.db_name} TEXT NOT NULL,
+            {FieldType.ORGANISM_ID.db_name} TEXT NOT NULL,
+            {FieldType.SEQUENCE.db_name} TEXT NOT NULL,
+            {FieldType.SEQUENCE_LEN.db_name} INTEGER NOT NULL,
             category_id INTEGER NOT NULL,
-            lineage TEXT NOT NULL,
-            lineage_json TEXT NOT NULL,
-            protein_id TEXT NOT NULL,
-            proteome_id TEXT,
-            gen_id TEXT,
-            genome_id TEXT NOT NULL,
+            {FieldType.LINEAGE.db_name} TEXT NOT NULL,
+            {FieldType.LINEAGE.db_name}_json TEXT NOT NULL,
+            {FieldType.PROTEIN_IDS.db_name} TEXT NOT NULL,
+            {FieldType.PROTEOME_IDS.db_name} TEXT,
+            {FieldType.GENES.db_name} TEXT,
+            {FieldType.GENOME_IDS.db_name} TEXT NOT NULL,
             rel_path TEXT NOT NULL,
             ranks TEXT,
-            CHECK (LENGTH (sequence) = sequence_len),
             FOREIGN KEY (category_id)
                 REFERENCES categories(id)
         )
     """)
 
     # Add indexes for the metadata table
-    conn.execute("CREATE INDEX idx_organism ON metadata(organism)")
-    conn.execute("CREATE INDEX idx_organism_id ON metadata(organism_id)")
-    conn.execute("CREATE INDEX idx_sequence ON metadata(sequence)")
-    conn.execute("CREATE INDEX idx_sequence_len ON metadata(sequence_len)")
-    conn.execute("CREATE INDEX idx_category_id ON metadata(category_id)")
-    conn.execute("CREATE INDEX idx_lineage ON metadata(lineage)")
-    conn.execute("CREATE INDEX idx_protein_id ON metadata(protein_id)")
-    conn.execute("CREATE INDEX idx_proteome_id ON metadata(proteome_id)")
-    conn.execute("CREATE INDEX idx_gen_id ON metadata(gen_id)")
-    conn.execute("CREATE INDEX idx_genome_id ON metadata(genome_id)")
+    flask.current_app.logger.info(f"Creating indexes for the metadata table.")
+    conn.execute(f"CREATE INDEX idx_{FieldType.ORGANISM.db_name} ON metadata({FieldType.ORGANISM.db_name})")
+    conn.execute(f"CREATE INDEX idx_{FieldType.ORGANISM_ID.db_name} ON metadata({FieldType.ORGANISM_ID.db_name})")
+    conn.execute(f"CREATE INDEX idx_{FieldType.SEQUENCE.db_name} ON metadata({FieldType.SEQUENCE.db_name})")
+    conn.execute(f"CREATE INDEX idx_{FieldType.SEQUENCE_LEN.db_name} ON metadata({FieldType.SEQUENCE_LEN.db_name})")
+    conn.execute(f"CREATE INDEX idx_category_id ON metadata(category_id)")
+    conn.execute(f"CREATE INDEX idx_{FieldType.LINEAGE.db_name} ON metadata({FieldType.LINEAGE.db_name})")
+    conn.execute(f"CREATE INDEX idx_{FieldType.PROTEIN_IDS.db_name} ON metadata({FieldType.PROTEIN_IDS.db_name})")
+    conn.execute(f"CREATE INDEX idx_{FieldType.PROTEOME_IDS.db_name} ON metadata({FieldType.PROTEOME_IDS.db_name})")
+    conn.execute(f"CREATE INDEX idx_{FieldType.GENES.db_name} ON metadata({FieldType.GENES.db_name})")
+    conn.execute(f"CREATE INDEX idx_{FieldType.GENOME_IDS.db_name} ON metadata({FieldType.GENOME_IDS.db_name})")
 
     # Create a view for accessing the necessary data in a search
-    conn.execute("""
+    conn.execute(f"""
         CREATE VIEW search AS
-            SELECT metadata.*, categories.name AS category, categories.preferred_multimer
+            SELECT metadata.*, categories.name AS {FieldType.CATEGORY.db_name}, categories.preferred_multimer
             FROM metadata
             LEFT JOIN categories ON metadata.category_id = categories.id
     """)
@@ -140,11 +140,15 @@ def update_db_categories():
                 data["short_name"] = category_json["shortName"]
             else:
                 data["short_name"] = None
-            
+            if "has_page" in categories_json:
+                data["has_page"] = int(categories_json["has_page"])
+            else:
+                data["has_page"] = int(False)
+
             categories.append(data)
 
         # Execute the SQL query on the database
-        sql = "INSERT OR REPLACE INTO categories (name, preferred_multimer, short_name) VALUES (:name, :preferred_multimer, :short_name)"
+        sql = "INSERT OR REPLACE INTO categories (name, preferred_multimer, short_name, has_page) VALUES (:name, :preferred_multimer, :short_name, :has_page)"
         conn.executemany(sql, categories)
         conn.commit()
 
@@ -195,20 +199,20 @@ def update_db_metadata():
                     lineage_names = [lineage["scientificName"] for lineage in lineages_full]
                     data[field.db_name] = json.dumps(lineage_names)
                     data[field.db_name + "_json"] = json.dumps(lineages_full)
-                elif field is FieldType.PROTEIN_ID:
+                elif field is FieldType.PROTEIN_IDS:
                     ref_properties = [ref["properties"] for ref in cross_references]
                     pids = [property["value"] for ref in ref_properties for property in ref if property["key"] == "ProteinId"]
                     if pids:
                         data[field.db_name] = json.dumps(pids)
                     else:
                         data[field.db_name] = None
-                elif field is FieldType.PROTEOME_ID:
+                elif field is FieldType.PROTEOME_IDS:
                     pmids = [ref["id"] for ref in cross_references if ref["database"] == "Proteomes"]
                     if pmids:
                         data[field.db_name] = json.dumps(pmids)
                     else:
                         data[field.db_name] = None
-                elif field is FieldType.GEN_ID:
+                elif field is FieldType.GENES:
                     if not "genes" in uid_json["uniprot"].keys():
                         data[field.db_name] = None
                         continue
@@ -223,7 +227,7 @@ def update_db_metadata():
                             continue
                     
                     data[field.db_name] = json.dumps(gids)
-                elif field is FieldType.GENOME_ID:
+                elif field is FieldType.GENOME_IDS:
                     gmids = [ref["id"] for ref in cross_references if ref["database"] == "EMBL"]
                     if gmids:
                         data[field.db_name] = json.dumps(gmids)
@@ -241,7 +245,12 @@ def update_db_metadata():
                 try:
                     Multimer(multimer)
                 except:
-                    flask.current_app.logger.warning(f"Unknown multimer '{multimer}' found for entry: {uid}. Skipping...")
+                    flask.current_app.logger.warning(f"Entry {uid}: Unknown multimer '{multimer}' found. Skipping...")
+                    continue
+
+                if not multimers_json[multimer]:
+                    # * Removed debugging since it was overly verbose
+                    # flask.current_app.logger.debug(f"Entry {uid} has no structure for '{multimer}'. Skipping...")
                     continue
                 
                 ranks_json = uid_json["histoneDB"]["rankModel"][multimer]
@@ -254,39 +263,39 @@ def update_db_metadata():
             metadata.append(data)
 
         # Execute the SQL query on the database      
-        sql = """INSERT INTO metadata (
-                    uniprot_id,
-                    organism,
-                    organism_id,
-                    sequence,
-                    sequence_len,
+        sql = f"""INSERT INTO metadata (
+                    {FieldType.UNIPROT_ID.db_name},
+                    {FieldType.ORGANISM.db_name},
+                    {FieldType.ORGANISM_ID.db_name},
+                    {FieldType.SEQUENCE.db_name},
+                    {FieldType.SEQUENCE_LEN.db_name},
                     category_id,
-                    lineage,
-                    lineage_json,
-                    protein_id,
-                    proteome_id,
-                    gen_id,
-                    genome_id,
+                    {FieldType.LINEAGE.db_name},
+                    {FieldType.LINEAGE.db_name}_json,
+                    {FieldType.PROTEIN_IDS.db_name},
+                    {FieldType.PROTEOME_IDS.db_name},
+                    {FieldType.GENES.db_name},
+                    {FieldType.GENOME_IDS.db_name},
                     rel_path,
                     ranks
                 )
                 SELECT
-                    :uniprot_id,
-                    :organism,
-                    :organism_id,
-                    :sequence,
-                    :sequence_len,
+                    :{FieldType.UNIPROT_ID.db_name},
+                    :{FieldType.ORGANISM.db_name},
+                    :{FieldType.ORGANISM_ID.db_name},
+                    :{FieldType.SEQUENCE.db_name},
+                    :{FieldType.SEQUENCE_LEN.db_name},
                     categories.id,
-                    :lineage,
-                    :lineage_json,
-                    :protein_id,
-                    :proteome_id,
-                    :gen_id,
-                    :genome_id,
+                    :{FieldType.LINEAGE.db_name},
+                    :{FieldType.LINEAGE.db_name}_json,
+                    :{FieldType.PROTEIN_IDS.db_name},
+                    :{FieldType.PROTEOME_IDS.db_name},
+                    :{FieldType.GENES.db_name},
+                    :{FieldType.GENOME_IDS.db_name},
                     :rel_path,
                     :ranks
                 FROM categories
-                    WHERE name = :category
+                    WHERE name = :{FieldType.CATEGORY.db_name}
         """
         
         conn.executemany(sql, metadata)

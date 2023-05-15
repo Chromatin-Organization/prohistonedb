@@ -11,9 +11,9 @@
         <a href="{{url_for('categories.overview')}}" class="dropdown-item">
           <h6 class="dropdown-header px-0">Categories overview</h6>
         </a>
-        {% for cat in categories %}
+        {% for cat in categories.values() %}
           <a href="#" class="dropdown-item">
-            <span>{{cat}}</span>
+            <span>{{cat.name}}</span>
           </a>
         {% endfor %}
       </div>

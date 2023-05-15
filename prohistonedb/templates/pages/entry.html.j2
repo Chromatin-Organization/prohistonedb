@@ -1,25 +1,9 @@
 {% extends 'layouts/base.html.j2' %}
 
-{% set uniprotID = entry["uniprot_id"] %}
-{% set organism = entry["organism"] %}
-{% set gene = entry["gen_id"] %}
-{% set sequenceLength = entry["sequence_len"] %}
-{% set model_order = entry["ranks"][multimer] %}
+{% set imgPath = (entry.get_path(multimer) / entry.uniprot_id) | string %}
 
-{# * The path to the entry's directory is now served by the back-end. #}
-{% set imgPath = path + "/" + uniprotID %}
-
-{# hexamers are too complex for relaxed optimization, so using unrelaxed #}
-{% if multimer == "hexamer" %}
-    {% set relaxedType = "unrelaxed" %}
-{% else %}
-    {% set relaxedType = "relaxed" %}
-{% endif %}
-
-{# convert (cast) string to int #}
-
-{% set lineage = entry["lineage_json"] %}
-{%  set lineageRev = lineage.reverse() %}
+{% macro reload(multimer, rank) %}{{url_for('main.entry', uniprot_id=entry.uniprot_id, multimer=multimer.value, rank=rank)}}{% endmacro %}
+{% macro img_path(suffix) %}{{url_for('static', filename=((entry.get_path(multimer) / entry.uniprot_id) | string)+suffix)}}{% endmacro %}
 
 {% block title %} {{siteName}} {{uniprotID}} {% endblock title %}
 
@@ -43,7 +27,7 @@
             <div class="container mt-7">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="text-white pt-3">{{ uniprotID }}</h2>
+                        <h2 class="text-white pt-3">{{entry.uniprot_id}}</h2>
                     </div>
                 </div>
                 <div id="information" class="row opacity-8">
@@ -53,25 +37,25 @@
                         <div class="pb-1 row">
                             <div class="col-sm-3 label"><span>Source organism</span></div>
                             <div class="col-sm-9 value">
-                                <span class="mb-0 float-start me-2">{{organism}}</span><span class="link"><a href="{{ url_for('search.index', oid=entry['organism_id']) }}">Search this organism</a></span>
+                                <span class="mb-0 float-start me-2">{{entry.organism.name}}</span><span class="link"><a href="{{ url_for('search.index', oid=entry.organism.id) }}">Search this organism</a></span>
                             </div>
                         </div>
                         <div class="pb-1 row">
                             <div class="col-sm-3 label"><span>Gene</span></div>
                             <div class="col-sm-9 value">
-                                <span class="mb-0">{{gene|join(",")}}</span>
+                                <span class="mb-0">{{entry.genes|join(",")}}</span>
                             </div>
                         </div>
                         <div class="pb-1 row">
                             <div class="col-sm-3 label"><span>Sequence length</span></div>
                             <div class="col-sm-9 value">
-                                <span class="mb-0">{{sequenceLength}} AA</span>
+                                <span class="mb-0">{{entry.sequence|length}} AA</span>
                             </div>
                         </div>
                         <div class="pb-1 row">
                             <div class="col-sm-3 label"><span>UniProt</span></div>
                             <div class="col-sm-9 value">
-                                <span class="mb-0 float-start me-2">{{uniprotID}}</span><span class="link"> <a href="https://www.uniprot.org/uniprotkb/{{uniprotID}}/entry">go to UniProt</a></span>
+                                <span class="mb-0 float-start me-2">{{entry.uniprot_id}}</span><span class="link"> <a href="https://www.uniprot.org/uniprotkb/{{entry.uniprot_id}}/entry">go to UniProt</a></span>
                             </div>
                         </div>
                         <div class="pb-1 row">
@@ -79,9 +63,9 @@
                             <div class="col-sm-9 value">
                                 <span class="mb-0">
                                     <ul class="lineage-path">
-                                        {% for line in lineage %}
-                                            {% if line.hidden|e != "True" %}
-                                                <li><a href="https://uniprot.org/taxonomy/{{line.taxonId|e}}">{{line.scientificName|e}}</a></li>
+                                        {% for lin in entry.lineage %}
+                                            {% if not lin.hidden %}
+                                                <li><a href="https://uniprot.org/taxonomy/{{lin.id}}">{{lin.name}}</a></li>
                                             {% endif %}
                                         {% endfor %}
                                     </ul>
@@ -104,15 +88,15 @@
                 <div class="col-12 start-0">
                     <div class="dropdown float-start me-2">
                         <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{multimer}}
+                            {{multimer.value}}
                         </a>
 
                         <ul id="select_multimer" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             {# * For now every multimer has a seperate call to the backend. #}
                             {# ? Since all required information should be available from the first call, we may want to ovload this to the client in the future. #}
                             {# ? Maybe add something to indicate the default option? #}
-                            {% for mult in entry["multimers"] %}
-                                <li><a class="dropdown-item" href="{{ url_for('main.entry', uniprot_id=uniprotID, multimer=mult, rank=rank) }}">{{mult}}</a></li>
+                            {% for mult in entry.multimers %}
+                                <li><a class="dropdown-item" href="{{ reload(mult,rank) }}">{{mult.value}}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -124,7 +108,7 @@
 
                         <ul id="select_rank" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             {% for n in range(5) %}
-                                <li><a class="dropdown-item option-{{n + 1}}" href="{{ url_for('main.entry', uniprot_id=uniprotID, multimer=multimer, rank=(n + 1)) }}">Rank {{n + 1}} - {{entry["ranks"][n]}}</a></li>
+                                <li><a class="dropdown-item option-{{n + 1}}" href="{{ reload(multimer, (n + 1)) }}">Rank {{n + 1}} - Model {{entry.get_model_id(multimer, n + 1)}}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -188,8 +172,8 @@
                 <div class="col-lg-9">
                     <div class="row mt-3">
                         <div class="columns medium-9">
-                            <div id="coverage-container" class="mx-auto" style="background-image: url('{{ url_for('static', filename = imgPath + '_coverage.png') }}')"></div>
-                            <div id="plddt-container" claSS="mx-auto" style="background-image: url('{{ url_for('static', filename = imgPath + '_plddt.png') }}')"></div>
+                            <div id="coverage-container" class="mx-auto" style="background-image: url('{{ img_path('_coverage.png') }}')"></div>
+                            <div id="plddt-container" claSS="mx-auto" style="background-image: url('{{ img_path('_plddt.png') }}')"></div>
                         </div>
                     </div>
                 </div>
@@ -202,7 +186,7 @@
                 <div class="col-lg-9">
                     <div class="row mt-3">
                         <div id="pae-view" class="columns medium-9">
-                            <div id="pae-container" class="r{{rank | string}} mx-auto" style="background-image: url('{{ url_for('static', filename = imgPath + '_PAE.png') }}')">
+                            <div id="pae-container" class="r{{rank | string}} mx-auto" style="background-image: url('{{ img_path('_PAE.png') }}')">
                             </div>
                         </div>
                     </div>
@@ -249,20 +233,10 @@
 {% endblock content %}
 
 {% block javascripts %}
-  
-    {# <script src="{{url_for('static', filename = 'assets/js/plugins/molstar.js' )}}"></script> #}
-
-    <script>
+      <script>
         // get model order from config.json 
-        // UPDATE: this is not the way. model_order is just the order in which AlphaFold runs the predictions, not a ranking.
-        // TODO: retrieve from new histonedb metadata "branch"
         const myViewer = document.querySelector("#mspViewer");
-        // hexamers only use "unrelaxed" rank; all others use "relaxed"
-        {# * hardcoded test cif file #}
-        //const modelURL = "{{ url_for('static', filename = cif_path) }}";
-        // const modelURL = "/static/data/Atribacterota/unclassified_Atribacterota/Candidatus_Atribacteria_bacterium/A0A831SMI2/A0A831SMI2_hexamer/A0A831SMI2_unrelaxed_rank_1_model_5.cif";
-        {% set cif_path = path + "/" + uniprotID + '_' + relaxedType + '_rank_' + (rank | string) + '_' +  model_order[rank - 1] + '.cif' %}
-        const modelURL = "{{ url_for('static', filename=cif_path) }}";
+        const modelURL = "{{ url_for('static', filename=entry.get_ciff_path(multimer, rank)) }}";
 
         molstar.Viewer.create('mspViewer', {
             // https://molstar.org/docs/plugin/

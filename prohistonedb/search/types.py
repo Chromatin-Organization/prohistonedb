@@ -22,10 +22,10 @@ class FieldType(str, Enum):
     SEQUENCE_LEN = "seql"
     CATEGORY = "cat"
     LINEAGE = "tax"
-    PROTEIN_ID = "pid"
-    PROTEOME_ID = "pmid"
-    GEN_ID = "gid"
-    GENOME_ID = "gmid"
+    PROTEIN_IDS = "pid"
+    PROTEOME_IDS = "pmid"
+    GENES = "gen"
+    GENOME_IDS = "gmid"
     
     @classmethod
     def accepted_fields(cls) -> list[str]:

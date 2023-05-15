@@ -4,14 +4,9 @@ from __future__ import annotations
 
 #***===== Imports =====***#
 #*----- Standard library -----*#
-from enum import Enum
-
 import abc
 from abc import ABC
-
-from typing import Iterable, Sequence, Mapping, Optional, Union
-
-from pathlib import Path
+from typing import Iterable, Sequence, Optional, Union
 
 #*----- Flask & Flask Extenstions -----*#
 import flask
@@ -60,10 +55,10 @@ class Filter:
             FieldType.ORGANISM,
             FieldType.SEQUENCE,
             FieldType.LINEAGE,
-            FieldType.PROTEIN_ID,
-            FieldType.PROTEOME_ID,
-            FieldType.GEN_ID,
-            FieldType.GENOME_ID
+            FieldType.PROTEIN_IDS,
+            FieldType.PROTEOME_IDS,
+            FieldType.GENES,
+            FieldType.GENOME_IDS
         ]
 
         if field in equal_fields:
@@ -200,12 +195,6 @@ class Query:
         
         # Otherwise add the conditions to the sql query
         query += " WHERE " + self._condition.str
-
-        # Log the SQL query for debugging
-        sql_str = str(query)
-        for param in self._condition.parameters:
-            sql_str = sql_str.replace("?", f"{param}", 1)
-        flask.current_app.logger.debug(f"Generated SQL query: {sql_str}")
 
         # Execute the SQL query on the database
         return database_connection.execute(query, parameters=self._condition.parameters)

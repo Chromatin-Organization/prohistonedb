@@ -1,9 +1,6 @@
 """ The endpoint for the categorie pages. """
 #***===== Imports =====***#
 #*----- Standard Library -----*#
-from dataclasses import dataclass
-
-from typing import Optional
 
 #*----- Flask & Flask Extenstions -----*#
 import flask
@@ -38,5 +35,5 @@ from . import routes
 @bp.app_context_processor
 def inject_categories():
     categories = get_categories()
-    flask.current_app.logger.debug(f"Categories present in the database: {[category.name for category in categories]}")
+    flask.current_app.logger.debug(f"Categories present in the database: {[(id, category.name) for (id, category) in categories.items()]}")
     return {"categories": categories}

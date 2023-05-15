@@ -12,12 +12,10 @@ from pathlib import Path
 import flask
 
 #*----- External packages -----*#
-import json
 
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
-from . import get_categories
 
 #***===== Enums =====***#
 class Multimer(str, Enum):
@@ -26,6 +24,9 @@ class Multimer(str, Enum):
     DIMER = "dimer"
     TETRAMER = "tetramer"
     HEXAMER = "hexamer"
+
+def __str__(self) -> str:
+    return self.value
 
 #***===== Base Dataclasses =====***#
 @dataclass(eq=False, frozen=True)
@@ -61,6 +62,7 @@ class Category:
     id: int
     name: str
     preferred_multimer: Multimer
+    has_page: bool
     short_name: Optional[str] = None
 
     def __post_init__(self):
@@ -84,41 +86,31 @@ class Histone:
     genes: Union[list[str], None]
     genome_ids: list[str]
     multimer_rankings: dict[Multimer, list[int]]
-    path: Path
+    rel_path: Path
 
-    def __init__(self,
-        uniprot_id: str,
-        organism_id: str,
-        organism: str,
-        sequence: str,
-        category_id: int,
-        lineage_json: str,
-        protein_ids: str,
-        proteome_ids: str,
-        genes: str,
-        genome_ids: str,
-        ranks: str,
-        rel_path: str
-    ):
-        self.uniprot_id = uniprot_id
-        self.organism = Organism(organism_id, organism)
-        self.sequence = Sequence(sequence)
+    @property
+    def multimers(self) -> list[Multimer]:
+        return list(self.multimer_rankings.keys())
+    
+    def has_multimer(self, multimer: Multimer) -> bool:
+        return multimer in self.multimer_rankings.keys()
+    
+    def get_model_id(self, multimer: Multimer, rank: int) -> int:
+        return self.multimer_rankings[multimer][rank-1]
 
-        categories = get_categories()
-        self.category = categories[category_id]
+    def get_path(self, multimer: Multimer) -> Path:
+        path = Path("data") / self.rel_path
+        if multimer != multimer.MONOMER:
+            path = path / f"_{multimer.value}"
+        return path
 
-        lineage_json = json.loads(lineage_json)
-        lineage = []
-        for item in lineage_json:
-            lineage.append(Lineage(item["taxonId"], item["scientificName"], item["rank"], item["hidden"]))
+    def get_ciff_path(self, multimer: Multimer, rank: int) -> Path:
+        path = self.get_path(multimer)
+        model = self.get_model_id(multimer,rank)
 
-        self.lineage = lineage.reverse()
-        self.protein_ids = json.loads(protein_ids)
-        self.proteome_ids = json.loads(proteome_ids)
-        self.genes = json.loads(genes)
-        self.genome_ids = json.loads(genome_ids)
-
-        ranks = json.loads(ranks)
-        self.multimer_rankings = {Multimer(multimer):ranks[multimer] for multimer in ranks.keys()}
-        self.rel_path = Path(flask.current_app.instance_path) / rel_path 
+        if multimer is Multimer.HEXAMER:
+            relaxed = "unrelaxed"
+        else:
+            relaxed = "relaxed"
         
+        return path / f"{self.uniprot_id}_{relaxed}_rank_{rank}_model_{model}.ciff"
