@@ -1,9 +1,7 @@
 {% extends 'layouts/base.html.j2' %}
 
-{% set imgPath = (entry.get_path(multimer) / entry.uniprot_id) | string %}
-
 {% macro reload(multimer, rank) %}{{url_for('main.entry', uniprot_id=entry.uniprot_id, multimer=multimer.value, rank=rank)}}{% endmacro %}
-{% macro img_path(suffix) %}{{url_for('static', filename=((entry.get_path(multimer) / entry.uniprot_id) | string)+suffix)}}{% endmacro %}
+{% macro img_path(suffix) %}{{url_for('static', filename=(entry.get_path(multimer) / entry.uniprot_id).as_posix()+suffix)}}{% endmacro %}
 
 {% block title %} {{siteName}} {{uniprotID}} {% endblock title %}
 
@@ -236,7 +234,7 @@
       <script>
         // get model order from config.json 
         const myViewer = document.querySelector("#mspViewer");
-        const modelURL = "{{ url_for('static', filename=entry.get_ciff_path(multimer, rank)) }}";
+        const modelURL = "{{ url_for('static', filename=entry.get_cif_path(multimer, rank).as_posix()) }}";
 
         molstar.Viewer.create('mspViewer', {
             // https://molstar.org/docs/plugin/

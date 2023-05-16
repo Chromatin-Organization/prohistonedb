@@ -101,10 +101,12 @@ class Histone:
     def get_path(self, multimer: Multimer) -> Path:
         path = Path("data") / self.rel_path
         if multimer != multimer.MONOMER:
-            path = path / f"_{multimer.value}"
+            path = path / f"{self.uniprot_id}_{multimer.value}"
+        else:
+            path = path / self.uniprot_id
         return path
 
-    def get_ciff_path(self, multimer: Multimer, rank: int) -> Path:
+    def get_cif_path(self, multimer: Multimer, rank: int) -> Path:
         path = self.get_path(multimer)
         model = self.get_model_id(multimer,rank)
 
@@ -113,4 +115,4 @@ class Histone:
         else:
             relaxed = "relaxed"
         
-        return path / f"{self.uniprot_id}_{relaxed}_rank_{rank}_model_{model}.ciff"
+        return path / f"{self.uniprot_id}_{relaxed}_rank_{rank}_model_{model}.cif"
