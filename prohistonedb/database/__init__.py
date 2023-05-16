@@ -248,7 +248,7 @@ def update_db_metadata():
             metadata.append(data)
 
         # Execute the SQL query on the database      
-        sql = """INSERT INTO metadata (
+        sql = """INSERT OR REPLACE INTO metadata (
                     uniprot_id,
                     organism,
                     organism_id,
