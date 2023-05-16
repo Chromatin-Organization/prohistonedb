@@ -23917,6 +23917,7 @@ h3, .h3 {
   box-shadow: none;
 }
 
+/* remove pager border circles */
 .page-link {
   border: none;
   box-shadow: none;
@@ -24236,6 +24237,12 @@ form[name=search] .input-group-text {
 #group-information a:hover {
   color: #e91e63;
   opacity: 1;
+}
+
+/* Leiden University logo */
+.lu-logo-wrapper {
+  float: left;
+  color: #344767;
 }
 
 /* noUiSlider */
