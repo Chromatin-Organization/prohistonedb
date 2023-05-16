@@ -1,19 +1,19 @@
 <form name="search" method="GET" action="{{ url_for('search.index') }}"> 
     <div class="input-group">
-        <select class="btn btn-primary dropdown-toggle mb-0" name="filter" data-bs-toggle="dropdown">
-        <option value="any" selected>All types</option>
-        <option disabled>---------------------</option>
-        <option value="uid">UniProt ID</option>
-        <option value="tax">Taxonomy</option>
-        <option value="org">Organism</option>
-        <option value="gen_id">Gen ID</option>
-        <option value="seq">Sequence</option>
-        </select>
-        {# ! FIXME: image causes issues with :focus state of search input field #}
-        {# <img src="{{ url_for('static', filename = 'assets/img/down-arrow-white.svg') }}" alt="down-arrow" class="arrow"> #}
-    
+        <div id="filter-type" class="dropdown py-0">
+            <a href="#" class="btn btn-primary dropdown-toggle mb-0 caption" data-bs-toggle="dropdown" aria-expanded="false">Select type</a>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item" data-value="all">All types</a></li>
+                <li><a href="#" class="dropdown-item" data-value="uid">Uniprot ID</a></li>
+                <li><a href="#" class="dropdown-item" data-value="tax">Taxonomy</a></li>
+                <li><a href="#" class="dropdown-item" data-value="org">Organism</a></li>
+                <li><a href="#" class="dropdown-item" data-value="gen_id">Gen ID</a></li>
+                <li><a href="#" class="dropdown-item" data-value="seq">Sequence</a></li>
+            </ul>
+            <input type="hidden" name="filter" value="all" />
+        </div>
         <input type="text" class="form-control bg-light ps-2" name="q" placeholder="Search" maxlength="40" />
-        <span class="input-group-text pe-3 d-none d-lg-block py-2" style="z-index: 9">
+        <span class="input-group-text pe-1 d-none d-lg-block" style="z-index: 9">
             <button input type="submit" class="border-0 bg-transparent material-icons-round">search</button>
         </span>
         {% include 'includes/search_hidden.html.j2' %}

@@ -40,13 +40,14 @@ h3 {
         color: $gray-500;
     }
 }
+/* list/table view toggle */
 .nav-link.material-icons-round {
     font-size: $font-size-xl;
     padding: .4rem;
 
     &.active {
-        //color: $white;
-        background-color: $gray-200;
+        color: $primary;
+        //background-color: $gray-200;
         border-radius: $border-radius-md;
     }
 
@@ -63,9 +64,12 @@ h3 {
     box-shadow: none;
 }
 
-// remove pager circles
+// remove pager border circles
 .page-link { 
     border: none;
+    box-shadow: none;
+}
+.page-item.active .page-link {
     box-shadow: none;
 }
 .page-link.active, 
@@ -78,8 +82,10 @@ h3 {
 }
 
 
-.btn-check:focus + .btn, .btn:focus {
-    box-shadow: none;
+.btn-check:focus + .btn, 
+    .btn:focus,
+    .btn.show:focus {
+        box-shadow: none;
 }
 
 /* force white caption on all occassions */
@@ -87,14 +93,24 @@ h3 {
     .btn-check:active + .btn,
     .btn:active,
     .btn-active,
-    .btn-show {
-    color: $white;
+    .btn-show,
+    .btn.show {
+        color: $white;
 }
 .btn-primary,
     .btn-secondary, 
     .btn-dark, 
     .btn-danger {
-    box-shadow: none;
+        box-shadow: none;
+}
+/* BS offcanvas, modal close button */
+.btn-close {
+    color: $font-color;
+    background-image: none;
+
+    &:hover {
+        color: $headings-color;
+    }
 }
 
 /* replace FontAwesome symbols with local Material Icons */
@@ -105,7 +121,11 @@ h3 {
         content: "\e5cf";
         font-family: "Material Icons Round";
         font-size: $font-size-lg;
+        line-height: $font-size-lg;
         margin-left: 0;
+        border: 0;
+        /* fix index page search box dropdown vertical alignment issue */
+        vertical-align: -.255em;
 }
 .dropdown .dropdown-menu:before {
     content: "";
@@ -135,10 +155,20 @@ h3 {
     border-radius: 0 !important;
 }
 
+/* search bar input group */
 .input-group input.form-control {
     border-top-right-radius: $border-radius-lg !important;
     border-bottom-right-radius: $border-radius-lg !important;
 }
+.input-group .dropdown-toggle {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+/* align search icon (submit button) */
+form[name=search] .input-group-text {
+    padding-top: .5em;
+}
+
 
 /* change radio buttons to solid cicles */
 .form-check:not(.form-switch) .form-check-input[type=radio]:checked {
@@ -149,11 +179,6 @@ h3 {
     font-size: $font-size-xs;
 }
 
-form[name="search"] .arrow {
-    z-index: 9;
-    margin-left: -1.2rem !important;
-}
-select.dropdown-toggle { text-align: left }
 
 .nav-pills .nav-link
 .nav-pills .nav-link.active { 
@@ -190,6 +215,8 @@ select.dropdown-toggle { text-align: left }
     margin-top: .2rem;
     padding: .25rem .6rem;
     margin-left: 3px;
+    // hide until we have full facet search functionality
+    display: none;
 }
 
 /* buttons with icons */

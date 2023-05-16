@@ -39,7 +39,7 @@
                     <h3>Filter by:</h3>
                     <form name="filters" method="GET" action="{{ url_for('search.index') }}">
                         <div class="row mt-3 filter-category">
-                            <div class="label"><h5>Category</h5></div>
+                            <div class="label"><h6>Category</h6></div>
                             <div id="filter-category-container" class="col-11 ps-0 mb-2">
                                 <div class="form-check">
                                     {% for cat in categories.values() %}
@@ -58,7 +58,7 @@
                         </div>
 
                         <div class="row mt-3 filter-lineage">
-                            <div class="label"><h5>Lineage</h5></div>
+                            <div class="label"><h6>Lineage</h6></div>
                             <div class="form-check col-10">
                                 <input class="form-check-input" type="radio" name="tax" value="archaea" id="lineageCheck1">
                                 <label class="form-check-label" for="lineageCheck1">
@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="row mt-3 filter-sequence">
-                            <div class="label"><h5>Sequence length</h5></div>
+                            <div class="label"><h6>Sequence length</h6></div>
                             <div class="form-check col-10">
                                 <div class="multislider slider-round"></div>
                             </div>
@@ -96,7 +96,10 @@
                             </div>
                         </div>
 
-                        {% include 'includes/search_hidden.html.j2' %}
+                        {# !FIXME: temporarily disabled include file to test facets #}
+                        {# include 'includes/search_hidden.html.j2' #}
+                        <input type="hidden" name="filter" value="{{ request.args.get('filter') }}" />
+                        <input type="hidden" name="q" value="{{ request.args.get('q') }}" />
                     </form>
                 </div>
                
@@ -163,7 +166,7 @@
                             <div class="row">
                                 <div class="col-sm-3 label"><span>Organism</span></div>
                                 <div class="col-sm-9 value">
-                                    <span class="mb-0 float-start me-2">{{r.organism.name}}</span><span class="link"><a href="{{ url_for('search.index', oid=r.organism.id) }}">Search this organism</a></span>
+                                    <span class="mb-0 float-start me-2">{{r.organism.name}}</span><span class="link text-nowrap"><a href="{{ url_for('search.index', oid=r.organism.id) }}">Search this organism</a></span>
                                 </div>
                             </div>
                             <div class="row">
@@ -216,7 +219,7 @@
   {% endblock content %}
 
   {% block javascripts %}
-    <script>
+    <script type="text/javascript">
         const seqlSlider = document.querySelector('.multislider');
         const seqlHidden = document.querySelector('input[name="seql"]');
 
@@ -241,10 +244,11 @@
             // seqlHidden is disabled by default to prevent default values being used as a filter
             seqlHidden.disabled = false;
             seqlHidden.value = parseInt(values[0]) + "-" + parseInt(values[1]);
+            {# * disabled onchange submit in favor of submit button ("apply filters") #}
             //document.querySelector("form[name='filters']").submit();
         });
 
-
+        // intialize mini scrollbar for Category facet
         const ps = new PerfectScrollbar("#filter-category-container");
 
 
@@ -280,10 +284,12 @@
                     {% endfor %}
                 {% endfor %}
             {% endif %}
+            console.log(filterArgs);
 
             const filters = document.querySelectorAll(".form-check-input");
             filters.forEach( filter => {
                 filter.addEventListener("change", () => {
+                    {# * disabled onchange submit in favor of submit button ("apply filters") #}
                     //document.querySelector("form[name='filters']").submit();
                 });
                 

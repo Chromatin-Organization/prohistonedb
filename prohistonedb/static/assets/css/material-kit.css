@@ -23897,12 +23897,13 @@ h3, .h3 {
   color: #adb5bd;
 }
 
+/* list/table view toggle */
 .nav-link.material-icons-round {
   font-size: 1.25rem;
   padding: 0.4rem;
 }
 .nav-link.material-icons-round.active {
-  background-color: #f0f2f5;
+  color: #e91e63;
   border-radius: 0.375rem;
 }
 .nav-link.material-icons-round:not(.active) {
@@ -23921,6 +23922,10 @@ h3, .h3 {
   box-shadow: none;
 }
 
+.page-item.active .page-link {
+  box-shadow: none;
+}
+
 .page-link.active,
 .active > .page-link {
   color: #fff;
@@ -23931,7 +23936,9 @@ h3, .h3 {
   box-shadow: none;
 }
 
-.btn-check:focus + .btn, .btn:focus {
+.btn-check:focus + .btn,
+.btn:focus,
+.btn.show:focus {
   box-shadow: none;
 }
 
@@ -23940,7 +23947,8 @@ h3, .h3 {
 .btn-check:active + .btn,
 .btn:active,
 .btn-active,
-.btn-show {
+.btn-show,
+.btn.show {
   color: #fff;
 }
 
@@ -23951,6 +23959,15 @@ h3, .h3 {
   box-shadow: none;
 }
 
+/* BS offcanvas, modal close button */
+.btn-close {
+  color: #7b809a;
+  background-image: none;
+}
+.btn-close:hover {
+  color: #344767;
+}
+
 /* replace FontAwesome symbols with local Material Icons */
 .dropdown .dropdown-toggle:after,
 .dropup .dropdown-toggle:after,
@@ -23959,7 +23976,11 @@ h3, .h3 {
   content: "\e5cf";
   font-family: "Material Icons Round";
   font-size: 1.125rem;
+  line-height: 1.125rem;
   margin-left: 0;
+  border: 0;
+  /* fix index page search box dropdown vertical alignment issue */
+  vertical-align: -0.255em;
 }
 
 .dropdown .dropdown-menu:before {
@@ -23997,23 +24018,25 @@ h3, .h3 {
   border-radius: 0 !important;
 }
 
+/* search bar input group */
 .input-group input.form-control {
   border-top-right-radius: 0.5rem !important;
   border-bottom-right-radius: 0.5rem !important;
 }
 
+.input-group .dropdown-toggle {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* align search icon (submit button) */
+form[name=search] .input-group-text {
+  padding-top: 0.5em;
+}
+
 /* change radio buttons to solid cicles */
 .index-page .badge {
   font-size: 0.75rem;
-}
-
-form[name=search] .arrow {
-  z-index: 9;
-  margin-left: -1.2rem !important;
-}
-
-select.dropdown-toggle {
-  text-align: left;
 }
 
 .nav-pills .nav-link .nav-pills .nav-link.active {
@@ -24047,6 +24070,7 @@ select.dropdown-toggle {
   margin-top: 0.2rem;
   padding: 0.25rem 0.6rem;
   margin-left: 3px;
+  display: none;
 }
 
 /* buttons with icons */
