@@ -1,9 +1,6 @@
 """ The endpoint for the categorie pages. """
 #***===== Imports =====***#
 #*----- Standard Library -----*#
-from dataclasses import dataclass
-
-from typing import Optional
 
 #*----- Flask & Flask Extenstions -----*#
 import flask
@@ -14,32 +11,17 @@ import flask
 
 #*----- Local imports -----*#
 from .. import database
-
-#***===== Category class =====***#
-@dataclass(frozen=True)
-class Category:
-    """ A simple dataclass to hold a Category. If no short name is supplied, it will default to the standard name. """
-    id: int
-    name: str
-    preferred_multimer: str
-    short_name: Optional[str] = None
-
-    def __post_init__(self):
-        if self.short_name is None:
-            object.__setattr__(self, "short_name", self.name)
-
-    def __str__(self) -> str:
-        return self.name
+from ..database.models import Category
 
 #***===== Functions =====***#
-def get_categories() -> list[Category]:
+def get_categories() -> dict[int, Category]:
     """ Returns the categories in the database from the app context. Queries the database if they haven't been set yet. """
     if "categories" not in flask.g:
         sql = "SELECT * FROM categories ORDER BY name"
         db = database.get_db()
         results = db.execute(sql)
         categories = results.fetchall()
-        flask.g.categories = [Category(**category) for category in categories]
+        flask.g.categories = {category["id"]:Category(**category) for category in categories}
     
     return flask.g.categories
 
@@ -53,5 +35,5 @@ from . import routes
 @bp.app_context_processor
 def inject_categories():
     categories = get_categories()
-    flask.current_app.logger.debug(f"Categories present in the database: {[category.name for category in categories]}")
+    flask.current_app.logger.debug(f"Categories present in the database: {[(id, category.name) for (id, category) in categories.items()]}")
     return {"categories": categories}

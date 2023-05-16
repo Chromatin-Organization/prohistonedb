@@ -4,14 +4,9 @@ from __future__ import annotations
 
 #***===== Imports =====***#
 #*----- Standard library -----*#
-from enum import Enum
-
 import abc
 from abc import ABC
-
-from typing import Iterable, Sequence, Mapping, Optional, Union
-
-from pathlib import Path
+from typing import Iterable, Sequence, Optional, Union
 
 #*----- Flask & Flask Extenstions -----*#
 import flask
@@ -24,7 +19,7 @@ import flask
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
-from ..database.types import FieldType
+from .types import FieldType
 from ..database.connections import DatabaseConnection, DatabaseResult
 
 #***===== SQL Condition Class =====***#
@@ -60,21 +55,18 @@ class Filter:
             FieldType.ORGANISM,
             FieldType.SEQUENCE,
             FieldType.LINEAGE,
-            FieldType.PROTEIN_ID,
-            FieldType.PROTEOME_ID,
-            FieldType.GEN_ID,
-            FieldType.GENOME_ID
+            FieldType.PROTEIN_IDS,
+            FieldType.PROTEOME_IDS,
+            FieldType.GENES,
+            FieldType.GENOME_IDS
         ]
 
         if field in equal_fields:
             return _SQLCondition(f"{field.db_name}=?", [self._value])
-            return _SQLCondition(f"{field.db_name}=?", [self._value])
         elif field in like_fields:
-            return _SQLCondition(f"{field.db_name} LIKE ?", [f"%{self._value}%"])
             return _SQLCondition(f"{field.db_name} LIKE ?", [f"%{self._value}%"])
         elif field is FieldType.SEQUENCE_LEN:
             values = [int(val.strip()) for val in self._value.split("-")]
-            return _SQLCondition(f"{field.db_name} BETWEEN ? AND ?", values)
             return _SQLCondition(f"{field.db_name} BETWEEN ? AND ?", values)
         else:
             raise NotImplementedError(f"Couldn't generate sql condition for field {self}")
@@ -163,7 +155,7 @@ class AnyFilter(OrFilter):
         super().__init__(filters)
 
 #***===== SQL Class =====***#
-class SQL:
+class Query:
     """ A class for storing an SQL query over the search view. """
     def __init__(self, selection: Optional[Sequence[Union[str, FieldType]]] = None, filter: Optional[Union[Filter, CombinedFilterABC]] = None):
         """ Takes in an optional list of fields to be selected and an optional search filter. """
@@ -203,12 +195,6 @@ class SQL:
         
         # Otherwise add the conditions to the sql query
         query += " WHERE " + self._condition.str
-
-        # Log the SQL query for debugging
-        sql_str = str(query)
-        for param in self._condition.parameters:
-            sql_str = sql_str.replace("?", f"{param}", 1)
-        flask.current_app.logger.debug(f"Generated SQL query: {sql_str}")
 
         # Execute the SQL query on the database
         return database_connection.execute(query, parameters=self._condition.parameters)

@@ -1,13 +1,10 @@
-""" Defines types needed for the metadata database. """
+""" A module defining all the types used for processing user input during searches. """
 #***===== Feature Imports =====***#
 from __future__ import annotations
 
 #***===== Imports =====***#
-#*----- Standard Library -----*#
+#*----- Standard library -----*#
 from enum import Enum
-
-#*----- Flask & Flask Extenstions -----*#
-import flask
 
 #*----- External packages -----*#
 
@@ -25,10 +22,10 @@ class FieldType(str, Enum):
     SEQUENCE_LEN = "seql"
     CATEGORY = "cat"
     LINEAGE = "tax"
-    PROTEIN_ID = "pid"
-    PROTEOME_ID = "pmid"
-    GEN_ID = "gid"
-    GENOME_ID = "gmid"
+    PROTEIN_IDS = "pid"
+    PROTEOME_IDS = "pmid"
+    GENES = "gen"
+    GENOME_IDS = "gmid"
     
     @classmethod
     def accepted_fields(cls) -> list[str]:

@@ -2,7 +2,6 @@
 #***===== Imports =====***#
 #*----- Standard library -----*#
 from typing import Optional, Union
-
 import math
 
 #*----- Flask & Flask Extenstions -----*#
@@ -15,8 +14,9 @@ from werkzeug.datastructures import MultiDict
 
 #*----- Local imports -----*#
 from . import sql
-from ..database.types import FieldType
+from .types import FieldType
 from .. import database
+from . import results_to_histones
 
 #***===== Functions =====***#
 def convert_args(args: MultiDict) -> MultiDict:
@@ -128,12 +128,13 @@ def index(page: Optional[int] = None):
         filter = filter_from_args(args)
 
     # Select the necessary fields and generate the SQL query
-    query = sql.SQL(filter=filter)
+    query = sql.Query(filter=filter)
 
     # Get the database connection and query the generated SQL code.
     db = database.get_db()
     results = query.execute(db)
     results = results.fetchall()
+    results = results_to_histones(results)
 
     # Manage paging to fetch the correct results
     total_num_results = len(results)
