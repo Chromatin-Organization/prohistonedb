@@ -8,6 +8,8 @@ from typing import Optional, Union
 
 from pathlib import Path
 
+import functools
+
 #*----- Flask -----*#
 import flask
 
@@ -18,6 +20,7 @@ import flask
 #*----- Local imports -----*#
 
 #***===== Enums =====***#
+@functools.total_ordering
 class Multimer(str, Enum):
     """ An enum for the accepted multimer types. """
     MONOMER = "monomer"
@@ -25,8 +28,29 @@ class Multimer(str, Enum):
     TETRAMER = "tetramer"
     HEXAMER = "hexamer"
 
-def __str__(self) -> str:
-    return self.value
+    def __str__(self) -> str:
+        return self.value
+
+    def __lt__(self, other) -> bool:
+        if self is self.MONOMER:
+            if other is self.MONOMER:
+                return False
+            else:
+                return True
+        elif self is self.DIMER:
+            if (other is self.MONOMER) or (other is self.DIMER):
+                return False
+            else:
+                return True
+        elif self is self.TETRAMER:
+            if other is self.HEXAMER:
+                return True
+            else:
+                return False
+        elif self is self.HEXAMER:
+            return False
+        else:
+            raise ValueError(f"Unknown multimer {self}")
 
 #***===== Base Dataclasses =====***#
 @dataclass(eq=False, frozen=True)
@@ -90,7 +114,9 @@ class Histone:
 
     @property
     def multimers(self) -> list[Multimer]:
-        return list(self.multimer_rankings.keys())
+        multimers = list(self.multimer_rankings.keys())
+        multimers.sort()
+        return multimers
     
     def has_multimer(self, multimer: Multimer) -> bool:
         return multimer in self.multimer_rankings.keys()
