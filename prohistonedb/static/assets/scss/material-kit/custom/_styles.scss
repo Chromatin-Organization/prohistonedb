@@ -131,7 +131,7 @@ h3 {
     content: "";
     font-family: inherit;
 }
-
+/* Material Icons check icon */
 .form-check:not(.form-switch) .form-check-input[type=checkbox]:after {
     content: "\e5ca";
     font-family: "Material Icons Round";
@@ -150,9 +150,12 @@ h3 {
 .header-plain { background-color: $gray-turqoise }
 
 /* thinner bottom border/line for active form elements */
-.input-group.input-group-dynamic .form-control, .input-group.input-group-dynamic .form-control:focus, .input-group.input-group-static .form-control, .input-group.input-group-static .form-control:focus {
-    background-image: linear-gradient(0deg, $primary 1px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, #d2d2d2 1px, rgba(209, 209, 209, 0) 0);
-    border-radius: 0 !important;
+.input-group.input-group-dynamic .form-control, 
+    .input-group.input-group-dynamic .form-control:focus, 
+    .input-group.input-group-static .form-control, 
+    .input-group.input-group-static .form-control:focus {
+        background-image: linear-gradient(0deg, $primary 1px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, #d2d2d2 1px, rgba(209, 209, 209, 0) 0);
+        border-radius: 0 !important;
 }
 
 /* search bar input group */
@@ -166,7 +169,7 @@ h3 {
 }
 /* align search icon (submit button) */
 form[name=search] .input-group-text {
-    padding-top: .5em;
+    padding-top: .5rem;
 }
 
 
@@ -192,12 +195,16 @@ form[name=search] .input-group-text {
 }
 
 // force mini scrollbar'd area
-#filter-category-container {
+#filter-category-wrapper {
     height: 190px;
     padding-top: 0.4em;
     //overflow-y: scroll;
     //box-shadow: 0 20px 10px -21px rgba(0,0,0,0.2) inset, 0 -20px 10px -21px rgba(0,0,0,0.2) inset;
     // perfect-scrollbar.js:
+    overflow: hidden;
+    position: relative;
+}
+#table-wrapper {
     overflow: hidden;
     position: relative;
 }

@@ -40,7 +40,7 @@
                     <form name="filters" method="GET" action="{{ url_for('search.index') }}">
                         <div class="row mt-3 filter-category">
                             <div class="label"><h6>Category</h6></div>
-                            <div id="filter-category-container" class="col-11 ps-0 mb-2">
+                            <div id="filter-category-wrapper" class="col-11 ps-0 mb-2">
                                 <div class="form-check">
                                     {% for cat in categories %}
                                     <div class="form-check ps-0">
@@ -189,30 +189,32 @@
                     {# * https://getbootstrap.com/docs/5.0/content/tables/ #}
                     <div id="table-view" class="col-12 d-none">
                         {% if (results | length) > 0 %}
-                        <table id="bs-table" class="table table-striped table-hover table-responsive-md mt-3" data-toggle="table">
-                            <thead>
+                        <div id="table-wrapper">
+                            <table id="bs-table" class="table table-striped table-hover table-responsive-md mt-3" data-toggle="table">
+                                <thead>
+                                    <tr>
+                                        <th data-field="uniprotID" scope="col">UniProt ID</th>
+                                        <th data-field="category" scope="col">Category</th>
+                                        <th data-field="organism" scope="col">Protein</th>
+                                        <th data-field="gene" scope="col">Gene</th>
+                                        <th data-field="organism" scope="col">Organism</th>
+                                        <th data-field="sequence" scope="col">Length</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for r in results %}
                                 <tr>
-                                    <th data-field="uniprotID" scope="col">UniProt ID</th>
-                                    <th data-field="category" scope="col">Category</th>
-                                    <th data-field="organism" scope="col">Protein</th>
-                                    <th data-field="gene" scope="col">Gene</th>
-                                    <th data-field="organism" scope="col">Organism</th>
-                                    <th data-field="sequence" scope="col">Length</th>
+                                    <td><strong><a href="{{ url_for('main.entry', uniprot_id=r['uniprot_id']) }}">{{r["uniprot_id"]}}</a></strong></td>
+                                    <td>{{r["category"]}}</td>
+                                    <td>{{r["protein_id"]}}</td>
+                                    <td>{{r["gen_id"]}}</td>
+                                    <td>{{r["organism"]}}</td>
+                                    <td>{{r["sequence_len"]}} AA</td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                            {% for r in results %}
-                            <tr>
-                                <td><strong><a href="{{ url_for('main.entry', uniprot_id=r['uniprot_id']) }}">{{r["uniprot_id"]}}</a></strong></td>
-                                <td>{{r["category"]}}</td>
-                                <td>{{r["protein_id"]}}</td>
-                                <td>{{r["gen_id"]}}</td>
-                                <td>{{r["organism"]}}</td>
-                                <td>{{r["sequence_len"]}} AA</td>
-                            </tr>
-                            {% endfor %}
-                            </tbody>
-                        </table>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
                         {% endif %}
                     </div>
                 </div>
@@ -255,7 +257,8 @@
         });
 
         // intialize mini scrollbar for Category facet
-        const ps = new PerfectScrollbar("#filter-category-container");
+        const categoryScroll = new PerfectScrollbar("#filter-category-wrapper");
+        const tableScroll = new PerfectScrollbar("#table-wrapper");
 
 
         // change placeholder text to reflect we're searching within search results on the search results page
