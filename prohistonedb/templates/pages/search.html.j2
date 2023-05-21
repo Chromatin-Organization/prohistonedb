@@ -42,11 +42,11 @@
                             <div class="label"><h6>Category</h6></div>
                             <div id="filter-category-wrapper" class="col-11 ps-0 mb-2">
                                 <div class="form-check">
-                                    {% for cat in categories %}
+                                    {% for cat in categories.values() %}
                                     <div class="form-check ps-0">
-                                        <input class="form-check-input" type="checkbox" name="cat" value="{{cat}}" id="categoryCheck{{loop.index}}">
+                                        <input class="form-check-input" type="checkbox" name="cat" value="{{cat.name}}" id="categoryCheck{{loop.index}}">
                                         <label class="form-check-label" for="categoryCheck{{loop.index}}">
-                                            {{cat}}
+                                            {{cat.name}}
                                         </label>
                                         <span class="filter-num badge">
                                             n
@@ -145,41 +145,41 @@
                     <div id="list-view">
                         {% for r in results %}
                         <div class="row mt-3 mb-3 px-3 py-3 rounded-3 result-item">
-                            <h5><a href="{{ url_for('main.entry', uniprot_id=r['uniprot_id']) }}">{{r["organism"]}} {{r["uniprot_id"]}}</a></h5>
+                            <h5><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.organism.name}} {{r.uniprot_id}}</a></h5>
                             <div class="row">
                                 <div class="col-sm-3 label"><span>UniProt ID</span></div>
                                 <div class="col-sm-9 value">
-                                    <span class="mb-0">{{r["uniprot_id"]}}</span><span class="link text-nowrap"> <a href="https://www.uniprot.org/uniprotkb/{{r["uniprot_id"]}}/entry">go to UniProt</a></span>
+                                    <span class="mb-0">{{r.uniprot_id}}</span><span class="link text-nowrap"> <a href="https://www.uniprot.org/uniprotkb/{{r.uniprot_id}}/entry">go to UniProt</a></span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3 label"><span>Category</span></div>
                                 <div class="col-sm-9 value">
-                                    <span class="mb-0">{{r["category"]}}</span>
+                                    <span class="mb-0">{{r.category.name}}</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3 label"><span>Protein</span></div>
                                 <div class="col-sm-9 value">
-                                    <span class="mb-0">{{r["protein_id"]}}</span>
+                                    <span class="mb-0">{{r.protein_ids}}</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3 label"><span>Gene</span></div>
                                 <div class="col-sm-9 value">
-                                    <span class="mb-0">{{r["gen_id"]}}</span>
+                                    <span class="mb-0">{{r.genes}}</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3 label"><span>Organism</span></div>
                                 <div class="col-sm-9 value">
-                                    <span class="mb-0 float-start me-2">{{r["organism"]}}</span><span class="link text-nowrap"><a href="{{ url_for('search.index', oid=r['organism_id']) }}">Search this organism</a></span>
+                                    <span class="mb-0 float-start me-2">{{r.organism.name}}</span><span class="link text-nowrap"><a href="{{ url_for('search.index', oid=r.organism.id) }}">Search this organism</a></span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3 label"><span>Length</span></div>
                                 <div class="col-sm-9 value">
-                                    <span class="mb-0">{{r["sequence_len"]}} AA</span>
+                                    <span class="mb-0">{{r.sequence|length}} AA</span>
                                 </div>
                             </div>
                         </div>
@@ -205,12 +205,12 @@
                                 <tbody>
                                 {% for r in results %}
                                 <tr>
-                                    <td><strong><a href="{{ url_for('main.entry', uniprot_id=r['uniprot_id']) }}">{{r["uniprot_id"]}}</a></strong></td>
-                                    <td>{{r["category"]}}</td>
-                                    <td>{{r["protein_id"]}}</td>
-                                    <td>{{r["gen_id"]}}</td>
-                                    <td>{{r["organism"]}}</td>
-                                    <td>{{r["sequence_len"]}} AA</td>
+                                    <td><strong><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.uniprot_id}}</a></strong></td>
+                                    <td>{{r.category.name}}</td>
+                                    <td>{{r.protein_ids}}</td>
+                                    <td>{{r.genes}}</td>
+                                    <td>{{r.organism.name}}</td>
+                                    <td>{{r.sequence|length}} AA</td>
                                 </tr>
                                 {% endfor %}
                                 </tbody>

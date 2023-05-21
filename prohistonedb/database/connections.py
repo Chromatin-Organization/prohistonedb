@@ -11,6 +11,11 @@ from pathlib import Path
 
 import sqlite3
 
+import logging
+
+#*----- Flask & Flask Extenstions -----*#
+import flask
+
 #*----- External packages -----*#
 
 #*----- Custom packages -----*#
@@ -123,7 +128,7 @@ class SQLiteConnection(DatabaseConnection):
 
     def connect(self):
         """ Opens a database connection. I'd recommend using the 'with' statement, but otherwise don't forget to clean-up with 'close(). """    
-        self._connection = sqlite3.connect(database=self._db_path, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
+        self._connection = sqlite3.connect(database=self._db_path)
         self._connection.row_factory = sqlite3.Row
         self._cursor = self._connection.cursor()
     
@@ -144,14 +149,36 @@ class SQLiteConnection(DatabaseConnection):
         return result or result_super
     
     #*----- Other public functions -----*#
+    # ? Add logging to the ABC class?
     def execute(self, sql: str, parameters: Optional[_DatabaseParameters] = None) -> SQLiteResult:
+        # Only worry about processing the string manually if it needs to be logged
+        if flask.current_app.logger.isEnabledFor(logging.DEBUG):
+            sql_str = str(sql)
+
+            # Process any parameters the string may have.
+            if not parameters is None:
+                try:
+                    # Try processing it as a mapping of key-value pairs.
+                    for key in parameters.keys():
+                        sql_str = sql_str.replace(f":{key}", f"{parameters[key]}")
+                except:
+                    # If that doesn't work, process it as a list of parameters.
+                    for param in parameters:
+                        sql_str = sql_str.replace("?", f"{param}", 1)
+                
+            # Log the SQL used for the query.
+            flask.current_app.logger.debug(f"Executing SQL query: {sql_str}")
+
+        # Execute the Query on the connection and return the result.
         if parameters is None or len(parameters) == 0:
             return SQLiteResult(self._cursor.execute(sql))
         else:
             return SQLiteResult(self._cursor.execute(sql, parameters))
     
+    #TODO: Add logging
+    #TODO: Add checks for empty parameter sets.
     def executemany(self, sql: str, seq_of_parameters: Iterable[_DatabaseParameters]) -> list[SQLiteResult]:
-        return [DatabaseResult(cursor) for cursor in self._cursor.executemany(sql, seq_of_parameters)]
+        return [SQLiteResult(cursor) for cursor in self._cursor.executemany(sql, seq_of_parameters)]
     
     def commit(self):
         self._connection.commit()

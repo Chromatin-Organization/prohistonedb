@@ -3,8 +3,6 @@
 #*----- Standard library -----*#
 from typing import Optional
 
-import json
-
 #*----- Flask & Flask Extenstions -----*#
 import flask
 
@@ -13,9 +11,10 @@ import flask
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
-from ..search import sql
 from .. import database
-from ..database.types import FieldType
+from ..search.types import FieldType
+from ..search import sql, results_to_histones
+from ..database import models
 
 #***===== Blueprint Import =====***#
 from . import bp
@@ -26,7 +25,6 @@ def index():
     """ Render the index page. """
     return flask.render_template('pages/index.html.j2')
 
-#TODO: Input sanitization for multimer str.
 @bp.route("/entry/<uniprot_id>", methods=["GET"])
 @bp.route("/entry/<uniprot_id>/<multimer>", methods=["GET"])
 def entry(uniprot_id: str, multimer: Optional[str] = None):
@@ -45,37 +43,26 @@ def entry(uniprot_id: str, multimer: Optional[str] = None):
     flask.current_app.logger.debug(f"Currently selected rank: {rank}")
 
     db = database.get_db()
-    query = sql.SQL(filter = sql.Filter(FieldType.UNIPROT_ID, uniprot_id))
+    query = sql.Query(filter = sql.Filter(FieldType.UNIPROT_ID, uniprot_id))
     results = query.execute(db)
     result = results.fetchone()
-    entry = {}
 
-    for key in result.keys():
-        res = result[key]
-        
-        if key in JSON_FIELDS:
-            if res is None:
-                entry[key] = None
-            else:
-                entry[key] = json.loads(res)
-        else:
-            entry[key] = res
+    entry = results_to_histones([result])[0]
+    flask.current_app.logger.debug(f"Histone entry: {entry}")
 
-    entry["multimers"] = [multimer for multimer in entry["ranks"].keys() if entry["ranks"][multimer] != None]
-
-    if multimer is None:
-        multimer = entry["preferred_multimer"]
+    # * Currently falls back to the preferred multimer for ANY invalid input.
+    # ? Should we keep it like this or should we add more conditions for input validation?
+    try:
+        multimer = models.Multimer(multimer)
+    except:
+        flask.current_app.logger.debug(f"{multimer} is an invalid input for 'multimer'. Falling back to default.")
+        multimer = entry.category.preferred_multimer
     
     # TODO: Better error handling
-    if multimer not in entry["multimers"]:
+    if not entry.has_multimer(multimer):
         raise ValueError(f"Multimer '{multimer}' is not available for {uniprot_id}")   
-
-    path = "data/" + entry["rel_path"] + "/" + uniprot_id
-
-    if multimer != "monomer":
-        path = path + f"_{multimer}"
         
-    return flask.render_template('pages/entry.html.j2', entry = entry, multimer = multimer, rank = rank, path = path)
+    return flask.render_template('pages/entry.html.j2', entry = entry, multimer = multimer, rank = rank)
 
 @bp.route('/about', methods=["GET"])
 def about():

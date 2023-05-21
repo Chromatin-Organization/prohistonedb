@@ -4,7 +4,6 @@
 
 #*----- Flask & Flask Extenstions -----*#
 import flask
-import jinja2
 
 #*----- External packages -----*#
 

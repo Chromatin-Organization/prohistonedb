@@ -14,10 +14,10 @@
           <h6 class="dropdown-header px-0">Categories overview</h6>
         </a>
       </li>
-      {% for cat in categories %}
+      {% for cat in categories.values() %}
       <li>
         <a href="#" class="dropdown-item">
-          <span>{{cat}}</span>
+          <span>{{cat.name}}</span>
         </a>
       </li>
       {% endfor %}
