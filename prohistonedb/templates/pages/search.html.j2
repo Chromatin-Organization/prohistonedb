@@ -84,6 +84,7 @@
                             <div class="form-check col-10">
                                 <div class="multislider slider-round"></div>
                             </div>
+                            {# NOTE: seqlHidden is disabled by default to prevent default values being used as a filter #}
                             <input class="form-check-input" type="hidden" name="seql" value="" disabled />
                         </div>
 
@@ -256,14 +257,19 @@
             //document.querySelector("form[name='filters']").submit();
         });
 
-        // intialize mini scrollbar for Category facet
+        // intialize mini scrollbar for Category facet & table view
         const categoryScroll = new PerfectScrollbar("#filter-category-wrapper");
-        const tableScroll = new PerfectScrollbar("#table-wrapper");
+        if (document.getElementById("table-wrapper") !== null) {
+            const tableScroll = new PerfectScrollbar("#table-wrapper");
+        }
 
 
-        // change placeholder text to reflect we're searching within search results on the search results page
         window.addEventListener("DOMContentLoaded", () => {
+            // change placeholder text to reflect we're searching within search results on the search results page
+            // only show when there's an actual search query
+            {% if req_filters is defined and (req_filters | length) > 0 %}
             document.querySelector('input[name="q"]').placeholder = "Search within results";
+            {% endif %}
 
 
             // add eventListener to both toggle buttons; check for "active" class only when clicked
@@ -287,9 +293,11 @@
             {# * set checkboxes to checked for each applied filter in query #}
             let filterArgs = {};
             {% if req_filters is defined and (req_filters | length) > 0 %}
-                {% for key in req_filters %}
+                {% for key in req_filters.keys() %}
+                    filterArgs["{{key}}"] = [];
                     {% for f in req_filters.getlist(key) %}
-                        filterArgs["{{key}}"] = "{{f}}";
+                        filterArgs.{{key}}.push("{{f}}");
+                        //filterArgs["{{key}}"] = "{{f}}";
                     {% endfor %}
                 {% endfor %}
             {% endif %}
@@ -301,18 +309,22 @@
                     {# * disabled onchange submit in favor of submit button ("apply filters") #}
                     //document.querySelector("form[name='filters']").submit();
                 });
-                
-                for (let key in filterArgs) {    
+
+                for (const key in filterArgs) {    
                     if (key === filter.name) {
-                        // set slider values independently
-                        if (key === "seql") {
-                            seqlHidden.value = filterArgs[key];
-                            const seqlRange = filterArgs[key].split("-").map(Number);
-                            seqlSlider.noUiSlider.set([seqlRange[0], seqlRange[1]]);
-                        }
-                        else if (filterArgs[key] === filter.value) {
-                            filter.checked = true;
-                        }
+                        filterArgs[key].forEach( val => {
+                            // what if multiple seql filters applied?
+                            if (key === "seql") {
+                                const seqlRange = val.split("-").map(Number);
+                                seqlSlider.noUiSlider.set([seqlRange[0], seqlRange[1]]);
+                                seqlHidden.disabled = false;
+                                seqlHidden.value = val;
+                            } else {
+                                if (val === filter.value) {
+                                    filter.checked = true;
+                                }
+                            }
+                        });
                     }
                 }
             });
