@@ -6,8 +6,8 @@
 {% block title %} {{siteName}} {{uniprotID}} {% endblock title %}
 
 {% block molstar %}
-    <script src="https://cdn.jsdelivr.net/npm/molstar@3.31.4/build/viewer/molstar.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/molstar@3.31.4/build/viewer/molstar.min.css" rel="stylesheet">
+    <script src="{{ url_for('static', filename = 'assets/js/custom/molstar.min.js' )}}" type="text/javascript"></script>
+    <link href="{{ url_for('static', filename = 'assets/css/molstar.min.css' )}}" rel="stylesheet">
 {% endblock molstar %}
 
 {% block body %} class="entry fluid-bg" {% endblock body %}

@@ -110,10 +110,10 @@
                     {# * Applied filters block #}
                     {% if req_filters and (req_filters | length) > 0 %}
                         <div id="applied-filters-container" class="d-grid gap-2 d-md-block mb-4">
-                            <span class="label">Filters:</span>
+                            <h6 class="label">Filters:</h6>
                             {% for key in req_filters.keys() %}
                                 {% for f in req_filters.getlist(key) %}
-                                    <button type="button" class="btn btn-light btn-sm btn-icon" style="vertical-align: baseline" title="click to remove filter">
+                                    <button type="button" class="btn btn-light btn-sm btn-icon mb-1" style="vertical-align: baseline" title="click to remove filter">
                                         <span class="caption">{{(key | field_name)}}: {{f}}</span>
                                         <span class="material-icons-round">disabled_by_default</span>
                                     </button>
@@ -121,7 +121,7 @@
                             {% endfor %}
 
                             <form name="reset-filters" method="GET" action="{{ url_for('search.index') }}" style="display: inline-block">
-                                <button type="submit" class="btn btn-secondary btn-sm btn-icon" style="vertical-align: baseline">
+                                <button type="submit" class="btn btn-secondary btn-sm btn-icon mb-1" style="vertical-align: baseline">
                                     <span class="caption">Clear filters</span>
                                     <span class="material-icons-round">delete</span>
                                 </button>

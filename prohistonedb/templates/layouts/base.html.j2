@@ -44,7 +44,7 @@
     const searchTypeOptions = document.querySelectorAll("#filter-type .dropdown-item");
     const searchTypeHidden = document.querySelector("#filter-type input[name='filter']");
 
-    // set searchTypeLabel
+    // set searchTypeLabel for dropdown select
     searchTypeOptions.forEach(searchType => {
       searchType.addEventListener("click", function(e) {
         searchTypeHidden.value = this.dataset.value;

@@ -184,9 +184,9 @@ form[name=search] .input-group-text {
 
 
 .nav-pills .nav-link
-.nav-pills .nav-link.active { 
-    background-color: $white;
-    color: $headings-color;
+    .nav-pills .nav-link.active { 
+        background-color: $white;
+        color: $headings-color;
 }
 .nav-pills .material-icons-round {
     vertical-align: middle;
@@ -210,8 +210,8 @@ form[name=search] .input-group-text {
 }
 // set perfect-scrollbar.js scrollbar thumb to visible at all times
 .ps__rail-x,
-.ps__rail-y {
-  opacity: 0.6;
+    .ps__rail-y {
+        opacity: 0.6;
 }
 
 .filter-num {
