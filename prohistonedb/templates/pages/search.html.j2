@@ -84,8 +84,8 @@
                             <div class="form-check col-10">
                                 <div class="multislider slider-round"></div>
                             </div>
-                            {# NOTE: seqlHidden is disabled by default to prevent default values being used as a filter #}
-                            <input class="form-check-input" type="hidden" name="seql" value="" disabled />
+                            {# NOTE: set seqlHidden to disabled to prevent default values being used as a filter #}
+                            <input class="form-check-input" type="hidden" name="seql" value=""  disabled />
                         </div>
 
                         <div class="row mt-5">
@@ -275,7 +275,7 @@
             // add eventListener to both toggle buttons; check for "active" class only when clicked
             const toggles = document.querySelectorAll("#view-toggle-wrapper .nav-link");
             toggles.forEach(toggle => {
-                toggle.addEventListener("click",  function(e) {
+                toggle.addEventListener("click", function(e) {
                     if (this.classList.contains("active")) {
                         return false;
                     } else {
@@ -297,11 +297,9 @@
                     filterArgs["{{key}}"] = [];
                     {% for f in req_filters.getlist(key) %}
                         filterArgs.{{key}}.push("{{f}}");
-                        //filterArgs["{{key}}"] = "{{f}}";
                     {% endfor %}
                 {% endfor %}
             {% endif %}
-            console.log(filterArgs);
 
             const filters = document.querySelectorAll(".form-check-input");
             filters.forEach( filter => {
@@ -313,7 +311,7 @@
                 for (const key in filterArgs) {    
                     if (key === filter.name) {
                         filterArgs[key].forEach( val => {
-                            // what if multiple seql filters applied?
+                            // what if multiple seql filters applied sequentially?
                             if (key === "seql") {
                                 const seqlRange = val.split("-").map(Number);
                                 seqlSlider.noUiSlider.set([seqlRange[0], seqlRange[1]]);
