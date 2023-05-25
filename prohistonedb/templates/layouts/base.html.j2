@@ -67,19 +67,19 @@
     // offcanvas close button closes dropdown menu; should hide offcanvas
     offCanvasClose.addEventListener("click", e => {
       const openedCanvas = bootstrap.Offcanvas.getInstance(offCanvas);
-      navBarNav.classList.add("d-none");
+      //navBarNav.classList.add("d-none");
       openedCanvas.hide();
       // adding back the blur class causes an ugly closing animation
       navBar.classList.add("blur");
     });
     navToggle.addEventListener("click", e => {
       navBar.classList.remove("blur");
-      navBarNav.classList.remove("d-none");
+      //navBarNav.classList.remove("d-none");
     });
     // offcanvas-backdrop is a dynamically generated element
     document.addEventListener("click", e => {
       if (e.target.classList.contains("offcanvas-backdrop")) {
-        navBarNav.classList.add("d-none");
+        //navBarNav.classList.remove("d-none");
         navBar.classList.add("blur");
       }
     });
