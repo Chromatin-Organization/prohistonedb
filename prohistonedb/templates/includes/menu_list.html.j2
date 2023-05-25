@@ -1,14 +1,15 @@
-<ul class="navbar-nav navbar-nav-hover ms-auto">
-  <li class="nav-item dropdown dropdown-hover mx-2">
+<ul class="navbar-nav ms-auto">
+  <li class="nav-item offcanvas-brand ps-3 pb-2">
+    <a href="/" class="font-weight-bolder">{{siteName}}</a>
+  </li>
+  <li class="nav-item dropdown mx-2">
     <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
       data-bs-toggle="dropdown" aria-expanded="false">
       Categories
       <span class="ms-auto ms-md-2 material-icons-round">expand_more</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-sm border-radius-xl mt-0 mt-lg-3"
+    <ul class="dropdown-menu dropdown-sm border-radius-xl mt-0 mt-lg-3"
       aria-labelledby="dropdownMenuPages">
-      {# ? Should dropdown-menu breakpoint class correspond with navbar-expand breakpoint? (XL) #}
-      <!--<div class="d-none d-lg-block">-->
       <li>
         <a href="{{url_for('categories.overview')}}" class="dropdown-item">
           <h6 class="dropdown-header px-0">Categories overview</h6>
@@ -21,19 +22,17 @@
         </a>
       </li>
       {% endfor %}
-      <!--</div>-->
     </ul>
   </li>
 
-  <li class="nav-item dropdown dropdown-hover mx-2">
+  <li class="nav-item dropdown mx-2">
     <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
       data-bs-toggle="dropdown" aria-expanded="false">
       About
       <span class="ms-auto ms-md-2 material-icons-round">expand_more</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-sm border-radius-xl mt-0 mt-lg-3" 
+    <ul class="dropdown-menu dropdown-sm border-radius-xl mt-0" 
       aria-labelledby="dropdownMenuPages">
-      <!--<div class="d-none d-lg-block">-->
       <li>
         <a href="{{url_for('main.about')}}" class="dropdown-item">
           <span>About {{siteName}}</span>
@@ -44,7 +43,6 @@
           <span>Changelog</span>
         </a>
       </li>
-      <!--</div>-->
     </ul>
   </li>
 </ul>

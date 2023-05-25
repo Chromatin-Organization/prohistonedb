@@ -23881,7 +23881,8 @@ h3, .h3 {
 
 /* a more recognisable font for branding */
 .navbar .navbar-brand,
-.footer .footer-brand {
+.footer .footer-brand,
+.offcanvas .offcanvas-brand {
   font-family: "Roboto Slab" !important;
 }
 
@@ -23961,12 +23962,36 @@ h3, .h3 {
 }
 
 /* BS offcanvas, modal close button */
+.offcanvas-header {
+  padding-bottom: 0;
+}
+
 .btn-close {
   color: #7b809a;
   background-image: none;
 }
-.btn-close:hover {
+.btn-close:hover, .btn-close:active, .btn-close:active:focus, .btn-close:active:hover {
+  box-shadow: none;
   color: #344767;
+}
+
+/* offcanvas-backdrop blur clashes with navbar blur class */
+.offcanvas-backdrop.show {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+.offcanvas.show .dropdown-menu.show {
+  margin-top: 2rem !important;
+  padding-top: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.offcanvas:not(.show) .offcanvas-brand {
+  display: none;
 }
 
 /* replace FontAwesome symbols with local Material Icons */

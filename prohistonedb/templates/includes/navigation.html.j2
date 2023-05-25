@@ -7,7 +7,7 @@
         <div class="container-fluid px-0">
           <a class="navbar-brand font-weight-bolder ms-sm-3" href="/">{{siteName}}</a>
 
-          <button class="navbar-toggler shadow-none ms-2 py-0" type="button" data-bs-toggle="collapse"
+          <button class="navbar-toggler shadow-none ms-2 py-0" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon mt-2">
@@ -16,8 +16,13 @@
               <span class="navbar-toggler-bar bar3"></span>
             </span>
           </button>
-          <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
-            {% include 'includes/menu_list.html.j2' %}
+          <div class="offcanvas offcanvas-end pt-3 pb-2 py-lg-0" id="navigation">
+            <div class="offcanvas-header">
+              <button class="btn btn-close px-2 pt-3 mb-0 material-icons-round">close</button>
+            </div>
+            <div class="offcanvas-body">
+              {% include 'includes/menu_list.html.j2' %}
+            </div>
           </div>
         </div>
       </nav>

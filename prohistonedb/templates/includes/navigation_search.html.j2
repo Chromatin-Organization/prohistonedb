@@ -3,7 +3,7 @@
 <div class="position-sticky z-index-sticky top-0">
   <div class="row">
     <nav
-      class="navbar navbar-expand-xl top-0 blur z-index-fixed shadow position-absolute px-7 py-2 start-0 end-0">
+      class="navbar navbar-expand-xl top-0 z-index-fixed blur shadow position-absolute px-7 py-2 start-0 end-0">
       <div class="container-fluid px-0">
         <a class="navbar-brand font-weight-bolder ms-sm-3" href="/">
           {{siteName}}
@@ -16,7 +16,7 @@
           </div>
         </div>
 
-        <button class="navbar-toggler shadow-none ms-2 py-0" type="button" data-bs-toggle="collapse"
+        <button class="navbar-toggler shadow-none ms-2 py-0" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon mt-2">
@@ -25,8 +25,14 @@
             <span class="navbar-toggler-bar bar3"></span>
           </span>
         </button>
-        <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0" id="navigation" style="flex-grow: initial !important">
+        
+        <div class="offcanvas offcanvas-end pt-3 pb-2 py-lg-0" id="navigation" style="flex-grow: initial !important">
+          <div class="offcanvas-header">
+            <button class="btn btn-close px-2 pt-3 mb-0 material-icons-round">close</button>
+          </div>
+          <div class="offcanvas-body">
           {% include 'includes/menu_list.html.j2' %}
+          </div>
         </div>
       </div>
     </nav>
