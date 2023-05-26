@@ -23954,6 +23954,11 @@ h3, .h3 {
   color: #fff;
 }
 
+/* dark text for light buttons though */
+.btn-light:active {
+  color: #7b809a;
+}
+
 .btn-primary,
 .btn-secondary,
 .btn-dark,
@@ -24065,6 +24070,11 @@ form[name=search] .input-group-text {
 }
 
 /* change radio buttons to solid cicles */
+/* alignment of facet form inputs & labels */
+.form-check-label {
+  margin-top: 0.13rem;
+}
+
 .index-page .badge {
   font-size: 0.75rem;
 }
@@ -24105,7 +24115,6 @@ form[name=search] .input-group-text {
   margin-top: 0.2rem;
   padding: 0.25rem 0.6rem;
   margin-left: 3px;
-  display: none;
 }
 
 /* buttons with icons */
@@ -24172,6 +24181,7 @@ form[name=search] .input-group-text {
 }
 
 .legend-label {
+  vertical-align: middle;
   font-weight: 400;
   font-size: 1rem;
   line-height: 2.3em;

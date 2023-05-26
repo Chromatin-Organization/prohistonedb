@@ -5,6 +5,7 @@
 @import 'material_icons_round';
 
 @import 'nouislider';
+//@import './themes/orange-modern/styles';
 
 body {
     font-size: $font-size-sm;
@@ -97,6 +98,10 @@ h3 {
     .btn-show,
     .btn.show {
         color: $white;
+}
+/* dark text for light buttons though */
+.btn-light:active {
+    color: $secondary;
 }
 .btn-primary,
     .btn-secondary, 
@@ -203,6 +208,9 @@ form[name=search] .input-group-text {
     //border-width: 2px;
 }
 
+/* alignment of facet form inputs & labels */
+.form-check-label { margin-top: .13rem }
+
 .index-page .badge {
     font-size: $font-size-xs;
 }
@@ -248,7 +256,7 @@ form[name=search] .input-group-text {
     padding: .25rem .6rem;
     margin-left: 3px;
     // hide until we have full facet search functionality
-    display: none;
+    //display: none;
 }
 
 /* buttons with icons */
@@ -326,6 +334,7 @@ form[name=search] .input-group-text {
     vertical-align: middle;
 }
 .legend-label {
+    vertical-align: middle;
     font-weight: $font-weight-normal;
     font-size: $font-size-base;
     line-height: 2.3em;
