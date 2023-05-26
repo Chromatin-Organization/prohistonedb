@@ -24108,11 +24108,10 @@ form[name=search] .input-group-text {
 }
 
 .filter-num {
-  color: #7b809a;
-  background-color: #f8f9fa;
+  color: #344767;
+  background-color: #f0f2f5;
   font-size: 0.75rem;
   font-weight: 400;
-  margin-top: 0.2rem;
   padding: 0.25rem 0.6rem;
   margin-left: 3px;
 }
@@ -24306,8 +24305,8 @@ form[name=search] .input-group-text {
 
 .noUi-horizontal .noUi-tooltip {
   border: none;
-  color: #7b809a;
-  background-color: #f8f9fa;
+  color: #344767;
+  background-color: #f0f2f5;
   padding: 0.15rem 0.6rem;
   margin-bottom: 0.2rem;
   border-radius: 0.375rem;
