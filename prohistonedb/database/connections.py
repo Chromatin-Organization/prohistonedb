@@ -33,6 +33,12 @@ class DatabaseResult(ABC, Iterable):
     def __init__(self, **kwargs):
         pass
 
+    #*----- Properties -----*#
+    @property
+    @abc.abstractmethod
+    def description(self) -> Sequence[Sequence]:
+        """ Return a sequence with metadata for each column as specified in PEP 249. """
+
     #*----- Other public functions -----*#
     @abc.abstractmethod
     def fetchone(self) -> _DatabaseRow:
@@ -96,6 +102,11 @@ class SQLiteResult(DatabaseResult):
     #*----- Constructors -----*#
     def __init__(self, cursor: sqlite3.Cursor):
         self._cursor = cursor
+
+    #*----- Properties -----*#
+    @property
+    def description(self) -> Sequence[Sequence]:
+        return self._cursor.description
 
     #*----- Other special functions -----*#
     def __iter__(self) -> sqlite3.Cursor:

@@ -5,8 +5,13 @@ from __future__ import annotations
 #***===== Imports =====***#
 #*----- Standard library -----*#
 from enum import Enum
+from typing import Union, Sequence, Mapping
+from dataclasses import dataclass
+
+import json
 
 #*----- External packages -----*#
+import pandas as pd
 
 #*----- Custom packages -----*#
 
@@ -42,3 +47,25 @@ class FieldType(str, Enum):
     
     def __str__(self) -> str:
         return self.name.lower().replace("_", " ").replace("id", "ID").capitalize()
+    
+@dataclass(eq=False, frozen=True)
+class ResultCounts:
+    total: int
+    categories: pd.Series[int]
+    lineages: pd.Series[int]
+
+
+    def __init__(self, results: Sequence[Union[Sequence, Mapping]], columns: Sequence[str]):
+        def try_value (list: Sequence, idx: int) -> Union[str, None]:
+            try:
+                return list[idx]
+            except:
+                return None
+        
+        df = pd.DataFrame.from_records(results, columns=columns)
+        df["superkingdom"] = df["lineage_json"].apply(lambda l:
+            try_value([item["scientificName"] for item in json.loads(l) if item["rank"] == "superkingdom"], 0)
+        )
+        object.__setattr__(self, "total", len(results))
+        object.__setattr__(self, "categories", df["category"].value_counts())
+        object.__setattr__(self, "lineages", df["superkingdom"].value_counts())

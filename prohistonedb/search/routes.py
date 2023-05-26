@@ -14,9 +14,9 @@ from werkzeug.datastructures import MultiDict
 
 #*----- Local imports -----*#
 from . import sql
-from .types import FieldType
-from .. import database
+from .types import FieldType, ResultCounts
 from . import results_to_histones
+from .. import database
 
 #***===== Functions =====***#
 def convert_args(args: MultiDict) -> MultiDict:
@@ -133,13 +133,16 @@ def index(page: Optional[int] = None):
     # Get the database connection and query the generated SQL code.
     db = database.get_db()
     results = query.execute(db)
+    columns = [column[0] for column in results.description]
     results = results.fetchall()
+
+    # Turn the results into histone objects and get some metadata from them.
+    counts = ResultCounts(results, columns)
     results = results_to_histones(results)
 
     # Manage paging to fetch the correct results
-    total_num_results = len(results)
-    max_page = max(math.ceil(total_num_results / NUM_RESULTS), 1)
-    flask.current_app.logger.debug(f"Total number of results: {total_num_results}.")
+    max_page = max(math.ceil(counts.total / NUM_RESULTS), 1)
+    flask.current_app.logger.debug(f"Total number of results: {counts.total}.")
     flask.current_app.logger.debug(f"Preparing page {page} out of {max_page}.")
 
     if page > max_page:
@@ -150,4 +153,4 @@ def index(page: Optional[int] = None):
     results = results[idx_min:(idx_max+1)]
     
     flask.current_app.logger.debug(f"Displaying results {idx_min} till {idx_max} for a total of {len(results)} results.")
-    return flask.render_template('pages/search.html.j2', results=results, page=page, max_page=max_page, num_results=total_num_results, req_filters=args)
+    return flask.render_template('pages/search.html.j2', results=results, page=page, max_page=max_page, counts=counts, req_filters=args)
