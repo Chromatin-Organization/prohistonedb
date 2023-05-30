@@ -45,7 +45,7 @@
                                     {% for cat in categories.values() %}
                                     {% set count = counts.categories[cat.name] %}
                                     <div class="form-check ps-0{% if not count is defined %}{{' noitems'}}{% set count = 0 %}{% endif %}">
-                                        <input class="form-check-input" type="checkbox" name="cat" value="{{cat.name}}" id="categoryCheck{{loop.index}}">
+                                        <input class="form-check-input" type="checkbox" name="cat" value="{{cat.name}}">
                                         <label class="form-check-label" for="categoryCheck{{loop.index}}">
                                             {{cat.name}}
                                         </label>
@@ -65,7 +65,7 @@
                             {% for superkingdom in superkingdoms %}
                             {% set count = counts.superkingdoms[superkingdom] %}
                             <div class="form-check col-10{% if not count is defined %}{{' noitems'}}{% set count = 0 %}{% endif %}">
-                                <input class="form-check-input" type="radio" name="tax" value="{{superkingdom}}" id="lineageCheck{{loop.index}}">
+                                <input class="form-check-input" type="radio" name="tax" value="{{superkingdom}}">
                                 <label class="form-check-label" for="lineageCheck{{loop.index}}">
                                     {{superkingdom}}
                                 </label>
@@ -74,7 +74,9 @@
                                 </span>
                             </div>
                             {% endfor %}
-                            <div class="form-check col-10{% if not counts.superkingdoms[None] is defined %}{{' noitems'}}{% endif %}">
+                            {# ! removed a "not" for now to trigger noitems class #}
+                            <div class="form-check col-10{% if counts.superkingdoms[None] is defined %}{{' noitems'}}{% endif %}">
+                                <input class="form-check-input" type="radio" name="tax" value="{{superkingdom}}">
                                 <label class="form-check-label">
                                     Undefined
                                 </label>
