@@ -8,10 +8,7 @@ import abc
 from abc import ABC
 from typing import Iterable, Sequence, Optional, Union
 
-#*----- Flask & Flask Extenstions -----*#
-import flask
-
-#*----- Flask & Flask Extenstions -----*#
+#*----- Flask & Flask Extensions -----*#
 import flask
 
 #*----- External packages -----*#

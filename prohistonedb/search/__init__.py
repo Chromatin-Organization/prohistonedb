@@ -5,7 +5,7 @@ from typing import Sequence, Mapping
 from pathlib import Path
 import json
 
-#*----- Flask & Flask Extenstions -----*#
+#*----- Flask & Flask Extensions -----*#
 import flask
 
 #*----- External packages -----*#

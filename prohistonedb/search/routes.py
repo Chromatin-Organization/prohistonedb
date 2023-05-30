@@ -4,7 +4,7 @@
 from typing import Optional, Union
 import math
 
-#*----- Flask & Flask Extenstions -----*#
+#*----- Flask & Flask Extensions -----*#
 import flask
 
 #*----- External packages -----*#

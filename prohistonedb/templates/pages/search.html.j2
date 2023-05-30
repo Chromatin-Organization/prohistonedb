@@ -43,8 +43,8 @@
                             <div id="filter-category-wrapper" class="col-11 ps-0 mb-2">
                                 <div class="form-check">
                                     {% for cat in counts.categories.index %}
-                                    <div class="form-check ps-0">
-                                        <input class="form-check-input" type="checkbox" name="cat" value="{{cat.name}}" id="categoryCheck{{loop.index}}">
+                                    <div class="form-check ps-0{% if counts.categories[cat] == 0 %} noitems{% endif %}">
+                                        <input class="form-check-input" type="checkbox" name="cat" value="{{cat}}">
                                         <label class="form-check-label" for="categoryCheck{{loop.index}}">
                                             {{cat}}
                                         </label>
@@ -60,8 +60,8 @@
                         <div class="row mt-3 filter-lineage">
                             <div class="label"><h6>Lineage</h6></div>
                             {% for lin in counts.lineages.index %}
-                            <div class="form-check col-10">
-                                <input class="form-check-input" type="radio" name="tax" value="{{lin}}" id="lineageCheck{{loop.index}}">
+                            <div class="form-check col-10{% if counts.lineages[lin] == 0 %} noitems{% endif %}">
+                                <input class="form-check-input" type="radio" name="tax" value="{{lin}}">
                                 <label class="form-check-label" for="lineageCheck1">
                                     {{lin}}
                                 </label>

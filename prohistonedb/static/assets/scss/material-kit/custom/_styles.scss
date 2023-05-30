@@ -229,9 +229,8 @@ form[name=search] .input-group-text {
 
 // force mini scrollbar'd area
 #filter-category-wrapper {
-    height: 190px;
+    height: 340px; // increased from 190px
     padding-top: 0.4em;
-    //overflow-y: scroll;
     //box-shadow: 0 20px 10px -21px rgba(0,0,0,0.2) inset, 0 -20px 10px -21px rgba(0,0,0,0.2) inset;
     // perfect-scrollbar.js:
     overflow: hidden;
@@ -255,6 +254,16 @@ form[name=search] .input-group-text {
     //margin-top: .2rem;
     padding: .25rem .6rem;
     margin-left: 3px;
+}
+
+.noitems {
+    .form-check-label {
+        color: $gray-400;
+    }
+    .filter-num {
+        color: $gray-500;
+        background-color: $gray-100;
+    }
 }
 
 /* buttons with icons */

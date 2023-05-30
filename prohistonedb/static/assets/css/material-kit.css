@@ -24091,7 +24091,7 @@ form[name=search] .input-group-text {
 }
 
 #filter-category-wrapper {
-  height: 190px;
+  height: 340px;
   padding-top: 0.4em;
   overflow: hidden;
   position: relative;
@@ -24114,6 +24114,14 @@ form[name=search] .input-group-text {
   font-weight: 400;
   padding: 0.25rem 0.6rem;
   margin-left: 3px;
+}
+
+.noitems .form-check-label {
+  color: #ced4da;
+}
+.noitems .filter-num {
+  color: #adb5bd;
+  background-color: #f8f9fa;
 }
 
 /* buttons with icons */
