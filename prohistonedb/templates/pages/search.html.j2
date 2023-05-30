@@ -42,14 +42,15 @@
                             <div class="label"><h6>Category</h6></div>
                             <div id="filter-category-wrapper" class="col-11 ps-0 mb-2">
                                 <div class="form-check">
-                                    {% for cat in counts.categories.index %}
-                                    <div class="form-check ps-0{% if counts.categories[cat] == 0 %} noitems{% endif %}">
-                                        <input class="form-check-input" type="checkbox" name="cat" value="{{cat}}">
+                                    {% for cat in categories.values() %}
+                                    {% set count = counts.categories[cat.name] %}
+                                    <div class="form-check ps-0{% if not count is defined %}{{' noitems'}}{% set count = 0 %}{% endif %}">
+                                        <input class="form-check-input" type="checkbox" name="cat" value="{{cat.name}}" id="categoryCheck{{loop.index}}">
                                         <label class="form-check-label" for="categoryCheck{{loop.index}}">
-                                            {{cat}}
+                                            {{cat.name}}
                                         </label>
                                         <span class="filter-num badge">
-                                            {{counts.categories[cat]}}
+                                            {{count}}
                                         </span>
                                     </div>
                                     {% endfor %}
@@ -58,18 +59,29 @@
                         </div>
 
                         <div class="row mt-3 filter-lineage">
-                            <div class="label"><h6>Lineage</h6></div>
-                            {% for lin in counts.lineages.index %}
-                            <div class="form-check col-10{% if counts.lineages[lin] == 0 %} noitems{% endif %}">
-                                <input class="form-check-input" type="radio" name="tax" value="{{lin}}">
-                                <label class="form-check-label" for="lineageCheck1">
-                                    {{lin}}
+                            <div class="label"><h6>Lineage - Superkingdoms</h6></div>
+                            {# ? the list of superkingdoms is hard-coded for now. Do we want to keep it that way? #}
+                            {% set superkingdoms = ["Archaea", "Bacteria", "Viruses"] %}
+                            {% for superkingdom in superkingdoms %}
+                            {% set count = counts.superkingdoms[superkingdom] %}
+                            <div class="form-check col-10{% if not count is defined %}{{' noitems'}}{% set count = 0 %}{% endif %}">
+                                <input class="form-check-input" type="radio" name="tax" value="{{superkingdom}}" id="lineageCheck{{loop.index}}">
+                                <label class="form-check-label" for="lineageCheck{{loop.index}}">
+                                    {{superkingdom}}
                                 </label>
                                 <span class="filter-num badge">
-                                    {{counts.lineages[lin]}}
+                                    {{count}}
                                 </span>
                             </div>
                             {% endfor %}
+                            <div class="form-check col-10{% if not counts.superkingdoms[None] is defined %}{{' noitems'}}{% endif %}">
+                                <label class="form-check-label">
+                                    Undefined
+                                </label>
+                                <span class="filter-num badge">
+                                    {% if counts.superkingdoms[None] is defined %}{{counts.superkingdoms[None]}}{%else%}0{%endif%}
+                                </span>
+                            </div>
                         </div>
 
                         <div class="row mt-3 filter-sequence">

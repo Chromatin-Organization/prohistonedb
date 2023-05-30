@@ -16,6 +16,7 @@ import pandas as pd
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
+from ..database.models import Category
 
 #***===== FieldType Enum =====***#
 class FieldType(str, Enum):
@@ -56,16 +57,25 @@ class ResultCounts:
 
 
     def __init__(self, results: Sequence[Union[Sequence, Mapping]], columns: Sequence[str]):
-        def try_value (list: Sequence, idx: int) -> Union[str, None]:
-            try:
-                return list[idx]
-            except:
+        def find_superkingdom(lineage_json: str) -> Union[str, None]:
+            superkingdoms = [item["scientificName"] for item in json.loads(lineage_json) if item["rank"] == "superkingdom"]
+
+            if len(superkingdoms) == 0:
                 return None
-        
+            elif len(superkingdoms) == 1:
+                return superkingdoms[0]
+            else:
+                raise ValueError("Multiple superkingdoms found.")              
+
         df = pd.DataFrame.from_records(results, columns=columns)
-        df["superkingdom"] = df["lineage_json"].apply(lambda l:
-            try_value([item["scientificName"] for item in json.loads(l) if item["rank"] == "superkingdom"], 0)
-        )
+        categories = df["category"] \
+            .value_counts(sort=False) \
+            .sort_index(na_position="last")
+        superkingdoms = df["lineage_json"] \
+            .apply(find_superkingdom) \
+            .value_counts(sort=False, dropna=False) \
+            .sort_index(na_position="last")
+        
         object.__setattr__(self, "total", len(results))
-        object.__setattr__(self, "categories", df["category"].value_counts())
-        object.__setattr__(self, "lineages", df["superkingdom"].value_counts())
+        object.__setattr__(self, "categories", categories)
+        object.__setattr__(self, "superkingdoms", superkingdoms)
