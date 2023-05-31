@@ -1,7 +1,7 @@
 {% extends 'layouts/base.html.j2' %}
 
 {% macro reload(multimer, rank) %}{{url_for('main.entry', uniprot_id=entry.uniprot_id, multimer=multimer.value, rank=rank)}}{% endmacro %}
-{% macro img_path(suffix) %}{{url_for('static', filename=(entry.get_path(multimer) / entry.uniprot_id).as_posix()+suffix)}}{% endmacro %}
+{% macro img_path(suffix) %}https://prohistonedb.universiteitleiden.nl/{{(entry.get_path(multimer) / entry.uniprot_id).as_posix()+suffix}}{% endmacro %}
 
 {% block title %} {{siteName}} {{uniprotID}} {% endblock title %}
 
@@ -117,7 +117,7 @@
                         </a>
                         {# * on-the-fly file zipping: https://huynvk.dev/blog/download-files-and-zip-them-in-your-browsers-using-javascript #}
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">All structure data (zipped)</a></li>
+                            <li><a class="dropdown-item" href="https://prohistonedb.universiteitleiden.nl/data/zips/{{entry.uniprot_id}}.zip">All structure data (zipped)</a></li>
                         </ul>
                     </div>
                 </div>
@@ -234,7 +234,7 @@
       <script>
         // get model order from config.json 
         const myViewer = document.querySelector("#mspViewer");
-        const modelURL = "{{ url_for('static', filename=entry.get_cif_path(multimer, rank).as_posix()) }}";
+        const modelURL = "https://prohistonedb.universiteitleiden.nl/{{entry.get_cif_path(multimer, rank).as_posix()}}";
 
         molstar.Viewer.create('mspViewer', {
             // https://molstar.org/docs/plugin/
