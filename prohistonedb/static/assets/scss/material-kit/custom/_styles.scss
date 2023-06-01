@@ -472,3 +472,15 @@ form[name=search] .input-group-text {
     .noUi-handle:after {
         display: none;
     }
+
+/* navbar / search bar on small screens */
+@media (max-width: 576px) {
+    .navbar { 
+        padding-left: 0.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+.search-group { width: 90% !important }
+}
