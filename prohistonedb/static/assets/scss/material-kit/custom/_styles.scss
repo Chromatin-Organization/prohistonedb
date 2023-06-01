@@ -475,7 +475,7 @@ form[name=search] .input-group-text {
 
 /* navbar / search bar on small screens */
 @media (max-width: 576px) {
-    .navbar { 
+    body:not(.index-page) .navbar { 
         padding-left: 0.5rem !important;
         padding-right: 1.5rem !important;
     }
