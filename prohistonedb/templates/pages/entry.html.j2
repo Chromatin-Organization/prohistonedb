@@ -169,9 +169,13 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="row mt-3">
-                        <div class="columns medium-9">
-                            <div id="coverage-container" class="mx-auto" style="background-image: url('{{ img_path('_coverage.png') }}')"></div>
-                            <div id="plddt-container" claSS="mx-auto" style="background-image: url('{{ img_path('_plddt.png') }}')"></div>
+                        <div class="w-100">
+                            <div id="coverage-container" class="mx-auto w-100">
+                                <img src="{{ img_path('_coverage.png') }}" class="w-100 h-auto">
+                            </div>
+                            <div id="plddt-container" class="mx-auto w-100">
+                                <img src="{{ img_path('_plddt.png') }}" class="w-100 h-auto">
+                            </div>
                         </div>
                     </div>
                 </div>
