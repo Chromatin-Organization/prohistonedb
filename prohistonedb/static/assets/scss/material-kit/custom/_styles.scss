@@ -313,8 +313,13 @@ form[name=search] .input-group-text {
     }
 
     a {
-        text-decoration: underline;
+        text-decoration: none;
+        border-bottom: 1px dashed #fff;
         color: $white;
+
+        &:hover {
+            border-bottom: 1px solid #fff;
+        }
     }
 
     ul.lineage-path { 

@@ -24162,8 +24162,12 @@ form[name=search] .input-group-text {
   font-weight: normal;
 }
 #information a {
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px dashed #fff;
   color: #fff;
+}
+#information a:hover {
+  border-bottom: 1px solid #fff;
 }
 #information ul.lineage-path {
   list-style: none;
