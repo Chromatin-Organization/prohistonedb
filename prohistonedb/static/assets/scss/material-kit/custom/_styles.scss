@@ -338,6 +338,11 @@ form[name=search] .input-group-text {
     }
 }
 
+.btn-download .material-icons-round {
+    vertical-align: middle;
+    font-size: $font-size-base;
+}
+
 /* HistoneDB styles */
 .legend-color {
     width: 16px;
@@ -348,7 +353,7 @@ form[name=search] .input-group-text {
 .legend-label {
     vertical-align: middle;
     font-weight: $font-weight-normal;
-    font-size: $font-size-base;
+    font-size: $font-size-sm;
     line-height: 2.3em;
     margin-left: 10px;
 }
@@ -361,7 +366,7 @@ form[name=search] .input-group-text {
 
 #mspViewer {
     display: block;
-    width: calc(100% + 315px); // change for small screens
+    width: calc(100% + 315px);
     height: 80vh;
     position: relative;
 }

@@ -24183,6 +24183,11 @@ form[name=search] .input-group-text {
   content: " > ";
 }
 
+.btn-download .material-icons-round {
+  vertical-align: middle;
+  font-size: 1rem;
+}
+
 /* HistoneDB styles */
 .legend-color {
   width: 16px;
@@ -24194,7 +24199,7 @@ form[name=search] .input-group-text {
 .legend-label {
   vertical-align: middle;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 2.3em;
   margin-left: 10px;
 }
