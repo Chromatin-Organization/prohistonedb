@@ -5,25 +5,20 @@
     <nav
       class="navbar navbar-expand-xl top-0 z-index-fixed blur shadow position-absolute px-7 py-2 start-0 end-0">
       <div class="container-fluid px-0">
-        <a class="navbar-brand font-weight-bolder ms-sm-3" href="/">
+        <a class="navbar-brand font-weight-bolder ms-sm-3 d-none d-md-block" href="/">
           {{siteName}}
         </a>
 
         {# https://getbootstrap.com/docs/5.0/utilities/flex/ #}
         <div class="flex-grow-1">
-          <div class="w-70 d-none d-md-block mx-auto">
+          <div class="w-70 mx-auto search-group">
             {% include 'includes/search_form.html.j2' %}
           </div>
         </div>
 
-        <button class="navbar-toggler shadow-none ms-2 py-0" type="button" data-bs-toggle="offcanvas"
+        <button class="navbar-toggler shadow-none ms-2 px-0 py-0 material-icons-round" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon mt-2">
-            <span class="navbar-toggler-bar bar1"></span>
-            <span class="navbar-toggler-bar bar2"></span>
-            <span class="navbar-toggler-bar bar3"></span>
-          </span>
+          aria-label="Toggle navigation">menu
         </button>
         
         <div class="offcanvas offcanvas-end pt-3 pb-2 py-lg-0" id="navigation" style="flex-grow: initial !important">

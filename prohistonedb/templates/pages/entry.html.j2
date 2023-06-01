@@ -32,25 +32,25 @@
                     <div class="col-12">
                         <h3 class="text-white pt-3">Information</h3>
 
-                        <div class="pb-1 row">
+                        <div class="pb-2 row">
                             <div class="col-sm-3 label"><span>Source organism</span></div>
                             <div class="col-sm-9 value">
                                 <span class="mb-0 float-start me-2">{{entry.organism.name}}</span><span class="link text-nowrap"><a href="{{ url_for('search.index', oid=entry.organism.id) }}">Search this organism</a></span>
                             </div>
                         </div>
-                        <div class="pb-1 row">
+                        <div class="pb-2 row">
                             <div class="col-sm-3 label"><span>Gene</span></div>
                             <div class="col-sm-9 value">
                                 <span class="mb-0">{{entry.genes|join(",")}}</span>
                             </div>
                         </div>
-                        <div class="pb-1 row">
+                        <div class="pb-2 row">
                             <div class="col-sm-3 label"><span>Sequence length</span></div>
                             <div class="col-sm-9 value">
                                 <span class="mb-0">{{entry.sequence|length}} AA</span>
                             </div>
                         </div>
-                        <div class="pb-1 row">
+                        <div class="pb-2 row">
                             <div class="col-sm-3 label"><span>UniProt</span></div>
                             <div class="col-sm-9 value">
                                 <span class="mb-0 float-start me-2">{{entry.uniprot_id}}</span><span class="link text-nowrap"> <a href="https://www.uniprot.org/uniprotkb/{{entry.uniprot_id}}/entry">go to UniProt</a></span>
@@ -169,9 +169,13 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="row mt-3">
-                        <div class="columns medium-9">
-                            <div id="coverage-container" class="mx-auto" style="background-image: url('{{ img_path('_coverage.png') }}')"></div>
-                            <div id="plddt-container" claSS="mx-auto" style="background-image: url('{{ img_path('_plddt.png') }}')"></div>
+                        <div class="w-100">
+                            <div id="coverage-container" class="mx-auto w-100">
+                                <img src="{{ img_path('_coverage.png') }}" class="w-100 h-auto">
+                            </div>
+                            <div id="plddt-container" class="mx-auto w-100">
+                                <img src="{{ img_path('_plddt.png') }}" class="w-100 h-auto">
+                            </div>
                         </div>
                     </div>
                 </div>
