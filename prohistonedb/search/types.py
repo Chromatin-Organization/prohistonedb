@@ -16,7 +16,6 @@ import pandas as pd
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
-from ..database.models import Category
 
 #***===== FieldType Enum =====***#
 class FieldType(str, Enum):
@@ -53,8 +52,8 @@ class FieldType(str, Enum):
 class ResultCounts:
     total: int
     categories: pd.Series[int]
-    lineages: pd.Series[int]
-
+    superkingdoms: pd.Series[int]
+    max_seq_len: int
 
     def __init__(self, results: Sequence[Union[Sequence, Mapping]], columns: Sequence[str]):
         def find_superkingdom(lineage_json: str) -> Union[str, None]:
@@ -76,6 +75,12 @@ class ResultCounts:
             .value_counts(sort=False, dropna=False) \
             .sort_index(na_position="last")
         
+        if len(df["sequence_len"]) == 0:
+            max_seq_len = 0
+        else:
+            max_seq_len = df["sequence_len"].max()
+        
         object.__setattr__(self, "total", len(results))
         object.__setattr__(self, "categories", categories)
         object.__setattr__(self, "superkingdoms", superkingdoms)
+        object.__setattr__(self, "max_seq_len", max_seq_len)

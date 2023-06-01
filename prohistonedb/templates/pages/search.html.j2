@@ -237,19 +237,18 @@
   {% block javascripts %}
     <script type="text/javascript">
         const seqlSlider = document.querySelector('.multislider');
-        const seqlHidden = document.querySelector('input[name="seql"]');
+        const seqlHidden = document.querySelector('input[class="form-check-input"][name="seql"]');
 
         // initialize multirange slider
-        {# TODO: initial slider max value should be updated with max sequence length in db #}
         noUiSlider.create(seqlSlider, {
-            start: [0, 1200],
+            start: [0, {{counts.max_seq_len}}],
             step: 10,
             margin: 20, // min. distance between min-max
             connect: true,
             tooltips: wNumb({decimals: 0}), // requires wNumb library
             range: {
                 'min': 0,
-                'max': 1200 // get max seql from database
+                'max': {{max_seq_len}} // get max seql from database
             }
         });
 

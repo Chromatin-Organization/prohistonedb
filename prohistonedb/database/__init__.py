@@ -316,6 +316,17 @@ def field_name(s: str) -> str:
     
     return str(FieldType(s))
 
+
+#***===== Register Jinja Context Processors =====***#
+@bp.app_context_processor
+def inject_max_sequence_length():
+    db = get_db()
+    max_seq_len = db.execute(f"SELECT MAX({FieldType.SEQUENCE_LEN.db_name}) FROM search").fetchone()[0]
+    if not max_seq_len:
+        max_seq_len = 0
+    flask.current_app.logger.debug(f"The maximum sequence lengths found in the database is {max_seq_len}.")
+    return {"max_seq_len": max_seq_len}
+
 #***===== Register CLI commands =====***#
 @bp.cli.command("create")
 @click.option('-f', '--force', is_flag=True, help="Enables rewriting of the existing database file.")
