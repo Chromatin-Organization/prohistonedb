@@ -13,8 +13,7 @@ import flask
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
-from ..database import models
-from ..categories import get_categories
+from ..database import models, get_categories
 
 #***===== Functions =====***#
 # TODO: Automatic column names

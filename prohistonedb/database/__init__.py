@@ -15,8 +15,9 @@ import click
 
 #*----- Local imports -----*#
 from . import connections
-from ..search.types import FieldType
-from .models import Multimer
+from .models import Multimer, Category
+
+from ..types import FieldType
 
 #***===== Initialization & Teardown =====***#
 def init_app(app: Flask):
@@ -39,7 +40,19 @@ def teardown_db(exception: Exception):
     if db is not None:
         db.close()
 
-#***===== Other Functions =====***#
+#***===== Request level functions =====***#
+def get_categories() -> dict[int, Category]:
+    """ Returns the categories in the database from the app context. Queries the database if they haven't been set yet. """
+    if "categories" not in flask.g:
+        sql = "SELECT * FROM categories ORDER BY name"
+        db = get_db()
+        results = db.execute(sql)
+        categories = results.fetchall()
+        flask.g.categories = {category["id"]:Category(**category) for category in categories}
+    
+    return flask.g.categories
+
+#***===== Database Set-Up Functions =====***#
 #TODO: Add automatic column names for categories table.
 #TODO: Automatically determine column names for non-searchable fields.
 #TODO: Add field info (such as variable type).
@@ -316,8 +329,13 @@ def field_name(s: str) -> str:
     
     return str(FieldType(s))
 
-
 #***===== Register Jinja Context Processors =====***#
+@bp.app_context_processor
+def inject_categories():
+    categories = get_categories()
+    flask.current_app.logger.debug(f"Categories present in the database: {[(id, category.name) for (id, category) in categories.items()]}")
+    return {"categories": categories}
+
 @bp.app_context_processor
 def inject_max_sequence_length():
     db = get_db()

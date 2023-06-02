@@ -16,7 +16,7 @@ import flask
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
-from .types import FieldType
+from ..types import FieldType
 from ..database.connections import DatabaseConnection, DatabaseResult
 
 #***===== SQL Condition Class =====***#

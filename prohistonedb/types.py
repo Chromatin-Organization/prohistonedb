@@ -1,11 +1,12 @@
-""" A module defining all the types used for processing user input during searches. """
+""" A module defining custom types that are used by prohistonedb. """
 #***===== Feature Imports =====***#
 from __future__ import annotations
 
 #***===== Imports =====***#
 #*----- Standard library -----*#
 from enum import Enum
-from typing import Union, Sequence, Mapping
+from typing import Sequence, Union, Mapping
+
 from dataclasses import dataclass
 
 import json
@@ -48,6 +49,7 @@ class FieldType(str, Enum):
     def __str__(self) -> str:
         return self.name.lower().replace("_", " ").replace("id", "ID").capitalize()
     
+#***===== ResultCounts Class =====***#
 @dataclass(eq=False, frozen=True)
 class ResultCounts:
     total: int

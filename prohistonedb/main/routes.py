@@ -11,10 +11,12 @@ import flask
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
+from ..types import FieldType
+
 from .. import database
-from ..search.types import FieldType
-from ..search import sql, results_to_histones
 from ..database import models
+
+from ..search import sql, results_to_histones
 
 #***===== Blueprint Import =====***#
 from . import bp

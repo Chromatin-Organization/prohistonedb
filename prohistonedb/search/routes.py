@@ -14,8 +14,9 @@ from werkzeug.datastructures import MultiDict
 
 #*----- Local imports -----*#
 from . import sql
-from .types import FieldType, ResultCounts
 from . import results_to_histones
+
+from ..types import FieldType, ResultCounts
 from .. import database
 
 #***===== Functions =====***#
