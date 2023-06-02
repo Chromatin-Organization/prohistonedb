@@ -7,11 +7,11 @@
           {# TODO: remove examples when selecting dropdown option (or show only relevant example) #}
           <div class="col-md-12">
             <small>Examples:</small>
-            {# TODO: use actual IDs from the database #}
-            <span class="badge bg-light text-dark">UP000027093</span>{# example protein id #}
-            <span class="badge bg-light text-dark">ENI51_00065</span>{# example gen id #}
-            <span class="badge bg-light text-dark"><a href="{{ url_for('main.entry', uniprot_id = 'A0A831SMI2') }}">A0A831SMI2</a></span>{# example Uniprot id #}
-            <span class="badge bg-light text-dark">Candidatus Diapherotrites archaeon</span>{# example organism #}
+            <span class="badge bg-light text-dark"><a href="{{ url_for('search.index', filter='uid', q='A0A831SMI2') }}" title="example UniProt ID">A0A831SMI2</a></span>
+            <span class="badge bg-light text-dark"><a href="{{ url_for('search.index', filter='tax', q='Thermococcaceae') }}"  title="example taxonomy">Thermococcaceae</a></span>
+            <span class="badge bg-light text-dark"><a href="{{ url_for('search.index', filter='org', q='Nitrososphaera viennensis') }}" title="example organism">Nitrososphaera viennensis</a></span>
+            <span class="badge bg-light text-dark"><a href="{{ url_for('search.index', filter='gen_id', q='AYK18_02880') }}" title="example gen ID">AYK18_02880</a></span>
+            <span class="badge bg-light text-dark"><a href="{{ url_for('search.index', filter='seq', q='SALAD') }}" title="example sequence">SALAD</a></span>
           </div>
         </div>
     </div>
