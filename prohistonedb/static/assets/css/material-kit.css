@@ -23879,6 +23879,11 @@ h3, .h3 {
   font-size: 1.125rem;
 }
 
+/* simulate nav blur class color */
+.navbar {
+  background-color: #f5f5f5;
+}
+
 /* a more recognisable font for branding */
 .navbar .navbar-brand,
 .footer .footer-brand,
@@ -23972,12 +23977,12 @@ h3, .h3 {
 }
 
 .btn-close {
-  color: #7b809a;
+  color: #344767;
   background-image: none;
 }
 .btn-close:hover, .btn-close:active, .btn-close:active:focus, .btn-close:active:hover {
   box-shadow: none;
-  color: #344767;
+  color: #e91e63;
 }
 
 /* offcanvas-backdrop blur clashes with navbar blur class */
@@ -24067,6 +24072,9 @@ h3, .h3 {
 /* align search icon (submit button) */
 form[name=search] .input-group-text {
   padding-top: 0.5rem;
+}
+form[name=search] .input-group-text button[type=submit] {
+  border-left: 1px solid #e5ecee !important;
 }
 
 /* change radio buttons to solid cicles */

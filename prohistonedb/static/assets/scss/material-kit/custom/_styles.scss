@@ -23,6 +23,10 @@ h3 {
     font-size: $font-size-lg;
 }
 
+/* simulate nav blur class color */
+.navbar { background-color: #f5f5f5 }
+//.navbar input[name=q] { background-color: $gray-200 !important }
+
 /* a more recognisable font for branding */
 .navbar .navbar-brand,
     .footer .footer-brand,
@@ -114,7 +118,7 @@ h3 {
     padding-bottom: 0;
 }
 .btn-close {
-    color: $font-color;
+    color: $headings-color;
     background-image: none;
 
     &:hover, 
@@ -122,7 +126,7 @@ h3 {
         &:active:focus, 
         &:active:hover {
             box-shadow: none;
-            color: $headings-color;
+            color: $primary;
     }
 }
 /* offcanvas-backdrop blur clashes with navbar blur class */
@@ -200,6 +204,10 @@ h3 {
 /* align search icon (submit button) */
 form[name=search] .input-group-text {
     padding-top: .5rem;
+    
+    button[type=submit] {
+        border-left: 1px solid #e5ecee !important;
+    }
 }
 
 
