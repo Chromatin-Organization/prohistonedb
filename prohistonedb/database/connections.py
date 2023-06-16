@@ -212,10 +212,11 @@ class SQLiteConnection(DatabaseConnection):
     def executemany(self, sql: str, seq_of_parameters: Iterable[_DatabaseParameters]) -> list[SQLiteResult]:
         flask.current_app.logger.info(f"Using executemany to perform SQL queries...")
 
+        parameters = seq_of_parameters[0]
+
         # Only worry about processing the string manually if it needs to be logged
         if flask.current_app.logger.isEnabledFor(logging.DEBUG):
             sql_str = str(sql)
-            parameters = seq_of_parameters[0]
 
             # Process any parameters the string may have.
             if not parameters is None:
