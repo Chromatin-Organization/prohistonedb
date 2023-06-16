@@ -7,11 +7,10 @@
           {# TODO: remove examples when selecting dropdown option (or show only relevant example) #}
           <div class="col-md-12">
             <small>Examples:</small>
-            {# TODO: use actual IDs from the database #}
-            <span class="badge bg-light text-dark">UP000027093</span>{# example protein id #}
-            <span class="badge bg-light text-dark">ENI51_00065</span>{# example gen id #}
+            <span class="badge bg-light text-dark"><a href="{{ url_for('search.index', pmid = 'UP000027093') }}">UP000027093</a></span>{# example protein id #}
+            <span class="badge bg-light text-dark"><a href="{{ url_for('search.index', gen = 'ENI51_0006') }}">ENI51_00065</a></span>{# example gen id #}
             <span class="badge bg-light text-dark"><a href="{{ url_for('main.entry', uniprot_id = 'A0A831SMI2') }}">A0A831SMI2</a></span>{# example Uniprot id #}
-            <span class="badge bg-light text-dark">Candidatus Diapherotrites archaeon</span>{# example organism #}
+            <span class="badge bg-light text-dark"><a href="{{ url_for('search.index', org = 'Candidatus Diapherotrites archaeon') }}">Candidatus Diapherotrites archaeon</a></span>{# example organism #}
           </div>
         </div>
     </div>

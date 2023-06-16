@@ -16,55 +16,43 @@ import flask
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
-from ..types import FieldType
+from ..types import Field, ComparisonType
 from ..database.connections import DatabaseConnection, DatabaseResult
 
 #***===== SQL Condition Class =====***#
 class _SQLCondition:
     """ A class representing the condition in an SQL statement. """
-    def __init__(self, sql_str: str, parameters: Sequence):
+    def __init__(self, sql_str: str, parameters: Optional[Sequence] = None):
         self.str = sql_str
         
-        if len(parameters) == 0:
-            raise Exception("An SQL condition needs at least 1 parameter.")
-        
-        self.parameters = parameters 
+        if not parameters or len(parameters) == 0:
+            self.parameters = []
+        else:
+            self.parameters = parameters 
 
 #***===== Filter Class =====***#
 #* The value parameter is currently not sanitized here. Instead, the execute function of the DatabaseConnection takes care of sanitizing it's parameters.
 class Filter:
     """ A class for representing a basic search filter. """
-    def __init__(self, field: Union[str, FieldType], value: str):
+    def __init__(self, field: Union[str, Field], value: str):
         """ Takes a field to be searched and a value to set the search condition. Is also responsible for input sanitization. """
-        self._field = FieldType(field) # Ensure that the supplied field is a valid field type.
+        self._field = Field(field) # Ensure that the supplied field is a valid field type.
         self._value = value 
 
     @property
     def _sql_condition(self) -> _SQLCondition:
         """ Returns the _SQLCondition that can be used to create an SQL query. """
-        field = self._field
-        equal_fields = [
-            FieldType.UNIPROT_ID,
-            FieldType.ORGANISM_ID,
-            FieldType.CATEGORY
-        ]
-        like_fields = [
-            FieldType.ORGANISM,
-            FieldType.SEQUENCE,
-            FieldType.LINEAGE,
-            FieldType.PROTEIN_IDS,
-            FieldType.PROTEOME_IDS,
-            FieldType.GENES,
-            FieldType.GENOME_IDS
-        ]
+        comparison_type = self._field.comparison_type
 
-        if field in equal_fields:
-            return _SQLCondition(f"{field.db_name}=?", [self._value])
-        elif field in like_fields:
-            return _SQLCondition(f"{field.db_name} LIKE ?", [f"%{self._value}%"])
-        elif field is FieldType.SEQUENCE_LEN:
+        if not self._value and self._field in Field.optional_fields():
+            return _SQLCondition(f"{self._field.db_name} IS NULL")
+        if comparison_type is ComparisonType.EQUAL:
+            return _SQLCondition(f"{self._field.db_name}=?", [self._value])
+        elif comparison_type is ComparisonType.LIKE:
+            return _SQLCondition(f"{self._field.db_name} LIKE ?", [f"%{self._value}%"])
+        elif comparison_type is ComparisonType.BETWEEN:
             values = [int(val.strip()) for val in self._value.split("-")]
-            return _SQLCondition(f"{field.db_name} BETWEEN ? AND ?", values)
+            return _SQLCondition(f"{self._field.db_name} BETWEEN ? AND ?", values)
         else:
             raise NotImplementedError(f"Couldn't generate sql condition for field {self}")
     
@@ -148,13 +136,13 @@ class AnyFilter(OrFilter):
     """ A class for a search filter where any field can match the condition. """
     def __init__(self, value: str):
         """ Take a value to set the condition for the search filter. """
-        filters = [Filter(field, value) for field in FieldType.accepted_fields() if not field is FieldType.SEQUENCE_LEN]
+        filters = [Filter(field, value) for field in Field.accepted_fields() - {Field.ANY.search_name} if not field is Field.SEQUENCE_LEN]
         super().__init__(filters)
 
 #***===== SQL Class =====***#
 class Query:
     """ A class for storing an SQL query over the search view. """
-    def __init__(self, selection: Optional[Sequence[Union[str, FieldType]]] = None, filter: Optional[Union[Filter, CombinedFilterABC]] = None):
+    def __init__(self, selection: Optional[Sequence[Union[str, Field]]] = None, filter: Optional[Union[Filter, CombinedFilterABC]] = None):
         """ Takes in an optional list of fields to be selected and an optional search filter. """
         # Set the view to the dedicated "search" view of the database
         self._VIEW = "search"
@@ -164,8 +152,8 @@ class Query:
             self._selection = "*"
         else:
             # Retrieve the database names for the desired fields.
-            # Also guarantees that the inputs are valid FieldTypes.
-            fields = [FieldType(field).db_name for field in selection]
+            # Also guarantees that the inputs are valid Fields.
+            fields = [Field(field).db_name for field in selection]
 
             # Create the selection string from the database names.
             self._selection = ",".join(fields)
@@ -194,4 +182,7 @@ class Query:
         query += " WHERE " + self._condition.str
 
         # Execute the SQL query on the database
-        return database_connection.execute(query, parameters=self._condition.parameters)
+        if len(self._condition.parameters) == 0:
+            return database_connection.execute(query)
+        else:
+            return database_connection.execute(query, parameters=self._condition.parameters)

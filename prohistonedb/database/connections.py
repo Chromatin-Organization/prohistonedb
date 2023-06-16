@@ -21,6 +21,7 @@ import flask
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
+from ..types import Field, FieldType
 
 #***===== Type Aliases =====***#
 _DatabaseParameters = Union[Sequence, Mapping]
@@ -81,6 +82,11 @@ class DatabaseConnection:
         
         return result
     
+    #*----- SQL generation functions -----*#
+    @abc.abstractmethod
+    def sql_field_type(self, field: Field) -> str:
+        """ Returns a string with the SQL database type for the given FieldType. """
+
     #*----- Other public functions -----*#
     @abc.abstractmethod
     def execute(self, sql:str, parameters: Optional[_DatabaseParameters] = None) -> DatabaseResult:
@@ -159,6 +165,22 @@ class SQLiteConnection(DatabaseConnection):
 
         return result or result_super
     
+    #*----- SQL generation functions -----*#
+    @abc.abstractmethod
+    def sql_field_type(self, field_type: FieldType) -> str:
+        if field_type is FieldType.PRIMARY_TEXT:
+            return "TEXT PRIMARY KEY"
+        elif field_type is FieldType.PRIMARY_INTEGER:
+            return "INTEGER PRIMARY KEY"
+        elif field_type in [FieldType.TEXT, FieldType.TEXT_ID, FieldType.IDS]:
+            return "TEXT NOT NULL"
+        elif field_type in [FieldType.TEXT_OPTIONAL, FieldType.IDS_OPTIONAL]:
+            return "TEXT"
+        elif field_type in [FieldType.INTEGER, FieldType.INT_ID]:
+            return "INTEGER NOT NULL"
+        else:
+            raise ValueError(f"Not implemented for FieldType {field_type}.")
+
     #*----- Other public functions -----*#
     # ? Add logging to the ABC class?
     def execute(self, sql: str, parameters: Optional[_DatabaseParameters] = None) -> SQLiteResult:
@@ -178,7 +200,7 @@ class SQLiteConnection(DatabaseConnection):
                         sql_str = sql_str.replace("?", f"{param}", 1)
                 
             # Log the SQL used for the query.
-            flask.current_app.logger.debug(f"Executing SQL query: {sql_str}")
+            flask.current_app.logger.debug(f"Executing SQL query:\n{sql_str}")
 
         # Execute the Query on the connection and return the result.
         if parameters is None or len(parameters) == 0:
@@ -186,10 +208,34 @@ class SQLiteConnection(DatabaseConnection):
         else:
             return SQLiteResult(self._cursor.execute(sql, parameters))
     
-    #TODO: Add logging
-    #TODO: Add checks for empty parameter sets.
+    # ? Add logging to ABC class?
     def executemany(self, sql: str, seq_of_parameters: Iterable[_DatabaseParameters]) -> list[SQLiteResult]:
-        return [SQLiteResult(cursor) for cursor in self._cursor.executemany(sql, seq_of_parameters)]
+        flask.current_app.logger.info(f"Using executemany to perform SQL queries...")
+
+        # Only worry about processing the string manually if it needs to be logged
+        if flask.current_app.logger.isEnabledFor(logging.DEBUG):
+            sql_str = str(sql)
+            parameters = seq_of_parameters[0]
+
+            # Process any parameters the string may have.
+            if not parameters is None:
+                try:
+                    # Try processing it as a mapping of key-value pairs.
+                    for key in parameters.keys():
+                        sql_str = sql_str.replace(f":{key}", f"{parameters[key]}")
+                except:
+                    # If that doesn't work, process it as a list of parameters.
+                    for param in parameters:
+                        sql_str = sql_str.replace("?", f"{param}", 1)
+                
+            # Log the SQL used for the query.
+            flask.current_app.logger.debug(f"Executing SQL query with first parameter set:\n{sql_str}")
+
+        # Execute the Query on the connection and return the result.
+        if seq_of_parameters is None or len(parameters) == 0:
+            return [SQLiteResult(cursor) for cursor in self._cursor.executemany(sql)]
+        else:
+            return [SQLiteResult(cursor) for cursor in self._cursor.executemany(sql, seq_of_parameters)]
     
     def commit(self):
         self._connection.commit()

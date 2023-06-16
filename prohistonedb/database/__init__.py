@@ -17,7 +17,7 @@ import click
 from . import connections
 from .models import Multimer, Category
 
-from ..types import FieldType
+from ..types import Field, FieldType
 
 #***===== Initialization & Teardown =====***#
 def init_app(app: Flask):
@@ -53,9 +53,6 @@ def get_categories() -> dict[int, Category]:
     return flask.g.categories
 
 #***===== Database Set-Up Functions =====***#
-#TODO: Add automatic column names for categories table.
-#TODO: Automatically determine column names for non-searchable fields.
-#TODO: Add field info (such as variable type).
 def init_db():
     """ Creates a database with empty tables and corresponding indexes. """ 
     # Create the database
@@ -66,11 +63,11 @@ def init_db():
     multimer_options =  "', '".join([multimer.value for multimer in Multimer])
     conn.execute(f"""
         CREATE TABLE categories (
-            id INTEGER PRIMARY KEY,
-            name TEXT NOT NULL,
-            preferred_multimer TEXT NOT NULL CHECK( preferred_multimer IN ('{multimer_options}') ),
-            short_name TEXT,
-            has_page INTEGER NOT NULL CHECK( has_page IN (0, 1) )
+            id {conn.sql_field_type(FieldType.PRIMARY_INTEGER)},
+            name {conn.sql_field_type(FieldType.TEXT)},
+            preferred_multimer {conn.sql_field_type(FieldType.TEXT_OPTIONAL)} CHECK( preferred_multimer IN ('{multimer_options}') ),
+            short_name {conn.sql_field_type(FieldType.TEXT_OPTIONAL)},
+            has_page {conn.sql_field_type(FieldType.INTEGER)} CHECK( has_page IN (0, 1) )
         )
     """)
 
@@ -79,52 +76,34 @@ def init_db():
 
     # Create the metadata table
     flask.current_app.logger.info(f"Creating the metadata table.")
-    conn.execute(f"""
-        CREATE TABLE metadata (
-            {FieldType.UNIPROT_ID.db_name} TEXT PRIMARY KEY,
-            {FieldType.ORGANISM.db_name} TEXT NOT NULL,
-            {FieldType.ORGANISM_ID.db_name} TEXT NOT NULL,
-            {FieldType.SEQUENCE.db_name} TEXT NOT NULL,
-            {FieldType.SEQUENCE_LEN.db_name} INTEGER NOT NULL,
-            category_id INTEGER NOT NULL,
-            {FieldType.LINEAGE.db_name} TEXT NOT NULL,
-            {FieldType.LINEAGE.db_name}_json TEXT NOT NULL,
-            {FieldType.PROTEIN_IDS.db_name} TEXT NOT NULL,
-            {FieldType.PROTEOME_IDS.db_name} TEXT,
-            {FieldType.GENES.db_name} TEXT,
-            {FieldType.GENOME_IDS.db_name} TEXT NOT NULL,
-            rel_path TEXT NOT NULL,
-            ranks TEXT,
-            FOREIGN KEY (category_id)
-                REFERENCES categories(id)
-        )
-    """)
+
+    sql = "CREATE TABLE metadata (\n"
+    for field in Field.metadata_fields():
+        sql += f"    {field.db_name} {conn.sql_field_type(field.type)},\n"
+    
+    sql += f"    rel_path {conn.sql_field_type(FieldType.TEXT)},\n"
+    sql += f"    ranks {conn.sql_field_type(FieldType.TEXT_OPTIONAL)},\n"
+    sql += f"    {field.LINEAGE.db_name}_json {conn.sql_field_type(FieldType.TEXT)},"
+    sql += f"    FOREIGN KEY ({Field.CATEGORY_ID.db_name}) REFERENCES categories(id)\n"
+    sql += ")"
+    conn.execute(sql)
 
     # Add indexes for the metadata table
     flask.current_app.logger.info(f"Creating indexes for the metadata table.")
-    conn.execute(f"CREATE INDEX idx_{FieldType.ORGANISM.db_name} ON metadata({FieldType.ORGANISM.db_name})")
-    conn.execute(f"CREATE INDEX idx_{FieldType.ORGANISM_ID.db_name} ON metadata({FieldType.ORGANISM_ID.db_name})")
-    conn.execute(f"CREATE INDEX idx_{FieldType.SEQUENCE.db_name} ON metadata({FieldType.SEQUENCE.db_name})")
-    conn.execute(f"CREATE INDEX idx_{FieldType.SEQUENCE_LEN.db_name} ON metadata({FieldType.SEQUENCE_LEN.db_name})")
-    conn.execute(f"CREATE INDEX idx_category_id ON metadata(category_id)")
-    conn.execute(f"CREATE INDEX idx_{FieldType.LINEAGE.db_name} ON metadata({FieldType.LINEAGE.db_name})")
-    conn.execute(f"CREATE INDEX idx_{FieldType.PROTEIN_IDS.db_name} ON metadata({FieldType.PROTEIN_IDS.db_name})")
-    conn.execute(f"CREATE INDEX idx_{FieldType.PROTEOME_IDS.db_name} ON metadata({FieldType.PROTEOME_IDS.db_name})")
-    conn.execute(f"CREATE INDEX idx_{FieldType.GENES.db_name} ON metadata({FieldType.GENES.db_name})")
-    conn.execute(f"CREATE INDEX idx_{FieldType.GENOME_IDS.db_name} ON metadata({FieldType.GENOME_IDS.db_name})")
+    for field in Field.metadata_fields() & Field.search_fields():
+        conn.execute(f"CREATE INDEX idx_{field.db_name} ON metadata({field.db_name})")
 
     # Create a view for accessing the necessary data in a search
     conn.execute(f"""
         CREATE VIEW search AS
-            SELECT metadata.*, categories.name AS {FieldType.CATEGORY.db_name}, categories.preferred_multimer
+            SELECT metadata.*, categories.name AS {Field.CATEGORY.db_name}, categories.preferred_multimer
             FROM metadata
-            LEFT JOIN categories ON metadata.category_id = categories.id
+            LEFT JOIN categories ON metadata.{Field.CATEGORY_ID.db_name} = categories.id
     """)
 
     # Commit the changes to the database
     conn.commit()
 
-#TODO: Automatically generate column names.
 def update_db_categories():
     """ Update the database with the data in the categories JSON file. """
     # Get a database connection
@@ -165,12 +144,13 @@ def update_db_categories():
         conn.executemany(sql, categories)
         conn.commit()
 
-#TODO: Automatically generate column names.
-#? The JSON paths in the metadata JSON file for the columns are currently hard-coded. Do we want to change this?
 def update_db_metadata():
     """ Update the database with the data in the metadata JSON file.  """
     # Get a database connection
     conn = get_db()
+
+    # Set-up some useful variables
+    search_fields = ((Field.search_fields() | Field.facet_fields()) & Field.metadata_fields()) - {Field.CATEGORY_ID}
 
     # Make sure that the metadata JSON file exists
     metadata_json = Path(flask.current_app.config["METADATA_JSON"])
@@ -187,67 +167,12 @@ def update_db_metadata():
 
         for uid in metadata_json:
             data = {}
-            data[FieldType.UNIPROT_ID.db_name] = uid
+            data[Field.UNIPROT_ID.db_name] = uid
             uid_json = metadata_json[uid]
 
             # Add the searchable fields
-            #* Currently hard-coded!
-            for field in FieldType:
-                cross_references = uid_json["uniprot"]["uniProtKBCrossReferences"]
-
-                if field is FieldType.UNIPROT_ID:
-                    data[field.db_name] = uid
-                elif field is FieldType.ORGANISM:
-                    data[field.db_name] = uid_json["uniprot"]["organism"]["scientificName"]
-                elif field is FieldType.ORGANISM_ID:
-                    data[field.db_name] = uid_json["uniprot"]["organism"]["taxonId"]
-                elif field is FieldType.SEQUENCE:
-                    data[field.db_name] = uid_json["uniprot"]["sequence"]["value"]
-                elif field is FieldType.SEQUENCE_LEN:
-                    data[field.db_name] = uid_json["uniprot"]["sequence"]["length"]
-                elif field is FieldType.CATEGORY:
-                    data[field.db_name] = uid_json["histoneDB"]["category"]
-                elif field is FieldType.LINEAGE:
-                    lineages_full = uid_json["uniprot"]["lineages"]
-                    lineage_names = [lineage["scientificName"] for lineage in lineages_full]
-                    data[field.db_name] = json.dumps(lineage_names)
-                    data[field.db_name + "_json"] = json.dumps(lineages_full)
-                elif field is FieldType.PROTEIN_IDS:
-                    ref_properties = [ref["properties"] for ref in cross_references]
-                    pids = [property["value"] for ref in ref_properties for property in ref if property["key"] == "ProteinId"]
-                    if pids:
-                        data[field.db_name] = json.dumps(pids)
-                    else:
-                        data[field.db_name] = None
-                elif field is FieldType.PROTEOME_IDS:
-                    pmids = [ref["id"] for ref in cross_references if ref["database"] == "Proteomes"]
-                    if pmids:
-                        data[field.db_name] = json.dumps(pmids)
-                    else:
-                        data[field.db_name] = None
-                elif field is FieldType.GENES:
-                    if not "genes" in uid_json["uniprot"].keys():
-                        data[field.db_name] = None
-                        continue
-
-                    for gen in uid_json["uniprot"]["genes"]:
-                        if "geneName" in gen.keys():
-                            gids = [gen["geneName"]["value"]]
-                        elif "orfNames" in gen.keys():
-                            gids = [orf_name["value"] for orf_name in gen["orfNames"]]
-                        else:
-                            data[field.db_name] = None
-                            continue
-                    
-                    data[field.db_name] = json.dumps(gids)
-                elif field is FieldType.GENOME_IDS:
-                    gmids = [ref["id"] for ref in cross_references if ref["database"] == "EMBL"]
-                    if gmids:
-                        data[field.db_name] = json.dumps(gmids)
-                    else:
-                        data[field.db_name] = None
-                else:
-                    raise Exception(f"Unknown JSON path for FieldType {field}")
+            data = {field.db_name:field.value_from_json(uid_json) for field in (search_fields | {Field.CATEGORY})- {Field.UNIPROT_ID}}
+            data[Field.UNIPROT_ID.db_name] = uid
             
             # Add additional information
             multimers_json = uid_json["histoneDB"]["multimer"]
@@ -271,46 +196,24 @@ def update_db_metadata():
             
             data["ranks"] = json.dumps(ranks)
             data["rel_path"] = uid_json["histoneDB"]["relPath"]
+            data[Field.LINEAGE.db_name+"_json"] = json.dumps(uid_json["uniprot"]["lineages"])
 
             # Apply all the fields for this uid
             metadata.append(data)
 
-        # Execute the SQL query on the database      
-        sql = f"""INSERT INTO metadata (
-                    {FieldType.UNIPROT_ID.db_name},
-                    {FieldType.ORGANISM.db_name},
-                    {FieldType.ORGANISM_ID.db_name},
-                    {FieldType.SEQUENCE.db_name},
-                    {FieldType.SEQUENCE_LEN.db_name},
-                    category_id,
-                    {FieldType.LINEAGE.db_name},
-                    {FieldType.LINEAGE.db_name}_json,
-                    {FieldType.PROTEIN_IDS.db_name},
-                    {FieldType.PROTEOME_IDS.db_name},
-                    {FieldType.GENES.db_name},
-                    {FieldType.GENOME_IDS.db_name},
-                    rel_path,
-                    ranks
-                )
-                SELECT
-                    :{FieldType.UNIPROT_ID.db_name},
-                    :{FieldType.ORGANISM.db_name},
-                    :{FieldType.ORGANISM_ID.db_name},
-                    :{FieldType.SEQUENCE.db_name},
-                    :{FieldType.SEQUENCE_LEN.db_name},
-                    categories.id,
-                    :{FieldType.LINEAGE.db_name},
-                    :{FieldType.LINEAGE.db_name}_json,
-                    :{FieldType.PROTEIN_IDS.db_name},
-                    :{FieldType.PROTEOME_IDS.db_name},
-                    :{FieldType.GENES.db_name},
-                    :{FieldType.GENOME_IDS.db_name},
-                    :rel_path,
-                    :ranks
-                FROM categories
-                    WHERE name = :{FieldType.CATEGORY.db_name}
-        """
-        
+        # Execute the SQL query on the database
+        fields = {field.db_name for field in search_fields}
+        fields = fields | {Field.LINEAGE.db_name+"_json", "rel_path", "ranks"} - {Field.CATEGORY_ID.db_name}
+
+        sql = "INSERT INTO metadata (\n    "
+        sql += ",\n    ".join(fields)
+        sql += f",\n    {Field.CATEGORY_ID.db_name}\n)\n"
+        sql += "SELECT\n    :"
+        sql += ",\n    :".join(fields)
+        sql += f",\n    categories.id\n"
+        sql += "FROM categories\n"
+        sql += f"WHERE name = :{Field.CATEGORY.db_name}"
+
         conn.executemany(sql, metadata)
         conn.commit()
 
@@ -320,14 +223,6 @@ def delete_db():
 
 #***===== Create Blueprint =====***#
 bp  = flask.Blueprint("database", __name__, cli_group="database")
-
-#***===== Register Template Filters =====***#
-@bp.app_template_filter("field_name")
-def field_name(s: str) -> str:
-    if s == "any":
-        return s
-    
-    return str(FieldType(s))
 
 #***===== Register Jinja Context Processors =====***#
 @bp.app_context_processor
@@ -339,7 +234,7 @@ def inject_categories():
 @bp.app_context_processor
 def inject_max_sequence_length():
     db = get_db()
-    max_seq_len = db.execute(f"SELECT MAX({FieldType.SEQUENCE_LEN.db_name}) FROM search").fetchone()[0]
+    max_seq_len = db.execute(f"SELECT MAX({Field.SEQUENCE_LEN.db_name}) FROM search").fetchone()[0]
     if not max_seq_len:
         max_seq_len = 0
     flask.current_app.logger.debug(f"The maximum sequence lengths found in the database is {max_seq_len}.")
