@@ -10,9 +10,6 @@ from pathlib import Path
 
 import functools
 
-#*----- Flask -----*#
-import flask
-
 #*----- External packages -----*#
 
 #*----- Custom packages -----*#

@@ -11,10 +11,12 @@ import flask
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
+from ..types import Field
+
 from .. import database
-from ..search.types import FieldType
-from ..search import sql, results_to_histones
 from ..database import models
+
+from ..search import sql, results_to_histones
 
 #***===== Blueprint Import =====***#
 from . import bp
@@ -29,8 +31,6 @@ def index():
 @bp.route("/entry/<uniprot_id>/<multimer>", methods=["GET"])
 def entry(uniprot_id: str, multimer: Optional[str] = None):
     """ Render the structure page for a specified entry. """
-    JSON_FIELDS = ["lineage", "lineage_json", "protein_id", "proteome_id", "gen_id", "genome_id", "ranks"]
-
     args = flask.request.args
     if not "rank" in args:
         rank = 1
@@ -43,7 +43,7 @@ def entry(uniprot_id: str, multimer: Optional[str] = None):
     flask.current_app.logger.debug(f"Currently selected rank: {rank}")
 
     db = database.get_db()
-    query = sql.Query(filter = sql.Filter(FieldType.UNIPROT_ID, uniprot_id))
+    query = sql.Query(filter = sql.Filter(Field.UNIPROT_ID, uniprot_id))
     results = query.execute(db)
     result = results.fetchone()
 

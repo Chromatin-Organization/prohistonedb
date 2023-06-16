@@ -83,6 +83,9 @@ def create_app(test_config: Mapping[str, Any] = None):
     #*----- Register Blueprints -----*#
     app.logger.info("Registering blueprints...")
 
+    from . import types
+    app.register_blueprint(types.bp)
+
     from . import main
     app.register_blueprint(main.bp)
     app.add_url_rule("/", endpoint="index") # Add index as an additional endpoint for the root.

@@ -3,14 +3,12 @@
         <div id="filter-type" class="dropdown py-0">
             <a href="#" class="btn btn-primary dropdown-toggle mb-0 caption" data-bs-toggle="dropdown" aria-expanded="false">Select type</a>
             <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-item" data-value="all">All types</a></li>
-                <li><a href="#" class="dropdown-item" data-value="uid">UniProt ID</a></li>
-                <li><a href="#" class="dropdown-item" data-value="tax">Taxonomy</a></li>
-                <li><a href="#" class="dropdown-item" data-value="org">Organism</a></li>
-                <li><a href="#" class="dropdown-item" data-value="gen_id">Gen ID</a></li>
-                <li><a href="#" class="dropdown-item" data-value="seq">Sequence</a></li>
+                <li><a href="#" class="dropdown-item" data-value="{{Field.ANY.search_name}}">All types</a></li>
+                {% for field in Field.search_fields() %}
+                    <li><a href="#" class="dropdown-item" data-value="{{field.search_name}}">{{field.search_name | field_name}}</a></li>
+                {% endfor %}
             </ul>
-            <input type="hidden" name="filter" value="all" />
+            <input type="hidden" name="filter" value="{{Field.ANY.search_name}}" />
         </div>
         <input type="text" class="form-control bg-light ps-2" name="q" placeholder="Search" maxlength="40" />
         <span class="input-group-text pe-1" style="z-index: 9">

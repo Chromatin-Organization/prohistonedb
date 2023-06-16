@@ -14,15 +14,15 @@ from werkzeug.datastructures import MultiDict
 
 #*----- Local imports -----*#
 from . import sql
-from .types import FieldType, ResultCounts
 from . import results_to_histones
+
+from ..types import Field, ResultCounts
 from .. import database
 
 #***===== Functions =====***#
 def convert_args(args: MultiDict) -> MultiDict:
     """Takes request arguments and returns a MultiDict with filter=[field]&q=[value] syntax converted to [filter]=[value] pairs. """
-    accepted_fields = FieldType.accepted_fields()
-    accepted_fields.append("any")
+    accepted_fields = Field.accepted_fields()
     
     fields = args.keys()
 
@@ -41,6 +41,11 @@ def convert_args(args: MultiDict) -> MultiDict:
                     flask.current_app.logger.debug(f"Ignoring '{field}' since it is not a valid filter.")
                     continue
 
+                # Ignore an empty "any" field
+                if field == Field.ANY.search_name and not value:
+                    flask.current_app.logger.debug(f"Ignoring empty '{field}' filter.")
+                    continue
+
                 args.add(field, value)
         else:
             flask.current_app.logger.debug(f'"filter" (length {len(filter_fields)}) and "q" (length {len(values)}) do not have the same number of items.')
@@ -50,8 +55,7 @@ def convert_args(args: MultiDict) -> MultiDict:
 #? Do we want to change behaviour away from discarding non-valid fields?
 def filter_from_args(args: MultiDict) -> Union[sql.Filter, sql.CombinedFilterABC, None]:
     """ Takes request arguments and returns a Filter to be used for an SQL query. """
-    accepted_fields = FieldType.accepted_fields()
-    accepted_fields.append("any")
+    accepted_fields = Field.accepted_fields()
 
     filters = []
     fields = args.keys()
@@ -67,9 +71,9 @@ def filter_from_args(args: MultiDict) -> Union[sql.Filter, sql.CombinedFilterABC
         # Create a logical OR filter per field
         values = args.getlist(field)
             
-        if field == "any":
+        if field == Field.ANY.search_name:
             if len(values) == 1:
-                filters.append(sql.AnyFilter(values[0]))
+                    filters.append(sql.AnyFilter(values[0]))
             else:
                 filters.append(sql.OrFilter([sql.AnyFilter(value) for value in values]))
         else:

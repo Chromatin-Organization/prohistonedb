@@ -13,46 +13,45 @@ import flask
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
-from ..database import models
-from ..categories import get_categories
+from ..types import Field
+from ..database import models, get_categories
 
 #***===== Functions =====***#
-# TODO: Automatic column names
 def results_to_histones(results: Sequence[Mapping]) -> list[models.Histone]:
     histones = []
 
     for result in results:
         categories = get_categories()
 
-        lineage_json = json.loads(result["lineage_json"])
+        lineage_json = json.loads(result[Field.LINEAGE.db_name+"_json"])
         lineage = []
         for item in lineage_json:
             lineage.append(models.Lineage(item["taxonId"], item["scientificName"], item["rank"], item["hidden"]))
 
         lineage.reverse()
 
-        if result["proteome_ids"] is None:
+        if result[Field.PROTEOME_IDS.db_name] is None:
             proteome_ids = None
         else:
-            proteome_ids = json.loads(result["proteome_ids"])
+            proteome_ids = json.loads(result[Field.PROTEOME_IDS.db_name])
         
         if result["genes"] is None:
             genes = None
         else:
-            genes = json.loads(result["genes"])
+            genes = json.loads(result[Field.GENES.db_name])
         
         ranks = json.loads(result["ranks"])
 
         histones.append(models.Histone(
-            uniprot_id=result["uniprot_id"],
-            organism=models.Organism(result["organism_id"], result["organism"]),
-            sequence=models.Sequence(result["sequence"]),
-            category=categories[result["category_id"]],
+            uniprot_id=result[Field.UNIPROT_ID.db_name],
+            organism=models.Organism(result[Field.ORGANISM_ID.db_name], result[Field.ORGANISM.db_name]),
+            sequence=models.Sequence(result[Field.SEQUENCE.db_name]),
+            category=categories[result[Field.CATEGORY_ID.db_name]],
             lineage=lineage,
-            protein_ids=json.loads(result["protein_ids"]),
+            protein_ids=json.loads(result[Field.PROTEIN_IDS.db_name]),
             proteome_ids=proteome_ids,
             genes=genes,
-            genome_ids=json.loads(result["genome_ids"]),
+            genome_ids=json.loads(result[Field.GENOME_IDS.db_name]),
             multimer_rankings={models.Multimer(multimer):ranks[multimer] for multimer in ranks.keys()},
             rel_path=Path(result["rel_path"]),
         ))

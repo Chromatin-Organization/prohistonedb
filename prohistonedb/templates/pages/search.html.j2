@@ -45,7 +45,7 @@
                                     {% for cat in categories.values() %}
                                     {% set count = counts.categories[cat.name] %}
                                     <div class="form-check ps-0{% if not count is defined %}{{' noitems'}}{% set count = 0 %}{% endif %}">
-                                        <input class="form-check-input" type="checkbox" name="cat" value="{{cat.name}}" id="categoryCheck{{loop.index}}">
+                                        <input class="form-check-input" type="checkbox" name="{{Field.CATEGORY_ID.search_name}}" value="{{cat.id}}" id="categoryCheck{{loop.index}}">
                                         <label class="form-check-label" for="categoryCheck{{loop.index}}">
                                             {{cat.name}}
                                         </label>
@@ -65,7 +65,7 @@
                             {% for superkingdom in superkingdoms %}
                             {% set count = counts.superkingdoms[superkingdom] %}
                             <div class="form-check col-10{% if not count is defined %}{{' noitems'}}{% set count = 0 %}{% endif %}">
-                                <input class="form-check-input" type="radio" name="tax" value="{{superkingdom}}"  id="lineageCheck{{loop.index}}">
+                                <input class="form-check-input" type="checkbox" name="{{Field.LINEAGE_SUPERKINGDOM.search_name}}" value="{{superkingdom}}"  id="lineageCheck{{loop.index}}">
                                 <label class="form-check-label" for="lineageCheck{{loop.index}}">
                                     {{superkingdom}}
                                 </label>
@@ -76,8 +76,8 @@
                             {% endfor %}
                             
                             <div class="form-check col-10{% if not counts.superkingdoms[None] is defined %}{{' noitems'}}{% endif %}">
-                                <input class="form-check-input" type="radio" name="tax" value="{{superkingdom}}">
-                                <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="{{Field.LINEAGE_SUPERKINGDOM.search_name}}" value="", id="lineageCheck{{(superkingdoms | length)+1}}">
+                                <label class="form-check-label" for="lineageCheck{{(superkingdoms | length)+1}}">
                                     Undefined
                                 </label>
                                 <span class="filter-num badge">
@@ -92,7 +92,7 @@
                                 <div class="multislider slider-round"></div>
                             </div>
                             {# NOTE: set seqlHidden to disabled to prevent default values being used as a filter #}
-                            <input class="form-check-input" type="hidden" name="seql" value=""  disabled />
+                            <input class="form-check-input" type="hidden" name="{{Field.SEQUENCE_LEN.search_name}}" value=""  disabled />
                         </div>
 
                         <div class="row mt-5">
@@ -237,7 +237,7 @@
   {% block javascripts %}
     <script type="text/javascript">
         const seqlSlider = document.querySelector('.multislider');
-        const seqlHidden = document.querySelector('input[class="form-check-input"][name="seql"]');
+        const seqlHidden = document.querySelector('input[class="form-check-input"][name="{{Field.SEQUENCE_LEN.search_name}}"]');
 
         // initialize multirange slider
         noUiSlider.create(seqlSlider, {
@@ -318,7 +318,7 @@
                     if (key === filter.name) {
                         filterArgs[key].forEach( val => {
                             // what if multiple seql filters applied sequentially?
-                            if (key === "seql") {
+                            if (key === "{{Field.SEQUENCE_LEN.search_name}}") {
                                 const seqlRange = val.split("-").map(Number);
                                 seqlSlider.noUiSlider.set([seqlRange[0], seqlRange[1]]);
                                 seqlHidden.disabled = false;
