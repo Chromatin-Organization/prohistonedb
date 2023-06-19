@@ -47,12 +47,16 @@
         <div class="container mt-7">
             <div class="row">
                 <div class="col-lg-8 my-auto">
-                    <h2 class="text-white pt-3">Search results for {{ request.args.get('q') }}</h2>
                     {% if counts.total == 0 %}
-                    <p class="mb-4 text-white">No results have been found.</p>
+                        <h2 class="text-white pt-3">No results have been found.</h2>
                     {% else %}
-                    {% set results_min = (page - 1) * RESULTS_PER_PAGE + 1 %}
-                    <p class="mb-4 text-white">Showing {{results_min}}-{{results_min + (results | length) - 1}} of {{counts.total}} results</p>
+                        <h2 class="text-white pt-3">Search results</h2>
+                        {% if counts.total == 1 %}
+                            <p class="mb-4 text-white">1 result found</p>
+                        {% else %}
+                            {% set results_min = (page - 1) * RESULTS_PER_PAGE + 1 %}
+                            <p class="mb-4 text-white">Showing {{results_min}}-{{results_min + (results | length) - 1}} of {{counts.total}} results</p>
+                        {% endif %}
                     {% endif %}
                 </div>
             </div>
