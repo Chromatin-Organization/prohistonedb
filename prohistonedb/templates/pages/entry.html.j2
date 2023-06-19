@@ -256,15 +256,11 @@
             viewportShowControls: false // control panel (= rightsidebar & sequence panel) toggle
         }).then(viewer => {
             viewer.loadStructureFromUrl(modelURL, format='mmcif'); // mmcif or pdb
-        });
 
-        window.addEventListener("DOMContentLoaded", () => {
             const mspLayoutHide = document.querySelector(".msp-layout-hide-left.msp-layout-hide-bottom");
-
             mspViewer.style.width = '100%';
             mspLayoutHide.classList.add("msp-layout-hide-right");
         });
-        
     </script>
 
 {% endblock javascripts %}

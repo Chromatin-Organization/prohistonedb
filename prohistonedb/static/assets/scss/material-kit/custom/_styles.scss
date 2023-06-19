@@ -40,10 +40,10 @@ h3 {
 }
 
 .nav-item .material-icons-round {
-    font-size: $font-size-base;
+    font-size: $font-size-lg;
 
     &:not(.active) {
-        color: $gray-500;
+        color: $headings-color;
     }
 }
 /* list/table view toggle */
