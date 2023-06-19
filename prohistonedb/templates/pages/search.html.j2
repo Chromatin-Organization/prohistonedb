@@ -1,7 +1,36 @@
 {% extends 'layouts/base.html.j2' %}
 
+{#*===== Constants =====*#}
 {% set RESULTS_PER_PAGE = 20 %}
 
+{#*===== Macros =====*#}
+{% macro clear() %}{{url_for("search.index")}}{% endmacro %}
+{% macro reload() %}{{url_for("search.index", **req_filters.to_dict(flat=False))}}{% endmacro %}
+{% macro apply_facets() %}
+    {% set filters = req_filters.copy() %}
+    {% for field in Field.facet_fields() %}
+        {% do filters.poplist(field.search_name) %}
+    {% endfor %}
+    {{url_for("search.index", **filters.to_dict(flat=False))}}
+{% endmacro %}
+{% macro add_filters(new_filters) %} {# filters: a sequence of (field: str, value: str) pairs #}
+    {% set filters = req_filters.copy() %}
+    {% for (field, value) in new_filters %}
+        {% do filters.add(field, value) %}
+    {% endfor %}
+    {{ url_for("search.index", **filters.to_dict(flat=False)) }}
+{% endmacro %}
+{% macro remove_filter(field, value) %} {# field: str, value: str #}
+    {% set filters = req_filters.copy() %}
+    {% set temp_list = filters.getlist(field) %}
+    {% if value in temp_list %}
+        {% do temp_list.remove(value) %}
+        {% do filters.setlist(field, temp_list) %}
+    {% endif %}
+    {{ url_for("search.index", **filters.to_dict(flat=False)) }}
+{% endmacro %}
+
+{#*===== Header Block Implementations =====*#}
 {% block title %} {{siteName}} Search {% endblock title %}
 {% block body %} class="search fluid-bg" {% endblock body %}
 
@@ -9,20 +38,25 @@
     {% include 'includes/navigation_search.html.j2' %}
 {% endblock header %}
 
+{#*===== Main Content =====*#}
 {% block content %}
-
+  <!--* Page Header *-->
   <header>
     <div class="page-header pb-5">
       <div class="container">
         <div class="container mt-7">
             <div class="row">
                 <div class="col-lg-8 my-auto">
-                    <h2 class="text-white pt-3">Search results for {{ request.args.get('q') }}</h2>
                     {% if counts.total == 0 %}
-                    <p class="mb-4 text-white">No results have been found.</p>
+                        <h2 class="text-white pt-3">No results have been found.</h2>
                     {% else %}
-                    {% set results_min = (page - 1) * RESULTS_PER_PAGE + 1 %}
-                    <p class="mb-4 text-white">Showing {{results_min}}-{{results_min + (results | length) - 1}} of {{counts.total}} results</p>
+                        <h2 class="text-white pt-3">Search results</h2>
+                        {% if counts.total == 1 %}
+                            <p class="mb-4 text-white">1 result found</p>
+                        {% else %}
+                            {% set results_min = (page - 1) * RESULTS_PER_PAGE + 1 %}
+                            <p class="mb-4 text-white">Showing {{results_min}}-{{results_min + (results | length) - 1}} of {{counts.total}} results</p>
+                        {% endif %}
                     {% endif %}
                 </div>
             </div>
@@ -34,10 +68,10 @@
   <div class="card card-body mx-3 mx-md-4">
      <div class="container my-3">
             <div class="row">
-                <!-- sidebar left (search facets) -->
+                <!-- Sidebar Left (search facets) -->
                 <div id="facets-container" class="col-xl-3 col-lg-4 col-md-5 d-none d-md-block mt-3">
                     <h3>Filter by:</h3>
-                    <form name="filters" method="GET" action="{{ url_for('search.index') }}">
+                    <form name="filters" method="GET" action="{{ apply_facets() }}">
                         <div class="row mt-3 filter-category">
                             <div class="label"><h6>Category</h6></div>
                             <div id="filter-category-wrapper" class="col-11 ps-0 mb-2">
@@ -103,36 +137,28 @@
                                 </button>
                             </div>
                         </div>
-
-                        {# !FIXME: temporarily disabled include file to test facets #}
-                        {# include 'includes/search_hidden.html.j2' #}
-                        <input type="hidden" name="filter" value="{{ request.args.get('filter') }}" />
-                        <input type="hidden" name="q" value="{{ request.args.get('q') }}" />
                     </form>
                 </div>
                
 
                  <div class="col-xl-9 col-lg-8 col-md-7 mt-3">
-                    
                     {# * Applied filters block #}
                     {% if req_filters and (req_filters | length) > 0 %}
                         <div id="applied-filters-container" class="d-grid gap-2 d-md-block mb-4">
                             <h6 class="label">Filters:</h6>
-                            {% for key in req_filters.keys() %}
-                                {% for f in req_filters.getlist(key) %}
-                                    <button type="button" class="btn btn-light btn-sm btn-icon mb-1" style="vertical-align: baseline" title="click to remove filter">
-                                        <span class="caption">{{(key | field_name)}}: {{f}}</span>
+                            {% for field in req_filters.keys() %}
+                                {% for value in req_filters.getlist(field) %}
+                                    <button type="button" class="btn btn-light btn-sm btn-icon mb-1" style="vertical-align: baseline" title="click to remove filter" onClick="location.href='{{remove_filter(field, value) | trim}}'">
+                                        <span class="caption">{{(field | field_name)}}: {{value}}</span>
                                         <span class="material-icons-round">disabled_by_default</span>
                                     </button>
                                 {% endfor %}
                             {% endfor %}
 
-                            <form name="reset-filters" method="GET" action="{{ url_for('search.index') }}" style="display: inline-block">
-                                <button type="submit" class="btn btn-secondary btn-sm btn-icon mb-1" style="vertical-align: baseline">
-                                    <span class="caption">Clear filters</span>
-                                    <span class="material-icons-round">delete</span>
-                                </button>
-                            </form>
+                            <button type="submit" class="btn btn-secondary btn-sm btn-icon mb-1" style="vertical-align: baseline" onClick="location.href='{{clear()|trim}}'">
+                                <span class="caption">Clear filters</span>
+                                <span class="material-icons-round">delete</span>
+                            </button>
                         </div>
                     {% endif %}
 

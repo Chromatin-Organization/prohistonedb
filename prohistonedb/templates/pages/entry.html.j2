@@ -77,122 +77,133 @@
         </div>
     </div><!-- end page header -->
 </header>
-  
+
 <div class="card card-body mx-3 mx-md-4">
     <section class="my-3">
-        <!-- structure / views options -->
-        <div class="container">              
-            <div class="row py-3 mt-3">
-                <div class="col-12 start-0">
-                    <div class="dropdown float-start me-2">
-                        <a class="btn btn-sm btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{multimer.value}}
-                        </a>
+        {% if multimer is defined %}
+            <!-- structure / views options -->
+            <div class="container">              
+                <div class="row py-3 mt-3">
+                    <div class="col-12 start-0">
+                        
+                        <div class="dropdown float-start me-2">
+                                <a class="btn btn-sm btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{multimer.value}}
+                                </a>
 
-                        <ul id="select_multimer" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            {# * For now every multimer has a seperate call to the backend. #}
-                            {# ? Since all required information should be available from the first call, we may want to ovload this to the client in the future. #}
-                            {# ? Maybe add something to indicate the default option? #}
-                            {% for mult in entry.multimers %}
-                                <li><a class="dropdown-item" href="{{ reload(mult,rank) }}">{{mult.value}}</a></li>
-                            {% endfor %}
-                        </ul>
+                                <ul id="select_multimer" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    {# * For now every multimer has a seperate call to the backend. #}
+                                    {# ? Since all required information should be available from the first call, we may want to ovload this to the client in the future. #}
+                                    {# ? Maybe add something to indicate the default option? #}
+                                    {% for mult in entry.multimers %}
+                                        <li><a class="dropdown-item" href="{{ reload(mult,rank) }}">{{mult.value}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                        </div>
+
+                        <div class="dropdown float-start">
+                            <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                Rank {{rank}}
+                            </a>
+
+                            <ul id="select_rank" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                {% for n in range(5) %}
+                                    <li><a class="dropdown-item option-{{n + 1}}" href="{{ reload(multimer, (n + 1)) }}">Rank {{n + 1}} - Model {{entry.get_model_id(multimer, n + 1)}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="dropdown float-end">
+                            <a class="btn btn-sm btn-secondary btn-download float-end" href="https://prohistonedb.universiteitleiden.nl/data/zips/{{entry.uniprot_id}}.zip" role="button" title="Download all structure data (zipped)">
+                                <span class="caption">Download</span>
+                                <span class="material-icons-round">download</span>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="dropdown float-start">
-                        <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            Rank {{rank}}
-                        </a>
-
-                        <ul id="select_rank" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            {% for n in range(5) %}
-                                <li><a class="dropdown-item option-{{n + 1}}" href="{{ reload(multimer, (n + 1)) }}">Rank {{n + 1}} - Model {{entry.get_model_id(multimer, n + 1)}}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-
-                    <div class="dropdown float-end">
-                        <a class="btn btn-sm btn-secondary btn-download float-end" href="https://prohistonedb.universiteitleiden.nl/data/zips/{{entry.uniprot_id}}.zip" role="button" title="Download all structure data (zipped)">
-                            <span class="caption">Download</span>
-                            <span class="material-icons-round">download</span>
-                        </a>
-                    </div>
                 </div>
-
             </div>
-        </div>
 
-        <div class="container my-3">
-            <div class="row">
-                <!-- sidebar left -->
-                <div class="col-lg-3 d-none d-lg-block">
-                    <h3>3D viewer</h3>
-                    <div class="viewer-legend py-3">
-                        <h6>Model confidence:</h6>
-                        <div>
-                            <span class="legend-color" style="background-color: rgb(0, 83, 214);">&nbsp;</span>
-                            <span class="legend-label">Very high (pLDDT &gt; 90)</span>
+            <div class="container my-3">
+                <div class="row">
+                    <!-- sidebar left -->
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <h3>3D viewer</h3>
+                        <div class="viewer-legend py-3">
+                            <h6>Model confidence:</h6>
+                            <div>
+                                <span class="legend-color" style="background-color: rgb(0, 83, 214);">&nbsp;</span>
+                                <span class="legend-label">Very high (pLDDT &gt; 90)</span>
+                            </div>
+                            <div>
+                                <span class="legend-color" style="background-color: rgb(101, 203, 243);">&nbsp;</span>
+                                <span class="legend-label">Confident (90 &gt; pLDDT &gt; 70)</span>
+                            </div>
+                            <div>
+                                <span class="legend-color" style="background-color: rgb(255, 219, 19);">&nbsp;</span>
+                                <span class="legend-label">Low (70 &gt; pLDDT &gt; 50)</span>
+                            </div>
+                            <div>
+                                <span class="legend-color" style="background-color: rgb(255, 125, 69);">&nbsp;</span>
+                                <span class="legend-label">Very low (pLDDT &lt; 50)</span>
+                            </div>
                         </div>
-                        <div>
-                            <span class="legend-color" style="background-color: rgb(101, 203, 243);">&nbsp;</span>
-                            <span class="legend-label">Confident (90 &gt; pLDDT &gt; 70)</span>
-                        </div>
-                        <div>
-                            <span class="legend-color" style="background-color: rgb(255, 219, 19);">&nbsp;</span>
-                            <span class="legend-label">Low (70 &gt; pLDDT &gt; 50)</span>
-                        </div>
-                        <div>
-                            <span class="legend-color" style="background-color: rgb(255, 125, 69);">&nbsp;</span>
-                            <span class="legend-label">Very low (pLDDT &lt; 50)</span>
+                        <p>
+                            AlphaFold produces a per-residue confidence score (pLDDT) between 0 and 100. Some regions below 50 pLDDT may be unstructured in isolation.
+                        </p>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row mt-3">
+                            <div id="viewer-container" class="col-lg-12"><!-- mask right sidebar Molstar viewer -->
+                                <div id="mspViewer">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <p>
-                        AlphaFold produces a per-residue confidence score (pLDDT) between 0 and 100. Some regions below 50 pLDDT may be unstructured in isolation.
-                    </p>
                 </div>
-                <div class="col-lg-9">
-                    <div class="row mt-3">
-                        <div id="viewer-container" class="col-lg-12"><!-- mask right sidebar Molstar viewer -->
-                            <div id="mspViewer">
+
+                <div class="row my-5">
+                    <div class="col-lg-3">
+                        <h3>Predicted aligned error</h3>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row mt-3">
+                            <div id="pae-view" class="columns medium-9">
+                                <div id="pae-container" class="r{{rank | string}} mx-auto" style="background-image: url('{{ img_path('_PAE.png') }}')">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-5">
+                    <div class="col-lg-3">
+                        <h3>Sequence coverage &<br/>local confidence (LDDT)</h3>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row mt-3">
+                            <div class="w-100">
+                                <div id="coverage-container" class="mx-auto w-100">
+                                    <img src="{{ img_path('_coverage.png') }}" class="w-100 h-auto">
+                                </div>
+                                <div id="plddt-container" class="mx-auto w-100">
+                                    <img src="{{ img_path('_plddt.png') }}" class="w-100 h-auto">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-             <div class="row my-5">
-                <div class="col-lg-3">
-                    <h3>Predicted aligned error</h3>
-                </div>
-                <div class="col-lg-9">
-                    <div class="row mt-3">
-                        <div id="pae-view" class="columns medium-9">
-                            <div id="pae-container" class="r{{rank | string}} mx-auto" style="background-image: url('{{ img_path('_PAE.png') }}')">
-                            </div>
-                        </div>
+        {% else %}
+            {# TODO: Add better formatting. #}
+            <div class="container">              
+                <div class="row py-3 mt-3">
+                    <div class="col-12">
+                        <h3>No structures found for this Histone.</h3>
                     </div>
                 </div>
             </div>
-
-            <div class="row my-5">
-                <div class="col-lg-3">
-                    <h3>Sequence coverage &<br/>local confidence (LDDT)</h3>
-                </div>
-                <div class="col-lg-9">
-                    <div class="row mt-3">
-                        <div class="w-100">
-                            <div id="coverage-container" class="mx-auto w-100">
-                                <img src="{{ img_path('_coverage.png') }}" class="w-100 h-auto">
-                            </div>
-                            <div id="plddt-container" class="mx-auto w-100">
-                                <img src="{{ img_path('_plddt.png') }}" class="w-100 h-auto">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        {% endif %}
     </section>
 
     <section id="attribution" class="pb-2 position-relative bg-gradient-dark mx-n3">
@@ -232,35 +243,36 @@
 {% endblock content %}
 
 {% block javascripts %}
-    <script>
-        const mspViewer = document.querySelector("#mspViewer");
-        const modelURL = "https://prohistonedb.universiteitleiden.nl/{{entry.get_cif_path(multimer, rank).as_posix()}}";
+    {% if multimer is defined %}
+        <script>
+            const mspViewer = document.querySelector("#mspViewer");
+            const modelURL = "https://prohistonedb.universiteitleiden.nl/{{entry.get_cif_path(multimer, rank).as_posix()}}";
 
-        molstar.Viewer.create('mspViewer', {
-            // https://molstar.org/docs/plugin/
-            // https://molstar.org/viewer-docs/query-parameters/
-            // https://github.com/molstar/pdbe-molstar/blob/master/index.html
+            molstar.Viewer.create('mspViewer', {
+                // https://molstar.org/docs/plugin/
+                // https://molstar.org/viewer-docs/query-parameters/
+                // https://github.com/molstar/pdbe-molstar/blob/master/index.html
 
-            layoutIsExpanded: false, // expand to window
-            layoutShowControls: true, // rightsidebar & sequence panel
-            layoutShowRemoteState: false,
-            layoutShowSequence: true,
-            layoutShowLog: false,
-            layoutShowLeftPanel: false, // adds "msp-layout-hide-left" class
-            alphafoldView: true,
+                layoutIsExpanded: false, // expand to window
+                layoutShowControls: true, // rightsidebar & sequence panel
+                layoutShowRemoteState: false,
+                layoutShowSequence: true,
+                layoutShowLog: false,
+                layoutShowLeftPanel: false, // adds "msp-layout-hide-left" class
+                alphafoldView: true,
 
-            // show/hide viewport buttons
-            viewportShowExpand: false,
-            viewportShowSelectionMode: false,
-            viewportShowAnimation: false,
-            viewportShowControls: false // control panel (= rightsidebar & sequence panel) toggle
-        }).then(viewer => {
-            viewer.loadStructureFromUrl(modelURL, format='mmcif'); // mmcif or pdb
+                // show/hide viewport buttons
+                viewportShowExpand: false,
+                viewportShowSelectionMode: false,
+                viewportShowAnimation: false,
+                viewportShowControls: false // control panel (= rightsidebar & sequence panel) toggle
+            }).then(viewer => {
+                viewer.loadStructureFromUrl(modelURL, format='mmcif'); // mmcif or pdb
 
-            const mspLayoutHide = document.querySelector(".msp-layout-hide-left.msp-layout-hide-bottom");
-            mspViewer.style.width = '100%';
-            mspLayoutHide.classList.add("msp-layout-hide-right");
-        });
-    </script>
-
+                const mspLayoutHide = document.querySelector(".msp-layout-hide-left.msp-layout-hide-bottom");
+                mspViewer.style.width = '100%';
+                mspLayoutHide.classList.add("msp-layout-hide-right");
+            });
+        </script>
+    {% endif %}
 {% endblock javascripts %}

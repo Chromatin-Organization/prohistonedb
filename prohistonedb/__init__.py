@@ -33,6 +33,9 @@ def create_app(test_config: Mapping[str, Any] = None):
     #? We might want to change the default instance folder for deployment.
     app = Flask(__name__)
 
+    #*----- Jinja extensions -----*#
+    app.jinja_env.add_extension('jinja2.ext.do')
+
     #*----- Change logging level when in debug mode -----*#
     if app.debug:
         app.logger.root.level = "DEBUG"
