@@ -132,7 +132,7 @@ h3 {
 /* offcanvas-backdrop blur clashes with navbar blur class */
 .offcanvas-backdrop.show {
     opacity: 1;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .3);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
 }
@@ -145,6 +145,9 @@ h3 {
 }
 .offcanvas:not(.show) .offcanvas-brand {
     display: none;
+}
+.offcanvas.offcanvas-end {
+    border-left: none;
 }
 
 /* replace FontAwesome symbols with local Material Icons */
@@ -177,6 +180,8 @@ h3 {
 .page-header {
     align-items: normal;
     min-height: auto;
+    /* index page searchbox dropdown menu gets cut off otherwise */
+    overflow: visible;
 }
 
 .fluid-bg { background: $headerless-gradient; }

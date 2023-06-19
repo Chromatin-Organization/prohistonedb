@@ -1,14 +1,10 @@
 {% extends 'layouts/base.html.j2' %}
 
-
 {% block title %} {{siteName}} {% endblock title %}
 
 {% block body %} class="index-page bg-gray-200" {% endblock body %}
 
 {% block content %}
-
-</div></div></div>
-
 <header>
   <div class="page-header min-vh-75" style="background-image: url('{{ url_for('static', filename = 'assets/img/generative-circles-header.png' )}}')">
     <span class="mask bg-gradient-secondary opacity-6"></span>
@@ -41,7 +37,6 @@
   </section>
 
 </div>
-
 {% endblock content %}
 
 {% block javascripts %}
