@@ -59,8 +59,9 @@ def entry(uniprot_id: str, multimer: Optional[str] = None):
         multimer = entry.category.preferred_multimer
     
     # TODO: Better error handling
+    # (Currently just renders the template without multimer info)
     if not entry.has_multimer(multimer):
-        raise ValueError(f"Multimer '{multimer}' is not available for {uniprot_id}")   
+        return flask.render_template('pages/entry.html.j2', entry = entry, rank = rank)  
         
     return flask.render_template('pages/entry.html.j2', entry = entry, multimer = multimer, rank = rank)
 
