@@ -148,7 +148,11 @@
                             {% for field in req_filters.keys() %}
                                 {% for value in req_filters.getlist(field) %}
                                     <button type="button" class="btn btn-light btn-sm btn-icon mb-1" style="vertical-align: baseline" title="click to remove filter" onClick="location.href='{{remove_filter(field, value) | trim}}'">
+                                        {% if field == Field.CATEGORY_ID %}
+                                        <span class="caption">{{(field | field_name)}}: {{value}} ({{categories[value | int].short_name}})</span>
+                                        {% else %}
                                         <span class="caption">{{(field | field_name)}}: {{value}}</span>
+                                        {% endif %}
                                         <span class="material-icons-round">disabled_by_default</span>
                                     </button>
                                 {% endfor %}
