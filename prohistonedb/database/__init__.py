@@ -132,8 +132,8 @@ def update_db_categories():
                 data["short_name"] = category_json["shortName"]
             else:
                 data["short_name"] = None
-            if "has_page" in categories_json:
-                data["has_page"] = int(categories_json["has_page"])
+            if "hasPage" in category_json:
+                data["has_page"] = int(category_json["hasPage"])
             else:
                 data["has_page"] = int(False)
 

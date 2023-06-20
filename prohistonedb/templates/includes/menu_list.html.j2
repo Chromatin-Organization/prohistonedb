@@ -16,12 +16,19 @@
         </a>
       </li>
       {% for cat in categories.values() %}
+        {% if cat.has_page %}
+        <li>
+          <a href="#" class="dropdown-item">
+            <span>{{cat.short_name}}</span>
+          </a>
+        </li>
+        {% endif %}
+      {% endfor %}
       <li>
         <a href="#" class="dropdown-item">
-          <span>{{cat.name}}</span>
+          <span>Other Categories</span>
         </a>
       </li>
-      {% endfor %}
     </ul>
   </li>
 

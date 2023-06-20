@@ -77,16 +77,16 @@
                             <div id="filter-category-wrapper" class="col-11 ps-0 mb-2">
                                 <div class="form-check">
                                     {% for cat in categories.values() %}
-                                    {% set count = counts.categories[cat.name] %}
-                                    <div class="form-check ps-0{% if not count is defined %}{{' noitems'}}{% set count = 0 %}{% endif %}">
-                                        <input class="form-check-input" type="checkbox" name="{{Field.CATEGORY_ID.search_name}}" value="{{cat.id}}" id="categoryCheck{{loop.index}}">
-                                        <label class="form-check-label" for="categoryCheck{{loop.index}}">
-                                            {{cat.name}}
-                                        </label>
-                                        <span class="filter-num badge">
-                                            {{count}}
-                                        </span>
-                                    </div>
+                                        {% set count = counts.categories[cat.name] %}
+                                        <div class="form-check ps-0{% if not count is defined %}{{' noitems'}}{% set count = 0 %}{% endif %}">
+                                            <input class="form-check-input" type="checkbox" name="{{Field.CATEGORY_ID.search_name}}" value="{{cat.id}}" id="categoryCheck{{loop.index}}">
+                                            <label class="form-check-label" for="categoryCheck{{loop.index}}">
+                                                {{cat.short_name}}
+                                            </label>
+                                            <span class="filter-num badge">
+                                                {{count}}
+                                            </span>
+                                        </div>
                                     {% endfor %}
                                 </div>
                             </div>
