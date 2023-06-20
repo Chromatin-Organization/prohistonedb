@@ -24008,6 +24008,11 @@ h3, .h3 {
   border-left: none;
 }
 
+.offcanvas.offcanvas-start {
+  border-right: none;
+  box-shadow: 2px 1px 12px 2px rgba(0, 0, 0, 0.16);
+}
+
 /* replace FontAwesome symbols with local Material Icons */
 .dropdown .dropdown-toggle:after,
 .dropup .dropdown-toggle:after,
@@ -24105,7 +24110,7 @@ form[name=search] .input-group-text button[type=submit] {
 }
 
 #filter-category-wrapper {
-  height: 340px;
+  height: 27vh;
   padding-top: 0.4em;
   overflow: hidden;
   position: relative;
@@ -24119,6 +24124,10 @@ form[name=search] .input-group-text button[type=submit] {
 .ps__rail-x,
 .ps__rail-y {
   opacity: 0.6;
+}
+
+#offFacets:not(.offfacets-body) > .ps__rail-y {
+  opacity: unset;
 }
 
 .filter-num {
