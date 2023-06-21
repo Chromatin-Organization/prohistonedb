@@ -149,6 +149,10 @@ h3 {
 .offcanvas.offcanvas-end {
     border-left: none;
 }
+.offcanvas.offcanvas-start {
+    border-right: none;
+    box-shadow: 2px 1px 12px 2px rgba(0, 0, 0, .16);
+}
 
 /* replace FontAwesome symbols with local Material Icons */
 .dropdown .dropdown-toggle:after, 
@@ -242,9 +246,8 @@ form[name=search] .input-group-text {
 
 // force mini scrollbar'd area
 #filter-category-wrapper {
-    height: 340px; // increased from 190px
+    height: 27vh;
     padding-top: 0.4em;
-    //box-shadow: 0 20px 10px -21px rgba(0,0,0,0.2) inset, 0 -20px 10px -21px rgba(0,0,0,0.2) inset;
     // perfect-scrollbar.js:
     overflow: hidden;
     position: relative;
@@ -258,6 +261,9 @@ form[name=search] .input-group-text {
     .ps__rail-y {
         opacity: 0.6;
 }
+// ...except for main OffFacets sidebar scrollbar
+#offFacets:not(.offfacets-body) > .ps__rail-y { opacity: unset; }
+
 
 .filter-num {
     color: $headings-color;

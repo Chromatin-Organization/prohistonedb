@@ -168,6 +168,11 @@
                     {# * results view toggle #}
                     <div class="row">
                         <div class="col-12">
+                            <div id="view-facets-wrapper" class="float-start d-sm-block d-md-none">
+                                <a id="offFacetsBtn" class="nav-link material-icons-round active" href="#"  data-bs-toggle="offcanvas"
+                                data-bs-target="#offFacets" aria-controls="facets" title="Show filter options">tune</a>
+                            </div>
+
                             <div id="view-toggle-wrapper" class="float-end">
                                 <a id="toggle-list" class="nav-link material-icons-round active" href="#" aria-selected="true" title="list view">reorder</a>
                                 <a id="toggle-table" class="nav-link material-icons-round" href="#" title="table view">grid_on</a>
@@ -269,10 +274,42 @@
 
     </div>
   </div>
+
+    <div class="offcanvas offcanvas-start pt-3 pb-2 py-lg-0" id="offFacets">
+        <div class="offcanvas-header">
+            <button class="btn btn-close px-2 pt-3 mb-0 material-icons-round">close</button>
+        </div>
+        <div class="offfacets-body container">
+        </div>
+    </div>
+
   {% endblock content %}
 
   {% block javascripts %}
     <script type="text/javascript">
+        const offFacets = document.querySelector("#offFacets");
+        const offFacetsClose = document.querySelector("#offFacets .btn-close");
+    
+        offFacetsClose.addEventListener("click", function() {
+            const openedCanvas = bootstrap.Offcanvas.getInstance(offFacets);
+            openedCanvas.hide();
+        });
+
+        /* small screen facets sidebar functionality */
+        {# TODO: update on window resize #}
+        const facetsSidebar = document.querySelector("#facets-container");
+        const offFacetsBtn = document.querySelector("#offFacetsBtn");
+        const offFacetsBody = document.querySelector(".offfacets-body");
+
+        offFacetsBtn.addEventListener("click", function() {
+            offFacetsBody.append(facetsSidebar);
+            facetsSidebar.classList.remove("d-none");
+            facetsSidebar.classList.add("col-12"); // should be removed again for larger screen sizes
+        });
+
+        //const offFacetsScroll = new PerfectScrollbar("#offFacets");
+
+
         const seqlSlider = document.querySelector('.multislider');
         const seqlHidden = document.querySelector('input[class="form-check-input"][name="{{Field.SEQUENCE_LEN.search_name}}"]');
 
@@ -307,7 +344,7 @@
         }
 
 
-        window.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener("DOMContentLoaded", function() {
             // change placeholder text to reflect we're searching within search results on the search results page
             // only show when there's an actual search query
             {% if req_filters is defined and (req_filters | length) > 0 %}
@@ -346,7 +383,7 @@
 
             const filters = document.querySelectorAll(".form-check-input");
             filters.forEach( filter => {
-                filter.addEventListener("change", () => {
+                filter.addEventListener("change", function() {
                     {# * disabled onchange submit in favor of submit button ("apply filters") #}
                     //document.querySelector("form[name='filters']").submit();
                 });
