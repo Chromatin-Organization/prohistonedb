@@ -47,6 +47,10 @@ def entry(uniprot_id: str, multimer: Optional[str] = None):
     results = query.execute(db)
     result = results.fetchone()
 
+    # Raise 404 error if no entries are found.
+    if not result or len(result) == 0:
+        flask.abort(404)
+
     entry = results_to_histones([result])[0]
     flask.current_app.logger.debug(f"Histone entry: {entry}")
 

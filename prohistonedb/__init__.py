@@ -33,7 +33,7 @@ def create_app(test_config: Mapping[str, Any] = None):
     #? We might want to change the default instance folder for deployment.
     app = Flask(__name__)
 
-    #*----- Jinja extensions -----*#
+    #*----- Load Jinja extensions -----*#
     app.jinja_env.add_extension('jinja2.ext.do')
 
     #*----- Change logging level when in debug mode -----*#
@@ -82,6 +82,11 @@ def create_app(test_config: Mapping[str, Any] = None):
     app.logger.info("Initializing database...")
     from . import database
     database.init_app(app)
+
+    #*----- Register error handlers -----*#
+    app.logger.info("Registering error handlers...")
+    from . import exceptions
+    exceptions.register_handlers(app)
 
     #*----- Register Blueprints -----*#
     app.logger.info("Registering blueprints...")
