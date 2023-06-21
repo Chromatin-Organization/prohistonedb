@@ -41,7 +41,11 @@
                         <div class="pb-2 row">
                             <div class="col-sm-3 label"><span>Gene</span></div>
                             <div class="col-sm-9 value">
+                                {% if entry.genes %}
                                 <span class="mb-0">{{entry.genes|join(",")}}</span>
+                                {% else %}
+                                <span class="mb-0"> - </span>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="pb-2 row">

@@ -195,15 +195,19 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 label"><span>Protein</span></div>
+                                <div class="col-sm-3 label"><span>Protein IDs</span></div>
                                 <div class="col-sm-9 value">
-                                    <span class="mb-0">{{r.protein_ids}}</span>
+                                    <span class="mb-0">{{r.protein_ids|join(",")}}</span>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 label"><span>Gene</span></div>
+                                <div class="col-sm-3 label"><span>Genes</span></div>
                                 <div class="col-sm-9 value">
-                                    <span class="mb-0">{{r.genes}}</span>
+                                    {% if r.genes %}
+                                    <span class="mb-0">{{r.genes|join(",")}}</span>
+                                    {% else %}
+                                    <span class="mb-0"> - </span>
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="row">
@@ -243,8 +247,12 @@
                                 <tr>
                                     <td><strong><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.uniprot_id}}</a></strong></td>
                                     <td>{{r.category.name}}</td>
-                                    <td>{{r.protein_ids}}</td>
-                                    <td>{{r.genes}}</td>
+                                    </td>{{r.protein_ids|join(",")}}</td>
+                                    {% if r.genes %}
+                                    </td>{{r.genes|join(",")}}</td>
+                                    {% else %}
+                                    </td> - </td>
+                                    {% endif %}
                                     <td>{{r.organism.name}}</td>
                                     <td>{{r.sequence|length}} AA</td>
                                 </tr>
