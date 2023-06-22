@@ -23860,7 +23860,7 @@ pre[class*=language-] {
 }
 
 body {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 header h1, header .h1, header h2, header .h2 {
@@ -23921,6 +23921,24 @@ h3, .h3 {
 
 .card {
   box-shadow: none;
+}
+
+section p a,
+section li a {
+  text-decoration: none;
+  border-bottom: 1px dashed #7b809a;
+}
+section p a:hover,
+section li a:hover {
+  border-bottom: 1px dashed #e91e63;
+}
+
+section ol li,
+section ul li {
+  font-family: "Roboto";
+  font-weight: 200;
+  color: #7b809a;
+  margin-left: 1em;
 }
 
 /* remove pager border circles */
@@ -24290,10 +24308,6 @@ form[name=search] .input-group-text button[type=submit] {
 }
 
 /* attribution section */
-#attribution p {
-  font-size: 0.875rem;
-}
-
 #attribution p a,
 #group-information a {
   color: #fff;

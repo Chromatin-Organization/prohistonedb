@@ -8,7 +8,7 @@
 //@import './themes/orange-modern/styles';
 
 body {
-    font-size: $font-size-sm;
+    font-size: $font-size-base;
 }
 header h1, header h2 {
     text-shadow: $text-shadow-lg;
@@ -69,6 +69,24 @@ h3 {
 .card { 
     box-shadow: none;
 }
+
+section p a,
+section li a {
+    text-decoration: none;
+    border-bottom: 1px dashed $font-color;
+
+    &:hover {
+        border-bottom: 1px dashed $primary;
+    }
+}
+
+section ol li,
+    section ul li {
+        font-family: "Roboto";
+        font-weight: 200;
+        color: $font-color;
+        margin-left: 1em;
+    }
 
 /* remove pager border circles */
 .page-link { 
@@ -427,7 +445,7 @@ form[name=search] .input-group-text {
 
 /* attribution section */
 #attribution p {
-    font-size: $font-size-sm;
+    //font-size: $font-size-sm;
 }
 #attribution p a,
 #group-information a {

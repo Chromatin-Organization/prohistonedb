@@ -5,43 +5,43 @@
 {% block body %} class="index-page bg-gray-200" {% endblock body %}
 
 {% block content %}
-<header>
-  <div class="page-header min-vh-75" style="background-image: url('{{ url_for('static', filename = 'assets/img/generative-circles-header.png' )}}')">
-    <span class="mask bg-gradient-secondary opacity-6"></span>
-    <div class="container mt-9">
-      <div class="row">
-        <div class="col-lg-7 text-center mx-auto">
-          <h1 class="text-white pt-3 mt-n5">{{siteName}}</h1>
-          <p class="lead text-white mt-3">A database of prokaryotic histones predicted by AlphaFold. <br/> ProHistoneDB currently contains around 6000 histones.</p>
+  <header>
+    <div class="page-header min-vh-75" style="background-image: url('{{ url_for('static', filename = 'assets/img/generative-circles-header.png' )}}')">
+      <span class="mask bg-gradient-secondary opacity-6"></span>
+      <div class="container mt-9">
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto">
+            <h1 class="text-white pt-3 mt-n5">{{siteName}}</h1>
+            <p class="lead text-white mt-3">A database of prokaryotic histones based on UniProt. <br/> ProHistoneDB currently contains around 6000 histones.</p>
+          </div>
         </div>
-      </div>
 
-      {% include 'includes/searchbox.html.j2' %}
-  
+        {% include 'includes/searchbox.html.j2' %}
+    
+    </div>
   </div>
-</div>
-</header>
+  </header>
 
-{# main container card #}
-<div class="card card-body mx-3 mx-md-4 mt-n4">
-  <section class="my-3">
-    <!-- structure / views options -->
-    <div class="container">              
-      <div class="row py-3 mt-3">
-          <div class="col-12">
-            {% include "contents/background.html" %}
+  {# main container card #}
+  <div class="card card-body mx-3 mx-md-4 mt-n4">
+    <section class="my-3">
+      <div class="container my-3">
+        <div class="row">
+          <div class="col-lg-3">
+            <h3>Background</h3>
+          </div>
+          <div class="col-lg-9">
+            <div class="row">
+              {% include "contents/background.html" %}
+            </div>
           </div>
         </div>
       </div>
-  </section>
-
-</div>
+    </section>
+  </div>
 {% endblock content %}
 
 {% block javascripts %}
-
-<!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
-<script src="{{ url_for('static', filename = 'assets/js/plugins/choices.min.js' )}}"></script>
 
 <script>
   // update Bootstrap select dropdown button label with selected option

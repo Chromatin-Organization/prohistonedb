@@ -20,8 +20,7 @@
         <div class="container mt-7">
           <div class="row">
             <div class="col-12">
-              {# <h2 class="text-white pt-3">Categories overview</h2>
-              <p class="lead mb-4 text-white opacity-8">...</p> #}
+              {# <h2 class="text-white pt-3">Categories overview</h2> #}
             </div>
           </div>
         </div>
@@ -30,13 +29,13 @@
     </div>
   </header>
   
-  <div class="card card-body mx-3 mx-md-4">
-    <section class="py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-12">
-            <div class="row justify-content-start">
-              <div class="col-md-12">
+ <div class="card card-body mx-3 mx-md-4">
+    <section class="my-3">
+      <div class="container my-3">
+        <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-9">
+            <div class="row">
                 {% if id is defined %}
                   {% include category_path(id) %}
                 {% else %}
@@ -47,12 +46,10 @@
                   </div>
                 {% endif %}
               </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
-   
   </div>
   {% endblock content %}
 
