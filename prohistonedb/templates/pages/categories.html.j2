@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html.j2' %}
 
+{% macro category_path(id) %}{{"contents/" + (categories[id|int].name | lower) + ".html"}}{% endmacro %}
 
 {% block title %} {{siteName}} Category overview {% endblock title %}
 {% block body %} class="categories fluid-bg" {% endblock body %}
@@ -19,8 +20,8 @@
         <div class="container mt-7">
           <div class="row">
             <div class="col-12">
-              <h2 class="text-white pt-3">Categories overview</h2>
-              <p class="lead mb-4 text-white opacity-8">...</p>
+              {# <h2 class="text-white pt-3">Categories overview</h2>
+              <p class="lead mb-4 text-white opacity-8">...</p> #}
             </div>
           </div>
         </div>
@@ -36,11 +37,15 @@
           <div class="col-lg-12">
             <div class="row justify-content-start">
               <div class="col-md-12">
-                <h3>2d cluster representation of ProHistone database</h3>
-                <p>...</p>
-              </div>
-              <div class="col-md-12 text-center">
-                <img src="{{url_for('static', filename = 'assets/img/2d_clusters.png')}}" class="col-md-9">
+                {% if id is defined %}
+                  {% include category_path(id) %}
+                {% else %}
+                  {% include "contents/categories overview.html" %}
+                  <h3>2d cluster representation of ProHistone database</h3>
+                  <div class="col-md-12 text-center">
+                    <img src="{{url_for('static', filename = 'assets/img/2d_clusters.png')}}" class="col-md-9">
+                  </div>
+                {% endif %}
               </div>
             </div>
           </div>
