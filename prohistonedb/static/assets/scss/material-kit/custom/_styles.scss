@@ -89,7 +89,11 @@ section ol li,
         font-weight: 200;
         color: $font-color;
         margin-left: 1em;
-    }
+}
+
+footer .nav-link:hover {
+    color: $primary;
+}
 
 /* remove pager border circles */
 .page-link { 
