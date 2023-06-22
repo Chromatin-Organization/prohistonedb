@@ -23923,6 +23923,10 @@ h3, .h3 {
   box-shadow: none;
 }
 
+section h2, section .h2 {
+  margin-bottom: 1em;
+}
+
 section p a,
 section li a {
   text-decoration: none;
