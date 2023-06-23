@@ -11,14 +11,22 @@
     <div class="container mt-11">
       <div class="row">
         <div class="col-lg-7 text-center mx-auto">
-          {# TODO: change the error message based on an error page argument (403/404/500) #}
-          {# Error 403 #}
-          {# <h1 class="text-white pt-3 mt-n5">Error 403 - Access denied</h1> #}
-          {# Error 404 #}
-          <h1 class="text-white pt-3 mt-n5">Oops!</h1>
-          <h3 class="text-white">The page you're looking for doesn't exist.</h3>
-          {# Error 500 #}
-          {# <h1 class="text-white pt-3 mt-n5">Error 500 - Internal server error</h1> #}
+          {% if not status is defined %}
+            <h1 class="text-white pt-3 mt-n5">Unknown Error!</h1>
+            <h3 class="text-white">It seems that an unknown error has occured. We have logged the error and we apollogise for any inconvenience. </h3>
+          {% elif status == 403 %}
+            <h1 class="text-white pt-3 mt-n5">Access denied!</h1>
+            <h3 class="text-white">You're not allowed to access this page.</h3>
+          {% elif status == 404 %}
+            <h1 class="text-white pt-3 mt-n5">Oops!</h1>
+            <h3 class="text-white">The page you're looking for doesn't exist.</h3>
+          {% elif status == 500 %}
+            <h1 class="text-white pt-3 mt-n5">Oops!</h1>
+            <h3 class="text-white">It seems that the server is not working properly.</h3>
+            <h3 class="text-white">If the problem persists, please send an e-mail to <a class="nav-link" href="mailto:contact@prohistonedb.org">contact@prohistonedb.org</a> to let us know what happened.</h3>
+          {% else %}
+            <h1 class="text-white pt-3 mt-n5">Error {status}!</h1>
+          {% endif %}
         </div>
       </div>
   
