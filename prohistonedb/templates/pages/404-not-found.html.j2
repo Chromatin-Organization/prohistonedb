@@ -2,21 +2,19 @@
 
 {% block title %} {{siteName}} | Page not found{% endblock title %}
 
-{% block body %} class="index-page bg-gray-200" {% endblock body %}
+{% block body %} class="not-found bg-gray-200" {% endblock body %}
 
 {% block content %}
 <header>
   <div class="page-header min-vh-75" style="background-image: url('{{ url_for('static', filename = 'assets/img/generative-circles-header.png' )}}')">
     <span class="mask bg-gradient-secondary opacity-6"></span>
-    <div class="container mt-9">
+    <div class="container mt-11">
       <div class="row">
         <div class="col-lg-7 text-center mx-auto">
           <h1 class="text-white pt-3 mt-n5">Oops!</h1>
-          <p class="lead text-white mt-3">The structure you're looking for doesn't exist (yet).<br/>Let's try another search term.</p>
+          <p class="lead text-white mt-3">The page you're looking for doesn't exist.</p>
         </div>
       </div>
-  
-      {% include 'includes/searchbox.html.j2' %}
   
     </div>
   </div>
