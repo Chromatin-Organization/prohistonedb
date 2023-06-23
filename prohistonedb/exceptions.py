@@ -25,5 +25,5 @@ def error_page(e: Union[Exception, int]):
     if isinstance(e, HTTPException):
         return flask.render_template("pages/error.html.j2", status=e.code), e.code
     else:
-        flask.current_app.logger.error(f"Unknown error!: {e}")
+        flask.current_app.logger.critical(f"Unknown error!: {e}")
         return flask.render_template("pages/error.html.j2"), 500
