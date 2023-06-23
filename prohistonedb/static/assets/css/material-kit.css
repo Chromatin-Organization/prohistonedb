@@ -23921,6 +23921,7 @@ h3, .h3 {
 
 .card {
   box-shadow: none;
+  overflow: hidden;
 }
 
 section h2, section .h2 {
@@ -24325,6 +24326,10 @@ form[name=search] .input-group-text button[type=submit] {
 #group-information a:hover {
   color: #e91e63;
   opacity: 1;
+}
+
+#attribution p a {
+  border-bottom: none;
 }
 
 /* Leiden University logo */

@@ -68,6 +68,7 @@ h3 {
 
 .card { 
     box-shadow: none;
+    overflow: hidden;
 }
 
 section h2 {
@@ -463,6 +464,9 @@ form[name=search] .input-group-text {
         color: $primary;
         opacity: 1;
     }
+}
+#attribution p a {
+    border-bottom: none;
 }
 
 /* Leiden University logo */

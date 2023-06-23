@@ -82,7 +82,7 @@
     </div><!-- end page header -->
 </header>
 
-<div class="card card-body mx-3 mx-md-4">
+<div class="card card-body mx-3 mx-md-4 pb-0">
     <section class="my-3">
         {% if multimer is defined %}
             <!-- structure / views options -->
@@ -197,20 +197,31 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row my-5">
+                    <div class="col-lg-3">
+                        <h3>Last updated</h3>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row mt-2">
+                            <p>This entry has been updated on {{dateLastUpdated}}.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         {% else %}
             {# TODO: Add better formatting. #}
             <div class="container">              
                 <div class="row py-3 mt-3">
                     <div class="col-12">
-                        <h3>No structures found for this Histone.</h3>
+                        <h3>No structures found for this histone.</h3>
                     </div>
                 </div>
             </div>
         {% endif %}
     </section>
 
-    <section id="attribution" class="pb-2 position-relative bg-gradient-dark mx-n3">
+    <section id="attribution" class="position-relative bg-gradient-dark mx-n3">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 text-start mb-5 mt-5">
@@ -234,6 +245,7 @@
         </div>
     </section>
 
+    {#
     <section class="my-3">
         <div class="container">              
             <div class="row py-3 mt-3">
@@ -243,6 +255,7 @@
             </div>
         </div>
     </section>
+    #}
 </div>
 {% endblock content %}
 
