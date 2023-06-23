@@ -19,4 +19,4 @@ def register_handlers(app: Flask):
 
 #***===== HTTP Error Handlers =====***#
 def page_not_found(e: Union[Exception, int]):
-    return flask.render_template("pages/404-not-found.html.j2"), 404
+    return flask.render_template("pages/error.html.j2"), 404
