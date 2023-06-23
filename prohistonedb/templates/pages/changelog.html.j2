@@ -1,0 +1,49 @@
+{% extends 'layouts/base.html.j2' %}
+
+{% macro category_path(id) %}{{"contents/" + (categories[id|int].name | lower) + ".html"}}{% endmacro %}
+
+{% block title %} {{siteName}} Category overview {% endblock title %}
+{% block body %} class="categories fluid-bg" {% endblock body %}
+
+{% block header %}
+
+{% include 'includes/navigation_search.html.j2' %}
+
+{% endblock header %}
+
+{% block content %}
+
+  <header>
+    <div class="page-header pb-5">
+      <div class="container">
+
+        <div class="container mt-7">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="text-white pt-3">Changelog</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  
+ <div class="card card-body mx-3 mx-md-4">
+    <section class="my-3">
+      <div class="container my-3">
+        <div class="row">
+          <div class="col-lg-3"></div>
+            <div class="col-lg-9">
+              <div class="row">
+                [23 June 2023] First version of the dataset is released pending review.
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  {% endblock content %}
+
+  {% block javascripts %}
+  {% endblock javascripts %}

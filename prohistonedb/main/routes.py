@@ -73,3 +73,8 @@ def entry(uniprot_id: str, multimer: Optional[str] = None):
 def about():
     """ Render the about page. """
     return flask.render_template('pages/about.html.j2')
+
+@bp.route("/changelog", methods=["GET"])
+def changelog():
+    """ Render the changelog page. """
+    return flask.render_template("pages/changelog.html.j2")
