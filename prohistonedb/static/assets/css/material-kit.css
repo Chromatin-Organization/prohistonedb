@@ -23923,6 +23923,9 @@ h3, .h3 {
   box-shadow: none;
   overflow: hidden;
 }
+.card p {
+  color: #344767;
+}
 
 section h2, section .h2 {
   margin-bottom: 1em;
@@ -23931,7 +23934,7 @@ section h2, section .h2 {
 section p a,
 section li a {
   text-decoration: none;
-  border-bottom: 1px dashed #7b809a;
+  border-bottom: 1px dashed #344767;
 }
 section p a:hover,
 section li a:hover {
@@ -23942,7 +23945,7 @@ section ol li,
 section ul li {
   font-family: "Roboto";
   font-weight: 300;
-  color: #7b809a;
+  color: #344767;
   margin-left: 1em;
 }
 

@@ -5,7 +5,6 @@
 @import 'material_icons_round';
 
 @import 'nouislider';
-//@import './themes/orange-modern/styles';
 
 body {
     font-size: $font-size-base;
@@ -69,6 +68,8 @@ h3 {
 .card { 
     box-shadow: none;
     overflow: hidden;
+
+    p { color: $headings-color }
 }
 
 section h2 {
@@ -77,7 +78,7 @@ section h2 {
 section p a,
 section li a {
     text-decoration: none;
-    border-bottom: 1px dashed $font-color;
+    border-bottom: 1px dashed $headings-color;
 
     &:hover {
         border-bottom: 1px dashed $primary;
@@ -88,7 +89,7 @@ section ol li,
     section ul li {
         font-family: "Roboto";
         font-weight: 300;
-        color: $font-color;
+        color: $headings-color;
         margin-left: 1em;
 }
 
