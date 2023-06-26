@@ -332,6 +332,7 @@ form[name=search] .input-group-text {
 
 .result-item {
     background-color: $gray-100;
+    font-size: $font-size-sm;
 
     .label {
         font-weight: $font-weight-bold;
@@ -511,6 +512,7 @@ form[name=search] .input-group-text {
     padding: .15rem .6rem;
     margin-bottom: .2rem;
     border-radius: $border-radius-md;
+    font-size: $font-size-sm;
 }
 
 /* flat look for track */

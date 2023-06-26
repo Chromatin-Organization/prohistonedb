@@ -24087,6 +24087,7 @@ form[name=search] .input-group-text button[type=submit] {
 
 .result-item {
   background-color: #f8f9fa;
+  font-size: 0.875rem;
 }
 .result-item .label {
   font-weight: 600;
@@ -24270,6 +24271,7 @@ form[name=search] .input-group-text button[type=submit] {
   padding: 0.15rem 0.6rem;
   margin-bottom: 0.2rem;
   border-radius: 0.375rem;
+  font-size: 0.875rem;
 }
 
 /* flat look for track */
