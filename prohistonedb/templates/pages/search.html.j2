@@ -102,7 +102,7 @@
                             {% endfor %}
                             
                             <div class="form-check col-10{% if not counts.superkingdoms[None] is defined %}{{' noitems'}}{% endif %}">
-                                <input class="form-check-input" type="checkbox" name="{{Field.LINEAGE_SUPERKINGDOM.search_name}}" value="", id="lineageCheck{{(superkingdoms | length)+1}}">
+                                <input class="form-check-input" type="checkbox" name="{{Field.LINEAGE_SUPERKINGDOM.search_name}}" value="" id="lineageCheck{{(superkingdoms | length)+1}}">
                                 <label class="form-check-label" for="lineageCheck{{(superkingdoms | length)+1}}">
                                     Undefined
                                 </label>
@@ -118,7 +118,7 @@
                                 <div class="multislider slider-round"></div>
                             </div>
                             {# NOTE: set seqlHidden to disabled to prevent default values being used as a filter #}
-                            <input class="form-check-input" type="hidden" name="{{Field.SEQUENCE_LEN.search_name}}" value=""  disabled />
+                            <input class="form-check-input" type="hidden" name="{{Field.SEQUENCE_LEN.search_name}}" value="" disabled />
                         </div>
 
                         <div class="row mt-5">
@@ -243,6 +243,11 @@
                             <table id="bs-table" class="table table-striped table-hover table-responsive-md mt-3" data-toggle="table">
                                 <thead>
                                     <tr>
+                                        <th data-field="uniprotID" scope="col">
+                                            <div class="form-check ps-2">
+                                                <input class="form-check-input" type="checkbox" name="download_select_toggle" value="">
+                                            </div>
+                                        </th>
                                         <th data-field="uniprotID" scope="col">UniProt ID</th>
                                         <th data-field="category" scope="col">Category</th>
                                         <th data-field="organism" scope="col">Protein</th>
@@ -254,6 +259,11 @@
                                 <tbody>
                                 {% for r in results %}
                                 <tr>
+                                    <td>
+                                        <div class="form-check ps-2">
+                                            <input class="form-check-input" type="checkbox" name="download_select" value="{{r.uniprot_id}}">
+                                        </div>        
+                                    </td>
                                     <td><strong><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.uniprot_id}}</a></strong></td>
                                     <td>{{r.category.name}}</td>
                                     <td>{{r.protein_ids|join(",")}}</td>
