@@ -237,7 +237,6 @@
                     </div>
 
                     {# * table view #}
-                    {# * https://getbootstrap.com/docs/5.0/content/tables/ #}
                     <div id="table-view" class="col-12 d-none">
                         {% if (results | length) > 0 %}
                         <div id="table-wrapper">
@@ -257,11 +256,11 @@
                                 <tr>
                                     <td><strong><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.uniprot_id}}</a></strong></td>
                                     <td>{{r.category.name}}</td>
-                                    </td>{{r.protein_ids|join(",")}}</td>
+                                    <td>{{r.protein_ids|join(",")}}</td>
                                     {% if r.genes %}
-                                    </td>{{r.genes|join(",")}}</td>
+                                    <td>{{r.genes|join(",")}}</td>
                                     {% else %}
-                                    </td> - </td>
+                                    <td> - </td>
                                     {% endif %}
                                     <td>{{r.organism.name}}</td>
                                     <td>{{r.sequence|length}} AA</td>
