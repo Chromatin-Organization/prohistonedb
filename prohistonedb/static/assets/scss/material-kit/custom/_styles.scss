@@ -243,7 +243,8 @@ form[name=search] .input-group-text {
     padding-top: .5rem;
     
     button[type=submit] {
-        border-left: 1px solid #e5ecee !important;
+        /* only useful when using a form clear button */
+        //border-left: 1px solid #e5ecee !important;
     }
 }
 
