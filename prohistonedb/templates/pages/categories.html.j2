@@ -2,7 +2,7 @@
 
 {% macro category_path(id) %}{{"contents/" + (categories[id|int].name | lower) + ".html"}}{% endmacro %}
 
-{% block title %} {{siteName}} Category overview {% endblock title %}
+{% block title %} {{siteName}} | Categories{% endblock title %}
 {% block body %} class="categories fluid-bg" {% endblock body %}
 
 {% block header %}
