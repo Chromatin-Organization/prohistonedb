@@ -185,16 +185,19 @@
                     <div id="list-view">
                         {% for r in results %}
                         <div class="row mt-3 mb-3 px-3 py-3 rounded-3 result-item">
-                            <h5><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.organism.name}} {{r.uniprot_id}}</a></h5>
+                            <div class="form-check pe-0">
+                                <input class="form-check-input" type="checkbox" name="download_select" value="{{r.uniprot_id}}">
+                            </div> 
+                            <h5 class="w-90"><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.organism.name}} {{r.uniprot_id}}</a></h5>
                             <div class="row">
-                                <div class="col-sm-3 label"><span>UniProt ID</span></div>
-                                <div class="col-sm-9 value">
-                                    <span class="mb-0">{{r.uniprot_id}}</span><span class="link text-nowrap"> <a href="https://www.uniprot.org/uniprotkb/{{r.uniprot_id}}/entry">go to UniProt</a></span>
+                                <div class="col-md-4 col-lg-3 label"><span>UniProt ID</span></div>
+                                <div class="col-md-8 col-lg-9 value">
+                                    <span class="mb-0">{{r.uniprot_id}}</span><span class="ext-link text-nowrap"> <a href="https://www.uniprot.org/uniprotkb/{{r.uniprot_id}}/entry">go to UniProt</a></span>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 label"><span>Category</span></div>
-                                <div class="col-sm-9 value">
+                                <div class="col-md-4 col-lg-3 label"><span>Category</span></div>
+                                <div class="col-md-8 col-lg-9 value">
                                     <span class="mb-0">
                                     {% if r.category.name != 'Undefined' %}
                                         <a href="{{ url_for('categories.with_id', id=r.category.id) }}">{{r.category.name}}</a>
@@ -205,14 +208,14 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 label"><span>Protein IDs</span></div>
-                                <div class="col-sm-9 value">
+                                <div class="col-md-4 col-lg-3 label"><span>Protein IDs</span></div>
+                                <div class="col-md-8 col-lg-9 value">
                                     <span class="mb-0">{{r.protein_ids|join(",")}}</span>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 label"><span>Genes</span></div>
-                                <div class="col-sm-9 value">
+                                <div class="col-md-4 col-lg-3 label"><span>Genes</span></div>
+                                <div class="col-md-8 col-lg-9 value">
                                     {% if r.genes %}
                                     <span class="mb-0">{{r.genes|join(",")}}</span>
                                     {% else %}
@@ -221,14 +224,14 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 label"><span>Organism</span></div>
-                                <div class="col-sm-9 value">
+                                <div class="col-md-4 col-lg-3 label"><span>Organism</span></div>
+                                <div class="col-md-8 col-lg-9 value">
                                     <span class="mb-0 float-start me-2">{{r.organism.name}}</span><span class="link text-nowrap"><a href="{{ url_for('search.index', oid=r.organism.id) }}">Search this organism</a></span>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 label"><span>Length</span></div>
-                                <div class="col-sm-9 value">
+                                <div class="col-md-4 col-lg-3 label"><span>Length</span></div>
+                                <div class="col-md-8 col-lg-9 value">
                                     <span class="mb-0">{{r.sequence|length}} AA</span>
                                 </div>
                             </div>
@@ -245,7 +248,8 @@
                                     <tr>
                                         <th data-field="uniprotID" scope="col">
                                             <div class="form-check ps-2">
-                                                <input class="form-check-input" type="checkbox" name="download_select_toggle" value="">
+                                                <input class="form-check-input" type="checkbox" id="download_select_toggle">
+                                                <label for="download_select_toggle" aria-label="Toggle all items on this page"></label>
                                             </div>
                                         </th>
                                         <th data-field="uniprotID" scope="col">UniProt ID</th>
@@ -357,6 +361,28 @@
             const tableScroll = new PerfectScrollbar("#table-wrapper");
         }
 
+
+        const downloadSelectToggle = document.querySelector("#download_select_toggle");
+        const downloadSelectors = document.querySelectorAll("input[name='download_select']");
+        downloadSelectToggle.addEventListener("change", function() {
+            if (this.checked === true) {
+                downloadSelectors.forEach( selector => {
+                    selector.checked = true;
+                });
+            } else {
+                downloadSelectors.forEach( selector => {
+                    selector.checked = false;
+                });
+            }
+        });
+
+        // selecting/deselecting item in table view should also select/deselect corresponding list view item
+        downloadSelectors.forEach( selector => {
+            selector.addEventListener("change", function() {
+                // add item to "shopping basket" in cookie?
+            });
+        });
+        
 
         window.addEventListener("DOMContentLoaded", function() {
             // change placeholder text to reflect we're searching within search results on the search results page

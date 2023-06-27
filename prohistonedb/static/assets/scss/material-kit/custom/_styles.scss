@@ -344,11 +344,51 @@ form[name=search] .input-group-text {
     overflow: scroll;
 }
 
+table th,
+    table td {
+        vertical-align: bottom;
+    }
+
 // decrease th padding
 .table thead th {
     padding: .5rem;
 }
 
+#table-view table th:first-child,
+    #table-view table td:first-child {
+        // sticky columns need non-transparent (striped) background first 
+        //position: sticky;
+        //left: 0;
+        padding-right: 0;
+}
+#table-view table th:nth-child(2),
+    #table-view table td:nth-child(2) {
+        //position: sticky;
+        //left: 41px;
+}
+
+#list-view {
+    .form-check {
+        width: auto;
+        padding-left: 0;
+    }
+    
+    .row {
+        padding-left: 2rem;
+    }
+    
+    h5 {
+        padding-left: .9rem;
+        width: auto;
+    }
+}
+
+.ext-link a:after {
+    content: "launch";
+    font-family: "Material Icons Round";
+    margin-left: .1rem;
+    vertical-align: bottom;
+}
 
 /* entry page */
 #information {

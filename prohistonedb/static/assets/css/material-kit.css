@@ -24098,8 +24098,37 @@ form[name=search] .input-group-text button[type=submit] {
   overflow: scroll;
 }
 
+table th,
+table td {
+  vertical-align: bottom;
+}
+
 .table thead th {
   padding: 0.5rem;
+}
+
+#table-view table th:first-child,
+#table-view table td:first-child {
+  padding-right: 0;
+}
+
+#list-view .form-check {
+  width: auto;
+  padding-left: 0;
+}
+#list-view .row {
+  padding-left: 2rem;
+}
+#list-view h5, #list-view .h5 {
+  padding-left: 0.9rem;
+  width: auto;
+}
+
+.ext-link a:after {
+  content: "launch";
+  font-family: "Material Icons Round";
+  margin-left: 0.1rem;
+  vertical-align: bottom;
 }
 
 /* entry page */
