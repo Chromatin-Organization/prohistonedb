@@ -23,7 +23,7 @@
 {% endmacro %}
 
 {#*===== Header Block Implementations =====*#}
-{% block title %} {{siteName}} Search {% endblock title %}
+{% block title %} {{siteName}} | Search{% endblock title %}
 {% block body %} class="search fluid-bg" {% endblock body %}
 
 {% block header %}
@@ -124,8 +124,8 @@
                         <div class="row mt-5">
                             <div class="form-check col-10 text-center">
                                 <button class="btn btn-secondary btn-sm btn-icon" type="submit">
-                                    <span class="caption">Apply filters</span>
                                     <span class="material-icons-round">filter_alt</span>
+                                    <span class="caption">Apply filters</span>
                                 </button>
                             </div>
                         </div>
@@ -159,8 +159,8 @@
                             {% endfor %}
 
                             <button type="submit" class="btn btn-secondary btn-sm btn-icon mb-1" style="vertical-align: baseline" onClick="location.href='{{clear()|trim}}'">
-                                <span class="caption">Clear filters</span>
                                 <span class="material-icons-round">delete</span>
+                                <span class="caption">Clear filters</span>
                             </button>
                         </div>
                     {% endif %}
@@ -171,6 +171,13 @@
                             <div id="view-facets-wrapper" class="float-start d-sm-block d-md-none">
                                 <a id="offFacetsBtn" class="nav-link material-icons-round active" href="#"  data-bs-toggle="offcanvas"
                                 data-bs-target="#offFacets" aria-controls="facets" title="Show filter options">tune</a>
+                            </div>
+                            
+                            <div id="download-button-wrapper" class="float-start">
+                                <button id="downloadSelectedBtn" class="btn btn-sm btn-icon btn-outline-secondary disabled" title="Download selected items">
+                                    <span class="material-icons-round">download</span>
+                                    <span class="caption">Download selected</span>
+                                </button>
                             </div>
 
                             <div id="view-toggle-wrapper" class="float-end">
@@ -186,7 +193,7 @@
                         {% for r in results %}
                         <div class="row mt-3 mb-3 px-3 py-3 rounded-3 result-item">
                             <div class="form-check pe-0">
-                                <input class="form-check-input" type="checkbox" name="download_select" value="{{r.uniprot_id}}">
+                                <input class="form-check-input" type="checkbox" name="download_select" value="{{r.uniprot_id}}" title="Select for download">
                             </div> 
                             <h5 class="w-90"><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.organism.name}} {{r.uniprot_id}}</a></h5>
                             <div class="row">
@@ -248,8 +255,8 @@
                                     <tr>
                                         <th data-field="uniprotID" scope="col">
                                             <div class="form-check ps-2">
-                                                <input class="form-check-input" type="checkbox" id="download_select_toggle">
-                                                <label for="download_select_toggle" aria-label="Toggle all items on this page"></label>
+                                                <input class="form-check-input" type="checkbox" id="download_select_toggle" title="Select/deselect all items on this page">
+                                                <label for="download_select_toggle" aria-label="Select/deselect all items on this page"></label>
                                             </div>
                                         </th>
                                         <th data-field="uniprotID" scope="col">UniProt ID</th>
@@ -265,7 +272,7 @@
                                 <tr>
                                     <td>
                                         <div class="form-check ps-2">
-                                            <input class="form-check-input" type="checkbox" name="download_select" value="{{r.uniprot_id}}">
+                                            <input class="form-check-input" type="checkbox" name="download_select" value="{{r.uniprot_id}}" title="Select for download">
                                         </div>        
                                     </td>
                                     <td><strong><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.uniprot_id}}</a></strong></td>
@@ -313,7 +320,7 @@
             openedCanvas.hide();
         });
 
-        /* small screen facets sidebar functionality */
+        // small screen facets sidebar functionality
         {# TODO: update on window resize #}
         const facetsSidebar = document.querySelector("#facets-container");
         const offFacetsBtn = document.querySelector("#offFacetsBtn");
@@ -325,6 +332,7 @@
             facetsSidebar.classList.add("col-12"); // should be removed again for larger screen sizes
         });
 
+        // mobile/offcanvas facets sidebar might need a scrollbar
         //const offFacetsScroll = new PerfectScrollbar("#offFacets");
 
 
@@ -362,8 +370,16 @@
         }
 
 
+        const downloadButton = document.querySelector("#downloadSelectedBtn");
         const downloadSelectToggle = document.querySelector("#download_select_toggle");
         const downloadSelectors = document.querySelectorAll("input[name='download_select']");
+
+        function downloadButtonToggle() {
+            downloadButton.classList.toggle("disabled");
+            downloadButton.classList.toggle("btn-outline-secondary");
+            downloadButton.classList.toggle("btn-primary");
+        }
+
         downloadSelectToggle.addEventListener("change", function() {
             if (this.checked === true) {
                 downloadSelectors.forEach( selector => {
@@ -374,11 +390,15 @@
                     selector.checked = false;
                 });
             }
+            downloadButtonToggle();
         });
 
         // selecting/deselecting item in table view should also select/deselect corresponding list view item
         downloadSelectors.forEach( selector => {
             selector.addEventListener("change", function() {
+                {# TODO: check if # of items selected > 0 before disabling/enabling button #}
+                downloadButtonToggle();
+
                 // add item to "shopping basket" in cookie?
             });
         });
