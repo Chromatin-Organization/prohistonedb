@@ -3,7 +3,7 @@
 {% macro reload(multimer, rank) %}{{url_for('main.entry', uniprot_id=entry.uniprot_id, multimer=multimer.value, rank=rank)}}{% endmacro %}
 {% macro img_path(suffix) %}https://prohistonedb.universiteitleiden.nl/{{(entry.get_path(multimer) / entry.uniprot_id).as_posix()+suffix}}{% endmacro %}
 
-{% block title %} {{siteName}} {{uniprotID}} {% endblock title %}
+{% block title %} {{siteName}} | {{uniprotID}}{% endblock title %}
 
 {% block molstar %}
     <script src="{{ url_for('static', filename = 'assets/js/custom/molstar.min.js' )}}" type="text/javascript"></script>
