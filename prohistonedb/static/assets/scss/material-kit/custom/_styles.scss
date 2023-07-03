@@ -544,37 +544,60 @@ table th,
     }
 }
 
+.logo_form fieldset label {
+    margin-top: .3rem;
+    margin-bottom: 0;
+}
+
+.logo_xaxis .xaxis_text {
+    text-align: center;
+    width: 100%;
+    font-size: $font-size-sm;
+}
+
 #logo_info {
-    //float: left;
+    background-color: $gray-100;
+    //padding: 1rem;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    position: relative;
+
+    > p { font-weight: 600 }
 
     p {
         text-align: center;
+        margin-top: 1rem;
         margin-bottom: 0;
     }
 
-    .odd { border-right: 1px solid #ccc }
+    .odd { border-right: 1px solid $font-color }
 }
 #logo_info > div {
     width: 33rem;
-    margin: .6em auto;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    margin: .6em auto 0;
+    //border-top: 1px solid $font-color;
+    //border-bottom: 1px solid $font-color;
     text-align: center;
-    padding: .3em 0;
+    //padding: .3em 0;
 
     p {
         display: inline;
         margin: 1em;
+        font-size: $font-size-sm;
     }
 }
 
 .logo_col_info {
-    margin: auto;
+    margin: .5rem auto 1rem;
 
-    th { padding: 0 1em }
+    th { 
+        padding: 0 1em; 
+        font-size: $font-size-sm;
+    }
     td { 
         padding: 0 .5em; 
         text-align: center;
+        font-size: $font-size-sm;
     }
     div { 
         width: 1em !important;

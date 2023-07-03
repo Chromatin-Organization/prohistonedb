@@ -24288,36 +24288,57 @@ table td {
   margin-right: 0.3rem;
 }
 
+.logo_form fieldset label {
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+
+.logo_xaxis .xaxis_text {
+  text-align: center;
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+#logo_info {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+#logo_info > p {
+  font-weight: 600;
+}
 #logo_info p {
   text-align: center;
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 #logo_info .odd {
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #7b809a;
 }
 
 #logo_info > div {
   width: 33rem;
-  margin: 0.6em auto;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  margin: 0.6em auto 0;
   text-align: center;
-  padding: 0.3em 0;
 }
 #logo_info > div p {
   display: inline;
   margin: 1em;
+  font-size: 0.875rem;
 }
 
 .logo_col_info {
-  margin: auto;
+  margin: 0.5rem auto 1rem;
 }
 .logo_col_info th {
   padding: 0 1em;
+  font-size: 0.875rem;
 }
 .logo_col_info td {
   padding: 0 0.5em;
   text-align: center;
+  font-size: 0.875rem;
 }
 .logo_col_info div {
   width: 1em !important;
