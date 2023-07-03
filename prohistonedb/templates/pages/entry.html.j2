@@ -309,8 +309,8 @@
             
             window.addEventListener("DOMContentLoaded", function() {
                 async function getHMMJSON() {
-                    // url_for('static', filename=(entry.category.static_logo_path | string))
-                    const url = '{{ url_for('static', filename = 'assets/logo_data/3f082362-2d1a-4b69-87b2-7b6e8d5441f6.json') }}';
+                    const url = '{{url_for('static', filename=(entry.category.static_logo_path | string))}}'
+                    //const url = '{{ url_for('static', filename = 'assets/logo_data/3f082362-2d1a-4b69-87b2-7b6e8d5441f6.json') }}';
                     const response = await fetch(url);
                     const json = await response.json();
                     const HMMStringified = JSON.stringify(json);
