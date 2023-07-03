@@ -39,6 +39,12 @@
                             </div>
                         </div>
                         <div class="pb-2 row">
+                            <div class="col-sm-3 label"><span>Category</span></div>
+                            <div class="col-sm-9 value">
+                                <span class="mb-0 float-start me-2">{{entry.category.name}}</span><span class="link text-nowrap"><a href="{{ url_for('search.index', cid=entry.category.id) }}">Search this category</a></span>
+                            </div>
+                        </div>
+                        <div class="pb-2 row">
                             <div class="col-sm-3 label"><span>Gene</span></div>
                             <div class="col-sm-9 value">
                                 {% if entry.genes %}
