@@ -206,6 +206,21 @@
 
                 <div class="row my-5">
                     <div class="col-lg-3">
+                        <h3>Skylign Logo</h3>
+                        <p>{{url_for('static', filename=(entry.category.static_logo_path.as_posix() | string))}}</p>
+                    </div>
+                    {# <div class="col-lg-9">
+                        <div class="row mt-3">
+                            <div id="pae-view" class="columns medium-9">
+                                <div id="pae-container" class="mx-auto" style="background-image: url('{{url_for('static', filename=(entry.category.static_logo_path.as_posix() | string))}}')">
+                                </div>
+                            </div>
+                        </div>
+                    </div> #}
+                </div>
+
+                <div class="row my-5">
+                    <div class="col-lg-3">
                         <h3>Last updated</h3>
                     </div>
                     <div class="col-lg-9">

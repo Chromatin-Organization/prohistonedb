@@ -93,7 +93,11 @@ class Category:
         # If no short name was supplied, set it to the long name.
         if self.short_name is None:
             object.__setattr__(self, "short_name", self.name)
-
+    
+    @property
+    def static_logo_path(self):
+        return (Path("logo-data") / self.name).with_suffix(".hmm")
+            
 @dataclass(eq=False, frozen=True)
 class Histone:
     """ A compound dataclass to hold all the metadata for a single histone. """
