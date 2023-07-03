@@ -207,7 +207,7 @@
                 <div class="row my-5">
                     <div class="col-lg-3">
                         <h3>Skylign Logo</h3>
-                        <p>{{url_for('static', filename=(entry.category.static_logo_path.as_posix() | string))}}</p>
+                        <p>{{url_for('static', filename=(entry.category.static_logo_path | string))}}</p>
                     </div>
                     {# <div class="col-lg-9">
                         <div class="row mt-3">

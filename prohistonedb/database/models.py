@@ -96,7 +96,7 @@ class Category:
     
     @property
     def static_logo_path(self):
-        return (Path("logo-data") / self.name).with_suffix(".hmm")
+        return (Path("logo-data") / self.name).with_suffix(".hmm").as_posix()
             
 @dataclass(eq=False, frozen=True)
 class Histone:
