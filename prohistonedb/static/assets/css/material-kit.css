@@ -24246,6 +24246,12 @@ table td {
   background-position: -1120px 0;
 }
 
+/* Skylign section */
+.logo_form .input-group input.form-control {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
 /* attribution section */
 #attribution p a,
 #group-information a {
