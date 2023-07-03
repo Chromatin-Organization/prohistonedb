@@ -9,6 +9,7 @@ from typing import Optional, Union
 from pathlib import Path
 
 import functools
+import datetime
 
 #*----- External packages -----*#
 
@@ -112,6 +113,7 @@ class Histone:
     genome_ids: list[str]
     multimer_rankings: dict[Multimer, list[int]]
     rel_path: Path
+    last_updated: datetime.datetime
 
     @property
     def multimers(self) -> list[Multimer]:

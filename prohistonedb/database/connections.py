@@ -178,6 +178,8 @@ class SQLiteConnection(DatabaseConnection):
             return "TEXT"
         elif field_type in [FieldType.INTEGER, FieldType.INT_ID]:
             return "INTEGER NOT NULL"
+        elif field_type is FieldType.TIMESTAMP:
+            return "DATETIME NOT NULL"
         else:
             raise ValueError(f"Not implemented for FieldType {field_type}.")
 

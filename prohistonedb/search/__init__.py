@@ -4,6 +4,7 @@
 from typing import Sequence, Mapping
 from pathlib import Path
 import json
+import datetime
 
 #*----- Flask & Flask Extensions -----*#
 import flask
@@ -54,6 +55,7 @@ def results_to_histones(results: Sequence[Mapping]) -> list[models.Histone]:
             genome_ids=json.loads(result[Field.GENOME_IDS.db_name]),
             multimer_rankings={models.Multimer(multimer):ranks[multimer] for multimer in ranks.keys()},
             rel_path=Path(result["rel_path"]),
+            last_updated=datetime.datetime.strptime(result["last_updated"], "%Y-%m-%d %H:%M:%S")
         ))
     
     return histones

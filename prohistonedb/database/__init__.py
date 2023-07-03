@@ -80,10 +80,13 @@ def init_db():
     sql = "CREATE TABLE metadata (\n"
     for field in Field.metadata_fields():
         sql += f"    {field.db_name} {conn.sql_field_type(field.type)},\n"
+
+        if field is Field.LINEAGE:
+            sql += f"    {field.LINEAGE.db_name}_json {conn.sql_field_type(FieldType.TEXT)},"
     
     sql += f"    rel_path {conn.sql_field_type(FieldType.TEXT)},\n"
     sql += f"    ranks {conn.sql_field_type(FieldType.TEXT_OPTIONAL)},\n"
-    sql += f"    {field.LINEAGE.db_name}_json {conn.sql_field_type(FieldType.TEXT)},"
+    sql += f"    last_updated {conn.sql_field_type(FieldType.TIMESTAMP)} DEFAULT CURRENT_TIMESTAMP,\n"
     sql += f"    FOREIGN KEY ({Field.CATEGORY_ID.db_name}) REFERENCES categories(id)\n"
     sql += ")"
     conn.execute(sql)

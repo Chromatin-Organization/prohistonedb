@@ -41,6 +41,7 @@ class FieldType(Enum):
     TEXT_ID = enum.auto()
     IDS = enum.auto()
     IDS_OPTIONAL = enum.auto()
+    TIMESTAMP = enum.auto()
 
     @classmethod
     def optional_types(cls) -> set[FieldType]:
