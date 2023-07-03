@@ -24247,6 +24247,83 @@ table td {
 }
 
 /* Skylign section */
+/* missing styles in hmm_logo css... */
+.logo_controls {
+  position: absolute;
+  left: 3.1em;
+  top: 0;
+}
+
+.logo_zoomout,
+.logo_zoomin {
+  display: none;
+}
+
+.logo_settings {
+  z-index: 1002;
+  position: relative;
+  background: #fff;
+  margin-top: -0.5rem;
+  margin-left: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3125rem 0.625rem 0 rgba(0, 0, 0, 0.12);
+}
+.logo_settings .close {
+  display: none;
+}
+.logo_settings fieldset {
+  margin-bottom: 0.5rem;
+}
+.logo_settings legend {
+  color: #344767;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.logo_settings label {
+  margin-bottom: 0;
+}
+.logo_settings input[type=radio] {
+  margin-right: 0.3rem;
+}
+
+#logo_info p {
+  text-align: center;
+  margin-bottom: 0;
+}
+#logo_info .odd {
+  border-right: 1px solid #ccc;
+}
+
+#logo_info > div {
+  width: 33rem;
+  margin: 0.6em auto;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  padding: 0.3em 0;
+}
+#logo_info > div p {
+  display: inline;
+  margin: 1em;
+}
+
+.logo_col_info {
+  margin: auto;
+}
+.logo_col_info th {
+  padding: 0 1em;
+}
+.logo_col_info td {
+  padding: 0 0.5em;
+  text-align: center;
+}
+.logo_col_info div {
+  width: 1em !important;
+  margin-left: 1em;
+}
+
 .logo_form .input-group input.form-control {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;

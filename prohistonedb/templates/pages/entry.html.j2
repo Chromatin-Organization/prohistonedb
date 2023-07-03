@@ -218,8 +218,8 @@
                     <div class="col-lg-9">
                         <div class="row mt-3">
                             <div class="w-100">
-                                <div id="logo-container" class="logo mx-auto w-100" data-logo="">
-                                </div>
+                                <div id="logo-container" class="logo mx-auto w-100" data-logo=""></div>
+                                <div id="logo_info"></div>
                             </div>
                         </div>
                     </div>
@@ -324,7 +324,7 @@
                 
                 async function addLogo() {
                     await setHMMJSON();
-                    $(logoContainer).hmm_logo({column_width: 34, height_toggle: 'enabled', column_info: '#logo_info'});
+                    $(logoContainer).hmm_logo({column_width: 34, height_toggle: 'enabled', column_info: '#logo_info',  zoom: 1});
                     const logoFormFieldset = document.querySelector(".logo_form fieldset");
                     logoFormFieldset.classList.add("py-3", "input-group", "input-group-sm", "w-40");
 
