@@ -3,6 +3,7 @@
 #*----- Standard Library -----*#
 from pathlib import Path
 import json
+from typing import Union
 
 #*----- Flask & Flask Extenstions -----*#
 import flask
@@ -64,7 +65,7 @@ def init_db():
     conn.execute(f"""
         CREATE TABLE categories (
             id {conn.sql_field_type(FieldType.PRIMARY_INTEGER)},
-            name {conn.sql_field_type(FieldType.TEXT)},
+            name {conn.sql_field_type(FieldType.TEXT)} UNIQUE,
             preferred_multimer {conn.sql_field_type(FieldType.TEXT_OPTIONAL)} CHECK( preferred_multimer IN ('{multimer_options}') ),
             short_name {conn.sql_field_type(FieldType.TEXT_OPTIONAL)},
             has_page {conn.sql_field_type(FieldType.INTEGER)} CHECK( has_page IN (0, 1) )
@@ -107,25 +108,21 @@ def init_db():
     # Commit the changes to the database
     conn.commit()
 
-def update_db_categories():
+def update_db_categories(filename: Path):
     """ Update the database with the data in the categories JSON file. """
     # Get a database connection
     conn = get_db()
 
-    # Make sure that the categories JSON file exists
-    categories_json = Path(flask.current_app.config["CATEGORIES_JSON"])
-
-    if not categories_json.is_file():
-        raise Exception("Config option 'CATEGORIES_JSON' does not point to a file.")
-
     # Open the categories JSON file and load the data
-    with open(categories_json, 'r') as f:
+    with open(filename, 'r') as f:
         categories_json = json.load(f)
 
         # Load all the categories data into a list
-        categories = []
+        categories_new = []
+        categories_update = []
 
         for category in categories_json:
+            # Retrieve the data from the JSON object
             category_json = categories_json[category]
 
             data = {}
@@ -140,29 +137,35 @@ def update_db_categories():
             else:
                 data["has_page"] = int(False)
 
-            categories.append(data)
+            # Determine whether the category already exists and store the data in the correct list
+            if conn.execute("SELECT id FROM categories WHERE name = ?", [category]).fetchone():
+                categories_update.append(data)
+            else:
+                categories_new.append(data)
 
-        # Execute the SQL query on the database
-        sql = "INSERT OR REPLACE INTO categories (name, preferred_multimer, short_name, has_page) VALUES (:name, :preferred_multimer, :short_name, :has_page)"
-        conn.executemany(sql, categories)
+        # Insert the new categories into the database.
+        if len(categories_new) > 0:
+            sql = "INSERT INTO categories (name, preferred_multimer, short_name, has_page) VALUES (:name, :preferred_multimer, :short_name, :has_page)"
+            conn.executemany(sql, categories_new)
+
+        # Update the existing entries in the database.
+        if len(categories_update) > 0:
+            sql = "UPDATE categories SET preferred_multimer = :preferred_multimer, short_name = :short_name, has_page = :has_page WHERE name = :name"
+            conn.executemany(sql, categories_update)
+
+        # Commit the changes
         conn.commit()
 
-def update_db_metadata():
+def update_db_metadata(filename: Path):
     """ Update the database with the data in the metadata JSON file.  """
     # Get a database connection
     conn = get_db()
 
     # Set-up some useful variables
     search_fields = ((Field.search_fields() | Field.facet_fields()) & Field.metadata_fields()) - {Field.CATEGORY_ID}
-
-    # Make sure that the metadata JSON file exists
-    metadata_json = Path(flask.current_app.config["METADATA_JSON"])
-
-    if not metadata_json.is_file():
-        raise Exception("Config option 'METADATA_JSON' does not point to a file.")
     
     # Open the metadata JSON file and load the data
-    with open(metadata_json, 'r') as f:
+    with open(filename, 'r') as f:
         metadata_json = json.load(f)
 
         # Load all the metadata into a list
@@ -190,8 +193,6 @@ def update_db_metadata():
                     continue
 
                 if not multimers_json[multimer]:
-                    # * Removed debugging since it was overly verbose
-                    # flask.current_app.logger.debug(f"Entry {uid} has no structure for '{multimer}'. Skipping...")
                     continue
                 
                 ranks_json = uid_json["histoneDB"]["rankModel"][multimer]
@@ -208,7 +209,7 @@ def update_db_metadata():
         fields = {field.db_name for field in search_fields}
         fields = fields | {Field.LINEAGE.db_name+"_json", "rel_path", "ranks"} - {Field.CATEGORY_ID.db_name}
 
-        sql = "INSERT INTO metadata (\n    "
+        sql = "INSERT OR REPLACE INTO metadata (\n    "
         sql += ",\n    ".join(fields)
         sql += f",\n    {Field.CATEGORY_ID.db_name}\n)\n"
         sql += "SELECT\n    :"
@@ -219,6 +220,24 @@ def update_db_metadata():
 
         conn.executemany(sql, metadata)
         conn.commit()
+
+
+def remove_db_entries(filename: Path):
+    """ Remove all entries with a Uniprot ID in the give JSON file from the database. """   
+    # Get a database connection
+    conn = get_db()
+
+    # Open the JSON file and load the data
+    with open(filename, 'r') as f:
+        remove_uids = [[uid] for uid in json.load(f)]
+
+    # Set-up an SQL query to execute.
+    #? This is hard-coded for now since rewriting ComparisonType and SQLCondition would require a code reorganization to avoid circular dependencies.
+    sql = "DELETE FROM metadata\n"
+    sql += f"WHERE {Field.UNIPROT_ID.db_name} = ?" 
+
+    conn.executemany(sql, remove_uids)
+    conn.commit()
 
 def delete_db():
     db_path = Path(flask.current_app.config["DATABASE"])
@@ -245,9 +264,15 @@ def inject_max_sequence_length():
 
 #***===== Register CLI commands =====***#
 @bp.cli.command("create")
+@click.argument("db-filename", type=click.Path(exists=True, dir_okay=False, path_type=Path))
+@click.argument("categories-filename", type=click.Path(exists=True, dir_okay=False, path_type=Path))
 @click.option('-f', '--force', is_flag=True, help="Enables rewriting of the existing database file.")
-def create(force: bool = False):
-    """ Create a new database from the 'categories' and 'metadata' JSON files. """
+def create(
+    db_filename: Path,
+    categories_filename: Path,
+    force: bool = False
+    ):
+    """ Create a new database from the 'DB_FILENAME' and 'CATEGORIES_FILENAME' JSON files. """
     if force:
         # If overwriting is forced, delete the current database.
         delete_db()
@@ -262,19 +287,33 @@ def create(force: bool = False):
     init_db()
 
     # Fill the categories table from the categories json file.
-    update_db_categories()
+    update_db_categories(categories_filename)
 
     # Fill the metadata table from the metadata json file.
-    update_db_metadata()
+    update_db_metadata(db_filename)
 
 @bp.cli.command("update")
-def update():
+@click.argument("db-filename", type=click.Path(exists=True, dir_okay=False, path_type=Path))
+@click.option('-c', '--categories-file', type=click.Path(exists=True, dir_okay=False, path_type=Path), help="A JSON file for supplying updates to the categories available in the database.")
+def update(
+    db_filename: Path,
+    categories_file: Union[Path, None]
+    ):
     """ 
-        Updates the database based on the 'categories' and 'metadata' JSON files.
-        WARNING: Existing entries may be overwritten.
+        Updates the database based on the supplied JSON file.
+        WARNING: Existing entries will be overwritten where needed.
     """
     # Update the categories table from the categories json file.
-    update_db_categories()
+    #! FIXME: Temporarily disabled since it breaks category ids.
+    if categories_file:
+        update_db_categories(categories_file)
+        # raise Exception("This feature has temporarily been disabled.")
 
     # Update the metadata table from the metadata json file.
-    update_db_metadata()
+    update_db_metadata(db_filename)
+
+@bp.cli.command("remove")
+@click.argument('filename', type=click.Path(exists=True, dir_okay=False, path_type=Path))
+def remove(filename: Path):
+    """ Remove all entries from the database that have an Uniprot ID that is found in the supplied JSON file. """
+    remove_db_entries(filename)

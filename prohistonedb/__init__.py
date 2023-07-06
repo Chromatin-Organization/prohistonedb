@@ -70,13 +70,13 @@ def create_app(test_config: Mapping[str, Any] = None):
         app.logger.info("Found test configuration. Loading test config...")
         app.config.from_mapping(test_config)
 
-    # Assume "METADATA_JSON", "CATEGORIES_JSON" and "DATABASE" are in the instance directory if the paths are relative.
-    for config_param in ["DATABASE", "METADATA_JSON", "CATEGORIES_JSON"]:
-        path = Path(app.config[config_param]) 
+    # Assume "DATABASE" is in the instance directory if the paths are relative.
+    config_param = "DATABASE"
+    path = Path(app.config["DATABASE"]) 
 
-        if not path.is_absolute():
-            app.config[config_param] = str(instance_dir / path)
-            app.logger.info(f"'{config_param}' is a relative path. Destination set to '{app.config[config_param]}'.")
+    if not path.is_absolute():
+        app.config[config_param] = str(instance_dir / path)
+        app.logger.info(f"'{config_param}' is a relative path. Destination set to '{app.config[config_param]}'.")
 
     #*----- Initialize the database -----*#
     app.logger.info("Initializing database...")
