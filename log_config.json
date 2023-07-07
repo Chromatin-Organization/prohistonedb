@@ -2,6 +2,9 @@
     "version": 1,
     "formatters": {
         "default": {
+            "format": "[%(asctime)s] %(levelname)s: %(message)s"
+        },
+        "long": {
             "format": "[%(asctime)s] %(levelname)s: %(message)s (@%(pathname)s)"
         }
     },
@@ -9,11 +12,19 @@
         "wsgi": {
             "class": "logging.StreamHandler",
             "stream": "ext://flask.logging.wsgi_errors_stream",
-            "formatter": "default"
+            "formatter": "default",
+            "level": "WARNING"
+        },
+        "file": {
+            "class": "logging.FileHandler",
+            "filename": "logs/prohistonedb.log",
+            "encoding": "UTF-8",
+            "formatter": "long",
+            "level": "DEBUG"
         }
     },
     "root": {
         "level": "INFO",
-        "handlers": ["wsgi"]
+        "handlers": ["wsgi", "file"]
     }
 }

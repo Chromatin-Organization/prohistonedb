@@ -24,6 +24,9 @@ def create_app(test_config: Mapping[str, Any] = None):
     #*----- Set variables for later usage -----*#
     root_dir = Path(__file__).parents[1].resolve()
 
+    #*----- Make sure the logging directory exists -----*#
+    Path("logs").mkdir(parents=True, exist_ok=True)
+
     #*----- Configure logging -----*#
     logging_config = root_dir / Path("log_config.json")
     with open(logging_config) as f:
