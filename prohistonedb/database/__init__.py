@@ -304,10 +304,8 @@ def update(
         WARNING: Existing entries will be overwritten where needed.
     """
     # Update the categories table from the categories json file.
-    #! FIXME: Temporarily disabled since it breaks category ids.
     if categories_file:
         update_db_categories(categories_file)
-        # raise Exception("This feature has temporarily been disabled.")
 
     # Update the metadata table from the metadata json file.
     update_db_metadata(db_filename)
