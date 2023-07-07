@@ -131,7 +131,7 @@
                         </div>
 
                         <div class="dropdown float-end">
-                            <a class="btn btn-sm btn-secondary btn-download float-end" href="https://prohistonedb.universiteitleiden.nl/data/zips/{{entry.uniprot_id}}.zip" role="button" title="Download all structure data (zipped)">
+                            <a class="btn btn-sm btn-secondary btn-download float-end" href="{{url_for('main.download', uid=entry.uniprot_id)}}" role="button" title="Download all structure data (zipped)">
                                 <span class="caption">Download</span>
                                 <span class="material-icons-round">download</span>
                             </a>

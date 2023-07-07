@@ -2,6 +2,11 @@
 #***===== Imports =====***#
 #*----- Standard library -----*#
 from typing import Optional
+from zipfile import ZipFile
+from tempfile import TemporaryFile
+from io import BytesIO
+import urllib
+import time
 
 #*----- Flask & Flask Extenstions -----*#
 import flask
@@ -78,3 +83,32 @@ def about():
 def changelog():
     """ Render the changelog page. """
     return flask.render_template("pages/changelog.html.j2")
+
+@bp.route("/download", methods=["GET"])
+def download():
+    """ Supply a downloadable zip file for the requested histones. """
+    # Retrieve the Uniprot IDs for the histones that need to be downloaded.
+    uids = flask.request.args.getlist(Field.UNIPROT_ID.search_name)
+    
+    # Deal with edge cases
+    if len(uids) == 0:
+        return '', 204
+    
+    if len(uids) == 1:
+        return flask.redirect(f"https://prohistonedb.universiteitleiden.nl/data/zips/{uids[0]}.zip")
+    
+    # Generate a zip file
+    tmp = TemporaryFile()
+
+    with ZipFile(tmp, "w") as zf:
+        for uid in uids:
+            response = urllib.request.urlopen(f"https://prohistonedb.universiteitleiden.nl/data/zips/{uid}.zip")
+            zip = ZipFile(BytesIO(response.read()), "r")
+
+            for name in zip.namelist():
+                zf.writestr(name, zip.open(name).read())
+        
+    tmp.seek(0)
+
+    name = f"prohistonedb_bulk_{time.strftime('%Y%m%d%H%M%S')}.zip"
+    return flask.send_file(tmp, mimetype="application/zip", as_attachment=True, download_name=name)
