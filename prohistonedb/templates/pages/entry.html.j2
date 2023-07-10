@@ -307,47 +307,13 @@
                 mspViewer.style.width = '100%';
                 mspLayoutHide.classList.add("msp-layout-hide-right");
             });
-
-            {% if entry.category.name != 'Undefined' and entry.category.name != 'Misc' %}
-            // Skylign sequence alignment viewer
-            const logoContainer = document.querySelector("#logo-container");
-            
-            window.addEventListener("DOMContentLoaded", function() {
-                async function getHMMJSON() {
-                    const url = '{{url_for('static', filename=(entry.category.static_logo_path | string))}}'
-                    //const url = '{{ url_for('static', filename = 'assets/logo_data/3f082362-2d1a-4b69-87b2-7b6e8d5441f6.json') }}';
-                    const response = await fetch(url);
-                    const json = await response.json();
-                    const HMMStringified = JSON.stringify(json);
-
-                    return HMMStringified;
-                }
-
-                async function setHMMJSON() { 
-                    logoContainer.setAttribute('data-logo', await getHMMJSON());
-                }
-                
-                async function addLogo() {
-                    await setHMMJSON();
-                    $(logoContainer).hmm_logo({column_width: 34, height_toggle: 'enabled', column_info: '#logo_info',  zoom: 1});
-                    const logoFormFieldset = document.querySelector(".logo_form fieldset");
-                    logoFormFieldset.classList.add("py-3", "input-group", "input-group-sm", "w-40");
-
-                    const logoInput = document.querySelector(".logo_position");
-                    logoInput.classList.add("form-control", "bg-light", "ms-2", "rounded-start");
-
-                    const logoGoBtn = document.querySelector(".logo_change");
-                    logoGoBtn.classList.add("btn", "btn-sm", "btn-secondary", "mb-0", "rounded-end");
-                    
-                    const logoSettingsBtn = document.querySelector(".logo_settings_switch");
-                    logoSettingsBtn.classList.add("btn", "btn-sm", "btn-secondary");
-
-                    const categoryScroll = new PerfectScrollbar("#logo_info");
-                }
-                
-                addLogo();
-            });
-            {% endif %}
         </script>
+
+        {% if entry.category.name != 'Undefined' and entry.category.name != 'Misc' %}
+            <script>
+                const HMMJSONurl = '{{url_for('static', filename=(entry.category.static_logo_path | string))}}';
+            </script>
+            <script src="{{ url_for('static', filename = 'assets/js/custom/skylign.js' )}}" type="text/javascript"></script>
+        {% endif %}
     {% endif %}
 {% endblock javascripts %}
