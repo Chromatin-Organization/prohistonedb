@@ -100,6 +100,8 @@ def download():
     # Generate a zip file
     tmp = TemporaryFile()
 
+    flask.current_app.logger.debug(f"Generating temporary file for download: {tmp.name}")
+
     with ZipFile(tmp, "w") as zf:
         for uid in uids:
             response = urllib.request.urlopen(f"https://prohistonedb.universiteitleiden.nl/data/zips/{uid}.zip")
