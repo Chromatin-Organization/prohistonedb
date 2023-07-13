@@ -32,6 +32,7 @@ def app() -> Flask:
     app = prohistonedb.create_app(
         test_config = {
             "TESTING": True,
+            "SECRET_KEY": "test"
         }
     )
 

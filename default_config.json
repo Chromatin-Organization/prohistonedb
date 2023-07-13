@@ -1,3 +1,4 @@
 {
-    "DATABASE": "db.sqlite"
+    "DATABASE": "db.sqlite",
+    "SECRET_KEY": "dev"
 }

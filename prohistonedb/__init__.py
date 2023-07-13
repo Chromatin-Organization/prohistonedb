@@ -68,6 +68,12 @@ def create_app(test_config: Mapping[str, Any] = None):
         if path.is_file():
             app.logger.info("Found additional 'config.json' in the instance directory. Loading local server config...")
             app.config.from_file(instance_dir / Path("config.json"), json.load)
+
+        # Warn the user if the secret key is left at it's default value used for development
+        if app.config["SECRET_KEY"] == "dev":
+            warn_str = "The secret key is left at it's unsecure default value!"
+            warn_str += f" If this is a deployment environment, please change this in the file {path}."
+            app.logger.warning(warn_str)
     else:
         # If this is a test, read the config options from the supplied mapping
         app.logger.info("Found test configuration. Loading test config...")
