@@ -23794,6 +23794,22 @@ h3, .h3 {
   border: 0 !important;
 }
 
+.navbar .material-icons-round {
+  vertical-align: text-bottom;
+}
+
+.navbar .basket {
+  color: #344767;
+  background-color: transparent;
+}
+.navbar .basket #basket-counter {
+  transform: translate(-30%, -50%);
+  padding: 0.15rem 0.25rem;
+}
+.navbar .basket:hover {
+  color: #6c757d;
+}
+
 .nav-item .material-icons-round {
   font-size: 1.125rem;
 }
@@ -23941,6 +23957,35 @@ footer .nav-link:hover {
   box-shadow: 2px 1px 12px 2px rgba(0, 0, 0, 0.16);
 }
 
+/* download basket offcanvas */
+#offBasket {
+  width: min(max(40vw, 55rem), 100vw);
+}
+#offBasket .offcanvas-body {
+  overflow-y: hidden;
+}
+
+#basket-items-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 80vh;
+}
+
+#basket-items-wrapper:not(.ps--active-y) #basket-items {
+  width: 100%;
+}
+
+#basket-items {
+  width: 98%;
+  font-size: 0.875rem;
+}
+#basket-items .material-icons-round {
+  font-size: 1rem;
+}
+#basket-items .material-icons-round:hover, #basket-items .material-icons-round:active, #basket-items .material-icons-round:active:focus, #basket-items .material-icons-round:active:hover {
+  color: #e91e63;
+}
+
 /* replace FontAwesome symbols with local Material Icons */
 .dropdown .dropdown-toggle:after,
 .dropup .dropdown-toggle:after,
@@ -24084,11 +24129,11 @@ form[name=search] .input-group-text button[type=submit] {
   vertical-align: middle;
 }
 
-.result-item {
+#list-view .result-item {
   background-color: #f8f9fa;
   font-size: 0.875rem;
 }
-.result-item .label {
+#list-view .result-item .label {
   font-weight: 600;
 }
 
