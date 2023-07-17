@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename = 'assets/img/apple-icon.png' )}}">
 <link rel="icon" type="image/png" href="{{ url_for('static', filename = 'assets/img/favicon.png' )}}">
@@ -13,7 +13,8 @@
   {% block title %}{% endblock title %}
 </title>
 <!-- CSS Files -->
-<link id="pagestyle" href="{{ url_for('static', filename = 'assets/css/material-kit.css' )}}" rel="stylesheet" />
+<link id="pagestyle" href="{{ url_for('static', filename = 'assets/css/material-kit.css' )}}" rel="stylesheet">
+<link href="{{ url_for('static', filename = 'assets/css/cookie-banner.css' )}}" rel="stylesheet">
 {% block molstar %}{% endblock molstar %}
 {% block skylign %}{% endblock skylign %}
 </head>
@@ -32,6 +33,10 @@
   {% block footer %}
     {% include 'includes/footer.html.j2' %}
   {% endblock footer %}
+
+  {% block cookie_banner %}
+    {% include 'includes/cookie_banner.html.j2' %}
+  {% endblock cookie_banner %}
 
   {% include 'includes/scripts.html.j2' %}
 
@@ -58,7 +63,7 @@
     })
 
     // navbar offcanvas close button closes dropdown menu; should hide offcanvas
-    document.addEventListener("click", e => {
+    document.addEventListener("click", e => { 
       if (e.target.classList.contains("btn-close")) {
         const offCanvas = document.querySelector(".offcanvas.show")
         const openedCanvas = bootstrap.Offcanvas.getInstance(offCanvas)

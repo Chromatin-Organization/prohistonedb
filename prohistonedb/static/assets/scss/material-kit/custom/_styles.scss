@@ -735,7 +735,27 @@ table th,
 .noUi-handle:before,
     .noUi-handle:after {
         display: none;
+}
+
+
+/* cookie banner */
+.alert-dark {
+    color: #fff;
+    border: none;
+    font-size: $font-size-sm;
+    background-color: #9ba0a9;
+    background-image: none;
+
+    position: sticky;
+    bottom: 0;
+
+    a {
+        color: $primary;
+
+        &:hover, 
+        &:active { text-decoration: underline }
     }
+}
 
 
 /* navbar / search bar on small screens */

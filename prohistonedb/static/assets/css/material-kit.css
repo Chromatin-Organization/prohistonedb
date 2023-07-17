@@ -24470,6 +24470,23 @@ table td {
   display: none;
 }
 
+/* cookie banner */
+.alert-dark {
+  color: #fff;
+  border: none;
+  font-size: 0.875rem;
+  background-color: #9ba0a9;
+  background-image: none;
+  position: sticky;
+  bottom: 0;
+}
+.alert-dark a {
+  color: #e91e63;
+}
+.alert-dark a:hover, .alert-dark a:active {
+  text-decoration: underline;
+}
+
 /* navbar / search bar on small screens */
 @media (max-width: 576px) {
   body:not(.index-page) .navbar {
