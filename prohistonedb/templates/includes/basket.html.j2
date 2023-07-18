@@ -1,9 +1,9 @@
 <div class="offcanvas offcanvas-end pt-3 pb-2 py-lg-0" id="offBasket" style="flex-grow: initial !important">
-  <div class="offcanvas-header">
+  <div class="offcanvas-header ps-md-5">
     <h3 class="mb-0"><span class="material-icons-round align-middle me-2 mb-1">shopping_basket</span>Basket</h3>
     <button class="btn btn-close px-2 pt-3 mb-0 material-icons-round">close</button>
   </div>
-  <div class="offcanvas-body">
+  <div class="offcanvas-body px-md-5">
     {# if (results | length) > 0 #}
     <div id="basket-buttons-container" class="w-100 bg-white py-3">
         <button class="btn btn-primary btn-sm btn-icon mb-0" title="Download zip of all items in basket">
@@ -30,9 +30,11 @@
     </div>
     {# else #}
     {#
-    <p>Your download basket is empty.</p>
+    <div class="no-items text-center">
+      <h5>Your download basket is empty.</h5>
+      <p>You can use the download basket to store histone entries for later (bulk) download.</p>
+    </div>
     #}
     {# endif #}
-
   </div>
 </div>
