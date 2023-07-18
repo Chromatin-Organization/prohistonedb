@@ -3,9 +3,9 @@
     <h3 class="mb-0"><span class="material-icons-round align-middle me-2 mb-1">shopping_basket</span>Basket</h3>
     <button class="btn btn-close px-2 pt-3 mb-0 material-icons-round">close</button>
   </div>
-  <div class="offcanvas-body px-md-5">
+  <div class="offcanvas-body px-md-5 d-flex flex-column justify-content-center">
     {# if (results | length) > 0 #}
-    <div id="basket-buttons-container" class="w-100 bg-white py-3">
+    <div id="basket-buttons-wrapper" class="w-100 bg-white py-3">
         <button class="btn btn-primary btn-sm btn-icon mb-0" title="Download zip of all items in basket">
             <span class="material-icons-round">download</span>
             <span class="caption">Download all</span>
@@ -36,5 +36,11 @@
     </div>
     #}
     {# endif #}
+    
+    {# TODO: hide (& clear) #basket-items-wrapper & #basket-buttons-wrapper when displaying spinner (status-wrapper) #}
+    <div class="status-wrapper text-center my-auto d-none">
+      <div class="spinner-border text-dark" role="status"></div>
+      <h5>Creating zip file...</h5>
+    </div>
   </div>
 </div>
