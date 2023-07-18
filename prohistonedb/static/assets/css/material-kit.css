@@ -24487,6 +24487,11 @@ table td {
   text-decoration: underline;
 }
 
+/* progress status */
+.status-wrapper {
+  font-family: "Roboto Slab";
+}
+
 /* navbar / search bar on small screens */
 @media (max-width: 576px) {
   body:not(.index-page) .navbar {

@@ -174,7 +174,7 @@
                             </div>
                             
                             <div id="download-button-wrapper" class="float-start">
-                                <button id="downloadSelectedBtn" class="btn btn-sm btn-icon btn-outline-secondary disabled" title="Download selected items">
+                                <button id="downloadSelectedBtn" class="btn btn-sm btn-icon btn-outline-secondary disabled" title="Download selected items" data-bs-toggle="modal" data-bs-target="#progressModal">
                                     <span class="material-icons-round">download</span>
                                     <span class="caption">Download</span>
                                 </button>
@@ -316,6 +316,8 @@
         <div class="offfacets-body container">
         </div>
     </div>
+
+    {% include "includes/spinner_modal.html.j2" %}
 
   {% endblock content %}
 
@@ -491,6 +493,14 @@
 
                     updateDownloadButton()
                 })
+            })
+
+            // close progress/spinner modal when File save dialog opens
+            window.addEventListener("focus", () => {
+                const activeModal = document.querySelector(".modal.show")
+                if (activeModal) {
+                    bootstrap.Modal.getInstance(activeModal).hide()
+                }
             })
 
             {# * View toggles * #}
