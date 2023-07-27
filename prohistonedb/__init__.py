@@ -6,11 +6,9 @@ from pathlib import Path
 
 import logging.config
 
-import json
-
 #*----- Flask & Flask Extenstions -----*#
 import flask
-from flask import Flask
+from flask import Flask, json
 
 #*----- External packages -----*#
 
@@ -112,6 +110,9 @@ def create_app(test_config: Mapping[str, Any] = None):
 
     from . import categories
     app.register_blueprint(categories.bp)
+
+    from . import session
+    app.register_blueprint(session.bp)
 
     #*----- Return the constructed app -----*#
     app.logger.info("Application setup has been completed.")

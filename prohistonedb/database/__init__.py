@@ -2,12 +2,11 @@
 #***===== Imports =====***#
 #*----- Standard Library -----*#
 from pathlib import Path
-import json
 from typing import Union
 
 #*----- Flask & Flask Extenstions -----*#
 import flask
-from flask import Flask
+from flask import Flask, json
 
 #*----- Other External packages -----*#
 import click
