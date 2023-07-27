@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename = 'assets/img/apple-icon.png' )}}">
 <link rel="icon" type="image/png" href="{{ url_for('static', filename = 'assets/img/favicon.png' )}}">
@@ -13,7 +13,8 @@
   {% block title %}{% endblock title %}
 </title>
 <!-- CSS Files -->
-<link id="pagestyle" href="{{ url_for('static', filename = 'assets/css/material-kit.css' )}}" rel="stylesheet" />
+<link id="pagestyle" href="{{ url_for('static', filename = 'assets/css/material-kit.css' )}}" rel="stylesheet">
+<link href="{{ url_for('static', filename = 'assets/css/cookie-banner.css' )}}" rel="stylesheet">
 {% block molstar %}{% endblock molstar %}
 {% block skylign %}{% endblock skylign %}
 </head>
@@ -24,11 +25,18 @@
     {% include 'includes/navigation.html.j2' %}
   {% endblock header %}
 
-  {% block content %}{% endblock content %}
+  {% block content %}
+  {% endblock content %}
+
+  {% include 'includes/basket.html.j2' %}
 
   {% block footer %}
     {% include 'includes/footer.html.j2' %}
   {% endblock footer %}
+
+  {% block cookie_banner %}
+    {% include 'includes/cookie_banner.html.j2' %}
+  {% endblock cookie_banner %}
 
   {% include 'includes/scripts.html.j2' %}
 
@@ -37,31 +45,36 @@
 
   {# * additional javascript #}
   <script type="text/javascript">
-    const searchTypeBtn = document.querySelector("#filter-type .caption");
-    const searchTypeOptions = document.querySelectorAll("#filter-type .dropdown-item");
-    const searchTypeHidden = document.querySelector("#filter-type input[name='filter']");
+    const searchTypeBtn = document.querySelector("#filter-type .caption")
+    const searchTypeOptions = document.querySelectorAll("#filter-type .dropdown-item")
+    const searchTypeHidden = document.querySelector("#filter-type input[name='filter']")
 
-    // set searchTypeLabel for dropdown select
+    // set searchTypeLabel for dropdown select ("selectpicker" functionality)
     searchTypeOptions.forEach(searchType => {
       searchType.addEventListener("click", function(e) {
-        searchTypeHidden.value = this.dataset.value;
-        searchTypeBtn.innerText = this.innerText;
+        searchTypeHidden.value = this.dataset.value
+        searchTypeBtn.innerText = this.innerText
         // first deselect all options, then add class
-        searchTypeOptions.classList.remove("selected");
-        this.classList.add("selected");
+        searchTypeOptions.classList.remove("selected")
+        this.classList.add("selected")
 
-        e.preventDefault();
-      });
-    });
+        e.preventDefault()
+      })
+    })
 
-    const offCanvas = document.querySelector(".offcanvas");
-    const offCanvasClose = document.querySelector(".offcanvas .btn-close");
-    
-    // offcanvas close button closes dropdown menu; should hide offcanvas
-    offCanvasClose.addEventListener("click", e => {
-      const openedCanvas = bootstrap.Offcanvas.getInstance(offCanvas);
-      openedCanvas.hide();
-    });
+    // navbar offcanvas close button closes dropdown menu; should hide offcanvas
+    document.addEventListener("click", e => { 
+      if (e.target.classList.contains("btn-close")) {
+        const offCanvas = document.querySelector(".offcanvas.show")
+        const openedCanvas = bootstrap.Offcanvas.getInstance(offCanvas)
+        openedCanvas.hide()
+      }
+    })
+
+    // intialize mini scrollbar for basket items table  
+    if (document.getElementById("basket-items-wrapper") !== null) {
+      const basketScroll = new PerfectScrollbar("#basket-items-wrapper")
+    }
   </script>
 
 </body>

@@ -143,8 +143,8 @@
                  <div class="col-xl-9 col-lg-8 col-md-7 mt-3">
                     {# * Applied filters block #}
                     {% if req_filters and (req_filters | length) > 0 %}
-                        <div id="applied-filters-container" class="d-grid gap-2 d-md-block mb-4">
-                            <h6 class="label">Filters:</h6>
+                        <div id="applied-filters-container" class="d-grid gap-2 d-md-block mb-5">
+                            {# <h6 class="label">Filters:</h6> #}
                             {% for field in req_filters.keys() %}
                                 {% for value in req_filters.getlist(field) %}
                                     <button type="button" class="btn btn-light btn-sm btn-icon mb-1" style="vertical-align: baseline" title="click to remove filter" onClick="location.href='{{remove_filter(field, value) | trim}}'">
@@ -174,9 +174,13 @@
                             </div>
                             
                             <div id="download-button-wrapper" class="float-start">
-                                <button id="downloadSelectedBtn" class="btn btn-sm btn-icon btn-outline-secondary disabled" title="Download selected items">
+                                <button id="downloadSelectedBtn" class="btn btn-sm btn-icon btn-outline-secondary disabled" title="Download selected items" data-bs-toggle="modal" data-bs-target="#progressModal">
                                     <span class="material-icons-round">download</span>
-                                    <span class="caption">Download selected</span>
+                                    <span class="caption">Download</span>
+                                </button>
+                                <button id="addToBasketBtn" class="btn btn-sm btn-icon btn-outline-secondary disabled" title="Add selected items to download basket">
+                                    <span class="material-icons-round">shopping_basket</span>
+                                    <span class="caption">Add to basket</span>
                                 </button>
                             </div>
 
@@ -196,7 +200,7 @@
                         </div>
                         
                         {% for r in results %}
-                        <div class="row mt-3 mb-3 px-3 py-3 rounded-3 result-item">
+                        <div class="row mb-4 px-3 py-3 rounded-3 result-item">
                             <div class="form-check pe-0">
                                 <input class="form-check-input select" type="checkbox" name="{{Field.UNIPROT_ID.search_name}}" value="{{r.uniprot_id}}" title="Select for download">
                             </div> 
@@ -313,11 +317,13 @@
         </div>
     </div>
 
+    {% include "includes/spinner_modal.html.j2" %}
+
   {% endblock content %}
 
   {% block javascripts %}
     <script type="text/javascript">
-        {# * off Facetss * #}
+        {# * offcanvas Facets * #}
         const offFacets = document.querySelector("#offFacets");
         const offFacetsClose = document.querySelector("#offFacets .btn-close");
     
@@ -385,8 +391,9 @@
             {% endif %}
 
             {# * Bulk Downloads * #}
-            const downloadButton = document.querySelector("#downloadSelectedBtn");
-            const downloadSelectToggles = document.querySelectorAll("#download_select_toggle");
+            const downloadButton = document.querySelector("#downloadSelectedBtn")
+            const addToBasketButton = document.querySelector("#addToBasketBtn")
+            const downloadSelectToggles = document.querySelectorAll("#download_select_toggle")
             const downloadSelectors = document.querySelectorAll(".results input.select")
 
             // Changes the button between active and disabled.
@@ -403,10 +410,18 @@
                     downloadButton.classList.add("disabled")
                     downloadButton.classList.add("btn-outline-secondary")
                     downloadButton.classList.remove("btn-primary")
+
+                    addToBasketButton.classList.add("disabled")
+                    addToBasketButton.classList.add("btn-outline-secondary")
+                    addToBasketButton.classList.remove("btn-primary")
                 } else if (active > 0) {
                     downloadButton.classList.remove("disabled")
                     downloadButton.classList.remove("btn-outline-secondary")
                     downloadButton.classList.add("btn-primary")
+
+                    addToBasketButton.classList.remove("disabled")
+                    addToBasketButton.classList.remove("btn-outline-secondary")
+                    addToBasketButton.classList.add("btn-primary")
                 } else {
                     throw new Error("This should be unreachable. Can't select a negative number of checkboxes.")
                 }
@@ -478,6 +493,14 @@
 
                     updateDownloadButton()
                 })
+            })
+
+            // close progress/spinner modal when File save dialog opens
+            window.addEventListener("focus", () => {
+                const activeModal = document.querySelector(".modal.show")
+                if (activeModal) {
+                    bootstrap.Modal.getInstance(activeModal).hide()
+                }
             })
 
             {# * View toggles * #}

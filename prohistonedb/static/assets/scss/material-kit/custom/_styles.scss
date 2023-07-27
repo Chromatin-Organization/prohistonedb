@@ -42,6 +42,22 @@ h3 {
     border: 0 !important;
 }
 
+.navbar .material-icons-round { vertical-align: text-bottom }
+
+.navbar .basket { 
+    color: $h-color;
+    background-color: transparent;
+
+    #basket-counter { 
+        transform: translate(-30%, -50%); 
+        padding: .15rem .25rem;
+    }
+
+    &:hover {
+        color: $gray-600;
+    }
+}
+
 .nav-item .material-icons-round {
     font-size: $font-size-lg;
 
@@ -183,6 +199,37 @@ footer .nav-link:hover {
 .offcanvas.offcanvas-start {
     border-right: none;
     box-shadow: 2px 1px 12px 2px rgba(0, 0, 0, .16);
+}
+
+/* download basket offcanvas */
+#offBasket {
+    width: min(max(40vw,55rem),100vw);
+
+    .offcanvas-body { overflow-y: hidden }
+}
+#basket-items-wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 80vh;
+}
+
+#basket-items-wrapper:not(.ps--active-y) #basket-items { 
+    width: 100%; // remove extra scrollbar space 
+}
+#basket-items {
+    width: 98%; // make room for scrollbar
+    font-size: $font-size-sm;
+
+    .material-icons-round { 
+        font-size: $font-size-base; 
+    
+        &:hover, 
+        &:active, 
+        &:active:focus, 
+        &:active:hover {
+            color: $primary;
+        }
+    }
 }
 
 /* replace FontAwesome symbols with local Material Icons */
@@ -329,7 +376,7 @@ form[name=search] .input-group-text {
     }
 }
 
-.result-item {
+#list-view .result-item {
     background-color: $gray-100;
     font-size: $font-size-sm;
 
@@ -688,7 +735,33 @@ table th,
 .noUi-handle:before,
     .noUi-handle:after {
         display: none;
+}
+
+
+/* cookie banner */
+.alert-dark {
+    color: #fff;
+    border: none;
+    font-size: $font-size-sm;
+    background-color: #9ba0a9;
+    background-image: none;
+
+    position: sticky;
+    bottom: 0;
+
+    a {
+        color: $primary;
+
+        &:hover, 
+        &:active { text-decoration: underline }
     }
+}
+
+
+/* progress status */
+.status-wrapper {
+    font-family: "Roboto Slab";
+}
 
 
 /* navbar / search bar on small screens */
