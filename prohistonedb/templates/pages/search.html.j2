@@ -178,7 +178,7 @@
                                     <span class="material-icons-round">download</span>
                                     <span class="caption">Download</span>
                                 </button>
-                                <button id="addToBasketBtn" class="btn btn-sm btn-icon btn-outline-secondary disabled" title="Add selected items to download basket">
+                                <button id="addToBasketBtn" class="btn btn-sm btn-icon btn-outline-secondary disabled" title="Add selected items to download basket" onclick="addToBasket()">
                                     <span class="material-icons-round">shopping_basket</span>
                                     <span class="caption">Add to basket</span>
                                 </button>
@@ -322,6 +322,37 @@
   {% endblock content %}
 
   {% block javascripts %}
+    <script type="text/javascript">
+        {# * Session cookie functions * #}
+        async function addToBasket() {
+            const selectors = document.querySelectorAll(".results:not(.d-none) input.select")
+
+            let uids = []
+            selectors.forEach(selector => {
+                if (selector.checked) {
+                    uids.push(selector.value)
+                }
+            })
+
+            try {
+                const response = await fetch("{{url_for('session.cart_items')}}", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(uids)
+                })
+
+                if (!response.ok) {
+                    throw new Error("Did not receive a succesfull request response.")
+                }
+            } catch(error) {
+                console.error("There has been a problem updating the 'download cart':", error)
+            }
+        }
+
+
+    </script>
     <script type="text/javascript">
         {# * offcanvas Facets * #}
         const offFacets = document.querySelector("#offFacets");

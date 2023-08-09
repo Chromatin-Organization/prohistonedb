@@ -11,7 +11,7 @@ import flask
 #*----- Custom packages -----*#
 
 #*----- Local imports -----*#
-from .. import search
+from .types import CartItem
 
 from ..types import Field
 from ..database import get_db
@@ -22,8 +22,8 @@ from . import bp
 
 #***===== Utility Functions =====*#
 def init_cart():
-    if not flask.session.get("cart"):
-        flask.session.setdefault("cart", [])
+    if not isinstance(flask.session.get("basket"), list):
+        flask.session.setdefault("basket", [])
 
 #***===== Route Definitions =====***#
 @bp.route("/cart", methods = ["GET", "DELETE"])
@@ -40,30 +40,30 @@ def cart():
     # Handle the different types of requests
     if flask.request.method == "GET":
         # For GET requests, return the download cart.
-        filters = [sql.Filter(Field.UNIPROT_ID, uid) for uid in flask.session["cart"]]
+        filters = [sql.Filter(Field.UNIPROT_ID, uid) for uid in flask.session["basket"]]
         
         if len(filters) <= 0:
-            return [],200
+            return [], 200
         elif len(filters) == 1:
             filter = filters[0]
         else:
             filter = sql.OrFilter(filters)
 
         query = sql.Query(filter=filter)
-
         db = get_db()
         results = query.execute(db).fetchall()
-        histones = search.results_to_histones(results)
 
-        return histones, 200
+        items = [CartItem(uniprot_id=result[Field.UNIPROT_ID.db_name], organism_name=result[Field.ORGANISM.db_name]) for result in results]
+        return items, 200
     elif flask.request.method == "DELETE":
         # For DELETE requests, clear the download cart and return a 204.
-        flask.session["cart"] = []
-        return 204
+        flask.session["basket"] = []
+        flask.session.modified = True
+        return '', 204
     else:
         # For invalid request types, return 405.
         flask.current_app.logger.debug(f"Unimplemented request type {flask.request.method}")
-        return 405
+        return '', 405
 
 @bp.route("/cart/item/<uniprot_id>", methods=["POST", "DELETE"])
 @bp.route("/cart/items", methods = ["POST", "DELETE"])
@@ -84,7 +84,9 @@ def cart_items(uniprot_id: Optional[str] = None):
 
         if not uids:
             flask.current_app.logger.debug("Session cookie request failed. No Uniprot IDs where supplied.")
-            return 404
+            return '', 404
+        elif not isinstance(uids, list):
+            uids = [uids]
     else:
         uids = [uniprot_id]
     
@@ -92,24 +94,30 @@ def cart_items(uniprot_id: Optional[str] = None):
     if flask.request.method == "POST":
         # For POST requests, add the uids to the cart.
         for uid in uids:
+            if uid in flask.session["basket"]:
+                continue
+
             filter = sql.Filter(Field.UNIPROT_ID, uid)
             query = sql.Query(filter=filter)
 
             db = get_db()
             if query.execute(db).fetchone():
-                flask.session["cart"].append(uid)
+                flask.session["basket"].append(uid)
 
-        return 204
+        flask.session.modified = True
+        return '', 204
     elif flask.request.method == "DELETE":
         # For DELETE requests, remove the uids from the cart.
         for uid in uids:
             try:
-                flask.session["cart"].remove(uid)
+                flask.session["basket"].remove(uid)
             except:
                 flask.current_app.logger.debug(f"Could not remove {uid} from download cart. Skipping...")
                 pass
-        return 204
+
+        flask.session.modified = True
+        return '', 204
     else:
         # For invalid request types, return 405.
         flask.current_app.logger.debug(f"Unimplemented request type {flask.request.method}")
-        return 405
+        return '', 405

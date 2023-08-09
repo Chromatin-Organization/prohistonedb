@@ -43,6 +43,128 @@
   {% block javascripts %}
   {% endblock javascripts %}
 
+  {# * Basket Script * #}
+  <script>
+    // URL Constants
+    const entryPageUrl = "{{url_for('main.entry', uniprot_id='')}}"
+
+    // Function definitions
+    async function getBasket() {
+      try {
+        const response = await fetch("{{url_for('session.cart')}}", {
+          method: "GET",
+        })
+
+        if (!response.ok) {
+          throw new Error("Did not receive a succesfull request response.")
+        }
+
+        return response.json()
+      } catch(error) {
+        console.error("There has been a problem retrieving the 'download cart':", error)
+      }
+    }
+
+    async function reloadBasket() {
+      const items = await getBasket()
+      const basketItemsTable = document.querySelector("table#basket-items tbody")
+
+      let html = ""
+      
+      items.forEach(item => {
+        html += "<tr>\n"
+
+        html += '  <td class="w-95"><a href="'
+        html += entryPageUrl + item.uniprot_id
+        html += '"><strong>'
+        html += item.uniprot_id + " - " + item.organism_name
+        html +='</strong></a></td>\n'
+
+        html += '  <td class="text-center"><button class="btn btn-sm material-icons-round mb-0 px-0 py-0" title="Remove from basket"'
+        html += ' onclick="removeFromBasket(\'' + item.uniprot_id + '\')"'
+        html +='>delete</button></td>\n' 
+
+        html += "</tr>\n"           
+      })
+
+      basketItemsTable.innerHTML = html
+    }
+
+    async function clearBasket() {
+      try {
+        const response = await fetch("{{url_for('session.cart')}}", {
+          method: "DELETE",
+        })
+
+        if (!response.ok) {
+          throw new Error("Did not receive a succesfull request response.")
+        }
+      } catch(error) {
+        console.error("There has been a problem clearing the 'download cart':", error)
+      }
+
+      reloadBasket()
+    }
+
+    async function removeFromBasket(uniprot_ids) {
+      console.log("Removing " + uniprot_ids + "...")
+      try {
+        const response = await fetch("{{url_for('session.cart_items')}}", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(uniprot_ids)
+        })
+
+        if (!response.ok) {
+          throw new Error("Did not receive a succesfull request response.")
+        }
+      } catch(error) {
+        console.error("There has been a problem updating the 'download cart':", error)
+      }
+
+      reloadBasket()
+    }
+
+    window.addEventListener("DOMContentLoaded", function() {
+      // HTML element variables
+      const basketBtn = document.querySelector("button.basket")
+      const basketDownloadAllBtn = document.querySelector("button#basket-download-btn")
+      const basketClearBtn = document.querySelector("button#basket-clear-btn")
+
+      // Basket View Button & Item List
+      basketBtn.addEventListener("click", async function(_event) {
+        reloadBasket()
+      })
+
+      // Download All Button
+      basketDownloadAllBtn.addEventListener("click", async function(_event) {
+        const items = await getBasket()
+        console.log(items)
+
+        let uids = []
+                
+        items.forEach(item => {
+            uids.push("uid="+item.uniprot_id)
+        })
+
+        console.log(uids)
+        
+        if (uids.length > 0) {
+          window.location = "{{url_for('main.download')}}?" + uids.join('&')
+        } else {
+          window.location = "{{url_for('main.download')}}"
+        }
+      })
+
+      // Clear Basket Button
+      basketClearBtn.addEventListener("click", async function(_event) {
+        clearBasket()
+      })
+    })
+  </script>
+
   {# * additional javascript #}
   <script type="text/javascript">
     const searchTypeBtn = document.querySelector("#filter-type .caption")
@@ -76,6 +198,5 @@
       const basketScroll = new PerfectScrollbar("#basket-items-wrapper")
     }
   </script>
-
 </body>
 </html>
