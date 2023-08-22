@@ -349,39 +349,38 @@
             } catch(error) {
                 console.error("There has been a problem updating the 'download cart':", error)
             }
+
+            reloadBasket()
         }
 
-
-    </script>
-    <script type="text/javascript">
         {# * offcanvas Facets * #}
-        const offFacets = document.querySelector("#offFacets");
-        const offFacetsClose = document.querySelector("#offFacets .btn-close");
+        const offFacets = document.querySelector("#offFacets")
+        const offFacetsClose = document.querySelector("#offFacets .btn-close")
     
         offFacetsClose.addEventListener("click", function() {
-            const openedCanvas = bootstrap.Offcanvas.getInstance(offFacets);
-            openedCanvas.hide();
-        });
+            const openedCanvas = bootstrap.Offcanvas.getInstance(offFacets)
+            openedCanvas.hide()
+        })
 
         {# * Facets Sidebar * #}
         // small screen facets sidebar functionality
         {# TODO: update on window resize #}
-        const facetsSidebar = document.querySelector("#facets-container");
-        const offFacetsBtn = document.querySelector("#offFacetsBtn");
-        const offFacetsBody = document.querySelector(".offfacets-body");
+        const facetsSidebar = document.querySelector("#facets-container")
+        const offFacetsBtn = document.querySelector("#offFacetsBtn")
+        const offFacetsBody = document.querySelector(".offfacets-body")
 
         offFacetsBtn.addEventListener("click", function() {
-            offFacetsBody.append(facetsSidebar);
-            facetsSidebar.classList.remove("d-none");
-            facetsSidebar.classList.add("col-12"); // should be removed again for larger screen sizes
-        });
+            offFacetsBody.append(facetsSidebar)
+            facetsSidebar.classList.remove("d-none")
+            facetsSidebar.classList.add("col-12") // should be removed again for larger screen sizes
+        })
 
         // mobile/offcanvas facets sidebar might need a scrollbar
         //const offFacetsScroll = new PerfectScrollbar("#offFacets");
 
         {# * Sequence Length Slider * #}
-        const seqlSlider = document.querySelector('.multislider');
-        const seqlHidden = document.querySelector('input[class="form-check-input"][name="{{Field.SEQUENCE_LEN.search_name}}"]');
+        const seqlSlider = document.querySelector('.multislider')
+        const seqlHidden = document.querySelector('input[class="form-check-input"][name="{{Field.SEQUENCE_LEN.search_name}}"]')
 
         // initialize multirange slider
         noUiSlider.create(seqlSlider, {
@@ -394,23 +393,23 @@
                 'min': 0,
                 'max': {{max_seq_len}} // get max seql from database
             }
-        });
+        })
 
         // set hidden min-max values on slider "end" event
         // note: "set" event causes an infinite page update loop
         // "handle" arg is slider handle index
         seqlSlider.noUiSlider.on("end", (values, handle) => {
             // seqlHidden is disabled by default to prevent default values being used as a filter
-            seqlHidden.disabled = false;
-            seqlHidden.value = parseInt(values[0]) + "-" + parseInt(values[1]);
+            seqlHidden.disabled = false
+            seqlHidden.value = parseInt(values[0]) + "-" + parseInt(values[1])
             {# * disabled onchange submit in favor of submit button ("apply filters") #}
-            //document.querySelector("form[name='filters']").submit();
-        });
+            //document.querySelector("form[name='filters']").submit()
+        })
 
         // intialize mini scrollbar for Category facet & table view
-        const categoryScroll = new PerfectScrollbar("#filter-category-wrapper");
+        const categoryScroll = new PerfectScrollbar("#filter-category-wrapper")
         if (document.getElementById("table-wrapper") !== null) {
-            const tableScroll = new PerfectScrollbar("#table-wrapper");
+            const tableScroll = new PerfectScrollbar("#table-wrapper")
         }
 
         window.addEventListener("DOMContentLoaded", function() {
@@ -418,7 +417,7 @@
             // change placeholder text to reflect we're searching within search results on the search results page
             // only show when there's an actual search query
             {% if req_filters is defined and (req_filters | length) > 0 %}
-            document.querySelector('input[name="q"]').placeholder = "Search within results";
+            document.querySelector('input[name="q"]').placeholder = "Search within results"
             {% endif %}
 
             {# * Bulk Downloads * #}
@@ -477,10 +476,11 @@
                 return true
             })
 
-            // Select all button funcitonality.
+            // Select all button functionality.
             downloadSelectToggles.forEach(selectToggle => {
                 selectToggle.addEventListener("change", function() {
-                    const otherSelectToggle = document.querySelector(".results.d-none #download_select_toggle");
+                    const otherSelectToggle = document.querySelector(".results.d-none #download_select_toggle")
+
                     if (this.checked === true) {
                         otherSelectToggle.checked = true
                         downloadSelectors.forEach( selector => {
@@ -536,54 +536,54 @@
 
             {# * View toggles * #}
             // add eventListener to both toggle buttons; check for "active" class only when clicked
-            const toggles = document.querySelectorAll("#view-toggle-wrapper .nav-link");
+            const toggles = document.querySelectorAll("#view-toggle-wrapper .nav-link")
             toggles.forEach(toggle => {
                 toggle.addEventListener("click", function(e) {
                     if (this.classList.contains("active")) {
-                        return false;
+                        return false
                     } else {
-                        document.getElementById("table-view").classList.toggle("d-none");
-                        document.getElementById("list-view").classList.toggle("d-none");
+                        document.getElementById("table-view").classList.toggle("d-none")
+                        document.getElementById("list-view").classList.toggle("d-none")
 
-                        document.querySelector("#view-toggle-wrapper .nav-link.active").classList.toggle("active");
-                        this.classList.toggle("active"); // set inactive toggle to active
+                        document.querySelector("#view-toggle-wrapper .nav-link.active").classList.toggle("active")
+                        this.classList.toggle("active") // set inactive toggle to active
                     }
-                    e.preventDefault();
-                });
-            });
+                    e.preventDefault()
+                })
+            })
            
             {# * Facets * #}
             // set checkboxes to checked for each applied filter in query 
-            let filterArgs = {};
+            let filterArgs = {}
             {% if req_filters is defined and (req_filters | length) > 0 %}
                 {% for key in req_filters.keys() %}
-                    filterArgs["{{key}}"] = [];
+                    filterArgs["{{key}}"] = []
                     {% for f in req_filters.getlist(key) %}
-                        filterArgs.{{key}}.push("{{f}}");
+                        filterArgs.{{key}}.push("{{f}}")
                     {% endfor %}
                 {% endfor %}
             {% endif %}
 
-            const filters = document.querySelectorAll(".form-check-input");
+            const filters = document.querySelectorAll(".form-check-input")
             filters.forEach( filter => {
                 for (const key in filterArgs) {    
                     if (key === filter.name) {
                         filterArgs[key].forEach( val => {
                             // what if multiple seql filters applied sequentially?
                             if (key === "{{Field.SEQUENCE_LEN.search_name}}") {
-                                const seqlRange = val.split("-").map(Number);
-                                seqlSlider.noUiSlider.set([seqlRange[0], seqlRange[1]]);
-                                seqlHidden.disabled = false;
-                                seqlHidden.value = val;
+                                const seqlRange = val.split("-").map(Number)
+                                seqlSlider.noUiSlider.set([seqlRange[0], seqlRange[1]])
+                                seqlHidden.disabled = false
+                                seqlHidden.value = val
                             } else {
                                 if (val === filter.value) {
-                                    filter.checked = true;
+                                    filter.checked = true
                                 }
                             }
-                        });
+                        })
                     }
                 }
-            });
-        });
+            })
+        })
     </script>
   {% endblock javascripts %}

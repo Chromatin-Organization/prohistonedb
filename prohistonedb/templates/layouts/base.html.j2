@@ -14,7 +14,6 @@
 </title>
 <!-- CSS Files -->
 <link id="pagestyle" href="{{ url_for('static', filename = 'assets/css/material-kit.css' )}}" rel="stylesheet">
-<link href="{{ url_for('static', filename = 'assets/css/cookie-banner.css' )}}" rel="stylesheet">
 {% block molstar %}{% endblock molstar %}
 {% block skylign %}{% endblock skylign %}
 </head>
@@ -47,6 +46,7 @@
   <script>
     // URL Constants
     const entryPageUrl = "{{url_for('main.entry', uniprot_id='')}}"
+    let basketCount = 0
 
     // Function definitions
     async function getBasket() {
@@ -68,6 +68,8 @@
     async function reloadBasket() {
       const items = await getBasket()
       const basketItemsTable = document.querySelector("table#basket-items tbody")
+      const basketCounter = document.querySelector("#basket-counter")
+      basketCount = items.length
 
       let html = ""
       
@@ -88,6 +90,13 @@
       })
 
       basketItemsTable.innerHTML = html
+      basketCounter.innerHTML = basketCount
+      
+      if (basketCount > 0) {
+        basketCounter.classList.remove("d-none")
+      } else {
+        basketCounter.classList.add("d-none")
+      } 
     }
 
     async function clearBasket() {
@@ -163,6 +172,8 @@
         clearBasket()
       })
     })
+
+    window.onload = reloadBasket()
   </script>
 
   {# * additional javascript #}
@@ -197,6 +208,43 @@
     if (document.getElementById("basket-items-wrapper") !== null) {
       const basketScroll = new PerfectScrollbar("#basket-items-wrapper")
     }
+
+    /**
+    * @description Shows the cookie banner
+    */
+    function showCookieBanner() {
+        let cookieBanner = document.getElementById("cb-cookie-banner")
+        cookieBanner.style.display = "block"
+    }
+
+    /**
+    * @description Hides the Cookie banner and saves the value to localstorage
+    */
+    function hideCookieBanner() {
+        localStorage.setItem("cb_isCookieAccepted", "yes")
+
+        let cookieBanner = document.getElementById("cb-cookie-banner")
+        cookieBanner.style.display = "none"
+    }
+
+    /**
+    * @description Checks the localstorage and shows Cookie banner based on it.
+    */
+    function initializeCookieBanner() {
+        let isCookieAccepted = localStorage.getItem("cb_isCookieAccepted")
+        if (isCookieAccepted === null)
+        {
+            localStorage.setItem("cb_isCookieAccepted", "no")
+            showCookieBanner()
+        }
+        if (isCookieAccepted === "no") {
+            showCookieBanner()
+        }
+    }
+
+    // Assigning values to window object
+    window.onload = initializeCookieBanner()
+    window.cb_hideCookieBanner = hideCookieBanner
   </script>
 </body>
 </html>
