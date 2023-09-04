@@ -50,7 +50,7 @@ h3 {
 
     #basket-counter { 
         transform: translate(-30%, -50%); 
-        padding: .15rem .25rem;
+        padding: .16rem .4rem;
     }
 
     &:hover {
@@ -413,6 +413,14 @@ table th,
         //left: 41px;
 }
 
+#table-view {
+    .form-check .material-icons-round { 
+        font-size: $font-size-lg;
+        color: $primary;
+        vertical-align: bottom;
+    }
+}
+
 #list-view {
     .form-check {
         width: auto;
@@ -420,12 +428,26 @@ table th,
     }
     
     .row {
-        padding-left: 2rem;
+        //padding-left: 2rem;
     }
     
     h5 {
-        padding-left: .9rem;
+        //padding-left: .9rem;
         width: auto;
+    }
+
+    .card {
+        .status {
+            width: 3.5rem;
+            .material-icons-round { 
+                font-size: $font-size-lg;
+                color: $primary;
+                vertical-align: bottom;
+            }
+        }
+        .info {
+            width: calc(100% - 3.5rem);
+        }
     }
 }
 

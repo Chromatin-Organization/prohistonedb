@@ -47,6 +47,7 @@
     // URL Constants
     const entryPageUrl = "{{url_for('main.entry', uniprot_id='')}}"
     let basketCount = 0
+    let basketItems = []
 
     // Function definitions
     async function getBasket() {
@@ -70,6 +71,7 @@
       const basketItemsTable = document.querySelector("table#basket-items tbody")
       const basketCounter = document.querySelector("#basket-counter")
       basketCount = items.length
+      basketItems = []
 
       let html = ""
       
@@ -86,7 +88,9 @@
         html += ' onclick="removeFromBasket(\'' + item.uniprot_id + '\')"'
         html +='>delete</button></td>\n' 
 
-        html += "</tr>\n"           
+        html += "</tr>\n"
+
+        basketItems.push(item.uniprot_id)
       })
 
       basketItemsTable.innerHTML = html
@@ -96,7 +100,28 @@
         basketCounter.classList.remove("d-none")
       } else {
         basketCounter.classList.add("d-none")
-      } 
+      }
+
+      // Compare basket contents with search results & show/hide checkbox
+      if (document.querySelector(".results")) {
+        const resultRows = document.querySelectorAll(".results input.select")
+        resultRows.forEach( function(row) {
+            let basketStatusIcon = row.nextElementSibling
+            if (basketItems.indexOf(row.value) > -1) { // item in basket
+                row.classList.add("d-none")
+                basketStatusIcon.classList.remove("d-none")
+
+                // Reset checked state
+                row.checked = false
+            } else {
+              if (row.classList.contains("d-none")) {
+                row.classList.remove("d-none")
+                basketStatusIcon.classList.add("d-none")
+              }
+            }
+        })
+        
+      }
     }
 
     async function clearBasket() {
@@ -173,6 +198,7 @@
       })
     })
 
+    // show basket count on load on all pages
     window.onload = reloadBasket()
   </script>
 

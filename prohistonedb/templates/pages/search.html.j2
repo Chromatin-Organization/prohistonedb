@@ -198,57 +198,64 @@
                             <input class="form-check-input" type="checkbox" id="download_select_toggle" title="Select/deselect all items on this page">
                             <label class="form-check-label">Select all</label>
                         </div>
-                        
+
                         {% for r in results %}
-                        <div class="row mb-4 px-3 py-3 rounded-3 result-item">
-                            <div class="form-check pe-0">
-                                <input class="form-check-input select" type="checkbox" name="{{Field.UNIPROT_ID.search_name}}" value="{{r.uniprot_id}}" title="Select for download">
-                            </div> 
-                            <h5 class="w-90"><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.organism.name}} {{r.uniprot_id}}</a></h5>
-                            <div class="row">
-                                <div class="col-md-4 col-lg-3 label"><span>UniProt ID</span></div>
-                                <div class="col-md-8 col-lg-9 value">
-                                    <span class="mb-0">{{r.uniprot_id}}</span><span class="ext-link text-nowrap"> <a href="https://www.uniprot.org/uniprotkb/{{r.uniprot_id}}/entry">go to UniProt</a></span>
+                        <div class="card result-item my-4">
+                            <div class="row mx-0">
+                                <div class="status py-3 text-center">
+                                    <div class="form-check mx-auto">
+                                        <input class="form-check-input select" type="checkbox" name="{{Field.UNIPROT_ID.search_name}}" value="{{r.uniprot_id}}" title="Select for download">
+                                        <span class="material-icons-round d-none" title="This item is already in your basket">shopping_basket</span>
+                                    </div> 
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-lg-3 label"><span>Category</span></div>
-                                <div class="col-md-8 col-lg-9 value">
-                                    <span class="mb-0">
-                                    {% if r.category.name != 'Undefined' %}
-                                        <a href="{{ url_for('categories.with_id', id=r.category.id) }}">{{r.category.name}}</a>
-                                    {% else %}
-                                        {{r.category.name}}
-                                    {% endif %}
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-lg-3 label"><span>Protein IDs</span></div>
-                                <div class="col-md-8 col-lg-9 value">
-                                    <span class="mb-0">{{r.protein_ids|join(",")}}</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-lg-3 label"><span>Genes</span></div>
-                                <div class="col-md-8 col-lg-9 value">
-                                    {% if r.genes %}
-                                    <span class="mb-0">{{r.genes|join(",")}}</span>
-                                    {% else %}
-                                    <span class="mb-0"> - </span>
-                                    {% endif %}
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-lg-3 label"><span>Organism</span></div>
-                                <div class="col-md-8 col-lg-9 value">
-                                    <span class="mb-0 float-start me-2">{{r.organism.name}}</span><span class="link text-nowrap"><a href="{{ url_for('search.index', oid=r.organism.id) }}">Search this organism</a></span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-lg-3 label"><span>Length</span></div>
-                                <div class="col-md-8 col-lg-9 value">
-                                    <span class="mb-0">{{r.sequence|length}} AA</span>
+                                <div class="info px-0 py-3">
+                                    <h5><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.organism.name}} {{r.uniprot_id}}</a></h5>
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-3 label"><span>UniProt ID</span></div>
+                                        <div class="col-md-8 col-lg-9 value">
+                                            <span class="mb-0">{{r.uniprot_id}}</span><span class="ext-link text-nowrap"> <a href="https://www.uniprot.org/uniprotkb/{{r.uniprot_id}}/entry">go to UniProt</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-3 label"><span>Category</span></div>
+                                        <div class="col-md-8 col-lg-9 value">
+                                            <span class="mb-0">
+                                            {% if r.category.name != 'Undefined' %}
+                                                <a href="{{ url_for('categories.with_id', id=r.category.id) }}">{{r.category.name}}</a>
+                                            {% else %}
+                                                {{r.category.name}}
+                                            {% endif %}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-3 label"><span>Protein IDs</span></div>
+                                        <div class="col-md-8 col-lg-9 value">
+                                            <span class="mb-0">{{r.protein_ids|join(",")}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-3 label"><span>Genes</span></div>
+                                        <div class="col-md-8 col-lg-9 value">
+                                            {% if r.genes %}
+                                            <span class="mb-0">{{r.genes|join(",")}}</span>
+                                            {% else %}
+                                            <span class="mb-0"> - </span>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-3 label"><span>Organism</span></div>
+                                        <div class="col-md-8 col-lg-9 value">
+                                            <span class="mb-0 float-start me-2">{{r.organism.name}}</span><span class="link text-nowrap"><a href="{{ url_for('search.index', oid=r.organism.id) }}">Search this organism</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-3 label"><span>Length</span></div>
+                                        <div class="col-md-8 col-lg-9 value">
+                                            <span class="mb-0">{{r.sequence|length}} AA</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -282,6 +289,7 @@
                                     <td>
                                         <div class="form-check ps-2">
                                             <input class="form-check-input select" type="checkbox" name="{{Field.UNIPROT_ID.search_name}}" value="{{r.uniprot_id}}"" title="Select for download">
+                                            <span class="material-icons-round d-none" title="This item is already in your basket">shopping_basket</span>
                                         </div>        
                                     </td>
                                     <td><strong><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.uniprot_id}}</a></strong></td>
@@ -463,8 +471,12 @@
                 let uids = []
                 
                 selectors.forEach(selection => {
-                    if (selection.name === "uid" && selection.checked)
+                    if (selection.name === "uid" && selection.checked) {
                         uids.push("uid=" + selection.value)
+                    }
+
+                    // Reset checked state
+                    selection.checked = false
                 })
 
                 if (uids.length > 0) {
@@ -564,7 +576,7 @@
                 {% endfor %}
             {% endif %}
 
-            const filters = document.querySelectorAll(".form-check-input")
+            const filters = document.querySelectorAll("#facets-container .form-check-input")
             filters.forEach( filter => {
                 for (const key in filterArgs) {    
                     if (key === filter.name) {

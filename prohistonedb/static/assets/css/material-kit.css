@@ -23804,7 +23804,7 @@ h3, .h3 {
 }
 .navbar .basket #basket-counter {
   transform: translate(-30%, -50%);
-  padding: 0.15rem 0.25rem;
+  padding: 0.16rem 0.4rem;
 }
 .navbar .basket:hover {
   color: #6c757d;
@@ -24156,16 +24156,29 @@ table td {
   padding-right: 0;
 }
 
+#table-view .form-check .material-icons-round {
+  font-size: 1.125rem;
+  color: #e91e63;
+  vertical-align: bottom;
+}
+
 #list-view .form-check {
   width: auto;
   padding-left: 0;
 }
-#list-view .row {
-  padding-left: 2rem;
-}
 #list-view h5, #list-view .h5 {
-  padding-left: 0.9rem;
   width: auto;
+}
+#list-view .card .status {
+  width: 3.5rem;
+}
+#list-view .card .status .material-icons-round {
+  font-size: 1.125rem;
+  color: #e91e63;
+  vertical-align: bottom;
+}
+#list-view .card .info {
+  width: calc(100% - 3.5rem);
 }
 
 .ext-link a:after {
