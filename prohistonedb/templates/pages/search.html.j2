@@ -340,6 +340,9 @@
                 if (selector.checked) {
                     uids.push(selector.value)
                 }
+
+                // Reset checked state
+                selector.checked = false
             })
 
             try {
@@ -420,182 +423,182 @@
             const tableScroll = new PerfectScrollbar("#table-wrapper")
         }
 
-        window.addEventListener("DOMContentLoaded", function() {
-            {# * Search Bar * #}
-            // change placeholder text to reflect we're searching within search results on the search results page
-            // only show when there's an actual search query
-            {% if req_filters is defined and (req_filters | length) > 0 %}
-            document.querySelector('input[name="q"]').placeholder = "Search within results"
-            {% endif %}
+        {# * Search Bar * #}
+        // change placeholder text to reflect we're searching within search results on the search results page
+        // only show when there's an actual search query
+        {% if req_filters is defined and (req_filters | length) > 0 %}
+        document.querySelector('input[name="q"]').placeholder = "Search within results"
+        {% endif %}
 
-            {# * Bulk Downloads * #}
-            const downloadButton = document.querySelector("#downloadSelectedBtn")
-            const addToBasketButton = document.querySelector("#addToBasketBtn")
-            const downloadSelectToggles = document.querySelectorAll("#download_select_toggle")
-            const downloadSelectors = document.querySelectorAll(".results input.select")
+        {# * Bulk Downloads * #}
+        const downloadButton = document.querySelector("#downloadSelectedBtn")
+        const addToBasketButton = document.querySelector("#addToBasketBtn")
+        const downloadSelectToggles = document.querySelectorAll("#download_select_toggle")
+        const downloadSelectors = document.querySelectorAll(".results input.select")
 
-            // Changes the button between active and disabled.
-            function updateDownloadButton() {
-                const selectors = document.querySelectorAll(".results:not(.d-none) input.select")
+        // Changes the button between active and disabled.
+        function updateDownloadButton() {
+            const selectors = document.querySelectorAll(".results:not(.d-none) input.select")
+            let active = 0
+            
+            selectors.forEach(selector => {
+                if (selector.checked)
+                    active += 1
+            })
+
+            if (active === 0) {
+                downloadButton.classList.add("disabled")
+                downloadButton.classList.add("btn-outline-secondary")
+                downloadButton.classList.remove("btn-primary")
+
+                addToBasketButton.classList.add("disabled")
+                addToBasketButton.classList.add("btn-outline-secondary")
+                addToBasketButton.classList.remove("btn-primary")
+            } else if (active > 0) {
+                downloadButton.classList.remove("disabled")
+                downloadButton.classList.remove("btn-outline-secondary")
+                downloadButton.classList.add("btn-primary")
+
+                addToBasketButton.classList.remove("disabled")
+                addToBasketButton.classList.remove("btn-outline-secondary")
+                addToBasketButton.classList.add("btn-primary")
+            } else {
+                throw new Error("This should be unreachable. Can't select a negative number of checkboxes.")
+            }
+        }
+
+        // Bulk download button functionality
+        downloadButton.addEventListener("click", function(e) {
+            const selectors = document.querySelectorAll(".results:not(.d-none) input.select")
+            let uids = []
+            
+            selectors.forEach(selection => {
+                if (selection.name === "uid" && selection.checked) {
+                    uids.push("uid=" + selection.value)
+                }
+
+                // Reset checked state
+                selection.checked = false
+            })
+
+            // Reset download button status
+            updateDownloadButton()
+
+            if (uids.length > 0) {
+                window.location = "{{url_for('main.download')}}?" + uids.join('&')
+            } else {
+                window.location = "{{url_for('main.download')}}"
+            }
+        })
+
+        // Select all button functionality.
+        downloadSelectToggles.forEach(selectToggle => {
+            selectToggle.addEventListener("change", function() {
+                const otherSelectToggle = document.querySelector(".results.d-none #download_select_toggle")
+
+                if (this.checked === true) {
+                    otherSelectToggle.checked = true
+                    downloadSelectors.forEach( selector => {
+                        selector.checked = true
+                    })
+                } else {
+                    otherSelectToggle.checked = false
+                    downloadSelectors.forEach( selector => {
+                        selector.checked = false
+                    })
+                }
+
+                // Reset download button status
+                updateDownloadButton()
+            })
+        })
+
+        // Add functionality for the selection boxes including:
+        //   * Syncing across views
+        //   * Updating the download button when necessary.
+        //   * Updating the Select all checkboxes when necessary.
+        downloadSelectors.forEach( selector => {
+            selector.addEventListener("change", function() {
+                const otherSelectors = document.querySelectorAll(".results.d-none input.select")
                 let active = 0
-                
-                selectors.forEach(selector => {
+
+                otherSelectors.forEach(selector => {
+                    if (selector.value === this.value)
+                        selector.checked = this.checked
+                    
                     if (selector.checked)
                         active += 1
                 })
 
-                if (active === 0) {
-                    downloadButton.classList.add("disabled")
-                    downloadButton.classList.add("btn-outline-secondary")
-                    downloadButton.classList.remove("btn-primary")
+                const allSelected = otherSelectors.length === active
+                downloadSelectToggles.forEach(selectToggle => {
+                    if (allSelected)
+                        selectToggle.checked = true
+                    else if (selectToggle.checked && !self.checked)
+                        selectToggle.checked = false
+                })
 
-                    addToBasketButton.classList.add("disabled")
-                    addToBasketButton.classList.add("btn-outline-secondary")
-                    addToBasketButton.classList.remove("btn-primary")
-                } else if (active > 0) {
-                    downloadButton.classList.remove("disabled")
-                    downloadButton.classList.remove("btn-outline-secondary")
-                    downloadButton.classList.add("btn-primary")
+                updateDownloadButton()
+            })
+        })
 
-                    addToBasketButton.classList.remove("disabled")
-                    addToBasketButton.classList.remove("btn-outline-secondary")
-                    addToBasketButton.classList.add("btn-primary")
+        // close progress/spinner modal when File save dialog opens
+        window.addEventListener("focus", () => {
+            const activeModal = document.querySelector(".modal.show")
+            if (activeModal) {
+                bootstrap.Modal.getInstance(activeModal).hide()
+            }
+        })
+
+        {# * View toggles * #}
+        // add eventListener to both toggle buttons; check for "active" class only when clicked
+        const toggles = document.querySelectorAll("#view-toggle-wrapper .nav-link")
+        toggles.forEach(toggle => {
+            toggle.addEventListener("click", function(e) {
+                if (this.classList.contains("active")) {
+                    return false
                 } else {
-                    throw new Error("This should be unreachable. Can't select a negative number of checkboxes.")
+                    document.getElementById("table-view").classList.toggle("d-none")
+                    document.getElementById("list-view").classList.toggle("d-none")
+
+                    document.querySelector("#view-toggle-wrapper .nav-link.active").classList.toggle("active")
+                    this.classList.toggle("active") // set inactive toggle to active
+                }
+                e.preventDefault()
+            })
+        })
+        
+        {# * Facets * #}
+        // set checkboxes to checked for each applied filter in query 
+        let filterArgs = {}
+        {% if req_filters is defined and (req_filters | length) > 0 %}
+            {% for key in req_filters.keys() %}
+                filterArgs["{{key}}"] = []
+                {% for f in req_filters.getlist(key) %}
+                    filterArgs.{{key}}.push("{{f}}")
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+
+        const filters = document.querySelectorAll("#facets-container .form-check-input")
+        filters.forEach( filter => {
+            for (const key in filterArgs) {    
+                if (key === filter.name) {
+                    filterArgs[key].forEach( val => {
+                        // what if multiple seql filters applied sequentially?
+                        if (key === "{{Field.SEQUENCE_LEN.search_name}}") {
+                            const seqlRange = val.split("-").map(Number)
+                            seqlSlider.noUiSlider.set([seqlRange[0], seqlRange[1]])
+                            seqlHidden.disabled = false
+                            seqlHidden.value = val
+                        } else {
+                            if (val === filter.value) {
+                                filter.checked = true
+                            }
+                        }
+                    })
                 }
             }
-
-            // Bulk download button functionality
-            downloadButton.addEventListener("click", function(e) {
-                const selectors = document.querySelectorAll(".results:not(.d-none) input.select")
-                let uids = []
-                
-                selectors.forEach(selection => {
-                    if (selection.name === "uid" && selection.checked) {
-                        uids.push("uid=" + selection.value)
-                    }
-
-                    // Reset checked state
-                    selection.checked = false
-                })
-
-                if (uids.length > 0) {
-                    window.location = "{{url_for('main.download')}}?" + uids.join('&')
-                } else {
-                    window.location = "{{url_for('main.download')}}"
-                }
-
-                return true
-            })
-
-            // Select all button functionality.
-            downloadSelectToggles.forEach(selectToggle => {
-                selectToggle.addEventListener("change", function() {
-                    const otherSelectToggle = document.querySelector(".results.d-none #download_select_toggle")
-
-                    if (this.checked === true) {
-                        otherSelectToggle.checked = true
-                        downloadSelectors.forEach( selector => {
-                            selector.checked = true
-                        })
-                    } else {
-                        otherSelectToggle.checked = false
-                        downloadSelectors.forEach( selector => {
-                            selector.checked = false
-                        })
-                    }
-
-                    updateDownloadButton()
-                })
-            })
-
-            // Add functionality for the selection boxes including:
-            //   * Syncing across views
-            //   * Updating the download button when necessary.
-            //   * Updating the Select all checkboxes when necessary.
-            downloadSelectors.forEach( selector => {
-                selector.addEventListener("change", function() {
-                    const otherSelectors = document.querySelectorAll(".results.d-none input.select")
-                    let active = 0
-
-                    otherSelectors.forEach(selector => {
-                        if (selector.value === this.value)
-                            selector.checked = this.checked
-                        
-                        if (selector.checked)
-                            active += 1
-                    })
-
-                    const allSelected = otherSelectors.length === active
-                    downloadSelectToggles.forEach(selectToggle => {
-                        if (allSelected)
-                            selectToggle.checked = true
-                        else if (selectToggle.checked && !self.checked)
-                            selectToggle.checked = false
-                    })
-
-                    updateDownloadButton()
-                })
-            })
-
-            // close progress/spinner modal when File save dialog opens
-            window.addEventListener("focus", () => {
-                const activeModal = document.querySelector(".modal.show")
-                if (activeModal) {
-                    bootstrap.Modal.getInstance(activeModal).hide()
-                }
-            })
-
-            {# * View toggles * #}
-            // add eventListener to both toggle buttons; check for "active" class only when clicked
-            const toggles = document.querySelectorAll("#view-toggle-wrapper .nav-link")
-            toggles.forEach(toggle => {
-                toggle.addEventListener("click", function(e) {
-                    if (this.classList.contains("active")) {
-                        return false
-                    } else {
-                        document.getElementById("table-view").classList.toggle("d-none")
-                        document.getElementById("list-view").classList.toggle("d-none")
-
-                        document.querySelector("#view-toggle-wrapper .nav-link.active").classList.toggle("active")
-                        this.classList.toggle("active") // set inactive toggle to active
-                    }
-                    e.preventDefault()
-                })
-            })
-           
-            {# * Facets * #}
-            // set checkboxes to checked for each applied filter in query 
-            let filterArgs = {}
-            {% if req_filters is defined and (req_filters | length) > 0 %}
-                {% for key in req_filters.keys() %}
-                    filterArgs["{{key}}"] = []
-                    {% for f in req_filters.getlist(key) %}
-                        filterArgs.{{key}}.push("{{f}}")
-                    {% endfor %}
-                {% endfor %}
-            {% endif %}
-
-            const filters = document.querySelectorAll("#facets-container .form-check-input")
-            filters.forEach( filter => {
-                for (const key in filterArgs) {    
-                    if (key === filter.name) {
-                        filterArgs[key].forEach( val => {
-                            // what if multiple seql filters applied sequentially?
-                            if (key === "{{Field.SEQUENCE_LEN.search_name}}") {
-                                const seqlRange = val.split("-").map(Number)
-                                seqlSlider.noUiSlider.set([seqlRange[0], seqlRange[1]])
-                                seqlHidden.disabled = false
-                                seqlHidden.value = val
-                            } else {
-                                if (val === filter.value) {
-                                    filter.checked = true
-                                }
-                            }
-                        })
-                    }
-                }
-            })
         })
     </script>
   {% endblock javascripts %}

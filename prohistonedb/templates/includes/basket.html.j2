@@ -6,7 +6,7 @@
   <div class="offcanvas-body px-md-5 d-flex flex-column justify-content-center">
     {# if (results | length) > 0 #}
     <div id="basket-buttons-wrapper" class="w-100 bg-white py-3">
-        <button id="basket-download-btn" class="btn btn-primary btn-sm btn-icon mb-0" title="Download zip of all items in basket">
+        <button id="basket-download-btn" class="btn btn-primary btn-sm btn-icon mb-0" title="Download zip of all items in basket" data-bs-toggle="modal" data-bs-target="#progressModal">
             <span class="material-icons-round">download</span>
             <span class="caption">Download all</span>
         </button>
@@ -34,11 +34,5 @@
     </div>
     #}
     {# endif #}
-    
-    {# TODO: hide (& clear) #basket-items-wrapper & #basket-buttons-wrapper when displaying spinner (status-wrapper) #}
-    <div class="status-wrapper text-center my-auto d-none">
-      <div class="spinner-border text-dark" role="status"></div>
-      <h5>Creating zip file...</h5>
-    </div>
   </div>
 </div>

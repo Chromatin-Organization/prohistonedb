@@ -105,19 +105,21 @@
       // Compare basket contents with search results & show/hide checkbox
       if (document.querySelector(".results")) {
         const resultRows = document.querySelectorAll(".results input.select")
-        resultRows.forEach( function(row) {
+        resultRows.forEach( row => {
             let basketStatusIcon = row.nextElementSibling
             if (basketItems.indexOf(row.value) > -1) { // item in basket
                 row.classList.add("d-none")
                 basketStatusIcon.classList.remove("d-none")
-
-                // Reset checked state
-                row.checked = false
             } else {
               if (row.classList.contains("d-none")) {
                 row.classList.remove("d-none")
                 basketStatusIcon.classList.add("d-none")
               }
+            }
+
+            // Reset checked state; also resets Download & Add to basket buttons
+            if (row.checked) {
+              row.click()
             }
         })
         
@@ -161,44 +163,56 @@
       reloadBasket()
     }
 
-    window.addEventListener("DOMContentLoaded", function() {
-      // HTML element variables
-      const basketBtn = document.querySelector("button.basket")
-      const basketDownloadAllBtn = document.querySelector("button#basket-download-btn")
-      const basketClearBtn = document.querySelector("button#basket-clear-btn")
+    
+    // HTML element variables
+    const basketBtn = document.querySelector("button.basket")
+    const basketDownloadAllBtn = document.querySelector("button#basket-download-btn")
+    const basketClearBtn = document.querySelector("button#basket-clear-btn")
 
-      // Basket View Button & Item List
-      basketBtn.addEventListener("click", async function(_event) {
-        reloadBasket()
-      })
-
-      // Download All Button
-      basketDownloadAllBtn.addEventListener("click", async function(_event) {
-        const items = await getBasket()
-        console.log(items)
-
-        let uids = []
-                
-        items.forEach(item => {
-            uids.push("uid="+item.uniprot_id)
-        })
-
-        console.log(uids)
-        
-        if (uids.length > 0) {
-          window.location = "{{url_for('main.download')}}?" + uids.join('&')
-        } else {
-          window.location = "{{url_for('main.download')}}"
-        }
-      })
-
-      // Clear Basket Button
-      basketClearBtn.addEventListener("click", async function(_event) {
-        clearBasket()
-      })
+    // Basket View Button & Item List
+    basketBtn.addEventListener("click", async function(_event) {
+      reloadBasket()
     })
 
-    // show basket count on load on all pages
+    // Download All Button
+    basketDownloadAllBtn.addEventListener("click", async function(_event) {
+      const items = await getBasket()
+      //console.log(items)
+
+      let uids = []
+              
+      items.forEach(item => {
+          uids.push("uid="+item.uniprot_id)
+      })
+
+      //console.log(uids)
+      
+      if (uids.length > 0) {
+        window.location = "{{url_for('main.download')}}?" + uids.join('&')
+      } else {
+        window.location = "{{url_for('main.download')}}"
+      }
+
+      // Clear basket after download
+      clearBasket()
+
+      // Close basket offcanvas
+      const offCanvas = document.querySelector(".offcanvas.show")
+      const openedCanvas = bootstrap.Offcanvas.getInstance(offCanvas)
+      openedCanvas.hide()
+    })
+
+    // Clear Basket Button
+    basketClearBtn.addEventListener("click", async function(_event) {
+      clearBasket()
+      
+      // Close basket offcanvas
+      const offCanvas = document.querySelector(".offcanvas.show")
+      const openedCanvas = bootstrap.Offcanvas.getInstance(offCanvas)
+      openedCanvas.hide()
+    })
+
+    // Show basket count on load on all pages
     window.onload = reloadBasket()
   </script>
 
