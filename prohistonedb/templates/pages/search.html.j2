@@ -544,10 +544,7 @@
 
         // close progress/spinner modal when File save dialog opens
         window.addEventListener("focus", () => {
-            const activeModal = document.querySelector(".modal.show")
-            if (activeModal) {
-                bootstrap.Modal.getInstance(activeModal).hide()
-            }
+            clearSpinnerModal()
         })
 
         {# * View toggles * #}

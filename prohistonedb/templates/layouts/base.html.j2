@@ -163,6 +163,12 @@
       reloadBasket()
     }
 
+    function clearSpinnerModal() {
+      const activeModal = document.querySelector(".modal.show")
+      if (activeModal) {
+          bootstrap.Modal.getInstance(activeModal).hide()
+      }
+    }
     
     // HTML element variables
     const basketBtn = document.querySelector("button.basket")
