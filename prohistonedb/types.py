@@ -10,13 +10,14 @@ from typing import Sequence, Union, Mapping
 
 from dataclasses import dataclass
 
+from collections import Counter
+
 import json
 
 #*----- Flask & Flask extenstions -----*#
 import flask
 
 #*----- Other external packages -----*#
-import pandas as pd
 
 #*----- Custom packages -----*#
 
@@ -251,8 +252,8 @@ class Field(str, Enum):
 @dataclass(eq=False, frozen=True)
 class ResultCounts:
     total: int
-    categories: pd.Series[int]
-    superkingdoms: pd.Series[int]
+    categories: Counter[Sequence[str]]
+    superkingdoms: Counter[Sequence[str]]
     max_seq_len: int
 
     def __init__(self, results: Sequence[Union[Sequence, Mapping]], columns: Sequence[str]):
@@ -266,19 +267,17 @@ class ResultCounts:
             else:
                 raise ValueError("Multiple superkingdoms found.")              
 
-        df = pd.DataFrame.from_records(results, columns=columns)
-        categories = df["category"] \
-            .value_counts(sort=False) \
-            .sort_index(na_position="last")
-        superkingdoms = df["lineage_json"] \
-            .apply(find_superkingdom) \
-            .value_counts(sort=False, dropna=False) \
-            .sort_index(na_position="last")
-        
-        if len(df["sequence_len"]) == 0:
+        cat_idx = columns.index("category")
+        categories = Counter([res[cat_idx] for res in results])
+
+        lin_idx = columns.index("lineage_json")
+        superkingdoms = Counter([find_superkingdom(res[lin_idx]) for res in results])
+
+        if len(results) == 0:
             max_seq_len = 0
         else:
-            max_seq_len = df["sequence_len"].max()
+            seq_len_idx = columns.index("sequence_len")
+            max_seq_len = max([res[seq_len_idx] for res in results])
         
         object.__setattr__(self, "total", len(results))
         object.__setattr__(self, "categories", categories)
