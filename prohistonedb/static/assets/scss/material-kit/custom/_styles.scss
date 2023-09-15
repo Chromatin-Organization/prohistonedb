@@ -293,8 +293,7 @@ form[name=search] .input-group-text {
     padding-top: .5rem;
     
     button[type=submit] {
-        /* only useful when using a form clear button */
-        //border-left: 1px solid #e5ecee !important;
+    
     }
 }
 
@@ -797,10 +796,17 @@ table th,
 
 
 /* navbar / search bar on small screens */
-@media (max-width: 576px) {
+@media (max-width: 920px) { // 576px
     body:not(.index-page) .navbar { 
-        padding-left: 0.5rem !important;
+        padding-left: 1.5rem !important;
         padding-right: 1.5rem !important;
+    }
+}
+/* arbitrary breakpoint; based on search bar default text */
+@media (min-width: 921px) {
+    body:not(.index-page) .navbar { 
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
     }
 }
 

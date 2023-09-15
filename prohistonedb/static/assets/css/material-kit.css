@@ -24057,10 +24057,6 @@ footer .nav-link:hover {
 form[name=search] .input-group-text {
   padding-top: 0.5rem;
 }
-form[name=search] .input-group-text button[type=submit] {
-  /* only useful when using a form clear button */
-}
-
 /* change radio buttons to solid cicles */
 /* alignment of facet form inputs & labels */
 .form-check-label {
@@ -24516,10 +24512,17 @@ table td {
 }
 
 /* navbar / search bar on small screens */
-@media (max-width: 576px) {
+@media (max-width: 920px) {
   body:not(.index-page) .navbar {
-    padding-left: 0.5rem !important;
+    padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
+  }
+}
+/* arbitrary breakpoint; based on search bar default text */
+@media (min-width: 921px) {
+  body:not(.index-page) .navbar {
+    padding-left: 7rem !important;
+    padding-right: 7rem !important;
   }
 }
 @media (max-width: 768px) {

@@ -483,6 +483,8 @@
 
             // Reset download button status
             updateDownloadButton()
+            // Reset select all toggle
+            document.querySelector("#download_select_toggle").checked = false
 
             if (uids.length > 0) {
                 window.location = "{{url_for('main.download')}}?" + uids.join('&')
