@@ -1,4 +1,7 @@
 {
     "DATABASE": "db.sqlite",
-    "SECRET_KEY": "dev"
+    "SECRET_KEY": "dev",
+    "SESSION_COOKIE_SECURE": true,
+    "SESSION_COOKIE_HTTPONLY": true,
+    "SESSION_COOKIE_SAMESITE": "Strict"
 }
