@@ -16,6 +16,28 @@ from flask import Flask, json
 
 #*----- Local imports -----*#
 
+#***===== Security functions =====***#
+def set_response_headers(response: flask.Response):
+    """ Sets response security headers. """
+    # Require all future requests to be HTTPS requests. (set max-age to 1 year by default)
+    response.headers['Strict-Transport-Security'] = "max-age=31536000; includeSubDomains"
+
+    # Set the content security policy header
+    # response.headers['Content-Security-Policy'] = "default-src 'self'"
+
+    # Makes sure that the browser uses the specified content types to avoid MIME-sniffing
+    response.headers['X-Content-Type-Options'] = "nosniff"
+
+    # Prevents website from beeing embedded elsewhere
+    response.headers['X-Frame-Options'] = "DENY"
+
+    # Set the referrer policy
+    response.headers['Referrer-Policy'] = "strict-origin-when-cross-origin"
+
+    # Return the modified response including the new headers.
+    return response
+
+
 #***===== Application Factory =====***#
 def create_app(test_config: Mapping[str, Any] = None):
     """ Create the Flask app object. A test_config object can be used for testing. """
@@ -84,6 +106,9 @@ def create_app(test_config: Mapping[str, Any] = None):
     if not path.is_absolute():
         app.config[config_param] = str(instance_dir / path)
         app.logger.info(f"'{config_param}' is a relative path. Destination set to '{app.config[config_param]}'.")
+
+    #*----- Add before and after request functions -----*#
+    app.after_request(set_response_headers)
 
     #*----- Initialize the database -----*#
     app.logger.info("Initializing database...")
