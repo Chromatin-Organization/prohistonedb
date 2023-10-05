@@ -71,7 +71,6 @@ def cart_items(uniprot_id: Optional[str] = None):
     """ 
     Handles HTTP requests related to individual items for the download cart.
     Possible HTTP requests:
-        - GET: Returns a Histone object for every uid supplied.
         - POST: Add the uids to the download cart. Ignores uids that are not in the database.
         - DELETE: Remove the uids from the download cart. Ignores uids not in the cart.
     """
