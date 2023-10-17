@@ -96,7 +96,7 @@ section h2 {
     margin-bottom: 1em;
 }
 section p a,
-section li a {
+section li a { // also affects dropdown links
     text-decoration: none;
     border-bottom: 1px dashed $headings-color;
 
@@ -495,6 +495,17 @@ table th,
 
     .lineage-path li:not(:last-child):after {
         content: " > ";
+    }
+}
+
+.dropdown li {
+    margin-left: 0
+}
+
+.dropdown-item {
+    // remove dashed border
+    &:hover {
+        border-bottom: none
     }
 }
 

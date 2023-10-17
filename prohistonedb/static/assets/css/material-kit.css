@@ -24217,6 +24217,14 @@ table td {
   content: " > ";
 }
 
+.dropdown li {
+  margin-left: 0;
+}
+
+.dropdown-item:hover {
+  border-bottom: none;
+}
+
 .btn-download .material-icons-round {
   vertical-align: middle;
   font-size: 1rem;
