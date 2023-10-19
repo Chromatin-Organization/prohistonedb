@@ -24158,6 +24158,11 @@ table td {
   vertical-align: bottom;
 }
 
+#list-view #download_select_toggle_wrapper {
+  font-size: 0.875rem;
+  margin-bottom: -1.4rem;
+  margin-left: 1.2rem;
+}
 #list-view .form-check {
   width: auto;
   padding-left: 0;

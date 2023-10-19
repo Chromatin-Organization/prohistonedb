@@ -421,6 +421,12 @@ table th,
 }
 
 #list-view {
+    #download_select_toggle_wrapper {
+        font-size: $font-size-sm;
+        margin-bottom: -1.4rem;
+        margin-left: 1.2rem;
+    }
+
     .form-check {
         width: auto;
         padding-left: 0;
