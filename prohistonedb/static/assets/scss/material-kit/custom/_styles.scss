@@ -6,6 +6,9 @@
 
 @import 'nouislider';
 
+/* Open Sans font used for Phylotree viewer */
+@font-face { font-family: Open Sans; src:url(../fonts/OpenSans/OpenSans.woff2) format('woff2') }
+
 body {
     font-size: $font-size-base;
 }
