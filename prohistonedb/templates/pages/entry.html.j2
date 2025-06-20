@@ -207,7 +207,9 @@
                     <div class="col-lg-9">
                         <div class="row mt-3">
                             <div class="w-100">
-                                <div id="phyd3-container" class="phy mx-auto w-100"></div>
+                                <div id="phyd3-container" class="phy mx-auto w-100">
+                                    <div class="phyd3-overlay"><h3>Click to open interactive version in new tab</h3></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -259,6 +261,9 @@
             <div class="row">
                 <div class="col-md-10 text-start mb-5 mt-5">
                     {% include "contents/attribution.html" %}
+                    {% if entry.doi %}
+                    <div class="attribution-additional"></div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -314,16 +319,33 @@
 
         {% if entry.category.name != 'Undefined' and entry.category.name != 'Misc' %}
             <script>
-                const HMMJSONurl = '{{url_for('static', filename=(entry.category.static_logo_path | string))}}';
+                const HMMJSONurl = '{{ url_for('static', filename=(entry.category.static_logo_path | string)) }}';
             </script>
-            <script src="{{ url_for('static', filename = 'assets/js/custom/skylign.js' )}}" type="text/javascript"></script>
+            <script src="{{ url_for('static', filename = 'assets/js/custom/skylign.js') }}" type="text/javascript"></script>
         
             <script>
                 {# TODO: replace static dummy data #}
                 const phyd3xml = "{{ url_for('static', filename = 'phylotrees/coiled-coil histone tree.xml' )}}";
             </script>
-            <script src="{{ url_for('static', filename = 'assets/js/custom/phy.js' )}}" type="text/javascript"></script>
+            <script src="{{ url_for('static', filename = 'assets/js/custom/phy.js') }}" type="text/javascript"></script>
         {% endif %}
+    {% endif %}
+
+    {% if entry.doi %}
+        <script>
+            // compare dois from array with doi in references/references_lookup.json, get value, append to #attribution-additional innerHTML 
+
+            const attributions = ["10.1038/s42003-023-05348-2"]; // ["10.1038/s42003-023-05348-2", "10.1007/s007920050006"]
+            const jsonURL = "{{ url_for('static', filename = 'assets/references/references_lookup.json') }}";
+            const jsonResponse = await fetchData(jsonURL);
+
+            let b = attributions.map(id => {
+                let found = jsonResponse.find(u => u.doi == doi);
+                return found ? found.name : "";
+            });
+
+            console.log(b);
+        </script>
     {% endif %}
 
     <script>
