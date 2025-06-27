@@ -1,0 +1,2358 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+	<phylogeny rooted="false">
+		<clade>
+			<clade>
+				<name>Q8JKV9</name>
+				<branch_length>2.6745E-06</branch_length>
+				<taxonomy>
+					<code>Heliothis zea nudivirus</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MNPTGKSPRSKTNPQYYQQPEFAYNNLMYPNTYPNGYGYNFNPMMPDTATIFPGTTIFPIPTTNTNMAHELGNTAAPNITMHDLGFEIPVFDVANNNQADMSNNPSSFVYRDTLNTPTPDMQHAMELEEDKLKFMRTFLNFKDTPRAAPSIGKRINADGTPKRSGIETDDEDQCVDYSNYNNNNNNNKTTYTSILDDNSVMTTVVGKRPRAQEKGEALNSVRVEFPRKEVINSGQGNTELEIGLLNTQYEIVDVSKMQSRKRTHEKENIGGGKVLRSGSAGIKTMVTRSTTAAESAGNTFTIANTSSASATATTASSGSVSSFNTRPLNAHNNIVTVKPVVDQAKSAAQDATVIKPIIQNKPSEYRHKKYVKFDHTANKGYQTYDTAANSVESNAQFDSGVESIASNAAMEIDDVNGSVESVTTVNVNATSVVESNNNVNAATKEYAASNASSNTSMSNVPINLSNIGSDVERSMENLHKEVEKDSVGNVGASVNSNPPNASESNSETAPKPLIARKQINSTQSKSPAPESDSDSSDEESSGSEDSGSSDNDSSGSSDSEDEEPSNAKEPSNPKTTKSNSTVVASSVENTKPTPKSPKPDPKQITTIPKPIAPKQSAAKPKPKPKPKPNPKSKPPTNTPTNTPNQNVTIIFKQPTTPRVDSNGIPIPTVPLPYKTISNSKSKRSKKYKSKEFISDDQDSDTETTETVSKSKSGPKPKPKTDAAKSKSKVNSAPKPKPSSKPKATPSTFTPSPAPSTFESNTEPSAPTPTPPTTNIEPSTPTTNIEPSTPITNSPAPSTSESNTAPSTPTRNTEPSTPNANNSNSVPESPAPKTPASPYKSPSTDDVAKSKIDKREQQRKYLFVKAPANVPTVRTLPIATKVPRIHKISSEAGGGSRIAAMRAERLKKSQSINFINKNIIRRFAERLGIDRISKDVYPELSRIIEFFMKEVKRRVTLLVECGKRKTVEIRDIKSILKSVGLRVLADDYDYEGRDPGSAKDEKFDVAYMIKLIKSKSCKMQFIPTLPFCRAWKNIEIQIDSYQVVHLRYRGQALLLMRDVTECYLARLLEAAYIVMLNSGRKTLMAKDFKSMIGVKMTDTVNLYHAMFDSLYT</mol_seq>
+					<uri>/entry/Q8JKV9</uri>
+					<domain_architecture length="1111">
+						<domain from="916" to="926" confidence="0.000000001">First histone fold</domain>
+						<domain from="930" to="931" confidence="0.000000001">First histone fold</domain>
+						<domain from="933" to="960" confidence="0.000000001">First histone fold</domain>
+						<domain from="965" to="966" confidence="0.000000001">First histone fold</domain>
+						<domain from="968" to="977" confidence="0.000000001">First histone fold</domain>
+						<domain from="1023" to="1032" confidence="0.000000001">Second histone fold</domain>
+						<domain from="1046" to="1047" confidence="0.000000001">Second histone fold</domain>
+						<domain from="1049" to="1076" confidence="0.000000001">Second histone fold</domain>
+						<domain from="1081" to="1082" confidence="0.000000001">Second histone fold</domain>
+						<domain from="1084" to="1090" confidence="0.000000001">Second histone fold</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<name>G9I027</name>
+				<branch_length>0.0141101933</branch_length>
+				<taxonomy>
+					<code>Helicoverpa zea nudivirus 2</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MNPTGKSPRSKTNPQYYQQPEFVYNNLMYPNTYPNGYGYNFNPMMPDTATIFPGTTIFPIPTTNTNMAHELGNTAAPNITMHDLGFEIPVFDVANNNQAEMSNNPSSFVYRDTLNTPTPDMQHAMELEEDKLKFMRTFLNFKDTPRAAPSIGKRINADGTPKRSGIETDDEDQCVDYSNYNNNNNNNKTTYTSILDDNSVMTTVVGKRPRAQEKGEALNSVRVEFPRKEVINSGQGNTELEIGLLNTQYEIVDVSKMQSRKRTHEKENIGGGKVLRSGSAGIKTMVTRSTTAAESAGNTFTIANTSSASATATTASSGSVSSFNTRPLNAHNNIVTVKPVVDQAKSAAQDATVIKPIIQNKPSEYRHKKYVKFDHTANKGYQTYDTAANSVESNAQFDSGVESIASNAAMEIDDVNGSVESITTVNVNATSVVESNNNVNAATKEYAASNASSNTSMSNVPINLSNIGSDVERSMENLHKEVEKDSVGNVGASVNSNPPNASESNSEIAPKPLIARKQINTTQSKSPAPESDSDSSDEESSGSEDSGSSDNDSSGSSDSEDEESSNAKEASNPKTTKSNSTVVASSVENTKPAPKSPKPDPKQPTSVPKQTTTIPKPIAPKQSAAKPKPKPKPNPKSKPPTNTPNQNVTIIFKQPTTPRVDSNGIPIPTLPLPYKTISNSKSKRSKQYKSKEFISDDQDSDTETTENVSKSKSDPKPKPKTDAAKSKAKANSAPKPKPSSKPKATPSTFTSSPAPSTVEPNTESSAPTPTPTTNIEPSTPITNIEPSTPITNSPAPSTSESNTEPSTPTTNTEPSTPNTNNSNSVPESPAPKTPASPYKSPSTDEAAKSKIDKREQQRKYLFVKAPANVPTVRTLPIATKVPRIHKISSEAGGGSRIAAMRAERLKKSQSINFINKNIIRRFAERLGIDRISKDVYPELSRIIEFFMKEVKRRVTLLVECGKRKTVEIRDIKSILKSVGLRVLADDYDYEGRDPGSAKDEKFDVAYMIKLIKSKSCKMQFIPTLPFCRAWKNIEIQIDSYQVVHLRYRGQALLLMRDVTECYLARLLEAAYIVMLNSGRKTLMAKDFKSMIGVKMTDTVNLYHAMFDSLYT</mol_seq>
+					<uri>/entry/G9I027</uri>
+					<domain_architecture length="1111">
+						<domain from="660" to="660" confidence="0.000000001">Other</domain>
+						<domain from="897" to="902" confidence="0.000000001">Other</domain>
+						<domain from="916" to="925" confidence="0.000000001">First histone fold</domain>
+						<domain from="931" to="931" confidence="0.000000001">First histone fold</domain>
+						<domain from="933" to="960" confidence="0.000000001">First histone fold</domain>
+						<domain from="965" to="966" confidence="0.000000001">First histone fold</domain>
+						<domain from="968" to="977" confidence="0.000000001">First histone fold</domain>
+						<domain from="981" to="985" confidence="0.000000001">Other</domain>
+						<domain from="1023" to="1032" confidence="0.000000001">Second histone fold</domain>
+						<domain from="1046" to="1047" confidence="0.000000001">Second histone fold</domain>
+						<domain from="1049" to="1076" confidence="0.000000001">Second histone fold</domain>
+						<domain from="1082" to="1082" confidence="0.000000001">Second histone fold</domain>
+						<domain from="1084" to="1092" confidence="0.000000001">Second histone fold</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<branch_length>1.181359957</branch_length>
+				<confidence type="unknown">100.0</confidence>
+				<clade>
+					<branch_length>0.11889331</branch_length>
+					<confidence type="unknown">93.0</confidence>
+					<clade>
+						<branch_length>0.0653013125</branch_length>
+						<confidence type="unknown">88.0</confidence>
+						<clade>
+							<branch_length>0.1702913576</branch_length>
+							<confidence type="unknown">95.0</confidence>
+							<clade>
+								<branch_length>0.0883814005</branch_length>
+								<confidence type="unknown">35.0</confidence>
+								<clade>
+									<branch_length>0.1203079518</branch_length>
+									<confidence type="unknown">34.0</confidence>
+									<clade>
+										<branch_length>0.0988188929</branch_length>
+										<confidence type="unknown">23.0</confidence>
+										<clade>
+											<branch_length>0.3358104449</branch_length>
+											<confidence type="unknown">97.0</confidence>
+											<clade>
+												<branch_length>0.738564816</branch_length>
+												<confidence type="unknown">100.0</confidence>
+												<clade>
+													<name>A0A5K0UA24</name>
+													<branch_length>0.6731970008</branch_length>
+													<taxonomy>
+														<code>Yasminevirus sp. GU-2018</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MPATKTTTSKAETAKNDKKASPKEQADKKGSVKVPAKDAAKLKNPAKETAKAPAKSPAKAGAKAPAKETGKAQAKNAKPANKNAKNAKKTEAPAKPNRMAGVEKGDAANKGTAYINGTFNVNSAKKAMHSYISDSLGLELGTINAQYPYAAIAETLVLHVVRSSGKFNTKSAKKADLYEITLENVKRGIRESHEYGPEIKALVDSYNPTAMNYVNTFFDTDKVIRKFIETKAFTNSTNVHINNDALNFVCYILSHTMSNLTRASCILSQYANKKNVQIKNFRFACELYFTGELRELLAQRLSEIEGKFANTKEGADGEEGEEAEEEEEAPKAKKGAKGSKKATKDADEEEEAEEEAEEDAEEEEEEAEEEDEDEEDEDEDDE</mol_seq>
+														<uri>/entry/A0A5K0UA24</uri>
+														<domain_architecture length="382">
+															<domain from="110" to="114" confidence="0.000000001">Other</domain>
+															<domain from="121" to="134" confidence="0.000000001">Other</domain>
+															<domain from="141" to="143" confidence="0.000000001">Other</domain>
+															<domain from="145" to="164" confidence="0.000000001">Other</domain>
+															<domain from="169" to="170" confidence="0.000000001">Other</domain>
+															<domain from="178" to="180" confidence="0.000000001">Other</domain>
+															<domain from="182" to="191" confidence="0.000000001">Other</domain>
+															<domain from="195" to="195" confidence="0.000000001">Other</domain>
+															<domain from="197" to="205" confidence="0.000000001">Other</domain>
+															<domain from="221" to="231" confidence="0.000000001">First histone fold</domain>
+															<domain from="239" to="241" confidence="0.000000001">First histone fold</domain>
+															<domain from="243" to="270" confidence="0.000000001">First histone fold</domain>
+															<domain from="275" to="289" confidence="0.000000001">First histone fold</domain>
+															<domain from="291" to="308" confidence="0.000000001">Other</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+												<clade>
+													<branch_length>0.1394092364</branch_length>
+													<confidence type="unknown">96.0</confidence>
+													<clade>
+														<name>A0A3G4ZRA5</name>
+														<branch_length>0.2939810807</branch_length>
+														<taxonomy>
+															<code>Terrestrivirus sp</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MASKQKTPQQTKPAAPAPSNGKVVVPAKTQNQKGQVQQAQASAPVANQNKKAPQVQAQVAPVQPAQNHQVVHQNQVKDERTKLTAKANLSLNVMSFRSWLRKYYEQNGMTLPKFRGVHVALTAVSEVLCRAILEATMKHLGKDASGLYSITRPSIRYAVLLDSDLKLMFESALESYDKTMAFTDHFCIPQKEMMKFIETEMGKNIQLDAVAYNLLAYLLAKAVIDFARASHILMTYAGKASLDFNVVRHVIKLKCSGSLENTLTRHVEDTEKLFVPDEEEQQVEAVNDQEGVQESAEQVPNKKKGGKAPQVPEEIEAEADEEVVVDAEDVGEEQEAQAEPEPEPVVEAPKQEKKKPVVKRSGK</mol_seq>
+															<uri>/entry/A0A3G4ZRA5</uri>
+															<domain_architecture length="363">
+																<domain from="82" to="86" confidence="0.000000001">Other</domain>
+																<domain from="93" to="106" confidence="0.000000001">Other</domain>
+																<domain from="113" to="138" confidence="0.000000001">Other</domain>
+																<domain from="142" to="142" confidence="0.000000001">Other</domain>
+																<domain from="148" to="150" confidence="0.000000001">Other</domain>
+																<domain from="152" to="161" confidence="0.000000001">Other</domain>
+																<domain from="163" to="174" confidence="0.000000001">Other</domain>
+																<domain from="190" to="200" confidence="0.000000001">Other</domain>
+																<domain from="205" to="207" confidence="0.000000001">First histone fold</domain>
+																<domain from="209" to="236" confidence="0.000000001">First histone fold</domain>
+																<domain from="241" to="254" confidence="0.000000001">First histone fold</domain>
+																<domain from="257" to="273" confidence="0.000000001">Other</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+													<clade>
+														<name>A0A1V0SCT1</name>
+														<branch_length>0.840904726</branch_length>
+														<taxonomy>
+															<code>Indivirus ILV1</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MSTEKKPNKTTEKAGLTFNVNTIKQKLKSYYEGQDLLTLMFSGGHIAITATLEKLWETILHECLKRVGKDKSGVRQVNRESLQYSVLMHSGLERYFMSHFRYYDVSLEYKDQSPVINTELDKVMERVDKDMSLTSKARNLAHYMLLKVFSHLAVTAHGFVEYAKKKSLDGRSVTFAVSTVFHESVSSDFNKEITRVMKEFGEELEETHAANETPSDTQGTTPAGEADTGDGEEEKQSAKTKNTKKTTSTTSTTSSSTTSTKNAKKKTETIEEEADDKEEQEEQEEQDEKEDNDEKPEEAAPSKSTKKAVTGSTTKKSSNSPKQTKNGKK</mol_seq>
+															<uri>/entry/A0A1V0SCT1</uri>
+															<domain_architecture length="329">
+																<domain from="9" to="13" confidence="0.000000001">Other</domain>
+																<domain from="20" to="32" confidence="0.000000001">Other</domain>
+																<domain from="40" to="64" confidence="0.000000001">Other</domain>
+																<domain from="75" to="77" confidence="0.000000001">Other</domain>
+																<domain from="79" to="87" confidence="0.000000001">Other</domain>
+																<domain from="90" to="100" confidence="0.000000001">Other</domain>
+																<domain from="117" to="127" confidence="0.000000001">First histone fold</domain>
+																<domain from="131" to="133" confidence="0.000000001">First histone fold</domain>
+																<domain from="135" to="162" confidence="0.000000001">First histone fold</domain>
+																<domain from="167" to="180" confidence="0.000000001">First histone fold</domain>
+																<domain from="183" to="198" confidence="0.000000001">Other</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+											</clade>
+											<clade>
+												<branch_length>0.1089799942</branch_length>
+												<confidence type="unknown">91.0</confidence>
+												<clade>
+													<branch_length>0.1453742424</branch_length>
+													<confidence type="unknown">82.0</confidence>
+													<clade>
+														<branch_length>0.1584604956</branch_length>
+														<confidence type="unknown">96.0</confidence>
+														<clade>
+															<branch_length>0.1378004027</branch_length>
+															<confidence type="unknown">98.0</confidence>
+															<clade>
+																<name>A0A481YSA7</name>
+																<branch_length>1.2101765731</branch_length>
+																<taxonomy>
+																	<code>Marseillevirus LCMAC101</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MSNGNGGKSGYKSKLSAVSNDIHPGLRLSYGAKTKLDGILYKIGHLIGNGAIKEAKDDYGEVNRKHVFDATAAIIPGELAKHAVSAGVRFLAKLINFPAGPAAMYLGPQKDGEAIQFLAAELEYFAAEYLELAGNLVLDDNRKTITEADITRVNNADEELKELTKRLKKIKIGKTARNGNGKKKTGCVKQTKGRYVAKKRHSPPYPAQECKNQAKVGNNEKMWISLPDKNMKYTWKPFGGAAHQKALGKLPSEPPKKPNGSKKPVYKWVCNGGKCRKVLVSGNGNGRGLDKLTVVELKQKARDRGLKGYSNKRKADLVAMPRNGNGNGKPASSKKPAKKPASAKKAAGYTKKKGATGQNLYYKNGKRVAKKNVPVKYQ</mol_seq>
+																	<uri>/entry/A0A481YSA7</uri>
+																	<domain_architecture length="378">
+																		<domain from="15" to="22" confidence="0.000000001">First histone fold</domain>
+																		<domain from="27" to="28" confidence="0.000000001">First histone fold</domain>
+																		<domain from="30" to="56" confidence="0.000000001">First histone fold</domain>
+																		<domain from="62" to="62" confidence="0.000000001">First histone fold</domain>
+																		<domain from="64" to="74" confidence="0.000000001">First histone fold</domain>
+																		<domain from="77" to="88" confidence="0.000000001">Other</domain>
+																		<domain from="99" to="105" confidence="0.000000001">Other</domain>
+																		<domain from="110" to="110" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="112" to="139" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="144" to="145" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="147" to="156" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="158" to="168" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="189" to="189" confidence="0.000000001">Other</domain>
+																		<domain from="193" to="196" confidence="0.000000001">Other</domain>
+																		<domain from="205" to="205" confidence="0.000000001">Other</domain>
+																		<domain from="213" to="216" confidence="0.000000001">Other</domain>
+																		<domain from="222" to="227" confidence="0.000000001">Other</domain>
+																		<domain from="233" to="237" confidence="0.000000001">Other</domain>
+																		<domain from="240" to="248" confidence="0.000000001">Other</domain>
+																		<domain from="267" to="270" confidence="0.000000001">Other</domain>
+																		<domain from="274" to="275" confidence="0.000000001">Other</domain>
+																		<domain from="294" to="302" confidence="0.000000001">Other</domain>
+																		<domain from="314" to="318" confidence="0.000000001">Other</domain>
+																		<domain from="349" to="353" confidence="0.000000001">Other</domain>
+																		<domain from="359" to="363" confidence="0.000000001">Other</domain>
+																		<domain from="366" to="368" confidence="0.000000001">Other</domain>
+																		<domain from="370" to="372" confidence="0.000000001">Other</domain>
+																		<domain from="375" to="377" confidence="0.000000001">Other</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<branch_length>0.0980683197</branch_length>
+																<confidence type="unknown">99.0</confidence>
+																<clade>
+																	<branch_length>0.1168496277</branch_length>
+																	<confidence type="unknown">100.0</confidence>
+																	<clade>
+																		<branch_length>0.0002926896</branch_length>
+																		<confidence type="unknown">86.0</confidence>
+																		<clade>
+																			<branch_length>0.0023988826</branch_length>
+																			<confidence type="unknown">83.0</confidence>
+																			<clade>
+																				<name>D2XB49</name>
+																				<branch_length>2.2692E-06</branch_length>
+																				<taxonomy>
+																					<code>Marseillevirus marseillevirus</code>
+																				</taxonomy>
+																				<sequence type="aa">
+																					<mol_seq is_aligned="false">MLAQIHPDISVQTEALSELSNIAVFLGKKISHGAVTLLPEGTKTIKSSAVLLAAGDLYGKDLGRHAVGEMTKAVTRYGSAKESKEGSRSSKAKLQISVARSERLLREHGGCSRVSEGAAVALAAAIEYFMGEVLELAGNAARDSKKVRISVKHITLAIQNDAALFAVVGKGVFSGAGVSLISVPIPRKKARKTTEKEASSPKKKAAPKKKKAASKQKKSLSDKELAKLTKKELAKYEKEQGMSPGY</mol_seq>
+																					<uri>/entry/D2XB49</uri>
+																					<domain_architecture length="246">
+																						<domain from="2" to="5" confidence="0.000000001">First histone fold</domain>
+																						<domain from="10" to="11" confidence="0.000000001">First histone fold</domain>
+																						<domain from="13" to="36" confidence="0.000000001">First histone fold</domain>
+																						<domain from="44" to="45" confidence="0.000000001">First histone fold</domain>
+																						<domain from="47" to="57" confidence="0.000000001">First histone fold</domain>
+																						<domain from="60" to="79" confidence="0.000000001">Other</domain>
+																						<domain from="88" to="91" confidence="0.000000001">Other</domain>
+																						<domain from="98" to="108" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="113" to="114" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="116" to="143" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="148" to="149" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="151" to="160" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="162" to="169" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="222" to="225" confidence="0.000000001">Other</domain>
+																						<domain from="230" to="240" confidence="0.000000001">Other</domain>
+																					</domain_architecture>
+																				</sequence>
+																			</clade>
+																			<clade>
+																				<name>A0A097I2B5,MV-H2B-H2A</name>
+																				<branch_length>0.0036040638</branch_length>
+																				<taxonomy>
+																					<code>Melbournevirus</code>
+																				</taxonomy>
+																				<sequence type="aa">
+																					<mol_seq is_aligned="false">MATQKETTRKRDKSVNFRLGLRNMLAQIHPDISVQTEALSELSNIAVFLGKKISHGAVTLLPEGTKTIKSSAVLLAAGDLYGKDLGRHAVGEMTKAVTRYGSAKESKEGSRSSKAKLQISVARSERLLREHGGCSRVSEGAAVALAAAIEYFMGEVLELAGNAARDSKKVRISVKHITLAIQNDAALFAVVGKGVFSGAGVSLISVPIPRKKARKTTEKEASSPKKKAAPKKKKAASKQKKSLSDKELAKLTKKELAKYEKEQGMSPGY</mol_seq>
+																					<uri>/entry/A0A097I2B5</uri>
+																					<domain_architecture length="269">
+																						<domain from="18" to="28" confidence="0.000000001">First histone fold</domain>
+																						<domain from="33" to="34" confidence="0.000000001">First histone fold</domain>
+																						<domain from="36" to="59" confidence="0.000000001">First histone fold</domain>
+																						<domain from="67" to="68" confidence="0.000000001">First histone fold</domain>
+																						<domain from="70" to="81" confidence="0.000000001">First histone fold</domain>
+																						<domain from="83" to="102" confidence="0.000000001">Other</domain>
+																						<domain from="111" to="114" confidence="0.000000001">Other</domain>
+																						<domain from="121" to="131" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="136" to="137" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="139" to="166" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="171" to="172" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="174" to="183" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="185" to="191" confidence="0.000000001">Second histone fold</domain>
+																						<domain from="245" to="248" confidence="0.000000001">Other</domain>
+																						<domain from="253" to="263" confidence="0.000000001">Other</domain>
+																					</domain_architecture>
+																				</sequence>
+																			</clade>
+																		</clade>
+																		<clade>
+																			<name>T2AYP1</name>
+																			<branch_length>0.0024030575</branch_length>
+																			<taxonomy>
+																				<code>Cannes 8 virus</code>
+																			</taxonomy>
+																			<sequence type="aa">
+																				<mol_seq is_aligned="false">MATQKETTRKRDKSVNFRLGLRNMLAQIHPDISVQTEALSELSNIAVFLGKKISHGAVTLLPEGTKTIKSSAVLLAAGDLYGKDLGRHAVGEMTKAVTRYGSAKESKEGSRSSKAKLQISVARSERLLREHGGCSRVSEGAAVALAAAIEYFMGEVLELAGNAARDSKKVRISVKHITLAIQNDAALFAVVGKGVFSGAGVSLISVPIPRKKARKTTEKEASSPKKKAAPKKKKAASKQKKSLSDKELAKLTKKELAKYEKEQGMSPGY</mol_seq>
+																				<uri>/entry/T2AYP1</uri>
+																				<domain_architecture length="269">
+																					<domain from="18" to="28" confidence="0.000000001">First histone fold</domain>
+																					<domain from="33" to="34" confidence="0.000000001">First histone fold</domain>
+																					<domain from="36" to="59" confidence="0.000000001">First histone fold</domain>
+																					<domain from="67" to="68" confidence="0.000000001">First histone fold</domain>
+																					<domain from="70" to="81" confidence="0.000000001">First histone fold</domain>
+																					<domain from="83" to="102" confidence="0.000000001">Other</domain>
+																					<domain from="111" to="114" confidence="0.000000001">Other</domain>
+																					<domain from="121" to="131" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="136" to="137" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="139" to="166" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="171" to="172" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="174" to="183" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="185" to="191" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="245" to="248" confidence="0.000000001">Other</domain>
+																					<domain from="253" to="263" confidence="0.000000001">Other</domain>
+																				</domain_architecture>
+																			</sequence>
+																		</clade>
+																	</clade>
+																	<clade>
+																		<name>A0A2R3ZQX0</name>
+																		<branch_length>0.0033023396</branch_length>
+																		<taxonomy>
+																			<code>Marseillevirus Shanghai 1</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MATQKETTRKRDKSVNFRLGLRNMLAQIHPDISVQTEALSELSNIAVFLGKKISHGAVTLLPEGTKTIKSSAVLLAAGDLYGKDLGRHAVGEMTKAVTRYGSAKESKEGSRSSKAKLQISVARSERLLREHGGCSRVSEGAAVALAAAIEYFMGEVLELAGNAARDSKKVRISVKHITLAIQNDAALFAVVGKGVFSGAGVSLISVPIPRKKARKTTEKEASSPKKKAAPKKKKAASKQKKSLSDKELAKLTKKELAKYEKEQGMSPGY</mol_seq>
+																			<uri>/entry/A0A2R3ZQX0</uri>
+																			<domain_architecture length="269">
+																				<domain from="18" to="28" confidence="0.000000001">First histone fold</domain>
+																				<domain from="33" to="34" confidence="0.000000001">First histone fold</domain>
+																				<domain from="36" to="59" confidence="0.000000001">First histone fold</domain>
+																				<domain from="67" to="68" confidence="0.000000001">First histone fold</domain>
+																				<domain from="70" to="81" confidence="0.000000001">First histone fold</domain>
+																				<domain from="83" to="103" confidence="0.000000001">Other</domain>
+																				<domain from="111" to="114" confidence="0.000000001">Other</domain>
+																				<domain from="121" to="131" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="136" to="137" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="139" to="166" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="171" to="172" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="174" to="183" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="185" to="195" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="245" to="248" confidence="0.000000001">Other</domain>
+																				<domain from="253" to="262" confidence="0.000000001">Other</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<branch_length>0.0418864448</branch_length>
+																	<confidence type="unknown">95.0</confidence>
+																	<clade>
+																		<name>A0A146JE68</name>
+																		<branch_length>0.1858240059</branch_length>
+																		<taxonomy>
+																			<code>Tokyovirus A1</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MATQKETTRKRDKSVNFRLGLRSLLSQIHPDISVQTEALAELSNITVFVGKKISHGAATLLPEGTKTISAEAVILSAEDLFGKDLGRHAASEARKAVASYKASKVSEGSRSSKAKLKLSVARSERVLREHSACSRVSGGASVALAAALEYFMAEIIELAGNAARDSKKVRISVKHIMRAIQDDAALFHVVGKGVFSGAGVSLVQVHVPRRKPRKTTEEKAPKKKPSAAKKPTKKSQKSLSERQLAKLSKKELAKYEKEQGMSPSY</mol_seq>
+																			<uri>/entry/A0A146JE68</uri>
+																			<domain_architecture length="265">
+																				<domain from="18" to="28" confidence="0.000000001">First histone fold</domain>
+																				<domain from="33" to="34" confidence="0.000000001">First histone fold</domain>
+																				<domain from="36" to="59" confidence="0.000000001">First histone fold</domain>
+																				<domain from="67" to="68" confidence="0.000000001">First histone fold</domain>
+																				<domain from="70" to="102" confidence="0.000000001">First histone fold</domain>
+																				<domain from="110" to="113" confidence="0.000000001">Other</domain>
+																				<domain from="120" to="130" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="135" to="136" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="138" to="165" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="170" to="171" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="173" to="182" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="184" to="190" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="241" to="244" confidence="0.000000001">Other</domain>
+																				<domain from="249" to="259" confidence="0.000000001">Other</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0AA96ENB0</name>
+																		<branch_length>0.242140206</branch_length>
+																		<taxonomy>
+																			<code>Marseillevirus sp</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MATQKETTRKRDKSVNFRQGLRTMLAQIHPDISVQTEALAELSNIAVFLGKKISHGATTLLPEDTKTISARAVMLAADDLYGEYLGKHAISEMEKAVARYESAKEGKEGSRSSKAKLQISIARSERVLREHSGCSRVSEKAAVALAAAIEYFMGEIIELAGNAARDNKKVRISVKHITLAIQHDAALFRVVGKGVFSGAGVTLVSIPVSTRRKTRKTSEKASSKKKASPSEKKKSTAAQRKKSVIAELKKERKASGISQRKKKVIAELLEEREGRE</mol_seq>
+																			<uri>/entry/A0AA96ENB0</uri>
+																			<domain_architecture length="276">
+																				<domain from="18" to="28" confidence="0.000000001">First histone fold</domain>
+																				<domain from="33" to="34" confidence="0.000000001">First histone fold</domain>
+																				<domain from="36" to="59" confidence="0.000000001">First histone fold</domain>
+																				<domain from="67" to="68" confidence="0.000000001">First histone fold</domain>
+																				<domain from="70" to="104" confidence="0.000000001">First histone fold</domain>
+																				<domain from="111" to="114" confidence="0.000000001">Other</domain>
+																				<domain from="121" to="131" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="136" to="137" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="139" to="166" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="171" to="172" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="174" to="183" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="185" to="196" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="241" to="247" confidence="0.000000001">Other</domain>
+																				<domain from="249" to="250" confidence="0.000000001">Other</domain>
+																				<domain from="263" to="271" confidence="0.000000001">Other</domain>
+																				<domain from="273" to="273" confidence="0.000000001">Other</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+															</clade>
+														</clade>
+														<clade>
+															<branch_length>0.1504588804</branch_length>
+															<confidence type="unknown">100.0</confidence>
+															<clade>
+																<branch_length>0.0877262625</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<branch_length>0.157450468</branch_length>
+																	<confidence type="unknown">100.0</confidence>
+																	<clade>
+																		<name>F2WLW3</name>
+																		<branch_length>0.0010750626</branch_length>
+																		<taxonomy>
+																			<code>Lausannevirus</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MASRTKQEKSKPEGTVSRKKPSKDVNFQVGIRRVLAQVHPDQSIKGEALRQLDSIAVYLGKKIAHDAAVIVGTESKTINGRAVLLATRALFDGELAKHAHALAGKAVTHYEAAGDKGDSRSAKAHLQLSVSRAERLIREHGGCGYRVSATAGVVLAAALEYIIAEIIELAGNASRDSKKVRISIKHVQLAVQNDADLFRLLGKGVFSAGGVLLVGVPAPPRARKSPAKKAASPAKKASPKKKAASPKKGSAVQKMALRKSKAIAALQKEREGMSPSF</mol_seq>
+																			<uri>/entry/F2WLW3</uri>
+																			<domain_architecture length="277">
+																				<domain from="28" to="38" confidence="0.000000001">First histone fold</domain>
+																				<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+																				<domain from="46" to="71" confidence="0.000000001">First histone fold</domain>
+																				<domain from="77" to="78" confidence="0.000000001">First histone fold</domain>
+																				<domain from="80" to="90" confidence="0.000000001">First histone fold</domain>
+																				<domain from="93" to="112" confidence="0.000000001">Other</domain>
+																				<domain from="120" to="123" confidence="0.000000001">Other</domain>
+																				<domain from="130" to="140" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="146" to="147" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="149" to="176" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="181" to="182" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="184" to="193" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="195" to="201" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="256" to="268" confidence="0.000000001">Other</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A0N9PZB1</name>
+																		<branch_length>0.0012362319</branch_length>
+																		<taxonomy>
+																			<code>Port-miou virus</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MASRTKQEKSKPEGTVSRKKPSKDVNFQVGIRRVLAQVHPDQSIKGEALRQLDSIAVYLGKKIAHDAAVIVGTESKTINGRAVLLATRALFDGELAKHAHALAGKAVTHYEAAGDKGDSRSAKAHLQLSVSRAERLIREHGGCGYRVSATAGVVLAAALEYIIAEIIELAGNASRDSKKVRISIKHVQLAVQNDADLFRLLGKGVFSAGGVLLVGVPAPPRARKSPAKKAASPAKKASPKKKAASPKKGSAAQKMALRKSKAIAALQKEREGMSPSF</mol_seq>
+																			<uri>/entry/A0A0N9PZB1</uri>
+																			<domain_architecture length="277">
+																				<domain from="28" to="38" confidence="0.000000001">First histone fold</domain>
+																				<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+																				<domain from="46" to="71" confidence="0.000000001">First histone fold</domain>
+																				<domain from="77" to="78" confidence="0.000000001">First histone fold</domain>
+																				<domain from="80" to="90" confidence="0.000000001">First histone fold</domain>
+																				<domain from="93" to="112" confidence="0.000000001">Other</domain>
+																				<domain from="120" to="123" confidence="0.000000001">Other</domain>
+																				<domain from="130" to="140" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="146" to="147" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="149" to="176" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="181" to="182" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="184" to="193" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="195" to="201" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="254" to="268" confidence="0.000000001">Other</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<branch_length>0.1102959752</branch_length>
+																	<confidence type="unknown">100.0</confidence>
+																	<clade>
+																		<name>A0AA96ESV0</name>
+																		<branch_length>0.0128612828</branch_length>
+																		<taxonomy>
+																			<code>Marseillevirus sp</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MASTTKSKPEGTVSRKKPSRDVNFEVGIRRVLAQVHPDQSIKGEAMRQLDSIAVYLGKKIAHDAAVIVGTESKTINGRAVSLAARALMGGELGKHAHSGAAKAITHYQAAGDKGDSRSAKARLQLSVSRAERLIREHGGCAYRVSATAGVALAAAIEYIIAEILELAGNAARDSKKVRIAVKHIQAAVQNDAELFGLLGKGVFSGGGVQLVATAAIPRRKSPAKKAASPAKKKVSPAKKKASPASKKKAAAKKMAMEKSKSPFF</mol_seq>
+																			<uri>/entry/A0AA96ESV0</uri>
+																			<domain_architecture length="264">
+																				<domain from="25" to="35" confidence="0.000000001">First histone fold</domain>
+																				<domain from="40" to="41" confidence="0.000000001">First histone fold</domain>
+																				<domain from="43" to="68" confidence="0.000000001">First histone fold</domain>
+																				<domain from="74" to="75" confidence="0.000000001">First histone fold</domain>
+																				<domain from="77" to="88" confidence="0.000000001">First histone fold</domain>
+																				<domain from="90" to="109" confidence="0.000000001">Other</domain>
+																				<domain from="117" to="120" confidence="0.000000001">Other</domain>
+																				<domain from="127" to="137" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="143" to="144" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="146" to="173" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="178" to="179" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="181" to="190" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="192" to="198" confidence="0.000000001">Second histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<branch_length>0.0044740897</branch_length>
+																		<confidence type="unknown">99.0</confidence>
+																		<clade>
+																			<name>A0A1Q1PN15</name>
+																			<branch_length>2.2148E-06</branch_length>
+																			<taxonomy>
+																				<code>Noumeavirus</code>
+																			</taxonomy>
+																			<sequence type="aa">
+																				<mol_seq is_aligned="false">MASTTKSKPEGTVSRKKPSRDVNFEVGIRRVLAQVHPDQSIKGEAMRQLDSIAVYLGKKIAHDAAVIVGTESKTINGRAVSLAARALMGGELGKHAHSGAAKAITHYQAAGDKGDSRSAKARLQLSVSRAERLIREHGGCAYRVSATAGVALAAAIEYIIAEILELAGNAARDSKKVRIAVKHIQAAVQADAELFGLLGKGVFSGGGVQLVATAAIPRRKSPAKKAASPAKKKASPAKKKASPASKKKAAAKKMAMEKSKSPFF</mol_seq>
+																				<uri>/entry/A0A1Q1PN15</uri>
+																				<domain_architecture length="264">
+																					<domain from="25" to="35" confidence="0.000000001">First histone fold</domain>
+																					<domain from="40" to="41" confidence="0.000000001">First histone fold</domain>
+																					<domain from="43" to="68" confidence="0.000000001">First histone fold</domain>
+																					<domain from="74" to="75" confidence="0.000000001">First histone fold</domain>
+																					<domain from="77" to="88" confidence="0.000000001">First histone fold</domain>
+																					<domain from="90" to="109" confidence="0.000000001">Other</domain>
+																					<domain from="117" to="120" confidence="0.000000001">Other</domain>
+																					<domain from="127" to="137" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="143" to="144" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="146" to="173" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="178" to="179" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="181" to="190" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="192" to="198" confidence="0.000000001">Second histone fold</domain>
+																				</domain_architecture>
+																			</sequence>
+																		</clade>
+																		<clade>
+																			<name>A0A1S5XYI0</name>
+																			<branch_length>0.0111019151</branch_length>
+																			<taxonomy>
+																				<code>Kurlavirus BKC-1</code>
+																			</taxonomy>
+																			<sequence type="aa">
+																				<mol_seq is_aligned="false">MASTTKSKPEGTVSRKKPSRDVNFEVGIRRVLAQVHPDQSIKGEAMRQLDSIAVYLGKKIAHDAAVIVGTESKTINGRAVSLAARALMGGELGKHAHSGAAKAITHYQDAGDKGDSRSAKARLQLSVSRAERLIREHGGCAYRVSATAGVALAAAIEYIIAEILELAGNAARDSKKVRIAVKHIQAAVQADAELFGLLGKGVFSGGGVQLVATAAIPRRKSPAKKAASPAKKKASPAKKKASPASKKKAAAKKMAMEKSKSPFF</mol_seq>
+																				<uri>/entry/A0A1S5XYI0</uri>
+																				<domain_architecture length="264">
+																					<domain from="25" to="35" confidence="0.000000001">First histone fold</domain>
+																					<domain from="40" to="41" confidence="0.000000001">First histone fold</domain>
+																					<domain from="43" to="68" confidence="0.000000001">First histone fold</domain>
+																					<domain from="74" to="75" confidence="0.000000001">First histone fold</domain>
+																					<domain from="77" to="88" confidence="0.000000001">First histone fold</domain>
+																					<domain from="90" to="109" confidence="0.000000001">Other</domain>
+																					<domain from="117" to="120" confidence="0.000000001">Other</domain>
+																					<domain from="127" to="137" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="143" to="144" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="146" to="173" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="178" to="179" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="181" to="190" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="192" to="199" confidence="0.000000001">Second histone fold</domain>
+																				</domain_architecture>
+																			</sequence>
+																		</clade>
+																	</clade>
+																</clade>
+															</clade>
+															<clade>
+																<branch_length>0.0745988921</branch_length>
+																<confidence type="unknown">97.0</confidence>
+																<clade>
+																	<name>V5L4V0</name>
+																	<branch_length>0.2771786328</branch_length>
+																	<taxonomy>
+																		<code>Insectomime virus</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MASKAVKQKSKKSGEASDRKKPSKDINFKVGIYRVLKQVHPDQSIRVEALEELDKIALFVGKKIAKDAAILVGSESKTINGRAIMGATRALLPGELGKHAISDITKAITHTASANASEEHKGESRSHKAKLQMSVARAERVIREEACSYRVSESAGIALAAALEYLIAEIVELAGNAARDSKKVRVSVKHIQLAVHNDSEMMALLGKGIFSGGGVKLVSMSYSRSKPKKTAAASPKKKTSPKKKASPAKKKSPAKKRTVKKTRSLKKDEEGRSPFF</mol_seq>
+																		<uri>/entry/V5L4V0</uri>
+																		<domain_architecture length="276">
+																			<domain from="29" to="39" confidence="0.000000001">First histone fold</domain>
+																			<domain from="44" to="45" confidence="0.000000001">First histone fold</domain>
+																			<domain from="47" to="72" confidence="0.000000001">First histone fold</domain>
+																			<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+																			<domain from="81" to="91" confidence="0.000000001">First histone fold</domain>
+																			<domain from="94" to="116" confidence="0.000000001">Other</domain>
+																			<domain from="125" to="128" confidence="0.000000001">Other</domain>
+																			<domain from="135" to="145" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="150" to="151" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="153" to="180" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="185" to="186" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="188" to="197" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="199" to="205" confidence="0.000000001">Second histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+																<clade>
+																	<name>A0A142CKI3</name>
+																	<branch_length>0.1435339508</branch_length>
+																	<taxonomy>
+																		<code>Brazilian marseillevirus</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MASKATKEKSKKSEDASARKKPSKDINFKVGIRRVLAQVHPDQSIRAEALEELDNIAIFLGKAISKDAAILVGTESKTINGRAISSAAVALLGGELGKHAHAQAGKAITASQAGDGKGESRSIKARLQLSVARSERLIREHACAYRVSATAGIALAAVLEYIIAEIIELAGNASRDSKKVRIAVKHIQLAVQNDAELHHLLGKGIFSGGGVQLVGPQYFSVKPPKAKKATSPKKKPASPKKKPASPKKKVQKRKSSGKDEEGRSPSF</mol_seq>
+																		<uri>/entry/A0A142CKI3</uri>
+																		<domain_architecture length="267">
+																			<domain from="29" to="39" confidence="0.000000001">First histone fold</domain>
+																			<domain from="44" to="45" confidence="0.000000001">First histone fold</domain>
+																			<domain from="47" to="72" confidence="0.000000001">First histone fold</domain>
+																			<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+																			<domain from="81" to="92" confidence="0.000000001">First histone fold</domain>
+																			<domain from="94" to="112" confidence="0.000000001">Other</domain>
+																			<domain from="121" to="124" confidence="0.000000001">Other</domain>
+																			<domain from="131" to="141" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="146" to="147" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="149" to="176" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="181" to="182" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="184" to="193" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="195" to="201" confidence="0.000000001">Second histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+														</clade>
+													</clade>
+													<clade>
+														<branch_length>0.0671341752</branch_length>
+														<confidence type="unknown">67.0</confidence>
+														<clade>
+															<branch_length>0.2337265293</branch_length>
+															<confidence type="unknown">83.0</confidence>
+															<clade>
+																<name>A0A481Z1R0</name>
+																<branch_length>1.1303715747</branch_length>
+																<taxonomy>
+																	<code>Pithovirus LCPAC001</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MNFILRLIDKKSLSILYLKMSKNSQNSLFPNYTLYISKILKLVICSGSMKKESNEQMNKIVDIIATNIVKGAYESTLSLKKKILSEEELRTSLKIIFSKETATSIIKFSETILVKLDDFSAENKIKRISLPKTLEVFYPIKMLKNILLKLGKKNIKMSLNADLYFITFMFYITHLILELSYNEASIWKRTRLGPRDILIGINGDEEFRALFNKLDIYIDTKHYKYPYKG</mol_seq>
+																	<uri>/entry/A0A481Z1R0</uri>
+																	<domain_architecture length="229">
+																		<domain from="33" to="43" confidence="0.000000001">First histone fold</domain>
+																		<domain from="48" to="49" confidence="0.000000001">First histone fold</domain>
+																		<domain from="51" to="78" confidence="0.000000001">First histone fold</domain>
+																		<domain from="83" to="84" confidence="0.000000001">First histone fold</domain>
+																		<domain from="86" to="96" confidence="0.000000001">First histone fold</domain>
+																		<domain from="99" to="122" confidence="0.000000001">Other</domain>
+																		<domain from="142" to="149" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="156" to="157" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="161" to="186" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="191" to="192" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="194" to="202" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="205" to="213" confidence="0.000000001">Second histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<branch_length>0.9630045389</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<name>A0A481Z033</name>
+																	<branch_length>0.0987142803</branch_length>
+																	<taxonomy>
+																		<code>Marseillevirus LCMAC202</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MNSKVPKKKVRSYDNLHTFIYRLLKHYDPKANMTAECKDILNHLIRDLSLHYITACVELCRYAKKVTIDSNAIETLTNIWITNPDYLIDFAHDTWDVYSQNTTKGIKKSCRAGLFLPPARFRELFREYRGANQKIGEPAYIFLTAVIEAIFGLIIERAVHLARDEHKITVSGLHIYNAINSKDFSHLYPLWNNSFIAGFGYIGNTLLQNAQERYIERKQNDREVTPDTAINKIKIFNYKLNL</mol_seq>
+																		<uri>/entry/A0A481Z033</uri>
+																		<domain_architecture length="242">
+																			<domain from="17" to="27" confidence="0.000000001">First histone fold</domain>
+																			<domain from="32" to="33" confidence="0.000000001">First histone fold</domain>
+																			<domain from="35" to="62" confidence="0.000000001">First histone fold</domain>
+																			<domain from="67" to="68" confidence="0.000000001">First histone fold</domain>
+																			<domain from="70" to="80" confidence="0.000000001">First histone fold</domain>
+																			<domain from="85" to="100" confidence="0.000000001">Other</domain>
+																			<domain from="108" to="112" confidence="0.000000001">Other</domain>
+																			<domain from="118" to="128" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="134" to="135" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="137" to="164" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="169" to="170" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="172" to="179" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="182" to="191" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="195" to="196" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="200" to="201" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="205" to="219" confidence="0.000000001">Second histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+																<clade>
+																	<name>A0A481YYI5</name>
+																	<branch_length>0.1715772777</branch_length>
+																	<taxonomy>
+																		<code>Marseillevirus LCMAC201</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MSRQKTARTYDKLHTFIYHLLKHYDPKANMTAECKDILNHLIRDLSLRYITASVELCRYAKKVTIDFNAIETLTRIWIVTPDSILDFAHDTWTMYSQNTTIGIKKERRAGLFLPPARFKELFREYRGANQKIGEPAYIFLTAIIEAIFGLIIESAIKLVQGEKKITVTGLHVYRAINSSDFAYLYPLFRNSFIAGFGYIGDIQLINAQKRYLISKYH</mol_seq>
+																		<uri>/entry/A0A481YYI5</uri>
+																		<domain_architecture length="217">
+																			<domain from="11" to="11" confidence="0.000000001">Other</domain>
+																			<domain from="14" to="24" confidence="0.000000001">First histone fold</domain>
+																			<domain from="29" to="30" confidence="0.000000001">First histone fold</domain>
+																			<domain from="32" to="59" confidence="0.000000001">First histone fold</domain>
+																			<domain from="64" to="65" confidence="0.000000001">First histone fold</domain>
+																			<domain from="67" to="77" confidence="0.000000001">First histone fold</domain>
+																			<domain from="82" to="97" confidence="0.000000001">Other</domain>
+																			<domain from="105" to="108" confidence="0.000000001">Other</domain>
+																			<domain from="115" to="125" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="131" to="132" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="134" to="161" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="166" to="167" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="169" to="176" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="179" to="188" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="192" to="193" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="197" to="198" confidence="0.000000001">Other</domain>
+																			<domain from="202" to="216" confidence="0.000000001">Other</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+														</clade>
+														<clade>
+															<branch_length>0.1215110316</branch_length>
+															<confidence type="unknown">82.0</confidence>
+															<clade>
+																<name>A0A481YUJ1</name>
+																<branch_length>0.9609977178</branch_length>
+																<taxonomy>
+																	<code>Marseillevirus LCMAC103</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MDDARTPKRGRKTTPKYSKYIEEIKKAICPDFAITADASACFNNLINITLAKIFNNMDILTAESDRKTLSWKDVDAAIQLTFDGPLYKASTSFASEAVSTYKAGTATPRSDRAGLILPVTRIEKAMMTSLRATRKTDTSAVFLAGSVENVVRALFKATGDRAAAQRKQRLTQLHISRAIDGDPTFAALYQNCILTLDPKKHKTKKTKKKSKAAAGETAAGAPPAPPAPKPAKAKRAKGKTKTKTKPVK</mol_seq>
+																	<uri>/entry/A0A481YUJ1</uri>
+																	<domain_architecture length="248">
+																		<domain from="18" to="28" confidence="0.000000001">First histone fold</domain>
+																		<domain from="33" to="34" confidence="0.000000001">First histone fold</domain>
+																		<domain from="36" to="63" confidence="0.000000001">First histone fold</domain>
+																		<domain from="68" to="69" confidence="0.000000001">First histone fold</domain>
+																		<domain from="71" to="81" confidence="0.000000001">First histone fold</domain>
+																		<domain from="84" to="103" confidence="0.000000001">Other</domain>
+																		<domain from="109" to="112" confidence="0.000000001">Other</domain>
+																		<domain from="119" to="129" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="134" to="135" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="137" to="164" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="169" to="170" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="172" to="180" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="183" to="188" confidence="0.000000001">Second histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<branch_length>0.2614483294</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<name>A0A481YR42</name>
+																	<branch_length>0.2644129992</branch_length>
+																	<taxonomy>
+																		<code>Marseillevirus LCMAC101</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MGLDANFEIYIRRVLKQVHPDAGISGSALASLNNLVKITIQKIMVAINRILLATGKKTINSRDVQDAIRLILPGEVRKHAISEGTKAVTKYNSSKLNASAGDKPTMKSTRAGLSFSVPRTQKLMMRMSSVQRKTGDAAVYITAVCEYLMAEVMELAGNAAKDQKRVRVTPRHIKIAIYNDEELCILYKDTVFAGGVLPDIDPKVLEKKGKKKAALKNTKNKNTKATKKATKKKSATKSAKKGKPGKKTN</mol_seq>
+																		<uri>/entry/A0A481YR42</uri>
+																		<domain_architecture length="249">
+																			<domain from="8" to="18" confidence="0.000000001">First histone fold</domain>
+																			<domain from="23" to="24" confidence="0.000000001">First histone fold</domain>
+																			<domain from="26" to="54" confidence="0.000000001">First histone fold</domain>
+																			<domain from="58" to="59" confidence="0.000000001">First histone fold</domain>
+																			<domain from="61" to="71" confidence="0.000000001">First histone fold</domain>
+																			<domain from="74" to="96" confidence="0.000000001">Other</domain>
+																			<domain from="107" to="110" confidence="0.000000001">Other</domain>
+																			<domain from="117" to="126" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="132" to="133" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="135" to="162" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="167" to="168" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="170" to="179" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="181" to="186" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="203" to="204" confidence="0.000000001">Second histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+																<clade>
+																	<name>A0A481Z8J4</name>
+																	<branch_length>0.6465518168</branch_length>
+																	<taxonomy>
+																		<code>Pithovirus LCPAC304</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MPKSKTPRYATFIYKVLKQVHPDTGINGDALAEMNRLILTILFEIIRVADAINRSFNNPKITFGTRTVQGAIKLALPGELSRHAISEGCNAVTKYNSSTAAAKEDKESRPKRSFKDSRTGGKKTKAFRSGLMFPPTRVGDDTRERMASFDRLDSRTPVYLAAVLEYLTAEILELAGNSARDNHLVRIRARDIYLATQADEELTKLLKGMIVPGGVVPFIHQCLLPKPKPKTA</mol_seq>
+																		<uri>/entry/A0A481Z8J4</uri>
+																		<domain_architecture length="232">
+																			<domain from="10" to="20" confidence="0.000000001">First histone fold</domain>
+																			<domain from="25" to="26" confidence="0.000000001">First histone fold</domain>
+																			<domain from="28" to="54" confidence="0.000000001">First histone fold</domain>
+																			<domain from="62" to="63" confidence="0.000000001">First histone fold</domain>
+																			<domain from="65" to="75" confidence="0.000000001">First histone fold</domain>
+																			<domain from="78" to="107" confidence="0.000000001">Other</domain>
+																			<domain from="125" to="129" confidence="0.000000001">Other</domain>
+																			<domain from="135" to="145" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="151" to="152" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="156" to="181" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="186" to="187" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="189" to="198" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="200" to="205" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="221" to="223" confidence="0.000000001">Other</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+														</clade>
+													</clade>
+												</clade>
+												<clade>
+													<name>A0A8F8PKF6</name>
+													<branch_length>0.8607205289</branch_length>
+													<taxonomy>
+														<code>Clandestinovirus</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MSAEQQTPNTTEQTEQVKVDETAPQQTEVKSDVKTEEKKTKKGRKSNSQQMTRFVRKVLKVLNGDAQVSKESCQMVNAIIVGKVEEIGNICALLLRDSTHKKTLKLNTLEAALSIHFKDSKEILKRALAAGALAVQKHSAYVPVKEEGKKTATPKNASKKALLQLPVKRIGKLLRTFTNVPQMSQGVSVFLTGAMEYYATELFINALEKCNNDGKKIISPRHFPLGLQADAEMQETLQDAILGCGTGHGVIPGIVPAVEKNAYKKALLEKEQGMIDEIPADLVAQEKKRVQKLKESKKRKAAEATGEEKAAKKQKVAEASA</mol_seq>
+														<uri>/entry/A0A8F8PKF6</uri>
+														<domain_architecture length="321">
+															<domain from="53" to="60" confidence="0.000000001">First histone fold</domain>
+															<domain from="67" to="68" confidence="0.000000001">First histone fold</domain>
+															<domain from="70" to="96" confidence="0.000000001">First histone fold</domain>
+															<domain from="103" to="104" confidence="0.000000001">First histone fold</domain>
+															<domain from="106" to="116" confidence="0.000000001">First histone fold</domain>
+															<domain from="121" to="139" confidence="0.000000001">Other</domain>
+															<domain from="157" to="160" confidence="0.000000001">Other</domain>
+															<domain from="167" to="178" confidence="0.000000001">Second histone fold</domain>
+															<domain from="182" to="183" confidence="0.000000001">Second histone fold</domain>
+															<domain from="185" to="212" confidence="0.000000001">Second histone fold</domain>
+															<domain from="217" to="218" confidence="0.000000001">Second histone fold</domain>
+															<domain from="221" to="229" confidence="0.000000001">Second histone fold</domain>
+															<domain from="231" to="235" confidence="0.000000001">Second histone fold</domain>
+															<domain from="281" to="281" confidence="0.000000001">Other</domain>
+															<domain from="283" to="302" confidence="0.000000001">Other</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+										</clade>
+										<clade>
+											<branch_length>0.2175983203</branch_length>
+											<confidence type="unknown">33.0</confidence>
+											<clade>
+												<branch_length>0.1217306155</branch_length>
+												<confidence type="unknown">33.0</confidence>
+												<clade>
+													<name>A0A1V0SDX6</name>
+													<branch_length>1.0223151829</branch_length>
+													<taxonomy>
+														<code>Indivirus ILV1</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MEVQCGLQMSVNAIKKILINELELRGITYNISNDVAIRITAIIEYLVAEIMELGGNVTLNKNRKRLSIDHVILAIQTDSELNKLYNSTNNIISNKPKDETPRLSTWTCKILTQIHPDTNISRDAKRFIDKLVYDTVKKFSDMFPLNEKDININDMIDLVIPNELSKHAKNEMNKAIAKFNSK</mol_seq>
+														<uri>/entry/A0A1V0SDX6</uri>
+														<domain_architecture length="182">
+															<domain from="2" to="5" confidence="0.000000001">Other</domain>
+															<domain from="11" to="24" confidence="0.000000001">First histone fold</domain>
+															<domain from="33" to="60" confidence="0.000000001">Second histone fold</domain>
+															<domain from="33" to="60" confidence="0.000000001">First histone fold</domain>
+															<domain from="65" to="66" confidence="0.000000001">Second histone fold</domain>
+															<domain from="65" to="66" confidence="0.000000001">First histone fold</domain>
+															<domain from="68" to="77" confidence="0.000000001">Second histone fold</domain>
+															<domain from="68" to="77" confidence="0.000000001">First histone fold</domain>
+															<domain from="79" to="86" confidence="0.000000001">Second histone fold</domain>
+															<domain from="91" to="93" confidence="0.000000001">Second histone fold</domain>
+															<domain from="106" to="114" confidence="0.000000001">Other</domain>
+															<domain from="119" to="120" confidence="0.000000001">Other</domain>
+															<domain from="122" to="142" confidence="0.000000001">Other</domain>
+															<domain from="152" to="159" confidence="0.000000001">Other</domain>
+															<domain from="162" to="180" confidence="0.000000001">Other</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+												<clade>
+													<branch_length>0.900771821</branch_length>
+													<confidence type="unknown">100.0</confidence>
+													<clade>
+														<branch_length>0.3194855258</branch_length>
+														<confidence type="unknown">100.0</confidence>
+														<clade>
+															<branch_length>0.0854644636</branch_length>
+															<confidence type="unknown">100.0</confidence>
+															<clade>
+																<name>W8W2U7</name>
+																<branch_length>0.0195020324</branch_length>
+																<taxonomy>
+																	<code>Invertebrate iridovirus 25</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MNNSALQRIAHKAGATRVSSEVYNRARSIGDQYLDSIVRYAIIYCDHEKKKVVTEDHALHAIEHVGFSGMYRVSGDTPKCKTSNKKKLITRIKEYQNQSDCVTLSKAPIEHQIKSLGSGYKWSKESLINIQFALEFMLYQLLSSALKVTINAKRVTMSESDLDLTIDLITTNCKNIRI</mol_seq>
+																	<uri>/entry/W8W2U7</uri>
+																	<domain_architecture length="178">
+																		<domain from="3" to="12" confidence="0.000000001">First histone fold</domain>
+																		<domain from="17" to="18" confidence="0.000000001">First histone fold</domain>
+																		<domain from="20" to="47" confidence="0.000000001">First histone fold</domain>
+																		<domain from="52" to="53" confidence="0.000000001">First histone fold</domain>
+																		<domain from="55" to="65" confidence="0.000000001">First histone fold</domain>
+																		<domain from="79" to="79" confidence="0.000000001">Other</domain>
+																		<domain from="88" to="96" confidence="0.000000001">Other</domain>
+																		<domain from="102" to="102" confidence="0.000000001">Other</domain>
+																		<domain from="106" to="116" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="121" to="122" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="124" to="151" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="156" to="157" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="159" to="172" confidence="0.000000001">Second histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>G0T5A7</name>
+																<branch_length>0.0335844548</branch_length>
+																<taxonomy>
+																	<code>Wiseana iridescent virus</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MNNSALQRIAHKAGATRVSSEVYNRARSIGDQYLDSIVRYAIIYCDHEKKKVVTEDHALHAIEHVGFSGMYRVSGDTPKCKTSNKKKLVTRIKEYQNQSDCVTLSKAPIEHQIKSFGSGYKWSKESLINIQFALEFMLYQLLFSALKVTINAKRVTMSESDLDLTIDLITTNCKNIRI</mol_seq>
+																	<uri>/entry/G0T5A7</uri>
+																	<domain_architecture length="178">
+																		<domain from="3" to="12" confidence="0.000000001">First histone fold</domain>
+																		<domain from="17" to="18" confidence="0.000000001">First histone fold</domain>
+																		<domain from="20" to="47" confidence="0.000000001">First histone fold</domain>
+																		<domain from="52" to="53" confidence="0.000000001">First histone fold</domain>
+																		<domain from="55" to="65" confidence="0.000000001">First histone fold</domain>
+																		<domain from="79" to="79" confidence="0.000000001">Other</domain>
+																		<domain from="88" to="96" confidence="0.000000001">Other</domain>
+																		<domain from="102" to="102" confidence="0.000000001">Other</domain>
+																		<domain from="106" to="116" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="121" to="122" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="124" to="151" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="156" to="157" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="159" to="171" confidence="0.000000001">Second histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<branch_length>0.1055469923</branch_length>
+															<confidence type="unknown">100.0</confidence>
+															<clade>
+																<name>S6DDR9</name>
+																<branch_length>0.0110815463</branch_length>
+																<taxonomy>
+																	<code>Invertebrate iridescent virus 22</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MNNSALQRLAHKAGATRVSSEVYNRARNIGDQYLKSIVNYAIIYCEHENKKIITEEHALHAIEHVGFSGMYRAVGDIKKCKTSNKKKLITRIKEYQNQSDCVTLSKAPIEQQIKSLGSGFKWSKEALINIQFALEFMLYQLLYSALKVTINAKRITMLDSDVDLTIDLITTNCKNIRL</mol_seq>
+																	<uri>/entry/S6DDR9</uri>
+																	<domain_architecture length="178">
+																		<domain from="3" to="12" confidence="0.000000001">First histone fold</domain>
+																		<domain from="17" to="18" confidence="0.000000001">First histone fold</domain>
+																		<domain from="20" to="47" confidence="0.000000001">First histone fold</domain>
+																		<domain from="52" to="53" confidence="0.000000001">First histone fold</domain>
+																		<domain from="55" to="65" confidence="0.000000001">First histone fold</domain>
+																		<domain from="78" to="79" confidence="0.000000001">Other</domain>
+																		<domain from="88" to="96" confidence="0.000000001">Other</domain>
+																		<domain from="101" to="102" confidence="0.000000001">Other</domain>
+																		<domain from="106" to="116" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="121" to="122" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="124" to="151" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="156" to="157" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="159" to="171" confidence="0.000000001">Second histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>W8W2J8</name>
+																<branch_length>0.0008521358</branch_length>
+																<taxonomy>
+																	<code>Invertebrate iridescent virus 30</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MNNSALQRLAHKAGATRVSSEVYNRARNIGDQYLKSIVNYAIIYCEHENKKIITEEHALHAIEHVGFSGMYRAVGDIKKCKTSNKKKLITRIKEYQNQSDCVTLSKAPIEQQIKSLGSGFKWSKEALINIQFALEFMLYQLLYSALKVTINAKRITMLDSDVDLTIDLITTNCKNIRL</mol_seq>
+																	<uri>/entry/W8W2J8</uri>
+																	<domain_architecture length="178">
+																		<domain from="3" to="12" confidence="0.000000001">First histone fold</domain>
+																		<domain from="17" to="18" confidence="0.000000001">First histone fold</domain>
+																		<domain from="20" to="47" confidence="0.000000001">First histone fold</domain>
+																		<domain from="52" to="53" confidence="0.000000001">First histone fold</domain>
+																		<domain from="55" to="65" confidence="0.000000001">First histone fold</domain>
+																		<domain from="78" to="79" confidence="0.000000001">Other</domain>
+																		<domain from="88" to="96" confidence="0.000000001">Other</domain>
+																		<domain from="101" to="102" confidence="0.000000001">Other</domain>
+																		<domain from="106" to="116" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="121" to="122" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="124" to="151" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="156" to="157" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="159" to="171" confidence="0.000000001">Second histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+													</clade>
+													<clade>
+														<branch_length>0.1705973724</branch_length>
+														<confidence type="unknown">98.0</confidence>
+														<clade>
+															<name>W8QN45</name>
+															<branch_length>0.236837725</branch_length>
+															<taxonomy>
+																<code>Chloriridovirus anopheles1</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MNDSALQRIAYKAGITRISESVYGFVREAGNMYLRSITEYAEIYAEYEGKKTISGDHAIHAIENTGFADQYKIKDSLKPCKISGKVKVLAKIREYQKQHDCNTLAKAPIERDIKSFTHFKISKEGVQNIHSALEYFIYKLFFSALLITLNAKRKTVSVDDVKLTLRMINDNCKSINFR</mol_seq>
+																<uri>/entry/W8QN45</uri>
+																<domain_architecture length="178">
+																	<domain from="3" to="12" confidence="0.000000001">First histone fold</domain>
+																	<domain from="17" to="18" confidence="0.000000001">First histone fold</domain>
+																	<domain from="21" to="47" confidence="0.000000001">First histone fold</domain>
+																	<domain from="52" to="53" confidence="0.000000001">First histone fold</domain>
+																	<domain from="55" to="64" confidence="0.000000001">First histone fold</domain>
+																	<domain from="79" to="79" confidence="0.000000001">Other</domain>
+																	<domain from="88" to="96" confidence="0.000000001">Other</domain>
+																	<domain from="102" to="102" confidence="0.000000001">Other</domain>
+																	<domain from="106" to="115" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="120" to="121" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="120" to="121" confidence="0.000000001">First histone fold</domain>
+																	<domain from="123" to="150" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="123" to="150" confidence="0.000000001">First histone fold</domain>
+																	<domain from="155" to="156" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="155" to="156" confidence="0.000000001">First histone fold</domain>
+																	<domain from="158" to="170" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="158" to="170" confidence="0.000000001">First histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+														<clade>
+															<name>Q678F7</name>
+															<branch_length>1.1584666689</branch_length>
+															<taxonomy>
+																<code>lymphocystis disease virus-China</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MSENIIPNASLVKQLAHGVNLTFKDYGKAKIGSDCVSIIYPCLNKYMQDITTLIQCVMKFSDKTTIDSKVLAIFGMEYVINDKKKKIKIDGKKNTILPKNMSNSDFFGISREACFRTFKHFVTSNYRYTVEAKEMIAFAVCNFVTVVGQTAASKTMTDKRKIVTMEDIKYAIQHNK</mol_seq>
+																<uri>/entry/Q678F7</uri>
+																<domain_architecture length="176">
+																	<domain from="9" to="23" confidence="0.000000001">First histone fold</domain>
+																	<domain from="30" to="31" confidence="0.000000001">First histone fold</domain>
+																	<domain from="33" to="60" confidence="0.000000001">First histone fold</domain>
+																	<domain from="65" to="66" confidence="0.000000001">First histone fold</domain>
+																	<domain from="68" to="73" confidence="0.000000001">First histone fold</domain>
+																	<domain from="113" to="113" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="115" to="116" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="127" to="128" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="130" to="157" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="162" to="163" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="165" to="174" confidence="0.000000001">Second histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+												</clade>
+											</clade>
+											<clade>
+												<branch_length>0.4260526063</branch_length>
+												<confidence type="unknown">97.0</confidence>
+												<clade>
+													<branch_length>0.1017118337</branch_length>
+													<confidence type="unknown">90.0</confidence>
+													<clade>
+														<branch_length>0.0778091285</branch_length>
+														<confidence type="unknown">94.0</confidence>
+														<clade>
+															<branch_length>0.0901397336</branch_length>
+															<confidence type="unknown">98.0</confidence>
+															<clade>
+																<branch_length>0.1692757198</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<name>V9SG80</name>
+																	<branch_length>2.9084E-06</branch_length>
+																	<taxonomy>
+																		<code>Tunisvirus fontaine2</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MERIGNYTLFVKRMTPEGFEVTKEAVSQINNMLVFLADKTITKALILLGDKKTLKHDILFWLLRDIPGELGKHGRDYVDSVLYANKELVFPTKRTENLIRKKSCKRVGKSSVQALTAILEYFCREILVSSAREAKRESRKRIKVLDIQKAVKKDMELSQVFGSGVFSGR</mol_seq>
+																		<uri>/entry/V9SG80</uri>
+																		<domain_architecture length="169">
+																			<domain from="8" to="13" confidence="0.000000001">First histone fold</domain>
+																			<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																			<domain from="23" to="48" confidence="0.000000001">First histone fold</domain>
+																			<domain from="53" to="54" confidence="0.000000001">First histone fold</domain>
+																			<domain from="56" to="64" confidence="0.000000001">First histone fold</domain>
+																			<domain from="68" to="82" confidence="0.000000001">Other</domain>
+																			<domain from="92" to="102" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="106" to="107" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="109" to="136" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="141" to="142" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="144" to="153" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="155" to="161" confidence="0.000000001">Second histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+																<clade>
+																	<name>V5L5A2</name>
+																	<branch_length>2.4798E-06</branch_length>
+																	<taxonomy>
+																		<code>Insectomime virus</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MTPEGFEVTKEAVSQINNMLVFLADKTITKALILLGDKKTLKHDILFWLLRDIPGELGKHGRDYVDSVLYANKELVFPTKRTENLIRKKSCKRVGKSSVQALTAILEYFCREILVSSAREAKRESRKRIKVLDIQKAVKKDMELSQVFGSGVFSGR</mol_seq>
+																		<uri>/entry/V5L5A2</uri>
+																		<domain_architecture length="156">
+																			<domain from="7" to="8" confidence="0.000000001">First histone fold</domain>
+																			<domain from="10" to="35" confidence="0.000000001">First histone fold</domain>
+																			<domain from="40" to="41" confidence="0.000000001">First histone fold</domain>
+																			<domain from="43" to="51" confidence="0.000000001">First histone fold</domain>
+																			<domain from="56" to="69" confidence="0.000000001">Other</domain>
+																			<domain from="79" to="89" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="93" to="94" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="96" to="123" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="128" to="129" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="131" to="140" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="142" to="149" confidence="0.000000001">Second histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0A142CJQ5</name>
+																<branch_length>0.1196285421</branch_length>
+																<taxonomy>
+																	<code>Brazilian marseillevirus</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MERVGKYGLYVKRMSPKDFDVTKEAVEQINNMLVFLADKMMTKALILLGDKKTLKHDALFWLLRDVPGELGKHGKDYVDSALYGNKELVFPTKRTENLMRKKTCKRVGQSSVKTLTAILEYFCQEILNSSAREAGKESRKRIKVSDVQGAVKKDRELFQVFGSGIFSGR</mol_seq>
+																	<uri>/entry/A0A142CJQ5</uri>
+																	<domain_architecture length="169">
+																		<domain from="8" to="13" confidence="0.000000001">First histone fold</domain>
+																		<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																		<domain from="23" to="48" confidence="0.000000001">First histone fold</domain>
+																		<domain from="53" to="54" confidence="0.000000001">First histone fold</domain>
+																		<domain from="56" to="64" confidence="0.000000001">First histone fold</domain>
+																		<domain from="68" to="82" confidence="0.000000001">Other</domain>
+																		<domain from="92" to="102" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="106" to="107" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="109" to="136" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="141" to="142" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="144" to="153" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="155" to="162" confidence="0.000000001">Second histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<branch_length>0.1130949013</branch_length>
+															<confidence type="unknown">100.0</confidence>
+															<clade>
+																<branch_length>0.0337069215</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<name>A0AA96IZ07</name>
+																	<branch_length>0.0394410429</branch_length>
+																	<taxonomy>
+																		<code>Marseillevirus sp</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MERIGKYGLFIKRMTPKDTDVTKEASEQISAMLSFLAETLLRKANILLGEKKTMNHEVIFWLLRDIPGELGKHSKDYVDSVLYGKRELIFPTKRTENLMRTKTCKRVGQSAVKTLTAILEYFCREILEVSSKEAKRNSRKRIRVLDIQNSVKKDAELYKVFGSGIFSGR</mol_seq>
+																		<uri>/entry/A0AA96IZ07</uri>
+																		<domain_architecture length="169">
+																			<domain from="8" to="14" confidence="0.000000001">First histone fold</domain>
+																			<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																			<domain from="23" to="48" confidence="0.000000001">First histone fold</domain>
+																			<domain from="53" to="54" confidence="0.000000001">First histone fold</domain>
+																			<domain from="56" to="65" confidence="0.000000001">First histone fold</domain>
+																			<domain from="68" to="82" confidence="0.000000001">Other</domain>
+																			<domain from="92" to="103" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="106" to="107" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="109" to="136" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="141" to="142" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="144" to="153" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="155" to="162" confidence="0.000000001">Second histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+																<clade>
+																	<branch_length>0.074703136</branch_length>
+																	<confidence type="unknown">100.0</confidence>
+																	<clade>
+																		<name>A0A1S5XYS6</name>
+																		<branch_length>2.1408E-06</branch_length>
+																		<taxonomy>
+																			<code>Kurlavirus BKC-1</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MERVGKYGLFIKRMTPKDTEVTKEALEQISAMLSFLAETLLRKANILLGEKKTVSHEVIFWLLRDIPGELGKHSKDYVDSVLYGKRELIFPTKRTENLMRTKTCKRVGQSAVRTLTATLEYFCREILEASSKEAKRNSRKRIRVLDIQNSVKKDGELYKVFGSGIFSGR</mol_seq>
+																			<uri>/entry/A0A1S5XYS6</uri>
+																			<domain_architecture length="169">
+																				<domain from="8" to="14" confidence="0.000000001">First histone fold</domain>
+																				<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																				<domain from="23" to="47" confidence="0.000000001">First histone fold</domain>
+																				<domain from="53" to="54" confidence="0.000000001">First histone fold</domain>
+																				<domain from="56" to="64" confidence="0.000000001">First histone fold</domain>
+																				<domain from="68" to="82" confidence="0.000000001">Other</domain>
+																				<domain from="92" to="100" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="106" to="107" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="109" to="136" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="141" to="142" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="144" to="153" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="155" to="161" confidence="0.000000001">Second histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A1Q1PP00</name>
+																		<branch_length>0.0019836545</branch_length>
+																		<taxonomy>
+																			<code>Noumeavirus</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MERVGKYGLFIKRMTPKDTEVTKEALEQISAMLSFLAETLLRKANILLGEKKTVSHEVIFWLLRDIPGELGKHSKDYVDSVLYGKRELIFPTKRTENLMRTKTCKRVGQSAVRTLTATLEYFCREILEASSKEAKRNSRKRIRVLDIQNSVKKDGELYKVFGSGIFSGR</mol_seq>
+																			<uri>/entry/A0A1Q1PP00</uri>
+																			<domain_architecture length="169">
+																				<domain from="8" to="14" confidence="0.000000001">First histone fold</domain>
+																				<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																				<domain from="23" to="47" confidence="0.000000001">First histone fold</domain>
+																				<domain from="53" to="54" confidence="0.000000001">First histone fold</domain>
+																				<domain from="56" to="64" confidence="0.000000001">First histone fold</domain>
+																				<domain from="68" to="82" confidence="0.000000001">Other</domain>
+																				<domain from="92" to="100" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="106" to="107" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="109" to="136" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="141" to="142" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="144" to="153" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="155" to="161" confidence="0.000000001">Second histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+															</clade>
+															<clade>
+																<branch_length>0.0754638079</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<name>A0A0N9PVA9</name>
+																	<branch_length>0.0027283223</branch_length>
+																	<taxonomy>
+																		<code>Port-miou virus</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MERIGKYGLFIKRMTPKDTEVTKEAVEQISSMLSFLAETLLRKSTILLGDKKTIKHEVIFWLLRDIPGELGKHSKDYVDSVVYGKRELIFPTKRTENLMRTKTCKRVGQSAVKTLTAILEYFCSEVLEAASKEAKRNSRKRIKVLDIQNSVKKDAELFKVFGSGIFSGR</mol_seq>
+																		<uri>/entry/A0A0N9PVA9</uri>
+																		<domain_architecture length="169">
+																			<domain from="8" to="13" confidence="0.000000001">First histone fold</domain>
+																			<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																			<domain from="23" to="48" confidence="0.000000001">First histone fold</domain>
+																			<domain from="53" to="54" confidence="0.000000001">First histone fold</domain>
+																			<domain from="56" to="63" confidence="0.000000001">First histone fold</domain>
+																			<domain from="68" to="82" confidence="0.000000001">Other</domain>
+																			<domain from="92" to="103" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="106" to="107" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="109" to="136" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="141" to="142" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="144" to="153" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="155" to="163" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="165" to="165" confidence="0.000000001">Second histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+																<clade>
+																	<name>F2WKY4</name>
+																	<branch_length>0.0032931631</branch_length>
+																	<taxonomy>
+																		<code>Lausannevirus</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MERIGKYGLFIKRMTPKDTEVTKEAVEQISSMLSFLAETLLRKSTILLGDKKTIKHEVIFWLLRDIPGELGKHSKDYVDSVVYGKRELIFPTKRTENLMRTKTCKRVGQSAVKTLTAILEYFCREVLEAASKEAKRNSRKRIKVLDIQNSVKKDAELFKVFGSGIFSGR</mol_seq>
+																		<uri>/entry/F2WKY4</uri>
+																		<domain_architecture length="169">
+																			<domain from="8" to="14" confidence="0.000000001">First histone fold</domain>
+																			<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																			<domain from="23" to="48" confidence="0.000000001">First histone fold</domain>
+																			<domain from="53" to="54" confidence="0.000000001">First histone fold</domain>
+																			<domain from="56" to="63" confidence="0.000000001">First histone fold</domain>
+																			<domain from="68" to="82" confidence="0.000000001">Other</domain>
+																			<domain from="92" to="103" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="106" to="107" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="109" to="136" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="141" to="142" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="144" to="153" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="155" to="163" confidence="0.000000001">Second histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+														</clade>
+													</clade>
+													<clade>
+														<branch_length>0.2499326495</branch_length>
+														<confidence type="unknown">100.0</confidence>
+														<clade>
+															<branch_length>0.0444322524</branch_length>
+															<confidence type="unknown">81.0</confidence>
+															<clade>
+																<branch_length>0.1155383475</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<name>T2AXT1</name>
+																	<branch_length>2.4535E-06</branch_length>
+																	<taxonomy>
+																		<code>Cannes 8 virus</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MDRVGKYGLFIKRISPKNADVTKEALETVNNMLVFLAEKLTKQANIIIDQKTLRHDAFLWLLTDIQGELGKHSQDFANSVLYGGKELVFPTKRTENLMRKNTCLRISQSAVKTLTAILEYFCGQIMEASFSQAKKSKRKRIRPIDIEAAISQDKELHSMFGKGVISGR</mol_seq>
+																		<uri>/entry/T2AXT1</uri>
+																		<domain_architecture length="168">
+																			<domain from="8" to="14" confidence="0.000000001">First histone fold</domain>
+																			<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																			<domain from="23" to="47" confidence="0.000000001">First histone fold</domain>
+																			<domain from="52" to="53" confidence="0.000000001">First histone fold</domain>
+																			<domain from="55" to="63" confidence="0.000000001">First histone fold</domain>
+																			<domain from="68" to="81" confidence="0.000000001">Other</domain>
+																			<domain from="91" to="99" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="105" to="106" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="108" to="135" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="140" to="141" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="143" to="152" confidence="0.000000001">Second histone fold</domain>
+																			<domain from="154" to="160" confidence="0.000000001">Second histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+																<clade>
+																	<branch_length>0.0060456928</branch_length>
+																	<confidence type="unknown">95.0</confidence>
+																	<clade>
+																		<branch_length>0.0141993487</branch_length>
+																		<confidence type="unknown">100.0</confidence>
+																		<clade>
+																			<name>A0A097I1R9,MV-miniH2B-H2A</name>
+																			<branch_length>2.4798E-06</branch_length>
+																			<taxonomy>
+																				<code>Melbournevirus</code>
+																			</taxonomy>
+																			<sequence type="aa">
+																				<mol_seq is_aligned="false">MDRVGKYGLFIKRISPKDADITKESLETVNNMLVFLAEKLTKQANIIIDQKTLRHDAFLWLLTDIQGELGKHSQDFANSVLYGEKELVFPTKRTENLMRKNTCLRISQSAVKTLTAILEYFCGQIMEASFSQAKKSKRKRIRPIDIEAAISQDKELHSMFGKGVISGR</mol_seq>
+																				<uri>/entry/A0A097I1R9</uri>
+																				<domain_architecture length="168">
+																					<domain from="8" to="14" confidence="0.000000001">First histone fold</domain>
+																					<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																					<domain from="23" to="47" confidence="0.000000001">First histone fold</domain>
+																					<domain from="52" to="53" confidence="0.000000001">First histone fold</domain>
+																					<domain from="55" to="64" confidence="0.000000001">First histone fold</domain>
+																					<domain from="68" to="81" confidence="0.000000001">Other</domain>
+																					<domain from="91" to="99" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="105" to="106" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="108" to="135" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="140" to="141" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="143" to="152" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="154" to="160" confidence="0.000000001">Second histone fold</domain>
+																				</domain_architecture>
+																			</sequence>
+																		</clade>
+																		<clade>
+																			<name>D2XAH0</name>
+																			<branch_length>0.0039936099</branch_length>
+																			<taxonomy>
+																				<code>Marseillevirus marseillevirus</code>
+																			</taxonomy>
+																			<sequence type="aa">
+																				<mol_seq is_aligned="false">MDRVGKYGLFIKRISPKDADITKESLETVNNMLVFLAEKLTKQANIIIDQKTLRHDAFLWLLTDIQGELGKHSQDFANSVLYGEKELVFPTKRTENLMRKNTCLRISRSAVKTLTAILEYFCGQIMEASFSQAKKSKRKRIRPIDIEAAISQDKELHSMFGKGVISGR</mol_seq>
+																				<uri>/entry/D2XAH0</uri>
+																				<domain_architecture length="168">
+																					<domain from="8" to="14" confidence="0.000000001">First histone fold</domain>
+																					<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																					<domain from="23" to="47" confidence="0.000000001">First histone fold</domain>
+																					<domain from="52" to="53" confidence="0.000000001">First histone fold</domain>
+																					<domain from="55" to="64" confidence="0.000000001">First histone fold</domain>
+																					<domain from="68" to="81" confidence="0.000000001">Other</domain>
+																					<domain from="91" to="99" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="105" to="106" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="108" to="135" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="140" to="141" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="143" to="152" confidence="0.000000001">Second histone fold</domain>
+																					<domain from="154" to="160" confidence="0.000000001">Second histone fold</domain>
+																				</domain_architecture>
+																			</sequence>
+																		</clade>
+																	</clade>
+																	<clade>
+																		<name>A0A2R3ZR34</name>
+																		<branch_length>0.0060096191</branch_length>
+																		<taxonomy>
+																			<code>Marseillevirus Shanghai 1</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MDRVGKYGLFIKRISPKNADVTKEALETVNNMLVFLAEKLTKQANIIIDQKTLRHDAFLWLLTDIQGELGKHSQDFANSVLYGGKELVFPTKRTENLMRKNTCLRISRSAVKTLTAILEYFCGQIMEASFSQAKKSKRKRIRPIDIEAAISQDKELHSMFGKGVISGR</mol_seq>
+																			<uri>/entry/A0A2R3ZR34</uri>
+																			<domain_architecture length="168">
+																				<domain from="8" to="14" confidence="0.000000001">First histone fold</domain>
+																				<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																				<domain from="23" to="47" confidence="0.000000001">First histone fold</domain>
+																				<domain from="52" to="53" confidence="0.000000001">First histone fold</domain>
+																				<domain from="55" to="63" confidence="0.000000001">First histone fold</domain>
+																				<domain from="68" to="81" confidence="0.000000001">Other</domain>
+																				<domain from="91" to="101" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="105" to="106" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="108" to="135" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="140" to="141" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="143" to="152" confidence="0.000000001">Second histone fold</domain>
+																				<domain from="154" to="160" confidence="0.000000001">Second histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0AA96J3C6</name>
+																<branch_length>0.1020602556</branch_length>
+																<taxonomy>
+																	<code>Marseillevirus sp</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MDRVGKYGLFIKRISPKDADVTKETIETVNNMLVFLAEKLTKQANIIVGDKKTLRHDVFLWLLTDIQGELGKHSQDFANSALYGKKELVFPTKRTENLMRKNTCLRVSQSAVKTLTAILEYFCGQIMEASFSQAKKDKRKRIRPIDVEAAIAKDKELYSMFGKGVISGR</mol_seq>
+																	<uri>/entry/A0AA96J3C6</uri>
+																	<domain_architecture length="169">
+																		<domain from="8" to="14" confidence="0.000000001">First histone fold</domain>
+																		<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																		<domain from="23" to="48" confidence="0.000000001">First histone fold</domain>
+																		<domain from="53" to="54" confidence="0.000000001">First histone fold</domain>
+																		<domain from="56" to="64" confidence="0.000000001">First histone fold</domain>
+																		<domain from="69" to="82" confidence="0.000000001">Other</domain>
+																		<domain from="92" to="102" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="106" to="107" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="109" to="136" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="141" to="142" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="144" to="153" confidence="0.000000001">Second histone fold</domain>
+																		<domain from="155" to="161" confidence="0.000000001">Second histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<name>A0A146JG29</name>
+															<branch_length>0.064862661</branch_length>
+															<taxonomy>
+																<code>Tokyovirus A1</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MDRVGKYGLFVKRISPKDADVTKEALETVNNMLVFLAEKLTKQATIIVGDKKTIKHDVFLWLLTDIQGELGKHSQDFANSVLYGGKELVFPTKRTENLMRKNTCLRISQNAVRALTAILEYFCGQIMEASFSQAKRNKRKRIRPFEVEAAVAKDKELYSMFGKGVISGR</mol_seq>
+																<uri>/entry/A0A146JG29</uri>
+																<domain_architecture length="169">
+																	<domain from="8" to="14" confidence="0.000000001">First histone fold</domain>
+																	<domain from="20" to="21" confidence="0.000000001">First histone fold</domain>
+																	<domain from="23" to="48" confidence="0.000000001">First histone fold</domain>
+																	<domain from="53" to="54" confidence="0.000000001">First histone fold</domain>
+																	<domain from="56" to="64" confidence="0.000000001">First histone fold</domain>
+																	<domain from="69" to="82" confidence="0.000000001">Other</domain>
+																	<domain from="92" to="102" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="106" to="107" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="109" to="136" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="141" to="142" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="144" to="153" confidence="0.000000001">Second histone fold</domain>
+																	<domain from="155" to="161" confidence="0.000000001">Second histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+												</clade>
+												<clade>
+													<name>A0A1D6Y7G5</name>
+													<branch_length>0.4010499225</branch_length>
+													<taxonomy>
+														<code>Golden Marseillevirus</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MERVGKYSLFIKRKVPSDFDITAEALEQVNNMLLFLANRALRVALIVLDEKKRLCHKLIIFLLGDVAGGFASECKKYCLDVLQDKQVLVFPTKRTENLMRQKTSKRIGKPAVKTMTAVLEFFLRQNFAFFFSPNSEREKKKDKSPRPSRRRKGGTKISTKFLGKEFLWANKNITKYFSTLFFREHLLVFL</mol_seq>
+														<uri>/entry/A0A1D6Y7G5</uri>
+														<domain_architecture length="190"/>
+													</sequence>
+												</clade>
+											</clade>
+										</clade>
+									</clade>
+									<clade>
+										<name>A0A481Z7C9</name>
+										<branch_length>0.8742494164</branch_length>
+										<taxonomy>
+											<code>Pithovirus LCPAC304</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MATKAKAKTTKPKTVSDRGSGVSASKNVVDGPKKKKNYDTFKKFIQDLLKKQRGGGISGGALDVTDRYVKIILEMIIRNADLLLARSKKKTLSEKEIESAVRLTIPPPHRSEFSSEPGSEPPRNLAVEANKRGAEAVRKFMSAQNNKVKGQGRSTKSKKADLVFPVSRVKDRISESSSSDGLRVGEKSIVYLTAVLQYLTEELLQMAGEIADSKKHVRITPRDLKLAIENDASLVKLTENVYIPGGVRVRPKKR</mol_seq>
+											<uri>/entry/A0A481Z7C9</uri>
+											<domain_architecture length="254">
+												<domain from="42" to="52" confidence="0.000000001">First histone fold</domain>
+												<domain from="56" to="57" confidence="0.000000001">First histone fold</domain>
+												<domain from="59" to="86" confidence="0.000000001">First histone fold</domain>
+												<domain from="91" to="92" confidence="0.000000001">First histone fold</domain>
+												<domain from="94" to="104" confidence="0.000000001">First histone fold</domain>
+												<domain from="110" to="112" confidence="0.000000001">Other</domain>
+												<domain from="125" to="145" confidence="0.000000001">Other</domain>
+												<domain from="156" to="159" confidence="0.000000001">Other</domain>
+												<domain from="166" to="176" confidence="0.000000001">Second histone fold</domain>
+												<domain from="183" to="184" confidence="0.000000001">Second histone fold</domain>
+												<domain from="186" to="213" confidence="0.000000001">Second histone fold</domain>
+												<domain from="218" to="219" confidence="0.000000001">Second histone fold</domain>
+												<domain from="221" to="230" confidence="0.000000001">Second histone fold</domain>
+												<domain from="232" to="238" confidence="0.000000001">Second histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+								</clade>
+								<clade>
+									<branch_length>1.049969188</branch_length>
+									<confidence type="unknown">100.0</confidence>
+									<clade>
+										<name>A0A481YSN9</name>
+										<branch_length>0.323139818</branch_length>
+										<taxonomy>
+											<code>Marseillevirus LCMAC101</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MSSKDEETVKENKKIMYFQNNNVNTFLMAKRSSKEKSKRRSSKKGSKGKKKAKDGGTDKRKGGRRADISHAGTKRILAGSAARRAGPKVRVSKDATDMAQDFAQDFIGKMAREINKLMSVGTVQTVQKKHILAACETIAPHCCKEASTAVASKSKDRSELSDEGVRRQAKKDGLKHRMSEGAKIAFRGAVVAYVRNLGDHSGCIVHAARRRTVKDRDIEAAQCN</mol_seq>
+											<uri>/entry/A0A481YSN9</uri>
+											<domain_architecture length="224">
+												<domain from="70" to="85" confidence="0.000000001">First histone fold</domain>
+												<domain from="90" to="91" confidence="0.000000001">First histone fold</domain>
+												<domain from="93" to="119" confidence="0.000000001">First histone fold</domain>
+												<domain from="125" to="126" confidence="0.000000001">First histone fold</domain>
+												<domain from="128" to="138" confidence="0.000000001">First histone fold</domain>
+												<domain from="140" to="148" confidence="0.000000001">Other</domain>
+												<domain from="162" to="171" confidence="0.000000001">Second histone fold</domain>
+												<domain from="177" to="178" confidence="0.000000001">Second histone fold</domain>
+												<domain from="180" to="207" confidence="0.000000001">Second histone fold</domain>
+												<domain from="212" to="213" confidence="0.000000001">Second histone fold</domain>
+												<domain from="215" to="222" confidence="0.000000001">Second histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+									<clade>
+										<name>A0A481YTH7</name>
+										<branch_length>0.8070789995</branch_length>
+										<taxonomy>
+											<code>Marseillevirus LCMAC102</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MPRKKVAEIKKKKVSKKGGGERRKGSERPDISAAGIKTVLKESSLSLRISKEAQDKAVVLLQNCLEKLGKDLASLLLIAKRKTVTVDMIRAACQESSLGKVCDFQISKSPHERYPLSMAGVLRYTKVYMGESNRFTADAKLQLLSVAIGYVGFLGQKAGCIAKNAAARKTIKERDLVAATKC</mol_seq>
+											<uri>/entry/A0A481YTH7</uri>
+											<domain_architecture length="182">
+												<domain from="33" to="43" confidence="0.000000001">First histone fold</domain>
+												<domain from="48" to="49" confidence="0.000000001">First histone fold</domain>
+												<domain from="51" to="78" confidence="0.000000001">First histone fold</domain>
+												<domain from="83" to="84" confidence="0.000000001">First histone fold</domain>
+												<domain from="86" to="95" confidence="0.000000001">First histone fold</domain>
+												<domain from="101" to="101" confidence="0.000000001">Other</domain>
+												<domain from="118" to="129" confidence="0.000000001">Second histone fold</domain>
+												<domain from="134" to="135" confidence="0.000000001">Second histone fold</domain>
+												<domain from="137" to="164" confidence="0.000000001">Second histone fold</domain>
+												<domain from="170" to="171" confidence="0.000000001">Second histone fold</domain>
+												<domain from="173" to="179" confidence="0.000000001">Second histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+								</clade>
+							</clade>
+							<clade>
+								<branch_length>0.1534644511</branch_length>
+								<confidence type="unknown">44.0</confidence>
+								<clade>
+									<branch_length>0.8690815466</branch_length>
+									<confidence type="unknown">100.0</confidence>
+									<clade>
+										<name>A0A481Z0D2</name>
+										<branch_length>0.1140398145</branch_length>
+										<taxonomy>
+											<code>Marseillevirus LCMAC202</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MSFNKNASKRLSVIAGINRESREIADIINSIVHEYLTKTLGNAIKVVLFSGRKTLIVDDLRFLSRICPDYPQVACPTNLAKLAKVCIESKDIEAVLRGYKGYSLYTLKRPFNNLVRGLAHELCRADIRIGKNVIPLLQNMTEHQIIKIMNQAATYTIRDNRDTLLPKDIETALRTM</mol_seq>
+											<uri>/entry/A0A481Z0D2</uri>
+											<domain_architecture length="176">
+												<domain from="5" to="14" confidence="0.000000001">First histone fold</domain>
+												<domain from="19" to="20" confidence="0.000000001">First histone fold</domain>
+												<domain from="24" to="49" confidence="0.000000001">First histone fold</domain>
+												<domain from="54" to="55" confidence="0.000000001">First histone fold</domain>
+												<domain from="57" to="66" confidence="0.000000001">First histone fold</domain>
+												<domain from="108" to="122" confidence="0.000000001">Second histone fold</domain>
+												<domain from="128" to="129" confidence="0.000000001">Second histone fold</domain>
+												<domain from="133" to="158" confidence="0.000000001">Second histone fold</domain>
+												<domain from="163" to="164" confidence="0.000000001">Second histone fold</domain>
+												<domain from="166" to="175" confidence="0.000000001">Second histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+									<clade>
+										<name>A0A481YWL5</name>
+										<branch_length>0.1842059111</branch_length>
+										<taxonomy>
+											<code>Marseillevirus LCMAC201</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MSFNKNASKRLSIIAGIKRGSHGVTDIIKDVARDYLTKILRSTINIVLFSGRKTLLVEDLRFLSRICLESPQVACPTNLVKLAKVCIKPKDIEAVLYGYRGYSLYTLKKPFNKLVRDIIHELYREEIRIGKNVTLLLQNMTEHHIIKVMNHAATYSNRNTLLAKDIETLGNIF</mol_seq>
+											<uri>/entry/A0A481YWL5</uri>
+											<domain_architecture length="173">
+												<domain from="5" to="14" confidence="0.000000001">First histone fold</domain>
+												<domain from="19" to="20" confidence="0.000000001">First histone fold</domain>
+												<domain from="24" to="49" confidence="0.000000001">First histone fold</domain>
+												<domain from="54" to="55" confidence="0.000000001">First histone fold</domain>
+												<domain from="57" to="66" confidence="0.000000001">First histone fold</domain>
+												<domain from="72" to="74" confidence="0.000000001">Other</domain>
+												<domain from="79" to="79" confidence="0.000000001">Other</domain>
+												<domain from="89" to="97" confidence="0.000000001">Other</domain>
+												<domain from="108" to="122" confidence="0.000000001">Second histone fold</domain>
+												<domain from="128" to="129" confidence="0.000000001">Second histone fold</domain>
+												<domain from="133" to="156" confidence="0.000000001">Second histone fold</domain>
+												<domain from="160" to="161" confidence="0.000000001">Second histone fold</domain>
+												<domain from="163" to="169" confidence="0.000000001">Second histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+								</clade>
+								<clade>
+									<branch_length>0.1670823697</branch_length>
+									<confidence type="unknown">52.0</confidence>
+									<clade>
+										<branch_length>0.6163674923</branch_length>
+										<confidence type="unknown">100.0</confidence>
+										<clade>
+											<name>A0A7S8BDF4</name>
+											<branch_length>0.62923508</branch_length>
+											<taxonomy>
+												<code>Acanthamoeba castellanii medusavirus</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MPKERAIKKSKKPAAASAAKKKSASKSPAKKAGLGVKKPHRFRPGTTAKRLAKKEQKLSSTKTTVRRAPFGRIVRAIAARSASQISGASGKTIDLLAMRFSADAVDMLQQGVEQYMLGLMKSAALAATQAKRTTLMGKDITLIRTANHEIIDEADDAKLAAASSGNALRRVASKKAAGASRRSGVTKSLAEEIGKSAVKKTALRVNALRLNESVYSAFHQVMLGKLSKAVGIAMAAAVHAGRQTIQTKDARLGLKLAGIKLLA</mol_seq>
+												<uri>/entry/A0A7S8BDF4</uri>
+												<domain_architecture length="263">
+													<domain from="46" to="57" confidence="0.000000001">Other</domain>
+													<domain from="67" to="84" confidence="0.000000001">Second histone fold</domain>
+													<domain from="97" to="97" confidence="0.000000001">Second histone fold</domain>
+													<domain from="97" to="97" confidence="0.000000001">First histone fold</domain>
+													<domain from="99" to="100" confidence="0.000000001">Second histone fold</domain>
+													<domain from="99" to="100" confidence="0.000000001">First histone fold</domain>
+													<domain from="102" to="129" confidence="0.000000001">Second histone fold</domain>
+													<domain from="102" to="129" confidence="0.000000001">First histone fold</domain>
+													<domain from="134" to="135" confidence="0.000000001">Second histone fold</domain>
+													<domain from="134" to="135" confidence="0.000000001">First histone fold</domain>
+													<domain from="137" to="146" confidence="0.000000001">Second histone fold</domain>
+													<domain from="137" to="146" confidence="0.000000001">First histone fold</domain>
+													<domain from="195" to="204" confidence="0.000000001">Second histone fold</domain>
+													<domain from="209" to="210" confidence="0.000000001">Second histone fold</domain>
+													<domain from="212" to="239" confidence="0.000000001">Second histone fold</domain>
+													<domain from="244" to="245" confidence="0.000000001">Second histone fold</domain>
+													<domain from="247" to="256" confidence="0.000000001">Second histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+										<clade>
+											<name>A0A481YU79</name>
+											<branch_length>0.4076644867</branch_length>
+											<taxonomy>
+												<code>Marseillevirus LCMAC103</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MSTVPATKTKKHRTKKSRPPSAGKPKKSRKAKRRAQEKTGVGAPPTRASPEAREQPPEEAGRVMLITRPPIKRILKRAGCTRISRDVFEVVYQQLYDYTEKILLSTAVVTDHAPRSTIQVSDLNSGFKAHGQLLALAPATKKKPPASKTDNAPPKARKRAGLSGFEIPLNNFKKLCKTIVTSNDLKQFRFSEPVVKIFQSAVEIYVHDVAALALKCAEHAGKRQTVKAADFRLALAIRGW</mol_seq>
+												<uri>/entry/A0A481YU79</uri>
+												<domain_architecture length="240">
+													<domain from="68" to="77" confidence="0.000000001">First histone fold</domain>
+													<domain from="82" to="83" confidence="0.000000001">First histone fold</domain>
+													<domain from="87" to="112" confidence="0.000000001">First histone fold</domain>
+													<domain from="117" to="118" confidence="0.000000001">First histone fold</domain>
+													<domain from="120" to="129" confidence="0.000000001">First histone fold</domain>
+													<domain from="169" to="182" confidence="0.000000001">Second histone fold</domain>
+													<domain from="189" to="190" confidence="0.000000001">Second histone fold</domain>
+													<domain from="192" to="219" confidence="0.000000001">Second histone fold</domain>
+													<domain from="225" to="226" confidence="0.000000001">Second histone fold</domain>
+													<domain from="228" to="238" confidence="0.000000001">Second histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+									</clade>
+									<clade>
+										<branch_length>0.4106884972</branch_length>
+										<confidence type="unknown">99.0</confidence>
+										<clade>
+											<branch_length>0.13297969</branch_length>
+											<confidence type="unknown">98.0</confidence>
+											<clade>
+												<name>A0A481ZAM9</name>
+												<branch_length>0.5249050388</branch_length>
+												<taxonomy>
+													<code>Pithovirus LCPAC304</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MSTLPKRKVRPPTYGYGRGKGGKGLVKVGKGLSGAVRHRKVLRDNIQGLTKPAIKRLAHRAGVKKVSGLIYEEIRGVTKVFMEPLIRSCVVIARTEEKKTVKIRHLYGALEIAKTPLAAAINPTTGSATFFKACEVESRPAGALPKKTRARPGTKALQDIRRQQKSEGCLIFAKLPFERFVREIAQDYEIDMQFAADFLLMVQFVCEQYLVGLLFDANSAAIHDGRQTIFPKDIQLARMIRGERA</mol_seq>
+													<uri>/entry/A0A481ZAM9</uri>
+													<domain_architecture length="245">
+														<domain from="45" to="48" confidence="0.000000001">Other</domain>
+														<domain from="51" to="60" confidence="0.000000001">First histone fold</domain>
+														<domain from="65" to="66" confidence="0.000000001">First histone fold</domain>
+														<domain from="68" to="95" confidence="0.000000001">First histone fold</domain>
+														<domain from="100" to="101" confidence="0.000000001">First histone fold</domain>
+														<domain from="103" to="112" confidence="0.000000001">First histone fold</domain>
+														<domain from="154" to="165" confidence="0.000000001">Other</domain>
+														<domain from="174" to="186" confidence="0.000000001">Second histone fold</domain>
+														<domain from="193" to="194" confidence="0.000000001">Second histone fold</domain>
+														<domain from="196" to="223" confidence="0.000000001">Second histone fold</domain>
+														<domain from="228" to="229" confidence="0.000000001">Second histone fold</domain>
+														<domain from="231" to="240" confidence="0.000000001">Second histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<name>A0A481Z8I1</name>
+												<branch_length>0.6799390745</branch_length>
+												<taxonomy>
+													<code>Pithovirus LCPAC304</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MTTATRKKTTDAKTTVTEDPIKGFKDVQIRNLAYRASAQRIEKDTYGKVREIIGDRIDELLRKILVFTTHTGRKTVTLEDLQGALEAEGTPLMAGGNTARDIKKSKARTKKPKQTPKEEGTSTDLPKKPHRFRPGTVVQKEIKRNQEMSDRLVFKQNRFQYYVRQSTQQQLNVALRFTKEFFKLFQIVIEEYLVCLLDRAIKASAHAGRKSLSEKDLQFVYSL</mol_seq>
+													<uri>/entry/A0A481Z8I1</uri>
+													<domain_architecture length="223">
+														<domain from="23" to="23" confidence="0.000000001">Other</domain>
+														<domain from="26" to="35" confidence="0.000000001">First histone fold</domain>
+														<domain from="40" to="41" confidence="0.000000001">First histone fold</domain>
+														<domain from="43" to="70" confidence="0.000000001">First histone fold</domain>
+														<domain from="75" to="76" confidence="0.000000001">First histone fold</domain>
+														<domain from="78" to="87" confidence="0.000000001">First histone fold</domain>
+														<domain from="136" to="147" confidence="0.000000001">Other</domain>
+														<domain from="156" to="171" confidence="0.000000001">Second histone fold</domain>
+														<domain from="176" to="177" confidence="0.000000001">Second histone fold</domain>
+														<domain from="179" to="206" confidence="0.000000001">Second histone fold</domain>
+														<domain from="211" to="212" confidence="0.000000001">Second histone fold</domain>
+														<domain from="214" to="222" confidence="0.000000001">Second histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+										<clade>
+											<name>A0A481YR36</name>
+											<branch_length>0.34260187</branch_length>
+											<taxonomy>
+												<code>Marseillevirus LCMAC101</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MATNKKSKNTPSQGKVQKRRRILRDNIQGITKPALQRLCHRAGIKRISDDMYEILRDSIKTYMERILHKTVIFTEREQRRTVKVKDLEAALNMTGIYLAAGLNSNTSKSKTFQSCNSVGKSGPTKKTVKKNEEGGVKKPHRFRPGTKAIRSIRYQQKFSECLAIPKVNFERLVREICQEYKDELRFSEGVFELLQLVVEEYIVVLCKDAYSCAIHAERTTIKAKDINLVRKLRR</mol_seq>
+												<uri>/entry/A0A481YR36</uri>
+												<domain_architecture length="234">
+													<domain from="26" to="29" confidence="0.000000001">Other</domain>
+													<domain from="32" to="41" confidence="0.000000001">Second histone fold</domain>
+													<domain from="32" to="41" confidence="0.000000001">First histone fold</domain>
+													<domain from="46" to="47" confidence="0.000000001">Second histone fold</domain>
+													<domain from="46" to="47" confidence="0.000000001">First histone fold</domain>
+													<domain from="50" to="76" confidence="0.000000001">Second histone fold</domain>
+													<domain from="50" to="76" confidence="0.000000001">First histone fold</domain>
+													<domain from="81" to="82" confidence="0.000000001">Second histone fold</domain>
+													<domain from="81" to="82" confidence="0.000000001">First histone fold</domain>
+													<domain from="84" to="93" confidence="0.000000001">Second histone fold</domain>
+													<domain from="84" to="93" confidence="0.000000001">First histone fold</domain>
+													<domain from="136" to="136" confidence="0.000000001">Other</domain>
+													<domain from="146" to="157" confidence="0.000000001">Other</domain>
+													<domain from="162" to="162" confidence="0.000000001">Other</domain>
+													<domain from="166" to="178" confidence="0.000000001">Second histone fold</domain>
+													<domain from="185" to="186" confidence="0.000000001">Second histone fold</domain>
+													<domain from="190" to="215" confidence="0.000000001">Second histone fold</domain>
+													<domain from="220" to="221" confidence="0.000000001">Second histone fold</domain>
+													<domain from="223" to="232" confidence="0.000000001">Second histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+									</clade>
+								</clade>
+							</clade>
+						</clade>
+						<clade>
+							<branch_length>1.137955068</branch_length>
+							<confidence type="unknown">100.0</confidence>
+							<clade>
+								<branch_length>0.0407517293</branch_length>
+								<confidence type="unknown">98.0</confidence>
+								<clade>
+									<name>A0A0K1L686</name>
+									<branch_length>0.0017725473</branch_length>
+									<taxonomy>
+										<code>Scale drop disease virus</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MTANEKQTRLSTTAVKEQLKSGAQLHAPDIKFSGHAVTVALDYMKTNYCINIGKDINAALEYSKSKTVTDKLLKLIKITDWSTYTIPEYYIKTCTVLRLLKSVIPSVRIQQQVKVILQHHLCMFLFLLGYASAEHAVAKGHNVVKPEDVDFVLKNRQIHPHSIVTPPVPRKIKTEIVDDYPELREAIEAALA</mol_seq>
+										<uri>/entry/A0A0K1L686</uri>
+										<domain_architecture length="192">
+											<domain from="12" to="26" confidence="0.000000001">First histone fold</domain>
+											<domain from="31" to="32" confidence="0.000000001">First histone fold</domain>
+											<domain from="34" to="46" confidence="0.000000001">First histone fold</domain>
+											<domain from="48" to="62" confidence="0.000000001">First histone fold</domain>
+											<domain from="67" to="68" confidence="0.000000001">First histone fold</domain>
+											<domain from="70" to="75" confidence="0.000000001">First histone fold</domain>
+											<domain from="93" to="103" confidence="0.000000001">Second histone fold</domain>
+											<domain from="108" to="109" confidence="0.000000001">Second histone fold</domain>
+											<domain from="111" to="138" confidence="0.000000001">Second histone fold</domain>
+											<domain from="143" to="144" confidence="0.000000001">Second histone fold</domain>
+											<domain from="146" to="155" confidence="0.000000001">Second histone fold</domain>
+											<domain from="187" to="188" confidence="0.000000001">Other</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0A7D5ULB6</name>
+									<branch_length>2.105E-06</branch_length>
+									<taxonomy>
+										<code>Scale drop disease virus</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MTANEKQTRLSTTAVKEQLKSGAQLHAPDIKFSGHAVTVALDYMKTNYCINIGKDINAALEYSKSKTVTDKLLKLIKITDWSTYTIPEYYIKTCTVLRLLKSVIPSVRIQQQVKVILQHHLCMFLFLLGYASAEHAVAKGHNVVKPEDVDFVLKNRQIHPHSIVTPPVPRKIKTEIVDDNPELREAIEAALA</mol_seq>
+										<uri>/entry/A0A7D5ULB6</uri>
+										<domain_architecture length="192">
+											<domain from="12" to="26" confidence="0.000000001">First histone fold</domain>
+											<domain from="31" to="32" confidence="0.000000001">First histone fold</domain>
+											<domain from="34" to="46" confidence="0.000000001">First histone fold</domain>
+											<domain from="48" to="62" confidence="0.000000001">First histone fold</domain>
+											<domain from="67" to="68" confidence="0.000000001">First histone fold</domain>
+											<domain from="70" to="75" confidence="0.000000001">First histone fold</domain>
+											<domain from="78" to="81" confidence="0.000000001">First histone fold</domain>
+											<domain from="93" to="103" confidence="0.000000001">Second histone fold</domain>
+											<domain from="108" to="109" confidence="0.000000001">Second histone fold</domain>
+											<domain from="111" to="138" confidence="0.000000001">Second histone fold</domain>
+											<domain from="143" to="144" confidence="0.000000001">Second histone fold</domain>
+											<domain from="146" to="155" confidence="0.000000001">Second histone fold</domain>
+											<domain from="160" to="161" confidence="0.000000001">Second histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<name>A0A4P8NQM1</name>
+								<branch_length>0.5514995372</branch_length>
+								<taxonomy>
+									<code>European chub iridovirus</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MTSIEKQTRLSSTAVKEQLKIGSAMVNPDIKFSSAALSLVLAHIRNVYCQHVGKDIMAALEYSKSKTVTDKLLKVIKMTEWSDYPVPSYHIKMCTVLRLIKSVVPNVRIQQQVKVILQHHMCMLVFLIGYASAKHSIGNVVKAEDITYVFDNLTISPKSIVTPPIPRLSTIKLEENDTQLKEAIEIAVTSV</mol_seq>
+									<uri>/entry/A0A4P8NQM1</uri>
+									<domain_architecture length="191">
+										<domain from="12" to="23" confidence="0.000000001">Other</domain>
+										<domain from="31" to="32" confidence="0.000000001">First histone fold</domain>
+										<domain from="34" to="46" confidence="0.000000001">First histone fold</domain>
+										<domain from="48" to="62" confidence="0.000000001">First histone fold</domain>
+										<domain from="67" to="68" confidence="0.000000001">First histone fold</domain>
+										<domain from="70" to="75" confidence="0.000000001">First histone fold</domain>
+										<domain from="93" to="103" confidence="0.000000001">Second histone fold</domain>
+										<domain from="108" to="109" confidence="0.000000001">Second histone fold</domain>
+										<domain from="111" to="135" confidence="0.000000001">Second histone fold</domain>
+										<domain from="140" to="141" confidence="0.000000001">Second histone fold</domain>
+										<domain from="143" to="152" confidence="0.000000001">Second histone fold</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+					</clade>
+					<clade>
+						<branch_length>0.1551639667</branch_length>
+						<confidence type="unknown">100.0</confidence>
+						<clade>
+							<branch_length>0.0509741436</branch_length>
+							<confidence type="unknown">97.0</confidence>
+							<clade>
+								<branch_length>0.0847696083</branch_length>
+								<confidence type="unknown">100.0</confidence>
+								<clade>
+									<branch_length>0.0021704571</branch_length>
+									<confidence type="unknown">100.0</confidence>
+									<clade>
+										<name>A0A1Q1PMU2</name>
+										<branch_length>0.0030276522</branch_length>
+										<taxonomy>
+											<code>Noumeavirus</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MSKSGKKSAAHAPGHLASFVRSKETQLPKATTQHLLRKAGARTSSASTFEPITGFVHMKLEKLLDKALLSMQFAKRTTLLKEDVKKAAEMMHLPVFAIPSKKESGAKGSIFLSCRQSGSGSELKGKETNAQEIRKQQRQTCMIIPKARFRDIVKEIADRQSTEKDVRLSEKALDLLQIIVESLTVRLLEKALVLTLEAKRDRVTGHDIETMFKIEHGPL</mol_seq>
+											<uri>/entry/A0A1Q1PMU2</uri>
+											<domain_architecture length="219">
+												<domain from="16" to="19" confidence="0.000000001">Other</domain>
+												<domain from="29" to="38" confidence="0.000000001">First histone fold</domain>
+												<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+												<domain from="46" to="73" confidence="0.000000001">First histone fold</domain>
+												<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+												<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+												<domain from="129" to="138" confidence="0.000000001">Other</domain>
+												<domain from="146" to="160" confidence="0.000000001">Second histone fold</domain>
+												<domain from="167" to="168" confidence="0.000000001">Second histone fold</domain>
+												<domain from="170" to="197" confidence="0.000000001">Second histone fold</domain>
+												<domain from="202" to="203" confidence="0.000000001">Second histone fold</domain>
+												<domain from="205" to="216" confidence="0.000000001">Second histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+									<clade>
+										<name>A0AA96IY93</name>
+										<branch_length>0.0030305754</branch_length>
+										<taxonomy>
+											<code>Marseillevirus sp</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MSKSGKKSVAHAPGHLASFVRSKETQLPKATTQHLLRKAGARTSSASTFEPITGFVHMKLEKLLDKALLSMQFAKRTTLLKEDVKKAAEMMHLPVFAIPSKKESGAKGSIFLSCRQSGSGSELKGKETNAQEIRKQQRQTCMIIPKARFRDIVKEIADRQSTEKDVRLSEKALDLLQIIVESLTVRLLEKALVLTLEAKRDRVTGHDIETMFKIEHGPL</mol_seq>
+											<uri>/entry/A0AA96IY93</uri>
+											<domain_architecture length="219">
+												<domain from="16" to="19" confidence="0.000000001">Other</domain>
+												<domain from="29" to="38" confidence="0.000000001">First histone fold</domain>
+												<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+												<domain from="46" to="73" confidence="0.000000001">First histone fold</domain>
+												<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+												<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+												<domain from="128" to="138" confidence="0.000000001">Other</domain>
+												<domain from="146" to="160" confidence="0.000000001">Second histone fold</domain>
+												<domain from="167" to="168" confidence="0.000000001">Second histone fold</domain>
+												<domain from="170" to="197" confidence="0.000000001">Second histone fold</domain>
+												<domain from="202" to="203" confidence="0.000000001">Second histone fold</domain>
+												<domain from="205" to="216" confidence="0.000000001">Second histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+								</clade>
+								<clade>
+									<name>A0A1S5XYG8</name>
+									<branch_length>0.0023733555</branch_length>
+									<taxonomy>
+										<code>Kurlavirus BKC-1</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSKSGKKSVAHAPGHLASFVRSKETQLPKATTQHLLRKAGARTSSASTFEPITGFVHMKLEKLLDKALLSMQFAKRTTLLKEDVKKAAEMMHLPVFAIPSKKESGAKGSIFLSCRQSGSGSELKGKETNAQEIRKQQRQTCMIIPKARFRDIVKEIADRQSTEKDVRLSEKALDLLQIIVESLTVRLLEKALVLTLEAKRDRVTGHDIETMFKIEHGPL</mol_seq>
+										<uri>/entry/A0A1S5XYG8</uri>
+										<domain_architecture length="219">
+											<domain from="16" to="19" confidence="0.000000001">Other</domain>
+											<domain from="29" to="38" confidence="0.000000001">First histone fold</domain>
+											<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+											<domain from="46" to="73" confidence="0.000000001">First histone fold</domain>
+											<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+											<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+											<domain from="128" to="138" confidence="0.000000001">Other</domain>
+											<domain from="146" to="160" confidence="0.000000001">Second histone fold</domain>
+											<domain from="167" to="168" confidence="0.000000001">Second histone fold</domain>
+											<domain from="170" to="197" confidence="0.000000001">Second histone fold</domain>
+											<domain from="202" to="203" confidence="0.000000001">Second histone fold</domain>
+											<domain from="205" to="216" confidence="0.000000001">Second histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<branch_length>0.110519203</branch_length>
+								<confidence type="unknown">100.0</confidence>
+								<clade>
+									<name>F2WLW4</name>
+									<branch_length>0.0045980099</branch_length>
+									<taxonomy>
+										<code>Lausannevirus</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSKSGKKTLAPAPGYLASFVRSKETQLPRATTQHLLRKAGSRTSTADTFEPITGFVHMKLEKLLGKALLAMQFAKRTTLLKEDVKKAAEMMHLPVFAVPSKKESGAKGSVFLSCRQSGSGSELKGKETNMQEIRKQQRQTCMIIPKARFRDIAKEIVDRELEGVRLSEKALDLLQLIVESLTVRLLEKAVALTLEAQKDRVTGRSIEAIFKIEHGPL</mol_seq>
+										<uri>/entry/F2WLW4</uri>
+										<domain_architecture length="217">
+											<domain from="16" to="19" confidence="0.000000001">Other</domain>
+											<domain from="29" to="38" confidence="0.000000001">First histone fold</domain>
+											<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+											<domain from="46" to="73" confidence="0.000000001">First histone fold</domain>
+											<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+											<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+											<domain from="128" to="138" confidence="0.000000001">Other</domain>
+											<domain from="146" to="160" confidence="0.000000001">Second histone fold</domain>
+											<domain from="165" to="166" confidence="0.000000001">Second histone fold</domain>
+											<domain from="168" to="195" confidence="0.000000001">Second histone fold</domain>
+											<domain from="200" to="201" confidence="0.000000001">Second histone fold</domain>
+											<domain from="203" to="214" confidence="0.000000001">Second histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0A0N7G2G3</name>
+									<branch_length>2.9478E-06</branch_length>
+									<taxonomy>
+										<code>Port-miou virus</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSKSGKKTLAPAPGYLASFVRSKETQLPRATTQHLLRKAGSRTSTADTFEPITGFVHMKLEKLLGKALLAMQFAKRTTLLKEDVKKAAEMMHLPVFAVPSKKESGAKGSVFLSCRQSGSGSELKGKETNMQEIRKQQRQTCMIIPKARFRDIAKEIVDRELEGVRLSEKALDLLQLIVESLTVRLLEKAVALTLEAQKDRVTGRSIEAIFKIEHGPL</mol_seq>
+										<uri>/entry/A0A0N7G2G3</uri>
+										<domain_architecture length="217">
+											<domain from="15" to="18" confidence="0.000000001">Other</domain>
+											<domain from="29" to="38" confidence="0.000000001">First histone fold</domain>
+											<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+											<domain from="46" to="73" confidence="0.000000001">First histone fold</domain>
+											<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+											<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+											<domain from="128" to="138" confidence="0.000000001">Other</domain>
+											<domain from="146" to="160" confidence="0.000000001">Second histone fold</domain>
+											<domain from="165" to="166" confidence="0.000000001">Second histone fold</domain>
+											<domain from="168" to="195" confidence="0.000000001">Second histone fold</domain>
+											<domain from="200" to="201" confidence="0.000000001">Second histone fold</domain>
+											<domain from="203" to="214" confidence="0.000000001">Second histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+						</clade>
+						<clade>
+							<branch_length>0.0353856464</branch_length>
+							<confidence type="unknown">78.0</confidence>
+							<clade>
+								<branch_length>0.1434856163</branch_length>
+								<confidence type="unknown">100.0</confidence>
+								<clade>
+									<name>V5L4K7</name>
+									<branch_length>2.6758E-06</branch_length>
+									<taxonomy>
+										<code>Insectomime virus</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSKSGKKTLTRTSGHLSSFVHDKETQLPKATTQHLLRKAGSHTSSATAFEPITGFVHMKLHKLLGKALLAMQYAKRTTLLKGDVVKAAEMMHLPVFAIPSKKESGAKGSVFLSCRQAGSGSELKGKETNVQEIRKQQRQTCMIIPKERFRTIVKEIADKLAMVDSVRLSEKALDLLQLIVESCTVRLLEKALALTKSAKRDRVNGQDIETVFLIEHGPL</mol_seq>
+										<uri>/entry/V5L4K7</uri>
+										<domain_architecture length="219">
+											<domain from="16" to="19" confidence="0.000000001">Other</domain>
+											<domain from="29" to="38" confidence="0.000000001">First histone fold</domain>
+											<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+											<domain from="46" to="73" confidence="0.000000001">First histone fold</domain>
+											<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+											<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+											<domain from="130" to="138" confidence="0.000000001">Other</domain>
+											<domain from="146" to="160" confidence="0.000000001">Second histone fold</domain>
+											<domain from="167" to="168" confidence="0.000000001">Second histone fold</domain>
+											<domain from="170" to="197" confidence="0.000000001">Second histone fold</domain>
+											<domain from="202" to="203" confidence="0.000000001">Second histone fold</domain>
+											<domain from="205" to="216" confidence="0.000000001">Second histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>V9SE63</name>
+									<branch_length>2.4893E-06</branch_length>
+									<taxonomy>
+										<code>Tunisvirus fontaine2</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MTKVCQGCSVMSKSGKKTLTRTSGHLSSFVHDKETQLPKATTQHLLRKAGSHTSSATAFEPITGFVHMKLHKLLGKALLAMQYAKRTTLLKGDVVKAAEMMHLPVFAIPSKKESGAKGSVFLSCRQAGSGSELKGKETNVQEIRKQQRQTCMIIPKERFRTIVKEIADKLAMVDSVRLSEKALDLLQLIVESCTVRLLEKALALTKSAKRDRVNGQDIETVFLIEHGPL</mol_seq>
+										<uri>/entry/V9SE63</uri>
+										<domain_architecture length="229">
+											<domain from="25" to="28" confidence="0.000000001">Other</domain>
+											<domain from="39" to="48" confidence="0.000000001">First histone fold</domain>
+											<domain from="53" to="54" confidence="0.000000001">First histone fold</domain>
+											<domain from="56" to="83" confidence="0.000000001">First histone fold</domain>
+											<domain from="88" to="89" confidence="0.000000001">First histone fold</domain>
+											<domain from="91" to="100" confidence="0.000000001">First histone fold</domain>
+											<domain from="140" to="148" confidence="0.000000001">Other</domain>
+											<domain from="156" to="170" confidence="0.000000001">Second histone fold</domain>
+											<domain from="177" to="178" confidence="0.000000001">Second histone fold</domain>
+											<domain from="180" to="207" confidence="0.000000001">Second histone fold</domain>
+											<domain from="212" to="213" confidence="0.000000001">Second histone fold</domain>
+											<domain from="215" to="226" confidence="0.000000001">Second histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<name>A0A142CKI4</name>
+								<branch_length>0.0984415698</branch_length>
+								<taxonomy>
+									<code>Brazilian marseillevirus</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MSKSGKKTLARPLGHLASFVHSKETQLPKATTQHLLRKAGSRTSAADAFEPITGFVHMKLEKLLGKALLSMQFAKRTTLLKEDVQKAAEMMHLPVFAIPSKKETGAKGSVFLSCRQSGSGSELKGKETNVQEIRKQQRQTCMIIPKERFRTIVKEIADKLSVAESVRLSEKALDLLQVIVESCTVRLLEKALALTMEAGKDRVTGRHIEAIFLIEHGPL</mol_seq>
+									<uri>/entry/A0A142CKI4</uri>
+									<domain_architecture length="219">
+										<domain from="17" to="19" confidence="0.000000001">Other</domain>
+										<domain from="29" to="38" confidence="0.000000001">First histone fold</domain>
+										<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+										<domain from="46" to="73" confidence="0.000000001">First histone fold</domain>
+										<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+										<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+										<domain from="130" to="138" confidence="0.000000001">Other</domain>
+										<domain from="146" to="160" confidence="0.000000001">Second histone fold</domain>
+										<domain from="167" to="168" confidence="0.000000001">Second histone fold</domain>
+										<domain from="170" to="197" confidence="0.000000001">Second histone fold</domain>
+										<domain from="202" to="203" confidence="0.000000001">Second histone fold</domain>
+										<domain from="205" to="216" confidence="0.000000001">Second histone fold</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+					</clade>
+				</clade>
+				<clade>
+					<branch_length>0.0743276731</branch_length>
+					<confidence type="unknown">96.0</confidence>
+					<clade>
+						<branch_length>0.0486722504</branch_length>
+						<confidence type="unknown">96.0</confidence>
+						<clade>
+							<name>A0AA96ELK6</name>
+							<branch_length>0.1407266548</branch_length>
+							<taxonomy>
+								<code>Marseillevirus sp</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MSKAGKKSKAHLLNYLADHVVSGETQIPKATTQHLLRKAGSASATEDTEVPIRGFVRMKLHKLLQKSLLAMQLAKRKTIMKGDVKKAAELMHLPVFAIPTKDSGAKGSVFLSCRQKGAGSASSGSDTNVQEVRNQKKSSCLIIPKERFRTMAKEISKKEGHDVHIAEAALDMLQVIVESCTVRLLEKALVITYSAKRSRVTSADIETVFMLEHGPL</mol_seq>
+								<uri>/entry/A0AA96ELK6</uri>
+								<domain_architecture length="216">
+									<domain from="17" to="19" confidence="0.000000001">Other</domain>
+									<domain from="29" to="39" confidence="0.000000001">First histone fold</domain>
+									<domain from="44" to="44" confidence="0.000000001">First histone fold</domain>
+									<domain from="46" to="73" confidence="0.000000001">First histone fold</domain>
+									<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+									<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+									<domain from="145" to="158" confidence="0.000000001">Second histone fold</domain>
+									<domain from="164" to="165" confidence="0.000000001">Second histone fold</domain>
+									<domain from="167" to="194" confidence="0.000000001">Second histone fold</domain>
+									<domain from="200" to="200" confidence="0.000000001">Second histone fold</domain>
+									<domain from="202" to="213" confidence="0.000000001">Second histone fold</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+						<clade>
+							<name>A0A146JE73</name>
+							<branch_length>0.1036504123</branch_length>
+							<taxonomy>
+								<code>Tokyovirus A1</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MSKAAKKSKSQQHGHLASYVLGGETQIPKATTQHLLRKAGSLSATDDTEVPIRGFVRMKLHKLLQKSLLAMQLAKRKTILKGDVKKAAELMHLPVFAIPTKESGAKGSVFLSCRQKGAGSAGSGSDTNSQEVRNQMKSSCLIIPKERFRTMAKEISKREGHDVHIAEAALDMLQVIVESCTVRLLEKALVITYEKDKKRVTSRDIETAFMLEHGPL</mol_seq>
+								<uri>/entry/A0A146JE73</uri>
+								<domain_architecture length="216">
+									<domain from="15" to="18" confidence="0.000000001">Other</domain>
+									<domain from="29" to="38" confidence="0.000000001">First histone fold</domain>
+									<domain from="44" to="44" confidence="0.000000001">First histone fold</domain>
+									<domain from="46" to="73" confidence="0.000000001">First histone fold</domain>
+									<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+									<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+									<domain from="145" to="158" confidence="0.000000001">Second histone fold</domain>
+									<domain from="164" to="165" confidence="0.000000001">Second histone fold</domain>
+									<domain from="167" to="193" confidence="0.000000001">Second histone fold</domain>
+									<domain from="200" to="200" confidence="0.000000001">Second histone fold</domain>
+									<domain from="202" to="213" confidence="0.000000001">Second histone fold</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+					<clade>
+						<branch_length>0.0711666482</branch_length>
+						<confidence type="unknown">99.0</confidence>
+						<clade>
+							<branch_length>0.0064462851</branch_length>
+							<confidence type="unknown">99.0</confidence>
+							<clade>
+								<name>T2AYB9</name>
+								<branch_length>2.4488E-06</branch_length>
+								<taxonomy>
+									<code>Cannes 8 virus</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MSKAGKKVKAQQHGHLADHVSVGETQIPKASTQHLLRKAGSLSAAGDTEVPIRGFVHMKLHKLVQKSLLAMQLAKRKTIMKSDVKKAAELMHLPVFAIPTKDSGAKGSVFLSCRQKGAGSAGTGSETNSQEVRSQMRSTCLIIPKERFRTMAKEISKKEGHDVHIAEAALDMLQVIVESCTVRLLEKALVITYSGKRTRVTSKDIETAFMLEHGPL</mol_seq>
+									<uri>/entry/T2AYB9</uri>
+									<domain_architecture length="216">
+										<domain from="15" to="19" confidence="0.000000001">Other</domain>
+										<domain from="29" to="38" confidence="0.000000001">First histone fold</domain>
+										<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+										<domain from="48" to="73" confidence="0.000000001">First histone fold</domain>
+										<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+										<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+										<domain from="124" to="137" confidence="0.000000001">Other</domain>
+										<domain from="145" to="158" confidence="0.000000001">Second histone fold</domain>
+										<domain from="164" to="165" confidence="0.000000001">Second histone fold</domain>
+										<domain from="167" to="194" confidence="0.000000001">Second histone fold</domain>
+										<domain from="199" to="200" confidence="0.000000001">Second histone fold</domain>
+										<domain from="202" to="213" confidence="0.000000001">Second histone fold</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+							<clade>
+								<branch_length>0.0108007861</branch_length>
+								<confidence type="unknown">100.0</confidence>
+								<clade>
+									<name>D2XB48</name>
+									<branch_length>2.4893E-06</branch_length>
+									<taxonomy>
+										<code>Marseillevirus marseillevirus</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MARKNLVQSFSLVQTVMSKAGKKVKAQQHGHLADHVSVGETQIPKASTQHLLRKAGSLSAAGDTEVPIRGFVHMKLHKLVQKSLLAMQLAKRKTIMKSDVKKAAELMHLPVFAIPTKDSGAKGSVFLSCRQKGAGSAGTGSETNSQEVRSQMRSTCLIIPKERFRTMAKEISKKEGHDVHIAEAALDMLQVIVESCTVRLLEKALVITYSGKRTRVTSKDIETAFMLEHGPL</mol_seq>
+										<uri>/entry/D2XB48</uri>
+										<domain_architecture length="232">
+											<domain from="31" to="35" confidence="0.000000001">Other</domain>
+											<domain from="45" to="54" confidence="0.000000001">First histone fold</domain>
+											<domain from="59" to="60" confidence="0.000000001">First histone fold</domain>
+											<domain from="62" to="89" confidence="0.000000001">First histone fold</domain>
+											<domain from="94" to="95" confidence="0.000000001">First histone fold</domain>
+											<domain from="97" to="106" confidence="0.000000001">First histone fold</domain>
+											<domain from="142" to="153" confidence="0.000000001">Other</domain>
+											<domain from="161" to="174" confidence="0.000000001">Second histone fold</domain>
+											<domain from="180" to="181" confidence="0.000000001">Second histone fold</domain>
+											<domain from="183" to="210" confidence="0.000000001">Second histone fold</domain>
+											<domain from="215" to="216" confidence="0.000000001">Second histone fold</domain>
+											<domain from="218" to="229" confidence="0.000000001">Second histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0A2R3ZRN9</name>
+									<branch_length>0.0015426074</branch_length>
+									<taxonomy>
+										<code>Marseillevirus Shanghai 1</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSKAGKKVKAQQHGHLADHVSVGETQIPKASTQHLLRKAGSLSAAGDTEVPIRGFVHMKLHKLVQKSLLAMQLAKRKTIMKSDVKKAAELMHLPVFAIPTKDSGAKGSVFLSCRQKGAGSAGTGSETNSQEVRSQMRSTCLIIPKERFRTMAKEISKKEGHDVHIAEAALDMLQVIVESCTVRLLEKALVITYSGKRTRVTSKDIETAFMLEHGPL</mol_seq>
+										<uri>/entry/A0A2R3ZRN9</uri>
+										<domain_architecture length="216">
+											<domain from="15" to="19" confidence="0.000000001">Other</domain>
+											<domain from="29" to="38" confidence="0.000000001">First histone fold</domain>
+											<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+											<domain from="46" to="73" confidence="0.000000001">First histone fold</domain>
+											<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+											<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+											<domain from="125" to="137" confidence="0.000000001">Other</domain>
+											<domain from="145" to="158" confidence="0.000000001">Second histone fold</domain>
+											<domain from="164" to="165" confidence="0.000000001">Second histone fold</domain>
+											<domain from="167" to="194" confidence="0.000000001">Second histone fold</domain>
+											<domain from="199" to="200" confidence="0.000000001">Second histone fold</domain>
+											<domain from="202" to="213" confidence="0.000000001">Second histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+						</clade>
+						<clade>
+							<name>A0A097I2D0,MV-H4-H3</name>
+							<branch_length>0.001266564</branch_length>
+							<taxonomy>
+								<code>Melbournevirus</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MSKAGKKVKAQQHGHLADHVSVGETQIPKASTQHLLRKAGSLSAAGDTEVPIRGFVHMKLHKLVQKSLLAMQLAKRKTIMKSDVKKAAELMHLPVFAIPTKDSGAKGSVFLSCRQKGAGSAGTGSETNSQEVRSQMKSTCLIIPKERFRTMAKEISKKEGHDVHIAEAALDMLQVIVESCTVRLLEKALVITYSGKRTRVTSKDIETAFMLEHGPL</mol_seq>
+								<uri>/entry/A0A097I2D0</uri>
+								<domain_architecture length="216">
+									<domain from="15" to="19" confidence="0.000000001">Other</domain>
+									<domain from="29" to="38" confidence="0.000000001">First histone fold</domain>
+									<domain from="43" to="44" confidence="0.000000001">First histone fold</domain>
+									<domain from="48" to="73" confidence="0.000000001">First histone fold</domain>
+									<domain from="78" to="79" confidence="0.000000001">First histone fold</domain>
+									<domain from="81" to="90" confidence="0.000000001">First histone fold</domain>
+									<domain from="145" to="158" confidence="0.000000001">Second histone fold</domain>
+									<domain from="164" to="165" confidence="0.000000001">Second histone fold</domain>
+									<domain from="167" to="194" confidence="0.000000001">Second histone fold</domain>
+									<domain from="199" to="200" confidence="0.000000001">Second histone fold</domain>
+									<domain from="202" to="213" confidence="0.000000001">Second histone fold</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+				</clade>
+			</clade>
+		</clade>
+	</phylogeny>
+	<taxonomies>
+		<taxonomy code="Marseillevirus Shanghai 1">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Invertebrate iridovirus 25">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Indivirus ILV1">
+			<color>0xbebada</color>
+		</taxonomy>
+		<taxonomy code="Port-miou virus">
+			<color>0xfb8072</color>
+		</taxonomy>
+		<taxonomy code="Clandestinovirus">
+			<color>0x80b1d3</color>
+		</taxonomy>
+		<taxonomy code="lymphocystis disease virus-China">
+			<color>0xfdb462</color>
+		</taxonomy>
+		<taxonomy code="Marseillevirus LCMAC102">
+			<color>0xb3de69</color>
+		</taxonomy>
+		<taxonomy code="Cannes 8 virus">
+			<color>0xfccde5</color>
+		</taxonomy>
+		<taxonomy code="Golden Marseillevirus">
+			<color>0xd9d9d9</color>
+		</taxonomy>
+		<taxonomy code="Lausannevirus">
+			<color>0xbc80bd</color>
+		</taxonomy>
+		<taxonomy code="Brazilian marseillevirus">
+			<color>0xccebc5</color>
+		</taxonomy>
+		<taxonomy code="Chloriridovirus anopheles1">
+			<color>0xffed6f</color>
+		</taxonomy>
+		<taxonomy code="Melbournevirus">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Marseillevirus sp">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Noumeavirus">
+			<color>0xbebada</color>
+		</taxonomy>
+		<taxonomy code="Insectomime virus">
+			<color>0xfb8072</color>
+		</taxonomy>
+		<taxonomy code="Tunisvirus fontaine2">
+			<color>0x80b1d3</color>
+		</taxonomy>
+		<taxonomy code="Acanthamoeba castellanii medusavirus">
+			<color>0xfdb462</color>
+		</taxonomy>
+		<taxonomy code="Marseillevirus LCMAC103">
+			<color>0xb3de69</color>
+		</taxonomy>
+		<taxonomy code="Helicoverpa zea nudivirus 2">
+			<color>0xfccde5</color>
+		</taxonomy>
+		<taxonomy code="Pithovirus LCPAC304">
+			<color>0xd9d9d9</color>
+		</taxonomy>
+		<taxonomy code="Marseillevirus LCMAC202">
+			<color>0xbc80bd</color>
+		</taxonomy>
+		<taxonomy code="European chub iridovirus">
+			<color>0xccebc5</color>
+		</taxonomy>
+		<taxonomy code="Invertebrate iridescent virus 22">
+			<color>0xffed6f</color>
+		</taxonomy>
+		<taxonomy code="Pithovirus LCPAC001">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Wiseana iridescent virus">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Marseillevirus LCMAC101">
+			<color>0xbebada</color>
+		</taxonomy>
+		<taxonomy code="Heliothis zea nudivirus">
+			<color>0xfb8072</color>
+		</taxonomy>
+		<taxonomy code="Marseillevirus LCMAC201">
+			<color>0x80b1d3</color>
+		</taxonomy>
+		<taxonomy code="Kurlavirus BKC-1">
+			<color>0xfdb462</color>
+		</taxonomy>
+		<taxonomy code="Terrestrivirus sp">
+			<color>0xb3de69</color>
+		</taxonomy>
+		<taxonomy code="Marseillevirus marseillevirus">
+			<color>0xfccde5</color>
+		</taxonomy>
+		<taxonomy code="Scale drop disease virus">
+			<color>0xd9d9d9</color>
+		</taxonomy>
+		<taxonomy code="Invertebrate iridescent virus 30">
+			<color>0xbc80bd</color>
+		</taxonomy>
+		<taxonomy code="Yasminevirus sp. GU-2018">
+			<color>0xccebc5</color>
+		</taxonomy>
+		<taxonomy code="Tokyovirus A1">
+			<color>0xffed6f</color>
+		</taxonomy>
+	</taxonomies>
+	<labels/>
+	<domains>
+		<domain name="First histone fold">
+			<color>#8da0cb</color>
+			<description>Alpha 1, 2, and 3 helices of the first histone fold. Usually this is either H4 or H2B.</description>
+		</domain>
+		<domain name="Second histone fold">
+			<color>#fc8d62</color>
+			<description>Alpha 1, 2, and 3 helices of the second histone fold. Usually this is either H3 or H2A.</description>
+		</domain>
+		<domain name="Other">
+			<color>#b3b3b3</color>
+			<description>Other secondary structures</description>
+		</domain>
+	</domains>
+</phyloxml>

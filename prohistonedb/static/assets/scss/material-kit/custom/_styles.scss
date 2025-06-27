@@ -808,6 +808,36 @@ table th,
     }
 }
 
+/* PhyD3 viewer */
+// disable mouse interaction in main (entry) view
+.phyd3-overlay {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    width: 948px; // depends on screen size: use media queries?
+    height: 1200px;
+    cursor: pointer;
+    background-color: #fafafabb;
+    padding: 80px;
+    text-align: center;
+    
+    h3 {
+        font-size: 2rem;
+        line-height: 2rem;
+        color: #333;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+.phy:hover .phyd3-overlay {
+    display: block;
+}
+
 
 /* progress status */
 .status-wrapper {

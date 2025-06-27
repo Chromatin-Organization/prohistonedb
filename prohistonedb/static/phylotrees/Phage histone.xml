@@ -1,0 +1,189 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+	<phylogeny rooted="false">
+		<clade>
+			<clade>
+				<name>A0A2E7QIQ9</name>
+				<branch_length>1.6711236688</branch_length>
+				<taxonomy>
+					<code>Pseudomonadota</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MNNVKQRRGLTLLRVGSLKKVLRDLGLQSTTEALVQLDREVAYLIKKYGKDQAEQGIKRLNGDTSLMSITGTSRSKPHPITETEKVDSVLGKSCQRCSGIKDAFLQKARSEMRWFYDEIKTGIIRASNGKKYNPDWATKQGRINNIT</mol_seq>
+					<uri>/entry/A0A2E7QIQ9</uri>
+					<domain_architecture length="147">
+						<domain from="15" to="24" confidence="0.000000001">Histone fold</domain>
+						<domain from="31" to="52" confidence="0.000000001">Histone fold</domain>
+						<domain from="106" to="107" confidence="0.000000001">C-terminal helix</domain>
+						<domain from="109" to="115" confidence="0.000000001">C-terminal helix</domain>
+						<domain from="117" to="117" confidence="0.000000001">C-terminal helix</domain>
+						<domain from="119" to="127" confidence="0.000000001">C-terminal helix</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<branch_length>0.4109277498</branch_length>
+				<confidence type="unknown">89.0</confidence>
+				<clade>
+					<branch_length>0.1579441986</branch_length>
+					<confidence type="unknown">70.0</confidence>
+					<clade>
+						<branch_length>0.2164311667</branch_length>
+						<confidence type="unknown">73.0</confidence>
+						<clade>
+							<branch_length>0.1669217633</branch_length>
+							<confidence type="unknown">57.0</confidence>
+							<clade>
+								<branch_length>0.3881276212</branch_length>
+								<confidence type="unknown">91.0</confidence>
+								<clade>
+									<name>A0A2D6AQ05</name>
+									<branch_length>0.429390757</branch_length>
+									<taxonomy>
+										<code>Bacteroidota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MTLIQKSKVKRLLNDLGVRVNPDAFDGINRIVESALTQLAGKVREDGMKTVMPHHAAPSINGSTTQTGCKECVNIKPEFIRFARSTQEYCHEQAVLLSRKVK</mol_seq>
+										<uri>/entry/A0A2D6AQ05</uri>
+										<domain_architecture length="102">
+											<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+											<domain from="22" to="45" confidence="0.000000001">Histone fold</domain>
+											<domain from="53" to="56" confidence="0.000000001">Histone fold</domain>
+											<domain from="77" to="100" confidence="0.000000001">C-terminal helix</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0A516M1G1</name>
+									<branch_length>0.5805267464</branch_length>
+									<taxonomy>
+										<code>Undefined</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MMIQKSKVKKLINSKGLSVSSKSYESIDRVVTEVIEALCENTTEDGMKTVMPHHCIVKSKTVTQRTPKDGVNLKPQFYQWAKTVQEYCAEQAVILSKEI</mol_seq>
+										<uri>/entry/A0A516M1G1</uri>
+										<domain_architecture length="99">
+											<domain from="5" to="14" confidence="0.000000001">Histone fold</domain>
+											<domain from="23" to="44" confidence="0.000000001">Histone fold</domain>
+											<domain from="75" to="98" confidence="0.000000001">C-terminal helix</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<name>A0A2D7X1W6</name>
+								<branch_length>0.3700118506</branch_length>
+								<taxonomy>
+									<code>Pseudomonadota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MEYIQKSKVKKFINSKGYRLRPDALDGINRTVEDVITSMLNNVEQDGMKTLLPQHTKVSNTVEKTSNKSPYVNIKPEFVKFAKSVQDYCHEQAVILSRKI</mol_seq>
+									<uri>/entry/A0A2D7X1W6</uri>
+									<domain_architecture length="100">
+										<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+										<domain from="24" to="45" confidence="0.000000001">Histone fold</domain>
+										<domain from="76" to="99" confidence="0.000000001">C-terminal helix</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+						<clade>
+							<name>A0A516MJ05</name>
+							<branch_length>0.2974535568</branch_length>
+							<taxonomy>
+								<code>Undefined</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MERKKLMSYIQKTKIKALVRDQGYRISPESFDGINRAVEGLIKGMLDKVEADGMKTLMVQHTGVNKAPRQSSGSCKKCVNIKPEFLKFARSTQVWCHDKAYKLSKNVK</mol_seq>
+								<uri>/entry/A0A516MJ05</uri>
+								<domain_architecture length="108">
+									<domain from="12" to="21" confidence="0.000000001">Histone fold</domain>
+									<domain from="30" to="51" confidence="0.000000001">Histone fold</domain>
+									<domain from="59" to="62" confidence="0.000000001">Histone fold</domain>
+									<domain from="83" to="106" confidence="0.000000001">C-terminal helix</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+					<clade>
+						<name>A0A516L3F8</name>
+						<branch_length>0.3797585652</branch_length>
+						<taxonomy>
+							<code>Undefined</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MLLKKSEIKKLIKNEGYRISPESYEGINRAVESTIKQMLVQVANDNMKTLMMQHTGAKTTKIDSSSCSRCANIENTYIRWAKNVQQFCADEATIMFNRLRSR</mol_seq>
+							<uri>/entry/A0A516L3F8</uri>
+							<domain_architecture length="102">
+								<domain from="5" to="14" confidence="0.000000001">Histone fold</domain>
+								<domain from="23" to="44" confidence="0.000000001">Histone fold</domain>
+								<domain from="52" to="55" confidence="0.000000001">Histone fold</domain>
+								<domain from="74" to="100" confidence="0.000000001">C-terminal helix</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+				</clade>
+				<clade>
+					<name>A0A516L8B6</name>
+					<branch_length>0.3093484064</branch_length>
+					<taxonomy>
+						<code>Undefined</code>
+					</taxonomy>
+					<sequence type="aa">
+						<mol_seq is_aligned="false">MAYVQKSSIKKLVKDKGFRISPSSYDGINRSVESIILQMLEKVDQDGMKTLMDQHTGITKKAKVVKSKSCSRCCMIKDQFIQWARATQDWCITKATTLSRRV</mol_seq>
+						<uri>/entry/A0A516L8B6</uri>
+						<domain_architecture length="102">
+							<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+							<domain from="22" to="45" confidence="0.000000001">Histone fold</domain>
+							<domain from="53" to="56" confidence="0.000000001">Histone fold</domain>
+							<domain from="78" to="99" confidence="0.000000001">C-terminal helix</domain>
+						</domain_architecture>
+					</sequence>
+				</clade>
+			</clade>
+			<clade>
+				<name>A0A516LIY4</name>
+				<branch_length>0.0835018788</branch_length>
+				<taxonomy>
+					<code>Undefined</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MESLMNYIQKSKIKSLVKDQGFRLSPNAIDGINRSVENLIKQMLNNVESDGMKTLMNQHTGVVKVKQKSNDTIYGKKCQRCCNLDDAFLRKGQDEQRWFYDEVKRCSNNLIKKRNYDPHFATKQGRVNNFLNKPYKKGA</mol_seq>
+					<uri>/entry/A0A516LIY4</uri>
+					<domain_architecture length="139">
+						<domain from="10" to="19" confidence="0.000000001">Histone fold</domain>
+						<domain from="26" to="49" confidence="0.000000001">Histone fold</domain>
+						<domain from="77" to="78" confidence="0.000000001">Other</domain>
+						<domain from="84" to="111" confidence="0.000000001">C-terminal helix</domain>
+						<domain from="123" to="123" confidence="0.000000001">Other</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+		</clade>
+	</phylogeny>
+	<taxonomies>
+		<taxonomy code="Undefined">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Pseudomonadota">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Bacteroidota">
+			<color>0xbebada</color>
+		</taxonomy>
+	</taxonomies>
+	<labels/>
+	<domains>
+		<domain name="Histone fold">
+			<color>#8da0cb</color>
+			<description>Alpha 1, 2, and 3 helices of the histone fold</description>
+		</domain>
+		<domain name="C-terminal helix">
+			<color>#e78ac3</color>
+			<description>The C-terminal helix which is involved in tetramerization</description>
+		</domain>
+		<domain name="Other">
+			<color>#b3b3b3</color>
+			<description>Other secondary structures</description>
+		</domain>
+	</domains>
+</phyloxml>

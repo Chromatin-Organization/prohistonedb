@@ -1,0 +1,504 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+	<phylogeny rooted="false">
+		<clade>
+			<clade>
+				<name>A0A8D6T0P6</name>
+				<branch_length>0.1808766062</branch_length>
+				<taxonomy>
+					<code>Euryarchaeota</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MLPKTTIKRIMKQYTDFNISSEAVDELSNLLMEIIKITTEVAEQNAKKDGRKTIKAKDIRNCDDERLKRKIIELSERTDKMPILIKEMLNVITSELE</mol_seq>
+					<uri>/entry/A0A8D6T0P6</uri>
+					<domain_architecture length="97">
+						<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+						<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+						<domain from="56" to="60" confidence="0.000000001">Histone fold</domain>
+						<domain from="62" to="74" confidence="0.000000001">Histone fold</domain>
+						<domain from="83" to="96" confidence="0.000000001">C-terminal helix</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<branch_length>0.0639822855</branch_length>
+				<confidence type="unknown">49.0</confidence>
+				<clade>
+					<branch_length>0.1263028756</branch_length>
+					<confidence type="unknown">67.0</confidence>
+					<clade>
+						<branch_length>0.5666683595</branch_length>
+						<confidence type="unknown">100.0</confidence>
+						<clade>
+							<branch_length>0.4448160283</branch_length>
+							<confidence type="unknown">99.0</confidence>
+							<clade>
+								<branch_length>0.0377732754</branch_length>
+								<confidence type="unknown">30.0</confidence>
+								<clade>
+									<branch_length>0.1613534921</branch_length>
+									<confidence type="unknown">52.0</confidence>
+									<clade>
+										<name>A6UUU1</name>
+										<branch_length>0.1771630668</branch_length>
+										<taxonomy>
+											<code>Methanococcus aeolicus</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MIPKGTVKRIMKQNTDMNVSAESVVKIVEILQEYIVTTTRLAEENAAKDKRKTIKARDVENCDGERVRQKILEVADRTEKVQILTKEFLKVLSSELTREE</mol_seq>
+											<uri>/entry/A6UUU1</uri>
+											<domain_architecture length="100">
+												<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+												<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+												<domain from="56" to="60" confidence="0.000000001">Histone fold</domain>
+												<domain from="62" to="76" confidence="0.000000001">Histone fold</domain>
+												<domain from="79" to="96" confidence="0.000000001">C-terminal helix</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+									<clade>
+										<branch_length>0.2926239569</branch_length>
+										<confidence type="unknown">99.0</confidence>
+										<clade>
+											<branch_length>0.1328711168</branch_length>
+											<confidence type="unknown">97.0</confidence>
+											<clade>
+												<branch_length>0.0156572239</branch_length>
+												<confidence type="unknown">45.0</confidence>
+												<clade>
+													<branch_length>0.0250487768</branch_length>
+													<confidence type="unknown">97.0</confidence>
+													<clade>
+														<name>Q6LYH6</name>
+														<branch_length>0.006702287</branch_length>
+														<taxonomy>
+															<code>Methanococcus maripaludis</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MPYDSKDKIRGLIMIPKGTVKRIMKENTDMNVSAESVVALVEILQEMVVTTTKIAEENAAKDKRKTLKARDIEQCDAERLRKKVIEVSERTEKVNMLTNEILNVIANELERY</mol_seq>
+															<uri>/entry/Q6LYH6</uri>
+															<domain_architecture length="112">
+																<domain from="17" to="25" confidence="0.000000001">Histone fold</domain>
+																<domain from="34" to="61" confidence="0.000000001">Histone fold</domain>
+																<domain from="69" to="73" confidence="0.000000001">Histone fold</domain>
+																<domain from="75" to="110" confidence="0.000000001">Histone fold</domain>
+																<domain from="75" to="110" confidence="0.000000001">C-terminal helix</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+													<clade>
+														<name>A0A2L1CD04</name>
+														<branch_length>2.0475E-06</branch_length>
+														<taxonomy>
+															<code>Euryarchaeota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MIPKGTVKRIMKENTDMNVSAESVVALVEILQEMVVTTTKIAEENAAKDKRKTLKARDIEQCDAERLRKKVIEVSERTEKVNMLTNEILNVIANELERY</mol_seq>
+															<uri>/entry/A0A2L1CD04</uri>
+															<domain_architecture length="99">
+																<domain from="4" to="13" confidence="0.000000001">Histone fold</domain>
+																<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+																<domain from="56" to="60" confidence="0.000000001">Histone fold</domain>
+																<domain from="62" to="97" confidence="0.000000001">Histone fold</domain>
+																<domain from="62" to="97" confidence="0.000000001">C-terminal helix</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+												<clade>
+													<branch_length>0.0340764082</branch_length>
+													<confidence type="unknown">46.0</confidence>
+													<clade>
+														<branch_length>0.0086286372</branch_length>
+														<confidence type="unknown">32.0</confidence>
+														<clade>
+															<branch_length>0.0111097457</branch_length>
+															<confidence type="unknown">51.0</confidence>
+															<clade>
+																<name>A6VFV1</name>
+																<branch_length>0.0129031162</branch_length>
+																<taxonomy>
+																	<code>Methanococcus maripaludis</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MIPKGTIKRIMKENTDMNVSAESVAALVEILQEMVVTTTKIAEENAEKDKRKTLKARDIEQCDAERLRKKVVEVSERTEKVNMLTNEILNVIANELERY</mol_seq>
+																	<uri>/entry/A6VFV1</uri>
+																	<domain_architecture length="99">
+																		<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+																		<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+																		<domain from="56" to="60" confidence="0.000000001">Histone fold</domain>
+																		<domain from="62" to="97" confidence="0.000000001">Histone fold</domain>
+																		<domain from="62" to="97" confidence="0.000000001">C-terminal helix</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>A6UP30</name>
+																<branch_length>0.2875788293</branch_length>
+																<taxonomy>
+																	<code>Methanococcus vannielii</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MIPKGTVKRIMKQHTEMNVSAESVEKLVELLQEIIVTTTQIAEQNAGKDKRKTLKARDIEQCDAERLRRKIVEVSERTEKVNILTNEILNVVANELERY</mol_seq>
+																	<uri>/entry/A6UP30</uri>
+																	<domain_architecture length="99">
+																		<domain from="4" to="13" confidence="0.000000001">Histone fold</domain>
+																		<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+																		<domain from="56" to="96" confidence="0.000000001">Histone fold</domain>
+																		<domain from="56" to="96" confidence="0.000000001">C-terminal helix</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<name>A9AAT3</name>
+															<branch_length>0.0294058832</branch_length>
+															<taxonomy>
+																<code>Methanococcus maripaludis</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MIPKGTVKRIMKENTDMNVSAESVAALVEILQEMVVTTTKIAEENAEKDKRKTLKARDIEQCDAERLRKKVVEVSERTEKVNMLTNEILNVIANELERY</mol_seq>
+																<uri>/entry/A9AAT3</uri>
+																<domain_architecture length="99">
+																	<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+																	<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+																	<domain from="56" to="60" confidence="0.000000001">Histone fold</domain>
+																	<domain from="62" to="97" confidence="0.000000001">Histone fold</domain>
+																	<domain from="62" to="97" confidence="0.000000001">C-terminal helix</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+													<clade>
+														<name>A4FXG4</name>
+														<branch_length>0.0328179079</branch_length>
+														<taxonomy>
+															<code>Methanococcus maripaludis</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MIPKGTVKRIMKENTEMNVSAESVAALVEILQEMVVTTTKIAEENAANDKRKTLKARDIEQCDAERLRKKVVEVSERTEKVNMLTNEILNVIANELERY</mol_seq>
+															<uri>/entry/A4FXG4</uri>
+															<domain_architecture length="99">
+																<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+																<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+																<domain from="56" to="97" confidence="0.000000001">Histone fold</domain>
+																<domain from="56" to="97" confidence="0.000000001">C-terminal helix</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+											</clade>
+											<clade>
+												<name>A0A7J9S218</name>
+												<branch_length>0.0015797661</branch_length>
+												<taxonomy>
+													<code>Euryarchaeota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MIPKGTVKRIMKENTDMNVSAESVVALVEILQEMVVTTTKIAEENAANDKRKTLKARDIEQCDAERLRKKVIEVSERTEKVNMLTNEILNVIANELERY</mol_seq>
+													<uri>/entry/A0A7J9S218</uri>
+													<domain_architecture length="99">
+														<domain from="4" to="13" confidence="0.000000001">Histone fold</domain>
+														<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+														<domain from="56" to="60" confidence="0.000000001">Histone fold</domain>
+														<domain from="62" to="97" confidence="0.000000001">Histone fold</domain>
+														<domain from="62" to="97" confidence="0.000000001">C-terminal helix</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+										<clade>
+											<branch_length>0.1687563841</branch_length>
+											<confidence type="unknown">99.0</confidence>
+											<clade>
+												<name>D7DTQ7</name>
+												<branch_length>0.0725858729</branch_length>
+												<taxonomy>
+													<code>Methanococcus voltae</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MIPKGTVKRIMKENTDMYVSTESVVALVDILQEMIITTTRIAEENAAKDKRKTIKARDIEECDAERLKEKILQVSERTEKVNMLANEILHVIASELERY</mol_seq>
+													<uri>/entry/D7DTQ7</uri>
+													<domain_architecture length="99">
+														<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+														<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+														<domain from="56" to="96" confidence="0.000000001">Histone fold</domain>
+														<domain from="56" to="96" confidence="0.000000001">C-terminal helix</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<name>A0A8J7S442</name>
+												<branch_length>0.0374810438</branch_length>
+												<taxonomy>
+													<code>Euryarchaeota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MIPKGTVKRIMKDNTEMYVSTESVVALVDILQEMIVTTTKIAEENAAKDKRKTIKARDIEECDAERLKEKILQVSERTEKVNMLANEILHVIASELERY</mol_seq>
+													<uri>/entry/A0A8J7S442</uri>
+													<domain_architecture length="99">
+														<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+														<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+														<domain from="56" to="96" confidence="0.000000001">Histone fold</domain>
+														<domain from="56" to="96" confidence="0.000000001">C-terminal helix</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+									</clade>
+								</clade>
+								<clade>
+									<name>F8AK59</name>
+									<branch_length>0.1648398642</branch_length>
+									<taxonomy>
+										<code>Methanothermococcus okinawensis</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MIPKGTVKRLMKENTDMNISAESVEKLVEILQEYIVTTTKMAEDNARKDKRKTIKARDIENCDEERLRVKIMEIADRTEKVNILTKEFLKVLASELLRE</mol_seq>
+										<uri>/entry/F8AK59</uri>
+										<domain_architecture length="99">
+											<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+											<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+											<domain from="56" to="96" confidence="0.000000001">Histone fold</domain>
+											<domain from="56" to="96" confidence="0.000000001">C-terminal helix</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<name>A0A8J8C7G0</name>
+								<branch_length>0.1898354851</branch_length>
+								<taxonomy>
+									<code>Euryarchaeota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MIPKGTIKRIMKENTNLNISAESVEKLVDILQEYIVTTTKLAEENAIKDKRKTIKGRDIENCDEERLRSKIIEISDRTEKVNILTREFLKVLSSELKRH</mol_seq>
+									<uri>/entry/A0A8J8C7G0</uri>
+									<domain_architecture length="99">
+										<domain from="4" to="13" confidence="0.000000001">Histone fold</domain>
+										<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+										<domain from="56" to="96" confidence="0.000000001">Histone fold</domain>
+										<domain from="56" to="96" confidence="0.000000001">C-terminal helix</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+						<clade>
+							<branch_length>0.0927069522</branch_length>
+							<confidence type="unknown">72.0</confidence>
+							<clade>
+								<name>F6BAU5</name>
+								<branch_length>0.1243783742</branch_length>
+								<taxonomy>
+									<code>Methanotorris igneus</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MIPKGTIKRIMKKHTDMNISSEAVEELSNILEEIIVITTKTAEENARADNRKTIKARDIKKCDKERIREKIIELANRTEKMNILTREFLNVISSELE</mol_seq>
+									<uri>/entry/F6BAU5</uri>
+									<domain_architecture length="97">
+										<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+										<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+										<domain from="56" to="96" confidence="0.000000001">Histone fold</domain>
+										<domain from="56" to="96" confidence="0.000000001">C-terminal helix</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+							<clade>
+								<name>H1KZH1</name>
+								<branch_length>2.7414E-06</branch_length>
+								<taxonomy>
+									<code>Methanotorris formicicus</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MIPKGTIKRIMKKHTDLNISSEAVEELANILEEIIAITTKTAEENAKAENRKTIKARDIKKCDEERLREKIIELANRTEKMNILTREFLNVISSELE</mol_seq>
+									<uri>/entry/H1KZH1</uri>
+									<domain_architecture length="97">
+										<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+										<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+										<domain from="56" to="96" confidence="0.000000001">Histone fold</domain>
+										<domain from="56" to="96" confidence="0.000000001">C-terminal helix</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+					</clade>
+					<clade>
+						<name>C9REV3</name>
+						<branch_length>0.0952926893</branch_length>
+						<taxonomy>
+							<code>Methanocaldococcus vulcanius</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MLPKATIKRIMKEHTDFNISSEAVDELCNMLEEIIKITTEVAEQNARKEGRKTIKARDIKNCDDERLKRRIMELSERTDKMPILIKEMLNVITSELK</mol_seq>
+							<uri>/entry/C9REV3</uri>
+							<domain_architecture length="97">
+								<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+								<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+								<domain from="56" to="60" confidence="0.000000001">Histone fold</domain>
+								<domain from="63" to="63" confidence="0.000000001">Histone fold</domain>
+								<domain from="67" to="75" confidence="0.000000001">Histone fold</domain>
+								<domain from="81" to="95" confidence="0.000000001">C-terminal helix</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+				</clade>
+				<clade>
+					<branch_length>0.0422568327</branch_length>
+					<confidence type="unknown">44.0</confidence>
+					<clade>
+						<name>Q59041,HmvA</name>
+						<branch_length>0.0311479811</branch_length>
+						<taxonomy>
+							<code>Methanocaldococcus jannaschii</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MLPKATVKRIMKQHTDFNISAEAVDELCNMLEEIIKITTEVAEQNARKEGRKTIKARDIKQCDDERLKRKIMELSERTDKMPILIKEMLNVITSEL</mol_seq>
+							<uri>/entry/Q59041</uri>
+							<domain_architecture length="96">
+								<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+								<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+								<domain from="56" to="76" confidence="0.000000001">Histone fold</domain>
+								<domain from="83" to="95" confidence="0.000000001">C-terminal helix</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+					<clade>
+						<branch_length>0.0190700358</branch_length>
+						<confidence type="unknown">34.0</confidence>
+						<clade>
+							<name>C7P6C0</name>
+							<branch_length>0.1086781763</branch_length>
+							<taxonomy>
+								<code>Methanocaldococcus fervens</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MLPKATVKRLMKQYTDFNISAEAVDELCNMLEEIIKITTEVAEQNARKDGRKTIKARDIKMCDDERLKRKIMELSERTDKMPILVKEMLNVITSELE</mol_seq>
+								<uri>/entry/C7P6C0</uri>
+								<domain_architecture length="97">
+									<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+									<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+									<domain from="56" to="60" confidence="0.000000001">Histone fold</domain>
+									<domain from="62" to="77" confidence="0.000000001">Histone fold</domain>
+									<domain from="79" to="96" confidence="0.000000001">C-terminal helix</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+						<clade>
+							<name>D3S432</name>
+							<branch_length>0.0761407714</branch_length>
+							<taxonomy>
+								<code>Euryarchaeota</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MLPKATVKRIMKQYTNFNISAEAVDELCNMLEEIIKITTEVAEQNARKEGRKTIKARDIKQCDDERLKRRIMELSERTDKMPILIKEMLNVITSELE</mol_seq>
+								<uri>/entry/D3S432</uri>
+								<domain_architecture length="97">
+									<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+									<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+									<domain from="56" to="63" confidence="0.000000001">Histone fold</domain>
+									<domain from="66" to="75" confidence="0.000000001">Histone fold</domain>
+									<domain from="83" to="96" confidence="0.000000001">C-terminal helix</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+				</clade>
+			</clade>
+			<clade>
+				<branch_length>0.1446679899</branch_length>
+				<confidence type="unknown">61.0</confidence>
+				<clade>
+					<name>D5VTW4</name>
+					<branch_length>0.4350701691</branch_length>
+					<taxonomy>
+						<code>Methanocaldococcus infernus</code>
+					</taxonomy>
+					<sequence type="aa">
+						<mol_seq is_aligned="false">MLPKTTIKRVMKNYTDLNISSEAVDELINLLEEMIKVTTEVAEKNAKREGRKTILRRDIKNCDEERLKRKILELSERTDKMPIIVKEILAIITSELE</mol_seq>
+						<uri>/entry/D5VTW4</uri>
+						<domain_architecture length="97">
+							<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+							<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+							<domain from="56" to="63" confidence="0.000000001">Histone fold</domain>
+							<domain from="65" to="79" confidence="0.000000001">Histone fold</domain>
+							<domain from="81" to="96" confidence="0.000000001">C-terminal helix</domain>
+						</domain_architecture>
+					</sequence>
+				</clade>
+				<clade>
+					<name>N6VQ57</name>
+					<branch_length>0.2687604414</branch_length>
+					<taxonomy>
+						<code>Methanocaldococcus villosus</code>
+					</taxonomy>
+					<sequence type="aa">
+						<mol_seq is_aligned="false">MLPKTRIKKIMKQYTKLNISSEAVDELNNILLEIIKIITETAEKNAKREGRKTIKGRDIKECDDERLKRKIIELSKRTDKMPILIKEILNVITSELE</mol_seq>
+						<uri>/entry/N6VQ57</uri>
+						<domain_architecture length="97">
+							<domain from="4" to="12" confidence="0.000000001">Histone fold</domain>
+							<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+							<domain from="56" to="75" confidence="0.000000001">Histone fold</domain>
+							<domain from="88" to="88" confidence="0.000000001">C-terminal helix</domain>
+							<domain from="91" to="93" confidence="0.000000001">C-terminal helix</domain>
+						</domain_architecture>
+					</sequence>
+				</clade>
+			</clade>
+		</clade>
+	</phylogeny>
+	<taxonomies>
+		<taxonomy code="Methanocaldococcus villosus">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Euryarchaeota">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Methanocaldococcus jannaschii">
+			<color>0xbebada</color>
+		</taxonomy>
+		<taxonomy code="Methanotorris igneus">
+			<color>0xfb8072</color>
+		</taxonomy>
+		<taxonomy code="Methanocaldococcus fervens">
+			<color>0x80b1d3</color>
+		</taxonomy>
+		<taxonomy code="Methanococcus voltae">
+			<color>0xfdb462</color>
+		</taxonomy>
+		<taxonomy code="Methanothermococcus okinawensis">
+			<color>0xb3de69</color>
+		</taxonomy>
+		<taxonomy code="Methanococcus maripaludis">
+			<color>0xfccde5</color>
+		</taxonomy>
+		<taxonomy code="Methanotorris formicicus">
+			<color>0xd9d9d9</color>
+		</taxonomy>
+		<taxonomy code="Methanocaldococcus vulcanius">
+			<color>0xbc80bd</color>
+		</taxonomy>
+		<taxonomy code="Methanococcus vannielii">
+			<color>0xccebc5</color>
+		</taxonomy>
+		<taxonomy code="Methanococcus aeolicus">
+			<color>0xffed6f</color>
+		</taxonomy>
+		<taxonomy code="Methanocaldococcus infernus">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+	</taxonomies>
+	<labels/>
+	<domains>
+		<domain name="Histone fold">
+			<color>#8da0cb</color>
+			<description>Alpha 1, 2, and 3 helices of the histone fold</description>
+		</domain>
+		<domain name="C-terminal helix">
+			<color>#e78ac3</color>
+			<description>The C-terminal helix which is involved in tetramerization</description>
+		</domain>
+		<domain name="Other">
+			<color>#b3b3b3</color>
+			<description>Other secondary structures</description>
+		</domain>
+	</domains>
+</phyloxml>

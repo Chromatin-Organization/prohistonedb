@@ -24524,6 +24524,34 @@ table td {
   text-decoration: underline;
 }
 
+/* PhyD3 viewer */
+.phyd3-overlay {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  width: 948px;
+  height: 1200px;
+  cursor: pointer;
+  background-color: rgba(250, 250, 250, 0.7333333333);
+  padding: 80px;
+  text-align: center;
+}
+.phyd3-overlay h3, .phyd3-overlay .h3 {
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #333;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.phy:hover .phyd3-overlay {
+  display: block;
+}
+
 /* progress status */
 .status-wrapper {
   font-family: "Roboto Slab";

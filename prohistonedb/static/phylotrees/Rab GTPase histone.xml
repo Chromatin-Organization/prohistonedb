@@ -1,0 +1,157 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+	<phylogeny rooted="false">
+		<clade>
+			<clade>
+				<name>A0A0F8XVV9</name>
+				<branch_length>0.0595337093</branch_length>
+				<taxonomy>
+					<code>Ca. Lokiarchaeota</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MSKIVYKYKVLILGPPAVGKTSLLHRFVEKEFKVDYTATIGATFLIKEIKISEDKSDDSTAQLSLWDVGGQHSFRDLRTTFYRGANGALIIFDLIREKTFDEIGAWKSEMHKTLMKDIPFVLIGNKTDLIKTEGRKVKITLAKKFAKENNSHYIETSAKTGLNVEKAFRELTRIIAENEGGIDVDLKKVKAEAFFIKSKVKRYIKSEGYQTSIDLLDGNVLNEIIVSILDKAISNSKKDGRDTVQPEDIHSI</mol_seq>
+					<uri>/entry/A0A0F8XVV9</uri>
+					<domain_architecture length="252">
+						<domain from="5" to="14" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="20" to="28" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="43" to="50" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="60" to="68" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="72" to="80" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="87" to="93" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="97" to="101" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="103" to="114" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="119" to="125" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="127" to="133" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="139" to="148" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="152" to="155" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="164" to="178" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="228" to="228" confidence="0.000000001">Histone fold</domain>
+						<domain from="230" to="235" confidence="0.000000001">Histone fold</domain>
+						<domain from="237" to="238" confidence="0.000000001">Histone fold</domain>
+						<domain from="247" to="247" confidence="0.000000001">Histone fold</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<branch_length>0.1057231601</branch_length>
+				<confidence type="unknown">50.0</confidence>
+				<clade>
+					<name>A0A0F9LSQ3</name>
+					<branch_length>0.1793160792</branch_length>
+					<taxonomy>
+						<code>Undefined</code>
+					</taxonomy>
+					<sequence type="aa">
+						<mol_seq is_aligned="false">MSKIIYKYKVLILGDPAVGKTSLLQRFVKDEFKVDYQATIGATFLTKEIKISEDKADNTTAQLSLWDVGGQSRFIDLRTTFYRGANGALIVFDLIREKTFEEIEVWYSEMCKTLNREIVPFVLIGNKSDLIKSEGRKVNINHAKKFAKDRKSLYIETSAKTGMNVEKAFKELTRIIAEKEGGEDVDLRKMKSEAFFIKSKIREYIKSEGYQTSIDLIDGNVLNEIIIEILDKAIAIAKSDGRKTVQPSDIEYF</mol_seq>
+						<uri>/entry/A0A0F9LSQ3</uri>
+						<domain_architecture length="253">
+							<domain from="6" to="14" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="20" to="29" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="43" to="50" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="60" to="68" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="72" to="80" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="87" to="93" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="97" to="101" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="103" to="114" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="120" to="126" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="128" to="134" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="140" to="149" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="153" to="156" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="158" to="158" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="163" to="163" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="165" to="179" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="200" to="207" confidence="0.000000001">Histone fold</domain>
+							<domain from="225" to="239" confidence="0.000000001">Histone fold</domain>
+							<domain from="247" to="249" confidence="0.000000001">Histone fold</domain>
+						</domain_architecture>
+					</sequence>
+				</clade>
+				<clade>
+					<name>A0A5C9EZ94</name>
+					<branch_length>1.5994213636</branch_length>
+					<taxonomy>
+						<code>Ca. Lokiarchaeota</code>
+					</taxonomy>
+					<sequence type="aa">
+						<mol_seq is_aligned="false">MELKFKVILLGPAAVGKTSLMYRYVNDTFNENYIATLGAQFLSKEITMETRSGDLLSCKLIIWDIIGQSNPHYDDLRTTFYRGSEGAFLVFDLTRKTTLDRLSGWYKQLVKVLNKKIPTILIGNKLDLIENGNDALKIKELAGEFAKEIDCGYKETSAKNGKNVNNIFLELATLLVRRAGYDVKEKKTILSDEEDSNISDTYLIRNRIRDYIKSKGFRISSELLDGKTLDTQILAILDKAIWRAKKNGRITVKSRDI</mol_seq>
+						<uri>/entry/A0A5C9EZ94</uri>
+						<domain_architecture length="257">
+							<domain from="3" to="10" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="17" to="26" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="39" to="50" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="55" to="65" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="77" to="81" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="86" to="92" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="96" to="100" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="102" to="113" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="118" to="124" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="126" to="128" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="133" to="148" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="152" to="155" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="164" to="178" confidence="0.000000001">Small Rab GTPase</domain>
+							<domain from="183" to="183" confidence="0.000000001">Other</domain>
+							<domain from="204" to="214" confidence="0.000000001">Histone fold</domain>
+							<domain from="221" to="225" confidence="0.000000001">Histone fold</domain>
+							<domain from="227" to="246" confidence="0.000000001">Histone fold</domain>
+							<domain from="254" to="256" confidence="0.000000001">Histone fold</domain>
+						</domain_architecture>
+					</sequence>
+				</clade>
+			</clade>
+			<clade>
+				<name>A0A0F8XJF6</name>
+				<branch_length>0.116619516</branch_length>
+				<taxonomy>
+					<code>Ca. Lokiarchaeota</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MSIIYKFKVLILGPPAVGKTSLLHRFVDKEFKVDYTATIGATFLTKEIKISDEKADENTAQLSLWDVGGQHNFRDLRTTFYRGANGALIVFDLIREITFDEIAAWKSEMQETLMKDIPFVLIGNKSDLIKTEGRKVKITLAKKFAKENNSHYIETSAKTGLNVEKAFRELTRIIAENEGGSDVDLKKVKAEAFFVKSKVKSYIKSEGYQTSSDLLYGNVLNEIIINMLDKAISNSKKDGRNSILPKDIHSN</mol_seq>
+					<uri>/entry/A0A0F8XJF6</uri>
+					<domain_architecture length="251">
+						<domain from="4" to="13" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="19" to="27" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="42" to="49" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="59" to="67" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="71" to="79" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="86" to="92" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="96" to="100" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="102" to="113" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="118" to="124" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="126" to="132" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="138" to="147" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="151" to="154" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="156" to="156" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="161" to="161" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="163" to="178" confidence="0.000000001">Small Rab GTPase</domain>
+						<domain from="191" to="205" confidence="0.000000001">Histone fold</domain>
+						<domain from="212" to="216" confidence="0.000000001">Histone fold</domain>
+						<domain from="219" to="237" confidence="0.000000001">Histone fold</domain>
+						<domain from="245" to="249" confidence="0.000000001">Histone fold</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+		</clade>
+	</phylogeny>
+	<taxonomies>
+		<taxonomy code="Ca. Lokiarchaeota">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Undefined">
+			<color>0xffffb3</color>
+		</taxonomy>
+	</taxonomies>
+	<labels/>
+	<domains>
+		<domain name="Histone fold">
+			<color>#8da0cb</color>
+			<description>Alpha 1, 2, and 3 helices of the histone fold</description>
+		</domain>
+		<domain name="Small Rab GTPase">
+			<color>#e78ac3</color>
+			<description>Eukaryoric-like Small Rab GTPase domain</description>
+		</domain>
+		<domain name="Other">
+			<color>#b3b3b3</color>
+			<description>Other secondary structures</description>
+		</domain>
+	</domains>
+</phyloxml>

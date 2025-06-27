@@ -1,0 +1,2475 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+	<phylogeny rooted="false">
+		<clade>
+			<clade>
+				<name>A0A7V5I5G8</name>
+				<branch_length>1.6317079472</branch_length>
+				<taxonomy>
+					<code>Undefined</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MTTQEARGASIRFALGVGDAPESVATQSGPAAAPESSASPKPKRRRSDGNRKRTDSNEQAVSGKDDTAAGAGAPVEAKATQKRTTTPRGRGRGRRSRITETGELEGPQSEAAYRRPRGRGGRTAGAQRHARGGRTAAPAPGSGYRAETALDKDSEERAPEQGSLSQFVLLGDDAEQVLGDLKPDAADLDTSIDSDLLDGIDAQVFPEYSAILSNPLAKPERSEHEFRSFRELTNEQFEMLTEAQKERYVEFRRAALRPQNLRRFVNALVGGASGYAPGHPFLIALQGLGKMFVGDLVETAVQIKCEWDRNREIATRGEAVHASPIGPDGALLTPLEPRHIREAYRRLQKQGHLFTVLYGGSNQAAGHAPPESPHGLLAL</mol_seq>
+					<uri>/entry/A0A7V5I5G8</uri>
+					<domain_architecture length="379">
+						<domain from="223" to="239" confidence="0.000000001">Other</domain>
+						<domain from="242" to="253" confidence="0.000000001">Other</domain>
+						<domain from="258" to="268" confidence="0.000000001">Histone fold</domain>
+						<domain from="279" to="316" confidence="0.000000001">Histone fold</domain>
+						<domain from="325" to="325" confidence="0.000000001">Histone fold</domain>
+						<domain from="331" to="331" confidence="0.000000001">Histone fold</domain>
+						<domain from="337" to="349" confidence="0.000000001">Histone fold</domain>
+						<domain from="352" to="352" confidence="0.000000001">Other</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<branch_length>0.0737041374</branch_length>
+				<confidence type="unknown">47.0</confidence>
+				<clade>
+					<branch_length>0.2851832993</branch_length>
+					<confidence type="unknown">96.0</confidence>
+					<clade>
+						<branch_length>0.1623704062</branch_length>
+						<confidence type="unknown">61.0</confidence>
+						<clade>
+							<branch_length>0.035681614</branch_length>
+							<confidence type="unknown">46.0</confidence>
+							<clade>
+								<branch_length>0.190085158</branch_length>
+								<confidence type="unknown">69.0</confidence>
+								<clade>
+									<name>A0A7V5I440</name>
+									<branch_length>1.1991137456</branch_length>
+									<taxonomy>
+										<code>Undefined</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSKVEVAGAPLDARILASILSSMGIEEYDDRVIHQLLELLYRYVAEVLADARDMSEHAHRGQGKVSRTGSGVSAAAAAGDMAEIDVNDVKLAIELKLQREFVQPPPREVQMLHARELNAVPLPVFRGDRDTVELPPEELQLTAPVFRVTAQKRKRELNKRALPVATDGGGYSTVLAVSDAVNQRVAIVTHAHSDTAGNLGDSPQTRMIESEPLAEEAFARASPSVDESSEHEEAMVTNSPEADPERTGEPSSAPTAAADAARAEPASRRSRRR</mol_seq>
+										<uri>/entry/A0A7V5I440</uri>
+										<domain_architecture length="273">
+											<domain from="11" to="22" confidence="0.000000001">Histone fold</domain>
+											<domain from="30" to="57" confidence="0.000000001">Histone fold</domain>
+											<domain from="86" to="100" confidence="0.000000001">Histone fold</domain>
+											<domain from="107" to="119" confidence="0.000000001">Other</domain>
+											<domain from="137" to="139" confidence="0.000000001">Other</domain>
+											<domain from="147" to="149" confidence="0.000000001">Other</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0A2D9KP83</name>
+									<branch_length>1.3641305197</branch_length>
+									<taxonomy>
+										<code>Pseudomonadota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MAKSTSETPAQAHRRERKRHIRRVRDNHKINKFRSRATIGKIFPQASFNRVVREILQEIQHTHGNAHPYLLSYRAGTALQTAAESYLDSVFDDCSAILAHTNTETLGCGVLNLVQRLRGDVHKSSAPSLSNSDGYVVIENAAAVPAAASS</mol_seq>
+										<uri>/entry/A0A2D9KP83</uri>
+										<domain_architecture length="150">
+											<domain from="9" to="36" confidence="0.000000001">Other</domain>
+											<domain from="45" to="63" confidence="0.000000001">Histone fold</domain>
+											<domain from="73" to="100" confidence="0.000000001">Histone fold</domain>
+											<domain from="108" to="118" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<branch_length>0.1402266775</branch_length>
+								<confidence type="unknown">59.0</confidence>
+								<clade>
+									<name>A0A2E5EMU6</name>
+									<branch_length>1.1931310561</branch_length>
+									<taxonomy>
+										<code>Verrucomicrobiota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MARPTQLPVAKSSEQDKKKSRKPRKPTRFKPETRAKREIRKQQNSQKSLLKKVPFERAVREAVQNNEGPSGTCYRMTKGAFAILRAVSQDVLTDLMTATEIIRQKQGTTKSILPEQMEIARGLIHVKCLSNTQLPMHISLGQRRANKEKKKSVVSVQSTV</mol_seq>
+										<uri>/entry/A0A2E5EMU6</uri>
+										<domain_architecture length="160">
+											<domain from="31" to="44" confidence="0.000000001">Other</domain>
+											<domain from="52" to="66" confidence="0.000000001">Histone fold</domain>
+											<domain from="78" to="106" confidence="0.000000001">Histone fold</domain>
+											<domain from="114" to="123" confidence="0.000000001">Histone fold</domain>
+											<domain from="143" to="154" confidence="0.000000001">Other</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<branch_length>0.1469227129</branch_length>
+									<confidence type="unknown">90.0</confidence>
+									<clade>
+										<branch_length>0.1269018383</branch_length>
+										<confidence type="unknown">62.0</confidence>
+										<clade>
+											<branch_length>0.0604613117</branch_length>
+											<confidence type="unknown">37.0</confidence>
+											<clade>
+												<branch_length>0.1150837241</branch_length>
+												<confidence type="unknown">91.0</confidence>
+												<clade>
+													<branch_length>0.046229844</branch_length>
+													<confidence type="unknown">56.0</confidence>
+													<clade>
+														<branch_length>0.0617182775</branch_length>
+														<confidence type="unknown">83.0</confidence>
+														<clade>
+															<branch_length>0.0427822212</branch_length>
+															<confidence type="unknown">91.0</confidence>
+															<clade>
+																<branch_length>0.0904789944</branch_length>
+																<confidence type="unknown">92.0</confidence>
+																<clade>
+																	<branch_length>0.0077054943</branch_length>
+																	<confidence type="unknown">38.0</confidence>
+																	<clade>
+																		<branch_length>0.026940406</branch_length>
+																		<confidence type="unknown">37.0</confidence>
+																		<clade>
+																			<branch_length>0.444262468</branch_length>
+																			<confidence type="unknown">100.0</confidence>
+																			<clade>
+																				<name>A0A2E4IYH2</name>
+																				<branch_length>0.7440330416</branch_length>
+																				<taxonomy>
+																					<code>Verrucomicrobiota</code>
+																				</taxonomy>
+																				<sequence type="aa">
+																					<mol_seq is_aligned="false">MARSRDVPSKKPSWSLFAAKKASENVGANVSGADAKKASGSKRKDPPADAAAEQKSSAKKSAKTDKVVEKKTEKRVEEKKRKKRRFKSAVVSKREINKAQKHGNPGFAAQPTDRLIREIAGELGFEASRFEPRAIRALIEATEQFATDYLRLTDVLCAHGGRITLSKADSDLASTLLLGNHLFQEENGSAKARLGLLRAMRRDSLSMKNDEKLVPSRDRPRDDADGDATDDAPVDDTLEPTETKEDDAGTDDDDATDEKA</mol_seq>
+																					<uri>/entry/A0A2E4IYH2</uri>
+																					<domain_architecture length="260">
+																						<domain from="88" to="102" confidence="0.000000001">Other</domain>
+																						<domain from="109" to="122" confidence="0.000000001">Histone fold</domain>
+																						<domain from="132" to="159" confidence="0.000000001">Histone fold</domain>
+																						<domain from="167" to="178" confidence="0.000000001">Histone fold</domain>
+																						<domain from="197" to="202" confidence="0.000000001">Other</domain>
+																					</domain_architecture>
+																				</sequence>
+																			</clade>
+																			<clade>
+																				<name>A0A2E4J3H1</name>
+																				<branch_length>0.3916357696</branch_length>
+																				<taxonomy>
+																					<code>Verrucomicrobiota</code>
+																				</taxonomy>
+																				<sequence type="aa">
+																					<mol_seq is_aligned="false">MQATQDHPEPTAAMAPVADKPKKKYRFKPGTVSLREIKKHQKSTTHLIQRKPFYRLVKEIAQQYSMDCKFQQVAMQALQDDAESYITQYFARSQANAIHAGRKTILVMDGQKS</mol_seq>
+																					<uri>/entry/A0A2E4J3H1</uri>
+																					<domain_architecture length="113">
+																						<domain from="31" to="42" confidence="0.000000001">Other</domain>
+																						<domain from="50" to="62" confidence="0.000000001">Histone fold</domain>
+																						<domain from="72" to="99" confidence="0.000000001">Histone fold</domain>
+																						<domain from="107" to="110" confidence="0.000000001">Histone fold</domain>
+																					</domain_architecture>
+																				</sequence>
+																			</clade>
+																		</clade>
+																		<clade>
+																			<branch_length>0.03181373</branch_length>
+																			<confidence type="unknown">89.0</confidence>
+																			<clade>
+																				<branch_length>0.075942548</branch_length>
+																				<confidence type="unknown">91.0</confidence>
+																				<clade>
+																					<name>A0A7V5M3H5</name>
+																					<branch_length>0.7186465314</branch_length>
+																					<taxonomy>
+																						<code>Undefined</code>
+																					</taxonomy>
+																					<sequence type="aa">
+																						<mol_seq is_aligned="false">MVRAARVRLPATRGQAVPHEHACGEQVSMVRVFGNPVGGAHQYRQTQALNRDESLREQLQRTTVAEQDENIEPEPERSSPDEAQSRLKSLLGSVARSSSLLGRRVAGPPGSSLSNLAETRLLTEEAANRPTGAGRSERVSAGRAEPLPPGPTTATTNADANTVQRGLSVASAFPPRAPLQAAGFTVARRTTRSGVQRKHRFRPGSRAIMEIRKFQRSTELLLRRLPFARLVREICERLFGSSAFRWQASALEALQTAAEDYLIHLFEDSNLCAIHARRVTIMPRDIALARRIRGYHSDPHGYL</mol_seq>
+																						<uri>/entry/A0A7V5M3H5</uri>
+																						<domain_architecture length="303">
+																							<domain from="53" to="55" confidence="0.000000001">Other</domain>
+																							<domain from="57" to="58" confidence="0.000000001">Other</domain>
+																							<domain from="85" to="85" confidence="0.000000001">Other</domain>
+																							<domain from="88" to="89" confidence="0.000000001">Other</domain>
+																							<domain from="205" to="216" confidence="0.000000001">Other</domain>
+																							<domain from="224" to="239" confidence="0.000000001">Histone fold</domain>
+																							<domain from="248" to="275" confidence="0.000000001">Histone fold</domain>
+																							<domain from="283" to="293" confidence="0.000000001">Histone fold</domain>
+																						</domain_architecture>
+																					</sequence>
+																				</clade>
+																				<clade>
+																					<name>A0A3M1JWF8</name>
+																					<branch_length>0.4929314874</branch_length>
+																					<taxonomy>
+																						<code>Pseudomonadota</code>
+																					</taxonomy>
+																					<sequence type="aa">
+																						<mol_seq is_aligned="false">MYVCICVCVIEQPTPLQAPMSRTKQTAKSAPKAKKVGKKSASPKKAGMKKQRRWRPGTLALRVIKKLQRTTGNLIQKAPFQRMVREVANAAKGGLRWQAAAVSAMQEATEAYAVGLLSDANLCALHARRVTVMPRDVHLARRLRGERF</mol_seq>
+																						<uri>/entry/A0A3M1JWF8</uri>
+																						<domain_architecture length="148">
+																							<domain from="58" to="67" confidence="0.000000001">Other</domain>
+																							<domain from="77" to="91" confidence="0.000000001">Histone fold</domain>
+																							<domain from="99" to="126" confidence="0.000000001">Histone fold</domain>
+																							<domain from="134" to="144" confidence="0.000000001">Histone fold</domain>
+																						</domain_architecture>
+																					</sequence>
+																				</clade>
+																			</clade>
+																			<clade>
+																				<name>A0A2D5QPF7</name>
+																				<branch_length>0.3349931739</branch_length>
+																				<taxonomy>
+																					<code>Myxococcota</code>
+																				</taxonomy>
+																				<sequence type="aa">
+																					<mol_seq is_aligned="false">MRFTPPRRASRRMAGFVIPWMLSRITLRWRFPAPPLFPFPPFPFPLIVGKYYLHMIAVESTSKYTFRISFILTLTLQYVFVNVACTNMSTVFKMQSTVHACEDLPHISSLFMVEEEKMARTKQTARRSSGGKAPRKQLVQKAARKSTPATPGEKKQHRYRPGTVALREIRRYQKSTDLLLRKLPFQRLVREVAADFRADLKFASGAIQALQEATEAHLVGIFEDTNLCAIHAKRVTIMPRDMQLAKRIRGD</mol_seq>
+																					<uri>/entry/A0A2D5QPF7</uri>
+																					<domain_architecture length="251">
+																						<domain from="70" to="72" confidence="0.000000001">Other</domain>
+																						<domain from="74" to="74" confidence="0.000000001">Other</domain>
+																						<domain from="163" to="172" confidence="0.000000001">Other</domain>
+																						<domain from="182" to="196" confidence="0.000000001">Histone fold</domain>
+																						<domain from="204" to="231" confidence="0.000000001">Histone fold</domain>
+																						<domain from="239" to="249" confidence="0.000000001">Histone fold</domain>
+																					</domain_architecture>
+																				</sequence>
+																			</clade>
+																		</clade>
+																	</clade>
+																	<clade>
+																		<name>A0A2D7JV16</name>
+																		<branch_length>0.306748007</branch_length>
+																		<taxonomy>
+																			<code>Euryarchaeota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MFPILQQTSRKYSGGKAPREQLASKAARMTSKESNTGGIKKPKRYRPGTVALREIRKYQKSTELLVRKLPFQRLVREIAQDIKPALRFQSTAILALQEASEDYMVKLFEDTNLISIHCKRVTIMPKDMQLARRIRGERV</mol_seq>
+																			<uri>/entry/A0A2D7JV16</uri>
+																			<domain_architecture length="139">
+																				<domain from="49" to="58" confidence="0.000000001">Other</domain>
+																				<domain from="68" to="82" confidence="0.000000001">Histone fold</domain>
+																				<domain from="90" to="117" confidence="0.000000001">Histone fold</domain>
+																				<domain from="125" to="134" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<name>A0A2N9QVT5</name>
+																	<branch_length>0.2950408882</branch_length>
+																	<taxonomy>
+																		<code>Nucleocytoviricota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MRARSPARAASSMVDTLWRTRLSVTEIFLVQNLEISIFVWYKNPGCPHNTPHTMARTKQTARKSTGGKAPRKQLACKAARKSQALPGGVKKPHRYRPGTVAIREIRKYQKSTDLLIRKIPFQRLVKEIASDFAGDLRFQSTAILALQEAAEAYLTSLFEDTNLCAIHAKRITIMPKDMQLARRIRGERA</mol_seq>
+																		<uri>/entry/A0A2N9QVT5</uri>
+																		<domain_architecture length="189">
+																			<domain from="99" to="110" confidence="0.000000001">Other</domain>
+																			<domain from="118" to="132" confidence="0.000000001">Histone fold</domain>
+																			<domain from="140" to="167" confidence="0.000000001">Histone fold</domain>
+																			<domain from="175" to="185" confidence="0.000000001">Histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0AA42BRY6</name>
+																<branch_length>0.0931029172</branch_length>
+																<taxonomy>
+																	<code>Bacillota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MARTKQTARKSTGGKAPRKQLATKAARKSAPTTGGVKKPHRYRPGTVALREIRKYQKSTELLIRKLPFQRLVREIAQDFKTDLRFQSHAVLALQEAAEAYLVGLFEDTNLCAIHAKRVTIMPKDIQLARRIRGERA</mol_seq>
+																	<uri>/entry/A0AA42BRY6</uri>
+																	<domain_architecture length="136">
+																		<domain from="46" to="57" confidence="0.000000001">Other</domain>
+																		<domain from="65" to="79" confidence="0.000000001">Histone fold</domain>
+																		<domain from="87" to="114" confidence="0.000000001">Histone fold</domain>
+																		<domain from="122" to="131" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<branch_length>0.0424557459</branch_length>
+															<confidence type="unknown">58.0</confidence>
+															<clade>
+																<branch_length>0.0608064391</branch_length>
+																<confidence type="unknown">94.0</confidence>
+																<clade>
+																	<branch_length>0.3284890193</branch_length>
+																	<confidence type="unknown">100.0</confidence>
+																	<clade>
+																		<name>A0A1Z9BVI3</name>
+																		<branch_length>0.0826777322</branch_length>
+																		<taxonomy>
+																			<code>Undefined</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MEMIVQSQCSVQPSTQVIIICSTFSPQPIIFCFLTYTNSIVGMARTKQTARKSTGGKAPRKQLATKAARNAAPAAGGVRKPHRYRPGTVALREIRRYQKSTELLLRKLPFQRLVREIAQDFKSDLRFQSTAVLALQEVSVWYFYVLTPFILK</mol_seq>
+																			<uri>/entry/A0A1Z9BVI3</uri>
+																			<domain_architecture length="152">
+																				<domain from="88" to="97" confidence="0.000000001">Other</domain>
+																				<domain from="107" to="119" confidence="0.000000001">Histone fold</domain>
+																				<domain from="129" to="150" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A1Z9BQF7</name>
+																		<branch_length>0.1823597792</branch_length>
+																		<taxonomy>
+																			<code>Undefined</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MARTKQTARKSTGGKAPRKQLATKSARKSTPNVGGVKKPHRYRPGTVALREVRRYQKSTDLLIRKAPFQRLVRQIAQDFKSDLKFQSTAVLALQEVSILLCIIAFLFKR</mol_seq>
+																			<uri>/entry/A0A1Z9BQF7</uri>
+																			<domain_architecture length="109">
+																				<domain from="46" to="55" confidence="0.000000001">Other</domain>
+																				<domain from="65" to="79" confidence="0.000000001">Histone fold</domain>
+																				<domain from="87" to="107" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<name>A0A5Y2ADN2</name>
+																	<branch_length>0.0463703996</branch_length>
+																	<taxonomy>
+																		<code>Pseudomonadota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MARTKQTARKSTGGKAPRKQLATKAARKSAPATGGVKKPHRYRPGTVALREIRRYQKSTELLIRKLPFQRLVREIAQDFKTDLRFQSSAVMALQEASEAYLVGLFEDTNLCAIHAKRVTIMPKDIQLARRIRGERA</mol_seq>
+																		<uri>/entry/A0A5Y2ADN2</uri>
+																		<domain_architecture length="136">
+																			<domain from="46" to="55" confidence="0.000000001">Other</domain>
+																			<domain from="65" to="79" confidence="0.000000001">Histone fold</domain>
+																			<domain from="87" to="114" confidence="0.000000001">Histone fold</domain>
+																			<domain from="122" to="131" confidence="0.000000001">Histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0A3N5HRE6</name>
+																<branch_length>0.1103557534</branch_length>
+																<taxonomy>
+																	<code>Planctomycetota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MARTKQTARKSTGGKAPRKQLATKAARKSAPATGGVKKPHRYRPGTVALREIRRYQKSTELLIRKLPFQRLVREIAQDFKTDLRFQSSAVMALQEASEAYLVGLFEDTNLCAIHAKRVTIMPKDIQLARRIRGERA</mol_seq>
+																	<uri>/entry/A0A3N5HRE6</uri>
+																	<domain_architecture length="136">
+																		<domain from="46" to="55" confidence="0.000000001">Other</domain>
+																		<domain from="65" to="79" confidence="0.000000001">Histone fold</domain>
+																		<domain from="87" to="114" confidence="0.000000001">Histone fold</domain>
+																		<domain from="122" to="131" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+													</clade>
+													<clade>
+														<name>A0A2D7GQ68</name>
+														<branch_length>0.1582182</branch_length>
+														<taxonomy>
+															<code>Pseudomonadota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MARTKQTARKSTGGKAPRKQLATKAARKSAPATGGVKKPHRYRPGTVALREIRKYQKTTELLIRKLPFQRLVREIAQDFKTDLRFQSSAVSALQEASEAYLVGLFEDTNLCAIHAKRVTIMPKDIQLARRIRGERA</mol_seq>
+															<uri>/entry/A0A2D7GQ68</uri>
+															<domain_architecture length="136">
+																<domain from="46" to="57" confidence="0.000000001">Other</domain>
+																<domain from="65" to="79" confidence="0.000000001">Histone fold</domain>
+																<domain from="87" to="114" confidence="0.000000001">Histone fold</domain>
+																<domain from="122" to="132" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+												<clade>
+													<name>A0A9E4NMR2</name>
+													<branch_length>0.0961660425</branch_length>
+													<taxonomy>
+														<code>Pseudomonadota</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MARTKQTARKSTGGKAPRKQLATKAARKSAPATGGVKKPHRYRPGTVALREIRRYQKSTELLIRKLPFQRLVREIAQDFKTDLRFQSSAVMALQEASEAYLVGLFEDTNLCAIHAKRVTIMPKDIQLARRIRGERA</mol_seq>
+														<uri>/entry/A0A9E4NMR2</uri>
+														<domain_architecture length="136">
+															<domain from="46" to="55" confidence="0.000000001">Other</domain>
+															<domain from="65" to="79" confidence="0.000000001">Histone fold</domain>
+															<domain from="87" to="114" confidence="0.000000001">Histone fold</domain>
+															<domain from="122" to="131" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+											<clade>
+												<name>A0A2D9B6T5</name>
+												<branch_length>0.0603865552</branch_length>
+												<taxonomy>
+													<code>Pseudomonadota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MARTKQTARKSTGGKAPRKQLATKAARKSAPATGGVKKPHRYRPGTVALREIRRYQKSTELLIRKLPFQRLVREIAQDFKTDLRFQSSAVMALQEASEAYLVGLFEDTNLCAIHAKRVTIMPKDIQLARRIRGERA</mol_seq>
+													<uri>/entry/A0A2D9B6T5</uri>
+													<domain_architecture length="136">
+														<domain from="46" to="55" confidence="0.000000001">Other</domain>
+														<domain from="65" to="79" confidence="0.000000001">Histone fold</domain>
+														<domain from="87" to="114" confidence="0.000000001">Histone fold</domain>
+														<domain from="122" to="131" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+										<clade>
+											<branch_length>0.0470103198</branch_length>
+											<confidence type="unknown">83.0</confidence>
+											<clade>
+												<name>A0A2D5MLK6</name>
+												<branch_length>0.1755170028</branch_length>
+												<taxonomy>
+													<code>Verrucomicrobiota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MARTKQTPRGRGKVGGKAPRKQLATKAARKSAPATGGVKKPHRYRPGTVALREIRKYQKSTDLLIRKLPFQRLVREIAQDFKTXXRFQSTXILALQEASEAXXVGLXEDTNLCAIHAKRVTIMPKDXQLARRIRGERX</mol_seq>
+													<uri>/entry/A0A2D5MLK6</uri>
+													<domain_architecture length="138">
+														<domain from="48" to="57" confidence="0.000000001">Other</domain>
+														<domain from="67" to="79" confidence="0.000000001">Histone fold</domain>
+														<domain from="87" to="96" confidence="0.000000001">Histone fold</domain>
+														<domain from="100" to="110" confidence="0.000000001">Histone fold</domain>
+														<domain from="118" to="127" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<name>A0A3G5AIQ6</name>
+												<branch_length>0.5328503875</branch_length>
+												<taxonomy>
+													<code>Undefined</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MARTKQTARKSCSGKTPRKMLATKTARKAFPQDAGIKGKRKFRYRPGTVCLQEIRRFQRSTELLIKKMPFQRLVREIAEEFKHDLRFQSTAILALQEISESYLVGLFEDTNLCAIHAKRVTISVRDMHLALRIRGERS</mol_seq>
+													<uri>/entry/A0A3G5AIQ6</uri>
+													<domain_architecture length="138">
+														<domain from="48" to="57" confidence="0.000000001">Other</domain>
+														<domain from="67" to="79" confidence="0.000000001">Histone fold</domain>
+														<domain from="89" to="116" confidence="0.000000001">Histone fold</domain>
+														<domain from="124" to="134" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+									</clade>
+									<clade>
+										<branch_length>0.2697168554</branch_length>
+										<confidence type="unknown">100.0</confidence>
+										<clade>
+											<name>A0A2E0ZLP5</name>
+											<branch_length>0.2720290896</branch_length>
+											<taxonomy>
+												<code>Chloroflexota</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MLNLFFGKKFFHKKLSIDSMPATAPGGLSIGKSIGKSIGKSIGNRAPAHPRLSSGKSVGKTIGGGKQPSLAALKPKKPHRFKPGTVALREIRNYQRRTDLQIRKAPFRRLVREIANELVDMSGFPNGARLQDIAMVALQESTEAYMVKLFEDTNLNCIHRKCITVMPKDIQLARRVRGERT</mol_seq>
+												<uri>/entry/A0A2E0ZLP5</uri>
+												<domain_architecture length="181">
+													<domain from="85" to="96" confidence="0.000000001">Other</domain>
+													<domain from="104" to="118" confidence="0.000000001">Histone fold</domain>
+													<domain from="132" to="159" confidence="0.000000001">Histone fold</domain>
+													<domain from="167" to="176" confidence="0.000000001">Histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+										<clade>
+											<name>A0A2E5VZM0</name>
+											<branch_length>0.5678525374</branch_length>
+											<taxonomy>
+												<code>Euryarchaeota</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MPATATGLPTGGKSIGRKGGGKSIGGKTIARKQHPRLAGKQAGGKGKQIHGKGNLNSLLPGSRKPRRWKPGTVALRDIRKLQRSTELLIRKLPFSRIVRESAEQQASMSAFPEGVKFQKQAIEALQEATEAYLVDLFADTNLAAIHRKRQTVQPKDIQITRRLRGERT</mol_seq>
+												<uri>/entry/A0A2E5VZM0</uri>
+												<domain_architecture length="168">
+													<domain from="72" to="81" confidence="0.000000001">Other</domain>
+													<domain from="91" to="105" confidence="0.000000001">Histone fold</domain>
+													<domain from="119" to="146" confidence="0.000000001">Histone fold</domain>
+													<domain from="154" to="163" confidence="0.000000001">Histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+									</clade>
+								</clade>
+							</clade>
+						</clade>
+						<clade>
+							<branch_length>0.2670509189</branch_length>
+							<confidence type="unknown">99.0</confidence>
+							<clade>
+								<name>A0A2D7REH6</name>
+								<branch_length>0.4642639986</branch_length>
+								<taxonomy>
+									<code>Pseudomonadota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MSGIQQQVQNKQTIKRKKKASTNAIREIKNEQKSTKNIIPVAPFQRLVQEITKDHGGELRIKNEAYQALQTASEDFLVDIFRRSNRCAIHENRETIQPKDLILARELGQNTSY</mol_seq>
+									<uri>/entry/A0A2D7REH6</uri>
+									<domain_architecture length="113">
+										<domain from="20" to="31" confidence="0.000000001">Other</domain>
+										<domain from="41" to="56" confidence="0.000000001">Histone fold</domain>
+										<domain from="63" to="90" confidence="0.000000001">Histone fold</domain>
+										<domain from="98" to="108" confidence="0.000000001">Histone fold</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+							<clade>
+								<name>A0A2E5JDT9</name>
+								<branch_length>0.4370315635</branch_length>
+								<taxonomy>
+									<code>Bacteroidota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MSTQVNQQKRKRKASTNAIREIKREQKRTETIIPVAPFSRLTQEISQGFRTDIRFKSDAHKALHVGAEAFLVELFQNANTVAIHSGRETVQSKDLSLAYKLSK</mol_seq>
+									<uri>/entry/A0A2E5JDT9</uri>
+									<domain_architecture length="103">
+										<domain from="14" to="25" confidence="0.000000001">Other</domain>
+										<domain from="35" to="49" confidence="0.000000001">Histone fold</domain>
+										<domain from="57" to="84" confidence="0.000000001">Histone fold</domain>
+										<domain from="92" to="101" confidence="0.000000001">Histone fold</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+					</clade>
+					<clade>
+						<name>A0A2E6W151</name>
+						<branch_length>1.129395785</branch_length>
+						<taxonomy>
+							<code>Pseudomonadota</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MHRHVRPCAPPTSLPTMTKAASKSTQKKKEQKRRARTKKVERAIAKAQASTKWNIPTTVFKRLVQNLAPTHRVSKKATEMLHEEAEQYLTFRFTEAGLVAANANRETVSVNDMRTAERVRTLYPRAPPPPKLRGD</mol_seq>
+							<uri>/entry/A0A2E6W151</uri>
+							<domain_architecture length="135">
+								<domain from="19" to="48" confidence="0.000000001">Other</domain>
+								<domain from="57" to="67" confidence="0.000000001">Histone fold</domain>
+								<domain from="75" to="102" confidence="0.000000001">Histone fold</domain>
+								<domain from="110" to="122" confidence="0.000000001">Histone fold</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+				</clade>
+				<clade>
+					<branch_length>0.0960460018</branch_length>
+					<confidence type="unknown">76.0</confidence>
+					<clade>
+						<branch_length>0.2752330577</branch_length>
+						<confidence type="unknown">78.0</confidence>
+						<clade>
+							<branch_length>1.233970239</branch_length>
+							<confidence type="unknown">100.0</confidence>
+							<clade>
+								<name>A0A2E8KP66</name>
+								<branch_length>0.4793596886</branch_length>
+								<taxonomy>
+									<code>Bacteroidota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MIANNQVHPIQGNPMSAKPYSPGHIGAVAGNYTQMRISGAVKQQLVDLLCEELDRLVPQMESETLAQDPERKTLDDPNRTRLNYNRTRELMIARISNIESVGSAAVQAGIEHIEQHLAKILKHAEAAADKDRVGTIKPRHLEIAISGMGLDNDGELPEQQLEEETETLVVGQGGGVLTRSSLLSLARTHAKMPVTDDAVEELMDTYYMVVEKLEGDIRAHAQLGGNPVQFIESIGRMQTLMSLGWMRSMLTRAASNARERGYKRIDIEQIVHLDPY</mol_seq>
+									<uri>/entry/A0A2E8KP66</uri>
+									<domain_architecture length="276">
+										<domain from="22" to="29" confidence="0.000000001">Other</domain>
+										<domain from="39" to="67" confidence="0.000000001">Other</domain>
+										<domain from="84" to="92" confidence="0.000000001">Other</domain>
+										<domain from="103" to="130" confidence="0.000000001">Histone fold</domain>
+										<domain from="138" to="147" confidence="0.000000001">Histone fold</domain>
+										<domain from="179" to="188" confidence="0.000000001">Other</domain>
+										<domain from="193" to="194" confidence="0.000000001">Other</domain>
+										<domain from="196" to="220" confidence="0.000000001">Other</domain>
+										<domain from="227" to="241" confidence="0.000000001">Other</domain>
+										<domain from="244" to="259" confidence="0.000000001">Other</domain>
+										<domain from="264" to="265" confidence="0.000000001">Other</domain>
+										<domain from="267" to="269" confidence="0.000000001">Other</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+							<clade>
+								<name>A0A2E8RB69</name>
+								<branch_length>0.3082615078</branch_length>
+								<taxonomy>
+									<code>Chloroflexota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MAKPYSTSHIGFVCSGFTDMRLSGAVKEQLVEMLVAEIDKMVPAMESATLAATPDKKTLDDTKRTHLNYNRTRELMIERLGELESVGSQAVQAGIEHLEGYLKKILHAAESAAAKDKVNTIKPRHLSAVTTTTTEHTDTTESVAVEVEEDILEGQVSGSALTPSVVRKMARSFAGMPITDAAIEELLLWYYEVVDETGQNIREHAQLGGNPATFIDALDKMKDLMMLGWIRRMLVKASSDAEERGYKRIDVEQLINLDPFE</mol_seq>
+									<uri>/entry/A0A2E8RB69</uri>
+									<domain_architecture length="261">
+										<domain from="7" to="14" confidence="0.000000001">Other</domain>
+										<domain from="24" to="52" confidence="0.000000001">Other</domain>
+										<domain from="69" to="79" confidence="0.000000001">Histone fold</domain>
+										<domain from="88" to="115" confidence="0.000000001">Histone fold</domain>
+										<domain from="123" to="127" confidence="0.000000001">Histone fold</domain>
+										<domain from="163" to="174" confidence="0.000000001">Other</domain>
+										<domain from="177" to="178" confidence="0.000000001">Other</domain>
+										<domain from="180" to="207" confidence="0.000000001">Other</domain>
+										<domain from="211" to="225" confidence="0.000000001">Other</domain>
+										<domain from="228" to="243" confidence="0.000000001">Other</domain>
+										<domain from="248" to="249" confidence="0.000000001">Other</domain>
+										<domain from="251" to="253" confidence="0.000000001">Other</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+						<clade>
+							<name>A0A0Q1A6C2</name>
+							<branch_length>0.202745776</branch_length>
+							<taxonomy>
+								<code>Ca. Cloacimonadota</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MAELPIAAVVRIAKKSGAERVGSDAASALVVRTEDYIANLVKEANRLAMHAGRKTLKEEDIELAVKAL</mol_seq>
+								<uri>/entry/A0A0Q1A6C2</uri>
+								<domain_architecture length="68">
+									<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+									<domain from="23" to="50" confidence="0.000000001">Histone fold</domain>
+									<domain from="58" to="67" confidence="0.000000001">Histone fold</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+					<clade>
+						<branch_length>0.1543387234</branch_length>
+						<confidence type="unknown">76.0</confidence>
+						<clade>
+							<branch_length>0.0709297999</branch_length>
+							<confidence type="unknown">64.0</confidence>
+							<clade>
+								<branch_length>0.0475405158</branch_length>
+								<confidence type="unknown">61.0</confidence>
+								<clade>
+									<branch_length>0.4106689145</branch_length>
+									<confidence type="unknown">97.0</confidence>
+									<clade>
+										<branch_length>0.9312972206</branch_length>
+										<confidence type="unknown">100.0</confidence>
+										<clade>
+											<branch_length>0.0803916023</branch_length>
+											<confidence type="unknown">91.0</confidence>
+											<clade>
+												<name>A0AA41XDG8</name>
+												<branch_length>0.1676096963</branch_length>
+												<taxonomy>
+													<code>Bacillota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">QHISTHRSKAKPTDPLPLPEKKRAASMAPKAEKKPAAKKPAEEEPAAEKAEKAPAGKKPKAEKRLPAGKGEKGSGEGKKAGRKKAKKSVETYKIYIFKVLKQVHPDIGISSKAMSIMNSFINDIFEKLAEEAAKLARYNKKPTITSREIQTSVRLVLPGELAKHAVSEGTKAVTKFTSN</mol_seq>
+													<uri>/entry/A0AA41XDG8</uri>
+													<domain_architecture length="179">
+														<domain from="93" to="103" confidence="0.000000001">Histone fold</domain>
+														<domain from="111" to="138" confidence="0.000000001">Histone fold</domain>
+														<domain from="146" to="156" confidence="0.000000001">Histone fold</domain>
+														<domain from="159" to="177" confidence="0.000000001">Other</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<branch_length>0.1231919554</branch_length>
+												<confidence type="unknown">87.0</confidence>
+												<clade>
+													<branch_length>0.0975180443</branch_length>
+													<confidence type="unknown">100.0</confidence>
+													<clade>
+														<branch_length>0.0384863026</branch_length>
+														<confidence type="unknown">99.0</confidence>
+														<clade>
+															<name>A0A9E4NQR4</name>
+															<branch_length>0.1781630894</branch_length>
+															<taxonomy>
+																<code>Pseudomonadota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MPPKSGLASKGSKKAATKAKAARSGDKKKRRRRRESYSIYIYKVLKQVHPDTGVSSKAMSIMNSFVNDIFERIAAEASRLAHYNKRSTITSREIQTAVRLLLPGELAKHAVSEGTKAVTKYTSSK</mol_seq>
+																<uri>/entry/A0A9E4NQR4</uri>
+																<domain_architecture length="125">
+																	<domain from="38" to="48" confidence="0.000000001">Histone fold</domain>
+																	<domain from="56" to="83" confidence="0.000000001">Histone fold</domain>
+																	<domain from="91" to="101" confidence="0.000000001">Histone fold</domain>
+																	<domain from="104" to="124" confidence="0.000000001">Other</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+														<clade>
+															<name>A0A5Y2AAH6</name>
+															<branch_length>0.2151537556</branch_length>
+															<taxonomy>
+																<code>Pseudomonadota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MLKLGPPKNFAQTDSSSSSSHIAVMPPKTSGKAAKKAGKAQKNISKGDKKKKRRRKESYAIYIYKVLKQVHPDTGISSKAMSIMNSFVNDIFERIAAEASRLAHYNKRSTITSREIQTAVRLLLPGELAKHAVSEGTKAVTKYTSSKP</mol_seq>
+																<uri>/entry/A0A5Y2AAH6</uri>
+																<domain_architecture length="148">
+																	<domain from="60" to="70" confidence="0.000000001">Histone fold</domain>
+																	<domain from="78" to="105" confidence="0.000000001">Histone fold</domain>
+																	<domain from="113" to="123" confidence="0.000000001">Histone fold</domain>
+																	<domain from="126" to="146" confidence="0.000000001">Other</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+													<clade>
+														<name>A0A2B7ZVY0</name>
+														<branch_length>0.2343687139</branch_length>
+														<taxonomy>
+															<code>Bacteroidota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MPPKPASKGAKKAASKAKAARAGEKKRKRRRRESYAIYIYKVLKQVHPDTGISSKAMSIMNSFVNDIFERIAAESSRLAHYNRRSTITSREIQTAVRLLLPGELAKHAVSEGTKAVTKYTSSK</mol_seq>
+															<uri>/entry/A0A2B7ZVY0</uri>
+															<domain_architecture length="123">
+																<domain from="36" to="46" confidence="0.000000001">Histone fold</domain>
+																<domain from="54" to="81" confidence="0.000000001">Histone fold</domain>
+																<domain from="89" to="99" confidence="0.000000001">Histone fold</domain>
+																<domain from="102" to="122" confidence="0.000000001">Other</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+												<clade>
+													<branch_length>0.18063736</branch_length>
+													<confidence type="unknown">94.0</confidence>
+													<clade>
+														<name>A0A2D9B6R8</name>
+														<branch_length>0.2464066152</branch_length>
+														<taxonomy>
+															<code>Pseudomonadota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MYYTISYLVIERKMSDAAPAAPKGGKQAPKVAKKGEKRAGKKGGKIGGTGDKKRKRKRKETYGIYIYNVLKQVHPDVGVSSKAMSIMNSFVNDIFERIASEASRLALQNKKKTISSREIQTAVRLLLPGELAKHAVSEGTKAVTKYTSSK</mol_seq>
+															<uri>/entry/A0A2D9B6R8</uri>
+															<domain_architecture length="150">
+																<domain from="63" to="73" confidence="0.000000001">Histone fold</domain>
+																<domain from="81" to="108" confidence="0.000000001">Histone fold</domain>
+																<domain from="116" to="126" confidence="0.000000001">Histone fold</domain>
+																<domain from="129" to="148" confidence="0.000000001">Other</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+													<clade>
+														<name>A0A2D7GQ56</name>
+														<branch_length>0.2206017959</branch_length>
+														<taxonomy>
+															<code>Pseudomonadota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MNARQLHFKLFIMSDAVAGKSMPKVAKKGEKRAGKKGGKIGASGDKKRKKKRKESFAIYVYNVLKQVHPDVGISSKAMSIMNSFVNDVFERIANEASRLCKQNNKHTVSSREIQTAVRLLLPGELAKHAVSEGTKAVTKYTSSK</mol_seq>
+															<uri>/entry/A0A2D7GQ56</uri>
+															<domain_architecture length="144">
+																<domain from="57" to="67" confidence="0.000000001">Histone fold</domain>
+																<domain from="75" to="102" confidence="0.000000001">Histone fold</domain>
+																<domain from="110" to="120" confidence="0.000000001">Histone fold</domain>
+																<domain from="123" to="142" confidence="0.000000001">Other</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+											</clade>
+										</clade>
+										<clade>
+											<name>A0A2D5QPF2</name>
+											<branch_length>0.4384844888</branch_length>
+											<taxonomy>
+												<code>Myxococcota</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MEAISISCAMTQKAKAPAAKLRAKKRQTKSFRTYISRVLKQVHPKIGLSKTSMSIMNSFVLDSFDKIAQESAKLAKTNKKATLSAREVQSAVRLVLPNELAKHAITEGTKAIQKFNA</mol_seq>
+												<uri>/entry/A0A2D5QPF2</uri>
+												<domain_architecture length="117">
+													<domain from="32" to="42" confidence="0.000000001">Histone fold</domain>
+													<domain from="50" to="77" confidence="0.000000001">Histone fold</domain>
+													<domain from="85" to="95" confidence="0.000000001">Histone fold</domain>
+													<domain from="98" to="116" confidence="0.000000001">Other</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+									</clade>
+									<clade>
+										<branch_length>0.2795809919</branch_length>
+										<confidence type="unknown">96.0</confidence>
+										<clade>
+											<branch_length>0.1397809141</branch_length>
+											<confidence type="unknown">77.0</confidence>
+											<clade>
+												<branch_length>0.0577531711</branch_length>
+												<confidence type="unknown">54.0</confidence>
+												<clade>
+													<branch_length>0.1665328834</branch_length>
+													<confidence type="unknown">82.0</confidence>
+													<clade>
+														<branch_length>0.1346825196</branch_length>
+														<confidence type="unknown">84.0</confidence>
+														<clade>
+															<branch_length>0.1059480628</branch_length>
+															<confidence type="unknown">90.0</confidence>
+															<clade>
+																<branch_length>0.1327635627</branch_length>
+																<confidence type="unknown">97.0</confidence>
+																<clade>
+																	<branch_length>0.5817875921</branch_length>
+																	<confidence type="unknown">100.0</confidence>
+																	<clade>
+																		<name>A0A2E4YCG7</name>
+																		<branch_length>0.3989961335</branch_length>
+																		<taxonomy>
+																			<code>Pseudomonadota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MGKVVSKATGNCTMSGRGKTISRQAKAGVTLSVARIAKLLRKSRAAYVSSRAPLYVAGVAETIVDSVVKQAAENVRNGQRNGKGGLVFNRINSIDVINVVRSDPDLARLCAGFAFASNRRPTKPMVHITSAQDMVARRKKRSEDKDANDKSSINTGLD</mol_seq>
+																			<uri>/entry/A0A2E4YCG7</uri>
+																			<domain_architecture length="158">
+																				<domain from="23" to="27" confidence="0.000000001">Other</domain>
+																				<domain from="33" to="42" confidence="0.000000001">Histone fold</domain>
+																				<domain from="52" to="76" confidence="0.000000001">Histone fold</domain>
+																				<domain from="80" to="80" confidence="0.000000001">Histone fold</domain>
+																				<domain from="86" to="86" confidence="0.000000001">Histone fold</domain>
+																				<domain from="93" to="102" confidence="0.000000001">Histone fold</domain>
+																				<domain from="104" to="109" confidence="0.000000001">Other</domain>
+																				<domain from="125" to="128" confidence="0.000000001">Other</domain>
+																				<domain from="131" to="151" confidence="0.000000001">Other</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A2E4BA34</name>
+																		<branch_length>0.5151148708</branch_length>
+																		<taxonomy>
+																			<code>Euryarchaeota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MGKSANQEKAGVTLSVSRCGKLLRKGLPEKHVSSTVKYYLAGTMEELIQQLLTRAADNAQDTKTPGHTPTKRVYATDLIKAVRHDPDLSRAFAGFAFGSLERANKPIDHILPADEAKKRADDIRQKKAEKKAERKKNGQPSKEKARK</mol_seq>
+																			<uri>/entry/A0A2E4BA34</uri>
+																			<domain_architecture length="147">
+																				<domain from="6" to="10" confidence="0.000000001">Other</domain>
+																				<domain from="16" to="26" confidence="0.000000001">Histone fold</domain>
+																				<domain from="36" to="59" confidence="0.000000001">Histone fold</domain>
+																				<domain from="75" to="84" confidence="0.000000001">Histone fold</domain>
+																				<domain from="86" to="91" confidence="0.000000001">Other</domain>
+																				<domain from="107" to="110" confidence="0.000000001">Other</domain>
+																				<domain from="113" to="136" confidence="0.000000001">Other</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<branch_length>0.2730252519</branch_length>
+																	<confidence type="unknown">100.0</confidence>
+																	<clade>
+																		<name>A0A3M1JZE2</name>
+																		<branch_length>0.2206839448</branch_length>
+																		<taxonomy>
+																			<code>Pseudomonadota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MATPSKKSGKRSAKKSAGSKGKKAGLIFPVGRISSMLRKGRYARRVSASSGVYLAAVLEYLTAELLELSAKAVAQSKKKSKRITPRAVCLAVRHDADLGSLLKDVTLSRGGVVPNLHKSLEKKKRGKKSSATPRV</mol_seq>
+																			<uri>/entry/A0A3M1JZE2</uri>
+																			<domain_architecture length="135">
+																				<domain from="20" to="24" confidence="0.000000001">Other</domain>
+																				<domain from="30" to="39" confidence="0.000000001">Histone fold</domain>
+																				<domain from="50" to="74" confidence="0.000000001">Histone fold</domain>
+																				<domain from="85" to="94" confidence="0.000000001">Histone fold</domain>
+																				<domain from="96" to="101" confidence="0.000000001">Other</domain>
+																				<domain from="118" to="120" confidence="0.000000001">Other</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A956ESC2</name>
+																		<branch_length>0.4152586718</branch_length>
+																		<taxonomy>
+																			<code>Myxococcota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MATPKKSSQKKRAPAVKKAAKPGLAIPSGRIGSLLRRGRYARRVSKTAGVFAAAVLSYLTAELLELSSKSMKKGATRLTPRAVNLAVRADDELSALLGNVTLSRGGVVGKVHESLQKKKKGSKKSGKKTSKK</mol_seq>
+																			<uri>/entry/A0A956ESC2</uri>
+																			<domain_architecture length="132">
+																				<domain from="28" to="37" confidence="0.000000001">Histone fold</domain>
+																				<domain from="48" to="69" confidence="0.000000001">Histone fold</domain>
+																				<domain from="80" to="89" confidence="0.000000001">Histone fold</domain>
+																				<domain from="91" to="96" confidence="0.000000001">Other</domain>
+																				<domain from="113" to="115" confidence="0.000000001">Other</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+															</clade>
+															<clade>
+																<branch_length>0.3050271259</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<name>A0A2E4J3I1</name>
+																	<branch_length>0.6263665857</branch_length>
+																	<taxonomy>
+																		<code>Verrucomicrobiota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MRFVPRLAASLSAKTAAATGGYLFGPTGPAISLAIGKAMGSTTSRSMPKSDKKSVSKSLKAGLTFPVSRVGRHIKESHCTKKVKRVGQLAPVFATAVIEYLAAELLECGGKVTMDGKRKRITISDISTAVRSDPELCKLLRGSILFTGERLTGISAAVAVAPKAAKDAAPEKAPPAQEIPPSRFEKKRPAAKCV</mol_seq>
+																		<uri>/entry/A0A2E4J3I1</uri>
+																		<domain_architecture length="194">
+																			<domain from="57" to="61" confidence="0.000000001">Other</domain>
+																			<domain from="67" to="76" confidence="0.000000001">Histone fold</domain>
+																			<domain from="78" to="81" confidence="0.000000001">Histone fold</domain>
+																			<domain from="90" to="115" confidence="0.000000001">Histone fold</domain>
+																			<domain from="123" to="132" confidence="0.000000001">Histone fold</domain>
+																			<domain from="134" to="139" confidence="0.000000001">Other</domain>
+																			<domain from="155" to="155" confidence="0.000000001">Other</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+																<clade>
+																	<name>A0A2E4J3I2</name>
+																	<branch_length>0.4901269967</branch_length>
+																	<taxonomy>
+																		<code>Verrucomicrobiota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MGGETPKKKSVSRAQKAGLVFPVSRIGKSLKKDGRTKRVAAGASVCLGATLEYLCAEMVEIAAQRCQKDKRKRITPADIVATLRADSELHKLTGGLTLSAGETMRKISQQLKPAATAAAAAAGQTEEE</mol_seq>
+																		<uri>/entry/A0A2E4J3I2</uri>
+																		<domain_architecture length="128">
+																			<domain from="13" to="17" confidence="0.000000001">Other</domain>
+																			<domain from="23" to="33" confidence="0.000000001">Histone fold</domain>
+																			<domain from="41" to="68" confidence="0.000000001">Histone fold</domain>
+																			<domain from="76" to="85" confidence="0.000000001">Histone fold</domain>
+																			<domain from="87" to="92" confidence="0.000000001">Other</domain>
+																			<domain from="109" to="111" confidence="0.000000001">Other</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+														</clade>
+														<clade>
+															<name>A0A2M8ISZ5</name>
+															<branch_length>0.117698841</branch_length>
+															<taxonomy>
+																<code>Pseudomonadota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MDATGTGAGGKAKKGAAGRKAGGPRKKSVTRSVKAGLQFPVGRIGRYLKKGRYAQRVGTGAPVYLAAVLEYLAAEVLELAGNAARDNKKTRIIPRHVLLAIRNDEELGKLLGGVTIAHGGVLPNINPVLLPKKTAEKASSGGSKEAKSPKKAAKSPKKA</mol_seq>
+																<uri>/entry/A0A2M8ISZ5</uri>
+																<domain_architecture length="159">
+																	<domain from="31" to="35" confidence="0.000000001">Other</domain>
+																	<domain from="41" to="51" confidence="0.000000001">Histone fold</domain>
+																	<domain from="61" to="86" confidence="0.000000001">Histone fold</domain>
+																	<domain from="94" to="103" confidence="0.000000001">Histone fold</domain>
+																	<domain from="105" to="110" confidence="0.000000001">Other</domain>
+																	<domain from="127" to="129" confidence="0.000000001">Other</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+													<clade>
+														<name>A0A2D5QPF3</name>
+														<branch_length>0.4867051475</branch_length>
+														<taxonomy>
+															<code>Myxococcota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MFLQKQHVYVVLFEYSISISIVHGRLVFLMRKQILHFTMSGKGKGGAAKAKGKKAAGGKTKSAKAGLIFPVSRVGRMLKSGNYAKRVGGAAPVYLAAVLEYLVAESVELAGNAARDNKRSRIIPRHIQLAVRRDEEFSKYLGDVTIAQGGVLPNIQNALLPKKSAAKKASASQEF</mol_seq>
+															<uri>/entry/A0A2D5QPF3</uri>
+															<domain_architecture length="175">
+																<domain from="61" to="65" confidence="0.000000001">Other</domain>
+																<domain from="71" to="80" confidence="0.000000001">Histone fold</domain>
+																<domain from="91" to="116" confidence="0.000000001">Histone fold</domain>
+																<domain from="124" to="133" confidence="0.000000001">Histone fold</domain>
+																<domain from="135" to="140" confidence="0.000000001">Other</domain>
+																<domain from="157" to="159" confidence="0.000000001">Other</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+												<clade>
+													<branch_length>0.0472088761</branch_length>
+													<confidence type="unknown">60.0</confidence>
+													<clade>
+														<name>A0A9E4NLL4</name>
+														<branch_length>0.0985247231</branch_length>
+														<taxonomy>
+															<code>Pseudomonadota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MSGRGKGGKAKGKAKSRSSRAGLQFPVGRIHRLLRKGNYAERVGAGAPVYLAAVLEYLAAEVLELAGNAARDNKKSRIIPRHLQLAIRNDEELNKLLSGVTIAQGGVLPNIQAVLLPKKTSKAAK</mol_seq>
+															<uri>/entry/A0A9E4NLL4</uri>
+															<domain_architecture length="125">
+																<domain from="17" to="21" confidence="0.000000001">Other</domain>
+																<domain from="27" to="36" confidence="0.000000001">Histone fold</domain>
+																<domain from="47" to="72" confidence="0.000000001">Histone fold</domain>
+																<domain from="80" to="89" confidence="0.000000001">Histone fold</domain>
+																<domain from="91" to="96" confidence="0.000000001">Other</domain>
+																<domain from="113" to="115" confidence="0.000000001">Other</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+													<clade>
+														<branch_length>0.1221027062</branch_length>
+														<confidence type="unknown">99.0</confidence>
+														<clade>
+															<name>A0A2D9B6R9</name>
+															<branch_length>0.1933073537</branch_length>
+															<taxonomy>
+																<code>Pseudomonadota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MKEIIMSGRGKGGKAKAKSKTRSFRAGLQFPVGRVHRFLRKGHYADRIGSGAPVYLAAVLEYLSAEILELAGNAARDNKKARIVPRHLQLAVRNDEELNKLLSGVTIAAGGVLPNIQAVLLPKKNEKGQKK</mol_seq>
+																<uri>/entry/A0A2D9B6R9</uri>
+																<domain_architecture length="131">
+																	<domain from="22" to="26" confidence="0.000000001">Other</domain>
+																	<domain from="32" to="41" confidence="0.000000001">Histone fold</domain>
+																	<domain from="52" to="77" confidence="0.000000001">Histone fold</domain>
+																	<domain from="85" to="94" confidence="0.000000001">Histone fold</domain>
+																	<domain from="96" to="101" confidence="0.000000001">Other</domain>
+																	<domain from="118" to="120" confidence="0.000000001">Other</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+														<clade>
+															<name>A0A2D7GQ60</name>
+															<branch_length>0.1567789505</branch_length>
+															<taxonomy>
+																<code>Pseudomonadota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MTGRGKGGKAKAKAKTRSFRAGLQFPVGRVHRFLRKGRYAPRVGSGAPVYLAAVLEYLSAEILELAGNAARDNKKSRIVPRHLQLAVRNDEELNKLLAGVTIAQGGVLPNIQAVLLPKKTKTAEKKK</mol_seq>
+																<uri>/entry/A0A2D7GQ60</uri>
+																<domain_architecture length="127">
+																	<domain from="17" to="21" confidence="0.000000001">Other</domain>
+																	<domain from="27" to="36" confidence="0.000000001">Histone fold</domain>
+																	<domain from="47" to="72" confidence="0.000000001">Histone fold</domain>
+																	<domain from="80" to="89" confidence="0.000000001">Histone fold</domain>
+																	<domain from="91" to="96" confidence="0.000000001">Other</domain>
+																	<domain from="113" to="115" confidence="0.000000001">Other</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+												</clade>
+											</clade>
+											<clade>
+												<branch_length>0.3792025472</branch_length>
+												<confidence type="unknown">99.0</confidence>
+												<clade>
+													<name>A0A958M019</name>
+													<branch_length>0.1442838349</branch_length>
+													<taxonomy>
+														<code>Bdellovibrionota</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MKHLNRFSKASVIIILKMAGKGGKGGKGGKGGKVGKSKRPAQSKSTRAGLQFPVGRIHRFLKSRVSARNRVGSTAAVYTAAILEYLTAEVLELAGNASKDFKVRRITPRHLQLAIRGDEELDLLIKATIAGGGVIPHIHKNLLIGQTGESKTE</mol_seq>
+														<uri>/entry/A0A958M019</uri>
+														<domain_architecture length="153">
+															<domain from="44" to="48" confidence="0.000000001">Other</domain>
+															<domain from="54" to="64" confidence="0.000000001">Histone fold</domain>
+															<domain from="73" to="100" confidence="0.000000001">Histone fold</domain>
+															<domain from="108" to="117" confidence="0.000000001">Histone fold</domain>
+															<domain from="119" to="124" confidence="0.000000001">Other</domain>
+															<domain from="140" to="142" confidence="0.000000001">Other</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+												<clade>
+													<name>A0A2E5QF06</name>
+													<branch_length>0.4090331286</branch_length>
+													<taxonomy>
+														<code>Euryarchaeota</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MKRITPRHLQLAIRGDEELDTLIKATIAGGGVIPHIHKSLMNKSSKKGE</mol_seq>
+														<uri>/entry/A0A2E5QF06</uri>
+														<domain_architecture length="49">
+															<domain from="6" to="14" confidence="0.000000001">Histone fold</domain>
+															<domain from="17" to="22" confidence="0.000000001">Other</domain>
+															<domain from="38" to="40" confidence="0.000000001">Other</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+										</clade>
+										<clade>
+											<name>A0A4Q5NHV2</name>
+											<branch_length>0.8890217037</branch_length>
+											<taxonomy>
+												<code>Undefined</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MENETISNTEKNVENSSNNMQHVAEMNKLKHRSSDDFKNKTIKPVENVENDTPNTTNQNQKILVSNQKKQSINERSNNNSTDNNKKKKPINPQHSNNLIKLNLQQRRPSDKIVTDNIQGSEETDAPEKIIEKRNNKDNVKTVTTPALVSKDISNINDKQTDKPHVDSVTNNDQTKPQLNMKDLEKHTNIKPKNYSTSKQQNSNQSTNHDNTVHANTTKIVDSSIQKNHKSKHPSPQEQANTQTNKPTLNVSRHTNGEKPINQSELNKTSKRDEYEKKGDTEEEDESDDDQEEDSEKEKEKEGEEKEEKETGEKENEDKKDKREEEKEEEEAEEENEENEEDEDEDEEELHFDYVDGKRIVISERYKNQHFPKKFTKSKKAGLEFPVGRFLKNMKNGNYSKRVAVKSAVYLSAVVQYLVNDIYNNAASETSKRGKKCVTPKHLMDSMENDKELKKLFNYVYLPQSGTLPTAIDPTEIRKPPHKKKNTQKTAKKNQKDKSIPILEQQQKGSKKRKGDEIEMELPAPVKKTKSGYRFDNNLNKKH</mol_seq>
+												<uri>/entry/A0A4Q5NHV2</uri>
+												<domain_architecture length="542">
+													<domain from="353" to="353" confidence="0.000000001">Other</domain>
+													<domain from="357" to="357" confidence="0.000000001">Other</domain>
+													<domain from="376" to="379" confidence="0.000000001">Other</domain>
+													<domain from="386" to="395" confidence="0.000000001">Histone fold</domain>
+													<domain from="404" to="431" confidence="0.000000001">Histone fold</domain>
+													<domain from="439" to="448" confidence="0.000000001">Histone fold</domain>
+													<domain from="450" to="455" confidence="0.000000001">Other</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+									</clade>
+								</clade>
+								<clade>
+									<branch_length>0.6525825296</branch_length>
+									<confidence type="unknown">99.0</confidence>
+									<clade>
+										<branch_length>0.0397388441</branch_length>
+										<confidence type="unknown">76.0</confidence>
+										<clade>
+											<branch_length>0.1266347161</branch_length>
+											<confidence type="unknown">78.0</confidence>
+											<clade>
+												<branch_length>0.0488909032</branch_length>
+												<confidence type="unknown">74.0</confidence>
+												<clade>
+													<branch_length>0.202079374</branch_length>
+													<confidence type="unknown">75.0</confidence>
+													<clade>
+														<branch_length>0.2080986062</branch_length>
+														<confidence type="unknown">76.0</confidence>
+														<clade>
+															<branch_length>0.0543437848</branch_length>
+															<confidence type="unknown">73.0</confidence>
+															<clade>
+																<name>A0A2D7UYD2</name>
+																<branch_length>1.3880490821</branch_length>
+																<taxonomy>
+																	<code>Actinomycetota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MGFLFARLAMSMIYNSKMKEAIKAGGCNTAGDAGEALNAAVASAVAAAVARCGSNGRKTIRAHDIGGGSSSSGMVVASRVKEAFKAAGCNTGGDAMGAMNAVADSAVSGAVARAQANGRKTVRANDF</mol_seq>
+																	<uri>/entry/A0A2D7UYD2</uri>
+																	<domain_architecture length="127">
+																		<domain from="13" to="13" confidence="0.000000001">Other</domain>
+																		<domain from="15" to="24" confidence="0.000000001">Histone fold</domain>
+																		<domain from="28" to="29" confidence="0.000000001">Histone fold</domain>
+																		<domain from="33" to="54" confidence="0.000000001">Histone fold</domain>
+																		<domain from="59" to="60" confidence="0.000000001">Histone fold</domain>
+																		<domain from="62" to="65" confidence="0.000000001">Histone fold</domain>
+																		<domain from="75" to="75" confidence="0.000000001">Other</domain>
+																		<domain from="77" to="86" confidence="0.000000001">Histone fold</domain>
+																		<domain from="90" to="91" confidence="0.000000001">Histone fold</domain>
+																		<domain from="95" to="116" confidence="0.000000001">Histone fold</domain>
+																		<domain from="121" to="122" confidence="0.000000001">Histone fold</domain>
+																		<domain from="124" to="126" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>A0A7C1UYJ2</name>
+																<branch_length>0.281798055</branch_length>
+																<taxonomy>
+																	<code>Undefined</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MAKKNAVETLFVKSKVREYIKGKECNTSGAVLDGPALNNAIIDILDKAIARAKANNRKTVQEKDL</mol_seq>
+																	<uri>/entry/A0A7C1UYJ2</uri>
+																	<domain_architecture length="65">
+																		<domain from="13" to="22" confidence="0.000000001">Histone fold</domain>
+																		<domain from="29" to="33" confidence="0.000000001">Histone fold</domain>
+																		<domain from="35" to="54" confidence="0.000000001">Histone fold</domain>
+																		<domain from="62" to="64" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<branch_length>0.6397471975</branch_length>
+															<confidence type="unknown">100.0</confidence>
+															<clade>
+																<name>A0A6A8ATV4</name>
+																<branch_length>0.0913922856</branch_length>
+																<taxonomy>
+																	<code>Undefined</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MANKKESLIVASKIKAYIKSKKMMTSSDALKAISDKVYCILDDAIVRTKANRRSTVKPQDL</mol_seq>
+																	<uri>/entry/A0A6A8ATV4</uri>
+																	<domain_architecture length="61">
+																		<domain from="11" to="20" confidence="0.000000001">Histone fold</domain>
+																		<domain from="27" to="50" confidence="0.000000001">Histone fold</domain>
+																		<domain from="58" to="60" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>A0A6A8AM72</name>
+																<branch_length>0.0674080904</branch_length>
+																<taxonomy>
+																	<code>Undefined</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MAKKDSLIVASKVKAYIKSKKMMTSSDALEAISDKVYCILDAAMARTKANRRTTVKAQDL</mol_seq>
+																	<uri>/entry/A0A6A8AM72</uri>
+																	<domain_architecture length="60">
+																		<domain from="10" to="19" confidence="0.000000001">Histone fold</domain>
+																		<domain from="28" to="49" confidence="0.000000001">Histone fold</domain>
+																		<domain from="57" to="59" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+													</clade>
+													<clade>
+														<branch_length>0.104679624</branch_length>
+														<confidence type="unknown">94.0</confidence>
+														<clade>
+															<branch_length>0.3098860389</branch_length>
+															<confidence type="unknown">100.0</confidence>
+															<clade>
+																<name>A0A947SNZ7</name>
+																<branch_length>0.2346385538</branch_length>
+																<taxonomy>
+																	<code>Patescibacteria group</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MGLIIKSNIRKVVKDLDKENSISSVAEEVETALERKVEDILFEGIKRAKANGRRTLQARDL</mol_seq>
+																	<uri>/entry/A0A947SNZ7</uri>
+																	<domain_architecture length="61">
+																		<domain from="6" to="16" confidence="0.000000001">Histone fold</domain>
+																		<domain from="27" to="50" confidence="0.000000001">Histone fold</domain>
+																		<domain from="58" to="60" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>A0A951R678</name>
+																<branch_length>0.1755890181</branch_length>
+																<taxonomy>
+																	<code>Patescibacteria group</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MGLIVKNNIRKVVKELDKGESISSVADEVGLALERKVEGILVEAIRRARANGRRTLQARDL</mol_seq>
+																	<uri>/entry/A0A951R678</uri>
+																	<domain_architecture length="61">
+																		<domain from="6" to="16" confidence="0.000000001">Histone fold</domain>
+																		<domain from="27" to="50" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<name>A0A3M1S117</name>
+															<branch_length>0.3107505773</branch_length>
+															<taxonomy>
+																<code>Ca. Schekmanbacteria</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MALIVRSKVKEFLELNISEEFYAELEKKVEEILKKAEERAKANMRRTVFARDI</mol_seq>
+																<uri>/entry/A0A3M1S117</uri>
+																<domain_architecture length="53">
+																	<domain from="6" to="12" confidence="0.000000001">Histone fold</domain>
+																	<domain from="19" to="42" confidence="0.000000001">Histone fold</domain>
+																	<domain from="50" to="52" confidence="0.000000001">Histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+												</clade>
+												<clade>
+													<name>A0A256YVI3</name>
+													<branch_length>0.3231953784</branch_length>
+													<taxonomy>
+														<code>Ca. Aenigmatarchaeota</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MAEMLVVQSKVKDVVKEEDMNMSGDFAEALSTKVEKLIKDAIERAKANGRKTLRGYDL</mol_seq>
+														<uri>/entry/A0A256YVI3</uri>
+														<domain_architecture length="58">
+															<domain from="8" to="17" confidence="0.000000001">Histone fold</domain>
+															<domain from="26" to="47" confidence="0.000000001">Histone fold</domain>
+															<domain from="55" to="57" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+											<clade>
+												<name>A0A2D6NWY2</name>
+												<branch_length>0.537952825</branch_length>
+												<taxonomy>
+													<code>Nanoarchaeota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MGDMVVVRSKIKTHANGCNVSGDFANALNDAVVELIGKAATRAKGNNRKTVASKDL</mol_seq>
+													<uri>/entry/A0A2D6NWY2</uri>
+													<domain_architecture length="56">
+														<domain from="8" to="14" confidence="0.000000001">Other</domain>
+														<domain from="24" to="45" confidence="0.000000001">Histone fold</domain>
+														<domain from="53" to="55" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+										<clade>
+											<name>A0A0G0ZRF0</name>
+											<branch_length>0.5592510767</branch_length>
+											<taxonomy>
+												<code>Ca. Nomurabacteria</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MGASLIVRSQIKNYAKVDGKSLCIAEDFYEALNKKAEKLIEEACRRAKANNRNTLMARDV</mol_seq>
+												<uri>/entry/A0A0G0ZRF0</uri>
+												<domain_architecture length="60">
+													<domain from="8" to="14" confidence="0.000000001">Histone fold</domain>
+													<domain from="16" to="17" confidence="0.000000001">Histone fold</domain>
+													<domain from="20" to="21" confidence="0.000000001">Histone fold</domain>
+													<domain from="26" to="49" confidence="0.000000001">Histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+									</clade>
+									<clade>
+										<name>A0A7C3TW14</name>
+										<branch_length>0.1386518507</branch_length>
+										<taxonomy>
+											<code>Undefined</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MAENLVVKAKLKDVCKGYNVAGDLADALNEKVEALLKDAMKRAEANGRKTVMAKDL</mol_seq>
+											<uri>/entry/A0A7C3TW14</uri>
+											<domain_architecture length="56">
+												<domain from="8" to="14" confidence="0.000000001">Other</domain>
+												<domain from="24" to="45" confidence="0.000000001">Histone fold</domain>
+												<domain from="53" to="55" confidence="0.000000001">Histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+								</clade>
+							</clade>
+							<clade>
+								<name>A0A218ZKU6</name>
+								<branch_length>1.0415127458</branch_length>
+								<taxonomy>
+									<code>Ca. Thermoplasmatota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MVKQRSFSLYDIEQFLKEAGAEKINEKAVITLEQELEQTVNELVGEASFYANYAGRKNVIKCSDLALVQPKRSASVSKVVYLHGMRKRPIARKRSKNRIILTRVRTQ</mol_seq>
+									<uri>/entry/A0A218ZKU6</uri>
+									<domain_architecture length="107">
+										<domain from="9" to="18" confidence="0.000000001">Histone fold</domain>
+										<domain from="26" to="53" confidence="0.000000001">Histone fold</domain>
+										<domain from="62" to="67" confidence="0.000000001">Histone fold</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+						<clade>
+							<branch_length>0.104125411</branch_length>
+							<confidence type="unknown">73.0</confidence>
+							<clade>
+								<branch_length>0.1065181625</branch_length>
+								<confidence type="unknown">63.0</confidence>
+								<clade>
+									<branch_length>2.3815E-06</branch_length>
+									<confidence type="unknown">32.0</confidence>
+									<clade>
+										<branch_length>0.0890896614</branch_length>
+										<confidence type="unknown">88.0</confidence>
+										<clade>
+											<branch_length>0.1385323077</branch_length>
+											<confidence type="unknown">85.0</confidence>
+											<clade>
+												<name>A0A2E8AHM6</name>
+												<branch_length>1.6979191978</branch_length>
+												<taxonomy>
+													<code>Pseudomonadota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MTFHFSTAQMERYECYRRSHISKPALKKIFYSLTGVSLNPNGLIILSSVVKMFIGELTETSRLIVEEQGFSQLDEIRPIHILESARKMNMKTKMNRTKHRKKFRRGYIL</mol_seq>
+													<uri>/entry/A0A2E8AHM6</uri>
+													<domain_architecture length="109">
+														<domain from="2" to="4" confidence="0.000000001">Other</domain>
+														<domain from="7" to="18" confidence="0.000000001">Other</domain>
+														<domain from="23" to="34" confidence="0.000000001">Histone fold</domain>
+														<domain from="40" to="67" confidence="0.000000001">Histone fold</domain>
+														<domain from="78" to="91" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<name>A0A7V3RJU3</name>
+												<branch_length>0.2130370002</branch_length>
+												<taxonomy>
+													<code>Spirochaetota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MATLSVAAIKRMIKSATGGRVSNDAAEALALILEQKGMQIATKAAKLARHAGRKTITAEDIRLAE</mol_seq>
+													<uri>/entry/A0A7V3RJU3</uri>
+													<domain_architecture length="65">
+														<domain from="6" to="17" confidence="0.000000001">Histone fold</domain>
+														<domain from="23" to="50" confidence="0.000000001">Histone fold</domain>
+														<domain from="58" to="64" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+										<clade>
+											<branch_length>0.0133064307</branch_length>
+											<confidence type="unknown">59.0</confidence>
+											<clade>
+												<name>A0A533RWB3</name>
+												<branch_length>0.3549382277</branch_length>
+												<taxonomy>
+													<code>Undefined</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MAKLPLAPVERIIKQNANAERVSASAAKALAEVLEEYGTEIAAKAVKLARHAGRKTVKAEDIKLAAR</mol_seq>
+													<uri>/entry/A0A533RWB3</uri>
+													<domain_architecture length="67">
+														<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+														<domain from="24" to="51" confidence="0.000000001">Histone fold</domain>
+														<domain from="59" to="65" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<name>A0A929PIV7</name>
+												<branch_length>0.6800363405</branch_length>
+												<taxonomy>
+													<code>Pseudomonadota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MKDKILPTAAVERVIRAAGAHRVSATASEELAKHLEEYGIEIATRANRLAIHAKRTTVKGEDIVEALKQME</mol_seq>
+													<uri>/entry/A0A929PIV7</uri>
+													<domain_architecture length="71">
+														<domain from="8" to="17" confidence="0.000000001">Histone fold</domain>
+														<domain from="25" to="52" confidence="0.000000001">Histone fold</domain>
+														<domain from="60" to="68" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+									</clade>
+									<clade>
+										<branch_length>0.0514150539</branch_length>
+										<confidence type="unknown">45.0</confidence>
+										<clade>
+											<branch_length>0.0850825808</branch_length>
+											<confidence type="unknown">37.0</confidence>
+											<clade>
+												<branch_length>0.0342390492</branch_length>
+												<confidence type="unknown">22.0</confidence>
+												<clade>
+													<branch_length>0.0998817355</branch_length>
+													<confidence type="unknown">51.0</confidence>
+													<clade>
+														<branch_length>0.1287932259</branch_length>
+														<confidence type="unknown">76.0</confidence>
+														<clade>
+															<branch_length>0.1503897382</branch_length>
+															<confidence type="unknown">86.0</confidence>
+															<clade>
+																<branch_length>0.3333022294</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<branch_length>0.2685756132</branch_length>
+																	<confidence type="unknown">100.0</confidence>
+																	<clade>
+																		<name>A0A1V6N1A9</name>
+																		<branch_length>0.0215938805</branch_length>
+																		<taxonomy>
+																			<code>Euryarchaeota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MTDLPKATVKRMIKEVNDELLISNDGLTQIIEETTEFIKKLTEESFKSAKSNKRKTIKTGDVTNAKKHFYYIS</mol_seq>
+																			<uri>/entry/A0A1V6N1A9</uri>
+																			<domain_architecture length="73">
+																				<domain from="6" to="16" confidence="0.000000001">Histone fold</domain>
+																				<domain from="24" to="51" confidence="0.000000001">Histone fold</domain>
+																				<domain from="59" to="66" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A843AD77</name>
+																		<branch_length>0.0083716078</branch_length>
+																		<taxonomy>
+																			<code>Euryarchaeota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MTDLPKATVKRMIKEVNDELLISNDGLNQIIEETTEFIKKLTEESFKSAKSNKRKTIKTKDITNAKKHFYYIS</mol_seq>
+																			<uri>/entry/A0A843AD77</uri>
+																			<domain_architecture length="73">
+																				<domain from="6" to="16" confidence="0.000000001">Histone fold</domain>
+																				<domain from="24" to="51" confidence="0.000000001">Histone fold</domain>
+																				<domain from="59" to="66" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<name>A0A162FK86</name>
+																	<branch_length>0.1619960414</branch_length>
+																	<taxonomy>
+																		<code>Euryarchaeota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MSLPKAPVKRIMKEVDDMMISEDALNKVIEETTNYIKKLTAESFKNAQIAKRKTIKPDDIKIAVNNL</mol_seq>
+																		<uri>/entry/A0A162FK86</uri>
+																		<domain_architecture length="67">
+																			<domain from="5" to="13" confidence="0.000000001">Histone fold</domain>
+																			<domain from="22" to="49" confidence="0.000000001">Histone fold</domain>
+																			<domain from="57" to="66" confidence="0.000000001">Histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0A166BCA0</name>
+																<branch_length>0.3854332542</branch_length>
+																<taxonomy>
+																	<code>Euryarchaeota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MSELPNAPLQRIFKKAGEAKISGDAKTTYAEAVEEYALELAKKSIAEANSNKRKTVKPEDIKSVI</mol_seq>
+																	<uri>/entry/A0A166BCA0</uri>
+																	<domain_architecture length="65">
+																		<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+																		<domain from="23" to="50" confidence="0.000000001">Histone fold</domain>
+																		<domain from="58" to="62" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<branch_length>0.1698849069</branch_length>
+															<confidence type="unknown">36.0</confidence>
+															<clade>
+																<branch_length>0.2381243587</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<name>A0A7C1YW26</name>
+																	<branch_length>0.6231584901</branch_length>
+																	<taxonomy>
+																		<code>Undefined</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MAGSDYISWSPIRRLMKHNGAVIVARDAVNELVDWMGRSAVSLTKTALILTKHSKRKKITSF</mol_seq>
+																		<uri>/entry/A0A7C1YW26</uri>
+																		<domain_architecture length="62">
+																			<domain from="9" to="18" confidence="0.000000001">Histone fold</domain>
+																			<domain from="26" to="53" confidence="0.000000001">Histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+																<clade>
+																	<branch_length>0.3367299648</branch_length>
+																	<confidence type="unknown">100.0</confidence>
+																	<clade>
+																		<name>A0A7C1V5Q5</name>
+																		<branch_length>0.1263015323</branch_length>
+																		<taxonomy>
+																			<code>Undefined</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MAAFAWSPLRALMKKAGAEIVSRAAVDKLMDYLEEYAKSLTGCALDIAKHSGRKKVTAADISLSLSMMD</mol_seq>
+																			<uri>/entry/A0A7C1V5Q5</uri>
+																			<domain_architecture length="69">
+																				<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+																				<domain from="23" to="50" confidence="0.000000001">Histone fold</domain>
+																				<domain from="58" to="68" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A7C1ZJK4</name>
+																		<branch_length>0.0571588408</branch_length>
+																		<taxonomy>
+																			<code>Undefined</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MAAFAWSPLRALMKKAGAEIVSRAAVDKLMDYLEEYAKTLTGCALDIAKHSGRKKVTAADMKISISLI</mol_seq>
+																			<uri>/entry/A0A7C1ZJK4</uri>
+																			<domain_architecture length="68">
+																				<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+																				<domain from="23" to="50" confidence="0.000000001">Histone fold</domain>
+																				<domain from="58" to="67" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0A832CYF6</name>
+																<branch_length>0.8025001973</branch_length>
+																<taxonomy>
+																	<code>Ca. Gottesmanbacteria</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MRRKKIMAKKTTEKKDAKPAANAEKKSRGAFISRAPIRRLMKIEGASLCSEKAVTLLIDKLTDMAQKITKAAVKNVKAENRKRITAPDISLAEKEVK</mol_seq>
+																	<uri>/entry/A0A832CYF6</uri>
+																	<domain_architecture length="97">
+																		<domain from="30" to="30" confidence="0.000000001">Other</domain>
+																		<domain from="34" to="43" confidence="0.000000001">Histone fold</domain>
+																		<domain from="51" to="78" confidence="0.000000001">Histone fold</domain>
+																		<domain from="86" to="96" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+													</clade>
+													<clade>
+														<name>A0A832CG10</name>
+														<branch_length>0.4288487281</branch_length>
+														<taxonomy>
+															<code>Pseudomonadota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MREPEELPLAPLERLLRKEGAERVSEDACKVLGVALEDYSKIIARKARDYSAHAKRKTIKAEDIELALRDLNI</mol_seq>
+															<uri>/entry/A0A832CG10</uri>
+															<domain_architecture length="73">
+																<domain from="9" to="18" confidence="0.000000001">Histone fold</domain>
+																<domain from="26" to="53" confidence="0.000000001">Histone fold</domain>
+																<domain from="61" to="70" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+												<clade>
+													<branch_length>0.0639185667</branch_length>
+													<confidence type="unknown">56.0</confidence>
+													<clade>
+														<branch_length>0.0577858596</branch_length>
+														<confidence type="unknown">76.0</confidence>
+														<clade>
+															<name>A0A7C5PA17</name>
+															<branch_length>0.3554012691</branch_length>
+															<taxonomy>
+																<code>Acidobacteriota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MNKKIREKTIPIAAMEEILRKSGAKRVSEDAKAELKKSLELISEEITKQAFEFAKHAHRKTVKEEDIKLAIQNYAKKSNF</mol_seq>
+																<uri>/entry/A0A7C5PA17</uri>
+																<domain_architecture length="80">
+																	<domain from="12" to="21" confidence="0.000000001">Histone fold</domain>
+																	<domain from="29" to="56" confidence="0.000000001">Histone fold</domain>
+																	<domain from="64" to="78" confidence="0.000000001">Histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+														<clade>
+															<name>A0A946TI74</name>
+															<branch_length>0.5163296874</branch_length>
+															<taxonomy>
+																<code>Ca. Peregrinibacteria</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MTQSKRLLPLAAMEKILKLGGAERVSDKAKVALKQVVEEAAEHIAEKAVKLAVHAGRKTVKAGDIKLAAKQ</mol_seq>
+																<uri>/entry/A0A946TI74</uri>
+																<domain_architecture length="71">
+																	<domain from="10" to="19" confidence="0.000000001">Histone fold</domain>
+																	<domain from="27" to="54" confidence="0.000000001">Histone fold</domain>
+																	<domain from="62" to="68" confidence="0.000000001">Histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+													<clade>
+														<name>A0A7C3TRR2</name>
+														<branch_length>0.3435376814</branch_length>
+														<taxonomy>
+															<code>Undefined</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MPRKRSIIAAAPMAEILKHAGAERVSEPAAQALAAVIKEIAYEIAKDAVKFAHHAGRKTIKREDIELARKNI</mol_seq>
+															<uri>/entry/A0A7C3TRR2</uri>
+															<domain_architecture length="72">
+																<domain from="10" to="19" confidence="0.000000001">Histone fold</domain>
+																<domain from="27" to="54" confidence="0.000000001">Histone fold</domain>
+																<domain from="62" to="71" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+											</clade>
+											<clade>
+												<branch_length>0.0413938012</branch_length>
+												<confidence type="unknown">26.0</confidence>
+												<clade>
+													<branch_length>0.115372276</branch_length>
+													<confidence type="unknown">69.0</confidence>
+													<clade>
+														<branch_length>0.0227636627</branch_length>
+														<confidence type="unknown">41.0</confidence>
+														<clade>
+															<branch_length>0.0494912049</branch_length>
+															<confidence type="unknown">42.0</confidence>
+															<clade>
+																<branch_length>0.1015905668</branch_length>
+																<confidence type="unknown">90.0</confidence>
+																<clade>
+																	<branch_length>0.0814252588</branch_length>
+																	<confidence type="unknown">97.0</confidence>
+																	<clade>
+																		<name>A0A496UNE2</name>
+																		<branch_length>0.7769311474</branch_length>
+																		<taxonomy>
+																			<code>Ca. Fermentibacteria</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MIYMRNTNELAAASVKRLIQLTGNQRVSAGAVNGLREYLENRAMNISETAQKLARHAGRKTVTDLDIRMAIDELEKKSITPP</mol_seq>
+																			<uri>/entry/A0A496UNE2</uri>
+																			<domain_architecture length="82">
+																				<domain from="12" to="20" confidence="0.000000001">Histone fold</domain>
+																				<domain from="29" to="56" confidence="0.000000001">Histone fold</domain>
+																				<domain from="64" to="78" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A831SMI2</name>
+																		<branch_length>0.4078045173</branch_length>
+																		<taxonomy>
+																			<code>Atribacterota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MLTKTTVRRLIEKSGAKHVSGDAAEELSKILEKKALEISKKAAALAKYSGRRTVMKKDIKMAAKEFSYP</mol_seq>
+																			<uri>/entry/A0A831SMI2</uri>
+																			<domain_architecture length="69">
+																				<domain from="4" to="13" confidence="0.000000001">Histone fold</domain>
+																				<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+																				<domain from="56" to="66" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<name>A0A7C5W0E3</name>
+																	<branch_length>0.6420468279</branch_length>
+																	<taxonomy>
+																		<code>Nitrospirota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MITTTPVKRIIEKAGGTRVSNQAAKELAHFLEHKTKTLALESQKLAEHAGRKTVMRNDVKMAKKVLE</mol_seq>
+																		<uri>/entry/A0A7C5W0E3</uri>
+																		<domain_architecture length="67">
+																			<domain from="4" to="15" confidence="0.000000001">Histone fold</domain>
+																			<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+																			<domain from="56" to="66" confidence="0.000000001">Histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0A1G1HBN4</name>
+																<branch_length>0.5470494256</branch_length>
+																<taxonomy>
+																	<code>Nitrospirota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MSVLPKLPFERLMKKAGAKRVSEEALDEMAKILEEKMTEIAKEAAMLAKHAGRKTVLEEDVRIARKKFMVDK</mol_seq>
+																	<uri>/entry/A0A1G1HBN4</uri>
+																	<domain_architecture length="72">
+																		<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+																		<domain from="23" to="50" confidence="0.000000001">Histone fold</domain>
+																		<domain from="58" to="66" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<name>A0A661ARC1</name>
+															<branch_length>0.8380981729</branch_length>
+															<taxonomy>
+																<code>Undefined</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MIMAKEHIFSVNFFKKFLSKLGSVRVSYKAAEEFTVFIEDIARDLLENAKKYAEHAGRKTVLISDIRLAKKRLNV</mol_seq>
+																<uri>/entry/A0A661ARC1</uri>
+																<domain_architecture length="75">
+																	<domain from="11" to="21" confidence="0.000000001">Histone fold</domain>
+																	<domain from="28" to="55" confidence="0.000000001">Histone fold</domain>
+																	<domain from="63" to="72" confidence="0.000000001">Histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+													<clade>
+														<name>A0A660TM59</name>
+														<branch_length>0.4377532366</branch_length>
+														<taxonomy>
+															<code>Spirochaetota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MPRERSSRQLPIAPVDRLIRKANAERVSENAADALAEILEELALEIAQRARELAEFAGRKTVTEKDIRLAYKQWRRSMI</mol_seq>
+															<uri>/entry/A0A660TM59</uri>
+															<domain_architecture length="79">
+																<domain from="7" to="7" confidence="0.000000001">Other</domain>
+																<domain from="12" to="21" confidence="0.000000001">Histone fold</domain>
+																<domain from="29" to="56" confidence="0.000000001">Histone fold</domain>
+																<domain from="64" to="77" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+												<clade>
+													<branch_length>0.0760005184</branch_length>
+													<confidence type="unknown">44.0</confidence>
+													<clade>
+														<branch_length>0.0903093586</branch_length>
+														<confidence type="unknown">51.0</confidence>
+														<clade>
+															<name>A0A800BU02</name>
+															<branch_length>0.6711716415</branch_length>
+															<taxonomy>
+																<code>Ca. Bipolaricaulota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MVKEFPLFTLERLAKKIGAERVSKEALVELRNLLLEIATEIARDAIEICKHAKRVTIKKEDIILAAKRWRK</mol_seq>
+																<uri>/entry/A0A800BU02</uri>
+																<domain_architecture length="71">
+																	<domain from="7" to="17" confidence="0.000000001">Histone fold</domain>
+																	<domain from="24" to="51" confidence="0.000000001">Histone fold</domain>
+																	<domain from="59" to="68" confidence="0.000000001">Histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+														<clade>
+															<branch_length>0.0425235023</branch_length>
+															<confidence type="unknown">94.0</confidence>
+															<clade>
+																<name>A0A836REH5</name>
+																<branch_length>0.2467018549</branch_length>
+																<taxonomy>
+																	<code>Atribacterota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MPELPLAPVDRLIRKAGAYRVSEDAAEALREILEEIAIEVSREAIELANHAERKTVTADDIKLAAKRLLKMIRYGV</mol_seq>
+																	<uri>/entry/A0A836REH5</uri>
+																	<domain_architecture length="76">
+																		<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+																		<domain from="23" to="50" confidence="0.000000001">Histone fold</domain>
+																		<domain from="58" to="74" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>A0A965YAW7</name>
+																<branch_length>0.2199929571</branch_length>
+																<taxonomy>
+																	<code>Undefined</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MSELPIAAVDRLIRKAGAERVSEEAAEALGKILSDVAIDISSQAIELAKHAKRKTVTAEDIQLATKTMQ</mol_seq>
+																	<uri>/entry/A0A965YAW7</uri>
+																	<domain_architecture length="69">
+																		<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+																		<domain from="23" to="50" confidence="0.000000001">Histone fold</domain>
+																		<domain from="58" to="67" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+													</clade>
+													<clade>
+														<name>A0A523XJ05</name>
+														<branch_length>0.7280295778</branch_length>
+														<taxonomy>
+															<code>Bacteria division TA06</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MIPVAPVDRLIRRAGAQRVSSSASKRLAQILEEIGTRLTKDALRFARHAGRNTIKTEDMDLAHAQIST</mol_seq>
+															<uri>/entry/A0A523XJ05</uri>
+															<domain_architecture length="68">
+																<domain from="4" to="13" confidence="0.000000001">Histone fold</domain>
+																<domain from="21" to="48" confidence="0.000000001">Histone fold</domain>
+																<domain from="56" to="67" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+											</clade>
+										</clade>
+										<clade>
+											<branch_length>0.0565638826</branch_length>
+											<confidence type="unknown">36.0</confidence>
+											<clade>
+												<name>A0A9E6C8M8</name>
+												<branch_length>0.8834803402</branch_length>
+												<taxonomy>
+													<code>Undefined</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MPARKRGPIALAPIARLVKQQAGIERISKAAVQAIRDAAIEFIIELAKLAAEFARHAGRKTVKEIDVKSALRALKGKA</mol_seq>
+													<uri>/entry/A0A9E6C8M8</uri>
+													<domain_architecture length="78">
+														<domain from="11" to="21" confidence="0.000000001">Histone fold</domain>
+														<domain from="29" to="56" confidence="0.000000001">Histone fold</domain>
+														<domain from="64" to="75" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<name>A0A1F3W058</name>
+												<branch_length>0.5397072387</branch_length>
+												<taxonomy>
+													<code>Bacteroidota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MGRKTSTIPKASVARILMNAGAKRVSADGAEAFADVLTGIAARISSKAAQIAKHTGRKTVHEGDVKLAAK</mol_seq>
+													<uri>/entry/A0A1F3W058</uri>
+													<domain_architecture length="70">
+														<domain from="10" to="19" confidence="0.000000001">Histone fold</domain>
+														<domain from="27" to="54" confidence="0.000000001">Histone fold</domain>
+														<domain from="62" to="69" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+									</clade>
+								</clade>
+								<clade>
+									<branch_length>0.9958230166</branch_length>
+									<confidence type="unknown">100.0</confidence>
+									<clade>
+										<name>A0A7C4E436</name>
+										<branch_length>0.475428705</branch_length>
+										<taxonomy>
+											<code>Ca. Aenigmatarchaeota</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MKRKFIEGLAKELKVKISEEAEEVFMDALAEIAVEIALIACSKAAKRKRKSVGLVEMKEAIAEFYREG</mol_seq>
+											<uri>/entry/A0A7C4E436</uri>
+											<domain_architecture length="68">
+												<domain from="3" to="12" confidence="0.000000001">Histone fold</domain>
+												<domain from="19" to="46" confidence="0.000000001">Histone fold</domain>
+												<domain from="54" to="67" confidence="0.000000001">Histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+									<clade>
+										<name>A0A7J2MUA9</name>
+										<branch_length>0.340450709</branch_length>
+										<taxonomy>
+											<code>Ca. Aenigmatarchaeota</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MIPAKFVSDLAKEMNLKISKGAKDVIIDALEEIALEISFLACLKAKDEGVKTLRREHMESAIKEFYR</mol_seq>
+											<uri>/entry/A0A7J2MUA9</uri>
+											<domain_architecture length="67">
+												<domain from="2" to="13" confidence="0.000000001">Histone fold</domain>
+												<domain from="20" to="47" confidence="0.000000001">Histone fold</domain>
+												<domain from="55" to="65" confidence="0.000000001">Histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+								</clade>
+							</clade>
+							<clade>
+								<branch_length>0.1584912925</branch_length>
+								<confidence type="unknown">84.0</confidence>
+								<clade>
+									<name>A0A497ALM5</name>
+									<branch_length>0.729630545</branch_length>
+									<taxonomy>
+										<code>Chloroflexota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MPHEIKKAPMHKLIKRAGAARVSEESALALGRALEEVGLKIAEEAIGYAKHAGRKTVKARDIEIAYKKTFGK</mol_seq>
+										<uri>/entry/A0A497ALM5</uri>
+										<domain_architecture length="72">
+											<domain from="7" to="16" confidence="0.000000001">Histone fold</domain>
+											<domain from="24" to="51" confidence="0.000000001">Histone fold</domain>
+											<domain from="59" to="70" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0A1Q7PKL8</name>
+									<branch_length>0.5259461931</branch_length>
+									<taxonomy>
+										<code>Nitrospirota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MAETEISTAAVHRLIKKGGAGRIGDDAAEELRKVVEEVAVRVGKEALELATHAGRKTVRAEDIRLAVKRIWKE</mol_seq>
+										<uri>/entry/A0A1Q7PKL8</uri>
+										<domain_architecture length="73">
+											<domain from="8" to="17" confidence="0.000000001">Histone fold</domain>
+											<domain from="25" to="52" confidence="0.000000001">Histone fold</domain>
+											<domain from="60" to="70" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+						</clade>
+					</clade>
+				</clade>
+			</clade>
+			<clade>
+				<branch_length>0.057164063</branch_length>
+				<confidence type="unknown">79.0</confidence>
+				<clade>
+					<branch_length>0.2109071431</branch_length>
+					<confidence type="unknown">95.0</confidence>
+					<clade>
+						<branch_length>0.1501386957</branch_length>
+						<confidence type="unknown">92.0</confidence>
+						<clade>
+							<name>A0A2E0S4Z1</name>
+							<branch_length>1.1758643365</branch_length>
+							<taxonomy>
+								<code>Planctomycetota</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MPATMAKKRRSGTGAESLARQAIYLAKLAKAKHGKDLSISGQALGELERVFDFVTESLMTNCQASMKMMKTKTLSLKVARCASEVTFTGRLREDATVRGARAVMNYEKRATATEPASVSAA</mol_seq>
+								<uri>/entry/A0A2E0S4Z1</uri>
+								<domain_architecture length="121">
+									<domain from="60" to="60" confidence="0.000000001">Histone fold</domain>
+									<domain from="64" to="64" confidence="0.000000001">Histone fold</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+						<clade>
+							<branch_length>0.4800481682</branch_length>
+							<confidence type="unknown">99.0</confidence>
+							<clade>
+								<branch_length>0.0546993373</branch_length>
+								<confidence type="unknown">94.0</confidence>
+								<clade>
+									<branch_length>0.0738028851</branch_length>
+									<confidence type="unknown">93.0</confidence>
+									<clade>
+										<branch_length>0.0183078326</branch_length>
+										<confidence type="unknown">91.0</confidence>
+										<clade>
+											<branch_length>0.0245247109</branch_length>
+											<confidence type="unknown">67.0</confidence>
+											<clade>
+												<branch_length>0.289187294</branch_length>
+												<confidence type="unknown">99.0</confidence>
+												<clade>
+													<name>A0A2E0ZLS8</name>
+													<branch_length>0.3587389943</branch_length>
+													<taxonomy>
+														<code>Chloroflexota</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MSSQASIPFSGKGIGHKGKGAGKGGKFGKAKRHFLAKKETIMGITKPAIRRLCRRGGIKRISGLFYEEIRAIVRQYLENVLREGICYTSHARRKTIIAADIVYALKRQGQTLYGFDPGATKGWGKSKGSKKG</mol_seq>
+														<uri>/entry/A0A2E0ZLS8</uri>
+														<domain_architecture length="132">
+															<domain from="40" to="43" confidence="0.000000001">Other</domain>
+															<domain from="46" to="55" confidence="0.000000001">Histone fold</domain>
+															<domain from="65" to="90" confidence="0.000000001">Histone fold</domain>
+															<domain from="98" to="107" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+												<clade>
+													<name>A0A2E5VZK0</name>
+													<branch_length>0.3873544078</branch_length>
+													<taxonomy>
+														<code>Euryarchaeota</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MSSSQTNTPTQKTHAPIASKGKFSGKGGKGGKAGPKRYGKDKKEPILGCTKPAIRRLCRRGGIKRIDGLFYEETRGVLKCFIDNLVLDALAYTEHSRRKTVSVMDVLYALKRQGRTLYGFGG</mol_seq>
+														<uri>/entry/A0A2E5VZK0</uri>
+														<domain_architecture length="122">
+															<domain from="45" to="48" confidence="0.000000001">Other</domain>
+															<domain from="51" to="60" confidence="0.000000001">Histone fold</domain>
+															<domain from="70" to="95" confidence="0.000000001">Histone fold</domain>
+															<domain from="103" to="112" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+											<clade>
+												<branch_length>0.0742684362</branch_length>
+												<confidence type="unknown">71.0</confidence>
+												<clade>
+													<branch_length>0.0695566286</branch_length>
+													<confidence type="unknown">36.0</confidence>
+													<clade>
+														<name>A0A5Y2AE97</name>
+														<branch_length>0.1181140595</branch_length>
+														<taxonomy>
+															<code>Pseudomonadota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MTGRGKGGKGLGKGGAKRHRKVLRDNIQGITKPAIRRLARRGGVKRISGLIYEETRGVLKVFLENVIRDAVTYTEHAKRKTVTAMDVVYALKRQGRTLYGFGG</mol_seq>
+															<uri>/entry/A0A5Y2AE97</uri>
+															<domain_architecture length="103">
+																<domain from="27" to="29" confidence="0.000000001">Other</domain>
+																<domain from="32" to="41" confidence="0.000000001">Histone fold</domain>
+																<domain from="49" to="76" confidence="0.000000001">Histone fold</domain>
+																<domain from="84" to="93" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+													<clade>
+														<branch_length>0.1014228567</branch_length>
+														<confidence type="unknown">40.0</confidence>
+														<clade>
+															<branch_length>0.0988331214</branch_length>
+															<confidence type="unknown">62.0</confidence>
+															<clade>
+																<name>A0A2D9B6U5</name>
+																<branch_length>0.1841162266</branch_length>
+																<taxonomy>
+																	<code>Pseudomonadota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MKVQSNWLTQVPSPAFGKKTPNFSLIISGEFHVYITQYLLVYIVFAVDYDYLLKMSGRGKGGKGLGKGGAKRHRKILRDNIQGITKPAIRRLARRGGVKRISGLIYEETRGVLKVFLENVIRDAVTYTEHAKRKTVTAMDVVYALKRQGRTLYGFGG</mol_seq>
+																	<uri>/entry/A0A2D9B6U5</uri>
+																	<domain_architecture length="157">
+																		<domain from="35" to="35" confidence="0.000000001">Other</domain>
+																		<domain from="37" to="38" confidence="0.000000001">Other</domain>
+																		<domain from="41" to="42" confidence="0.000000001">Other</domain>
+																		<domain from="80" to="83" confidence="0.000000001">Other</domain>
+																		<domain from="86" to="95" confidence="0.000000001">Histone fold</domain>
+																		<domain from="105" to="130" confidence="0.000000001">Histone fold</domain>
+																		<domain from="138" to="147" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>A0A9E4NLD1</name>
+																<branch_length>0.0984887366</branch_length>
+																<taxonomy>
+																	<code>Pseudomonadota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MSGRGKGGKGLGKGGAKRHRKVLRDNIQGITKPAIRRLARRGGVKRISGLIYEETRGVLKVFLENVIRDAVTYTEHAKRKTVTAMDVVYALKRQGRTLYGFGG</mol_seq>
+																	<uri>/entry/A0A9E4NLD1</uri>
+																	<domain_architecture length="103">
+																		<domain from="27" to="29" confidence="0.000000001">Other</domain>
+																		<domain from="32" to="41" confidence="0.000000001">Histone fold</domain>
+																		<domain from="49" to="76" confidence="0.000000001">Histone fold</domain>
+																		<domain from="84" to="93" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<branch_length>0.0545751148</branch_length>
+															<confidence type="unknown">76.0</confidence>
+															<clade>
+																<name>Q5ZP39</name>
+																<branch_length>0.4221515774</branch_length>
+																<taxonomy>
+																	<code>Undefined</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MIDRPEGAKEGKGSSKVGKGQGKEKKGLEKGGKELEKGGKVSEKGGKGLEKGEKGSVKGGKGLGKGGAKRHRRSLRDNIQGITKPAIRRLARRGGVKRVSGLVYEEIRDVLKIFLKTVIHDAFHYTEHAKRKTVTSMDIVYALKRQGRKIYGFGS</mol_seq>
+																	<uri>/entry/Q5ZP39</uri>
+																	<domain_architecture length="155">
+																		<domain from="78" to="81" confidence="0.000000001">Other</domain>
+																		<domain from="84" to="93" confidence="0.000000001">Histone fold</domain>
+																		<domain from="101" to="128" confidence="0.000000001">Histone fold</domain>
+																		<domain from="136" to="145" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>A0A2D7GQ71</name>
+																<branch_length>0.0390791001</branch_length>
+																<taxonomy>
+																	<code>Pseudomonadota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MTGRGKGGKGLGKGGAKRHRKILRDNIQGITKPAIRRLARRGGVKRISGLIYEETRGVLKVFLENVIRDAVTYTEHAKRKTVTAMDVVYALKRQGRTLYGFGG</mol_seq>
+																	<uri>/entry/A0A2D7GQ71</uri>
+																	<domain_architecture length="103">
+																		<domain from="27" to="29" confidence="0.000000001">Other</domain>
+																		<domain from="32" to="41" confidence="0.000000001">Histone fold</domain>
+																		<domain from="49" to="76" confidence="0.000000001">Histone fold</domain>
+																		<domain from="84" to="93" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+													</clade>
+												</clade>
+												<clade>
+													<branch_length>0.0936698932</branch_length>
+													<confidence type="unknown">44.0</confidence>
+													<clade>
+														<branch_length>0.2575437686</branch_length>
+														<confidence type="unknown">100.0</confidence>
+														<clade>
+															<name>A0A958LZ73</name>
+															<branch_length>0.2510559837</branch_length>
+															<taxonomy>
+																<code>Bdellovibrionota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MAGQGKGGKGVGGKGKVGTKRTAQKRHARASIEGITKPAIRRLARRGGVKRISSFIYDDSRHVLKGFLEGIVRDAVTYTEHARRKTVTAMDVVYALKRQGRTIYGFGG</mol_seq>
+																<uri>/entry/A0A958LZ73</uri>
+																<domain_architecture length="108">
+																	<domain from="31" to="34" confidence="0.000000001">Other</domain>
+																	<domain from="37" to="46" confidence="0.000000001">Histone fold</domain>
+																	<domain from="56" to="81" confidence="0.000000001">Histone fold</domain>
+																	<domain from="89" to="98" confidence="0.000000001">Histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+														<clade>
+															<name>A0A958R7V8</name>
+															<branch_length>0.1205639892</branch_length>
+															<taxonomy>
+																<code>Bdellovibrionota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MAGRGKVGKGYGKVGAKRHTKKSLKETILGITKPAIRRLARRGGVKRISSLIYEETRNVLRSFLENVIRDSVTYTEHAKRKTVTALDVVYALKRQGRTLYGFGG</mol_seq>
+																<uri>/entry/A0A958R7V8</uri>
+																<domain_architecture length="104">
+																	<domain from="27" to="30" confidence="0.000000001">Other</domain>
+																	<domain from="33" to="42" confidence="0.000000001">Histone fold</domain>
+																	<domain from="50" to="77" confidence="0.000000001">Histone fold</domain>
+																	<domain from="85" to="94" confidence="0.000000001">Histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+													<clade>
+														<name>A0A3N5IG31</name>
+														<branch_length>0.0225963856</branch_length>
+														<taxonomy>
+															<code>Planctomycetota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MTGRGKGGKGLGKGGAKRHRKVLRDNIQGITKPAIRRLARRGGVKRISGLIYEETRGVLKVFLENVIRDAVTYTEHAKRKTVTAMDVVYALKRQGRTLYGFGG</mol_seq>
+															<uri>/entry/A0A3N5IG31</uri>
+															<domain_architecture length="103">
+																<domain from="27" to="29" confidence="0.000000001">Other</domain>
+																<domain from="32" to="41" confidence="0.000000001">Histone fold</domain>
+																<domain from="49" to="76" confidence="0.000000001">Histone fold</domain>
+																<domain from="84" to="93" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+											</clade>
+										</clade>
+										<clade>
+											<branch_length>0.0474797012</branch_length>
+											<confidence type="unknown">71.0</confidence>
+											<clade>
+												<name>A0AA41XDI8</name>
+												<branch_length>0.1383152874</branch_length>
+												<taxonomy>
+													<code>Bacillota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">PNPSPKSPIPHLFLLQRASAAAMSGRGKGGKGLGKGGAKRHRKVLRDNIQGITKPAIRRLARRGGVKRISGLIYEETRGVLKIFLENVIRDAVTYTEHARRKTVTAMDVVYALKRQGRTLYGFGG</mol_seq>
+													<uri>/entry/A0AA41XDI8</uri>
+													<domain_architecture length="125">
+														<domain from="49" to="51" confidence="0.000000001">Other</domain>
+														<domain from="54" to="63" confidence="0.000000001">Histone fold</domain>
+														<domain from="71" to="98" confidence="0.000000001">Histone fold</domain>
+														<domain from="106" to="115" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<name>A0A2D5QPF6</name>
+												<branch_length>0.3295397552</branch_length>
+												<taxonomy>
+													<code>Myxococcota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MSGKGKGGKGKSGGAGKRHRKVIRDNIQGITKPAIRRLARRGGVKRISGLIYEEARGVLKKFLEQTVRDAVTYTEHSRRKTVTALDVVYALKRQGKTIYGFGG</mol_seq>
+													<uri>/entry/A0A2D5QPF6</uri>
+													<domain_architecture length="103">
+														<domain from="27" to="29" confidence="0.000000001">Other</domain>
+														<domain from="32" to="41" confidence="0.000000001">Histone fold</domain>
+														<domain from="49" to="76" confidence="0.000000001">Histone fold</domain>
+														<domain from="84" to="93" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+									</clade>
+									<clade>
+										<name>A0A482RFZ4</name>
+										<branch_length>0.0789511305</branch_length>
+										<taxonomy>
+											<code>Undefined</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MSGRGKGGKGLGKGGAKRHRKVLRDNIQGITVCCVPPLSCRPTARALCRAAARFMLATYVHFYRHVPVRACLQKPAIRRLARRGGVKRISGLIYDETRGVLKVFLENVIRDAVTYTEHARRKTVTALDVVYALKRQGRTLYGFGA</mol_seq>
+											<uri>/entry/A0A482RFZ4</uri>
+											<domain_architecture length="145">
+												<domain from="27" to="27" confidence="0.000000001">Other</domain>
+												<domain from="75" to="83" confidence="0.000000001">Histone fold</domain>
+												<domain from="93" to="118" confidence="0.000000001">Histone fold</domain>
+												<domain from="126" to="135" confidence="0.000000001">Histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+								</clade>
+								<clade>
+									<name>A0A3M1JP48</name>
+									<branch_length>0.6094622245</branch_length>
+									<taxonomy>
+										<code>Pseudomonadota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MAKGKSSAAKGAGNKRVKKLVSGGHGGVTRGAIRRLARRGGAKRVSSLVFDEMRGCIRSFVDRVVRDATAYTEHARRKTVSAGDVVNSLKKSGRMLYGYA</mol_seq>
+										<uri>/entry/A0A3M1JP48</uri>
+										<domain_architecture length="100">
+											<domain from="30" to="39" confidence="0.000000001">Histone fold</domain>
+											<domain from="47" to="74" confidence="0.000000001">Histone fold</domain>
+											<domain from="82" to="91" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<name>A0A2D5MTV1</name>
+								<branch_length>0.2657584039</branch_length>
+								<taxonomy>
+									<code>Verrucomicrobiota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MVMYGKGKKAGPLGKGVVPKRHRKVLRDNIKGITKPAIRRLARRGGVKRISGLVYDEIRDVLKSYLKDVLHDAVAYAEHARRKTVSPMDVVCALKRQGRTLYSTHLGLRSNP</mol_seq>
+									<uri>/entry/A0A2D5MTV1</uri>
+									<domain_architecture length="112">
+										<domain from="30" to="32" confidence="0.000000001">Other</domain>
+										<domain from="35" to="44" confidence="0.000000001">Histone fold</domain>
+										<domain from="54" to="79" confidence="0.000000001">Histone fold</domain>
+										<domain from="87" to="96" confidence="0.000000001">Histone fold</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+					</clade>
+					<clade>
+						<name>A0A2D7CM97</name>
+						<branch_length>1.3960734037</branch_length>
+						<taxonomy>
+							<code>Pseudomonadota</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MSVHSKQIEKMFKSVNPQGHYMSKQAKVYVALLLDKVLLIFLQQCYSLMHPKNIGGKALSCEQDISNETVKTAVRLCLPRILQKYALREIDRASQKTILSTTTLKTKTEEYLHCKVDDPVALSITVLLEYILAEIAELSGNVTDRRETNVEDVKVAIENDDELKSLLQCIM</mol_seq>
+							<uri>/entry/A0A2D7CM97</uri>
+							<domain_architecture length="171">
+								<domain from="5" to="15" confidence="0.000000001">Other</domain>
+								<domain from="21" to="22" confidence="0.000000001">Other</domain>
+								<domain from="24" to="49" confidence="0.000000001">Other</domain>
+								<domain from="67" to="77" confidence="0.000000001">Other</domain>
+								<domain from="80" to="91" confidence="0.000000001">Other</domain>
+								<domain from="101" to="112" confidence="0.000000001">Histone fold</domain>
+								<domain from="118" to="142" confidence="0.000000001">Histone fold</domain>
+								<domain from="147" to="148" confidence="0.000000001">Histone fold</domain>
+								<domain from="150" to="158" confidence="0.000000001">Histone fold</domain>
+								<domain from="161" to="167" confidence="0.000000001">Other</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+				</clade>
+				<clade>
+					<name>A0A7Y5HEN7</name>
+					<branch_length>1.2402118108</branch_length>
+					<taxonomy>
+						<code>Planctomycetota</code>
+					</taxonomy>
+					<sequence type="aa">
+						<mol_seq is_aligned="false">MADLPNAAVKRALLANGVPRISASSVTLAADAAQEFLARLARAAAESANVAKRKTVMDEDIVAAKTRLLGGSLT</mol_seq>
+						<uri>/entry/A0A7Y5HEN7</uri>
+						<domain_architecture length="74">
+							<domain from="6" to="15" confidence="0.000000001">Histone fold</domain>
+							<domain from="23" to="50" confidence="0.000000001">Histone fold</domain>
+							<domain from="58" to="69" confidence="0.000000001">Histone fold</domain>
+						</domain_architecture>
+					</sequence>
+				</clade>
+			</clade>
+		</clade>
+	</phylogeny>
+	<taxonomies>
+		<taxonomy code="Actinomycetota">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Bacteroidota">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Patescibacteria group">
+			<color>0xbebada</color>
+		</taxonomy>
+		<taxonomy code="Euryarchaeota">
+			<color>0xfb8072</color>
+		</taxonomy>
+		<taxonomy code="Ca. Fermentibacteria">
+			<color>0x80b1d3</color>
+		</taxonomy>
+		<taxonomy code="Ca. Nomurabacteria">
+			<color>0xfdb462</color>
+		</taxonomy>
+		<taxonomy code="Ca. Schekmanbacteria">
+			<color>0xb3de69</color>
+		</taxonomy>
+		<taxonomy code="Pseudomonadota">
+			<color>0xfccde5</color>
+		</taxonomy>
+		<taxonomy code="Bacteria division TA06">
+			<color>0xd9d9d9</color>
+		</taxonomy>
+		<taxonomy code="Undefined">
+			<color>0xbc80bd</color>
+		</taxonomy>
+		<taxonomy code="Ca. Peregrinibacteria">
+			<color>0xccebc5</color>
+		</taxonomy>
+		<taxonomy code="Ca. Gottesmanbacteria">
+			<color>0xffed6f</color>
+		</taxonomy>
+		<taxonomy code="Myxococcota">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Ca. Thermoplasmatota">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Ca. Cloacimonadota">
+			<color>0xbebada</color>
+		</taxonomy>
+		<taxonomy code="Acidobacteriota">
+			<color>0xfb8072</color>
+		</taxonomy>
+		<taxonomy code="Verrucomicrobiota">
+			<color>0x80b1d3</color>
+		</taxonomy>
+		<taxonomy code="Nucleocytoviricota">
+			<color>0xfdb462</color>
+		</taxonomy>
+		<taxonomy code="Nitrospirota">
+			<color>0xb3de69</color>
+		</taxonomy>
+		<taxonomy code="Ca. Aenigmatarchaeota">
+			<color>0xfccde5</color>
+		</taxonomy>
+		<taxonomy code="Planctomycetota">
+			<color>0xd9d9d9</color>
+		</taxonomy>
+		<taxonomy code="Chloroflexota">
+			<color>0xbc80bd</color>
+		</taxonomy>
+		<taxonomy code="Spirochaetota">
+			<color>0xccebc5</color>
+		</taxonomy>
+		<taxonomy code="Ca. Bipolaricaulota">
+			<color>0xffed6f</color>
+		</taxonomy>
+		<taxonomy code="Nanoarchaeota">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Bdellovibrionota">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Bacillota">
+			<color>0xbebada</color>
+		</taxonomy>
+		<taxonomy code="Atribacterota">
+			<color>0xfb8072</color>
+		</taxonomy>
+	</taxonomies>
+	<labels/>
+	<domains>
+		<domain name="Histone fold">
+			<color>#8da0cb</color>
+			<description>Histone fold</description>
+		</domain>
+		<domain name="Other">
+			<color>#b3b3b3</color>
+			<description>Other secondary structures</description>
+		</domain>
+	</domains>
+</phyloxml>

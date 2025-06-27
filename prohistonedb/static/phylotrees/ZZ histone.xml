@@ -1,0 +1,2683 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+	<phylogeny rooted="false">
+		<clade>
+			<clade>
+				<name>A0A2D6MV11</name>
+				<branch_length>0.2517613566</branch_length>
+				<taxonomy>
+					<code>Myxococcota</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MAERWRRCSACKTDIELGAIYWACSVSTCNRKRTALVFCSVDCWEIHLPTERHREAWAVEERAPTVPDSPEGPWQVRKRSPKPRPQVPARSAAGVAAHGTAPAAAPMASDTREILVVASRLKAYIRDAAGYSTSDRVLPVLSDALRKICDEAIRNARRDERMTVLDRDVPRG</mol_seq>
+					<uri>/entry/A0A2D6MV11</uri>
+					<domain_architecture length="172">
+						<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+						<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+						<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+						<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+						<domain from="37" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+						<domain from="41" to="45" confidence="0.000000001">ZZ-type zinc finger</domain>
+						<domain from="48" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+						<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+						<domain from="118" to="129" confidence="0.000000001">Histone fold</domain>
+						<domain from="136" to="158" confidence="0.000000001">Histone fold</domain>
+						<domain from="166" to="168" confidence="0.000000001">Histone fold</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<branch_length>0.0734288401</branch_length>
+				<confidence type="unknown">97.0</confidence>
+				<clade>
+					<branch_length>0.0443301954</branch_length>
+					<confidence type="unknown">96.0</confidence>
+					<clade>
+						<branch_length>0.2200321601</branch_length>
+						<confidence type="unknown">97.0</confidence>
+						<clade>
+							<branch_length>0.0262670178</branch_length>
+							<confidence type="unknown">60.0</confidence>
+							<clade>
+								<branch_length>0.0294779295</branch_length>
+								<confidence type="unknown">84.0</confidence>
+								<clade>
+									<branch_length>0.0520346344</branch_length>
+									<confidence type="unknown">84.0</confidence>
+									<clade>
+										<branch_length>0.0501049639</branch_length>
+										<confidence type="unknown">67.0</confidence>
+										<clade>
+											<branch_length>0.0612483675</branch_length>
+											<confidence type="unknown">70.0</confidence>
+											<clade>
+												<branch_length>0.0300775453</branch_length>
+												<confidence type="unknown">71.0</confidence>
+												<clade>
+													<branch_length>0.0867463264</branch_length>
+													<confidence type="unknown">85.0</confidence>
+													<clade>
+														<branch_length>0.0479286013</branch_length>
+														<confidence type="unknown">83.0</confidence>
+														<clade>
+															<branch_length>0.3476845482</branch_length>
+															<confidence type="unknown">100.0</confidence>
+															<clade>
+																<branch_length>0.0799986802</branch_length>
+																<confidence type="unknown">94.0</confidence>
+																<clade>
+																	<branch_length>0.1546172223</branch_length>
+																	<confidence type="unknown">98.0</confidence>
+																	<clade>
+																		<branch_length>0.1075331405</branch_length>
+																		<confidence type="unknown">86.0</confidence>
+																		<clade>
+																			<branch_length>0.1036196358</branch_length>
+																			<confidence type="unknown">60.0</confidence>
+																			<clade>
+																				<branch_length>0.0932474916</branch_length>
+																				<confidence type="unknown">98.0</confidence>
+																				<clade>
+																					<branch_length>0.2067976358</branch_length>
+																					<confidence type="unknown">98.0</confidence>
+																					<clade>
+																						<branch_length>0.0566729944</branch_length>
+																						<confidence type="unknown">81.0</confidence>
+																						<clade>
+																							<branch_length>0.0652679569</branch_length>
+																							<confidence type="unknown">78.0</confidence>
+																							<clade>
+																								<branch_length>0.0731347236</branch_length>
+																								<confidence type="unknown">91.0</confidence>
+																								<clade>
+																									<branch_length>0.0738756341</branch_length>
+																									<confidence type="unknown">98.0</confidence>
+																									<clade>
+																										<branch_length>0.2217054939</branch_length>
+																										<confidence type="unknown">100.0</confidence>
+																										<clade>
+																											<branch_length>0.0994212108</branch_length>
+																											<confidence type="unknown">100.0</confidence>
+																											<clade>
+																												<branch_length>0.0966321831</branch_length>
+																												<confidence type="unknown">100.0</confidence>
+																												<clade>
+																													<name>E1WXM4</name>
+																													<branch_length>0.2028031898</branch_length>
+																													<taxonomy>
+																														<code>Bdellovibrionota</code>
+																													</taxonomy>
+																													<sequence type="aa">
+																														<mol_seq is_aligned="false">MDQNFWRKCIVCKKEINFTTKYYKCSVSSCDKKRAPAQFCSVDCWGVHSSTLNHKSAWAEEFHSPSKEQWKSAPKVRIVSSSKSSTSADVEGLPKDILVVVSKLKAYVKARGDLNTSADVSDVLSDIIRRECDRAIERAKSDGRKTLMGKDF</mol_seq>
+																														<uri>/entry/E1WXM4</uri>
+																														<domain_architecture length="152">
+																															<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="38" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="42" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="67" to="72" confidence="0.000000001">Other</domain>
+																															<domain from="101" to="112" confidence="0.000000001">Histone fold</domain>
+																															<domain from="119" to="141" confidence="0.000000001">Histone fold</domain>
+																															<domain from="149" to="151" confidence="0.000000001">Histone fold</domain>
+																														</domain_architecture>
+																													</sequence>
+																												</clade>
+																												<clade>
+																													<name>A0A2G8HQZ1</name>
+																													<branch_length>0.2440394306</branch_length>
+																													<taxonomy>
+																														<code>Bdellovibrionota</code>
+																													</taxonomy>
+																													<sequence type="aa">
+																														<mol_seq is_aligned="false">MDQNYWRKCIVCKKEINFSTKYYKCSVTSCDKKRAPAQFCSVDCWGVHSSTLNHKSAWAEEFHSPSKSEWQSAPKVRIVTGKSSSSDSNSSNENLPNDILVVVSKMKAYVKAKGDLNTSADVSDALSDIIRHECDKAIERARADGRKTLMGKDF</mol_seq>
+																														<uri>/entry/A0A2G8HQZ1</uri>
+																														<domain_architecture length="154">
+																															<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="38" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="42" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																															<domain from="67" to="72" confidence="0.000000001">Other</domain>
+																															<domain from="103" to="114" confidence="0.000000001">Histone fold</domain>
+																															<domain from="121" to="143" confidence="0.000000001">Histone fold</domain>
+																															<domain from="151" to="153" confidence="0.000000001">Histone fold</domain>
+																														</domain_architecture>
+																													</sequence>
+																												</clade>
+																											</clade>
+																											<clade>
+																												<name>A0A1Y5FHQ1</name>
+																												<branch_length>0.2355937666</branch_length>
+																												<taxonomy>
+																													<code>Bdellovibrionota</code>
+																												</taxonomy>
+																												<sequence type="aa">
+																													<mol_seq is_aligned="false">MDQNYWRKCIVCKKEINFSTKYYKCSVGGCDKKRAPAQFCSVDCWGVHSSTLNHKSAWSEEYHSPSKAEWESAPKVRIITPKTTTSETSSSLSNSDIPNDVLVVVSKLKAYIKASSDMNTSSDVNDALSDIIRRECDRAVESAKADGRRTVMARDF</mol_seq>
+																													<uri>/entry/A0A1Y5FHQ1</uri>
+																													<domain_architecture length="156">
+																														<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="38" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="42" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="67" to="72" confidence="0.000000001">Other</domain>
+																														<domain from="105" to="116" confidence="0.000000001">Histone fold</domain>
+																														<domain from="123" to="145" confidence="0.000000001">Histone fold</domain>
+																														<domain from="153" to="155" confidence="0.000000001">Histone fold</domain>
+																													</domain_architecture>
+																												</sequence>
+																											</clade>
+																										</clade>
+																										<clade>
+																											<name>A0A2E4D9Z6</name>
+																											<branch_length>0.425556722</branch_length>
+																											<taxonomy>
+																												<code>Bdellovibrionota</code>
+																											</taxonomy>
+																											<sequence type="aa">
+																												<mol_seq is_aligned="false">MSDQNYWRKCIVCKNEIGFSTKYYKCSVSSCDKKRSPAQFCSVECWDVHRSIMSHKSAGADEYQSPSKAQWMAEQSSEPKVRIIKSHSTPQNSGGGSGVDYDDILVVVSKMKNYVKAQSGLNVSGDVNSVLSDIIRQACDQAIIKARADGRKTMMARDFDV</mol_seq>
+																												<uri>/entry/A0A2E4D9Z6</uri>
+																												<domain_architecture length="161">
+																													<domain from="6" to="6" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="16" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="29" to="33" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="36" to="37" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="39" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="43" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="68" to="76" confidence="0.000000001">Other</domain>
+																													<domain from="108" to="119" confidence="0.000000001">Histone fold</domain>
+																													<domain from="127" to="148" confidence="0.000000001">Histone fold</domain>
+																													<domain from="156" to="158" confidence="0.000000001">Histone fold</domain>
+																												</domain_architecture>
+																											</sequence>
+																										</clade>
+																									</clade>
+																									<clade>
+																										<branch_length>0.0522751952</branch_length>
+																										<confidence type="unknown">65.0</confidence>
+																										<clade>
+																											<branch_length>0.0383050658</branch_length>
+																											<confidence type="unknown">36.0</confidence>
+																											<clade>
+																												<branch_length>0.0616546967</branch_length>
+																												<confidence type="unknown">61.0</confidence>
+																												<clade>
+																													<branch_length>0.0685619196</branch_length>
+																													<confidence type="unknown">37.0</confidence>
+																													<clade>
+																														<branch_length>0.1322931264</branch_length>
+																														<confidence type="unknown">99.0</confidence>
+																														<clade>
+																															<name>A0A2H0Q996</name>
+																															<branch_length>0.2609734188</branch_length>
+																															<taxonomy>
+																																<code>Bdellovibrionota</code>
+																															</taxonomy>
+																															<sequence type="aa">
+																																<mol_seq is_aligned="false">MENNYWRKCSTCKKEIGFNSIYQKCSVSTCRKNIYCSVTCWDVHNPIMNHKSAWAEEERAPSKDAALAEQSREPKRILVTSSKPQSSNNDYPKEILIVASKLKSYVKDRYDINTSAGVMDKLSDLVRELTDRAVSNAKAEGRKTLMDRDF</mol_seq>
+																																<uri>/entry/A0A2H0Q996</uri>
+																																<domain_architecture length="150">
+																																	<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="15" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="28" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="34" to="35" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="38" to="48" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="55" to="59" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="63" to="71" confidence="0.000000001">Other</domain>
+																																	<domain from="99" to="110" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="117" to="139" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="147" to="149" confidence="0.000000001">Histone fold</domain>
+																																</domain_architecture>
+																															</sequence>
+																														</clade>
+																														<clade>
+																															<name>A0A2E5JLJ4</name>
+																															<branch_length>0.2296660236</branch_length>
+																															<taxonomy>
+																																<code>Bdellovibrionota</code>
+																															</taxonomy>
+																															<sequence type="aa">
+																																<mol_seq is_aligned="false">MENNYWRKCSTCKKEINFNAIYQKCSVSTCRKNVYCSVTCWDVHNPIMNHKSSWAEEERAPSKEQAANEREPRRIIVSAPKSSTQGSSNDFPLDTLIVASKLKNYIKERHDMNTSANVMDKLSDLVRELSDQAVLRARQDGRKTLMDRDF</mol_seq>
+																																<uri>/entry/A0A2E5JLJ4</uri>
+																																<domain_architecture length="150">
+																																	<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="15" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="28" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="34" to="35" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="38" to="48" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="55" to="59" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="63" to="67" confidence="0.000000001">Other</domain>
+																																	<domain from="99" to="110" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="117" to="139" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="147" to="149" confidence="0.000000001">Histone fold</domain>
+																																</domain_architecture>
+																															</sequence>
+																														</clade>
+																													</clade>
+																													<clade>
+																														<branch_length>0.1711477779</branch_length>
+																														<confidence type="unknown">94.0</confidence>
+																														<clade>
+																															<name>A0A944TTU9</name>
+																															<branch_length>0.3126502286</branch_length>
+																															<taxonomy>
+																																<code>Bdellovibrionota</code>
+																															</taxonomy>
+																															<sequence type="aa">
+																																<mol_seq is_aligned="false">MSQSFWRKCATCKKEIGHLKIYQKCSVSSCRKNVYCSVTCWDVHVPVMNHKSAWAEEMTAPGPEAASDERPKRRIIVGSKPKESIIPKGDFPIDVLIVASKLKNYVKEKHGMNTSGNVMEALSEVVRRATDDAVEKATIDGRKTLMDRDF</mol_seq>
+																																<uri>/entry/A0A944TTU9</uri>
+																																<domain_architecture length="150">
+																																	<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="28" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="34" to="35" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="38" to="47" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="55" to="59" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="63" to="63" confidence="0.000000001">Other</domain>
+																																	<domain from="99" to="110" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="117" to="139" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="147" to="149" confidence="0.000000001">Histone fold</domain>
+																																</domain_architecture>
+																															</sequence>
+																														</clade>
+																														<clade>
+																															<name>A0A944R9X3</name>
+																															<branch_length>0.6267572006</branch_length>
+																															<taxonomy>
+																																<code>Bdellovibrionota</code>
+																															</taxonomy>
+																															<sequence type="aa">
+																																<mol_seq is_aligned="false">MSEKEKFWRRCGTCKKEIPYGAIYQACSVSTCRKTVYCSVDCWDEHVPVMNHRTSWAEENRAPTTPVEDGDGPESRPPRRIKIPSASGKSIASQGSYSQEVLVISSRLKGYVKDKHGMNTAANVMEHLSSMIRIEVDKAIEVARAEGRKTLMDRDFS</mol_seq>
+																																<uri>/entry/A0A944R9X3</uri>
+																																<domain_architecture length="157">
+																																	<domain from="7" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="36" to="37" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="40" to="50" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="57" to="61" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="97" to="98" confidence="0.000000001">Other</domain>
+																																	<domain from="105" to="116" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="122" to="145" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="153" to="156" confidence="0.000000001">Histone fold</domain>
+																																</domain_architecture>
+																															</sequence>
+																														</clade>
+																													</clade>
+																												</clade>
+																												<clade>
+																													<branch_length>0.0456172751</branch_length>
+																													<confidence type="unknown">41.0</confidence>
+																													<clade>
+																														<name>A0A1F3VA77</name>
+																														<branch_length>0.4844402854</branch_length>
+																														<taxonomy>
+																															<code>Bdellovibrionota</code>
+																														</taxonomy>
+																														<sequence type="aa">
+																															<mol_seq is_aligned="false">MDEVINENFWRRCGSCKKEIKYGAFYQACSVSSCRKLIFCSVTCWDVHVPVMNHKSAYAEERVAPQKQQLLAQSISQGAALTTERAARRILIQTPKVPNEQEANADDILIVASKLKSFVKSKYDMNTSASVFERLSDIVRRTTADACERAGADGRKTVMDRDFE</mol_seq>
+																															<uri>/entry/A0A1F3VA77</uri>
+																															<domain_architecture length="164">
+																																<domain from="9" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																<domain from="11" to="12" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																<domain from="19" to="21" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																<domain from="25" to="29" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																<domain from="32" to="34" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																<domain from="38" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																<domain from="42" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																<domain from="67" to="69" confidence="0.000000001">Other</domain>
+																																<domain from="71" to="72" confidence="0.000000001">Other</domain>
+																																<domain from="112" to="123" confidence="0.000000001">Histone fold</domain>
+																																<domain from="130" to="152" confidence="0.000000001">Histone fold</domain>
+																																<domain from="160" to="163" confidence="0.000000001">Histone fold</domain>
+																															</domain_architecture>
+																														</sequence>
+																													</clade>
+																													<clade>
+																														<branch_length>0.2296650309</branch_length>
+																														<confidence type="unknown">100.0</confidence>
+																														<clade>
+																															<name>A0A2K9NTN0</name>
+																															<branch_length>0.3207513445</branch_length>
+																															<taxonomy>
+																																<code>Bdellovibrionota</code>
+																															</taxonomy>
+																															<sequence type="aa">
+																																<mol_seq is_aligned="false">MSELTYWRKCGSCKKEIGFNTIYQACNVSTCRKLVFCSVDCWNLHNPVMNHKSSWAEENRSPRKEDYNPASDDSAPRRVIVSNKPATASGAEVVGAANEEDILIVASKLKQYIKDKYDMNTSANVMEALSSIVRRHTDRAVQKARMEGRKTVMDRDFE</mol_seq>
+																																<uri>/entry/A0A2K9NTN0</uri>
+																																<domain_architecture length="158">
+																																	<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="16" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="29" to="31" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="35" to="36" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="39" to="49" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="56" to="60" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="106" to="117" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="124" to="146" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="154" to="156" confidence="0.000000001">Histone fold</domain>
+																																</domain_architecture>
+																															</sequence>
+																														</clade>
+																														<clade>
+																															<name>A0A849TM97</name>
+																															<branch_length>0.148836251</branch_length>
+																															<taxonomy>
+																																<code>Bdellovibrionota</code>
+																															</taxonomy>
+																															<sequence type="aa">
+																																<mol_seq is_aligned="false">MSENNELNYWRKCGSCKKEIGFNTIYQVCNVSSCRKLVFCSVDCWDLHNPVMNHKSSWAEENRSPSKNNDSGPRRILVNPGAPSQNSNSISNDEILIVASKLKQYIKDKHDMSTSANVMEILSHIVRRHTDDAVEKARSEGRKTVMDRDF</mol_seq>
+																																<uri>/entry/A0A849TM97</uri>
+																																<domain_architecture length="150">
+																																	<domain from="11" to="12" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="19" to="20" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="25" to="29" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="38" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="42" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																																	<domain from="99" to="110" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="117" to="139" confidence="0.000000001">Histone fold</domain>
+																																	<domain from="147" to="149" confidence="0.000000001">Histone fold</domain>
+																																</domain_architecture>
+																															</sequence>
+																														</clade>
+																													</clade>
+																												</clade>
+																											</clade>
+																											<clade>
+																												<name>A0A2E3XTR4</name>
+																												<branch_length>0.4718853722</branch_length>
+																												<taxonomy>
+																													<code>Bdellovibrionota</code>
+																												</taxonomy>
+																												<sequence type="aa">
+																													<mol_seq is_aligned="false">MNSFWKKCGVCKKEIGFQRAYQKCSISSCKKHAFCSVDCWAVHDSVMGHKSAYAEEERSPSAAEFQSKQESSSSQQRPRRRIVVNSPTENSSSPSHSSKGDLPSETLIVVSKLKNYVKAKSGMNTSGDVPDELSNFVRAIVNRAVDEAHKEGRKTLMARDFKNIEIN</mol_seq>
+																													<uri>/entry/A0A2E3XTR4</uri>
+																													<domain_architecture length="167">
+																														<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="27" to="29" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="34" to="34" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="37" to="47" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="54" to="58" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="62" to="68" confidence="0.000000001">Other</domain>
+																														<domain from="110" to="121" confidence="0.000000001">Histone fold</domain>
+																														<domain from="129" to="150" confidence="0.000000001">Histone fold</domain>
+																														<domain from="158" to="161" confidence="0.000000001">Histone fold</domain>
+																													</domain_architecture>
+																												</sequence>
+																											</clade>
+																										</clade>
+																										<clade>
+																											<name>A0A2E3W293</name>
+																											<branch_length>0.5028010857</branch_length>
+																											<taxonomy>
+																												<code>Bdellovibrionota</code>
+																											</taxonomy>
+																											<sequence type="aa">
+																												<mol_seq is_aligned="false">MSDVWRNCSVCKKPIKQGSTYQKCSVSSCRKSAYCSVDCWDSHLPIMNHKSAWAEEEKAPYESYSDERSPRRRIVASKPSVEKKVSSNLPQDILIVVSKMKNYIKAKSDMNTSADVADKLSDVVRAFCDEAIEEAQKEGRKTVMGRDFKKPY</mol_seq>
+																												<uri>/entry/A0A2E3W293</uri>
+																												<domain_architecture length="152">
+																													<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="27" to="29" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="33" to="34" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="37" to="47" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="54" to="58" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="97" to="108" confidence="0.000000001">Histone fold</domain>
+																													<domain from="115" to="137" confidence="0.000000001">Histone fold</domain>
+																													<domain from="145" to="147" confidence="0.000000001">Histone fold</domain>
+																												</domain_architecture>
+																											</sequence>
+																										</clade>
+																									</clade>
+																								</clade>
+																								<clade>
+																									<branch_length>0.0610984588</branch_length>
+																									<confidence type="unknown">57.0</confidence>
+																									<clade>
+																										<name>A0A958NUE0</name>
+																										<branch_length>0.6630550235</branch_length>
+																										<taxonomy>
+																											<code>Bdellovibrionota</code>
+																										</taxonomy>
+																										<sequence type="aa">
+																											<mol_seq is_aligned="false">MNEPSVWKKCSTCKKEIPFRSKYWACNVSTCNVKRKSFAFCSVECWDAHIPVMNHRSAWSEEKMAPSREEWARVLAEPTEGKVSLPKGERKMEQPSAPNSDEILVVASKLKAYIRDRSGMNTSKDTLEALSDMIRNAADNAIDKARTDGRKTVMARDF</mol_seq>
+																											<uri>/entry/A0A958NUE0</uri>
+																											<domain_architecture length="158">
+																												<domain from="6" to="6" confidence="0.000000001">ZZ-type zinc finger</domain>
+																												<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+																												<domain from="16" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+																												<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+																												<domain from="29" to="31" confidence="0.000000001">ZZ-type zinc finger</domain>
+																												<domain from="40" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+																												<domain from="43" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																												<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+																												<domain from="68" to="74" confidence="0.000000001">Other</domain>
+																												<domain from="107" to="118" confidence="0.000000001">Histone fold</domain>
+																												<domain from="125" to="147" confidence="0.000000001">Histone fold</domain>
+																												<domain from="155" to="157" confidence="0.000000001">Histone fold</domain>
+																											</domain_architecture>
+																										</sequence>
+																									</clade>
+																									<clade>
+																										<branch_length>0.126827934</branch_length>
+																										<confidence type="unknown">98.0</confidence>
+																										<clade>
+																											<branch_length>0.3008507521</branch_length>
+																											<confidence type="unknown">100.0</confidence>
+																											<clade>
+																												<name>A0A958K9Z0</name>
+																												<branch_length>0.4163590575</branch_length>
+																												<taxonomy>
+																													<code>Bdellovibrionota</code>
+																												</taxonomy>
+																												<sequence type="aa">
+																													<mol_seq is_aligned="false">MENTEQSFWKKCSICKKEIAYGANFYLCSVSTCRHPRTGYRFCSVQCWDGHLGYVRHRESWAEDAVAPLKPSSTESTSVPVRKVAGDTSVRRIIADEKASDAVPNRKIKTDVLVVVSKVKKLIAEQAEMNTSQCCIDALTDKVVDECLKAIVRARESGRKTVMGRDVK</mol_seq>
+																													<uri>/entry/A0A958K9Z0</uri>
+																													<domain_architecture length="168">
+																														<domain from="8" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="10" to="11" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="18" to="20" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="24" to="28" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="31" to="34" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="42" to="42" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="45" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="62" to="66" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="116" to="127" confidence="0.000000001">Histone fold</domain>
+																														<domain from="133" to="156" confidence="0.000000001">Histone fold</domain>
+																														<domain from="164" to="166" confidence="0.000000001">Histone fold</domain>
+																													</domain_architecture>
+																												</sequence>
+																											</clade>
+																											<clade>
+																												<name>A0A958Q5C4</name>
+																												<branch_length>0.5221118699</branch_length>
+																												<taxonomy>
+																													<code>Bdellovibrionota</code>
+																												</taxonomy>
+																												<sequence type="aa">
+																													<mol_seq is_aligned="false">MTPDPTYWKKCSTCKKEIGFSTKYYLCSVSTCKHKRKGFTFCSPSCWSEHLAFANHRESWAEDYMSPTKKEFMAQSSDTDDTTPDQPRRKIISDGTPKKSAKTETLVVVSKVKQFIKDQSGMNTSQCCIDRLTEKVVYEALKGIEEARASGRKTVMGRDIL</mol_seq>
+																													<uri>/entry/A0A958Q5C4</uri>
+																													<domain_architecture length="161">
+																														<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="17" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="40" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="44" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																														<domain from="69" to="74" confidence="0.000000001">Other</domain>
+																														<domain from="109" to="120" confidence="0.000000001">Histone fold</domain>
+																														<domain from="126" to="149" confidence="0.000000001">Histone fold</domain>
+																														<domain from="157" to="159" confidence="0.000000001">Histone fold</domain>
+																													</domain_architecture>
+																												</sequence>
+																											</clade>
+																										</clade>
+																										<clade>
+																											<name>A0A2H0PM38</name>
+																											<branch_length>0.6538038887</branch_length>
+																											<taxonomy>
+																												<code>delta/epsilon subdivisions</code>
+																											</taxonomy>
+																											<sequence type="aa">
+																												<mol_seq is_aligned="false">MIYYAAMAGIWRRCSSCKSEILQGTPYYVCSVSTCQQKRTNYAFCSVECWDQHIPVERHRGDSVSANEKRAPMVDESQESVSTGPNPPAQRRTIVTSGGANSAPPPSSSSTSVDGEILVVASKVKKYISDRSGMNTSASAFEGLTDRIRWLCDKAIEKAREDGRKTVMDRDIP</mol_seq>
+																												<uri>/entry/A0A2H0PM38</uri>
+																												<domain_architecture length="173">
+																													<domain from="10" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="12" to="13" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="20" to="22" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="26" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="33" to="36" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="44" to="44" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="47" to="54" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="61" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="66" to="70" confidence="0.000000001">ZZ-type zinc finger</domain>
+																													<domain from="121" to="132" confidence="0.000000001">Histone fold</domain>
+																													<domain from="138" to="161" confidence="0.000000001">Histone fold</domain>
+																													<domain from="169" to="171" confidence="0.000000001">Histone fold</domain>
+																												</domain_architecture>
+																											</sequence>
+																										</clade>
+																									</clade>
+																								</clade>
+																							</clade>
+																							<clade>
+																								<name>A0A924AUR5</name>
+																								<branch_length>0.5000800917</branch_length>
+																								<taxonomy>
+																									<code>Bdellovibrionota</code>
+																								</taxonomy>
+																								<sequence type="aa">
+																									<mol_seq is_aligned="false">MSEVANLWKKCSSCKKPIFLGSHYYECSVSTCTGDRTGYVFCSVGCWEAHIPGANHRSSAGAIEKFAPKTLEARRIIPVASPAVTASSSSGKSSSMSNEVLVVVSKMKQYIRDTSDFNTSEDVNQVLSNMVRIACDRAVEKAKVQGRKTVMAKDFSF</mol_seq>
+																									<uri>/entry/A0A924AUR5</uri>
+																									<domain_architecture length="157">
+																										<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="30" to="33" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="40" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="44" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="62" to="66" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="104" to="115" confidence="0.000000001">Histone fold</domain>
+																										<domain from="121" to="144" confidence="0.000000001">Histone fold</domain>
+																										<domain from="152" to="154" confidence="0.000000001">Histone fold</domain>
+																									</domain_architecture>
+																								</sequence>
+																							</clade>
+																						</clade>
+																						<clade>
+																							<branch_length>0.0388973058</branch_length>
+																							<confidence type="unknown">95.0</confidence>
+																							<clade>
+																								<name>A0A1F3SRL5</name>
+																								<branch_length>0.3810614817</branch_length>
+																								<taxonomy>
+																									<code>Bdellovibrionota</code>
+																								</taxonomy>
+																								<sequence type="aa">
+																									<mol_seq is_aligned="false">MQNSDGWRKCSTCKKIIGFEQKYYECSVSTCNGQRTGYVFCSIACWDAHVPGAKHRDAAAVEQKSPLTNRVPIEPARRIISQQPNIPKDILIVASKLKDYIRARSEMNTSADVMNVLSDFVRLKCDQAIDKARSDGRKTVLDRDFK</mol_seq>
+																									<uri>/entry/A0A1F3SRL5</uri>
+																									<domain_architecture length="146">
+																										<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="16" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="40" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="43" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="94" to="105" confidence="0.000000001">Histone fold</domain>
+																										<domain from="113" to="134" confidence="0.000000001">Histone fold</domain>
+																										<domain from="142" to="145" confidence="0.000000001">Histone fold</domain>
+																									</domain_architecture>
+																								</sequence>
+																							</clade>
+																							<clade>
+																								<branch_length>0.2459840459</branch_length>
+																								<confidence type="unknown">100.0</confidence>
+																								<clade>
+																									<name>A0A849WVR3</name>
+																									<branch_length>0.3019068646</branch_length>
+																									<taxonomy>
+																										<code>Bdellovibrionota</code>
+																									</taxonomy>
+																									<sequence type="aa">
+																										<mol_seq is_aligned="false">MNQEESNWRECSSCKKGIAYNTKYYECSVSTCNGFRTGYVFCSVPCWERHVPGAKHRDASAIEKMSPKKENIQVRRIVAGAASTHTTSVVTGAQKNVDNEILVVVSKVKAYIKSQADMNVSDEIMETLSTRIRFFCDEAIKKARSDGRKTVLDRDMR</mol_seq>
+																										<uri>/entry/A0A849WVR3</uri>
+																										<domain_architecture length="157">
+																											<domain from="7" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="40" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="44" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="105" to="116" confidence="0.000000001">Histone fold</domain>
+																											<domain from="123" to="145" confidence="0.000000001">Histone fold</domain>
+																											<domain from="153" to="156" confidence="0.000000001">Histone fold</domain>
+																										</domain_architecture>
+																									</sequence>
+																								</clade>
+																								<clade>
+																									<name>A0A258VR48</name>
+																									<branch_length>0.3538149786</branch_length>
+																									<taxonomy>
+																										<code>Bdellovibrionota</code>
+																									</taxonomy>
+																									<sequence type="aa">
+																										<mol_seq is_aligned="false">MNHWKPCSSCKKEIGFNTKYYECSVSTCTGSRTGYVFCSVQCWERHVPGAKHRDAAAVEKRSPTLAEYEKSADVAVSAGGQRRIIASSSTSSSAVGKKDENEILVVVSKVKAYIKSQADMNVSDEIMDILSHRIRYFCDQAIKHAQADGRKTIQDKDMKV</mol_seq>
+																										<uri>/entry/A0A258VR48</uri>
+																										<domain_architecture length="160">
+																											<domain from="3" to="3" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="5" to="6" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="13" to="15" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="19" to="23" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="26" to="29" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="37" to="37" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="40" to="47" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="57" to="61" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="65" to="70" confidence="0.000000001">Other</domain>
+																											<domain from="107" to="118" confidence="0.000000001">Histone fold</domain>
+																											<domain from="125" to="147" confidence="0.000000001">Histone fold</domain>
+																											<domain from="155" to="157" confidence="0.000000001">Histone fold</domain>
+																										</domain_architecture>
+																									</sequence>
+																								</clade>
+																							</clade>
+																						</clade>
+																					</clade>
+																					<clade>
+																						<branch_length>0.0699736562</branch_length>
+																						<confidence type="unknown">73.0</confidence>
+																						<clade>
+																							<branch_length>0.0725720205</branch_length>
+																							<confidence type="unknown">98.0</confidence>
+																							<clade>
+																								<branch_length>0.0913383131</branch_length>
+																								<confidence type="unknown">97.0</confidence>
+																								<clade>
+																									<name>A0A958RTG7</name>
+																									<branch_length>0.2645583726</branch_length>
+																									<taxonomy>
+																										<code>Bdellovibrionota</code>
+																									</taxonomy>
+																									<sequence type="aa">
+																										<mol_seq is_aligned="false">MNISDQFWKKCSSCKSEIPFKTKYYVCNVSTCNGKRTGLVFCSIPCFERHLPGARHKDAYAIEEISPARSNSIPTRRIISAKPESKNSTTTQHNLPKETLVVVSKLKDYIQKSSGMNTSASCMSILSDLIRVACDQAIDNARKDGRKTVLDRDFKK</mol_seq>
+																										<uri>/entry/A0A958RTG7</uri>
+																										<domain_architecture length="156">
+																											<domain from="6" to="6" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="17" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="44" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="103" to="114" confidence="0.000000001">Histone fold</domain>
+																											<domain from="121" to="143" confidence="0.000000001">Histone fold</domain>
+																											<domain from="151" to="153" confidence="0.000000001">Histone fold</domain>
+																										</domain_architecture>
+																									</sequence>
+																								</clade>
+																								<clade>
+																									<name>A0A958PA01</name>
+																									<branch_length>0.4481754643</branch_length>
+																									<taxonomy>
+																										<code>Bdellovibrionota</code>
+																									</taxonomy>
+																									<sequence type="aa">
+																										<mol_seq is_aligned="false">MWAKCSSCKSEILNGQRYYVCNVSSCNKKRGGYVFCSVPCFERHVPVERHKDAYAIEEKAPAHGTKEVAEPATGQKRIIAQSFDSKAEKVLTRKSTVPREILIVASKLKDYIKKTSDMNTSAQVMSVLSDKVRELCDEAIEEARKEGRKTVLDRDFK</mol_seq>
+																										<uri>/entry/A0A958PA01</uri>
+																										<domain_architecture length="157">
+																											<domain from="3" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="11" to="12" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="17" to="21" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="35" to="35" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="38" to="45" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="55" to="59" confidence="0.000000001">ZZ-type zinc finger</domain>
+																											<domain from="105" to="116" confidence="0.000000001">Histone fold</domain>
+																											<domain from="123" to="145" confidence="0.000000001">Histone fold</domain>
+																											<domain from="153" to="155" confidence="0.000000001">Histone fold</domain>
+																										</domain_architecture>
+																									</sequence>
+																								</clade>
+																							</clade>
+																							<clade>
+																								<name>A0A958PWB4</name>
+																								<branch_length>0.5203350864</branch_length>
+																								<taxonomy>
+																									<code>Bdellovibrionota</code>
+																								</taxonomy>
+																								<sequence type="aa">
+																									<mol_seq is_aligned="false">MQNYWRKCSTCKKEIGFKTKYYVCSVSSCNGKRTGLVFCSTSCFERHLPFARHKDASALEELSPLKANVEEASTPVSTPKRRIIASAPTVPGSSIQPSHSVVTHDILVVASKLKDYIRARSEMNTSASCLTALSDILRKECDKAIENARADGRKTVMDRDFK</mol_seq>
+																									<uri>/entry/A0A958PWB4</uri>
+																									<domain_architecture length="162">
+																										<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="38" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="41" to="50" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="110" to="121" confidence="0.000000001">Histone fold</domain>
+																										<domain from="127" to="150" confidence="0.000000001">Histone fold</domain>
+																										<domain from="158" to="160" confidence="0.000000001">Histone fold</domain>
+																									</domain_architecture>
+																								</sequence>
+																							</clade>
+																						</clade>
+																						<clade>
+																							<branch_length>0.4335293119</branch_length>
+																							<confidence type="unknown">100.0</confidence>
+																							<clade>
+																								<name>A0A958LPF2</name>
+																								<branch_length>0.3568826725</branch_length>
+																								<taxonomy>
+																									<code>Bdellovibrionota</code>
+																								</taxonomy>
+																								<sequence type="aa">
+																									<mol_seq is_aligned="false">MEVSTQYWRKCSSCKKEIPYRHSYYQCNVSTCNRKRTGLVFCSVSCFERHLPGARHRDAYAIEETSPSLEQWRREVEAEEVQSQPSPPTTTGSAINSTPTRRIIPATKNSTSSPKKSSSPSDREILVVASKVKDYIRRHSDMNTSASALQALSDHVRRLCDEAIDVAREDGRKTVMDRDFRS</mol_seq>
+																									<uri>/entry/A0A958LPF2</uri>
+																									<domain_architecture length="182">
+																										<domain from="7" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="40" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="44" to="48" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="51" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="69" to="79" confidence="0.000000001">Other</domain>
+																										<domain from="123" to="123" confidence="0.000000001">Other</domain>
+																										<domain from="129" to="139" confidence="0.000000001">Histone fold</domain>
+																										<domain from="146" to="169" confidence="0.000000001">Histone fold</domain>
+																										<domain from="177" to="179" confidence="0.000000001">Histone fold</domain>
+																									</domain_architecture>
+																								</sequence>
+																							</clade>
+																							<clade>
+																								<name>A0A958RJI1</name>
+																								<branch_length>0.1588074089</branch_length>
+																								<taxonomy>
+																									<code>Bdellovibrionota</code>
+																								</taxonomy>
+																								<sequence type="aa">
+																									<mol_seq is_aligned="false">IPYRHAYYQCNVSTCNRKRTGLVFCSVSCFEQHLPGARHRDAYAIEETSPTFEQWKREVTAEESPPAANPPSTPSSGPTRRIIPAQNSTSSVPSQRASAADREVLVVASKVKDYIRRHSDMNTSASAMQALSDHVRRLCDQAIDVAREDGRKTVMDRDFRP</mol_seq>
+																									<uri>/entry/A0A958RJI1</uri>
+																									<domain_architecture length="161">
+																										<domain from="6" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="23" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="27" to="34" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="44" to="48" confidence="0.000000001">ZZ-type zinc finger</domain>
+																										<domain from="52" to="61" confidence="0.000000001">Other</domain>
+																										<domain from="101" to="102" confidence="0.000000001">Other</domain>
+																										<domain from="108" to="118" confidence="0.000000001">Histone fold</domain>
+																										<domain from="125" to="148" confidence="0.000000001">Histone fold</domain>
+																										<domain from="156" to="158" confidence="0.000000001">Histone fold</domain>
+																									</domain_architecture>
+																								</sequence>
+																							</clade>
+																						</clade>
+																					</clade>
+																				</clade>
+																				<clade>
+																					<branch_length>0.0868649714</branch_length>
+																					<confidence type="unknown">99.0</confidence>
+																					<clade>
+																						<name>A0A150WPP9</name>
+																						<branch_length>0.3187932351</branch_length>
+																						<taxonomy>
+																							<code>Bdellovibrionota</code>
+																						</taxonomy>
+																						<sequence type="aa">
+																							<mol_seq is_aligned="false">MNMTDANFWKKCSTCKKPIGFGARYYVCSVSTCNGERTGYVFCSISCFDAHLPGARHRQAGAIEKMAPKSATETSSRTLIKPAPVAGASTSTFSGAKPVPKDVLIIASRLKEYVTARSDFNTSASVMDVLSEYVRVVTDRAIDNARADGRKTVLDRDFDFLHKT</mol_seq>
+																							<uri>/entry/A0A150WPP9</uri>
+																							<domain_architecture length="164">
+																								<domain from="8" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="10" to="11" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="18" to="20" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="24" to="28" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="42" to="42" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="45" to="49" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="52" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="62" to="66" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="107" to="117" confidence="0.000000001">Histone fold</domain>
+																								<domain from="125" to="147" confidence="0.000000001">Histone fold</domain>
+																								<domain from="155" to="161" confidence="0.000000001">Histone fold</domain>
+																							</domain_architecture>
+																						</sequence>
+																					</clade>
+																					<clade>
+																						<name>A0A3T0RNW3</name>
+																						<branch_length>0.2434674077</branch_length>
+																						<taxonomy>
+																							<code>Bdellovibrionota</code>
+																						</taxonomy>
+																						<sequence type="aa">
+																							<mol_seq is_aligned="false">MNTTDTTWKKCTICKKSISFGARYYVCNVSTCNGERTGYVFCSVPCFDAHLPGARHRDAGAIEKMAPKSADAPSRILVRPPLSGPAVVSANKSQTPQEVLIIASRLKEYIQARSEFNTSASVMDVLSDHVRILCDRAIDQARAEGRKTVLDRDFDFLKKG</mol_seq>
+																							<uri>/entry/A0A3T0RNW3</uri>
+																							<domain_architecture length="160">
+																								<domain from="7" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="44" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																								<domain from="103" to="113" confidence="0.000000001">Histone fold</domain>
+																								<domain from="121" to="143" confidence="0.000000001">Histone fold</domain>
+																								<domain from="151" to="158" confidence="0.000000001">Histone fold</domain>
+																							</domain_architecture>
+																						</sequence>
+																					</clade>
+																				</clade>
+																			</clade>
+																			<clade>
+																				<name>A0A2H0WAZ4</name>
+																				<branch_length>0.4420477763</branch_length>
+																				<taxonomy>
+																					<code>Bdellovibrionota</code>
+																				</taxonomy>
+																				<sequence type="aa">
+																					<mol_seq is_aligned="false">MEQNQDFWRKCSTCKKPIGFGAKYYVCSVSTCNGQRTGYVFCGMSCFDAHLPGARHRDAGAVEMKAGLQPWSPPGEAAPTRAPERRIAAQQPPVKTYASENKQNTIPREVLIVASRLKEYIDARSGGYNTSASVMDVLSDYVRILCDRAIDQARADGRRTVMDRDFEFLKK</mol_seq>
+																					<uri>/entry/A0A2H0WAZ4</uri>
+																					<domain_architecture length="171">
+																						<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="17" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="44" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="114" to="125" confidence="0.000000001">Histone fold</domain>
+																						<domain from="132" to="155" confidence="0.000000001">Histone fold</domain>
+																						<domain from="163" to="169" confidence="0.000000001">Histone fold</domain>
+																					</domain_architecture>
+																				</sequence>
+																			</clade>
+																		</clade>
+																		<clade>
+																			<branch_length>0.2171783701</branch_length>
+																			<confidence type="unknown">100.0</confidence>
+																			<clade>
+																				<name>K7ZBU6</name>
+																				<branch_length>0.0628440449</branch_length>
+																				<taxonomy>
+																					<code>Bdellovibrionota</code>
+																				</taxonomy>
+																				<sequence type="aa">
+																					<mol_seq is_aligned="false">MEATSATFWRKCSSCKKPINYGSKYFVCSVSTCNNERTGYVFCSVPCFETHLPGARHRDAGAVEKVAPKDAAAAEESHQRAPARIIVKSPTASTPSAPAGSLAAAPQEVLIIASRLKDYIQARSEYNTSASVMDVLSDHVRILCDRAIENARADGRKTVMDRDFEFLKK</mol_seq>
+																					<uri>/entry/K7ZBU6</uri>
+																					<domain_architecture length="169">
+																						<domain from="8" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="10" to="11" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="18" to="20" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="24" to="28" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="41" to="42" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="45" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="62" to="66" confidence="0.000000001">ZZ-type zinc finger</domain>
+																						<domain from="113" to="124" confidence="0.000000001">Histone fold</domain>
+																						<domain from="131" to="153" confidence="0.000000001">Histone fold</domain>
+																						<domain from="161" to="167" confidence="0.000000001">Histone fold</domain>
+																					</domain_architecture>
+																				</sequence>
+																			</clade>
+																			<clade>
+																				<branch_length>0.041174057</branch_length>
+																				<confidence type="unknown">99.0</confidence>
+																				<clade>
+																					<name>Q6MIV3</name>
+																					<branch_length>0.0073849029</branch_length>
+																					<taxonomy>
+																						<code>Bdellovibrionota</code>
+																					</taxonomy>
+																					<sequence type="aa">
+																						<mol_seq is_aligned="false">MCASIVAGDFMEATTTFWRKCSSCKKPINYGSKYFVCSVSTCNNERTGYVFCSVPCFETHLPGARHRDAGAVEKVAPKDAAAAEESHQRAPARIIVKSPTASTSSAPAGSLAAAPQEVLIIASRLKDYIQARSEYNTSASVMDVLSDHVRILCDRAIENARADGRKTVMDRDFEFLKK</mol_seq>
+																						<uri>/entry/Q6MIV3</uri>
+																						<domain_architecture length="178">
+																							<domain from="17" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="19" to="20" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="27" to="29" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="33" to="37" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="51" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="54" to="59" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="71" to="75" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="122" to="133" confidence="0.000000001">Histone fold</domain>
+																							<domain from="140" to="162" confidence="0.000000001">Histone fold</domain>
+																							<domain from="170" to="176" confidence="0.000000001">Histone fold</domain>
+																						</domain_architecture>
+																					</sequence>
+																				</clade>
+																				<clade>
+																					<name>A0A1Z3N5Q0</name>
+																					<branch_length>0.0244044162</branch_length>
+																					<taxonomy>
+																						<code>Bdellovibrionota</code>
+																					</taxonomy>
+																					<sequence type="aa">
+																						<mol_seq is_aligned="false">MEATTAFWRKCSSCKKPINYGSKYFVCSVSTCNNERTGYVFCSVPCFETHLPGARHRDAGAVEKVAPKDAAAAEESHQRAPARIIVKSPTASTSSAPAGSLAAAPQEVLIIASRLKDYIQARSEYNTSASVMDVLSDHVRILCDRAIENARADGRKTVMDRDFEFLKK</mol_seq>
+																						<uri>/entry/A0A1Z3N5Q0</uri>
+																						<domain_architecture length="168">
+																							<domain from="7" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="40" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="44" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="112" to="123" confidence="0.000000001">Histone fold</domain>
+																							<domain from="129" to="152" confidence="0.000000001">Histone fold</domain>
+																							<domain from="160" to="166" confidence="0.000000001">Histone fold</domain>
+																						</domain_architecture>
+																					</sequence>
+																				</clade>
+																			</clade>
+																		</clade>
+																	</clade>
+																	<clade>
+																		<name>A0A317JM14</name>
+																		<branch_length>0.4619699008</branch_length>
+																		<taxonomy>
+																			<code>Bdellovibrionota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MENEELIWKRCSRCKKAIEFGAKYFVCSVSTCNGLRTGYVFCSVHCFESHSPGARHRDAGAIEKFAPLNRASSSSSGGGAGGGITGGVAADASASTPTRRIAIQASSTSSTASAITSAPSQEVLVIASRLKDYIQARAGYNTSASVMDLLSNYLRILCDRAIDEARADGRKTVMDRDFAFLRERLR</mol_seq>
+																			<uri>/entry/A0A317JM14</uri>
+																			<domain_architecture length="186">
+																				<domain from="4" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="44" to="48" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="127" to="138" confidence="0.000000001">Histone fold</domain>
+																				<domain from="145" to="167" confidence="0.000000001">Histone fold</domain>
+																				<domain from="175" to="184" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<name>A0A952NJB3</name>
+																	<branch_length>0.3289106713</branch_length>
+																	<taxonomy>
+																		<code>Bdellovibrionota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MEQMAADGWKKCSVCKKTIGFGQTYYVCSVSTCNGQRTGYVFCSIPCFETHLPGARHRDAAAVEMTAPAKNRIIVRPETTAAVSSGAVKVSTSTGPQEVLVIASRMKDYIQARGDMNTSASVMDVLSEHLRVICNRAIDNARADGRKTVMDRDLGFLKHLK</mol_seq>
+																		<uri>/entry/A0A952NJB3</uri>
+																		<domain_architecture length="161">
+																			<domain from="10" to="11" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="18" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="24" to="28" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="41" to="42" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="45" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="62" to="66" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="103" to="114" confidence="0.000000001">Histone fold</domain>
+																			<domain from="120" to="143" confidence="0.000000001">Histone fold</domain>
+																			<domain from="155" to="159" confidence="0.000000001">Other</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0A952P0H1</name>
+																<branch_length>0.2507519872</branch_length>
+																<taxonomy>
+																	<code>Bdellovibrionota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MSEDISLDHWKKCSVCKKPIGFKAPYYVCSVSTCGGNRTGYVFCRMQCFETHLPGARHRDAGAIEKTSPASATAEGASERAPARLIVRPGGSTAASAPASAAAIPREVLVIASRMKEYIQARADMNTSASVMEVLSDHLRMIADRAIDNARADGRKTVMDRDLEFLKRLKDSGV</mol_seq>
+																	<uri>/entry/A0A952P0H1</uri>
+																	<domain_architecture length="174">
+																		<domain from="9" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="11" to="12" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="19" to="21" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="25" to="29" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="32" to="35" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="42" to="43" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="46" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="63" to="67" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="112" to="123" confidence="0.000000001">Histone fold</domain>
+																		<domain from="129" to="152" confidence="0.000000001">Histone fold</domain>
+																		<domain from="160" to="172" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<name>A0A956F9Y6</name>
+															<branch_length>0.3636238896</branch_length>
+															<taxonomy>
+																<code>Myxococcota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MASPPRPTDEANAWKRCSTCRGPIAFGATYYVCSVSTCNRKRTAYRFCSVECWEEHLPLMRHREAWAVEEKAPSRDAWAQQVEGPAPVPAKRPTLELAPVTEAVPAPVRDSGVPRRRIRVGSAPQPAAPEPGGDVLVVVSRLKSLVKDRWGMNTSDAVMDVLSDHIRSLCRRAADNARADGRKTVMDRDFEFLRRR</mol_seq>
+																<uri>/entry/A0A956F9Y6</uri>
+																<domain_architecture length="196">
+																	<domain from="13" to="13" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="15" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="23" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="29" to="33" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="46" to="47" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="50" to="58" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="67" to="71" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="75" to="82" confidence="0.000000001">Other</domain>
+																	<domain from="139" to="150" confidence="0.000000001">Histone fold</domain>
+																	<domain from="157" to="179" confidence="0.000000001">Histone fold</domain>
+																	<domain from="187" to="193" confidence="0.000000001">Histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+													<clade>
+														<name>A0A935ZFC9</name>
+														<branch_length>0.2705580102</branch_length>
+														<taxonomy>
+															<code>Myxococcota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MVESSEVWKRCSSCKKPLSYGAQYYVCSVSTCTRKRTGFAFCSVDCWETHLPLMRHREAWAVEEVAPTKEAWARELAAEAGDGAGASRPASAAASTATGGSAPAPASAPAVVRRAGEPDRGRRIAVPSAPAEPPPPREVLVIASRLKEYIRQRYGMNTSDGVLEPLSDHLRMLCDRAVLAARDEGRKTVLDRDLAFLDDER</mol_seq>
+															<uri>/entry/A0A935ZFC9</uri>
+															<domain_architecture length="201">
+																<domain from="4" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="44" to="53" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="69" to="78" confidence="0.000000001">Other</domain>
+																<domain from="143" to="154" confidence="0.000000001">Histone fold</domain>
+																<domain from="160" to="183" confidence="0.000000001">Histone fold</domain>
+																<domain from="191" to="194" confidence="0.000000001">Histone fold</domain>
+																<domain from="196" to="199" confidence="0.000000001">Other</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+												<clade>
+													<branch_length>0.0720969447</branch_length>
+													<confidence type="unknown">98.0</confidence>
+													<clade>
+														<name>A0A534U0C7</name>
+														<branch_length>0.2835692606</branch_length>
+														<taxonomy>
+															<code>Myxococcota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MTTDETTWKRCSTCKKPIAFGAAYYACSVSTCNRRAALFAFCSVDCWDGHVPVMRHRDAWANEATAPTAAEWAREEAHEPRRIVVGNATGAADAAAQRGGAAPRDVLIVVSKLKHYIRATSDMNTADDVIAVLSDRVRALCDGAITQARAAGRKTVMARDFSRS</mol_seq>
+															<uri>/entry/A0A534U0C7</uri>
+															<domain_architecture length="164">
+																<domain from="7" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="30" to="32" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="35" to="37" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="40" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="44" to="54" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="69" to="78" confidence="0.000000001">Other</domain>
+																<domain from="110" to="121" confidence="0.000000001">Histone fold</domain>
+																<domain from="128" to="150" confidence="0.000000001">Histone fold</domain>
+																<domain from="158" to="160" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+													<clade>
+														<name>A0A940TIT7</name>
+														<branch_length>0.3148926802</branch_length>
+														<taxonomy>
+															<code>Myxococcota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MTIEDTSTWRRCNTCKKPIAFASGYFTCNVSTCNRKGTDFAFCSVSCWDAHVPVLRHRGAWAEEQQAPTAAQWAARQREQTERAAAPPAAPRPRPAAATPIAAGRSDESSPHDVLVVVSKLKAYIRAKSGMNCSDGVTETLSDRLRSLCDQAIDQARAMGRKTVLDRDFDDVR</mol_seq>
+															<uri>/entry/A0A940TIT7</uri>
+															<domain_architecture length="173">
+																<domain from="8" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="10" to="11" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="18" to="20" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="24" to="28" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="31" to="33" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="42" to="42" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="45" to="55" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="62" to="66" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="70" to="85" confidence="0.000000001">Other</domain>
+																<domain from="118" to="129" confidence="0.000000001">Histone fold</domain>
+																<domain from="136" to="158" confidence="0.000000001">Histone fold</domain>
+																<domain from="166" to="169" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+											</clade>
+											<clade>
+												<branch_length>0.035856696</branch_length>
+												<confidence type="unknown">55.0</confidence>
+												<clade>
+													<branch_length>0.0343405214</branch_length>
+													<confidence type="unknown">56.0</confidence>
+													<clade>
+														<branch_length>0.0151186386</branch_length>
+														<confidence type="unknown">71.0</confidence>
+														<clade>
+															<branch_length>0.1458975293</branch_length>
+															<confidence type="unknown">97.0</confidence>
+															<clade>
+																<name>A0A2D5WC09</name>
+																<branch_length>0.4291394797</branch_length>
+																<taxonomy>
+																	<code>Planctomycetota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MTSEPSFWRRCSSCKTEIGFEQRYWVCSVSTCNRKRTGLIFCSVRCWDTHLPTARHRDAWAVEERSPSLEQVQRAAAGADRRGARKTAAGGSARTSDPRTEILVVVSRLKNFVKESRGMSTSDGVMPILSDHLRYLADQAAQRAERHGRRTILERDMKDALKGDWGEW</mol_seq>
+																	<uri>/entry/A0A2D5WC09</uri>
+																	<domain_architecture length="168">
+																		<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="17" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="44" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="69" to="78" confidence="0.000000001">Other</domain>
+																		<domain from="106" to="117" confidence="0.000000001">Histone fold</domain>
+																		<domain from="124" to="146" confidence="0.000000001">Histone fold</domain>
+																		<domain from="154" to="161" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>A0A2M8BNB0</name>
+																<branch_length>0.4435340137</branch_length>
+																<taxonomy>
+																	<code>delta/epsilon subdivisions</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MEENVYKLCSSCKRGIPFDTKYWVCSVSTCNTKRMGLFFCSVRCWDAHLPEMRHREKWAVEKRSPTRAQHQAALAELADKEARQTAAATKDALPKRVAGASADDAEDLSDEILIVASRLKDYVTDHFALRTSDSVLVALSELVRGLISDAVDRAALDGRKTVMGRDLKKAVLPPKGEVLIVVSRLKKYIKVLSGMNTSNDVVEVLSDHVRIETNAASKRALQAKRETLFARDYQEEP</mol_seq>
+																	<uri>/entry/A0A2M8BNB0</uri>
+																	<domain_architecture length="237">
+																		<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="28" to="31" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="39" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="42" to="46" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="49" to="50" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="67" to="86" confidence="0.000000001">Other</domain>
+																		<domain from="109" to="109" confidence="0.000000001">Other</domain>
+																		<domain from="114" to="114" confidence="0.000000001">Other</domain>
+																		<domain from="116" to="127" confidence="0.000000001">Histone fold</domain>
+																		<domain from="130" to="131" confidence="0.000000001">Histone fold</domain>
+																		<domain from="134" to="156" confidence="0.000000001">Histone fold</domain>
+																		<domain from="161" to="162" confidence="0.000000001">Histone fold</domain>
+																		<domain from="164" to="166" confidence="0.000000001">Histone fold</domain>
+																		<domain from="180" to="180" confidence="0.000000001">Other</domain>
+																		<domain from="182" to="193" confidence="0.000000001">Histone fold</domain>
+																		<domain from="196" to="197" confidence="0.000000001">Histone fold</domain>
+																		<domain from="199" to="222" confidence="0.000000001">Histone fold</domain>
+																		<domain from="227" to="228" confidence="0.000000001">Histone fold</domain>
+																		<domain from="230" to="233" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<branch_length>0.0570676215</branch_length>
+															<confidence type="unknown">96.0</confidence>
+															<clade>
+																<branch_length>0.082852965</branch_length>
+																<confidence type="unknown">98.0</confidence>
+																<clade>
+																	<branch_length>0.0662870775</branch_length>
+																	<confidence type="unknown">99.0</confidence>
+																	<clade>
+																		<branch_length>0.0312622148</branch_length>
+																		<confidence type="unknown">97.0</confidence>
+																		<clade>
+																			<branch_length>0.0681406701</branch_length>
+																			<confidence type="unknown">99.0</confidence>
+																			<clade>
+																				<branch_length>0.0486811956</branch_length>
+																				<confidence type="unknown">100.0</confidence>
+																				<clade>
+																					<name>A0A7W0WZ05</name>
+																					<branch_length>0.2264563909</branch_length>
+																					<taxonomy>
+																						<code>Myxococcota</code>
+																					</taxonomy>
+																					<sequence type="aa">
+																						<mol_seq is_aligned="false">MAEIWKKCTECRIDIVFGATYYQCSVSTCNRTRMPLVFCSVICWDSHLSTVRHRDAGAIEAKAPSKSQWEQELAGETASPAPARPASTPDSVQPVHRRSDETRPNLIPPPPAAATERRVVVATPAPAPAAAAGDLALSDAVDKDVLVVVSKLKKYIKDRSGFNTSDQIFDLISDHVRAICDEAIRCAARNDRKTVLERDMPRPPRR</mol_seq>
+																						<uri>/entry/A0A7W0WZ05</uri>
+																						<domain_architecture length="206">
+																							<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="30" to="31" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="34" to="35" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="37" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="41" to="48" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="66" to="74" confidence="0.000000001">Other</domain>
+																							<domain from="149" to="160" confidence="0.000000001">Histone fold</domain>
+																							<domain from="167" to="189" confidence="0.000000001">Histone fold</domain>
+																							<domain from="197" to="199" confidence="0.000000001">Histone fold</domain>
+																						</domain_architecture>
+																					</sequence>
+																				</clade>
+																				<clade>
+																					<name>A0A7V9RH42</name>
+																					<branch_length>0.2152610337</branch_length>
+																					<taxonomy>
+																						<code>Myxococcota</code>
+																					</taxonomy>
+																					<sequence type="aa">
+																						<mol_seq is_aligned="false">MAETWLKCTECKTEIPFGGKHYLCSVSTCKRSKMRLVFCSVVCWDSHLSTVRHREAWAEDAVAPSREAWQRELAAQAADAEPRRTEPPPHGVRPPVGSSTPVVRRVVGEASPQVAASLEGLTLSEVTDKDVLIVVSKMKKYIKDRSGFNVSDAIAEGLSDHVRLICDDAIRNAARDERKTVLERDVPRARR</mol_seq>
+																						<uri>/entry/A0A7V9RH42</uri>
+																						<domain_architecture length="191">
+																							<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="27" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="32" to="34" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="37" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="41" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="66" to="75" confidence="0.000000001">Other</domain>
+																							<domain from="135" to="146" confidence="0.000000001">Histone fold</domain>
+																							<domain from="152" to="175" confidence="0.000000001">Histone fold</domain>
+																							<domain from="183" to="185" confidence="0.000000001">Histone fold</domain>
+																						</domain_architecture>
+																					</sequence>
+																				</clade>
+																			</clade>
+																			<clade>
+																				<branch_length>0.0813729857</branch_length>
+																				<confidence type="unknown">100.0</confidence>
+																				<clade>
+																					<name>A0A7W0VNZ6</name>
+																					<branch_length>0.1757584149</branch_length>
+																					<taxonomy>
+																						<code>Myxococcota</code>
+																					</taxonomy>
+																					<sequence type="aa">
+																						<mol_seq is_aligned="false">MAEAWMKCTECRTEIPYDVVYWQCSVSTCNRSRMPLYFCSVVCWDSHLSVVRHRDAYAVEVRAPSKESWQKEQADAAAAPQPRAMMVTPDRPLASGSPSGNPAPRPMPQASPPAQVTTRKVVGEAAPGDASLADVADKDQLIVISKLKKYIKDRSGMNCSDAVADMLSDHVRAVCDEAIRAAARDERKTVLDRDVPKTRR</mol_seq>
+																						<uri>/entry/A0A7W0VNZ6</uri>
+																						<domain_architecture length="200">
+																							<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="38" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="41" to="50" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="66" to="76" confidence="0.000000001">Other</domain>
+																							<domain from="144" to="155" confidence="0.000000001">Histone fold</domain>
+																							<domain from="162" to="184" confidence="0.000000001">Histone fold</domain>
+																							<domain from="192" to="194" confidence="0.000000001">Histone fold</domain>
+																						</domain_architecture>
+																					</sequence>
+																				</clade>
+																				<clade>
+																					<name>A0A7W0VF60</name>
+																					<branch_length>0.2436678645</branch_length>
+																					<taxonomy>
+																						<code>Myxococcota</code>
+																					</taxonomy>
+																					<sequence type="aa">
+																						<mol_seq is_aligned="false">MAEMWVKCTECRKEIAYGAAYYQCSVSTCNRSRMPLYFCSVACWDSHLSMVRHRDAYAVEARGPSKEEWATTQANAEPAKPLPQTPDRPPPGAVPMRSVSGPSPTPVAYRSSPSGSTAQVSSAPPVRRVVSDASPSSFEPSFGGPALSSTYDTDILIVVSKLKKYIKDRSGMNCSDSVADMLSEHVRAVADESIRAAARDERKTVLDRDVPKARR</mol_seq>
+																						<uri>/entry/A0A7W0VF60</uri>
+																						<domain_architecture length="215">
+																							<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="37" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="41" to="49" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																							<domain from="66" to="75" confidence="0.000000001">Other</domain>
+																							<domain from="159" to="170" confidence="0.000000001">Histone fold</domain>
+																							<domain from="176" to="199" confidence="0.000000001">Histone fold</domain>
+																							<domain from="207" to="209" confidence="0.000000001">Histone fold</domain>
+																						</domain_architecture>
+																					</sequence>
+																				</clade>
+																			</clade>
+																		</clade>
+																		<clade>
+																			<name>A0A538QVS1</name>
+																			<branch_length>0.1756619873</branch_length>
+																			<taxonomy>
+																				<code>Myxococcota</code>
+																			</taxonomy>
+																			<sequence type="aa">
+																				<mol_seq is_aligned="false">MAETWLKCSACRKDIAFSSKYFQCSVSTCNRARTRLVFCSVPCWDSHVATLRHRDAWAEDKIAPTKAAWERELADLPPDNRLPAAPRSTPAEPARPAPSPPLIRPAAVAAATAAPPAARSAPAAHSAPIAHPAPVAHSAPVAHSAPISAPPSSSASTPVPPRRVVGEPAPASVPGSAPAGVALQDVADRDILIVISKLKKYIKDRSGMNCSDAIAEVLSDHVRALCDDSIRAAGRDDRKTVLERDVPRPRR</mol_seq>
+																				<uri>/entry/A0A538QVS1</uri>
+																				<domain_architecture length="251">
+																					<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="32" to="34" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="38" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="41" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="66" to="75" confidence="0.000000001">Other</domain>
+																					<domain from="195" to="206" confidence="0.000000001">Histone fold</domain>
+																					<domain from="213" to="236" confidence="0.000000001">Histone fold</domain>
+																				</domain_architecture>
+																			</sequence>
+																		</clade>
+																	</clade>
+																	<clade>
+																		<name>A0A7Y6UEK4</name>
+																		<branch_length>0.2384989086</branch_length>
+																		<taxonomy>
+																			<code>Myxococcota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MAETWLKCSACKNPIPYNATHWVCSVSTCNRKATGYVFCTVSCWDSHVADARHRDAWAVEKRAPTKEQWERELAENPPPPAPAPRPAPAPSAPVVRRVVGEASSPTPAPAPSSSGGSTLQLAEAERDILIVVSKMKKYIKDRSGFNCSDAVADMLSDHVRAICDDAIRAAARDERKTVLDRDVPRPIRR</mol_seq>
+																			<uri>/entry/A0A7Y6UEK4</uri>
+																			<domain_architecture length="189">
+																				<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="38" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="41" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="66" to="75" confidence="0.000000001">Other</domain>
+																				<domain from="132" to="143" confidence="0.000000001">Histone fold</domain>
+																				<domain from="150" to="172" confidence="0.000000001">Histone fold</domain>
+																				<domain from="180" to="182" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<branch_length>0.0749002118</branch_length>
+																	<confidence type="unknown">97.0</confidence>
+																	<clade>
+																		<name>A0A9E0IQ25</name>
+																		<branch_length>0.1950718308</branch_length>
+																		<taxonomy>
+																			<code>Myxococcota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MSDDVWMRCSACRRDLRFGATYQECSVSTCNRSRTRLVFCSVSCWDSHVAELRHREAWAVEARAPSRTSWEAERAADAAAAPAAIAATPSAAAAAATRPVAVPEIRRQVVTAGPASSAPAAVAPGDPALVDGVERDMLIVMSKLKKYIRDRSGMNCSDAVADVLSDHVRALCDDSIRAAGRDGRKTVLDRDVPRPRR</mol_seq>
+																			<uri>/entry/A0A9E0IQ25</uri>
+																			<domain_architecture length="197">
+																				<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="28" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="38" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="42" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="67" to="79" confidence="0.000000001">Other</domain>
+																				<domain from="141" to="152" confidence="0.000000001">Histone fold</domain>
+																				<domain from="158" to="181" confidence="0.000000001">Histone fold</domain>
+																				<domain from="189" to="191" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A9E0H8Q1</name>
+																		<branch_length>0.2957976897</branch_length>
+																		<taxonomy>
+																			<code>Myxococcota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MSWMVCSACRRDLNFGAIHWVCSVSTCNRSNTNYKFCSVACWDSHVATLRHRDAWAVEERAPCRADAAPPRPATAPPPASAPPRPVVPSSPPAPRPPIAPSPTPVAAPTPVAPTPVASPPVAPTAGEPVRRMVAAPPPPAPAAPALAQAEAEILIVVSKLKKYIRERSGMNTSDAVADVLSEHVRAICDDAIRTAAADGRKTVLDRDVPRPRR</mol_seq>
+																			<uri>/entry/A0A9E0H8Q1</uri>
+																			<domain_architecture length="213">
+																				<domain from="2" to="2" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="4" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="12" to="14" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="18" to="22" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="35" to="36" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="39" to="49" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="56" to="60" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="146" to="151" confidence="0.000000001">Other</domain>
+																				<domain from="157" to="168" confidence="0.000000001">Histone fold</domain>
+																				<domain from="175" to="197" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0A947CSB7</name>
+																<branch_length>0.4729933192</branch_length>
+																<taxonomy>
+																	<code>Myxococcota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MWKKCSSCRREIDFGAPYWKCSVSTCQRSRTALYFCSVPCWDAHLATANHREAWAVEARAPSKAQWQAEQAAETDSAKVAPARKTVGGTPRKVVAATAAASPNQGAPKDILIVVSKLKKYLREAHGMKTSDACAAVLSDYVRTLCDRAVINAQDAERKTVLDRDFGGVL</mol_seq>
+																	<uri>/entry/A0A947CSB7</uri>
+																	<domain_architecture length="169">
+																		<domain from="3" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="11" to="12" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="17" to="21" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="35" to="35" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="38" to="48" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="55" to="59" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="63" to="71" confidence="0.000000001">Other</domain>
+																		<domain from="114" to="125" confidence="0.000000001">Histone fold</domain>
+																		<domain from="132" to="154" confidence="0.000000001">Histone fold</domain>
+																		<domain from="162" to="166" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+													</clade>
+													<clade>
+														<branch_length>0.0614506957</branch_length>
+														<confidence type="unknown">55.0</confidence>
+														<clade>
+															<branch_length>0.1221133757</branch_length>
+															<confidence type="unknown">65.0</confidence>
+															<clade>
+																<name>A0A958KJA0</name>
+																<branch_length>0.7428438141</branch_length>
+																<taxonomy>
+																	<code>Bdellovibrionota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MNDSNYWRKCTTCKHPIGFGALYYVCSVSTCNRKRSQMVFCNIRCWDAHVPVMNHREASAEERRAPSAQQAQAQARAEASESSSAASGSDILVVASRVKSYILESSGMNTSAGTLEALSTHVREIAKKAIERAKEAGRQTVMARDIKMPEIAAPRRNVVIRRRPQP</mol_seq>
+																	<uri>/entry/A0A958KJA0</uri>
+																	<domain_architecture length="166">
+																		<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="16" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="39" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="43" to="50" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="68" to="80" confidence="0.000000001">Other</domain>
+																		<domain from="95" to="106" confidence="0.000000001">Histone fold</domain>
+																		<domain from="112" to="135" confidence="0.000000001">Histone fold</domain>
+																		<domain from="143" to="145" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>D0LYE7</name>
+																<branch_length>0.208114898</branch_length>
+																<taxonomy>
+																	<code>Myxococcota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MSTSNDSAQDPAERSFWKRCSSCKSEIAFGALHFVCSVSTCNRKRTGMKFCSVPCWEVHLPMMRHREAYAEEERAPSKDAWLREQRAEAEAQESSARRRTVVAPAAKSSTSMDDEILVVASKLKKYIRERSGMNTSDTLLPVLSAHLRVLANQAIRHAAQDGRKTVMDRDLAMPSQRDED</mol_seq>
+																	<uri>/entry/D0LYE7</uri>
+																	<domain_architecture length="180">
+																		<domain from="16" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="18" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="26" to="28" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="32" to="36" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="39" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="49" to="50" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="53" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="70" to="74" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="78" to="97" confidence="0.000000001">Other</domain>
+																		<domain from="120" to="131" confidence="0.000000001">Histone fold</domain>
+																		<domain from="138" to="160" confidence="0.000000001">Histone fold</domain>
+																		<domain from="168" to="170" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<name>A0A3M2DM94</name>
+															<branch_length>0.2928696887</branch_length>
+															<taxonomy>
+																<code>Myxococcota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MSTETWRRCSSCKTDIPFGAKYYACSVSTCNRSRTALYFCSLPCWEAHLPLVRHREAWAEEKVAPARDEWERQRAAEAGGDGARAARKVVAADRRAAPADGDVPHDILIVASKLKAYIRAKSGMRTSDTCLEALSTIVRDACNEAIRRAAADGRQTVMGRDFRRY</mol_seq>
+																<uri>/entry/A0A3M2DM94</uri>
+																<domain_architecture length="165">
+																	<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="39" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="42" to="49" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="67" to="69" confidence="0.000000001">Other</domain>
+																	<domain from="71" to="72" confidence="0.000000001">Other</domain>
+																	<domain from="111" to="122" confidence="0.000000001">Histone fold</domain>
+																	<domain from="129" to="151" confidence="0.000000001">Histone fold</domain>
+																	<domain from="159" to="161" confidence="0.000000001">Histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+												</clade>
+												<clade>
+													<branch_length>0.0297608892</branch_length>
+													<confidence type="unknown">77.0</confidence>
+													<clade>
+														<branch_length>0.0303980489</branch_length>
+														<confidence type="unknown">91.0</confidence>
+														<clade>
+															<branch_length>0.0180699129</branch_length>
+															<confidence type="unknown">88.0</confidence>
+															<clade>
+																<branch_length>0.0720906653</branch_length>
+																<confidence type="unknown">92.0</confidence>
+																<clade>
+																	<branch_length>0.0992278727</branch_length>
+																	<confidence type="unknown">93.0</confidence>
+																	<clade>
+																		<name>W4LSE2</name>
+																		<branch_length>0.5228396896</branch_length>
+																		<taxonomy>
+																			<code>Ca. Tectomicrobia</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MSSDHSIWRSCSTCKKPIAFQQTDYVCSVSTCNRKRNGFFFCSVSCWDAHVPMMRHRESWAEQLTAPTREAWKREQQAEQAPTKTSRTSSASSGTAGGSQDVLIVVSKLKQYIKQQAGLNTSDTVNGVLSDHLRHLCDQAIAHAAEEGRKTVMDRDFEPFLDLQ</mol_seq>
+																			<uri>/entry/W4LSE2</uri>
+																			<domain_architecture length="164">
+																				<domain from="7" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="30" to="32" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="44" to="54" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="69" to="79" confidence="0.000000001">Other</domain>
+																				<domain from="106" to="117" confidence="0.000000001">Histone fold</domain>
+																				<domain from="124" to="146" confidence="0.000000001">Histone fold</domain>
+																				<domain from="154" to="156" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A7Z9G8R7</name>
+																		<branch_length>0.6150521473</branch_length>
+																		<taxonomy>
+																			<code>Myxococcota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MSSESAQWQVCSSCRQPIEFSKTYWVCNVSTCNRKPTNMVFCKVACWDAHVPLMRHRDAWAEEKRAPSKLQWAEEQAAEQENQNQRQRRRRIVPPANLAHSRAEGESVPLDILIVASKLKAYIRARSGMNTSGDVMAVLSDRVRDLCNEAIRNAAMDERKTVLGRDIPELIRRGSDSYGYD</mol_seq>
+																			<uri>/entry/A0A7Z9G8R7</uri>
+																			<domain_architecture length="181">
+																				<domain from="4" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="30" to="33" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="44" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="69" to="89" confidence="0.000000001">Other</domain>
+																				<domain from="116" to="127" confidence="0.000000001">Histone fold</domain>
+																				<domain from="135" to="156" confidence="0.000000001">Histone fold</domain>
+																				<domain from="164" to="166" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<name>A0A955ZH07</name>
+																	<branch_length>0.3016062182</branch_length>
+																	<taxonomy>
+																		<code>Myxococcota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MSDSTWKICSTCKTPIEFGADHYLCSVSTCNRARMGLYFCSVPCWDAHVPMMRHRDAWAEPARAPSRAEWEAEEAKREAAESEERREEAAPKRRIVGAESDDVPKEVLVVVSKLKAYVRARSGMNTSDGVTGPLSDHLRRICDRAIQNAARDGRKTILDRDIPKPE</mol_seq>
+																		<uri>/entry/A0A955ZH07</uri>
+																		<domain_architecture length="166">
+																			<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="28" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="39" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="42" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="67" to="89" confidence="0.000000001">Other</domain>
+																			<domain from="111" to="122" confidence="0.000000001">Histone fold</domain>
+																			<domain from="128" to="151" confidence="0.000000001">Histone fold</domain>
+																			<domain from="159" to="161" confidence="0.000000001">Histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0A928XRJ9</name>
+																<branch_length>0.3244963604</branch_length>
+																<taxonomy>
+																	<code>Myxococcota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MGESTWKVCSTCKRSIGFEQKYWVCSVSTCNRKRIGLFFCSVPCWDAHVPEARHRDAWAEERRAPTALEWQRQREAEEREAEPRDEAVEAPRRRIVSGGGEDELPKDVLIVVSKLKAYVRARSGMNTSDSVTAVLSEHLRKLCNEAIRNAARDGRKTVLDRDFEPLL</mol_seq>
+																	<uri>/entry/A0A928XRJ9</uri>
+																	<domain_architecture length="167">
+																		<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="28" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="39" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="42" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="67" to="81" confidence="0.000000001">Other</domain>
+																		<domain from="112" to="123" confidence="0.000000001">Histone fold</domain>
+																		<domain from="130" to="152" confidence="0.000000001">Histone fold</domain>
+																		<domain from="160" to="163" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<branch_length>0.0233527585</branch_length>
+															<confidence type="unknown">89.0</confidence>
+															<clade>
+																<branch_length>0.0965972467</branch_length>
+																<confidence type="unknown">97.0</confidence>
+																<clade>
+																	<branch_length>0.0887618467</branch_length>
+																	<confidence type="unknown">98.0</confidence>
+																	<clade>
+																		<branch_length>0.1403474101</branch_length>
+																		<confidence type="unknown">97.0</confidence>
+																		<clade>
+																			<name>A0A1W9QC34</name>
+																			<branch_length>0.396873762</branch_length>
+																			<taxonomy>
+																				<code>Myxococcota</code>
+																			</taxonomy>
+																			<sequence type="aa">
+																				<mol_seq is_aligned="false">MTEAFRVCSTCRTPIAYGAKYFRCSVSTCNQKRTALYFCSVPCWDAHVPDARHRDAWAEEVVAPSGPSPETPAVRKIVGAKPAETAAAAPSAEDDADILVVVSRFKKYVADRSGMNTSAGVMPLLSKHLRALADRAIREAEANGRKTVLDRDVEEAVRRFGRAP</mol_seq>
+																				<uri>/entry/A0A1W9QC34</uri>
+																				<domain_architecture length="164">
+																					<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="27" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="38" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="41" to="50" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="102" to="113" confidence="0.000000001">Histone fold</domain>
+																					<domain from="120" to="142" confidence="0.000000001">Histone fold</domain>
+																					<domain from="150" to="160" confidence="0.000000001">Histone fold</domain>
+																				</domain_architecture>
+																			</sequence>
+																		</clade>
+																		<clade>
+																			<name>A0A9E6DLJ6</name>
+																			<branch_length>0.7222684642</branch_length>
+																			<taxonomy>
+																				<code>Myxococcota</code>
+																			</taxonomy>
+																			<sequence type="aa">
+																				<mol_seq is_aligned="false">MTETNVWRRCSTCRKDLAYKSGYYRCSVSTCNKKRTALYFCSVPCWDAHRAEANHRDAWAEEETAPTEEEWAEQRNATTRKASPKAKSGPAAKPPMVPPTPQGKVKTEVLVVASRFNAYVSQRSRYKTTESVLYPLSDHLREVCDEGVAAALRSERRTLMDRDLAPLFEGQDTGGEPESEKQVLVVVTRLKAYVKASSGMNTAESAVVVLSEHLRYLARRAIQEAGRANRTILLDRDVTAVLTGGRGEG</mol_seq>
+																				<uri>/entry/A0A9E6DLJ6</uri>
+																				<domain_architecture length="249">
+																					<domain from="6" to="6" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="16" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="29" to="32" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="40" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="43" to="50" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+																					<domain from="68" to="70" confidence="0.000000001">Other</domain>
+																					<domain from="111" to="111" confidence="0.000000001">Other</domain>
+																					<domain from="113" to="123" confidence="0.000000001">Histone fold</domain>
+																					<domain from="127" to="128" confidence="0.000000001">Histone fold</domain>
+																					<domain from="130" to="153" confidence="0.000000001">Histone fold</domain>
+																					<domain from="158" to="159" confidence="0.000000001">Histone fold</domain>
+																					<domain from="161" to="168" confidence="0.000000001">Histone fold</domain>
+																					<domain from="185" to="185" confidence="0.000000001">Other</domain>
+																					<domain from="187" to="198" confidence="0.000000001">Histone fold</domain>
+																					<domain from="201" to="202" confidence="0.000000001">Histone fold</domain>
+																					<domain from="204" to="227" confidence="0.000000001">Histone fold</domain>
+																					<domain from="232" to="233" confidence="0.000000001">Histone fold</domain>
+																					<domain from="235" to="244" confidence="0.000000001">Histone fold</domain>
+																				</domain_architecture>
+																			</sequence>
+																		</clade>
+																	</clade>
+																	<clade>
+																		<name>A0A2W4M9F3</name>
+																		<branch_length>0.3402400425</branch_length>
+																		<taxonomy>
+																			<code>Pseudomonadota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MQENAREPSGDTFRVCSTCRTPIAFGASYFRCSVSTCNRPRTALYFCSVPCWDAHVPEQRHRDAWAEPVTAPTRAEWEAELARAAESCSKAPGTREPISAASPDRNEAAMSEESPNRKIVSPPAAESVPREILVVVSKLKAYIRARSGFNTSDATVEVLSDHLRRLCDRAIDKARSAGRKTVLDRDFRSVLDE</mol_seq>
+																			<uri>/entry/A0A2W4M9F3</uri>
+																			<domain_architecture length="193">
+																				<domain from="12" to="12" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="14" to="15" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="22" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="28" to="32" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="35" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="46" to="46" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="49" to="59" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="66" to="70" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="74" to="83" confidence="0.000000001">Other</domain>
+																				<domain from="136" to="147" confidence="0.000000001">Histone fold</domain>
+																				<domain from="153" to="176" confidence="0.000000001">Histone fold</domain>
+																				<domain from="184" to="191" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<name>A0A7X7GUH9</name>
+																	<branch_length>0.2828555673</branch_length>
+																	<taxonomy>
+																		<code>Myxococcota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MSEPSHFRLCTTCKTPIPFSAKYYACSVSTCNRRATAMYFCSVPCWDAHVPEARHRDAWAEVETAPSREEWLRERAKSAESASSPERTPSPRSAEAPRGGEPVRRIVSGHQPSAPRAGLAQGSAGDEDADDAALPRDVLVVVSKLKAYVRARSSMNTSDGVVEVLSDHLRTLCKAAIRSAAANSRKTVLARDFEAVLQGRAAADE</mol_seq>
+																		<uri>/entry/A0A7X7GUH9</uri>
+																		<domain_architecture length="205">
+																			<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="16" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="39" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="43" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="68" to="82" confidence="0.000000001">Other</domain>
+																			<domain from="133" to="133" confidence="0.000000001">Other</domain>
+																			<domain from="142" to="152" confidence="0.000000001">Histone fold</domain>
+																			<domain from="160" to="182" confidence="0.000000001">Histone fold</domain>
+																			<domain from="190" to="202" confidence="0.000000001">Histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+															<clade>
+																<branch_length>0.0198638481</branch_length>
+																<confidence type="unknown">94.0</confidence>
+																<clade>
+																	<branch_length>0.2969344415</branch_length>
+																	<confidence type="unknown">100.0</confidence>
+																	<clade>
+																		<name>A0A847F3G7</name>
+																		<branch_length>0.3935051565</branch_length>
+																		<taxonomy>
+																			<code>Myxococcota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MDASFKLCSICRKPIGFGEIWWSCSVSTCNRGKTALYFCSVDCVDAHAPTLRHRTYYAEEQRAPTREAFLKAREEEAERESAREQARRDKNAESRRRIVQLHTSSNQEAEREILVIASRLKSYIRERSGMNTSDGILEKLSDHLRALADIGMESAASEGRKTVLARDIPDL</mol_seq>
+																			<uri>/entry/A0A847F3G7</uri>
+																			<domain_architecture length="171">
+																				<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="14" to="15" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="27" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="32" to="34" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="38" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="41" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="66" to="93" confidence="0.000000001">Other</domain>
+																				<domain from="117" to="128" confidence="0.000000001">Histone fold</domain>
+																				<domain from="135" to="157" confidence="0.000000001">Histone fold</domain>
+																				<domain from="165" to="167" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A972DAF7</name>
+																		<branch_length>0.1305906199</branch_length>
+																		<taxonomy>
+																			<code>Myxococcota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MSEDAFKVCSNCKKPIPYGGVWWACSVSTCNRGKHALFFCSVDCVDSHAPVLRHRSYWAEERRAPTKAEALAAAEAEARAEREKAERAEEARRRVVTLSASESREVPREILVVASRLKAYVRERSGMNTSDAVMDKLSDHLRALVEVAMRNAAEDGRKTVLDRDVPEI</mol_seq>
+																			<uri>/entry/A0A972DAF7</uri>
+																			<domain_architecture length="168">
+																				<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="28" to="31" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="33" to="35" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="39" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="42" to="49" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="67" to="92" confidence="0.000000001">Other</domain>
+																				<domain from="114" to="125" confidence="0.000000001">Histone fold</domain>
+																				<domain from="132" to="154" confidence="0.000000001">Histone fold</domain>
+																				<domain from="162" to="164" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+																<clade>
+																	<branch_length>0.118110744</branch_length>
+																	<confidence type="unknown">100.0</confidence>
+																	<clade>
+																		<name>A0A956IMY4</name>
+																		<branch_length>0.2489607785</branch_length>
+																		<taxonomy>
+																			<code>Myxococcota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MSDFFKLCSSCKKPIGFEQSYYACSVSTCNRKRTGLFFCSLPCWEAHLPMMRHRDAWAEQVRSPSRAEFEREQAEDAAAQERAAQRATPEAQEITARNEAARHEAVQRALGEDESGAQRAARLGVVKRGAETMGLPEIDDKDLPQEILIVASKLKKYVRARSDFNTSDGVMSVLSDHLRRLSVEAIKAAAREGRKTVLDRDILSVLNNISYRS</mol_seq>
+																			<uri>/entry/A0A956IMY4</uri>
+																			<domain_architecture length="213">
+																				<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="14" to="15" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="38" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="41" to="50" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="66" to="85" confidence="0.000000001">Other</domain>
+																				<domain from="89" to="105" confidence="0.000000001">Other</domain>
+																				<domain from="107" to="108" confidence="0.000000001">Other</domain>
+																				<domain from="151" to="161" confidence="0.000000001">Histone fold</domain>
+																				<domain from="168" to="191" confidence="0.000000001">Histone fold</domain>
+																				<domain from="199" to="208" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																	<clade>
+																		<name>A0A952UVK7</name>
+																		<branch_length>0.2795764261</branch_length>
+																		<taxonomy>
+																			<code>Myxococcota</code>
+																		</taxonomy>
+																		<sequence type="aa">
+																			<mol_seq is_aligned="false">MSDEHFKLCSSCRAPIGFQQAYYACSVSTCNRQRVGLYFCSLPCWEAHLPMMRHRDAWAEERRAPTQAEHARAQAEEARSKQGESKRPQGESKARAAPSEAPKQGNEPTRDPRHDSPPDLTPMQREARLGVVRRGAESADMTSEPDQEPSDDDLPRDVLIVISKLKHYIKARSGFNTSDQVAQVLSDHVRRVCVEAIKNAARDGRKTVLDRDFLKAVR</mol_seq>
+																			<uri>/entry/A0A952UVK7</uri>
+																			<domain_architecture length="218">
+																				<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="39" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="42" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																				<domain from="67" to="81" confidence="0.000000001">Other</domain>
+																				<domain from="151" to="153" confidence="0.000000001">Other</domain>
+																				<domain from="162" to="173" confidence="0.000000001">Histone fold</domain>
+																				<domain from="179" to="202" confidence="0.000000001">Histone fold</domain>
+																				<domain from="210" to="216" confidence="0.000000001">Histone fold</domain>
+																			</domain_architecture>
+																		</sequence>
+																	</clade>
+																</clade>
+															</clade>
+														</clade>
+													</clade>
+													<clade>
+														<branch_length>0.0403466044</branch_length>
+														<confidence type="unknown">76.0</confidence>
+														<clade>
+															<branch_length>0.310993969</branch_length>
+															<confidence type="unknown">100.0</confidence>
+															<clade>
+																<branch_length>0.0241727747</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<name>A0A534SUR8</name>
+																	<branch_length>0.0022596837</branch_length>
+																	<taxonomy>
+																		<code>Myxococcota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MTAEPVFWKRCSTCKKALPFESVYWECNVSTCNRPRTALAFCSVPCWDAHVPTLRHRDAWAEERRSPRREEWERQQREEATRSERAAARAPAGASPASPAGGPAPREVLVIASRLKAYVRARSGMNTSDAVLDLLSDKLRALCDEAVRRARLAGRQTVLERDF</mol_seq>
+																		<uri>/entry/A0A534SUR8</uri>
+																		<domain_architecture length="163">
+																			<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="17" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="44" to="54" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="69" to="88" confidence="0.000000001">Other</domain>
+																			<domain from="112" to="123" confidence="0.000000001">Histone fold</domain>
+																			<domain from="130" to="152" confidence="0.000000001">Histone fold</domain>
+																			<domain from="160" to="162" confidence="0.000000001">Histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+																<clade>
+																	<name>A0A534YS46</name>
+																	<branch_length>0.0045786056</branch_length>
+																	<taxonomy>
+																		<code>Myxococcota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MTAEPVFWKRCSTCKKALPFESVYWECNVSTCNRPRTALAFCSVPCWDAHVPTLRHRDAWAEERRSPRREEWERQQREEATRSERAAARAPAGASPASPAGGPAPREVLVIASRLKAYVRARSGMNTSDAVLDVLSDKLRALCDEAVRRARLAGRQTVLERDF</mol_seq>
+																		<uri>/entry/A0A534YS46</uri>
+																		<domain_architecture length="163">
+																			<domain from="7" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="44" to="54" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="69" to="89" confidence="0.000000001">Other</domain>
+																			<domain from="112" to="123" confidence="0.000000001">Histone fold</domain>
+																			<domain from="130" to="152" confidence="0.000000001">Histone fold</domain>
+																			<domain from="160" to="162" confidence="0.000000001">Histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0A534VZT2</name>
+																<branch_length>0.0265844551</branch_length>
+																<taxonomy>
+																	<code>Myxococcota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MTAEPVFWKRCSTCKKALPFEAVYWECNVSTCNRPRTALAFCSVPCWDAHVPTMRHRDAWAEERRAPRREEWERQQREEATRSERAGARASAAASPTSPAGGPAPREVLVIASRLKAYVRARSGMNTSDVVLDVLSDKLRALCDEAVRRARLAGRQTVLDRDF</mol_seq>
+																	<uri>/entry/A0A534VZT2</uri>
+																	<domain_architecture length="163">
+																		<domain from="7" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="44" to="54" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="69" to="89" confidence="0.000000001">Other</domain>
+																		<domain from="112" to="123" confidence="0.000000001">Histone fold</domain>
+																		<domain from="130" to="152" confidence="0.000000001">Histone fold</domain>
+																		<domain from="160" to="162" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<name>A0A9D6L9N5</name>
+															<branch_length>0.3662392433</branch_length>
+															<taxonomy>
+																<code>Myxococcota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MTSTTTPEFWRKCSSCKKPLPFAQRYYVCSVSTCNRVRTGLVFCSVACVDAHIPMMNHKDAGAIEKRAPTLAEWQRDQAEAAAAAARPAPAQAASSPSSVQAPYVPPTPTGDLRRDILIVVSKTKDYVRAKSGLNTSDGVMEVLSDKLRAILDEAIRRAIQDERKTLLDRDLK</mol_seq>
+																<uri>/entry/A0A9D6L9N5</uri>
+																<domain_architecture length="173">
+																	<domain from="9" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="11" to="12" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="19" to="21" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="25" to="29" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="32" to="35" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="43" to="43" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="46" to="56" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="63" to="67" confidence="0.000000001">ZZ-type zinc finger</domain>
+																	<domain from="71" to="84" confidence="0.000000001">Other</domain>
+																	<domain from="121" to="132" confidence="0.000000001">Histone fold</domain>
+																	<domain from="139" to="161" confidence="0.000000001">Histone fold</domain>
+																	<domain from="169" to="171" confidence="0.000000001">Histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+												</clade>
+											</clade>
+										</clade>
+										<clade>
+											<branch_length>0.0682818427</branch_length>
+											<confidence type="unknown">56.0</confidence>
+											<clade>
+												<name>A0A7C8DLG5</name>
+												<branch_length>0.7273478564</branch_length>
+												<taxonomy>
+													<code>Myxococcota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MADSTTPDQWRRCSSCKKPIVFESLYWVCNVSTCNRKNASFVFCTVSCWDAHLGVVRHRESWAEERHAPSRSQAAAAANSDAGQSQASRATPSSAAPPRGFKRSIPTSQPGRTTASPPRDDVPIDTLIVMSKLKAYVKAKSGLNTSDRVLRPLSDAVRRLCDEAIEEAIASERKTLLDRDFKK</mol_seq>
+													<uri>/entry/A0A7C8DLG5</uri>
+													<domain_architecture length="183">
+														<domain from="9" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="11" to="12" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="19" to="21" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="25" to="29" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="32" to="34" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="43" to="43" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="46" to="53" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="63" to="67" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="71" to="75" confidence="0.000000001">Other</domain>
+														<domain from="130" to="141" confidence="0.000000001">Histone fold</domain>
+														<domain from="147" to="170" confidence="0.000000001">Histone fold</domain>
+														<domain from="178" to="180" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<branch_length>0.0351185606</branch_length>
+												<confidence type="unknown">82.0</confidence>
+												<clade>
+													<branch_length>0.102743077</branch_length>
+													<confidence type="unknown">99.0</confidence>
+													<clade>
+														<name>A0A976KXV7</name>
+														<branch_length>0.3890772164</branch_length>
+														<taxonomy>
+															<code>Myxococcota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MPTAWRYCSSCKTPIPHRATYWTCSVSTCNRARAPMVFCSMDCWDAHLPIARHREAWAEEQTAPGENEAAASSKPAAKPGRVPAEGVRAVRSRDSPGHEPRQGVRRRVETKRQRDPSLPADVLIVASKLKAYVRAASDLNTSANVMDVLSDKVRDLCDAAIERARADGRQTLMDRDFR</mol_seq>
+															<uri>/entry/A0A976KXV7</uri>
+															<domain_architecture length="178">
+																<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="30" to="31" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="34" to="35" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="37" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="41" to="50" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																<domain from="66" to="66" confidence="0.000000001">Other</domain>
+																<domain from="126" to="137" confidence="0.000000001">Histone fold</domain>
+																<domain from="144" to="166" confidence="0.000000001">Histone fold</domain>
+																<domain from="174" to="176" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+													<clade>
+														<branch_length>0.131974007</branch_length>
+														<confidence type="unknown">100.0</confidence>
+														<clade>
+															<branch_length>0.0795761792</branch_length>
+															<confidence type="unknown">100.0</confidence>
+															<clade>
+																<name>A0A956GWH1</name>
+																<branch_length>0.137361825</branch_length>
+																<taxonomy>
+																	<code>Myxococcota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MPEASAWRHCSRCKKPIAYGATYLVCSVSTCNRARSAMVFCSMDCWDAHVPVAGHREAHAEEHTAPKSAEAPAQTKKPEREARRVVAPVKRRDPSLPRETLVIVKALKAYIAAAGDMRTSDAVADVLSDKLRDLCDRAIDRAKEDGRKTVLDRDFLPKAK</mol_seq>
+																	<uri>/entry/A0A956GWH1</uri>
+																	<domain_architecture length="160">
+																		<domain from="6" to="6" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="16" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="29" to="31" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="39" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="43" to="53" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="104" to="115" confidence="0.000000001">Histone fold</domain>
+																		<domain from="122" to="144" confidence="0.000000001">Histone fold</domain>
+																		<domain from="152" to="154" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>A6GGA7</name>
+																<branch_length>0.1773604462</branch_length>
+																<taxonomy>
+																	<code>Myxococcota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MPATWRHCSRCKTAIACGAPYLVCSVSTCNRKRSAMVFCSMDCWDAHVPIAGHREAHAEDRVAPATPGAEPRSAERHKDKPRTGRRRIAPVKRRDPSLPKDTLVVTKALKAYIAAAGELRTSDAVMDVLSEKLRDMCDRAIDRAKKDGRKTVLDRDFLPK</mol_seq>
+																	<uri>/entry/A6GGA7</uri>
+																	<domain_architecture length="160">
+																		<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="37" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="41" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="106" to="117" confidence="0.000000001">Histone fold</domain>
+																		<domain from="124" to="146" confidence="0.000000001">Histone fold</domain>
+																		<domain from="154" to="156" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<branch_length>0.0846391703</branch_length>
+															<confidence type="unknown">100.0</confidence>
+															<clade>
+																<name>A0A2S9XMF4</name>
+																<branch_length>0.1830735706</branch_length>
+																<taxonomy>
+																	<code>Myxococcota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MATSTWRNCSRCKSPIAHGASYLVCSVSTCNRARTGMVFCKMECWDAHLPIARHREAHAEELTAPPVGGVVTEPKPARRQGKRRIAPVKRRDPSLPRDALVVTKAFKAYVRAAGGLNTSDAVIEVLSEKLRDWADRAIDRAKEDGRKTVLDRDFLPK</mol_seq>
+																	<uri>/entry/A0A2S9XMF4</uri>
+																	<domain_architecture length="157">
+																		<domain from="5" to="5" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="7" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="15" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="21" to="25" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="38" to="39" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="42" to="49" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="59" to="63" confidence="0.000000001">ZZ-type zinc finger</domain>
+																		<domain from="103" to="114" confidence="0.000000001">Histone fold</domain>
+																		<domain from="121" to="143" confidence="0.000000001">Histone fold</domain>
+																		<domain from="151" to="154" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<branch_length>0.0992527584</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<name>A0A2S9YM89</name>
+																	<branch_length>0.0833494584</branch_length>
+																	<taxonomy>
+																		<code>Myxococcota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MAQPSSSPWRNCSRCKKPIAFGSTYLVCSVSTCNRARTGMVFCSMECWDAHLPIARHREASAEELTAPAREGEPAAKPGPEPQRKSGKRRIAPVQRRDPSLPRDVLVISKAFKEYVRAAGGCNTSDAVIEVLSDKLRDWADRAIDRAKADGRKTVLDRDFMPK</mol_seq>
+																		<uri>/entry/A0A2S9YM89</uri>
+																		<domain_architecture length="163">
+																			<domain from="10" to="11" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="18" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="24" to="28" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="41" to="42" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="45" to="53" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="62" to="66" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="109" to="120" confidence="0.000000001">Histone fold</domain>
+																			<domain from="127" to="149" confidence="0.000000001">Histone fold</domain>
+																			<domain from="157" to="160" confidence="0.000000001">Histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+																<clade>
+																	<name>A0A0C1Z8D0</name>
+																	<branch_length>0.0630667201</branch_length>
+																	<taxonomy>
+																		<code>Myxococcota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MAPPSSPSSPWRNCSRCKKPIAYGSTYLVCSVSTCNRARTGMVFCSMECWDAHLPIARHREASAEELTAPARDGDPIAKPGPQVERKQGKRRIAPVQRRDPSLPRDALVISKAFKEYVRAAGGCNTSDAVIEVLSDKLRDWADRAIDRAKADGRKTILDRDFMPK</mol_seq>
+																		<uri>/entry/A0A0C1Z8D0</uri>
+																		<domain_architecture length="165">
+																			<domain from="12" to="13" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="20" to="21" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="26" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="43" to="44" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="47" to="54" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="64" to="68" confidence="0.000000001">ZZ-type zinc finger</domain>
+																			<domain from="111" to="122" confidence="0.000000001">Histone fold</domain>
+																			<domain from="129" to="151" confidence="0.000000001">Histone fold</domain>
+																			<domain from="159" to="161" confidence="0.000000001">Histone fold</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+														</clade>
+													</clade>
+												</clade>
+												<clade>
+													<name>A0A1F9G6Y1</name>
+													<branch_length>0.509565942</branch_length>
+													<taxonomy>
+														<code>delta/epsilon subdivisions</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MLYCARLSDEDDMTEPGFWRRCSNCKSEIALGARYWICSVTTCQRVRAPIQFCKPDCWAVHNEIENHRDGWAVEKTAPADADAPAAPAAAPTPRAVASSPPRATRQAVAAPAASADGTDVLVVASRFKEFLAEVHGVRCSDDVFPTLSEHLRRLARESVEAARRAGRKTVLDRDVPRPAAEADVPALVVVSRFKAYVAAQGDVRTADDVIPVLTAELRRLGGQAAEHAKADGRKTVLGRDVPRP</mol_seq>
+														<uri>/entry/A0A1F9G6Y1</uri>
+														<domain_architecture length="244">
+															<domain from="18" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+															<domain from="20" to="21" confidence="0.000000001">ZZ-type zinc finger</domain>
+															<domain from="28" to="30" confidence="0.000000001">ZZ-type zinc finger</domain>
+															<domain from="34" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+															<domain from="41" to="43" confidence="0.000000001">ZZ-type zinc finger</domain>
+															<domain from="51" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+															<domain from="55" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+															<domain from="72" to="76" confidence="0.000000001">ZZ-type zinc finger</domain>
+															<domain from="122" to="122" confidence="0.000000001">Other</domain>
+															<domain from="124" to="135" confidence="0.000000001">Histone fold</domain>
+															<domain from="138" to="139" confidence="0.000000001">Histone fold</domain>
+															<domain from="142" to="164" confidence="0.000000001">Histone fold</domain>
+															<domain from="169" to="170" confidence="0.000000001">Histone fold</domain>
+															<domain from="172" to="174" confidence="0.000000001">Histone fold</domain>
+															<domain from="188" to="188" confidence="0.000000001">Other</domain>
+															<domain from="190" to="199" confidence="0.000000001">Histone fold</domain>
+															<domain from="204" to="205" confidence="0.000000001">Histone fold</domain>
+															<domain from="208" to="230" confidence="0.000000001">Histone fold</domain>
+															<domain from="235" to="236" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+										</clade>
+									</clade>
+									<clade>
+										<name>A0A916DN36</name>
+										<branch_length>0.3891334821</branch_length>
+										<taxonomy>
+											<code>Myxococcota</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MTEGDPASSWRRCSSCKKPIGFGAGFWVCNVSTCNRPRTGLVFCTVSCWDAHLSVVNHRESWAVERSAPSREQWAREQAAEAASQTAGAASTPSGPRRILPKPAPPAPDPKRPREVLIVASKFKEYVRVRAGMNTSDRCLEALSDLVREHCERAIEKAREEGRKTLLERDFE</mol_seq>
+											<uri>/entry/A0A916DN36</uri>
+											<domain_architecture length="172">
+												<domain from="7" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="11" to="12" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="19" to="21" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="25" to="29" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="43" to="43" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="46" to="53" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="63" to="67" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="71" to="83" confidence="0.000000001">Other</domain>
+												<domain from="120" to="131" confidence="0.000000001">Histone fold</domain>
+												<domain from="138" to="160" confidence="0.000000001">Histone fold</domain>
+												<domain from="168" to="170" confidence="0.000000001">Histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+								</clade>
+								<clade>
+									<branch_length>0.0841672643</branch_length>
+									<confidence type="unknown">93.0</confidence>
+									<clade>
+										<name>A0A2D6BLB9</name>
+										<branch_length>0.2869285545</branch_length>
+										<taxonomy>
+											<code>Myxococcota</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MTHQEGWRRCSSCREWIDFETGYYTCNVSTCNRKNTAFVFCSVSCWDAHLPTMNHREAWAEDQRSPSSTEWARQQAAPGPTRKPREPKPAAPRPAAPRPTGTVVRRPAAEREPESTSAPAAPEPLSDDVPDEILIVASRLKDYIRARSGMNTSERVLGPLSVIVREVCDRAIENARRDERKTVLDRDVPTR</mol_seq>
+											<uri>/entry/A0A2D6BLB9</uri>
+											<domain_architecture length="191">
+												<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="16" to="17" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="40" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="43" to="53" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="68" to="76" confidence="0.000000001">Other</domain>
+												<domain from="137" to="148" confidence="0.000000001">Histone fold</domain>
+												<domain from="154" to="177" confidence="0.000000001">Histone fold</domain>
+												<domain from="185" to="187" confidence="0.000000001">Histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+									<clade>
+										<name>A0A2E9GVV8</name>
+										<branch_length>0.2810071204</branch_length>
+										<taxonomy>
+											<code>Myxococcota</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MAMDEAGAAAQWRRCSSCKEWIGFKTLYWVCNVSTCNRKRTGLLFCTVRCWDAHLSSMNHRESWAVEKHSPSRSEWQAEQAEQARANSGGKPAERPPPQRRPVRPEPARAPAAASPDSGPSREILVVASRLKSYILARSGMNTSERVLAPLSDILRRVCDEAIENARRSERKTVLDRDIPQGR</mol_seq>
+											<uri>/entry/A0A2E9GVV8</uri>
+											<domain_architecture length="183">
+												<domain from="10" to="11" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="13" to="14" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="21" to="23" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="27" to="31" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="45" to="45" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="48" to="55" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="65" to="69" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="73" to="85" confidence="0.000000001">Other</domain>
+												<domain from="128" to="139" confidence="0.000000001">Histone fold</domain>
+												<domain from="145" to="168" confidence="0.000000001">Histone fold</domain>
+												<domain from="176" to="178" confidence="0.000000001">Histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+								</clade>
+							</clade>
+							<clade>
+								<name>A0A7C2NHU0</name>
+								<branch_length>0.2587052111</branch_length>
+								<taxonomy>
+									<code>Myxococcota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MNEAGVWRRCSACKKPLPYGAVHQVCSVSTCNRERTGLAFCSVECWEVHLPSANHREAWAVERRAPAGPVGAAPGAKPALGDARAGRRVLVRSAAPAPAPGVPEEVLIIASRLKDYIRARSGMNTSDGVLEPLSDLVRRACDEAIRNAGREGRRTVLERDVPKA</mol_seq>
+									<uri>/entry/A0A7C2NHU0</uri>
+									<domain_architecture length="164">
+										<domain from="6" to="6" confidence="0.000000001">ZZ-type zinc finger</domain>
+										<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+										<domain from="16" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+										<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+										<domain from="40" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+										<domain from="43" to="47" confidence="0.000000001">ZZ-type zinc finger</domain>
+										<domain from="50" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+										<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+										<domain from="110" to="121" confidence="0.000000001">Histone fold</domain>
+										<domain from="127" to="150" confidence="0.000000001">Histone fold</domain>
+										<domain from="158" to="160" confidence="0.000000001">Histone fold</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+						<clade>
+							<branch_length>0.0479209758</branch_length>
+							<confidence type="unknown">30.0</confidence>
+							<clade>
+								<branch_length>0.0621245938</branch_length>
+								<confidence type="unknown">58.0</confidence>
+								<clade>
+									<name>A0A973CTW6</name>
+									<branch_length>0.4753252022</branch_length>
+									<taxonomy>
+										<code>Myxococcota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MTAGEGCLADKXIWRXCSSCKEGIETGALYWTCSVSTCNRKRTALFFCSVSCWDAHLPVARHRDAWAEEQRAPGTAAAEADESAEPATRPKRRLVRPGATERPADDRLREILVIANRLKDYVRARSGFNTSERALGPLSEILRVSCDAAIENARREGRKTVLDRDVPKP</mol_seq>
+										<uri>/entry/A0A973CTW6</uri>
+										<domain_architecture length="169">
+											<domain from="14" to="14" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="22" to="22" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="27" to="31" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="45" to="45" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="48" to="57" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="65" to="69" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="104" to="106" confidence="0.000000001">Other</domain>
+											<domain from="113" to="124" confidence="0.000000001">Histone fold</domain>
+											<domain from="131" to="153" confidence="0.000000001">Histone fold</domain>
+											<domain from="161" to="163" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0A534QAD6</name>
+									<branch_length>0.2246409971</branch_length>
+									<taxonomy>
+										<code>Myxococcota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSDLPAWRRCSSCKKPIALRATYWVCSVSTCNQKRTGLAFCTVSCWDAHLPVARHREAWAEERTAPAHAESGEAGAKQRRLVRPAGAAAPAAPGADDVLIIGSRLKDYIRAKSGYNTSDRVLLPLSEIVRRVCDEAIRSAQREGRRTVLDRDIPES</mol_seq>
+										<uri>/entry/A0A534QAD6</uri>
+										<domain_architecture length="156">
+											<domain from="6" to="6" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="16" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="40" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="43" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="102" to="113" confidence="0.000000001">Histone fold</domain>
+											<domain from="119" to="142" confidence="0.000000001">Histone fold</domain>
+											<domain from="150" to="152" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<branch_length>0.0298653954</branch_length>
+								<confidence type="unknown">38.0</confidence>
+								<clade>
+									<branch_length>0.0769668348</branch_length>
+									<confidence type="unknown">40.0</confidence>
+									<clade>
+										<branch_length>0.1026352056</branch_length>
+										<confidence type="unknown">58.0</confidence>
+										<clade>
+											<branch_length>0.3739839081</branch_length>
+											<confidence type="unknown">100.0</confidence>
+											<clade>
+												<name>A0A7C7YIZ8</name>
+												<branch_length>0.0216625583</branch_length>
+												<taxonomy>
+													<code>Myxococcota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MEADGQAGWKKCSACKKPIDFQVVYYVCNVSTCNRKRTGLQFCDVSCWEVHLPVARHRESWAEERRSPSRAEAARQAAAEASGEAPPRKPRRIIADKPAARSVTASPRGMSAQSAAPEEVLIVASRLKEFVRASSGYKTSERVLGPLSDIVREVAEEAIRNARADGRMTVLDRDIPKGFRR</mol_seq>
+													<uri>/entry/A0A7C7YIZ8</uri>
+													<domain_architecture length="181">
+														<domain from="10" to="11" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="18" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="24" to="28" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="42" to="42" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="45" to="49" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="52" to="54" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="62" to="66" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="70" to="78" confidence="0.000000001">Other</domain>
+														<domain from="124" to="135" confidence="0.000000001">Histone fold</domain>
+														<domain from="141" to="164" confidence="0.000000001">Histone fold</domain>
+														<domain from="172" to="174" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<name>A0A7C7U8G6</name>
+												<branch_length>0.0940532124</branch_length>
+												<taxonomy>
+													<code>Myxococcota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MSEVSQAGWKKCSACKKNIDFESVYYVCNVSTCNRKRTGLQFCGVSCWEVHLPVARHRESWAEDRRSPSRAEAARQAAAEASGEAPPRKPRRIIADKPASAARSVTASPSGMSAQSAAPEEVLIVASRLKEYVRASAGYKTSERVLGPLSDIVREVAEEAIRNARADGRMTVLDRDIPKSFRR</mol_seq>
+													<uri>/entry/A0A7C7U8G6</uri>
+													<domain_architecture length="183">
+														<domain from="10" to="11" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="18" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="24" to="28" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="42" to="42" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="45" to="52" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="62" to="66" confidence="0.000000001">ZZ-type zinc finger</domain>
+														<domain from="70" to="79" confidence="0.000000001">Other</domain>
+														<domain from="81" to="81" confidence="0.000000001">Other</domain>
+														<domain from="126" to="137" confidence="0.000000001">Histone fold</domain>
+														<domain from="143" to="166" confidence="0.000000001">Histone fold</domain>
+														<domain from="179" to="181" confidence="0.000000001">Other</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+										<clade>
+											<name>A0A7Y3M835</name>
+											<branch_length>0.4035546823</branch_length>
+											<taxonomy>
+												<code>Myxococcota</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MENTWRRCSACKSDIAFEADYYACNVSTCNRKRTALAFCSVDCWEVHLPGANHRESWAVEKKAPSASSADTDSGPRRRVVRPSPAAPKERKSDEILIVASRLKEFVRQTSGYNTSDRVLEPLSELLRRICREAIENAHRDGRMTVLDRDIPDV</mol_seq>
+												<uri>/entry/A0A7Y3M835</uri>
+												<domain_architecture length="153">
+													<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+													<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+													<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+													<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+													<domain from="38" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+													<domain from="41" to="45" confidence="0.000000001">ZZ-type zinc finger</domain>
+													<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+													<domain from="66" to="66" confidence="0.000000001">Other</domain>
+													<domain from="99" to="110" confidence="0.000000001">Histone fold</domain>
+													<domain from="116" to="139" confidence="0.000000001">Histone fold</domain>
+													<domain from="147" to="149" confidence="0.000000001">Histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+									</clade>
+									<clade>
+										<name>A0A523J7G5</name>
+										<branch_length>0.4236502275</branch_length>
+										<taxonomy>
+											<code>Myxococcota</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MKSENRWRRCSACKEPIELGSMYWVCSISTCNRKRTALSFCSVRCWEVHLPVARHREAWAVEQTAPMSLEVETKPSSAVPRAQTRKQASLNLASQEAKTDVPNEILIVASRLKEFIRARSGFNTSDGALDPLSEIIRHVCDEAIQNATRDGRKTVLARDIPFR</mol_seq>
+											<uri>/entry/A0A523J7G5</uri>
+											<domain_architecture length="163">
+												<domain from="6" to="6" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="16" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="40" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="43" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+												<domain from="109" to="120" confidence="0.000000001">Histone fold</domain>
+												<domain from="126" to="149" confidence="0.000000001">Histone fold</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+								</clade>
+								<clade>
+									<name>A0A7Y3D7T1</name>
+									<branch_length>0.1624183909</branch_length>
+									<taxonomy>
+										<code>Myxococcota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MTETAEWRRCNACKEPIPLGATYWVCSVSTCNRKRTGLRFCSVTCWDVHLPTANHREAWAVEKTAPTTAEPEEPAAAKREAAGGRPKRRILPTPQQTAAAAPAPRDEPLEVLIVASRLKEFIRARSGFNTSDRVLEPLSKIVRRVCEEAIENARRDERKTVLDRDIPK</mol_seq>
+										<uri>/entry/A0A7Y3D7T1</uri>
+										<domain_architecture length="168">
+											<domain from="6" to="6" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="8" to="9" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="16" to="18" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="22" to="26" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="40" to="40" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="43" to="50" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="60" to="64" confidence="0.000000001">ZZ-type zinc finger</domain>
+											<domain from="115" to="126" confidence="0.000000001">Histone fold</domain>
+											<domain from="132" to="155" confidence="0.000000001">Histone fold</domain>
+											<domain from="163" to="165" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+						</clade>
+					</clade>
+					<clade>
+						<name>A0A935VYT1</name>
+						<branch_length>0.2649282632</branch_length>
+						<taxonomy>
+							<code>Myxococcota</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MAERWRRCSACKQDIGLSSVYWVCSVSTCNRARTALVFCSVDCWEIHLPTERHRVAWAVEKRAPKVPDAADGSASSKSVAAKAAAAAGAKPGAAGGPRAGAEGGVRPGSMGVARPTSTGGRPAGAVGNAAEDQDRSDPTDVLVVANKLKTYIREGSGFNTSDRVLLVLSDVLRKLCDDAIRNAKRAGRDIVTDRDLPPSA</mol_seq>
+							<uri>/entry/A0A935VYT1</uri>
+							<domain_architecture length="200">
+								<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="38" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="41" to="45" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="48" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="145" to="156" confidence="0.000000001">Histone fold</domain>
+								<domain from="162" to="185" confidence="0.000000001">Histone fold</domain>
+								<domain from="193" to="195" confidence="0.000000001">Histone fold</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+				</clade>
+				<clade>
+					<name>A0A955ZTY4</name>
+					<branch_length>0.2420862119</branch_length>
+					<taxonomy>
+						<code>Myxococcota</code>
+					</taxonomy>
+					<sequence type="aa">
+						<mol_seq is_aligned="false">MAERWRRCSACKGDIALGATYWVCNVSTCNRKRTGLVFCSVDCWEIHLPTERHRESWAVEKQAPKTHDAPEPAAPRRESAGSAARSPRPGSKSDRPAVLIRKAASESGAAPHAGSSAGSAAPAVRATGGGAPARGPGRDGAEDEILVVASKLKAYVRERSGFNTSDRVLSRLSDALRQICDRAIRNARAAERLTVLDRDVPRD</mol_seq>
+						<uri>/entry/A0A955ZTY4</uri>
+						<domain_architecture length="203">
+							<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="38" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="41" to="48" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="149" to="160" confidence="0.000000001">Histone fold</domain>
+							<domain from="167" to="189" confidence="0.000000001">Histone fold</domain>
+						</domain_architecture>
+					</sequence>
+				</clade>
+			</clade>
+			<clade>
+				<branch_length>0.0392336858</branch_length>
+				<confidence type="unknown">99.0</confidence>
+				<clade>
+					<name>A0A7V1NBG0</name>
+					<branch_length>0.185319471</branch_length>
+					<taxonomy>
+						<code>Myxococcota</code>
+					</taxonomy>
+					<sequence type="aa">
+						<mol_seq is_aligned="false">MADGNMQRWRRCSACKTDITLGSPYWACSVSTCNRKRTALVFCSVDCWEIHLPTERHRDAWAVEERAPDEPDPPADAPRKRRTAATRGSVRPAGGTGGASEILVVASRLKAYIRRRDGYNTSDAVLPVLSDRVRAICDEAIRNARRAERQTVLDRDVPRE</mol_seq>
+						<uri>/entry/A0A7V1NBG0</uri>
+						<domain_architecture length="160">
+							<domain from="8" to="8" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="10" to="11" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="18" to="20" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="24" to="28" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="42" to="42" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="45" to="49" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="52" to="53" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="62" to="66" confidence="0.000000001">ZZ-type zinc finger</domain>
+							<domain from="106" to="117" confidence="0.000000001">Histone fold</domain>
+							<domain from="124" to="146" confidence="0.000000001">Histone fold</domain>
+							<domain from="154" to="156" confidence="0.000000001">Histone fold</domain>
+						</domain_architecture>
+					</sequence>
+				</clade>
+				<clade>
+					<branch_length>0.0711468601</branch_length>
+					<confidence type="unknown">99.0</confidence>
+					<clade>
+						<name>A0A7C7XUT3</name>
+						<branch_length>0.2844074215</branch_length>
+						<taxonomy>
+							<code>Myxococcota</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MTQMSDRWRRCSACKNDIALNSIYWVCSVSTCNRKRTALVFCSVDCWEIHLPTERHREAWAVEERAPATPDPPDGAPRKKRGSSGSPRASGDPNNDVLVVVSRLKAYIRRHDGYNTSDSVLPVLSNAIRKICDEAIANARRSDRETVLDRDVPRE</mol_seq>
+							<uri>/entry/A0A7C7XUT3</uri>
+							<domain_architecture length="155">
+								<domain from="7" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="9" to="10" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="17" to="19" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="23" to="27" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="41" to="41" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="44" to="54" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="61" to="65" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="101" to="112" confidence="0.000000001">Histone fold</domain>
+								<domain from="119" to="141" confidence="0.000000001">Histone fold</domain>
+								<domain from="149" to="151" confidence="0.000000001">Histone fold</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+					<clade>
+						<name>A0A2E5YKX8</name>
+						<branch_length>0.2645946253</branch_length>
+						<taxonomy>
+							<code>Myxococcota</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MAERWRRCSACKTDIELGAIHWVCSVSTCNRARTALAFCSVDCWEVHLPTERHREAWAIEERAPLEPDPPQGAPRKRKTRKIASPVGDAEEILVVASRLKAYIRSVSGYNTSEGVLSVLSAALRKICDESVANARRAERQTVMDRDVPRD</mol_seq>
+							<uri>/entry/A0A2E5YKX8</uri>
+							<domain_architecture length="150">
+								<domain from="4" to="4" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="6" to="7" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="14" to="16" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="20" to="24" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="38" to="38" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="41" to="51" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="58" to="62" confidence="0.000000001">ZZ-type zinc finger</domain>
+								<domain from="96" to="107" confidence="0.000000001">Histone fold</domain>
+								<domain from="114" to="136" confidence="0.000000001">Histone fold</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+				</clade>
+			</clade>
+		</clade>
+	</phylogeny>
+	<taxonomies>
+		<taxonomy code="Planctomycetota">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="delta/epsilon subdivisions">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Ca. Tectomicrobia">
+			<color>0xbebada</color>
+		</taxonomy>
+		<taxonomy code="Bdellovibrionota">
+			<color>0xfb8072</color>
+		</taxonomy>
+		<taxonomy code="Myxococcota">
+			<color>0x80b1d3</color>
+		</taxonomy>
+		<taxonomy code="Pseudomonadota">
+			<color>0xfdb462</color>
+		</taxonomy>
+	</taxonomies>
+	<labels/>
+	<domains>
+		<domain name="Histone fold">
+			<color>#8da0cb</color>
+			<description>Alpha 1, 2, and 3 helices of the histone fold</description>
+		</domain>
+		<domain name="ZZ-type zinc finger">
+			<color>#e78ac3</color>
+			<description>Eukaryotic-like ZZ-type zinc finger. Contains two zinc binding sites (C4 and C2H2).</description>
+		</domain>
+		<domain name="Other">
+			<color>#b3b3b3</color>
+			<description>Other secondary structures</description>
+		</domain>
+	</domains>
+</phyloxml>
