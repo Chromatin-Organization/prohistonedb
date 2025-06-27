@@ -59,7 +59,7 @@
 
         {# * Skylign sequence alignment viewer #}
         {% if id is defined %}
-          {% if categories[id|int].name != 'Undefined' and categories[id|int].name != 'Misc' %}
+          {% if categories[id|int].name != 'Undefined' %}
           <div class="row my-5">
             <div class="col-lg-3">
                 <h3>{{categories[id|int].name}} sequence alignment</h3>
@@ -82,7 +82,7 @@
 
   {% block javascripts %}
     {% if id is defined %}
-      {% if categories[id|int].name != 'Undefined' and categories[id|int].name != 'Misc' %}
+      {% if categories[id|int].name != 'Undefined' %}
           <script>
               const HMMJSONurl = '{{url_for('static', filename=(categories[id|int].static_logo_path | string))}}';
           </script>
