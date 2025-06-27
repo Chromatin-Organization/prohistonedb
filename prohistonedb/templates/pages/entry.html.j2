@@ -124,6 +124,7 @@
                                     {% for mult in entry.multimers %}
                                         <li><a class="dropdown-item" href="{{ reload(mult,rank) }}">{{mult.value}}</a></li>
                                     {% endfor %}
+                                    {#TODO: add PDB codes below multimers #}
                                 </ul>
                         </div>
 
@@ -173,7 +174,7 @@
                     <div class="col-lg-9">
                         <div class="row mt-3">
                             <div id="pae-view" class="columns medium-9">
-                                <div id="pae-container" class="r{{rank | string}} mx-auto" style="background-image: url('{{ img_path('_PAE.png') }}')">
+                                <div id="pae-container" class="r{{rank | string}} mx-auto" style="background-image: url('{{ img_path('_pae.png') }}')">
                                 </div>
                             </div>
                         </div>
@@ -287,6 +288,7 @@
         <script>
             const mspViewer = document.querySelector("#mspViewer");
             const modelURL = "https://prohistonedb.universiteitleiden.nl/{{entry.get_cif_path(multimer, rank).as_posix()}}";
+            {#TODO: add path to cif models on PDBe based on pdb code: "https://www.ebi.ac.uk/pdbe/static/entry/" + pdbcode + "_updated.cif" #}
 
             molstar.Viewer.create('mspViewer', {
                 // https://molstar.org/docs/plugin/
