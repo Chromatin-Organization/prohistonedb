@@ -1,6 +1,10 @@
 <h3>Phylogenetic tree</h3>
 <p>
-    Phylogenetic tree of the {{entry.category.name}} category.
+    {% if entry is defined %}
+        Phylogenetic tree of the {{entry.category.name}} category.
+    {% else %}
+        Phylogenetic tree of the {{categories[id|int].name}} category.
+    {% endif %}
 </p>
 <p>    
     Each leaf is a histone belonging to this category.<br>

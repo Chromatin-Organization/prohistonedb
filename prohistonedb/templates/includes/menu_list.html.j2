@@ -2,34 +2,9 @@
   <li class="nav-item offcanvas-brand ps-3 pb-2">
     <a href="/" class="font-weight-bolder">{{siteName}}</a>
   </li>
-  <li class="nav-item dropdown mx-2">
-    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
-      data-bs-toggle="dropdown" aria-expanded="false">
-      Categories
-      <span class="ms-auto ms-md-1 material-icons-round">expand_more</span>
-    </a>
-    <ul class="dropdown-menu dropdown-sm border-radius-xl mt-0 mt-lg-3"
-      aria-labelledby="dropdownMenuPages">
-      <li>
-        <a href="{{url_for('categories.overview')}}" class="dropdown-item">
-          <h6 class="dropdown-header px-0">Categories overview</h6>
-        </a>
-      </li>
-      {% for cat in categories.values() %}
-        {% if cat.has_page %}
-        <li>
-          <a href="{{url_for('categories.with_id', id=cat.id)}}" class="dropdown-item">
-            <span>{{cat.short_name}}</span>
-          </a>
-        </li>
-        {% endif %}
-      {% endfor %}
-      {# <li>
-        <a href="#" class="dropdown-item">
-          <span>Other Categories</span>
-        </a>
-      </li> #}
-    </ul>
+  
+  <li class="nav-item mx-2">
+     <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="{{url_for('categories.overview')}}" >Categories</a>
   </li>
 
   <li class="nav-item dropdown mx-2">

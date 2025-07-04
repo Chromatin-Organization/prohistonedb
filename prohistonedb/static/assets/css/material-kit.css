@@ -24240,6 +24240,11 @@ table td {
   font-size: 1rem;
 }
 
+/* category page */
+.category-links-block {
+  margin-bottom: 2em;
+}
+
 /* HistoneDB styles */
 .legend-color {
   width: 16px;
