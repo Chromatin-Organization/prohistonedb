@@ -509,3 +509,15 @@ div.FixedHeader_Cloned table {
 .phyd3-controls .btn-fab i, .phyd3-modal .btn-fab i {
     vertical-align: baseline;
 }
+
+.well {
+	padding: 30px !important;
+	border: none;
+	border-radius: 0;
+}
+.well .form-group {
+	margin-bottom: 4px;
+}
+.well .row {
+	margin-bottom: 10px;
+}

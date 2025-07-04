@@ -24,3 +24,8 @@ def overview():
 def with_id(id: int):
     """ Render a page for a specific category. """
     return flask.render_template("pages/categories.html.j2", id=id)
+
+@bp.route("/viewer/<id>", methods=["GET"])
+def viewer_with_id(id: int):
+    """ Render a fullscreen viewer page for a specific category. """
+    return flask.render_template("pages/viewer.html.j2", id=id)
