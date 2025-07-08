@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename = 'assets/img/apple-icon.png' )}}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename = 'assets/img/favicon.png' )}}">
     <title>
-        {{siteName}}
+        {% block title %}{% endblock title %}
     </title>
     {% block libs %}
     {% endblock libs %}

@@ -1,20 +1,24 @@
 {% extends 'layouts/viewer_base.html.j2' %}
 
+    {% block title %} {{siteName}} | {{categories[id|int].name}} {% endblock title %}
+
     {% block libs %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        {# <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> #}
 
         <script src="{{ url_for('static', filename = 'assets/js/custom/jquery-3.7.0.min.js' )}}" type="text/javascript"></script>
         <script src="{{ url_for('static', filename = 'assets/js/custom/bootstrap.min.js' )}}" type="text/javascript"></script>
         <script src="{{ url_for('static', filename = 'assets/js/custom/d3.v3.min.js' )}}" type="text/javascript"></script>
         <script src="{{ url_for('static', filename = 'assets/js/custom/phyd3.min.js' )}}" type="text/javascript"></script>
+        <link href="{{ url_for('static', filename = 'assets/css/vib.css' )}}" rel="stylesheet">
         <link href="{{ url_for('static', filename = 'assets/css/phyd3.css' )}}" rel="stylesheet">
         {# <link href="{{ url_for('static', filename = 'assets/css/bootstrap.min.css' )}}" rel="stylesheet"> #}
     {% endblock libs %}
 
-    {% block body %}{% endblock body %}
+    {% block body %} class="container viewer" {% endblock body %}
 
     {% block phyd3 %}
+        <h3>Phylogenetic tree of the {{categories[id|int].name}} category</h3>
         <div class="row phyd3-controls well">
         <div class="col-xs-3">
             <div class="form-group">
@@ -111,9 +115,6 @@
                       <input id="taxonomyColors" type="checkbox" checked="checked"> taxonomy colorization
                     </label>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-11 text-right left-dropdown middle-padding"><a class="pointer" data-toggle="modal" data-target="#taxonomyColorsModal">show taxonomy colors table</a></div>
             </div>
             <div class="row">
                 <div class="col-xs-3">
@@ -228,30 +229,39 @@
                     <button id="graphWidthHigher" class="btn btn-primary" title="make them longer"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span></button>
                 </div>
             </div>
+
+            {# ? non-functioning elements; remove or fix functionality later? #}
+            {#
             <div class="row">
                 Search (regexp supported):
                 <input type="text" id="searchQuery" class="form-control no-padding" />
             </div>
+            #}
             <div class="row">
                 Download as:
+                {#
                 <button class="btn btn-primary" id="linkSVG">SVG</button>
                 <button class="btn btn-primary" id="linkPNG">PNG</button>
-                <a id="dl-link" class="btn btn-primary" id="linkXML" download >XML</a>
+                #}
+                <a href="{{ url_for('static', filename=(categories[id|int].static_phylotree_path | string)) }}" class="btn btn-primary" id="linkXML" download >XML</a>
             </div>
+            
         </div>
        
         <div class="">
             <div id="phyd3-container" class="phy col-xs-9"></div>
         </div>
          
-         <div class="col-sm-9 text-center">
-            Use your mouse to drag, zoom and modify the tree. <br />
-            <strong>Actions:</strong><br />
-            CTRL + wheel = scale Y, ALT + wheel = scale X<br />
-            mouse click = node info<br />
-            CTRL + mouse click = swap, ALT + mouse click = view subtree, SHIFT + mouse click = color subtree<br />
-            <br />
-            You can use the URL of this page as permalink.
+         <div class="col-sm-12 text-center">
+            <div class="row actions">
+                <p>
+                    Use your mouse to drag, zoom and modify the tree. <br />
+                    <strong>Actions:</strong><br />
+                    CTRL + wheel = scale Y, ALT + wheel = scale X<br />
+                    mouse click = node info<br />
+                    CTRL + mouse click = swap, ALT + mouse click = view subtree, SHIFT + mouse click = color subtree
+                </p>
+            </div>
         </div>
     </div>
     {% endblock phyd3 %}

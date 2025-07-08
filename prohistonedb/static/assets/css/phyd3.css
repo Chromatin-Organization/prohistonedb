@@ -510,14 +510,57 @@ div.FixedHeader_Cloned table {
     vertical-align: baseline;
 }
 
+/* UI improvements */
+
+.phyd3-controls .form-group label {
+	color: #374767 !important;
+	font-size: 13px;
+}
+
+.phyd3-controls .btn {
+	padding: 4px 12px !important;
+}
+.phyd3-controls .btn-primary {
+	color: #337ab7;
+	background-color: #f0f2f5;
+	border-color: transparent;
+}
+.phyd3-controls .btn-primary:hover {
+	border-color: transparent !important;
+}
+.phyd3-controls .middle-padding {
+	padding-top: 0;
+}
+
 .well {
 	padding: 30px !important;
 	border: none;
-	border-radius: 0;
+	border-radius: .75rem;
+	background-color: #fff !important;
 }
 .well .form-group {
 	margin-bottom: 4px;
 }
 .well .row {
 	margin-bottom: 10px;
+}
+
+.phyd3-controls .popup {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%);
+    width: 400px !important;
+}
+.phyd3-controls .popup table {
+    font-size: 1rem;
+}
+
+.actions {
+	margin-top: 1em;
+}
+
+.viewer {
+	padding: 2rem 0 0 0;
+    background: linear-gradient(0deg, rgb(240, 242, 245) 0%, rgb(139, 156, 162) 100%);
 }
