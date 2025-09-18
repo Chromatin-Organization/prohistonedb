@@ -54,6 +54,18 @@ class FieldType(Enum):
     @classmethod
     def required_types(cls) -> set[FieldType]:
         return {field_type for field_type in FieldType} - FieldType.optional_types()
+    
+    def to_optional_field_type(self) -> FieldType:
+        if self in self.optional_types():
+            return self
+        
+        if self is self.TEXT:
+            return self.TEXT_OPTIONAL
+        
+        if self is self.IDS:
+            return self.IDS_OPTIONAL
+        
+        raise ValueError(f"No optional equivalent has been implemented for FieldType: {self}.")
 
 #***===== Field Enum =====***#
 class Field(str, Enum):
@@ -68,6 +80,7 @@ class Field(str, Enum):
     PROTEIN_IDS = "pid"
     PROTEOME_IDS = "pmid"
     GENES = "gen"
+    GENE_NAMES = "gname"
     GENOME_IDS = "gmid"
 
     # Facet
@@ -96,6 +109,7 @@ class Field(str, Enum):
             cls.PROTEIN_IDS,
             cls.PROTEOME_IDS,
             cls.GENES,
+            cls.GENE_NAMES,
             cls.GENOME_IDS
         }
 
@@ -121,6 +135,7 @@ class Field(str, Enum):
             cls.PROTEIN_IDS,
             cls.PROTEOME_IDS,
             cls.GENES,
+            cls.GENE_NAMES,
             cls.GENOME_IDS,
             cls.LINEAGE,
             cls.LINEAGE_SUPERKINGDOM
@@ -160,9 +175,9 @@ class Field(str, Enum):
             return FieldType.PRIMARY_TEXT
         elif self is self.SEQUENCE_LEN:
             return FieldType.INTEGER
-        elif self in [self.ORGANISM, self.CATEGORY, self.SEQUENCE, self.LINEAGE]:
+        elif self in [self.ORGANISM, self.CATEGORY, self.SEQUENCE, self.LINEAGE, self.GENE_NAMES]:
             return FieldType.TEXT
-        elif self is self.LINEAGE_SUPERKINGDOM:
+        elif self in [self.LINEAGE_SUPERKINGDOM]:
             return FieldType.TEXT_OPTIONAL
         elif self is self.CATEGORY_ID:
             return FieldType.INT_ID
@@ -239,6 +254,9 @@ class Field(str, Enum):
                     return None
             
             return json.dumps(gids)
+        elif self is self.GENE_NAMES:
+            gene_names = [name for name in json_data["histoneDB"]["geneNames"]]
+            return json.dumps(gene_names)
         elif self is self.GENOME_IDS:
             gmids = [ref["id"] for ref in json_data["uniprot"]["uniProtKBCrossReferences"] if ref["database"] == "EMBL"]
             if gmids:

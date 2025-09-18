@@ -53,6 +53,68 @@ def get_categories() -> dict[int, Category]:
     return flask.g.categories
 
 #***===== Database Set-Up Functions =====***#
+def init_metadata_table(name: str = "metadata"):
+    """
+    A function that generates an empty metadata table.
+
+    Args:
+        name (str, optional): The name of the table. This is usually manually specified when a new
+        table needs to be made during a database update. Defaults to "metadata" as is expected
+        throughout the application.
+    """
+    conn = get_db()
+
+    # Create the table itself
+    sql = f"CREATE TABLE {name} (\n"
+
+    search_columns = {field.db_name: field.type for field in Field.metadata_fields()}
+    info_columns = {
+        "pdb_ids": FieldType.IDS,
+        "rel_path": FieldType.TEXT,
+        "ranks": FieldType.TEXT_OPTIONAL,
+        "publications": FieldType.TEXT_OPTIONAL
+    }
+
+    all_columns = search_columns | info_columns
+    
+    for col, typ in all_columns.items():
+        sql += f"    {col} {conn.sql_field_type(typ)},\n"
+
+        if col == Field.LINEAGE.db_name:
+            sql += f"    {Field.LINEAGE.db_name}_json {conn.sql_field_type(FieldType.TEXT)},\n"
+    
+    sql += f"    last_updated {conn.sql_field_type(FieldType.TIMESTAMP)} DEFAULT CURRENT_TIMESTAMP,\n"
+    sql += f"    FOREIGN KEY ({Field.CATEGORY_ID.db_name}) REFERENCES categories(id)\n"
+    sql += ")"
+    conn.execute(sql)
+
+    conn.commit()
+
+def init_metadata_indexes():
+    """ Create indexes for the metadata table search fields. """
+    
+    conn = get_db()
+    
+    for field in Field.metadata_fields() & Field.search_fields():
+        conn.execute(f"CREATE INDEX idx_{field.db_name} ON metadata({field.db_name})")
+
+    conn.commit()
+
+def init_search_view():
+    """ Create the search view. """
+
+    conn = get_db()
+    
+    conn.execute(f"""
+        CREATE VIEW search AS
+            SELECT metadata.*, categories.name AS {Field.CATEGORY.db_name}, categories.preferred_multimer
+            FROM metadata
+            LEFT JOIN categories ON metadata.{Field.CATEGORY_ID.db_name} = categories.id
+    """)
+
+    conn.commit()
+
+
 def init_db():
     """ Creates a database with empty tables and corresponding indexes. """ 
     # Create the database
@@ -74,38 +136,75 @@ def init_db():
     # Add indexes for the categories table
     conn.execute("CREATE INDEX idx_name ON categories(name)")
 
-    # Create the metadata table
-    flask.current_app.logger.info(f"Creating the metadata table.")
-
-    sql = "CREATE TABLE metadata (\n"
-    for field in Field.metadata_fields():
-        sql += f"    {field.db_name} {conn.sql_field_type(field.type)},\n"
-
-        if field is Field.LINEAGE:
-            sql += f"    {field.LINEAGE.db_name}_json {conn.sql_field_type(FieldType.TEXT)},"
-    
-    sql += f"    rel_path {conn.sql_field_type(FieldType.TEXT)},\n"
-    sql += f"    ranks {conn.sql_field_type(FieldType.TEXT_OPTIONAL)},\n"
-    sql += f"    last_updated {conn.sql_field_type(FieldType.TIMESTAMP)} DEFAULT CURRENT_TIMESTAMP,\n"
-    sql += f"    FOREIGN KEY ({Field.CATEGORY_ID.db_name}) REFERENCES categories(id)\n"
-    sql += ")"
-    conn.execute(sql)
-
-    # Add indexes for the metadata table
-    flask.current_app.logger.info(f"Creating indexes for the metadata table.")
-    for field in Field.metadata_fields() & Field.search_fields():
-        conn.execute(f"CREATE INDEX idx_{field.db_name} ON metadata({field.db_name})")
-
-    # Create a view for accessing the necessary data in a search
-    conn.execute(f"""
-        CREATE VIEW search AS
-            SELECT metadata.*, categories.name AS {Field.CATEGORY.db_name}, categories.preferred_multimer
-            FROM metadata
-            LEFT JOIN categories ON metadata.{Field.CATEGORY_ID.db_name} = categories.id
-    """)
-
     # Commit the changes to the database
     conn.commit()
+
+    # Create the metadata table
+    flask.current_app.logger.info(f"Creating the metadata table.")
+    init_metadata_table()
+
+    flask.current_app.logger.info(f"Creating indexes for the metadata table.")
+    init_metadata_indexes()
+
+    # Create a view for accessing the necessary data in a search
+    init_search_view()
+
+def get_column_names_for_table(table_name: str) -> set[str]:
+    """
+    Returns a set of the column names for a given table name.
+    
+    WARNING: Currently sqlite only due to `PRAGMA` query!
+    """
+
+    conn = get_db()
+    
+    result_metadata = conn.execute(f"PRAGMA table_info({table_name})")
+    return {row[1] for row in result_metadata.fetchall()}
+
+def db_vc_update():
+    """
+    A 'version control' function for that start of database updates that require more than just
+    adding new data. For example, Adding new tables and columns or changing the constraints on an
+    existing column.
+
+    WARNING: Currently sqlite only due to `PRAGMA` query!
+    """
+
+    conn = get_db()
+    metadata_columns = get_column_names_for_table("metadata")
+
+    # 2025 update
+    gene_names_field = Field.GENE_NAMES
+    new_table_required = False
+
+    if not gene_names_field.db_name in metadata_columns:
+        conn.execute(f"ALTER TABLE metadata ADD COLUMN {gene_names_field.db_name} {conn.sql_field_type(gene_names_field.type.to_optional_field_type())} DEFAULT '[]'")
+        new_table_required = True
+
+    if not "pdb_ids" in metadata_columns:
+        conn.execute(f"ALTER TABLE metadata ADD COLUMN pdb_ids {conn.sql_field_type(FieldType.IDS_OPTIONAL)} DEFAULT '[]'")
+        new_table_required = True
+
+    if not "publications" in metadata_columns:
+        conn.execute(f"ALTER TABLE metadata ADD COLUMN publications {conn.sql_field_type(FieldType.TEXT_OPTIONAL)}  DEFAULT '[]'")
+    
+    conn.commit()
+
+    # Generate a new metadata table if needed
+    if new_table_required:
+        init_metadata_table(name="metadata_new")
+        metadata_new_columns = get_column_names_for_table("metadata_new")
+        column_name_string = ', '.join(metadata_new_columns)
+
+        conn.execute(f"INSERT INTO metadata_new ({column_name_string}) SELECT {column_name_string} FROM metadata")        
+        conn.execute("DROP VIEW search")
+        conn.execute("DROP TABLE metadata")
+        conn.execute("ALTER TABLE metadata_new RENAME TO metadata")
+
+        conn.commit()
+
+        init_metadata_indexes()
+        init_search_view()
 
 def update_db_categories(filename: Path):
     """ Update the database with the data in the categories JSON file. """
@@ -197,7 +296,11 @@ def update_db_metadata(filename: Path):
                 ranks_json = uid_json["histoneDB"]["rankModel"][multimer]
                 ranks[multimer] = [int(ranks_json["rank_" + str(n)].replace("model_", "")) for n in range(1, 6)]
             
+            pdb_ids = [pdb_id for pdb_id in uid_json["histoneDB"]["PDB"]]
+            data["pdb_ids"] = json.dumps(pdb_ids)
             data["ranks"] = json.dumps(ranks)
+            publications = [pub for pub in uid_json["histoneDB"]["publications"]]
+            data["publications"] = json.dumps(publications)
             data["rel_path"] = uid_json["histoneDB"]["relPath"]
             data[Field.LINEAGE.db_name+"_json"] = json.dumps(uid_json["uniprot"]["lineages"])
 
@@ -206,7 +309,7 @@ def update_db_metadata(filename: Path):
 
         # Execute the SQL query on the database
         fields = {field.db_name for field in search_fields}
-        fields = fields | {Field.LINEAGE.db_name+"_json", "rel_path", "ranks"} - {Field.CATEGORY_ID.db_name}
+        fields = fields | {Field.LINEAGE.db_name+"_json", "rel_path", "ranks", "publications", "pdb_ids"} - {Field.CATEGORY_ID.db_name}
 
         sql = "INSERT OR REPLACE INTO metadata (\n    "
         sql += ",\n    ".join(fields)
@@ -302,11 +405,15 @@ def update(
         Updates the database based on the supplied JSON file.
         WARNING: Existing entries will be overwritten where needed.
     """
-    # Update the categories table from the categories json file.
+
+    # Make any necessary to the database itself.
+    db_vc_update()
+
+    # Update the categories table with data from the categories json file.
     if categories_file:
         update_db_categories(categories_file)
 
-    # Update the metadata table from the metadata json file.
+    # Update the metadata table with data from the metadata json file.
     update_db_metadata(db_filename)
 
 @bp.cli.command("remove")
