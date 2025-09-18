@@ -245,6 +245,16 @@
                                         </div>
                                     </div>
                                     <div class="row">
+                                        <div class="col-md-4 col-lg-3 label"><span>Gene Names</span></div>
+                                        <div class="col-md-8 col-lg-9 value">
+                                            {% if r.gene_names %}
+                                            <span class="mb-0">{{r.gene_names|join(",")}}</span>
+                                            {% else %}
+                                            <span class="mb-0"> - </span>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col-md-4 col-lg-3 label"><span>Organism</span></div>
                                         <div class="col-md-8 col-lg-9 value">
                                             <span class="mb-0 float-start me-2">{{r.organism.name}}</span><span class="link text-nowrap"><a href="{{ url_for('search.index', oid=r.organism.id) }}">Search this organism</a></span>

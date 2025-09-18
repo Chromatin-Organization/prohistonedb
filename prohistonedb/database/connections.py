@@ -84,7 +84,7 @@ class DatabaseConnection:
     
     #*----- SQL generation functions -----*#
     @abc.abstractmethod
-    def sql_field_type(self, field: Field) -> str:
+    def sql_field_type(self, field_type: FieldType) -> str:
         """ Returns a string with the SQL database type for the given FieldType. """
 
     #*----- Other public functions -----*#
