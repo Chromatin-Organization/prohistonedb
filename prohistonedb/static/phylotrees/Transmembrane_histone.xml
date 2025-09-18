@@ -1,0 +1,765 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+	<phylogeny rooted="false">
+		<clade>
+			<clade>
+				<name>A0A958Q4G6</name>
+				<branch_length>1.1962790336</branch_length>
+				<taxonomy>
+					<code>Bdellovibrionota</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MNKTPLDDEAQKRYLFLTDDYARRLITRAHIIALKREGTSIQSGDVSSAHNHLERQSTLWQVLIAAAGAIFGVGLSGLIQSLSDGRLPNAIAFFLVLIIGALAFAALLRKT</mol_seq>
+					<uri>/entry/A0A958Q4G6</uri>
+					<domain_architecture length="111">
+						<domain from="8" to="35" confidence="0.000000001">Histone fold</domain>
+						<domain from="43" to="58" confidence="0.000000001">Histone fold</domain>
+						<domain from="61" to="64" confidence="0.000000001">C-terminal transmembrane domain</domain>
+						<domain from="66" to="71" confidence="0.000000001">C-terminal transmembrane domain</domain>
+						<domain from="73" to="73" confidence="0.000000001">C-terminal transmembrane domain</domain>
+						<domain from="83" to="83" confidence="0.000000001">C-terminal transmembrane domain</domain>
+						<domain from="92" to="107" confidence="0.000000001">C-terminal transmembrane domain</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<branch_length>0.0885066796</branch_length>
+				<confidence type="unknown">69.0</confidence>
+				<clade>
+					<name>A0A5B1BHV7</name>
+					<branch_length>0.9256816563</branch_length>
+					<taxonomy>
+						<code>Actinomycetota</code>
+					</taxonomy>
+					<sequence type="aa">
+						<mol_seq is_aligned="false">MTASPQRIKRHRPPELPLAAPSNFEFGVEPGRRITDELHRHAGIEGFLEAASQRLIAITDDQTAALGIEAVKIAAARGASAVDASDILAADAKLNHPPFAEQVRAWLFGVGGVLIGAGLSLAPALALTKQLEHAVLWWSAVIALLVIGAALAGLGFPRRRRN</mol_seq>
+						<uri>/entry/A0A5B1BHV7</uri>
+						<domain_architecture length="162">
+							<domain from="32" to="38" confidence="0.000000001">Other</domain>
+							<domain from="55" to="76" confidence="0.000000001">Histone fold</domain>
+							<domain from="84" to="95" confidence="0.000000001">Histone fold</domain>
+							<domain from="99" to="126" confidence="0.000000001">C-terminal transmembrane domain</domain>
+							<domain from="134" to="155" confidence="0.000000001">C-terminal transmembrane domain</domain>
+						</domain_architecture>
+					</sequence>
+				</clade>
+				<clade>
+					<branch_length>0.3340196253</branch_length>
+					<confidence type="unknown">97.0</confidence>
+					<clade>
+						<name>A0A931FX84</name>
+						<branch_length>0.7557800421</branch_length>
+						<taxonomy>
+							<code>Actinomycetota</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MTPDAGSAGHVNPTPIDLPTATEAIRGIAFEVGEELRRPGGPSDFSAAGARELVNVNAEHLRTVSLEAIKMARQDHLDSVSAQHVRQAQDDLRPRRSPPAWHITGVISGILCGLGLQEFVDAMESAEDRTAIHIAILTILLVLGCSGLVASFVVVFKRDR</mol_seq>
+							<uri>/entry/A0A931FX84</uri>
+							<domain_architecture length="160">
+								<domain from="18" to="36" confidence="0.000000001">Other</domain>
+								<domain from="47" to="74" confidence="0.000000001">Histone fold</domain>
+								<domain from="82" to="92" confidence="0.000000001">Histone fold</domain>
+								<domain from="107" to="107" confidence="0.000000001">C-terminal transmembrane domain</domain>
+								<domain from="110" to="110" confidence="0.000000001">C-terminal transmembrane domain</domain>
+								<domain from="114" to="114" confidence="0.000000001">C-terminal transmembrane domain</domain>
+								<domain from="131" to="132" confidence="0.000000001">C-terminal transmembrane domain</domain>
+								<domain from="134" to="139" confidence="0.000000001">C-terminal transmembrane domain</domain>
+								<domain from="141" to="143" confidence="0.000000001">C-terminal transmembrane domain</domain>
+								<domain from="145" to="146" confidence="0.000000001">C-terminal transmembrane domain</domain>
+								<domain from="149" to="149" confidence="0.000000001">C-terminal transmembrane domain</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+					<clade>
+						<branch_length>0.2684250273</branch_length>
+						<confidence type="unknown">99.0</confidence>
+						<clade>
+							<branch_length>0.1862948392</branch_length>
+							<confidence type="unknown">97.0</confidence>
+							<clade>
+								<name>A0A316IBH5</name>
+								<branch_length>0.6300981557</branch_length>
+								<taxonomy>
+									<code>Actinomycetota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MTTPTSSAQPIQAPSASTQSTSVPSTLTNATQLISSELSRDPNNVMTLSPHAVAALKSAHAAFLGDVGQESIRIARRANLRTVDDSHVKESAARLGLQRARKSVVETALNSIGGVIAGAGIASIYAVNFAPGPHSSLENITGVAMALIGGVSLATGLTISALKHRD</mol_seq>
+									<uri>/entry/A0A316IBH5</uri>
+									<domain_architecture length="166">
+										<domain from="29" to="29" confidence="0.000000001">Other</domain>
+										<domain from="31" to="38" confidence="0.000000001">Other</domain>
+										<domain from="50" to="77" confidence="0.000000001">Histone fold</domain>
+										<domain from="85" to="96" confidence="0.000000001">Histone fold</domain>
+										<domain from="147" to="148" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="150" to="155" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="158" to="158" confidence="0.000000001">Other</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+							<clade>
+								<name>A0A829HSF3</name>
+								<branch_length>0.5929550753</branch_length>
+								<taxonomy>
+									<code>Actinomycetota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MTVENPSPQVLAPDLADAGLRIDKELQRAKVRFSDDAGVALAEAHAEFLADLGIEAVRLTRKDRLATVDRVHVEKAADRLGANTSSSSVASICNTLGGLIEGAGIAATFNIAFGGRTPSIGEIMVTIGLSIVGGVLLAIGLTILWAARQR</mol_seq>
+									<uri>/entry/A0A829HSF3</uri>
+									<domain_architecture length="150">
+										<domain from="16" to="29" confidence="0.000000001">Other</domain>
+										<domain from="35" to="35" confidence="0.000000001">Other</domain>
+										<domain from="39" to="39" confidence="0.000000001">Histone fold</domain>
+										<domain from="41" to="44" confidence="0.000000001">Histone fold</domain>
+										<domain from="46" to="62" confidence="0.000000001">Histone fold</domain>
+										<domain from="70" to="80" confidence="0.000000001">Histone fold</domain>
+										<domain from="94" to="96" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="98" to="113" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="120" to="135" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="137" to="139" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="141" to="142" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="144" to="144" confidence="0.000000001">Other</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+						<clade>
+							<name>A0A2W4J992</name>
+							<branch_length>0.2213097943</branch_length>
+							<taxonomy>
+								<code>Actinomycetota</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MSQDLDSDVPGSENPDVGQDANLLRAARRINSELHRHSHRPMMLSQQARDRLTELHADYLADLAQEAIRTARRGGVQTVDEFHVEQASSRLGLSQTSGALETTANTLGGVFAGAGIAFAYELVFTAGPHSTTKIATAFIMSIVGFVLLSIGITTTWSRRSRAG</mol_seq>
+								<uri>/entry/A0A2W4J992</uri>
+								<domain_architecture length="163">
+									<domain from="21" to="21" confidence="0.000000001">Other</domain>
+									<domain from="23" to="25" confidence="0.000000001">Other</domain>
+									<domain from="137" to="138" confidence="0.000000001">C-terminal transmembrane domain</domain>
+									<domain from="140" to="155" confidence="0.000000001">C-terminal transmembrane domain</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+				</clade>
+			</clade>
+			<clade>
+				<branch_length>0.0331346706</branch_length>
+				<confidence type="unknown">55.0</confidence>
+				<clade>
+					<branch_length>0.0922642007</branch_length>
+					<confidence type="unknown">56.0</confidence>
+					<clade>
+						<branch_length>0.0538531396</branch_length>
+						<confidence type="unknown">42.0</confidence>
+						<clade>
+							<branch_length>0.105810516</branch_length>
+							<confidence type="unknown">76.0</confidence>
+							<clade>
+								<branch_length>0.3859781359</branch_length>
+								<confidence type="unknown">100.0</confidence>
+								<clade>
+									<branch_length>0.1780594536</branch_length>
+									<confidence type="unknown">99.0</confidence>
+									<clade>
+										<branch_length>0.1158674786</branch_length>
+										<confidence type="unknown">78.0</confidence>
+										<clade>
+											<branch_length>0.0625778865</branch_length>
+											<confidence type="unknown">41.0</confidence>
+											<clade>
+												<branch_length>0.3737663833</branch_length>
+												<confidence type="unknown">97.0</confidence>
+												<clade>
+													<branch_length>0.2115727223</branch_length>
+													<confidence type="unknown">92.0</confidence>
+													<clade>
+														<branch_length>0.3073772987</branch_length>
+														<confidence type="unknown">98.0</confidence>
+														<clade>
+															<branch_length>0.3068193379</branch_length>
+															<confidence type="unknown">79.0</confidence>
+															<clade>
+																<branch_length>0.8391926339</branch_length>
+																<confidence type="unknown">100.0</confidence>
+																<clade>
+																	<branch_length>0.1376604678</branch_length>
+																	<confidence type="unknown">22.0</confidence>
+																	<clade>
+																		<branch_length>0.1153370837</branch_length>
+																		<confidence type="unknown">21.0</confidence>
+																		<clade>
+																			<branch_length>0.2833386727</branch_length>
+																			<confidence type="unknown">55.0</confidence>
+																			<clade>
+																				<name>A0A3S3SLX6</name>
+																				<branch_length>0.751434142</branch_length>
+																				<taxonomy>
+																					<code>Thermodesulfobacteriota</code>
+																				</taxonomy>
+																				<sequence type="aa">
+																					<mol_seq is_aligned="false">MKTDKERDKTQLQPAYNLQQQLEGKELFPSEEAAERINDLTSGYGAMLYEESERVARRARADHEITVEHVKKALNILKERERRSWKKGLSGIVAGALFGVALSPLMSASSISSIPVYQYCIGLLFIIFGIILAQYSNSD</mol_seq>
+																					<uri>/entry/A0A3S3SLX6</uri>
+																					<domain_architecture length="139">
+																						<domain from="31" to="55" confidence="0.000000001">Histone fold</domain>
+																						<domain from="67" to="81" confidence="0.000000001">Histone fold</domain>
+																						<domain from="92" to="93" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																						<domain from="95" to="96" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																						<domain from="98" to="98" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																						<domain from="116" to="135" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																					</domain_architecture>
+																				</sequence>
+																			</clade>
+																			<clade>
+																				<name>A0A6L9IFI0</name>
+																				<branch_length>0.7522710361</branch_length>
+																				<taxonomy>
+																					<code>Chloroflexota</code>
+																				</taxonomy>
+																				<sequence type="aa">
+																					<mol_seq is_aligned="false">MSLQLHRNAREHLKEQLDDIHASVVDVAQNIAKNQGHDVVSASHIDEALNVLRPPRRRQRVRYWAGLGAGTSLGIAGSALVGLFQSLIAQNTDPALLFGIGFAIVAGVLGLMLAYFAST</mol_seq>
+																					<uri>/entry/A0A6L9IFI0</uri>
+																					<domain_architecture length="119">
+																						<domain from="82" to="89" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																						<domain from="95" to="95" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																						<domain from="98" to="111" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																						<domain from="113" to="113" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																					</domain_architecture>
+																				</sequence>
+																			</clade>
+																		</clade>
+																		<clade>
+																			<name>A0A1F9E2M1</name>
+																			<branch_length>0.5136742475</branch_length>
+																			<taxonomy>
+																				<code>delta/epsilon subdivisions</code>
+																			</taxonomy>
+																			<sequence type="aa">
+																				<mol_seq is_aligned="false">MPDKKDPIAAKALYPDARSKVREYVEKFFISLLLQAKIEAFNSSAETVLISHVDEAYRKIISPKRRTWFKQLSAIVGGALFGSAISIFASAYSGGNSFLMLLSMIFGFIGMFLVFLGIT</mol_seq>
+																				<uri>/entry/A0A1F9E2M1</uri>
+																				<domain_architecture length="119">
+																					<domain from="15" to="42" confidence="0.000000001">Histone fold</domain>
+																					<domain from="50" to="61" confidence="0.000000001">Histone fold</domain>
+																					<domain from="67" to="93" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																					<domain from="97" to="116" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																					<domain from="118" to="118" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																				</domain_architecture>
+																			</sequence>
+																		</clade>
+																	</clade>
+																	<clade>
+																		<branch_length>0.1657118772</branch_length>
+																		<confidence type="unknown">77.0</confidence>
+																		<clade>
+																			<name>A0A537FDX3</name>
+																			<branch_length>1.0691129215</branch_length>
+																			<taxonomy>
+																				<code>Ca. Bathyarchaeota</code>
+																			</taxonomy>
+																			<sequence type="aa">
+																				<mol_seq is_aligned="false">MWVLRGVRDAAKKKFHVEAANDLIQYVNEFASALVLQAKLLAYERGDNEVQSTHVRDALRIVNQNRAETWRKRLSAVLGAIMFGTFADGLAGQLAAGSVSVPIVHALLGVLGGFLIWYGIS</mol_seq>
+																				<uri>/entry/A0A537FDX3</uri>
+																				<domain_architecture length="121">
+																					<domain from="7" to="11" confidence="0.000000001">Other</domain>
+																					<domain from="17" to="44" confidence="0.000000001">Histone fold</domain>
+																					<domain from="52" to="95" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																					<domain from="52" to="95" confidence="0.000000001">Histone fold</domain>
+																					<domain from="103" to="120" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																				</domain_architecture>
+																			</sequence>
+																		</clade>
+																		<clade>
+																			<name>A0A9E2E6M6</name>
+																			<branch_length>0.5187078604</branch_length>
+																			<taxonomy>
+																				<code>Chloroflexota</code>
+																			</taxonomy>
+																			<sequence type="aa">
+																				<mol_seq is_aligned="false">MPSKLHDALDMDLYPDAKDTAIRIVDEFATSLVLEAKSLAYQEKADVILSSHIEDANELIRTKRKDAISKQVSQIIGGAFFGAFIQGFVTELSNGNALLIGIYVALGFVGVGLFTWGLWK</mol_seq>
+																				<uri>/entry/A0A9E2E6M6</uri>
+																				<domain_architecture length="120">
+																					<domain from="15" to="42" confidence="0.000000001">Histone fold</domain>
+																					<domain from="50" to="81" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																					<domain from="50" to="81" confidence="0.000000001">Histone fold</domain>
+																					<domain from="83" to="83" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																				</domain_architecture>
+																			</sequence>
+																		</clade>
+																	</clade>
+																</clade>
+																<clade>
+																	<name>A0A8J8C155</name>
+																	<branch_length>0.3464009128</branch_length>
+																	<taxonomy>
+																		<code>Euryarchaeota</code>
+																	</taxonomy>
+																	<sequence type="aa">
+																		<mol_seq is_aligned="false">MRSNHSEILNKKLDSSAEKKINEYGDDFIANLIFESKRIAFREKADSVINTHVEKALDIIETKKQRHWINELCKILGGAFIGILATALSTSDMRTIILSVLGLLGLFLVFIGVNE</mol_seq>
+																		<uri>/entry/A0A8J8C155</uri>
+																		<domain_architecture length="115">
+																			<domain from="6" to="9" confidence="0.000000001">Other</domain>
+																			<domain from="15" to="42" confidence="0.000000001">Histone fold</domain>
+																			<domain from="50" to="76" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																			<domain from="50" to="76" confidence="0.000000001">Histone fold</domain>
+																			<domain from="78" to="79" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																			<domain from="96" to="111" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																			<domain from="113" to="113" confidence="0.000000001">Other</domain>
+																		</domain_architecture>
+																	</sequence>
+																</clade>
+															</clade>
+															<clade>
+																<name>A0A0Q0VIG5</name>
+																<branch_length>0.4941533684</branch_length>
+																<taxonomy>
+																	<code>Euryarchaeota</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MINETAIEQELIPDIDEINRKLILLDQQIFSERAFIDFRKHVTNFILSLINESATASLRHKGDIISEADVDAANRYLTAHTKYGFFEKIDAYGGILFGAAIGALLSIDPSTSIFSPNTILILFFGLVGVILMAYGWKKSI</mol_seq>
+																	<uri>/entry/A0A0Q0VIG5</uri>
+																	<domain_architecture length="140">
+																		<domain from="32" to="59" confidence="0.000000001">Histone fold</domain>
+																		<domain from="67" to="78" confidence="0.000000001">Histone fold</domain>
+																		<domain from="89" to="106" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																		<domain from="116" to="137" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<name>A0A7Y5J1Q7</name>
+															<branch_length>0.493986117</branch_length>
+															<taxonomy>
+																<code>Bacteroidota</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MEDSKDGKHTKPSTITVEFGDSIEGIDLNKLRYLLAEAANTSLENAAFQSSFSKKAFKALTQNITVYINDIVNESVKNSKRDKVDNVSASHVDKASAYLVTKRKGKFKGILGAVGGVFLGSAVQEILGMVGDSTAPTIGSVLSISACLLVGTLLVAWNLLRD</mol_seq>
+																<uri>/entry/A0A7Y5J1Q7</uri>
+																<domain_architecture length="162">
+																	<domain from="28" to="42" confidence="0.000000001">Other</domain>
+																	<domain from="54" to="81" confidence="0.000000001">Histone fold</domain>
+																	<domain from="89" to="101" confidence="0.000000001">Histone fold</domain>
+																	<domain from="111" to="131" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																	<domain from="138" to="159" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+													<clade>
+														<name>A0A7X7ZL04</name>
+														<branch_length>0.4443387919</branch_length>
+														<taxonomy>
+															<code>Acidobacteriota</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MTSSNEDVHQHKIEEIVRESDTVFQQIDPNPFSQQAFLKLKDNINQYISQLITESIKISERRKEDTVSSNDVDKASEYLISSNYRAGYRHLGTIGGLLLGTSLSTAASMTLTNEFTIVSILFALVAGITGGFLIALQITRE</mol_seq>
+															<uri>/entry/A0A7X7ZL04</uri>
+															<domain_architecture length="141">
+																<domain from="11" to="16" confidence="0.000000001">Other</domain>
+																<domain from="34" to="61" confidence="0.000000001">Histone fold</domain>
+																<domain from="69" to="81" confidence="0.000000001">Histone fold</domain>
+																<domain from="92" to="112" confidence="0.000000001">C-terminal transmembrane domain</domain>
+																<domain from="117" to="138" confidence="0.000000001">C-terminal transmembrane domain</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+												<clade>
+													<name>A0A9E5NZ02</name>
+													<branch_length>0.592083935</branch_length>
+													<taxonomy>
+														<code>Pseudomonadota</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MRSQPASKDISQNIIQETDARLEEVEYPRFSLPASSLLKKKVKEHIHQLVSESVRVSKRHQADTVSAADVEHANGYLLYSTSRPFFRRIGMLGGILLGVSLTNTGEMIVSGCYSHEGILVWVICGIIGTFLIAKE</mol_seq>
+														<uri>/entry/A0A9E5NZ02</uri>
+														<domain_architecture length="135">
+															<domain from="12" to="24" confidence="0.000000001">Other</domain>
+															<domain from="32" to="51" confidence="0.000000001">Histone fold</domain>
+															<domain from="67" to="68" confidence="0.000000001">Histone fold</domain>
+															<domain from="70" to="75" confidence="0.000000001">Histone fold</domain>
+															<domain from="91" to="110" confidence="0.000000001">C-terminal transmembrane domain</domain>
+															<domain from="115" to="133" confidence="0.000000001">C-terminal transmembrane domain</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+											<clade>
+												<name>A0A450S484</name>
+												<branch_length>0.0589642801</branch_length>
+												<taxonomy>
+													<code>Pseudomonadota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MSNSPDSGEVARSVIRQVEIQLQSIDSSAFSLSAFKTLEARIGQYVSELVNESVKVSKRHQADTVSVAHVERASEYLVANTSRRIYRHLGTIGGVLLGAAISNILAMILVGQYTGGGTISSVTLGIIGAFMVALHMAKD</mol_seq>
+													<uri>/entry/A0A450S484</uri>
+													<domain_architecture length="139">
+														<domain from="7" to="22" confidence="0.000000001">Other</domain>
+														<domain from="27" to="29" confidence="0.000000001">Other</domain>
+														<domain from="32" to="59" confidence="0.000000001">Histone fold</domain>
+														<domain from="67" to="78" confidence="0.000000001">Histone fold</domain>
+														<domain from="87" to="87" confidence="0.000000001">C-terminal transmembrane domain</domain>
+														<domain from="89" to="110" confidence="0.000000001">C-terminal transmembrane domain</domain>
+														<domain from="115" to="136" confidence="0.000000001">C-terminal transmembrane domain</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+										<clade>
+											<branch_length>0.0369151089</branch_length>
+											<confidence type="unknown">41.0</confidence>
+											<clade>
+												<branch_length>0.0998608616</branch_length>
+												<confidence type="unknown">100.0</confidence>
+												<clade>
+													<name>A0A450WHC2</name>
+													<branch_length>0.0091503318</branch_length>
+													<taxonomy>
+														<code>Pseudomonadota</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MSNLPDSGETARSVIRQVETQLQTLDPSAFSPSAFKTLEAKIGEYVNELVDESVKVSRRHQADTVSAAHIERASEYLVANTSRRIYRHMGTAGGVLLGTAISNILAMSSVGQYTGGGAILSTTLGIIGAFMIALPMAKD</mol_seq>
+														<uri>/entry/A0A450WHC2</uri>
+														<domain_architecture length="139">
+															<domain from="12" to="24" confidence="0.000000001">Other</domain>
+															<domain from="27" to="29" confidence="0.000000001">Other</domain>
+															<domain from="32" to="59" confidence="0.000000001">Histone fold</domain>
+															<domain from="67" to="78" confidence="0.000000001">Histone fold</domain>
+															<domain from="88" to="110" confidence="0.000000001">C-terminal transmembrane domain</domain>
+															<domain from="115" to="136" confidence="0.000000001">C-terminal transmembrane domain</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+												<clade>
+													<name>A0A451AHH7</name>
+													<branch_length>0.0075242324</branch_length>
+													<taxonomy>
+														<code>Pseudomonadota</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MSNLPDSGETARSVIRQVETQLQTLDPSAFSPSAFSPSAFSPSAFSPSAFSPSAFKTLEAKIGEYVNEFVNESVKVSRRHQADTVSAAHIERASEYLVANTSRRIYRHMGTAGGVLLGAAISNILAMSSVGQYTGGGAILSTTLGIIGAFMIALPMAKD</mol_seq>
+														<uri>/entry/A0A451AHH7</uri>
+														<domain_architecture length="159">
+															<domain from="13" to="17" confidence="0.000000001">Other</domain>
+															<domain from="19" to="19" confidence="0.000000001">Other</domain>
+															<domain from="57" to="71" confidence="0.000000001">Histone fold</domain>
+															<domain from="74" to="75" confidence="0.000000001">Histone fold</domain>
+															<domain from="108" to="130" confidence="0.000000001">C-terminal transmembrane domain</domain>
+															<domain from="135" to="154" confidence="0.000000001">C-terminal transmembrane domain</domain>
+															<domain from="156" to="156" confidence="0.000000001">C-terminal transmembrane domain</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+											<clade>
+												<branch_length>0.053300736</branch_length>
+												<confidence type="unknown">58.0</confidence>
+												<clade>
+													<name>A0A450S2E2</name>
+													<branch_length>0.0943315787</branch_length>
+													<taxonomy>
+														<code>Pseudomonadota</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MSSPSDLGEAAQSVIKQVEAQFQTLDPSPFSPPAFKTLEIKIGEYVSELVNESVKVSKRYRADTVSAAHVERASEYLVANTSRRVYRHLGTIGGVLLGAAISNILAMSLAGQYTGEGAISSTVLGVIGAFMIALHIAKD</mol_seq>
+														<uri>/entry/A0A450S2E2</uri>
+														<domain_architecture length="139">
+															<domain from="6" to="24" confidence="0.000000001">Other</domain>
+															<domain from="32" to="59" confidence="0.000000001">Histone fold</domain>
+															<domain from="67" to="79" confidence="0.000000001">Histone fold</domain>
+															<domain from="86" to="110" confidence="0.000000001">C-terminal transmembrane domain</domain>
+															<domain from="115" to="136" confidence="0.000000001">C-terminal transmembrane domain</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+												<clade>
+													<name>A0A450T6J8</name>
+													<branch_length>0.0890927316</branch_length>
+													<taxonomy>
+														<code>Pseudomonadota</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MSSPSDWGETAQSVIKQVEAQFQTLDPSPFSPPAFKTLKAKIGEYVSELVNESVKASKRYRADTVSVTHVERASEYLVANTSRRIYRHLGTIGGVLLGAAISNILAMILVGRYTGGGTISSVTLGIIGAFMITLHMARD</mol_seq>
+														<uri>/entry/A0A450T6J8</uri>
+														<domain_architecture length="139">
+															<domain from="6" to="24" confidence="0.000000001">Other</domain>
+															<domain from="27" to="29" confidence="0.000000001">Other</domain>
+															<domain from="32" to="59" confidence="0.000000001">Histone fold</domain>
+															<domain from="67" to="79" confidence="0.000000001">Histone fold</domain>
+															<domain from="86" to="110" confidence="0.000000001">C-terminal transmembrane domain</domain>
+															<domain from="115" to="136" confidence="0.000000001">C-terminal transmembrane domain</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+										</clade>
+									</clade>
+									<clade>
+										<branch_length>0.1389090605</branch_length>
+										<confidence type="unknown">99.0</confidence>
+										<clade>
+											<name>A0A947B5V3</name>
+											<branch_length>0.0023415277</branch_length>
+											<taxonomy>
+												<code>Pseudomonadota</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MSDLLNSEETAQSVVQQAEGQLLQSADPSSFSPSTFTTLETRIGQYISELVSESIKVSKRHQADTVSAAHVERANEYLVTNTSRRIYRHLGTVGGVLLGAALSHIPTMSSAGRYTSEETVLSAALGIVGAFMIALHMAKD</mol_seq>
+												<uri>/entry/A0A947B5V3</uri>
+												<domain_architecture length="140">
+													<domain from="8" to="21" confidence="0.000000001">Other</domain>
+													<domain from="29" to="30" confidence="0.000000001">Other</domain>
+													<domain from="33" to="60" confidence="0.000000001">Histone fold</domain>
+													<domain from="68" to="80" confidence="0.000000001">Histone fold</domain>
+													<domain from="88" to="111" confidence="0.000000001">C-terminal transmembrane domain</domain>
+													<domain from="116" to="137" confidence="0.000000001">C-terminal transmembrane domain</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+										<clade>
+											<name>A0A8T7D1G6</name>
+											<branch_length>1.0462E-06</branch_length>
+											<taxonomy>
+												<code>Pseudomonadota</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MSDLLNSEETAQSVVQQAEGQLLQSADPSSFSPSAFTTLETRIGQYISELVSESIKVSKRHQADTVSAAHVERANEYLVTNTSRRIYRHLGTVGGVLLGAALSHIPTMSSAGRYTSEETVLSAALGIVGAFMIALHMAKD</mol_seq>
+												<uri>/entry/A0A8T7D1G6</uri>
+												<domain_architecture length="140">
+													<domain from="6" to="6" confidence="0.000000001">Other</domain>
+													<domain from="9" to="11" confidence="0.000000001">Other</domain>
+													<domain from="13" to="15" confidence="0.000000001">Other</domain>
+													<domain from="30" to="30" confidence="0.000000001">Other</domain>
+													<domain from="33" to="60" confidence="0.000000001">Histone fold</domain>
+													<domain from="68" to="80" confidence="0.000000001">Histone fold</domain>
+													<domain from="89" to="111" confidence="0.000000001">C-terminal transmembrane domain</domain>
+													<domain from="116" to="137" confidence="0.000000001">C-terminal transmembrane domain</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+									</clade>
+								</clade>
+								<clade>
+									<name>A0A450SIC8</name>
+									<branch_length>0.1522233481</branch_length>
+									<taxonomy>
+										<code>Pseudomonadota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSEDLHQEETIQPIIRRAEDQIRAVEPSPFSPPAFIMLKTKIGQYVSELVNESIKTAIRHQADTVSAAHVSQASEYLVTNTSCKIYRHVGIIGGVLLGAALAHILEMSALDQYTGEGTILSSTLGVVGAFMIALHIGKN</mol_seq>
+										<uri>/entry/A0A450SIC8</uri>
+										<domain_architecture length="139">
+											<domain from="13" to="13" confidence="0.000000001">Other</domain>
+											<domain from="16" to="16" confidence="0.000000001">Other</domain>
+											<domain from="20" to="20" confidence="0.000000001">Other</domain>
+											<domain from="32" to="59" confidence="0.000000001">Histone fold</domain>
+											<domain from="67" to="79" confidence="0.000000001">Histone fold</domain>
+											<domain from="88" to="109" confidence="0.000000001">C-terminal transmembrane domain</domain>
+											<domain from="115" to="136" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<branch_length>0.2266362165</branch_length>
+								<confidence type="unknown">92.0</confidence>
+								<clade>
+									<name>A0A285Z003</name>
+									<branch_length>0.3150328924</branch_length>
+									<taxonomy>
+										<code>Undefined</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MEPEGAQPETPTARAWTVPVYTAVPVDTPLPIIGRRAGELLAKPNALPFSAAALEELKARIDGYVVDVMREARRIARRQQADVISPAYVRQASECLVARKGRKRVALAGSVSGVALGAAFPSLLDVAAGKPMSPIQVVGSAIFGMLGAFLIAVQLLRE</mol_seq>
+										<uri>/entry/A0A285Z003</uri>
+										<domain_architecture length="158">
+											<domain from="32" to="42" confidence="0.000000001">Other</domain>
+											<domain from="46" to="46" confidence="0.000000001">Other</domain>
+											<domain from="51" to="78" confidence="0.000000001">Histone fold</domain>
+											<domain from="86" to="97" confidence="0.000000001">Histone fold</domain>
+											<domain from="111" to="111" confidence="0.000000001">C-terminal transmembrane domain</domain>
+											<domain from="113" to="127" confidence="0.000000001">C-terminal transmembrane domain</domain>
+											<domain from="134" to="149" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0A5C8NIB2</name>
+									<branch_length>0.7348979708</branch_length>
+									<taxonomy>
+										<code>Actinomycetota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSDLSPVSEAIARELARRPRPNSFSERAFQALLATQDEYVEDLSIEAIRIARREESDSVSEAQVHHARAMLQSRSKRVAWLELLGGVLAGGGFAQTLTNFVASNNPEPLSWVVSSLILGAGLLMLGASIARR</mol_seq>
+										<uri>/entry/A0A5C8NIB2</uri>
+										<domain_architecture length="132">
+											<domain from="5" to="17" confidence="0.000000001">Other</domain>
+											<domain from="26" to="53" confidence="0.000000001">Histone fold</domain>
+											<domain from="61" to="76" confidence="0.000000001">Histone fold</domain>
+											<domain from="78" to="79" confidence="0.000000001">C-terminal transmembrane domain</domain>
+											<domain from="83" to="84" confidence="0.000000001">C-terminal transmembrane domain</domain>
+											<domain from="87" to="87" confidence="0.000000001">C-terminal transmembrane domain</domain>
+											<domain from="112" to="129" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+						</clade>
+						<clade>
+							<branch_length>0.640365832</branch_length>
+							<confidence type="unknown">100.0</confidence>
+							<clade>
+								<name>A0A950ZBA5</name>
+								<branch_length>0.4169027238</branch_length>
+								<taxonomy>
+									<code>Acidobacteriota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MNRKTLEELLEQLRRLRANNLSAAEVYRRVEKMIESDSSASRFVLSVTVTIATALTGAVSVAGMFALTFERELTVSLIAILAGFITAVARLLANTPGRSASTMLKALERQTKDVYRRAIGAAGLAQEGSRDMTLGITNPTITEAARKQLRNLPVSPFAPDGLSAFHDSVDRYIHDLLMECVGVMRRHDAPAISGFYVTMAVKNIARQRRRKLHALCGMLGGAFLSGAFSSLYEIVKGHRPPEIPSVAAACALFVVGVILIAYQIVRE</mol_seq>
+									<uri>/entry/A0A950ZBA5</uri>
+									<domain_architecture length="267">
+										<domain from="143" to="144" confidence="0.000000001">Other</domain>
+										<domain from="146" to="150" confidence="0.000000001">Other</domain>
+										<domain from="161" to="186" confidence="0.000000001">Histone fold</domain>
+										<domain from="194" to="207" confidence="0.000000001">Histone fold</domain>
+										<domain from="210" to="211" confidence="0.000000001">Other</domain>
+										<domain from="213" to="214" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="217" to="225" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="227" to="229" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="232" to="235" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="243" to="243" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="248" to="265" confidence="0.000000001">C-terminal transmembrane domain</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+							<clade>
+								<name>A0A2V7W4H4</name>
+								<branch_length>0.4228482562</branch_length>
+								<taxonomy>
+									<code>Acidobacteriota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MNLSISDAARKQLRGVPSEPFAVDGFAEFQSSVERYIDDLIMESVQVMRRHDSASISPQYVKMAAQNIIRRRGRKLSALISAAGGACLAGAVTCAWEIAQHKATPSATIAAFVFLAVGLTLTFVYANRQ</mol_seq>
+									<uri>/entry/A0A2V7W4H4</uri>
+									<domain_architecture length="129">
+										<domain from="4" to="4" confidence="0.000000001">Other</domain>
+										<domain from="7" to="8" confidence="0.000000001">Other</domain>
+										<domain from="10" to="12" confidence="0.000000001">Other</domain>
+										<domain from="25" to="50" confidence="0.000000001">Histone fold</domain>
+										<domain from="58" to="99" confidence="0.000000001">C-terminal transmembrane domain</domain>
+										<domain from="58" to="99" confidence="0.000000001">Histone fold</domain>
+										<domain from="105" to="128" confidence="0.000000001">C-terminal transmembrane domain</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+					</clade>
+					<clade>
+						<branch_length>0.5526207019</branch_length>
+						<confidence type="unknown">98.0</confidence>
+						<clade>
+							<name>A0A4R2HS65</name>
+							<branch_length>0.5900929459</branch_length>
+							<taxonomy>
+								<code>Actinomycetota</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MTRAVPNRRPTGSDPDDDWAAALPWHEEARDEGQTIIRRHTVDLRDEAERIARRAGAVTVSQAFVRRASEHAGLYTPSGSSDVLLGIGGLLLGIAGGFGAALLITPVEVTTLLAVIAVLVVVAGTAAFTVGATLKMKRR</mol_seq>
+								<uri>/entry/A0A4R2HS65</uri>
+								<domain_architecture length="139">
+									<domain from="27" to="54" confidence="0.000000001">Histone fold</domain>
+									<domain from="62" to="71" confidence="0.000000001">Histone fold</domain>
+									<domain from="81" to="104" confidence="0.000000001">C-terminal transmembrane domain</domain>
+									<domain from="111" to="136" confidence="0.000000001">C-terminal transmembrane domain</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+						<clade>
+							<name>A0A960EIM6</name>
+							<branch_length>0.7883125061</branch_length>
+							<taxonomy>
+								<code>Actinomycetota</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MTPFSREADERTRLILTQVAADLIRESERVAKRHRASQVSEDYVQVAADTLQLRVTSGWTDVFLAAGSVLLGVAMGLTASFYQDDWTGISGLAIAVAVGIGAAGLILFVTGCTRKVLE</mol_seq>
+								<uri>/entry/A0A960EIM6</uri>
+								<domain_architecture length="118">
+									<domain from="7" to="7" confidence="0.000000001">Histone fold</domain>
+									<domain from="9" to="18" confidence="0.000000001">Histone fold</domain>
+									<domain from="20" to="22" confidence="0.000000001">Histone fold</domain>
+									<domain from="24" to="25" confidence="0.000000001">Histone fold</domain>
+									<domain from="64" to="73" confidence="0.000000001">C-terminal transmembrane domain</domain>
+									<domain from="76" to="76" confidence="0.000000001">C-terminal transmembrane domain</domain>
+									<domain from="98" to="98" confidence="0.000000001">C-terminal transmembrane domain</domain>
+									<domain from="100" to="101" confidence="0.000000001">C-terminal transmembrane domain</domain>
+									<domain from="103" to="106" confidence="0.000000001">C-terminal transmembrane domain</domain>
+									<domain from="108" to="108" confidence="0.000000001">Other</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+				</clade>
+				<clade>
+					<name>A0A4Y9MBP1</name>
+					<branch_length>0.8132057432</branch_length>
+					<taxonomy>
+						<code>Actinomycetota</code>
+					</taxonomy>
+					<sequence type="aa">
+						<mol_seq is_aligned="false">MTDPKPANVGEPATTKVAAPADETIAFSESAVDAFDAAADQYVVDLTDVSAMLMRRQNMDAVSAAHVETAASLLATRSGRRSAKALSAFGGVLLGAGLGVFTSVMASEAPRWTSFSVAIALIFCTLGGVMMAVGLLRE</mol_seq>
+						<uri>/entry/A0A4Y9MBP1</uri>
+						<domain_architecture length="138"/>
+					</sequence>
+				</clade>
+			</clade>
+		</clade>
+	</phylogeny>
+	<taxonomies>
+		<taxonomy code="Actinomycetota">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Bacteroidota">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Euryarchaeota">
+			<color>0xbebada</color>
+		</taxonomy>
+		<taxonomy code="delta/epsilon subdivisions">
+			<color>0xfb8072</color>
+		</taxonomy>
+		<taxonomy code="Chloroflexota">
+			<color>0x80b1d3</color>
+		</taxonomy>
+		<taxonomy code="Acidobacteriota">
+			<color>0xfdb462</color>
+		</taxonomy>
+		<taxonomy code="Bdellovibrionota">
+			<color>0xb3de69</color>
+		</taxonomy>
+		<taxonomy code="Thermodesulfobacteriota">
+			<color>0xfccde5</color>
+		</taxonomy>
+		<taxonomy code="Pseudomonadota">
+			<color>0xd9d9d9</color>
+		</taxonomy>
+		<taxonomy code="Ca. Bathyarchaeota">
+			<color>0xbc80bd</color>
+		</taxonomy>
+		<taxonomy code="Undefined">
+			<color>0xccebc5</color>
+		</taxonomy>
+	</taxonomies>
+	<labels/>
+	<domains>
+		<domain name="Histone fold">
+			<color>#8da0cb</color>
+			<description>Alpha 2 and 3 helices of the histone fold</description>
+		</domain>
+		<domain name="C-terminal transmembrane domain">
+			<color>#e78ac3</color>
+			<description>Two C-terminal transmembrane helices</description>
+		</domain>
+		<domain name="Other">
+			<color>#b3b3b3</color>
+			<description>Other secondary structures</description>
+		</domain>
+	</domains>
+</phyloxml>

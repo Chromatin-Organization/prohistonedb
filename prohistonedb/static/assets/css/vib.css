@@ -1,0 +1,50 @@
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none){img[src*=".svg"]{width:100%;}}
+@font-face{font-family:Roboto;src:url(../fonts/Roboto/Roboto-Light.ttf);}
+@font-face{font-family:Roboto Slab;src:url(../fonts/Roboto_Slab/RobotoSlab-Bold.ttf);}
+@font-face{font-family:Open Sans;src:url(../fonts/OpenSans/OpenSans.woff2) format('woff2');}
+@font-face{font-family:Material Icons;font-weight:400;font-style:normal;src:url(../fonts/Material_Icons/Material_Icons_Round.woff2) format('woff2');}
+
+body{font-family:"Roboto", "Open Sans", Helvetica, sans-serif;color:#374767 !important;font-weight:400;font-size:1rem;}
+.form-group textarea.form-control{background-color:white;}
+.no-decoration{color:black;}
+.fill-container{height:100%;}
+.no-decoration:hover{color:black;text-decoration:none;}
+.center-container{display:table;vertical-align:middle;}
+.vertical-center-row{display:table-cell;vertical-align:middle;}
+h1, h2, h3 {font-family:'Roboto Slab';font-weight:normal}
+h4, h5, h6 {font-family:'Roboto';font-weight:400;color:#1b2944;}
+#phyd3{padding:0px;margin:0px;text-align:center;}
+
+.checkbox .checkbox-material{width:15px;height:15px;}
+.phyd3-documentation{font-size:0.7em;}
+hr{border-top:1px solid #aaa;}
+.red{color:red;}
+.btn-primary{font-size:1.0em;}
+textarea.col{min-height:400px;overflow-x:hidden;}
+.radio{display:inline-block;}
+.annotation .form-group{margin:0px;}
+.hidden{display:none;}
+td{vertical-align:top;}
+.row .columns{overflow-x:scroll;}
+.graphColor{padding-right:10px !important;}
+.form-group{margin-top:0px;}
+.top-padding{padding-top:5px;}
+
+.phyd3-controls .popup {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%);
+    width: 400px !important;
+}
+.phyd3-controls .popup table {
+    font-size: 1rem;
+}
+
+h3 {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.3;
+    opacity: .8;
+    margin-bottom: 20px;
+}

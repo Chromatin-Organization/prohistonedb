@@ -14,7 +14,7 @@ from collections import Counter
 
 import json
 
-#*----- Flask & Flask extenstions -----*#
+#*----- Flask & Flask extensions -----*#
 import flask
 
 #*----- Other external packages -----*#

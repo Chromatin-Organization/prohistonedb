@@ -98,6 +98,10 @@ class Category:
     @property
     def static_logo_path(self):
         return (Path("logo-data") / self.name).with_suffix(".json").as_posix()
+    
+    @property
+    def static_phylotree_path(self):
+        return (Path("phylotrees") / self.name).with_suffix(".xml").as_posix()
             
 @dataclass(eq=False, frozen=True)
 class Histone:
@@ -147,4 +151,4 @@ class Histone:
         else:
             relaxed = "relaxed"
         
-        return path / f"{self.uniprot_id}_{relaxed}_rank_{rank}_model_{model}.cif"
+        return path / f"{self.uniprot_id}_{relaxed}_rank_00{rank}_alphafold2_multimer_v3_model_{model}_seed_000.cif"

@@ -6,6 +6,9 @@
 
 @import 'nouislider';
 
+/* Open Sans font used for Phylotree viewer */
+@font-face { font-family: Open Sans; src:url(../fonts/OpenSans/OpenSans.woff2) format('woff2') }
+
 body {
     font-size: $font-size-base;
 }
@@ -96,7 +99,7 @@ section h2 {
     margin-bottom: 1em;
 }
 section p a,
-section li a {
+section li a { // also affects dropdown links
     text-decoration: none;
     border-bottom: 1px dashed $headings-color;
 
@@ -421,6 +424,12 @@ table th,
 }
 
 #list-view {
+    #download_select_toggle_wrapper {
+        font-size: $font-size-sm;
+        margin-bottom: -1.4rem;
+        margin-left: 1.2rem;
+    }
+
     .form-check {
         width: auto;
         padding-left: 0;
@@ -498,9 +507,25 @@ table th,
     }
 }
 
+.dropdown li {
+    margin-left: 0
+}
+
+.dropdown-item {
+    // remove dashed border
+    &:hover {
+        border-bottom: none
+    }
+}
+
 .btn-download .material-icons-round {
     vertical-align: middle;
     font-size: $font-size-base;
+}
+
+/* category page */
+.category-links-block {
+    margin-bottom: 2em;
 }
 
 
@@ -786,6 +811,36 @@ table th,
         &:hover, 
         &:active { text-decoration: underline }
     }
+}
+
+/* PhyD3 viewer */
+// disable mouse interaction in main (entry) view
+.phyd3-overlay {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    width: 948px; // depends on screen size: use media queries?
+    height: 1200px;
+    cursor: pointer;
+    background-color: #fafafabb;
+    padding: 80px;
+    text-align: center;
+    
+    h3 {
+        font-size: 2rem;
+        line-height: 2rem;
+        color: #333;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+.phy:hover .phyd3-overlay {
+    display: block;
 }
 
 

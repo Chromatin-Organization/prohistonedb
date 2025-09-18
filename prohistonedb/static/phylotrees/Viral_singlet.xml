@@ -1,0 +1,744 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+	<phylogeny rooted="false">
+		<clade>
+			<clade>
+				<name>A0A3T1CXA3,MM-H2A</name>
+				<branch_length>0.0372788826</branch_length>
+				<taxonomy>
+					<code>Acanthamoeba castellanii medusavirus</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MEIDSHVQPAEVLAAASESMQLEEQTQLPASAAGEALEELQTEGKKTSPAKKRTSSGKNVKRANERAGLKLPPGRIQKIIKANQTTDVGRSSPTASVFLTAVIEDIVKEIIKGADKKSEERGRIRISPQDILKYLTENGEAYMHILGDAFVSHGGVGQVAEMAAAAANTGIKKRKRAASTAEGAPKKKIAKKAAAKKATGAKKVVKKKSGSTKSKTTGKSVTKKASSRKVASA</mol_seq>
+					<uri>/entry/A0A3T1CXA3</uri>
+					<domain_architecture length="233">
+						<domain from="63" to="67" confidence="0.000000001">Other</domain>
+						<domain from="73" to="82" confidence="0.000000001">Histone fold</domain>
+						<domain from="93" to="120" confidence="0.000000001">Histone fold</domain>
+						<domain from="128" to="138" confidence="0.000000001">Histone fold</domain>
+						<domain from="140" to="146" confidence="0.000000001">Histone fold</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<name>A0A7S8BEN2</name>
+				<branch_length>0.07847784</branch_length>
+				<taxonomy>
+					<code>Acanthamoeba castellanii medusavirus</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MEIESHVQPAEVLAAASESMQLEEQTQLPAFVAGEALEELQTEGKKTSPAKKRSAASGKNVKRANERAGLKLPPGRIQKIIKSNQTVDVGRSSPTASVFLTAVIEDIVKHIIVGADKKSAERGRIRISPQDINKYLTEDGEAYMRILGDAFVAHGGVGQVADAAVAAGTKKRKRAASGAEGAAKKAKKATGVKPKKTIKKVVKKKSGSAKSKTAGKSVTKKTSTRKASA</mol_seq>
+					<uri>/entry/A0A7S8BEN2</uri>
+					<domain_architecture length="229">
+						<domain from="64" to="68" confidence="0.000000001">Other</domain>
+						<domain from="74" to="83" confidence="0.000000001">Histone fold</domain>
+						<domain from="94" to="121" confidence="0.000000001">Histone fold</domain>
+						<domain from="129" to="138" confidence="0.000000001">Histone fold</domain>
+						<domain from="141" to="147" confidence="0.000000001">Histone fold</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<branch_length>0.6316439061</branch_length>
+				<confidence type="unknown">100.0</confidence>
+				<clade>
+					<branch_length>0.2559419657</branch_length>
+					<confidence type="unknown">74.0</confidence>
+					<clade>
+						<branch_length>0.0551684431</branch_length>
+						<confidence type="unknown">93.0</confidence>
+						<clade>
+							<name>S4VXR1</name>
+							<branch_length>0.015856063</branch_length>
+							<taxonomy>
+								<code>Pandoravirus dulcis</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MSAPSPMDTNTEVAPEPQAVASETADNEATAPSAVSEADAAPKAEPGTKATKKKAGKQGKKKIVLSTAAKAEGGAAAKVGKRGRGQRKKNYTSYSSFIYKVLKQVHPDVGISNKSMSVMNSFVNDMIDRIGTEAGRLAHSNKRNTIGTREIQTAVRLIMRGELARHAVSEGTKAVTKYNEAVNAAAETAAAAAIDTTAA</mol_seq>
+								<uri>/entry/S4VXR1</uri>
+								<domain_architecture length="199">
+									<domain from="95" to="105" confidence="0.000000001">Histone fold</domain>
+									<domain from="113" to="140" confidence="0.000000001">Histone fold</domain>
+									<domain from="148" to="158" confidence="0.000000001">Histone fold</domain>
+									<domain from="162" to="195" confidence="0.000000001">Other</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+						<clade>
+							<name>A0A811BLM8</name>
+							<branch_length>0.0225107897</branch_length>
+							<taxonomy>
+								<code>Pandoravirus japonicus</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MSAPSPMDTHTEVAPEPQAIASEAVDNEAAVPLAASEADAAPKAEPGTKATKKKAGKQGKKKIVLSTAAKAGEGGAAAKAGKRGRGQRKKNYTSYSSFIYKVLKQVHPDVGISNKSMSVMNSFVNDMIDRIGTEAGRLAHSNKRNTIGTREIQTAVRLIMRGELARHAVSEGTKAVTKYNEAVNAATEAHAAATIDTTAA</mol_seq>
+								<uri>/entry/A0A811BLM8</uri>
+								<domain_architecture length="200">
+									<domain from="96" to="106" confidence="0.000000001">Histone fold</domain>
+									<domain from="114" to="141" confidence="0.000000001">Histone fold</domain>
+									<domain from="149" to="159" confidence="0.000000001">Histone fold</domain>
+									<domain from="163" to="195" confidence="0.000000001">Other</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+					<clade>
+						<branch_length>0.0415326902</branch_length>
+						<confidence type="unknown">53.0</confidence>
+						<clade>
+							<branch_length>0.0262849646</branch_length>
+							<confidence type="unknown">86.0</confidence>
+							<clade>
+								<name>S4VZG8</name>
+								<branch_length>0.1290904695</branch_length>
+								<taxonomy>
+									<code>Pandoravirus salinus</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MSAPAPTDIEMTTDASVPADAAPTAAEPQHQRDMETETEAASAVPKPEPGATKTKKKAAKRTKKIALSTKKTQSGGDAGAAGKRGRGQRKKNYASYSSFVYKVLKQVHPDVGISNKSMSIMNSFVNDMIDRIGTEAGRLARTNKRNTIGTREIQTAVRLIMRGELARHAVSEGTKAVTKYNDAINAAAAEAHAVAVDTAAA</mol_seq>
+									<uri>/entry/S4VZG8</uri>
+									<domain_architecture length="201">
+										<domain from="97" to="107" confidence="0.000000001">Histone fold</domain>
+										<domain from="115" to="142" confidence="0.000000001">Histone fold</domain>
+										<domain from="150" to="160" confidence="0.000000001">Histone fold</domain>
+										<domain from="164" to="198" confidence="0.000000001">Other</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+							<clade>
+								<branch_length>0.0506285666</branch_length>
+								<confidence type="unknown">100.0</confidence>
+								<clade>
+									<name>A0A4D6EIW6</name>
+									<branch_length>0.0012697699</branch_length>
+									<taxonomy>
+										<code>Pandoravirus celtis</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MQPCVAASPCHEATAPTVSGLWLGRERTSEKKARQRQNGGKTEPAAAVSTWLCAAGAPAQPLFFSRAHTRPHKKRHRPWQETLFFCAKRVHREQPTASRAACPSFFSRSIIFFFLIASDNNMSAPSPSPMDTETVPEPQVPAEAVPAGEAAATETGTEAGTAAVPKPEPGAKKTKKKAAKRPKKIALSTKTEGDAGAVGKRGRGQRKKNYASYSSFIYKVLKQVHPDVGISNKSMSIMNSFVNDMIDRIGTEAGRLARSNKRNTIGTREIQTAVRLIMRGELARHAVSEGTKAVTKYNEAVNAAAEANAASATIKSTAA</mol_seq>
+										<uri>/entry/A0A4D6EIW6</uri>
+										<domain_architecture length="319">
+											<domain from="214" to="224" confidence="0.000000001">Histone fold</domain>
+											<domain from="232" to="259" confidence="0.000000001">Histone fold</domain>
+											<domain from="267" to="277" confidence="0.000000001">Histone fold</domain>
+											<domain from="281" to="318" confidence="0.000000001">Other</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0A2U7U9T5</name>
+									<branch_length>0.0021142943</branch_length>
+									<taxonomy>
+										<code>Pandoravirus quercus</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSAPSPSPMDTETVPEPQVPAEAVPAGEAAATETGTEAGTAAVPKPEPGAKKTKKKAAKRPKKIALSTKTEGDAGAVGKRGRGQRKKNYASYSSFIYKVLKQVHPDVGISNKSMSIMNSFVNDMIDRIGTEAGRLARSNKRNTIGTREIQTAVRLIMRGELARHAVSEGTKAVTKYNEAVNAAAEANAASAAIKSTAA</mol_seq>
+										<uri>/entry/A0A2U7U9T5</uri>
+										<domain_architecture length="198">
+											<domain from="93" to="103" confidence="0.000000001">Histone fold</domain>
+											<domain from="111" to="138" confidence="0.000000001">Histone fold</domain>
+											<domain from="146" to="156" confidence="0.000000001">Histone fold</domain>
+											<domain from="160" to="196" confidence="0.000000001">Other</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+						</clade>
+						<clade>
+							<branch_length>0.2296928268</branch_length>
+							<confidence type="unknown">92.0</confidence>
+							<clade>
+								<branch_length>0.0551761197</branch_length>
+								<confidence type="unknown">99.0</confidence>
+								<clade>
+									<name>A0A2U7UCP7</name>
+									<branch_length>0.0107337991</branch_length>
+									<taxonomy>
+										<code>Pandoravirus neocaledonia</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSAPSAASDSLPMDTDAPVAAPPTLEDQTSGLGTGDIGAAADTVAKHEPGAAKKTKKIAKKKKGAALGGVGKTESLDGVKRKTHRHKKDYASYSTFIYRVLKQVHPDVGISNKSMSIMNSFVNDMIDRIATEAGRLARTNKRNTITAREIQTAVRLIMQGELARHAVSEGTKAVTKYNEAVNAGSVGDDETAAA</mol_seq>
+										<uri>/entry/A0A2U7UCP7</uri>
+										<domain_architecture length="194">
+											<domain from="94" to="104" confidence="0.000000001">Histone fold</domain>
+											<domain from="112" to="139" confidence="0.000000001">Histone fold</domain>
+											<domain from="147" to="157" confidence="0.000000001">Histone fold</domain>
+											<domain from="160" to="184" confidence="0.000000001">Other</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0AA95ENE3</name>
+									<branch_length>0.0102878729</branch_length>
+									<taxonomy>
+										<code>Pandoravirus kuranda</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MSAPSAASDSLPMDTDAPVAAPPTLEDQTSDLGTGDIGAAADTVAKHEPGAAKKAKKIAKKKKGAALGGVGKTESLDGIKRKTHRHKKDYASYSTFIYRVLKQVHPDVGISNKSMSIMNSFVNDMIDRIATEAGRLARTNKRNTITAREIQTAVRLIMQGELARHAVSEGTKAVTKYNEAVNAGSVGDEETAAA</mol_seq>
+										<uri>/entry/A0AA95ENE3</uri>
+										<domain_architecture length="194">
+											<domain from="94" to="104" confidence="0.000000001">Histone fold</domain>
+											<domain from="112" to="139" confidence="0.000000001">Histone fold</domain>
+											<domain from="147" to="157" confidence="0.000000001">Histone fold</domain>
+											<domain from="160" to="184" confidence="0.000000001">Other</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<name>A0A2U7UFP6</name>
+								<branch_length>0.0634562371</branch_length>
+								<taxonomy>
+									<code>Pandoravirus macleodensis</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MSASSASDSSPMDTDTPVTAPPAIEEQVGDLGDHTDGDASADSIAKHEPGTAKKAKGKKTLKKKKAAGTPKTESLDGVKRKAYRHKKDYASYSTFIYRVLKQVHPDVGISNKSMSIMNSFVNDMIDRIATEAGRLARTNKRNTITAREIQTAVRLIMQGELARHAVSEGTKAVTKYNEAVNAGSVGDDETAAA</mol_seq>
+									<uri>/entry/A0A2U7UFP6</uri>
+									<domain_architecture length="193">
+										<domain from="93" to="103" confidence="0.000000001">Histone fold</domain>
+										<domain from="111" to="138" confidence="0.000000001">Histone fold</domain>
+										<domain from="146" to="156" confidence="0.000000001">Histone fold</domain>
+										<domain from="159" to="183" confidence="0.000000001">Other</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+					</clade>
+				</clade>
+				<clade>
+					<branch_length>0.3132434206</branch_length>
+					<confidence type="unknown">80.0</confidence>
+					<clade>
+						<branch_length>0.2128045709</branch_length>
+						<confidence type="unknown">68.0</confidence>
+						<clade>
+							<branch_length>0.240803035</branch_length>
+							<confidence type="unknown">96.0</confidence>
+							<clade>
+								<branch_length>0.2529422262</branch_length>
+								<confidence type="unknown">99.0</confidence>
+								<clade>
+									<name>A0A8F8KM53</name>
+									<branch_length>0.6832789553</branch_length>
+									<taxonomy>
+										<code>Clandestinovirus</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MARTKQVARKETTPKKVEKAAAEIKKPEIKKPHRYRPGTVALRRIHKEQKKYDSIVRTSPLRRLMRERLNTDLAEGQKGFHLSPSAVAAMSEIVDSTLLKLLHQSQKVASHNGDRITIFPKDVKLAADLTGVKKYL</mol_seq>
+										<uri>/entry/A0A8F8KM53</uri>
+										<domain_architecture length="136">
+											<domain from="39" to="50" confidence="0.000000001">Other</domain>
+											<domain from="58" to="72" confidence="0.000000001">Histone fold</domain>
+											<domain from="84" to="113" confidence="0.000000001">Histone fold</domain>
+											<domain from="120" to="129" confidence="0.000000001">Histone fold</domain>
+											<domain from="132" to="135" confidence="0.000000001">Other</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0A3T1CX47,MM-H4</name>
+									<branch_length>0.2282724284</branch_length>
+									<taxonomy>
+										<code>Acanthamoeba castellanii medusavirus</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MPKKIAARRSSKHIKNLGEEIGNSAVRKTVLRTGVVFRLDKTVRPKFHKVMLSKLYEAVNIAKLAAKHSGRSTIQPKDVRLGLKLASIKLLA</mol_seq>
+										<uri>/entry/A0A3T1CX47</uri>
+										<domain_architecture length="92">
+											<domain from="4" to="32" confidence="0.000000001">Histone fold</domain>
+											<domain from="41" to="68" confidence="0.000000001">Histone fold</domain>
+											<domain from="76" to="85" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<name>A0A3T1CX62,MM-H3</name>
+								<branch_length>0.1625961796</branch_length>
+								<taxonomy>
+									<code>Acanthamoeba castellanii medusavirus</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MPKERAIKKSKSAVKKVAEKKAAIKSKAKKAATGVKKPHRFRPGTTAKRLSKKEQKLSSTKTTVRRAPFGRIVRTIASLSSADSMRFSANAVDLLQQGIELYMLDLMKNAALAAKQAKRMTLMGKDIDLIQTANHEMIDEAHAAKLANTSSAGFARRRVTKKE</mol_seq>
+									<uri>/entry/A0A3T1CX62</uri>
+									<domain_architecture length="163">
+										<domain from="45" to="56" confidence="0.000000001">Other</domain>
+										<domain from="66" to="80" confidence="0.000000001">Histone fold</domain>
+										<domain from="89" to="116" confidence="0.000000001">Histone fold</domain>
+										<domain from="124" to="141" confidence="0.000000001">Histone fold</domain>
+										<domain from="143" to="144" confidence="0.000000001">Other</domain>
+										<domain from="147" to="147" confidence="0.000000001">Other</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+						<clade>
+							<branch_length>1.132993609</branch_length>
+							<confidence type="unknown">100.0</confidence>
+							<clade>
+								<branch_length>0.0092669381</branch_length>
+								<confidence type="unknown">65.0</confidence>
+								<clade>
+									<branch_length>0.0455060699</branch_length>
+									<confidence type="unknown">90.0</confidence>
+									<clade>
+										<branch_length>0.085599759</branch_length>
+										<confidence type="unknown">66.0</confidence>
+										<clade>
+											<branch_length>0.2630318019</branch_length>
+											<confidence type="unknown">88.0</confidence>
+											<clade>
+												<name>A0A2P0VMR6</name>
+												<branch_length>0.7095561243</branch_length>
+												<taxonomy>
+													<code>Tetraselmis virus 1</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MDHEKIRLEAEKTQMQLTKLKKGKEPVEEKIPIISESTLITLLAEIHPEGSTIPSMDPELVTALQDHVEGVLENIVTSACQLAKQYNRTELTKKDVEFMANKITGNDVRPAKRMKTDVLKRYRFDGASTSSST</mol_seq>
+													<uri>/entry/A0A2P0VMR6</uri>
+													<domain_architecture length="133">
+														<domain from="3" to="16" confidence="0.000000001">Other</domain>
+														<domain from="36" to="46" confidence="0.000000001">Histone fold</domain>
+														<domain from="58" to="85" confidence="0.000000001">Histone fold</domain>
+														<domain from="93" to="104" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<branch_length>0.3621044743</branch_length>
+												<confidence type="unknown">99.0</confidence>
+												<clade>
+													<name>A0A6F9F3R6</name>
+													<branch_length>0.3534642298</branch_length>
+													<taxonomy>
+														<code>Manila clam xenomavirus</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MEIDLKKKKDLSSFSRMVNRETQKRKAEIEKRREILARKPRKNVPTKVLVGQVQKTIAKKTVKKSGGGKKIFKSRRYRPGTVALRQIRKYQKSTELLIKKMPFQRLVREIASKEAMFRNLRFQSSAILALQEASEAYLVGLFEDAYSAALHTKRVTLMPKDILLAKRIRGDQN</mol_seq>
+														<uri>/entry/A0A6F9F3R6</uri>
+														<domain_architecture length="173">
+															<domain from="10" to="10" confidence="0.000000001">Other</domain>
+															<domain from="12" to="34" confidence="0.000000001">Other</domain>
+															<domain from="81" to="92" confidence="0.000000001">Other</domain>
+															<domain from="100" to="113" confidence="0.000000001">Histone fold</domain>
+															<domain from="115" to="117" confidence="0.000000001">Histone fold</domain>
+															<domain from="124" to="151" confidence="0.000000001">Histone fold</domain>
+															<domain from="159" to="169" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+												<clade>
+													<name>A0A068QLN6</name>
+													<branch_length>0.3864860094</branch_length>
+													<taxonomy>
+														<code>Armadillidium vulgare iridescent virus</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MEQTMNKLSLDDDEWEDEIEDEEEIKAEEENSEEESESDNEVEEVEEDEEEEEITDDCGEGSFIPKTPFKRLVKEIAQDFAVDLRFQKEAIDALQQVSEEYLIKLFHDANKCAEHAKRQTVTPDDIKLVRFLRQNKSMDFELS</mol_seq>
+														<uri>/entry/A0A068QLN6</uri>
+														<domain_architecture length="143">
+															<domain from="66" to="78" confidence="0.000000001">Histone fold</domain>
+															<domain from="88" to="115" confidence="0.000000001">Histone fold</domain>
+															<domain from="123" to="134" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+										</clade>
+										<clade>
+											<branch_length>0.2157429923</branch_length>
+											<confidence type="unknown">83.0</confidence>
+											<clade>
+												<branch_length>0.1092789889</branch_length>
+												<confidence type="unknown">64.0</confidence>
+												<clade>
+													<name>A0A516MG14</name>
+													<branch_length>0.7352881626</branch_length>
+													<taxonomy>
+														<code>Prokaryotic dsDNA virus sp</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MKMSKNLMKIKLKEKAAVNTYISPDVYIKMSEVMESVLENLCEEIVLAFESSGDRKITTNNVNAAITNVLLFRGDNDGV</mol_seq>
+														<uri>/entry/A0A516MG14</uri>
+														<domain_architecture length="79">
+															<domain from="5" to="13" confidence="0.000000001">Histone fold</domain>
+															<domain from="24" to="50" confidence="0.000000001">Histone fold</domain>
+															<domain from="59" to="71" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+												<clade>
+													<name>A0A9C7F0Y7</name>
+													<branch_length>0.61302042</branch_length>
+													<taxonomy>
+														<code>Armadillidium vulgare clopovirus</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MPKTPPSPPPPPTPPPTPKPRKKTKRSKIQPPFVSEPSLREIIKKSGIRRFHKHSIEKLKNYLEVFTKEVILATVKSTKERKRKTITEEDLLNGLKKLELRTAANLTPAPKI</mol_seq>
+														<uri>/entry/A0A9C7F0Y7</uri>
+														<domain_architecture length="112">
+															<domain from="36" to="45" confidence="0.000000001">Histone fold</domain>
+															<domain from="53" to="80" confidence="0.000000001">Histone fold</domain>
+															<domain from="88" to="97" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+											<clade>
+												<name>A0A481YUI9</name>
+												<branch_length>0.5518283209</branch_length>
+												<taxonomy>
+													<code>Marseillevirus LCMAC102</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MAAKGGFGKAPQRKSKIVFSDNIQGLTKPAFERIARKAGVKSMSGLCKEELRGVVLSKMRPLIEDAVIFTKNRNASTISVNDVLEAIKNQKQNFAFSTAIKKKGLKRC</mol_seq>
+													<uri>/entry/A0A481YUI9</uri>
+													<domain_architecture length="108">
+														<domain from="22" to="25" confidence="0.000000001">Other</domain>
+														<domain from="28" to="37" confidence="0.000000001">Histone fold</domain>
+														<domain from="45" to="72" confidence="0.000000001">Histone fold</domain>
+														<domain from="80" to="89" confidence="0.000000001">Histone fold</domain>
+														<domain from="95" to="95" confidence="0.000000001">Other</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+									</clade>
+									<clade>
+										<branch_length>0.0665393946</branch_length>
+										<confidence type="unknown">92.0</confidence>
+										<clade>
+											<name>R4S363</name>
+											<branch_length>0.0204977962</branch_length>
+											<taxonomy>
+												<code>Cotesia sesamiae bracovirus</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MSDCPKYAKEGKGSGKERKGFGKGGKGLGKSGIKRYRKVFRDNIQGITKSAIRRLARRGGVKRISGLVYEEIRDVLRIFLTNTIHDAIQYTEYARRTTVTAMDVVYALNRRGRKIYGYGG</mol_seq>
+												<uri>/entry/R4S363</uri>
+												<domain_architecture length="120">
+													<domain from="44" to="46" confidence="0.000000001">Other</domain>
+													<domain from="49" to="58" confidence="0.000000001">Histone fold</domain>
+													<domain from="68" to="93" confidence="0.000000001">Histone fold</domain>
+													<domain from="101" to="110" confidence="0.000000001">Histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+										<clade>
+											<branch_length>0.0103171023</branch_length>
+											<confidence type="unknown">49.0</confidence>
+											<clade>
+												<branch_length>0.0049467483</branch_length>
+												<confidence type="unknown">45.0</confidence>
+												<clade>
+													<branch_length>0.0025811018</branch_length>
+													<confidence type="unknown">42.0</confidence>
+													<clade>
+														<branch_length>2.2165E-06</branch_length>
+														<confidence type="unknown">35.0</confidence>
+														<clade>
+															<branch_length>1.0008E-06</branch_length>
+															<confidence type="unknown">28.0</confidence>
+															<clade>
+																<name>R4S370</name>
+																<branch_length>1.0008E-06</branch_length>
+																<taxonomy>
+																	<code>Cotesia sesamiae bracovirus</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MSDCPKDAKEEKGSGKEGKGFXKGGKGFGKGGKGLGKSGTKRYRKVCRDNIQGITKPAIRRLARRGGVKRISGLVYEEIRDVLRIFLTNTIHDAIQYTDYARRKTVTAMDIVYALNRQGRKIYGYGG</mol_seq>
+																	<uri>/entry/R4S370</uri>
+																	<domain_architecture length="127">
+																		<domain from="49" to="52" confidence="0.000000001">Other</domain>
+																		<domain from="55" to="64" confidence="0.000000001">Histone fold</domain>
+																		<domain from="74" to="99" confidence="0.000000001">Histone fold</domain>
+																		<domain from="107" to="116" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+															<clade>
+																<name>I6XNK7</name>
+																<branch_length>1.0008E-06</branch_length>
+																<taxonomy>
+																	<code>Cotesia sesamiae Mombasa bracovirus</code>
+																</taxonomy>
+																<sequence type="aa">
+																	<mol_seq is_aligned="false">MSDCPKDAKEEKGSGKEGKGFGKGGKGFGKGGKGLGKSGTKRYRKVCRDNIQGITKPAIRRLARRGGVKRISGLVYEEIRDVLRIFLTNTIHDAIQYTDYARRKTVTAMDIVYALNRQGRKIYGYGG</mol_seq>
+																	<uri>/entry/I6XNK7</uri>
+																	<domain_architecture length="127">
+																		<domain from="51" to="53" confidence="0.000000001">Other</domain>
+																		<domain from="56" to="65" confidence="0.000000001">Histone fold</domain>
+																		<domain from="75" to="100" confidence="0.000000001">Histone fold</domain>
+																		<domain from="108" to="117" confidence="0.000000001">Histone fold</domain>
+																	</domain_architecture>
+																</sequence>
+															</clade>
+														</clade>
+														<clade>
+															<name>R4RRW6</name>
+															<branch_length>1.0008E-06</branch_length>
+															<taxonomy>
+																<code>Cotesia sesamiae bracovirus</code>
+															</taxonomy>
+															<sequence type="aa">
+																<mol_seq is_aligned="false">MSDCPKDAKEEKGSGKEGKGXGKGGKGFGKGGKGLGKSGTKRYRKVCRDNIQGITKPAIRRLARRGGVKRISGLVYEEIRDVLRIFLTNTIHDAIQYTDYARRKTVTAMDIVYALNRQGRKIYGYGG</mol_seq>
+																<uri>/entry/R4RRW6</uri>
+																<domain_architecture length="127">
+																	<domain from="49" to="52" confidence="0.000000001">Other</domain>
+																	<domain from="55" to="64" confidence="0.000000001">Histone fold</domain>
+																	<domain from="74" to="99" confidence="0.000000001">Histone fold</domain>
+																	<domain from="107" to="116" confidence="0.000000001">Histone fold</domain>
+																</domain_architecture>
+															</sequence>
+														</clade>
+													</clade>
+													<clade>
+														<name>R4RPF6</name>
+														<branch_length>0.0025816905</branch_length>
+														<taxonomy>
+															<code>Cotesia sesamiae bracovirus</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MSDCPKDAKEEKGSGKEGKGFGKGGKGFGKGGKGLGKSGTKRYRKVCRDNIQGITKPAIRRLARRGGVKRISGLVYEEIRDVLRIFLTNTIHDAIQYTDYARRKTVTAMDIVYALNRQGRKIYGYGG</mol_seq>
+															<uri>/entry/R4RPF6</uri>
+															<domain_architecture length="127">
+																<domain from="51" to="53" confidence="0.000000001">Other</domain>
+																<domain from="56" to="65" confidence="0.000000001">Histone fold</domain>
+																<domain from="75" to="100" confidence="0.000000001">Histone fold</domain>
+																<domain from="108" to="117" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+												<clade>
+													<branch_length>2.2596E-06</branch_length>
+													<confidence type="unknown">52.0</confidence>
+													<clade>
+														<name>R4S377</name>
+														<branch_length>1.0008E-06</branch_length>
+														<taxonomy>
+															<code>Cotesia sesamiae bracovirus</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MSDCPKDAKEEKGSGKEGKGSGKERKGFGKGGKGFGKGGKGLGKSGTKRYRKVCRDNIQGITKPAIRRLARRGGVKRISGLVYEEIRDVLRIFLTNTIHDAIQYTDYARRKTVTAMDIVYALNRRGRKIYGYGG</mol_seq>
+															<uri>/entry/R4S377</uri>
+															<domain_architecture length="134">
+																<domain from="57" to="60" confidence="0.000000001">Other</domain>
+																<domain from="63" to="72" confidence="0.000000001">Histone fold</domain>
+																<domain from="82" to="107" confidence="0.000000001">Histone fold</domain>
+																<domain from="115" to="124" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+													<clade>
+														<name>R4S381</name>
+														<branch_length>1.0008E-06</branch_length>
+														<taxonomy>
+															<code>Cotesia sesamiae bracovirus</code>
+														</taxonomy>
+														<sequence type="aa">
+															<mol_seq is_aligned="false">MSDCPKDAKEEKGSGKEGKGFGKGGKGFGKGGKGLGKSGTKRYRKVCRDNIQGITKXAIRRLARRGGVKRISGLVYEEIRDVLRIFLTNTIHDAIQYTDYARRKTVTAMDIVYALNRRGRKIYGYGG</mol_seq>
+															<uri>/entry/R4S381</uri>
+															<domain_architecture length="127">
+																<domain from="50" to="53" confidence="0.000000001">Other</domain>
+																<domain from="56" to="64" confidence="0.000000001">Histone fold</domain>
+																<domain from="74" to="99" confidence="0.000000001">Histone fold</domain>
+																<domain from="107" to="116" confidence="0.000000001">Histone fold</domain>
+															</domain_architecture>
+														</sequence>
+													</clade>
+												</clade>
+											</clade>
+											<clade>
+												<branch_length>0.008090185</branch_length>
+												<confidence type="unknown">91.0</confidence>
+												<clade>
+													<name>R4RPH0</name>
+													<branch_length>1.0008E-06</branch_length>
+													<taxonomy>
+														<code>Cotesia sesamiae bracovirus</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MSDCPKDAKEEKGSGKEGKGSGKERKGFGKGGKGLGKSGTKRYRKVCRDNIQGITKPAIRRLARRGGVKRISGLVYEEIRDVLRIFLTNTIHDAIQYTDYARRKTVTAMDIVYALNRRGRKIYGYGG</mol_seq>
+														<uri>/entry/R4RPH0</uri>
+														<domain_architecture length="127">
+															<domain from="50" to="53" confidence="0.000000001">Other</domain>
+															<domain from="56" to="65" confidence="0.000000001">Histone fold</domain>
+															<domain from="75" to="100" confidence="0.000000001">Histone fold</domain>
+															<domain from="108" to="117" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+												<clade>
+													<name>R4RPG5</name>
+													<branch_length>0.0025826558</branch_length>
+													<taxonomy>
+														<code>Cotesia sesamiae bracovirus</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MSDCPKDAKEEKGSGKEGKGSGKERKGFGKGGKGLGKSGTKRYRKVCRDNIQGITKPAIRRLARRGGVKRISGLVYEEIRDVLRIFLTNTIHDAIQYTDYARRKTVTAMDIVYALNRQGRKIYGYGG</mol_seq>
+														<uri>/entry/R4RPG5</uri>
+														<domain_architecture length="127">
+															<domain from="50" to="53" confidence="0.000000001">Other</domain>
+															<domain from="56" to="65" confidence="0.000000001">Histone fold</domain>
+															<domain from="75" to="100" confidence="0.000000001">Histone fold</domain>
+															<domain from="108" to="117" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+										</clade>
+									</clade>
+								</clade>
+								<clade>
+									<name>F4ZGQ9</name>
+									<branch_length>0.0050879334</branch_length>
+									<taxonomy>
+										<code>Cotesia vestalis bracovirus</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MADHPKGAEEVKGSAKAGKGLGKEGKGLGKGAKGLGKEGRGLGKGTKGLGIAGVKRYRKVLRDNIQGITKPAIRRLARRGGVKRISGLVYEEIRDVLKIFLENVIRDAVIYTEHAKRKTVTAMDVVYALKHKGRMIYGYGG</mol_seq>
+										<uri>/entry/F4ZGQ9</uri>
+										<domain_architecture length="141">
+											<domain from="65" to="67" confidence="0.000000001">Other</domain>
+											<domain from="70" to="79" confidence="0.000000001">Histone fold</domain>
+											<domain from="87" to="114" confidence="0.000000001">Histone fold</domain>
+											<domain from="122" to="131" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<name>Q0MW09</name>
+								<branch_length>0.0020630474</branch_length>
+								<taxonomy>
+									<code>Bracoviriform glomeratae</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MADHPKGAEEVKGSAKAEKGLGKEGKGLGKGAKGLGKEGRGLGKGTKGLGKAGAKRYRKVLRDNIQGITKPTIRRLARRGGVKRISGLVYEEIRDVLKIFLENVIRDAVIYTEHAKRKTVTAMDVVYALKHKGRMIYGYGG</mol_seq>
+									<uri>/entry/Q0MW09</uri>
+									<domain_architecture length="141">
+										<domain from="65" to="67" confidence="0.000000001">Other</domain>
+										<domain from="70" to="79" confidence="0.000000001">Histone fold</domain>
+										<domain from="87" to="114" confidence="0.000000001">Histone fold</domain>
+										<domain from="122" to="131" confidence="0.000000001">Histone fold</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+					</clade>
+					<clade>
+						<branch_length>0.203802262</branch_length>
+						<confidence type="unknown">91.0</confidence>
+						<clade>
+							<name>A0A7S7YEE3</name>
+							<branch_length>0.0508469189</branch_length>
+							<taxonomy>
+								<code>Acanthamoeba castellanii medusavirus</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MSQIDEHVTEMTEYEAEHESQYSDHSDEEEQELGARVSPAKSASEKKKSASLRKKKSGSPKKKAGVKKPSGEERKRKKNYDSFATFIAKLVSANTVEDKDGKKHTRKPGFSAKGMEVLESVVKSLATEMTVVANELAKHQGRQTLDSRDFRTALAVRGGILAREPGTVKTLIAEGEKAVLKYNASLGRTAKKAAPKKKKAAAH</mol_seq>
+								<uri>/entry/A0A7S7YEE3</uri>
+								<domain_architecture length="203">
+									<domain from="84" to="92" confidence="0.000000001">Histone fold</domain>
+									<domain from="112" to="139" confidence="0.000000001">Histone fold</domain>
+									<domain from="147" to="161" confidence="0.000000001">Histone fold</domain>
+									<domain from="165" to="185" confidence="0.000000001">Other</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+						<clade>
+							<name>A0A3T1CWJ9,MM-H2B</name>
+							<branch_length>0.0848047927</branch_length>
+							<taxonomy>
+								<code>Acanthamoeba castellanii medusavirus</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MSQIDEHVTEMTEFEAEHESTYSEHSDEEEQELGARVPSRKQKGKAAAKKVKKAVAKKSGEERRRKKNYDSFATFIAKLVGPNGKGRKPGFSAKGMEVLESIVKSLATEMTIVANELAKHQGRQTLGAGDFRTALAVRGSLIAREPATVKALTEMGEKAVLKYQSSLGRPAKTAPKKKKATKKASA</mol_seq>
+								<uri>/entry/A0A3T1CWJ9</uri>
+								<domain_architecture length="186">
+									<domain from="73" to="80" confidence="0.000000001">Histone fold</domain>
+									<domain from="93" to="120" confidence="0.000000001">Histone fold</domain>
+									<domain from="128" to="142" confidence="0.000000001">Histone fold</domain>
+									<domain from="146" to="166" confidence="0.000000001">Other</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+				</clade>
+			</clade>
+		</clade>
+	</phylogeny>
+	<taxonomies>
+		<taxonomy code="Cotesia sesamiae bracovirus">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Marseillevirus LCMAC102">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Clandestinovirus">
+			<color>0xbebada</color>
+		</taxonomy>
+		<taxonomy code="Bracoviriform glomeratae">
+			<color>0xfb8072</color>
+		</taxonomy>
+		<taxonomy code="Pandoravirus kuranda">
+			<color>0x80b1d3</color>
+		</taxonomy>
+		<taxonomy code="Prokaryotic dsDNA virus sp">
+			<color>0xfdb462</color>
+		</taxonomy>
+		<taxonomy code="Cotesia sesamiae Mombasa bracovirus">
+			<color>0xb3de69</color>
+		</taxonomy>
+		<taxonomy code="Manila clam xenomavirus">
+			<color>0xfccde5</color>
+		</taxonomy>
+		<taxonomy code="Acanthamoeba castellanii medusavirus">
+			<color>0xd9d9d9</color>
+		</taxonomy>
+		<taxonomy code="Pandoravirus dulcis">
+			<color>0xbc80bd</color>
+		</taxonomy>
+		<taxonomy code="Tetraselmis virus 1">
+			<color>0xccebc5</color>
+		</taxonomy>
+		<taxonomy code="Pandoravirus celtis">
+			<color>0xffed6f</color>
+		</taxonomy>
+		<taxonomy code="Pandoravirus quercus">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Cotesia vestalis bracovirus">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Pandoravirus salinus">
+			<color>0xbebada</color>
+		</taxonomy>
+		<taxonomy code="Pandoravirus japonicus">
+			<color>0xfb8072</color>
+		</taxonomy>
+		<taxonomy code="Pandoravirus neocaledonia">
+			<color>0x80b1d3</color>
+		</taxonomy>
+		<taxonomy code="Pandoravirus macleodensis">
+			<color>0xfdb462</color>
+		</taxonomy>
+		<taxonomy code="Armadillidium vulgare iridescent virus">
+			<color>0xb3de69</color>
+		</taxonomy>
+		<taxonomy code="Armadillidium vulgare clopovirus">
+			<color>0xfccde5</color>
+		</taxonomy>
+	</taxonomies>
+	<labels/>
+	<domains>
+		<domain name="Histone fold">
+			<color>#8da0cb</color>
+			<description>Alpha 1, 2, and 3 helices of the histone fold</description>
+		</domain>
+		<domain name="Other">
+			<color>#b3b3b3</color>
+			<description>Other secondary structures</description>
+		</domain>
+	</domains>
+</phyloxml>

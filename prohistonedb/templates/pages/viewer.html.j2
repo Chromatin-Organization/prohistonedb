@@ -1,0 +1,275 @@
+{% extends 'layouts/viewer_base.html.j2' %}
+
+    {% block title %} {{siteName}} | {{categories[id|int].name}} {% endblock title %}
+
+    {% block libs %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        {# <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> #}
+
+        <script src="{{ url_for('static', filename = 'assets/js/custom/jquery-3.7.0.min.js' )}}" type="text/javascript"></script>
+        <script src="{{ url_for('static', filename = 'assets/js/custom/bootstrap.min.js' )}}" type="text/javascript"></script>
+        <script src="{{ url_for('static', filename = 'assets/js/custom/d3.v3.min.js' )}}" type="text/javascript"></script>
+        <script src="{{ url_for('static', filename = 'assets/js/custom/phyd3.min.js' )}}" type="text/javascript"></script>
+        <link href="{{ url_for('static', filename = 'assets/css/vib.css' )}}" rel="stylesheet">
+        <link href="{{ url_for('static', filename = 'assets/css/phyd3.css' )}}" rel="stylesheet">
+        {# <link href="{{ url_for('static', filename = 'assets/css/bootstrap.min.css' )}}" rel="stylesheet"> #}
+    {% endblock libs %}
+
+    {% block body %} class="container viewer" {% endblock body %}
+
+    {% block phyd3 %}
+        <h3>Phylogenetic tree of the {{categories[id|int].name}} category</h3>
+        <div class="row phyd3-controls well">
+        <div class="col-xs-3">
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="dynamicHide" type="checkbox" checked="checked"> dynamic node hiding
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="phylogram" type="checkbox" checked="checked"> show phylogram
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="lineupNodes" type="checkbox" checked="checked"> lineup nodes
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input id="lengthValues" type="checkbox"> show branch length values
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 text-right left-dropdown middle-padding">decimals</div>
+                <div class="col-xs-3 no-padding">
+                    <input id="maxDecimalsLengthValues" type="number" min="0" id="domainLevel" class="form-control no-padding col-sm-6"  value="3" disabled />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="supportValues" type="checkbox"> show support values
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 text-right left-dropdown middle-padding">decimals</div>
+                <div class="col-xs-3 no-padding">
+                    <input id="maxDecimalsSupportValues" type="number" min="0" id="domainLevel" class="form-control no-padding col-sm-6" value="1" disabled />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="nodeNames" type="checkbox" checked="checked"> show node names
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 text-right left-dropdown middle-padding">for</div>
+                <div class="col-xs-5 no-padding">
+                <select id="nodesType" class="form-control">
+                    <option selected="selected">all</option>
+                    <option>only leaf</option>
+                    <option>only inner</option>
+                </select>
+                </div>
+                <div class="col-xs-4 text-left right-dropdown middle-padding">
+                nodes
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="nodeLabels" type="checkbox" checked="checked"> show node labels
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="sequences" type="checkbox"> show additional node information
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="taxonomy" type="checkbox" checked="checked"> show taxonomy
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="taxonomyColors" type="checkbox" checked="checked"> taxonomy colorization
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    node size
+                </div>
+                <div class="col-xs-3 text-right">
+                    <button id="nodeHeightLower" class="btn btn-primary" title="make them smaller"><span class="glyphicon glyphicon-zoom-out" aria-hidden="true"></span></button>
+                </div>
+                <div class="col-xs-3 text-center middle-padding">
+                    <input type="text" id="nodeHeight" disabled="disabled" class="form-control no-padding" />
+                </div>
+                <div class="col-xs-3 text-left">
+                    <button id="nodeHeightHigher" class="btn btn-primary" title="make them bigger"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-4 text-center">
+                    <button id="zoominY" class="btn btn-primary" title="zoom in along Y axis"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Y</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 text-center">
+                    <button id="zoomoutX" class="btn btn-primary" title="zoom out along X axis"><span class="glyphicon glyphicon-zoom-out" aria-hidden="true"></span> X</button>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <button id="resetZoom" class="btn btn-link">RESET</button>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <button id="zoominX" class="btn btn-primary" title="zoom in along X axis"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> X</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-4 text-center">
+                    <button id="zoomoutY" class="btn btn-primary" title="zoom out alongY axis"><span class="glyphicon glyphicon-zoom-out" aria-hidden="true"></span> Y</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="domains" type="checkbox" checked="checked"> show domain architecture
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="domainNames" type="checkbox"> show domain names
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="domainColors" type="checkbox" checked="checked"> domain colorization
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    domain scale
+                </div>
+                <div class="col-xs-3 text-right">
+                    <button id="domainWidthLower" class="btn btn-primary" title="make them shorter"><span class="glyphicon glyphicon-zoom-out" aria-hidden="true"></span></button>
+                </div>
+                <div class="col-xs-3 text-center middle-padding">
+                    <input type="text" id="domainWidth" disabled="disabled" class="form-control no-padding" />
+                </div>
+                <div class="col-xs-3 text-left">
+                    <button id="domainWidthHigher" class="btn btn-primary" title="make them longer"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span></button>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-xs-3">
+                    p &nbsp; value
+                </div>
+                <div class="col-xs-3 text-right">
+                    <button id="domainLevelLower" class="btn btn-primary" title="lower the threshold">-</button>
+                </div>
+                <div class="col-xs-3 text-center middle-padding">
+                    <input type="text" id="domainLevel" disabled="disabled" class="form-control no-padding" />
+                </div>
+                <div class="col-xs-3 text-left">
+                    <button id="domainLevelHigher" class="btn btn-primary" title="higher the threshold">+</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="graphs" type="checkbox" checked="checked"> show graphs
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                      <input id="graphLegend" type="checkbox" checked="checked"> show graphs legend
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    graph scale
+                </div>
+                <div class="col-xs-3 text-right">
+                    <button id="graphWidthLower" class="btn btn-primary" title="make them shorter"><span class="glyphicon glyphicon-zoom-out" aria-hidden="true"></span></button>
+                </div>
+                <div class="col-xs-3 text-center middle-padding">
+                    <input type="text" id="graphWidth" disabled="disabled" class="form-control" />
+                </div>
+                <div class="col-xs-3 text-left">
+                    <button id="graphWidthHigher" class="btn btn-primary" title="make them longer"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span></button>
+                </div>
+            </div>
+
+            {# ? non-functioning elements; remove or fix functionality later? #}
+            {#
+            <div class="row">
+                Search (regexp supported):
+                <input type="text" id="searchQuery" class="form-control no-padding" />
+            </div>
+            #}
+            <div class="row">
+                Download as:
+                {#
+                <button class="btn btn-primary" id="linkSVG">SVG</button>
+                <button class="btn btn-primary" id="linkPNG">PNG</button>
+                #}
+                <a href="{{ url_for('static', filename=(categories[id|int].static_phylotree_path | string | replace(" ","_"))) }}" class="btn btn-primary" id="linkXML" download >XML</a>
+            </div>
+            
+        </div>
+       
+        <div class="">
+            <div id="phyd3-container" class="phy col-xs-9"></div>
+        </div>
+         
+         <div class="col-sm-12 text-center">
+            <div class="row actions">
+                <p>
+                    Use your mouse to drag, zoom and modify the tree. <br />
+                    <strong>Actions:</strong><br />
+                    CTRL + wheel = scale Y, ALT + wheel = scale X<br />
+                    mouse click = node info<br />
+                    CTRL + mouse click = swap, ALT + mouse click = view subtree, SHIFT + mouse click = color subtree
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock phyd3 %}
+  
+
+    {% block footerscripts %}
+        <script>
+            const phyd3xml = "{{ url_for('static', filename=(categories[id|int].static_phylotree_path | string | replace(" ","_"))) }}";
+        </script>
+        <script src="{{ url_for('static', filename = 'assets/js/custom/phy.js') }}" type="text/javascript"></script>
+    {% endblock footerscripts %}

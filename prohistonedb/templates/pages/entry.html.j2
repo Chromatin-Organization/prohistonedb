@@ -1,6 +1,7 @@
 {% extends 'layouts/base.html.j2' %}
 
 {% macro reload(multimer, rank) %}{{url_for('main.entry', uniprot_id=entry.uniprot_id, multimer=multimer.value, rank=rank)}}{% endmacro %}
+{#TODO add macro for reload(pdbcode) #}
 {% macro img_path(suffix) %}https://prohistonedb.universiteitleiden.nl/{{(entry.get_path(multimer) / entry.uniprot_id).as_posix()+suffix}}{% endmacro %}
 
 {% block title %} {{siteName}} | {{entry.uniprot_id}}{% endblock title %}
@@ -10,8 +11,17 @@
     <link href="{{ url_for('static', filename = 'assets/css/molstar.min.css' )}}" rel="stylesheet">
 {% endblock molstar %}
 
-{% block skylign %}
+{% block phyd3 %}
     <script src="{{ url_for('static', filename = 'assets/js/custom/jquery-3.7.0.min.js' )}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename = 'assets/js/custom/bootstrap.min.js' )}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename = 'assets/js/custom/d3.v3.min.js' )}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename = 'assets/js/custom/phyd3.min.js' )}}" type="text/javascript"></script>
+    <link href="{{ url_for('static', filename = 'assets/css/phyd3.css' )}}" rel="stylesheet">
+    {# <link href="{{ url_for('static', filename = 'assets/css/bootstrap.min.css' )}}" rel="stylesheet"> #}
+{% endblock phyd3 %}
+
+{% block skylign %}
+    {# <script src="{{ url_for('static', filename = 'assets/js/custom/jquery-3.7.0.min.js' )}}" type="text/javascript"></script> #}
     <script src="{{ url_for('static', filename = 'assets/js/custom/scroller.js' )}}" type="text/javascript"></script>
     <script src="{{ url_for('static', filename = 'assets/js/custom/hmm_logo.bundle.js' )}}" type="text/javascript"></script>
     <link href="{{ url_for('static', filename = 'assets/css/hmm_logo.min.css' )}}" rel="stylesheet">
@@ -110,14 +120,24 @@
 
                                 <ul id="select_multimer" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     {# * For now every multimer has a seperate call to the backend. #}
-                                    {# ? Since all required information should be available from the first call, we may want to ovload this to the client in the future. #}
+                                    {# ? Since all required information should be available from the first call, we may want to offload this to the client in the future. #}
                                     {# ? Maybe add something to indicate the default option? #}
                                     {% for mult in entry.multimers %}
                                         <li><a class="dropdown-item" href="{{ reload(mult,rank) }}">{{mult.value}}</a></li>
                                     {% endfor %}
+                                    {#TODO: add PDB codes below multimers in dropdown menu #}
+                                    {# 
+                                    {% if pdbcode is defined %}
+                                        <li>------------------</li>
+                                        {% for pdb in entry.pdbcodes %}
+                                            <li><a class="dropdown-item" href="{{ reload(pdb) }}">{{pdb.value}}</a></li>
+                                        {% endfor %}
+                                    {% endif %}
+                                    #}
                                 </ul>
                         </div>
 
+                        {#TODO: don't show dropdown on pdb code variant #}
                         <div class="dropdown float-start">
                             <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                 Rank {{rank}}
@@ -145,29 +165,7 @@
                 <div class="row">
                     <!-- sidebar left -->
                     <div class="col-lg-3 d-none d-lg-block">
-                        <h3>3D viewer</h3>
-                        <div class="viewer-legend py-3">
-                            <h6>Model confidence:</h6>
-                            <div>
-                                <span class="legend-color" style="background-color: rgb(0, 83, 214);">&nbsp;</span>
-                                <span class="legend-label">Very high (pLDDT &gt; 90)</span>
-                            </div>
-                            <div>
-                                <span class="legend-color" style="background-color: rgb(101, 203, 243);">&nbsp;</span>
-                                <span class="legend-label">Confident (90 &gt; pLDDT &gt; 70)</span>
-                            </div>
-                            <div>
-                                <span class="legend-color" style="background-color: rgb(255, 219, 19);">&nbsp;</span>
-                                <span class="legend-label">Low (70 &gt; pLDDT &gt; 50)</span>
-                            </div>
-                            <div>
-                                <span class="legend-color" style="background-color: rgb(255, 125, 69);">&nbsp;</span>
-                                <span class="legend-label">Very low (pLDDT &lt; 50)</span>
-                            </div>
-                        </div>
-                        <p>
-                            AlphaFold produces a per-residue confidence score (pLDDT) between 0 and 100. Some regions below 50 pLDDT may be unstructured in isolation.
-                        </p>
+                        {% include "contents/model_legend.html" %}
                     </div>
                     <div class="col-lg-9">
                         <div class="row mt-3">
@@ -181,12 +179,12 @@
 
                 <div class="row my-5">
                     <div class="col-lg-3">
-                        <h3>Predicted aligned error</h3>
+                        {% include "contents/pae_legend.html" %}
                     </div>
                     <div class="col-lg-9">
                         <div class="row mt-3">
                             <div id="pae-view" class="columns medium-9">
-                                <div id="pae-container" class="r{{rank | string}} mx-auto" style="background-image: url('{{ img_path('_PAE.png') }}')">
+                                <div id="pae-container" class="r{{rank | string}} mx-auto" style="background-image: url('{{ img_path('_pae.png') }}')">
                                 </div>
                             </div>
                         </div>
@@ -195,7 +193,7 @@
 
                 <div class="row my-5">
                     <div class="col-lg-3">
-                        <h3>Sequence coverage &<br/>local confidence (LDDT)</h3>
+                        {% include "contents/plddt_legend.html" %}
                     </div>
                     <div class="col-lg-9">
                         <div class="row mt-3">
@@ -211,11 +209,28 @@
                     </div>
                 </div>
 
-                {# * Skylign sequence alignment viewer #}
-                {% if entry.category.name != 'Undefined' and entry.category.name != 'Misc' %}
+                {# * PhyD3 phylogenetic tree viewer #}
+                {% if entry.category.name != 'Viral quadruplet' and entry.category.name != 'Viral triplet' %}
                 <div class="row my-5">
                     <div class="col-lg-3">
-                        <h3>{{entry.category.name}} sequence alignment</h3>
+                        {% include "contents/phylotree_legend.html" %}
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row mt-3">
+                            <div class="w-100">
+                                <div id="phyd3-container" class="phy mx-auto w-100">
+                                    <div class="phyd3-overlay"><a href="/categories/viewer/{{ entry.category.id }}" target="_blank"><h3>Click to open interactive version in new tab</h3></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                {# * Skylign sequence alignment viewer #}
+                <div class="row my-5">
+                    <div class="col-lg-3">
+                        {% include "contents/hmm_legend.html" %}
                     </div>
                     <div class="col-lg-9">
                         <div class="row mt-3">
@@ -226,7 +241,6 @@
                         </div>
                     </div>
                 </div>
-                {% endif %}
 
                 <div class="row my-5">
                     <div class="col-lg-3">
@@ -251,11 +265,15 @@
         {% endif %}
     </section>
 
+    {# TODO: no AlphaFold attribution necessary when viewing PDB entry #}
     <section id="attribution" class="bg-gradient-dark mx-n3">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 text-start mb-5 mt-5">
                     {% include "contents/attribution.html" %}
+                    {% if entry.doi %}
+                        <div class="attribution-additional"></div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -281,6 +299,7 @@
         <script>
             const mspViewer = document.querySelector("#mspViewer");
             const modelURL = "https://prohistonedb.universiteitleiden.nl/{{entry.get_cif_path(multimer, rank).as_posix()}}";
+            {#TODO: add path to cif models on PDBe based on pdb code: "https://www.ebi.ac.uk/pdbe/static/entry/" + pdbcode + "_updated.cif" #}
 
             molstar.Viewer.create('mspViewer', {
                 // https://molstar.org/docs/plugin/
@@ -309,11 +328,23 @@
             });
         </script>
 
-        {% if entry.category.name != 'Undefined' and entry.category.name != 'Misc' %}
+        <script>
+            const HMMJSONurl = "{{ url_for('static', filename=(entry.category.static_logo_path | string | replace(" ","_"))) }}";
+        </script>
+        <script src="{{ url_for('static', filename = 'assets/js/custom/skylign.js') }}" type="text/javascript"></script>
+        {% if entry.category.name != 'Viral quadruplet' and entry.category.name != 'Viral triplet' %}
             <script>
-                const HMMJSONurl = '{{url_for('static', filename=(entry.category.static_logo_path | string))}}';
+                const phyd3xml = "{{ url_for('static', filename=(entry.category.static_phylotree_path | string | replace(" ","_"))) }}";
             </script>
-            <script src="{{ url_for('static', filename = 'assets/js/custom/skylign.js' )}}" type="text/javascript"></script>
+            <script src="{{ url_for('static', filename = 'assets/js/custom/phy.js') }}" type="text/javascript"></script>
         {% endif %}
     {% endif %}
+
+    {% if entry.doi %}
+       {#TODO: add references using DOI #}
+    {% endif %}
+
+    <script>
+        
+    </script>
 {% endblock javascripts %}

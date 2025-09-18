@@ -1,0 +1,274 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+	<phylogeny rooted="false">
+		<clade>
+			<clade>
+				<name>A0A5E4I356</name>
+				<branch_length>1.3474288556</branch_length>
+				<taxonomy>
+					<code>Undefined</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MKTENIIPKKTVRRYLKNRLQGDVSEKAVAHLRQTIQTTLDDFCIEATKKHDEQNRLRKNLGLKEKKRFDKELFIKVSPRFITNGTLPKSGESGQVNEETLSSGSNDFMETKNKSSCSKSAGVDAQ</mol_seq>
+					<uri>/entry/A0A5E4I356</uri>
+					<domain_architecture length="126">
+						<domain from="9" to="19" confidence="0.000000001">Histone fold</domain>
+						<domain from="26" to="60" confidence="0.000000001">Histone fold</domain>
+						<domain from="71" to="83" confidence="0.000000001">Histone fold</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<branch_length>0.1602467028</branch_length>
+				<confidence type="unknown">42.0</confidence>
+				<clade>
+					<branch_length>0.1832482885</branch_length>
+					<confidence type="unknown">46.0</confidence>
+					<clade>
+						<branch_length>0.0958664608</branch_length>
+						<confidence type="unknown">42.0</confidence>
+						<clade>
+							<branch_length>0.7745760688</branch_length>
+							<confidence type="unknown">94.0</confidence>
+							<clade>
+								<branch_length>0.3339261443</branch_length>
+								<confidence type="unknown">94.0</confidence>
+								<clade>
+									<branch_length>0.0450960026</branch_length>
+									<confidence type="unknown">59.0</confidence>
+									<clade>
+										<branch_length>0.22986233</branch_length>
+										<confidence type="unknown">98.0</confidence>
+										<clade>
+											<branch_length>0.0803811577</branch_length>
+											<confidence type="unknown">71.0</confidence>
+											<clade>
+												<name>A0A7J2SAQ8</name>
+												<branch_length>0.2242265562</branch_length>
+												<taxonomy>
+													<code>Ca. Thermoplasmatota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MSHKIVAPYSIWKRMRELTGKKIEKRAIFEIVNFIEEQIDKIILQSLEEFESLNEMRRIQGFYQRTIMDAECVKRAIKNIYPNNYYILPKRAGGDEGEEDRKENKHPQFLREMIGYG</mol_seq>
+													<uri>/entry/A0A7J2SAQ8</uri>
+													<domain_architecture length="117">
+														<domain from="8" to="19" confidence="0.000000001">Histone fold</domain>
+														<domain from="25" to="59" confidence="0.000000001">Histone fold</domain>
+														<domain from="62" to="62" confidence="0.000000001">Histone fold</domain>
+														<domain from="70" to="80" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+											<clade>
+												<name>A0A497H1S4</name>
+												<branch_length>0.4266575395</branch_length>
+												<taxonomy>
+													<code>Ca. Thermoplasmatota</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MNADQVMNKVVSPHAVWRRMRQLTGRKIEKRAVFELVCHVERQIDRIILRSMEEFEALNEAREVQGLRQKVMIDGTCVAHAIKNMYSDSIYIVPEKGGGDRKESGDDEERHPQLKRSEVFGYG</mol_seq>
+													<uri>/entry/A0A497H1S4</uri>
+													<domain_architecture length="123">
+														<domain from="13" to="24" confidence="0.000000001">Histone fold</domain>
+														<domain from="30" to="42" confidence="0.000000001">Histone fold</domain>
+														<domain from="44" to="64" confidence="0.000000001">Histone fold</domain>
+														<domain from="75" to="85" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+										<clade>
+											<name>A0A7J2S9R0</name>
+											<branch_length>0.3101921656</branch_length>
+											<taxonomy>
+												<code>Ca. Thermoplasmatota</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MFVKNSNKVVYWYSIWKRMRNLTNKKIEKDAVFELVNYIEDHIDEIILQCMEEFQTLNRCRRQQGSYEKIMIDRYCVRNAIKNINSQQICISSNEEGGDEKEKESKEERHSQLKGVFPEVV</mol_seq>
+												<uri>/entry/A0A7J2S9R0</uri>
+												<domain_architecture length="121">
+													<domain from="12" to="23" confidence="0.000000001">Histone fold</domain>
+													<domain from="29" to="41" confidence="0.000000001">Histone fold</domain>
+													<domain from="43" to="63" confidence="0.000000001">Histone fold</domain>
+													<domain from="74" to="86" confidence="0.000000001">Histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+									</clade>
+									<clade>
+										<branch_length>0.1355333215</branch_length>
+										<confidence type="unknown">87.0</confidence>
+										<clade>
+											<name>A0A6V8EZD5</name>
+											<branch_length>0.4164500853</branch_length>
+											<taxonomy>
+												<code>Ca. Thermoplasmatota</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MHSLTGMDVEKRAVMELIIYFEASIDKVILQAEKELEQLNSRKKIQGLYEKSRIDAECIQRAIKNLNAGEYPPSSERTGGLKQEGEKNVLHKKEEHDNQGVETA</mol_seq>
+												<uri>/entry/A0A6V8EZD5</uri>
+												<domain_architecture length="104">
+													<domain from="11" to="45" confidence="0.000000001">Histone fold</domain>
+													<domain from="56" to="66" confidence="0.000000001">Histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+										<clade>
+											<name>M7T519</name>
+											<branch_length>0.3048691534</branch_length>
+											<taxonomy>
+												<code>Ca. Thermoplasmatota</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MITKKYTATRKITNLRFSDLVFVSEFSPWHNVNTVHTQHIEITNKTKPSYKHNDSSYNHDEKPVLLRWHPLWKHMRNLTHTDIEKSAVWELISYFEERIEEVIKQSTKELQNQNKLRKNQGLYSKMRIDRNCICNAIKTINSDEYSSLPEKAGGKNQEERNEKHSPIENVLHGGNIV</mol_seq>
+												<uri>/entry/M7T519</uri>
+												<domain_architecture length="177">
+													<domain from="69" to="79" confidence="0.000000001">Histone fold</domain>
+													<domain from="85" to="119" confidence="0.000000001">Histone fold</domain>
+													<domain from="130" to="142" confidence="0.000000001">Histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+									</clade>
+								</clade>
+								<clade>
+									<name>A0A7J2SRQ4</name>
+									<branch_length>0.2117737926</branch_length>
+									<taxonomy>
+										<code>Ca. Thermoplasmatota</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MHEITGREIEKRAIMELISHFEPKIDEVIKQSLVELEELNELRRIQGFDPKKRIDAECVRRAIKSINQKNDSPLPFKAGGEVKEKENEKHSPVGNLLTEVA</mol_seq>
+										<uri>/entry/A0A7J2SRQ4</uri>
+										<domain_architecture length="101">
+											<domain from="11" to="45" confidence="0.000000001">Histone fold</domain>
+											<domain from="56" to="68" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<name>A0A151EZR4</name>
+								<branch_length>0.3697014114</branch_length>
+								<taxonomy>
+									<code>Ca. Thermoplasmatota</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MKEKCKGCQISDKAVVILSIYIEEYVKNVTEKSMEILDKMNENCEIQGLRKQMRLDDKCIQKGINNINQENLLNLPGKQEGGKVKEKKRFGKHLQINELSMEVI</mol_seq>
+									<uri>/entry/A0A151EZR4</uri>
+									<domain_architecture length="104">
+										<domain from="12" to="46" confidence="0.000000001">Histone fold</domain>
+										<domain from="57" to="71" confidence="0.000000001">Histone fold</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+						<clade>
+							<name>A0A7J2SA95</name>
+							<branch_length>0.2898331516</branch_length>
+							<taxonomy>
+								<code>Ca. Thermoplasmatota</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MKYEGIDNTKSIPLSSIRRIMERYCPYHISMEAVMALRNLIEEITSKITMDAVEKFEKMNKCREAHGLSKLKRLNAWAVKNSEYNINIINGKQNMMNEGLQSQGVVTLGGGKMPAGINTAKPDTTNDQKEVV</mol_seq>
+								<uri>/entry/A0A7J2SA95</uri>
+								<domain_architecture length="132">
+									<domain from="14" to="22" confidence="0.000000001">Histone fold</domain>
+									<domain from="31" to="65" confidence="0.000000001">Histone fold</domain>
+									<domain from="76" to="80" confidence="0.000000001">Histone fold</domain>
+									<domain from="83" to="88" confidence="0.000000001">Histone fold</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+					<clade>
+						<name>A0A497HGH8</name>
+						<branch_length>0.3854230498</branch_length>
+						<taxonomy>
+							<code>Ca. Thermoplasmatota</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MMDAKVVGYPEGKSAVNPVYAAKQGRKSFPKNPIKEILGQECNPYQISMDSVIITKNFLEELTIRVAKLAKKRMDEYNTSRKAQGLEEIKRLPGWIVEEVIHNILKELDVIDTGLQHDQNELRSPGSENMSAQTNTVKPDKTTDDRREVV</mol_seq>
+							<uri>/entry/A0A497HGH8</uri>
+							<domain_architecture length="150">
+								<domain from="31" to="41" confidence="0.000000001">Histone fold</domain>
+								<domain from="49" to="83" confidence="0.000000001">Histone fold</domain>
+								<domain from="94" to="109" confidence="0.000000001">Histone fold</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+				</clade>
+				<clade>
+					<branch_length>0.0632397597</branch_length>
+					<confidence type="unknown">73.0</confidence>
+					<clade>
+						<name>A0A497HGY1</name>
+						<branch_length>0.4528254601</branch_length>
+						<taxonomy>
+							<code>Ca. Thermoplasmatota</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MNSIRKIIFEECDYPICAESIEELKAILENVAHKIVIEAMAEFDELNGYRRKHGLRELKRLNSYAIKKGAEKVLNGVLDVDMGLQSRMAISPGGKKCNHVPPKFAVEIQ</mol_seq>
+							<uri>/entry/A0A497HGY1</uri>
+							<domain_architecture length="109">
+								<domain from="3" to="11" confidence="0.000000001">Histone fold</domain>
+								<domain from="18" to="52" confidence="0.000000001">Histone fold</domain>
+								<domain from="63" to="75" confidence="0.000000001">Histone fold</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+					<clade>
+						<name>A0A7J2S8V3</name>
+						<branch_length>0.3390381349</branch_length>
+						<taxonomy>
+							<code>Ca. Thermoplasmatota</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MLPLKPIKTILKQKCNGNQISIEAAIELKYFLEKVAKDVAEKSSNEFLKYNEYRKRQGLREAKRLSSSIIKKVLKQFYYNNMGSQIRESVSPGGEK</mol_seq>
+							<uri>/entry/A0A7J2S8V3</uri>
+							<domain_architecture length="96">
+								<domain from="4" to="14" confidence="0.000000001">Histone fold</domain>
+								<domain from="22" to="56" confidence="0.000000001">Histone fold</domain>
+								<domain from="67" to="81" confidence="0.000000001">Histone fold</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+				</clade>
+			</clade>
+			<clade>
+				<name>A0A497HFE3</name>
+				<branch_length>0.2822158539</branch_length>
+				<taxonomy>
+					<code>Ca. Thermoplasmatota</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MLKESLQGNSNSGQVSKKAVDEAEKFLQNVVHELGKQASEQFNQLNERRKKLGLPVLKRLDAWTVKKAEEKVFSNTNNTSMGSQPKPPETGNPGGNKMSADNATKLVNTTDDNREVV</mol_seq>
+					<uri>/entry/A0A497HFE3</uri>
+					<domain_architecture length="117">
+						<domain from="2" to="7" confidence="0.000000001">Histone fold</domain>
+						<domain from="17" to="51" confidence="0.000000001">Histone fold</domain>
+						<domain from="62" to="74" confidence="0.000000001">Histone fold</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+		</clade>
+	</phylogeny>
+	<taxonomies>
+		<taxonomy code="Ca. Thermoplasmatota">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Undefined">
+			<color>0xffffb3</color>
+		</taxonomy>
+	</taxonomies>
+	<labels/>
+	<domains>
+		<domain name="Histone fold">
+			<color>#8da0cb</color>
+			<description>Alpha 1, 2, and 3 helices of the histone fold</description>
+		</domain>
+		<domain name="Other">
+			<color>#b3b3b3</color>
+			<description>Other secondary structures</description>
+		</domain>
+	</domains>
+</phyloxml>

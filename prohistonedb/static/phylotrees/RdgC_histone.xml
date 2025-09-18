@@ -1,0 +1,498 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+	<phylogeny rooted="false">
+		<clade>
+			<clade>
+				<name>A0A7D6VNA5</name>
+				<branch_length>0.8285535</branch_length>
+				<taxonomy>
+					<code>Clostridia</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MDQLKMELDIECKELIDIVNDEPLEEDTQNLIYKNRLRDLVKDIANFEEFEGIQITKDGLGRLQDTSKYIITMLIVEIVEELRNSNRKQIKPKNVDNALDKILSKASGIDSALTLLRENIVELEKLNTNTSVTKASQFINFGQK</mol_seq>
+					<uri>/entry/A0A7D6VNA5</uri>
+					<domain_architecture length="144">
+						<domain from="34" to="47" confidence="0.000000001">Histone fold</domain>
+						<domain from="57" to="84" confidence="0.000000001">Histone fold</domain>
+						<domain from="92" to="128" confidence="0.000000001">C-terminal helix</domain>
+						<domain from="92" to="128" confidence="0.000000001">Histone fold</domain>
+						<domain from="131" to="141" confidence="0.000000001">Other</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<branch_length>0.113163271</branch_length>
+				<confidence type="unknown">75.0</confidence>
+				<clade>
+					<branch_length>0.0789678726</branch_length>
+					<confidence type="unknown">63.0</confidence>
+					<clade>
+						<branch_length>0.1210180763</branch_length>
+						<confidence type="unknown">75.0</confidence>
+						<clade>
+							<branch_length>0.2141745076</branch_length>
+							<confidence type="unknown">93.0</confidence>
+							<clade>
+								<name>A0A0F5R1Y5</name>
+								<branch_length>0.3393866988</branch_length>
+								<taxonomy>
+									<code>Bacilli</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MENKEKQELIEDTQIKTSEDELEAIEATEEEIEDTLISLLYGNRLRDLVKRVAKNDTVTVQIGKRGVDGLQNAMKFLAVMMIYETLDVLKIKNKVQITPLIISQALSNLVGKSDSLNIATLELETLIMKLQANNSNTSVIRATEFVNLFEKEETIDTTDDKSQ</mol_seq>
+									<uri>/entry/A0A0F5R1Y5</uri>
+									<domain_architecture length="163">
+										<domain from="42" to="55" confidence="0.000000001">Histone fold</domain>
+										<domain from="64" to="91" confidence="0.000000001">Histone fold</domain>
+										<domain from="99" to="134" confidence="0.000000001">C-terminal helix</domain>
+										<domain from="99" to="134" confidence="0.000000001">Histone fold</domain>
+										<domain from="138" to="150" confidence="0.000000001">Other</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+							<clade>
+								<name>A0A410X3G3</name>
+								<branch_length>0.4143216404</branch_length>
+								<taxonomy>
+									<code>Bacilli</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MSDNKLNEDFKEEDNELLKESATLDEEEDIQDTIASLLYGNRLRDLVRSVAKHEGQNVMIGKKGINGMQNAMKFLTVMLSYEILEVLKNKNKTVISPVITSEALNNMVGKSDSLNRVLLELEELKGRLHLLSGSTSISKATDYVNLFEREIINEHEVTDSTD</mol_seq>
+									<uri>/entry/A0A410X3G3</uri>
+									<domain_architecture length="162">
+										<domain from="36" to="53" confidence="0.000000001">Histone fold</domain>
+										<domain from="62" to="89" confidence="0.000000001">Histone fold</domain>
+										<domain from="97" to="131" confidence="0.000000001">C-terminal helix</domain>
+										<domain from="97" to="131" confidence="0.000000001">Histone fold</domain>
+										<domain from="140" to="148" confidence="0.000000001">Other</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+						<clade>
+							<name>A0A167ZPM0</name>
+							<branch_length>0.488990338</branch_length>
+							<taxonomy>
+								<code>Bacilli</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MSDEERIEDNTIEKTHDESIGIAYEQGNLLYESRMRELIKNVAEHEGFGNIRIGNKGGIALQNALRFITVMFTYELLDILTLQKKITVSGKSVNDTLTKLLGRTDSFNVTIHELESLIANLQHKSNDTSITKAMDFVNIIDGIYNTVTPPSEDESEDEGEGEVVTADEETTDK</mol_seq>
+								<uri>/entry/A0A167ZPM0</uri>
+								<domain_architecture length="173">
+									<domain from="30" to="45" confidence="0.000000001">Histone fold</domain>
+									<domain from="55" to="82" confidence="0.000000001">Histone fold</domain>
+									<domain from="90" to="126" confidence="0.000000001">C-terminal helix</domain>
+									<domain from="90" to="126" confidence="0.000000001">Histone fold</domain>
+									<domain from="129" to="143" confidence="0.000000001">Other</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+					<clade>
+						<name>J9C8N5</name>
+						<branch_length>0.8681473132</branch_length>
+						<taxonomy>
+							<code>Bacilli</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MKSLPAESKEKPVEIKNETSVEKNTLENEIIEDNNNLLYKQRLKDFMKQIGNNENFDIKFYKTSEQTLQEYYKFITAALTYEIIDLLKKYDKKIITDDIIREAVSNFLSQADAFNVAIVELQDTISKLISHSSSTSIDKASHYINYTLPNTKIKED</mol_seq>
+							<uri>/entry/J9C8N5</uri>
+							<domain_architecture length="156">
+								<domain from="40" to="53" confidence="0.000000001">Histone fold</domain>
+								<domain from="64" to="89" confidence="0.000000001">Histone fold</domain>
+								<domain from="97" to="131" confidence="0.000000001">C-terminal helix</domain>
+								<domain from="97" to="131" confidence="0.000000001">Histone fold</domain>
+								<domain from="137" to="146" confidence="0.000000001">Other</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+				</clade>
+				<clade>
+					<name>Q74P81</name>
+					<branch_length>0.5039360929</branch_length>
+					<taxonomy>
+						<code>Bacilli</code>
+					</taxonomy>
+					<sequence type="aa">
+						<mol_seq is_aligned="false">MKEELERFLKDQQTNSGENETTNSGDDTEEILGDEEVLVDENKSLLYKSRIRELIRDVAFSDGLDLRISKEGFQRYHDSVKFLSVILMYEINSILKEQKKKTLNVAHVDEAISKMLGRADALNISIQEIEKVLEVLQSKSHTTSITRAMDYLIMENEGTESEDEGSLEK</mol_seq>
+						<uri>/entry/Q74P81</uri>
+						<domain_architecture length="169">
+							<domain from="3" to="8" confidence="0.000000001">Other</domain>
+							<domain from="44" to="61" confidence="0.000000001">Histone fold</domain>
+							<domain from="70" to="97" confidence="0.000000001">Histone fold</domain>
+							<domain from="105" to="140" confidence="0.000000001">C-terminal helix</domain>
+							<domain from="105" to="140" confidence="0.000000001">Histone fold</domain>
+							<domain from="144" to="157" confidence="0.000000001">Other</domain>
+						</domain_architecture>
+					</sequence>
+				</clade>
+			</clade>
+			<clade>
+				<branch_length>1.273945409</branch_length>
+				<confidence type="unknown">100.0</confidence>
+				<clade>
+					<branch_length>0.0991403622</branch_length>
+					<confidence type="unknown">51.0</confidence>
+					<clade>
+						<branch_length>0.2782281899</branch_length>
+						<confidence type="unknown">45.0</confidence>
+						<clade>
+							<branch_length>1.075971126</branch_length>
+							<confidence type="unknown">100.0</confidence>
+							<clade>
+								<branch_length>0.2289696724</branch_length>
+								<confidence type="unknown">88.0</confidence>
+								<clade>
+									<name>A0A1G5ASE0</name>
+									<branch_length>0.3824298598</branch_length>
+									<taxonomy>
+										<code>Bacilli</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MAYNVEAEEYQSLDEEEFEHEEDDGAIRVSRKGTLSKFVRTKTSSRVTNGAKDMLMAQLEQITIMLVKRAEEVCASQGRSTIYDSDLQTAYEELMQPHEFIDKIILELDNQKEQLKIVAQSSLVRHMEV</mol_seq>
+										<uri>/entry/A0A1G5ASE0</uri>
+										<domain_architecture length="129">
+											<domain from="32" to="42" confidence="0.000000001">Histone fold</domain>
+											<domain from="49" to="76" confidence="0.000000001">Histone fold</domain>
+											<domain from="84" to="95" confidence="0.000000001">Histone fold</domain>
+											<domain from="97" to="120" confidence="0.000000001">C-terminal helix</domain>
+											<domain from="123" to="127" confidence="0.000000001">Other</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0AA95RY82</name>
+									<branch_length>0.4062785427</branch_length>
+									<taxonomy>
+										<code>Bacilli</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MGANEEIVKEPKTLHLDADIVNDEANEYIAQLDESVEHNDPEEQETGEIRVTRLGTLSTFIKNQVDSRISTKAKLLLMDQLEQLTIIMIKRADEYSKIRGRQTIYDVDLESAYEELLQPHVFVDQVVQTLEKQKEELQILAKSSLLRHMEVE</mol_seq>
+										<uri>/entry/A0AA95RY82</uri>
+										<domain_architecture length="152">
+											<domain from="54" to="64" confidence="0.000000001">Histone fold</domain>
+											<domain from="71" to="98" confidence="0.000000001">Histone fold</domain>
+											<domain from="106" to="117" confidence="0.000000001">Histone fold</domain>
+											<domain from="119" to="149" confidence="0.000000001">C-terminal helix</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<name>A0AA43L711</name>
+								<branch_length>0.1328227611</branch_length>
+								<taxonomy>
+									<code>Bacilli</code>
+								</taxonomy>
+								<sequence type="aa">
+									<mol_seq is_aligned="false">MVSENGTIRDEDEEQEDIEGDSGEIRVSRKGTLSKFVKTKVESRISADAKETLMAQLEQITMILVKRAEEVGHEKGRNTIYPADLEEAYEELMSPHAFIETVLDTLEKQKEELKRLAASSLVRHMEVD</mol_seq>
+									<uri>/entry/A0AA43L711</uri>
+									<domain_architecture length="128">
+										<domain from="25" to="25" confidence="0.000000001">Other</domain>
+										<domain from="30" to="38" confidence="0.000000001">Histone fold</domain>
+										<domain from="47" to="74" confidence="0.000000001">Histone fold</domain>
+										<domain from="82" to="119" confidence="0.000000001">C-terminal helix</domain>
+										<domain from="82" to="119" confidence="0.000000001">Histone fold</domain>
+										<domain from="121" to="124" confidence="0.000000001">Other</domain>
+									</domain_architecture>
+								</sequence>
+							</clade>
+						</clade>
+						<clade>
+							<branch_length>0.0618068168</branch_length>
+							<confidence type="unknown">36.0</confidence>
+							<clade>
+								<branch_length>0.1073939623</branch_length>
+								<confidence type="unknown">26.0</confidence>
+								<clade>
+									<branch_length>0.0685038114</branch_length>
+									<confidence type="unknown">33.0</confidence>
+									<clade>
+										<name>A0A0U5H1G4</name>
+										<branch_length>0.9774553505</branch_length>
+										<taxonomy>
+											<code>Halobacteria</code>
+										</taxonomy>
+										<sequence type="aa">
+											<mol_seq is_aligned="false">MSEDPFDEHDPIKVTPLRGLMRDMHEQNVGDGTDDYFKARMEKMIEVAWYLSAQSAAERGSARVQPTDIDSGFKRLLEPSYQLKRAVDETEETYRKLREISEEAPLFADELEVDIDE</mol_seq>
+											<uri>/entry/A0A0U5H1G4</uri>
+											<domain_architecture length="117">
+												<domain from="14" to="25" confidence="0.000000001">Histone fold</domain>
+												<domain from="33" to="58" confidence="0.000000001">Histone fold</domain>
+												<domain from="66" to="103" confidence="0.000000001">C-terminal helix</domain>
+												<domain from="66" to="103" confidence="0.000000001">Histone fold</domain>
+												<domain from="109" to="110" confidence="0.000000001">Other</domain>
+											</domain_architecture>
+										</sequence>
+									</clade>
+									<clade>
+										<branch_length>0.14204146</branch_length>
+										<confidence type="unknown">72.0</confidence>
+										<clade>
+											<name>M0H154</name>
+											<branch_length>0.9698256317</branch_length>
+											<taxonomy>
+												<code>Halobacteria</code>
+											</taxonomy>
+											<sequence type="aa">
+												<mol_seq is_aligned="false">MISYCDTMSDNEDGKEHDPISHNQLHEFHKDMTSDGVRVKKDATSLMQQQLQNTSRAVIQLAEKKMEARDGGQLEKQDVRAAFDEALRPYSLIDDFITIMGEYEFDLKQEASRTNVLEFDIEDDE</mol_seq>
+												<uri>/entry/M0H154</uri>
+												<domain_architecture length="125">
+													<domain from="22" to="32" confidence="0.000000001">Histone fold</domain>
+													<domain from="41" to="68" confidence="0.000000001">Histone fold</domain>
+													<domain from="76" to="114" confidence="0.000000001">C-terminal helix</domain>
+													<domain from="76" to="114" confidence="0.000000001">Histone fold</domain>
+												</domain_architecture>
+											</sequence>
+										</clade>
+										<clade>
+											<branch_length>0.1310709339</branch_length>
+											<confidence type="unknown">81.0</confidence>
+											<clade>
+												<branch_length>0.0945859963</branch_length>
+												<confidence type="unknown">90.0</confidence>
+												<clade>
+													<name>A0A8T8E7K3</name>
+													<branch_length>0.0568979473</branch_length>
+													<taxonomy>
+														<code>Halobacteria</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MSDDPTDEHDPIKENPLHDLLRAYTPEDMQVGGDSSDYVKLQLENTIRVVWEEAVKNAKDRDRKTVEEQDVRAAYNEIFYPYTLLEEAATKMGEYQLELQRTADRSPILDMGVEDDE</mol_seq>
+														<uri>/entry/A0A8T8E7K3</uri>
+														<domain_architecture length="117">
+															<domain from="5" to="8" confidence="0.000000001">Other</domain>
+															<domain from="14" to="24" confidence="0.000000001">Histone fold</domain>
+															<domain from="33" to="60" confidence="0.000000001">Histone fold</domain>
+															<domain from="68" to="104" confidence="0.000000001">C-terminal helix</domain>
+															<domain from="68" to="104" confidence="0.000000001">Histone fold</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+												<clade>
+													<name>A0A2R6LYY8</name>
+													<branch_length>0.1090534942</branch_length>
+													<taxonomy>
+														<code>Halobacteria</code>
+													</taxonomy>
+													<sequence type="aa">
+														<mol_seq is_aligned="false">MSDDPTDEHDPIKENPLHDLLRAYTPEDMQVGGDSTDYVKLQLENTVQAVWEEAVKNAKDRDRKTIEEQDVRVAYNDIFYPYTLLEEAAAKMGEYQLEIQRTADRSPLLDMGVEDDE</mol_seq>
+														<uri>/entry/A0A2R6LYY8</uri>
+														<domain_architecture length="117">
+															<domain from="14" to="24" confidence="0.000000001">Histone fold</domain>
+															<domain from="33" to="60" confidence="0.000000001">Histone fold</domain>
+															<domain from="68" to="104" confidence="0.000000001">C-terminal helix</domain>
+															<domain from="68" to="104" confidence="0.000000001">Histone fold</domain>
+															<domain from="107" to="108" confidence="0.000000001">Other</domain>
+														</domain_architecture>
+													</sequence>
+												</clade>
+											</clade>
+											<clade>
+												<name>A0A384LIV1</name>
+												<branch_length>0.3089326272</branch_length>
+												<taxonomy>
+													<code>Halobacteria</code>
+												</taxonomy>
+												<sequence type="aa">
+													<mol_seq is_aligned="false">MTDDPEDIPDPVKPTTLQKLLRAYTPEDKQVGGESADYLKLQVDNTIRVVWEEAMKKSEERDAKRVEEQDVRAAFNEIFYPYTLLEEAATKMGEYQLELRRTANRSPILDLEDDEDE</mol_seq>
+													<uri>/entry/A0A384LIV1</uri>
+													<domain_architecture length="117">
+														<domain from="7" to="7" confidence="0.000000001">Other</domain>
+														<domain from="14" to="24" confidence="0.000000001">Histone fold</domain>
+														<domain from="33" to="60" confidence="0.000000001">Histone fold</domain>
+														<domain from="68" to="103" confidence="0.000000001">C-terminal helix</domain>
+														<domain from="68" to="103" confidence="0.000000001">Histone fold</domain>
+													</domain_architecture>
+												</sequence>
+											</clade>
+										</clade>
+									</clade>
+								</clade>
+								<clade>
+									<name>A0A5J5LMT9</name>
+									<branch_length>0.7442811496</branch_length>
+									<taxonomy>
+										<code>Halobacteria</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MTLEEVETEDDPIKHAPLKSYVKSQTPEMWEGEEMWANDEAIDMMQDQLLLVARLIWQQAAKDAHQDGYRTVGPDYIDDSFNEVMHPQNLLQEAANEMERLRWDFLDVAKQSPAIEYDKDE</mol_seq>
+										<uri>/entry/A0A5J5LMT9</uri>
+										<domain_architecture length="121">
+											<domain from="15" to="25" confidence="0.000000001">Histone fold</domain>
+											<domain from="39" to="66" confidence="0.000000001">Histone fold</domain>
+											<domain from="74" to="111" confidence="0.000000001">C-terminal helix</domain>
+											<domain from="74" to="111" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+							<clade>
+								<branch_length>0.3710419634</branch_length>
+								<confidence type="unknown">99.0</confidence>
+								<clade>
+									<name>A0A1H4ACZ2</name>
+									<branch_length>0.2496117427</branch_length>
+									<taxonomy>
+										<code>Halobacteria</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MDDSSEDIDPIKRSPLWEFVKAHEEEMQVGGDSLDYLNAQLEETTRIVWQLAAENARDRNAKTIQEDDVREAFRELVHPHMMLLDVTEMLDRYKGEFESLAEADPVLPSDGGESDGG</mol_seq>
+										<uri>/entry/A0A1H4ACZ2</uri>
+										<domain_architecture length="117">
+											<domain from="15" to="23" confidence="0.000000001">Histone fold</domain>
+											<domain from="31" to="58" confidence="0.000000001">Histone fold</domain>
+											<domain from="66" to="102" confidence="0.000000001">C-terminal helix</domain>
+											<domain from="66" to="102" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+								<clade>
+									<name>A0A238XD76</name>
+									<branch_length>0.1945746123</branch_length>
+									<taxonomy>
+										<code>Halobacteria</code>
+									</taxonomy>
+									<sequence type="aa">
+										<mol_seq is_aligned="false">MEFRYILTDMGDSSEEADPIKESPLWEFVKEQEEDMQVGGESLDYLKVQLEETTRIVWHIAAENARERNVKTIEEEDVREAFKELVHPHMMLVDAREMLNKYQNEFQSMIDEDPVLPSEGGENDG</mol_seq>
+										<uri>/entry/A0A238XD76</uri>
+										<domain_architecture length="125">
+											<domain from="22" to="32" confidence="0.000000001">Histone fold</domain>
+											<domain from="42" to="67" confidence="0.000000001">Histone fold</domain>
+											<domain from="75" to="111" confidence="0.000000001">C-terminal helix</domain>
+											<domain from="75" to="111" confidence="0.000000001">Histone fold</domain>
+										</domain_architecture>
+									</sequence>
+								</clade>
+							</clade>
+						</clade>
+					</clade>
+					<clade>
+						<name>A0A8U0HZ42</name>
+						<branch_length>0.8025634209</branch_length>
+						<taxonomy>
+							<code>Halobacteria</code>
+						</taxonomy>
+						<sequence type="aa">
+							<mol_seq is_aligned="false">MSQVETGEGEVESDPEDQDSDEEDESFQPIETTTLRDMLREESELQVGEDARDEMILKLNQLIIQMWASSVDVAKRDNRETVKARDVEDAYQQLLKPHNLLHQAISQVDEIQWRLEEVAGDSPFSTDIGEE</mol_seq>
+							<uri>/entry/A0A8U0HZ42</uri>
+							<domain_architecture length="131">
+								<domain from="32" to="43" confidence="0.000000001">Histone fold</domain>
+								<domain from="49" to="76" confidence="0.000000001">Histone fold</domain>
+								<domain from="84" to="120" confidence="0.000000001">C-terminal helix</domain>
+								<domain from="84" to="120" confidence="0.000000001">Histone fold</domain>
+							</domain_architecture>
+						</sequence>
+					</clade>
+				</clade>
+				<clade>
+					<branch_length>0.342903263</branch_length>
+					<confidence type="unknown">97.0</confidence>
+					<clade>
+						<branch_length>0.2024711724</branch_length>
+						<confidence type="unknown">100.0</confidence>
+						<clade>
+							<name>A0A1H9PRW3</name>
+							<branch_length>0.0202156386</branch_length>
+							<taxonomy>
+								<code>Halobacteria</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MAVEGEDSEQAETEENDTEDIAPPVKPTSLKRFVKQHSDMNAGGDAIDELQHHLEFVAERIWLEASKHAEDDGRKTVKERDVQHAIDQFTEPHDLIKKTTEQLDWMKRNLDRQVEQSIVYAEDRYDD</mol_seq>
+								<uri>/entry/A0A1H9PRW3</uri>
+								<domain_architecture length="127">
+									<domain from="27" to="37" confidence="0.000000001">Histone fold</domain>
+									<domain from="44" to="71" confidence="0.000000001">Histone fold</domain>
+									<domain from="79" to="116" confidence="0.000000001">C-terminal helix</domain>
+									<domain from="79" to="116" confidence="0.000000001">Histone fold</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+						<clade>
+							<name>A0A1N7H292</name>
+							<branch_length>0.0316817352</branch_length>
+							<taxonomy>
+								<code>Halobacteria</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MAVEGEDSEQAETEENDTEDIAPPVKPTSLKRFVKQHSDLNAGGDAVDELQHHLEFVAERIWLEASKHAEDDGRKTVKERDVQHAIDQFTEPHDLIKKTTEQLDWMKRNLDRQVEQSIVYAEDRYDD</mol_seq>
+								<uri>/entry/A0A1N7H292</uri>
+								<domain_architecture length="127">
+									<domain from="27" to="37" confidence="0.000000001">Histone fold</domain>
+									<domain from="44" to="71" confidence="0.000000001">Histone fold</domain>
+									<domain from="79" to="116" confidence="0.000000001">C-terminal helix</domain>
+									<domain from="79" to="116" confidence="0.000000001">Histone fold</domain>
+									<domain from="118" to="119" confidence="0.000000001">Other</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+					<clade>
+						<branch_length>0.2398883267</branch_length>
+						<confidence type="unknown">99.0</confidence>
+						<clade>
+							<name>A0A7D5GK18</name>
+							<branch_length>0.0180671805</branch_length>
+							<taxonomy>
+								<code>Halobacteria</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MTGDEEDSNSPASPVKPHSLKNFVKEQSDMRAGSDAVDELHHHLDFIAERIWLEAAKEAEDDDRKTVKQRDVQEAIDSVTQPHDLIKETSRHLSYMQNMIDGQVEKSPLYAENRYDD</mol_seq>
+								<uri>/entry/A0A7D5GK18</uri>
+								<domain_architecture length="117">
+									<domain from="17" to="27" confidence="0.000000001">Histone fold</domain>
+									<domain from="34" to="61" confidence="0.000000001">Histone fold</domain>
+									<domain from="69" to="104" confidence="0.000000001">C-terminal helix</domain>
+									<domain from="69" to="104" confidence="0.000000001">Histone fold</domain>
+									<domain from="108" to="109" confidence="0.000000001">Other</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+						<clade>
+							<name>A0A1G7GE93</name>
+							<branch_length>0.071881619</branch_length>
+							<taxonomy>
+								<code>Halobacteria</code>
+							</taxonomy>
+							<sequence type="aa">
+								<mol_seq is_aligned="false">MKGDEEGSVNPPSPVKNHSLKNFVKEKSDMRAGSDAVDELHHHLEFIAERIWLEATKEAEDDDRKTVKQRDVQEAIDSVTQPHDLIKETSRHLSYMQNMIDGQLEKSPLYAENRYDD</mol_seq>
+								<uri>/entry/A0A1G7GE93</uri>
+								<domain_architecture length="117">
+									<domain from="17" to="27" confidence="0.000000001">Histone fold</domain>
+									<domain from="34" to="61" confidence="0.000000001">Histone fold</domain>
+									<domain from="69" to="104" confidence="0.000000001">C-terminal helix</domain>
+									<domain from="69" to="104" confidence="0.000000001">Histone fold</domain>
+								</domain_architecture>
+							</sequence>
+						</clade>
+					</clade>
+				</clade>
+			</clade>
+		</clade>
+	</phylogeny>
+	<taxonomies>
+		<taxonomy code="Clostridia">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+		<taxonomy code="Halobacteria">
+			<color>0xffffb3</color>
+		</taxonomy>
+		<taxonomy code="Bacilli">
+			<color>0xbebada</color>
+		</taxonomy>
+	</taxonomies>
+	<labels/>
+	<domains>
+		<domain name="Histone fold">
+			<color>#8da0cb</color>
+			<description>Alpha 1, 2, and 3 helices of the histone fold</description>
+		</domain>
+		<domain name="C-terminal helix">
+			<color>#e78ac3</color>
+			<description>The C-terminal helix which is involved in tetramerization</description>
+		</domain>
+		<domain name="Other">
+			<color>#b3b3b3</color>
+			<description>Other secondary structures</description>
+		</domain>
+	</domains>
+</phyloxml>

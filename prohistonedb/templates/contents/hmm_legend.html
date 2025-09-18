@@ -1,0 +1,14 @@
+{% if entry is defined %}
+    {% set catname = entry.category.name %}
+{% else %}
+    {% set catname = categories[id|int].name %}
+{% endif %}
+
+<h3>{{catname}} sequence alignment</h3>
+<p>
+    Logo representation of the profile hidden Markov model (profile HMM) for the {{catname}} category.
+</p>
+<p>
+    The logo provides a representation of the conservation pattern of these histones.<br>
+    The occupancy probability, insert probability, and insert length values are below the residues.
+</p>

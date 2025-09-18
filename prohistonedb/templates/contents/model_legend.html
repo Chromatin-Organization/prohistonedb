@@ -1,0 +1,23 @@
+<h3>3D viewer</h3>
+<div class="viewer-legend py-3">
+    <h6>Model confidence:</h6>
+    <div>
+        <span class="legend-color" style="background-color: rgb(0, 83, 214);">&nbsp;</span>
+        <span class="legend-label">Very high (pLDDT &gt; 90)</span>
+    </div>
+    <div>
+        <span class="legend-color" style="background-color: rgb(101, 203, 243);">&nbsp;</span>
+        <span class="legend-label">Confident (90 &gt; pLDDT &gt; 70)</span>
+    </div>
+    <div>
+        <span class="legend-color" style="background-color: rgb(255, 219, 19);">&nbsp;</span>
+        <span class="legend-label">Low (70 &gt; pLDDT &gt; 50)</span>
+    </div>
+    <div>
+        <span class="legend-color" style="background-color: rgb(255, 125, 69);">&nbsp;</span>
+        <span class="legend-label">Very low (pLDDT &lt; 50)</span>
+    </div>
+</div>
+<p>
+    AlphaFold produces a per-residue confidence score (pLDDT) between 0 and 100. Some regions below 50 pLDDT may be unstructured in isolation.
+</p>

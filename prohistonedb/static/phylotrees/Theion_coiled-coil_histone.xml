@@ -1,0 +1,77 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+	<phylogeny rooted="false">
+		<clade>
+			<clade>
+				<name>A0A949J7V2</name>
+				<branch_length>0.1019800313</branch_length>
+				<taxonomy>
+					<code>Theionarchaea</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MPIALAPVDRILRKAGAQRVSRAAALELRDIVENYAHRMAKETVKKTEETGRKTVLKEDVVQAPRLVIDRVKENILIDMETEIMRELEDLIPPRDR</mol_seq>
+					<uri>/entry/A0A949J7V2</uri>
+					<domain_architecture length="96">
+						<domain from="5" to="14" confidence="0.000000001">Histone fold</domain>
+						<domain from="22" to="49" confidence="0.000000001">Histone fold</domain>
+						<domain from="57" to="61" confidence="0.000000001">Histone fold</domain>
+						<domain from="63" to="88" confidence="0.000000001">C-terminal helix</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<name>A0A8J7XA35</name>
+				<branch_length>0.1635255331</branch_length>
+				<taxonomy>
+					<code>Theionarchaea</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MPIALAPVDRILRKAGAERVSKDAALELRDIVENFAHRIATEAVRRSSESGRKTVFKEDVLQAPASVVGRVKENILIDVETEILRELEDLIPPRER</mol_seq>
+					<uri>/entry/A0A8J7XA35</uri>
+					<domain_architecture length="96">
+						<domain from="5" to="14" confidence="0.000000001">Histone fold</domain>
+						<domain from="22" to="49" confidence="0.000000001">Histone fold</domain>
+						<domain from="57" to="88" confidence="0.000000001">Histone fold</domain>
+						<domain from="57" to="88" confidence="0.000000001">C-terminal helix</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+			<clade>
+				<name>A0A8J7XUJ7</name>
+				<branch_length>0.0839199284</branch_length>
+				<taxonomy>
+					<code>Theionarchaea</code>
+				</taxonomy>
+				<sequence type="aa">
+					<mol_seq is_aligned="false">MPIALAPVDRILRKAGAQRVSRAAALELRDIVENFAHRMAKEAIKKTDQSGRKTVFKEDVVQAPRLIVERVKENIVIDVEAEVLRELEDLIPPREG</mol_seq>
+					<uri>/entry/A0A8J7XUJ7</uri>
+					<domain_architecture length="96">
+						<domain from="5" to="14" confidence="0.000000001">Histone fold</domain>
+						<domain from="22" to="49" confidence="0.000000001">Histone fold</domain>
+						<domain from="57" to="90" confidence="0.000000001">Histone fold</domain>
+						<domain from="57" to="90" confidence="0.000000001">C-terminal helix</domain>
+					</domain_architecture>
+				</sequence>
+			</clade>
+		</clade>
+	</phylogeny>
+	<taxonomies>
+		<taxonomy code="Theionarchaea">
+			<color>0x8dd3c7</color>
+		</taxonomy>
+	</taxonomies>
+	<labels/>
+	<domains>
+		<domain name="Histone fold">
+			<color>#8da0cb</color>
+			<description>Alpha 1, 2, and 3 helices of the histone fold</description>
+		</domain>
+		<domain name="C-terminal helix">
+			<color>#e78ac3</color>
+			<description>The C-terminal helix which is involved in tetramerization</description>
+		</domain>
+		<domain name="Other">
+			<color>#b3b3b3</color>
+			<description>Other secondary structures</description>
+		</domain>
+	</domains>
+</phyloxml>

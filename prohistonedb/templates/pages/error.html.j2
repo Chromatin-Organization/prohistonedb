@@ -12,10 +12,10 @@
       <div class="row">
         <div class="col-lg-7 text-center mx-auto">
           {% if not status is defined %}
-            <h1 class="text-white pt-3 mt-n5">Unknown Error!</h1>
-            <h3 class="text-white">It seems that an unknown error has occured. We have logged the error and we apollogise for any inconvenience. </h3>
+            <h1 class="text-white pt-3 mt-n5">Unknown Error</h1>
+            <h3 class="text-white">It seems that an unknown error has occurred. We have logged the error and we apologise for any inconvenience. </h3>
           {% elif status == 403 %}
-            <h1 class="text-white pt-3 mt-n5">Access denied!</h1>
+            <h1 class="text-white pt-3 mt-n5">Access denied</h1>
             <h3 class="text-white">You're not allowed to access this page.</h3>
           {% elif status == 404 %}
             <h1 class="text-white pt-3 mt-n5">Oops!</h1>
