@@ -231,14 +231,14 @@
                                     <div class="row">
                                         <div class="col-md-4 col-lg-3 label"><span>Protein IDs</span></div>
                                         <div class="col-md-8 col-lg-9 value">
-                                            <span class="mb-0">{{r.protein_ids|join(",")}}</span>
+                                            <span class="mb-0">{{r.protein_ids|join(", ")}}</span>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4 col-lg-3 label"><span>Genes</span></div>
                                         <div class="col-md-8 col-lg-9 value">
                                             {% if r.genes %}
-                                            <span class="mb-0">{{r.genes|join(",")}}</span>
+                                            <span class="mb-0">{{r.genes|join(", ")}}</span>
                                             {% else %}
                                             <span class="mb-0"> - </span>
                                             {% endif %}
@@ -248,7 +248,7 @@
                                         <div class="col-md-4 col-lg-3 label"><span>Gene Names</span></div>
                                         <div class="col-md-8 col-lg-9 value">
                                             {% if r.gene_names %}
-                                            <span class="mb-0">{{r.gene_names|join(",")}}</span>
+                                            <span class="mb-0">{{r.gene_names|join(", ")}}</span>
                                             {% else %}
                                             <span class="mb-0"> - </span>
                                             {% endif %}

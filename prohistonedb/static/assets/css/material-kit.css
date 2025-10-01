@@ -24429,18 +24429,25 @@ table td {
 
 /* attribution section */
 #attribution p a,
-#group-information a {
+#group-information a,
+.attribution-additional {
   color: #fff;
   opacity: 0.6;
 }
 #attribution p a:hover,
-#group-information a:hover {
+#group-information a:hover,
+.attribution-additional:hover {
   color: #e91e63;
   opacity: 1;
 }
 
 #attribution p a {
   border-bottom: none;
+}
+
+.attribution-additional {
+  margin-top: -1em;
+  opacity: 0.5;
 }
 
 /* Leiden University logo */

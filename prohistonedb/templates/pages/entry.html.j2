@@ -1,7 +1,6 @@
 {% extends 'layouts/base.html.j2' %}
 
 {% macro reload(multimer, rank) %}{{url_for('main.entry', uniprot_id=entry.uniprot_id, multimer=multimer.value, rank=rank)}}{% endmacro %}
-{#TODO add macro for reload(pdbcode) #}
 {% macro img_path(suffix) %}https://prohistonedb.universiteitleiden.nl/{{(entry.get_path(multimer) / entry.uniprot_id).as_posix()+suffix}}{% endmacro %}
 
 {% block title %} {{siteName}} | {{entry.uniprot_id}}{% endblock title %}
@@ -62,20 +61,13 @@
                             </div>
                         </div>
                         <div class="pb-2 row">
-                            <div class="col-sm-3 label"><span>Gene</span></div>
-                            <div class="col-sm-9 value">
-                                {% if entry.genes %}
-                                <span class="mb-0">{{entry.genes|join(",")}}</span>
-                                {% else %}
-                                <span class="mb-0"> - </span>
-                                {% endif %}
-                            </div>
-                        </div>
-                        <div class="pb-2 row">
-                            <div class="col-sm-3 label"><span>Gene Names</span></div>
+                            <div class="col-sm-3 label"><span>Gene names</span></div>
                             <div class="col-sm-9 value">
                                 {% if entry.genes %}
                                 <span class="mb-0">{{entry.gene_names|join(", ")}}</span>
+                                {% for gene in entry.gene_names %}
+                                    <span class="mb-0">{{gene}}</span>
+                                {% endfor %}
                                 {% else %}
                                 <span class="mb-0"> - </span>
                                 {% endif %}
@@ -123,7 +115,7 @@
                 <div class="row py-3 mt-3">
                     <div class="col-12 start-0">
                         
-                        <div class="dropdown float-start me-2">
+                        <div class="dropdown float-start me-2 multimer-dropdown-wrapper">
                                 <a class="btn btn-sm btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                     {{multimer.value}}
                                 </a>
@@ -135,20 +127,16 @@
                                     {% for mult in entry.multimers %}
                                         <li><a class="dropdown-item" href="{{ reload(mult,rank) }}">{{mult.value}}</a></li>
                                     {% endfor %}
-                                    {#TODO: add PDB codes below multimers in dropdown menu #}
-                                    {# 
-                                    {% if pdbcode is defined %}
-                                        <li>------------------</li>
-                                        {% for pdb in entry.pdbcodes %}
-                                            <li><a class="dropdown-item" href="{{ reload(pdb) }}">{{pdb.value}}</a></li>
+                                   
+                                    {% if entry.pdb_ids is defined %}
+                                        {% for pdb in entry.pdb_ids %}
+                                            <li><a class="dropdown-item pdb" href="javascript:void(0)" onclick="initMolstarViewer('https://www.ebi.ac.uk/pdbe/entry-files/{{pdb|lower}}_updated.cif', '{{pdb}}')">PDB: {{pdb}}</a></li>
                                         {% endfor %}
                                     {% endif %}
-                                    #}
                                 </ul>
                         </div>
 
-                        {#TODO: don't show dropdown on pdb code variant #}
-                        <div class="dropdown float-start">
+                        <div class="dropdown float-start rank-dropdown-wrapper">
                             <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                 Rank {{rank}}
                             </a>
@@ -160,7 +148,7 @@
                             </ul>
                         </div>
 
-                        <div class="dropdown float-end">
+                        <div class="dropdown float-end download-dropdown-wrapper">
                             <a class="btn btn-sm btn-secondary btn-download float-end" href="{{url_for('main.download', uid=entry.uniprot_id)}}" role="button" title="Download all structure data (zipped)">
                                 <span class="material-icons-round">download</span>
                                 <span class="caption">Download</span>
@@ -174,7 +162,7 @@
             <div class="container my-3">
                 <div class="row">
                     <!-- sidebar left -->
-                    <div class="col-lg-3 d-none d-lg-block">
+                    <div class="col-lg-3 d-none d-lg-block model-legend">
                         {% include "contents/model_legend.html" %}
                     </div>
                     <div class="col-lg-9">
@@ -187,7 +175,7 @@
                     </div>
                 </div>
 
-                <div class="row my-5">
+                <div class="row my-5 pae-wrapper">
                     <div class="col-lg-3">
                         {% include "contents/pae_legend.html" %}
                     </div>
@@ -201,7 +189,7 @@
                     </div>
                 </div>
 
-                <div class="row my-5">
+                <div class="row my-5 plddt-wrapper">
                     <div class="col-lg-3">
                         {% include "contents/plddt_legend.html" %}
                     </div>
@@ -279,9 +267,9 @@
     <section id="attribution" class="bg-gradient-dark mx-n3">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 text-start mb-5 mt-5">
+                <div class="col-md-10 text-start mb-5 mt-5 attribution-predictions">
                     {% include "contents/attribution.html" %}
-                    {% if entry.doi %}
+                    {% if entry.publications %}
                         <div class="attribution-additional"></div>
                     {% endif %}
                 </div>
@@ -289,7 +277,7 @@
         </div>
     </section>
 
-    {# TODO: write disclaimer text. #}
+    {# TODO: write disclaimer text #}
     {#
     <section class="my-3">
         <div class="container">              
@@ -307,15 +295,13 @@
 {% block javascripts %}
     {% if multimer is defined %}
         <script>
+            // https://molstar.org/docs/plugin/instance/
+            // example: https://github.com/molstar/pdbe-molstar/blob/master/index.html
+
             const mspViewer = document.querySelector("#mspViewer");
-            const modelURL = "https://prohistonedb.universiteitleiden.nl/{{entry.get_cif_path(multimer, rank).as_posix()}}";
-            {#TODO: add path to cif models on PDBe based on pdb code: "https://www.ebi.ac.uk/pdbe/static/entry/" + pdbcode + "_updated.cif" #}
-
-            molstar.Viewer.create('mspViewer', {
-                // https://molstar.org/docs/plugin/
+            const multimerModelURL = "https://prohistonedb.universiteitleiden.nl/{{entry.get_cif_path(multimer, rank).as_posix()}}";
+            const mspOpts = {
                 // https://molstar.org/viewer-docs/query-parameters/
-                // https://github.com/molstar/pdbe-molstar/blob/master/index.html
-
                 layoutIsExpanded: false, // expand to window
                 layoutShowControls: true, // rightsidebar & sequence panel
                 layoutShowRemoteState: false,
@@ -323,25 +309,69 @@
                 layoutShowLog: false,
                 layoutShowLeftPanel: false, // adds "msp-layout-hide-left" class
                 alphafoldView: true,
-
                 // show/hide viewport buttons
                 viewportShowExpand: false,
                 viewportShowSelectionMode: false,
                 viewportShowAnimation: false,
                 viewportShowControls: false // control panel (= rightsidebar & sequence panel) toggle
-            }).then(viewer => {
-                viewer.loadStructureFromUrl(modelURL, format='mmcif'); // mmcif or pdb
+            };
 
-                const mspLayoutHide = document.querySelector(".msp-layout-hide-left.msp-layout-hide-bottom");
-                mspViewer.style.width = '100%';
-                mspLayoutHide.classList.add("msp-layout-hide-right");
-            });
+            function cleanUpPDBLayout(pdbid) {
+               /*
+                * multimer dropdown: show PDB id on button
+                * disable/hide Rank dropdown?
+                * hide Download button?
+                * hide Molstar legend
+                * hide PAE wrapper
+                * hide LDDT wrapper
+                * hide AlphaFold publications (but keep Leiden ones?)
+                * show DOI reference
+               */
+
+                const elementsHidden = document.querySelectorAll(".pae-wrapper, .plddt-wrapper, .attribution-predictions, .viewer-legend, .model-legend p");
+                elementsHidden.forEach(el => el.style.display = "none");
+
+                const elementsShown = document.querySelectorAll(".attribution-additional");
+                elementsShown.forEach(el => el.style.display = "block");
+
+                multimerBtn = document.querySelector(".multimer-dropdown-wrapper a");
+                multimerBtn.innerHTML = "PDB: " + pdbid;
+            }
+
+            async function initMolstarViewer(modelURL, pdbid) {
+                try {
+                    // Wait for the viewer instance to be created
+                    const viewer = await molstar.Viewer.create('mspViewer', mspOpts);
+                    // Once we have the viewer, load the structure
+                    await viewer.loadStructureFromUrl(modelURL, format='mmcif');
+
+                    // adjust viewer layout
+                    /*
+                    const mspLayoutHide = document.querySelector(".msp-layout-hide-left.msp-layout-hide-bottom");
+                    mspViewer.style.width = '100%';
+                    mspLayoutHide.classList.add("msp-layout-hide-right");
+                    */
+
+                    if (pdbid) {
+                        cleanUpPDBLayout(pdbid);
+                    }
+                    console.log('Structure loaded successfully.');
+                } catch (error) {
+                    console.error('Failed to initialize Mol* viewer:', error);
+                }
+            }
+
+            // Load initial multimer model
+            initMolstarViewer(multimerModelURL);
         </script>
 
+        {# * Skylign HMM viewer scripts #}
         <script>
             const HMMJSONurl = "{{ url_for('static', filename=(entry.category.static_logo_path | string | replace(" ","_"))) }}";
         </script>
         <script src="{{ url_for('static', filename = 'assets/js/custom/skylign.js') }}" type="text/javascript"></script>
+
+        {# * PhyD3 Phylogenetic tree viewer scripts #}
         {% if entry.category.name != 'Viral quadruplet' and entry.category.name != 'Viral triplet' %}
             <script>
                 const phyd3xml = "{{ url_for('static', filename=(entry.category.static_phylotree_path | string | replace(" ","_"))) }}";
@@ -350,11 +380,24 @@
         {% endif %}
     {% endif %}
 
-    {% if entry.doi %}
-       {#TODO: add references using DOI #}
-    {% endif %}
-
+    {% if entry.publications|length %}
     <script>
-        
+        const doiList = {{entry.publications}};
+
+        async function fetchPublications() {
+            const response = await fetch('{{ url_for('static', filename = 'publications/doi_to_apa.json') }}');
+            const doiToApaObj = await response.json();
+
+            let formattedReferences = "";
+            for (let doi of doiList) {
+                formattedReferences += doiToApaObj[doi] + "<br>";
+            }
+            
+            const referencesContainer = document.querySelector(".attribution-additional");
+            referencesContainer.innerHTML = formattedReferences;
+        }
+
+        fetchPublications();
     </script>
+    {% endif %}
 {% endblock javascripts %}

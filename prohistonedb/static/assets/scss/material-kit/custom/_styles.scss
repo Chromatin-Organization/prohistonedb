@@ -706,11 +706,9 @@ table th,
 
 
 /* attribution section */
-#attribution p {
-    //font-size: $font-size-sm;
-}
 #attribution p a,
-#group-information a {
+#group-information a,
+.attribution-additional {
     color: $white;
     opacity: .6;
 
@@ -721,6 +719,10 @@ table th,
 }
 #attribution p a {
     border-bottom: none;
+}
+.attribution-additional {
+    margin-top: -1em;
+    opacity: .5; // not clear why this correction is needed
 }
 
 

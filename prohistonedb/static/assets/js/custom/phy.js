@@ -1,7 +1,7 @@
 // PhyD3 phylogenetic tree viewer
 const phyd3Container = document.querySelector("#phyd3-container");
 
-const opts = {
+const phyd3Opts = {
     dynamicHide: true,
     height: 1200,
     invertColors: false,
@@ -30,7 +30,7 @@ const opts = {
 function loadPhyloTree() {
     d3.xml(phyd3xml, function(xml) {
         const tree = phyd3.phyloxml.parse(xml);
-        phyd3.phylogram.build(phyd3Container, tree, opts);
+        phyd3.phylogram.build(phyd3Container, tree, phyd3Opts);
     });
 }
 
