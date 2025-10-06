@@ -235,7 +235,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-4 col-lg-3 label"><span>Gene Names</span></div>
+                                        <div class="col-md-4 col-lg-3 label"><span>Gene names</span></div>
                                         <div class="col-md-8 col-lg-9 value">
                                             {% if r.gene_names %}
                                             <span class="mb-0">{{r.gene_names|join(", ")}}</span>
@@ -278,7 +278,7 @@
                                         <th data-field="uniprotID" scope="col">UniProt ID</th>
                                         <th data-field="category" scope="col">Category</th>
                                         <th data-field="organism" scope="col">Protein</th>
-                                        <th data-field="gene" scope="col">Gene</th>
+                                        <th data-field="gene_name" scope="col">Gene name</th>
                                         <th data-field="organism" scope="col">Organism</th>
                                         <th data-field="sequence" scope="col">Length</th>
                                     </tr>
@@ -294,9 +294,9 @@
                                     </td>
                                     <td><strong><a href="{{ url_for('main.entry', uniprot_id=r.uniprot_id) }}">{{r.uniprot_id}}</a></strong></td>
                                     <td>{{r.category.name}}</td>
-                                    <td>{{r.protein_ids|join(",")}}</td>
-                                    {% if r.genes %}
-                                    <td>{{r.genes|join(",")}}</td>
+                                    <td>{{r.protein_ids|join(", ")}}</td>
+                                    {% if r.gene_names %}
+                                    <td>{{r.gene_names|join(", ")}}</td>
                                     {% else %}
                                     <td> - </td>
                                     {% endif %}

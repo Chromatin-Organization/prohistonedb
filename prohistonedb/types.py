@@ -108,7 +108,7 @@ class Field(str, Enum):
             cls.LINEAGE,
             cls.PROTEIN_IDS,
             cls.PROTEOME_IDS,
-            cls.GENES,
+            ## cls.GENES,
             cls.GENE_NAMES,
             cls.GENOME_IDS
         }
