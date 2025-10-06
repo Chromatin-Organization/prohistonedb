@@ -63,11 +63,8 @@
                         <div class="pb-2 row">
                             <div class="col-sm-3 label"><span>Gene names</span></div>
                             <div class="col-sm-9 value">
-                                {% if entry.genes %}
+                                {% if entry.gene_names %}
                                 <span class="mb-0">{{entry.gene_names|join(", ")}}</span>
-                                {% for gene in entry.gene_names %}
-                                    <span class="mb-0">{{gene}}</span>
-                                {% endfor %}
                                 {% else %}
                                 <span class="mb-0"> - </span>
                                 {% endif %}
