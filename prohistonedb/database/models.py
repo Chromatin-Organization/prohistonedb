@@ -113,7 +113,6 @@ class Histone:
     lineage: list[Lineage]
     protein_ids: list[str]
     proteome_ids: Union[list[str], None]
-    genes: Union[list[str], None]
     gene_names: list[str]
     genome_ids: list[str]
     pdb_ids: list[str]

@@ -79,7 +79,6 @@ class Field(str, Enum):
     LINEAGE = "tax"
     PROTEIN_IDS = "pid"
     PROTEOME_IDS = "pmid"
-    GENES = "gen"
     GENE_NAMES = "gname"
     GENOME_IDS = "gmid"
 
@@ -108,7 +107,6 @@ class Field(str, Enum):
             cls.LINEAGE,
             cls.PROTEIN_IDS,
             cls.PROTEOME_IDS,
-            ## cls.GENES,
             cls.GENE_NAMES,
             cls.GENOME_IDS
         }
@@ -134,7 +132,6 @@ class Field(str, Enum):
             cls.SEQUENCE_LEN,
             cls.PROTEIN_IDS,
             cls.PROTEOME_IDS,
-            cls.GENES,
             cls.GENE_NAMES,
             cls.GENOME_IDS,
             cls.LINEAGE,
@@ -185,7 +182,7 @@ class Field(str, Enum):
             return FieldType.TEXT_ID
         elif self in [self.PROTEIN_IDS, self.GENOME_IDS]:
             return FieldType.IDS
-        elif self in [self.PROTEOME_IDS, self.GENES]:
+        elif self in [self.PROTEOME_IDS]:
             return FieldType.IDS_OPTIONAL
         else:
             raise NotImplementedError(f"Not implemented for FieldType {self}.")
@@ -241,19 +238,6 @@ class Field(str, Enum):
                 return json.dumps(pmids)
             else:
                 return None
-        elif self is Field.GENES:
-            if not "genes" in json_data["uniprot"].keys():
-                return None
-
-            for gen in json_data["uniprot"]["genes"]:
-                if "geneName" in gen.keys():
-                    gids = [gen["geneName"]["value"]]
-                elif "orfNames" in gen.keys():
-                    gids = [orf_name["value"] for orf_name in gen["orfNames"]]
-                else:
-                    return None
-            
-            return json.dumps(gids)
         elif self is self.GENE_NAMES:
             gene_names = [name for name in json_data["histoneDB"]["geneNames"]]
             return json.dumps(gene_names)

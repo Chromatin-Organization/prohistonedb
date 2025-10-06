@@ -36,11 +36,6 @@ def results_to_histones(results: Sequence[Mapping]) -> list[models.Histone]:
         else:
             proteome_ids = json.loads(result[Field.PROTEOME_IDS.db_name])
         
-        if result["genes"] is None:
-            genes = None
-        else:
-            genes = json.loads(result[Field.GENES.db_name])
-        
         ranks = json.loads(result["ranks"])
 
         histones.append(models.Histone(
@@ -51,7 +46,6 @@ def results_to_histones(results: Sequence[Mapping]) -> list[models.Histone]:
             lineage=lineage,
             protein_ids=json.loads(result[Field.PROTEIN_IDS.db_name]),
             proteome_ids=proteome_ids,
-            genes=genes,
             gene_names=json.loads(result[Field.GENE_NAMES.db_name]),
             genome_ids=json.loads(result[Field.GENOME_IDS.db_name]),
             pdb_ids=json.loads(result["pdb_ids"]),
