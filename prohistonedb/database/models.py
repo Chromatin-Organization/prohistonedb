@@ -151,4 +151,10 @@ class Histone:
         else:
             relaxed = "relaxed"
         
-        return path / f"{self.uniprot_id}_{relaxed}_rank_00{rank}_alphafold2_multimer_v3_model_{model}_seed_000.cif"
+        # Account for difference in filename between monomers & other multimers
+        if multimer is Multimer.MONOMER:
+            path_section = "ptm"
+        else:
+            path_section = "multimer_v3"
+
+        return path / f"{self.uniprot_id}_{relaxed}_rank_00{rank}_alphafold2_{path_section}_model_{model}_seed_000.cif"
