@@ -592,6 +592,10 @@ table th,
     &.r5 { background-position: -964px 0 }
 }
 
+#coverage-container img,
+#plddt-container img { 
+    @media (min-width: 1023px) { max-width: 75% }
+}
 
 /* Skylign section */
 /* missing styles in hmm_logo css... */

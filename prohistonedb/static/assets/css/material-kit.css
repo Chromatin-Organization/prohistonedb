@@ -24323,6 +24323,13 @@ table td {
   background-position: -964px 0;
 }
 
+@media (min-width: 1023px) {
+  #coverage-container img,
+  #plddt-container img {
+    max-width: 75%;
+  }
+}
+
 /* Skylign section */
 /* missing styles in hmm_logo css... */
 .logo_controls {
