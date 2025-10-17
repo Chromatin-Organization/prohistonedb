@@ -332,14 +332,14 @@
                 * hide PAE wrapper
                 * hide LDDT wrapper
                 * hide AlphaFold publications (but keep ProHistoneDB ones)
-                * show DOI references
+                * show DOI references (changed to always shown)
                */
 
                 const elementsHidden = document.querySelectorAll(".pae-wrapper, .plddt-wrapper, .attribution-alphafold, .viewer-legend, .model-legend p");
                 elementsHidden.forEach(el => el.style.display = "none");
 
-                const elementsShown = document.querySelectorAll(".attribution-additional");
-                elementsShown.forEach(el => el.style.display = "block");
+                //const elementsShown = document.querySelectorAll(".attribution-additional");
+                //elementsShown.forEach(el => el.style.display = "block");
 
                 multimerBtn = document.querySelector(".multimer-dropdown-wrapper a");
                 multimerBtn.innerHTML = "PDB: " + pdbid;
