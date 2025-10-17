@@ -71,6 +71,16 @@
                             </div>
                         </div>
                         <div class="pb-2 row">
+                            <div class="col-sm-3 label"><span>Protein names</span></div>
+                            <div class="col-sm-9 value">
+                                {% if entry.protein_names %}
+                                <span class="mb-0">{{entry.protein_names|join(", ")}}</span>
+                                {% else %}
+                                <span class="mb-0"> - </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="pb-2 row">
                             <div class="col-sm-3 label"><span>Sequence length</span></div>
                             <div class="col-sm-9 value">
                                 <span class="mb-0">{{entry.sequence|length}} AA</span>
@@ -264,7 +274,7 @@
     <section id="attribution" class="bg-gradient-dark mx-n3">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 text-start mb-5 mt-5 attribution-predictions">
+                <div class="col-md-10 text-start mb-5 mt-5">
                     {% include "contents/attribution.html" %}
                     {% if entry.publications %}
                         <div class="attribution-additional"></div>
@@ -321,11 +331,11 @@
                 * hide Molstar legend
                 * hide PAE wrapper
                 * hide LDDT wrapper
-                * hide AlphaFold publications (but keep Leiden ones?)
-                * show DOI reference
+                * hide AlphaFold publications (but keep ProHistoneDB ones)
+                * show DOI references
                */
 
-                const elementsHidden = document.querySelectorAll(".pae-wrapper, .plddt-wrapper, .attribution-predictions, .viewer-legend, .model-legend p");
+                const elementsHidden = document.querySelectorAll(".pae-wrapper, .plddt-wrapper, .attribution-alphafold, .viewer-legend, .model-legend p");
                 elementsHidden.forEach(el => el.style.display = "none");
 
                 const elementsShown = document.querySelectorAll(".attribution-additional");
@@ -384,10 +394,11 @@
             const response = await fetch('{{ url_for('static', filename = 'publications/doi_to_apa.json') }}');
             const doiToApaObj = await response.json();
 
-            let formattedReferences = "";
+            let formattedReferences = "<p>";
             for (let doi of doiList) {
-                formattedReferences += doiToApaObj[doi] + "<br>";
+                formattedReferences += "<a href='https://doi.org/" + doi + "'>" + doiToApaObj[doi] + "</a><br>";
             }
+            formattedReferences += "</p>";
             
             const referencesContainer = document.querySelector(".attribution-additional");
             referencesContainer.innerHTML = formattedReferences;

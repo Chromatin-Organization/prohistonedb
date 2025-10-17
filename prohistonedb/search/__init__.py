@@ -49,6 +49,7 @@ def results_to_histones(results: Sequence[Mapping]) -> list[models.Histone]:
             gene_names=json.loads(result[Field.GENE_NAMES.db_name]),
             genome_ids=json.loads(result[Field.GENOME_IDS.db_name]),
             pdb_ids=json.loads(result["pdb_ids"]),
+            protein_names=json.loads(result[Field.PROTEIN_NAMES.db_name]),
             multimer_rankings={models.Multimer(multimer):ranks[multimer] for multimer in ranks.keys()},
             publications=json.loads(result["publications"]),
             rel_path=Path(result["rel_path"]),

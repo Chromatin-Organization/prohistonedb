@@ -80,6 +80,7 @@ class Field(str, Enum):
     PROTEIN_IDS = "pid"
     PROTEOME_IDS = "pmid"
     GENE_NAMES = "gname"
+    PROTEIN_NAMES = "pname"
     GENOME_IDS = "gmid"
 
     # Facet
@@ -108,6 +109,7 @@ class Field(str, Enum):
             cls.PROTEIN_IDS,
             cls.PROTEOME_IDS,
             cls.GENE_NAMES,
+            cls.PROTEIN_NAMES,
             cls.GENOME_IDS
         }
 
@@ -133,6 +135,7 @@ class Field(str, Enum):
             cls.PROTEIN_IDS,
             cls.PROTEOME_IDS,
             cls.GENE_NAMES,
+            cls.PROTEIN_NAMES,
             cls.GENOME_IDS,
             cls.LINEAGE,
             cls.LINEAGE_SUPERKINGDOM
@@ -172,7 +175,7 @@ class Field(str, Enum):
             return FieldType.PRIMARY_TEXT
         elif self is self.SEQUENCE_LEN:
             return FieldType.INTEGER
-        elif self in [self.ORGANISM, self.CATEGORY, self.SEQUENCE, self.LINEAGE, self.GENE_NAMES]:
+        elif self in [self.ORGANISM, self.CATEGORY, self.SEQUENCE, self.LINEAGE, self.GENE_NAMES, self.PROTEIN_NAMES]:
             return FieldType.TEXT
         elif self in [self.LINEAGE_SUPERKINGDOM]:
             return FieldType.TEXT_OPTIONAL
@@ -241,6 +244,9 @@ class Field(str, Enum):
         elif self is self.GENE_NAMES:
             gene_names = [name for name in json_data["histoneDB"]["geneNames"]]
             return json.dumps(gene_names)
+        elif self is self.PROTEIN_NAMES:
+            protein_names = [prot for prot in json_data["histoneDB"]["proteinNames"]]
+            return json.dumps(protein_names)
         elif self is self.GENOME_IDS:
             gmids = [ref["id"] for ref in json_data["uniprot"]["uniProtKBCrossReferences"] if ref["database"] == "EMBL"]
             if gmids:

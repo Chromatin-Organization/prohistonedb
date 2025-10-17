@@ -244,6 +244,16 @@
                                             {% endif %}
                                         </div>
                                     </div>
+                                     <div class="row">
+                                        <div class="col-md-4 col-lg-3 label"><span>Protein names</span></div>
+                                        <div class="col-md-8 col-lg-9 value">
+                                            {% if r.protein_names %}
+                                            <span class="mb-0">{{r.protein_names|join(", ")}}</span>
+                                            {% else %}
+                                            <span class="mb-0"> - </span>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-md-4 col-lg-3 label"><span>Organism</span></div>
                                         <div class="col-md-8 col-lg-9 value">

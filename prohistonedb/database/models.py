@@ -114,6 +114,7 @@ class Histone:
     protein_ids: list[str]
     proteome_ids: Union[list[str], None]
     gene_names: list[str]
+    protein_names: list[str]
     genome_ids: list[str]
     pdb_ids: list[str]
     multimer_rankings: dict[Multimer, list[int]]

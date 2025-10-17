@@ -187,6 +187,14 @@ def db_vc_update():
 
     if not "publications" in metadata_columns:
         conn.execute(f"ALTER TABLE metadata ADD COLUMN publications {conn.sql_field_type(FieldType.TEXT_OPTIONAL)}  DEFAULT '[]'")
+
+    protein_names_field = Field.PROTEIN_NAMES
+    new_table_required = False
+
+    if not protein_names_field.db_name in metadata_columns:
+        conn.execute(f"ALTER TABLE metadata ADD COLUMN {protein_names_field.db_name} {conn.sql_field_type(protein_names_field.type.to_optional_field_type())} DEFAULT '[]'")
+        new_table_required = True
+
     
     conn.commit()
 
@@ -298,6 +306,8 @@ def update_db_metadata(filename: Path):
             
             pdb_ids = [pdb_id for pdb_id in uid_json["histoneDB"]["PDB"]]
             data["pdb_ids"] = json.dumps(pdb_ids)
+            protein_names = [protein_name for protein_name in uid_json["histoneDB"]["proteinNames"]]
+            data["protein_names"] = json.dumps(protein_names)
             data["ranks"] = json.dumps(ranks)
             publications = [pub for pub in uid_json["histoneDB"]["publications"]]
             data["publications"] = json.dumps(publications)

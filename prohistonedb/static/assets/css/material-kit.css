@@ -24301,26 +24301,26 @@ table td {
 
 /* PAE section */
 #pae-container {
-  width: 242px;
-  height: 200px;
+  width: 241px;
+  height: 219px;
   overflow: hidden;
-  background-size: 1500px;
+  background-size: 1202px;
   /* at 1/2 size */
 }
 #pae-container.r1 {
-  background-position: -157px 0;
+  background-position: 0 0;
 }
 #pae-container.r2 {
-  background-position: -397px 0;
+  background-position: -241px 0;
 }
 #pae-container.r3 {
-  background-position: -638px 0;
+  background-position: -482px 0;
 }
 #pae-container.r4 {
-  background-position: -878px 0;
+  background-position: -723px 0;
 }
 #pae-container.r5 {
-  background-position: -1120px 0;
+  background-position: -964px 0;
 }
 
 /* Skylign section */
@@ -24428,15 +24428,21 @@ table td {
 }
 
 /* attribution section */
-#attribution p a,
+.cc-by {
+  color: #e91e63;
+}
+
+.attribution-alphafold p a,
+.attribution-prohistonedb p a,
 #group-information a,
-.attribution-additional {
+.attribution-additional p a {
   color: #fff;
   opacity: 0.6;
 }
-#attribution p a:hover,
+.attribution-alphafold p a:hover,
+.attribution-prohistonedb p a:hover,
 #group-information a:hover,
-.attribution-additional:hover {
+.attribution-additional p a:hover {
   color: #e91e63;
   opacity: 1;
 }
@@ -24446,8 +24452,8 @@ table td {
 }
 
 .attribution-additional {
+  display: none;
   margin-top: -1em;
-  opacity: 0.5;
 }
 
 /* Leiden University logo */
