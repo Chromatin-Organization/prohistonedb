@@ -381,6 +381,13 @@
         {% if entry.category.name != 'Viral quadruplet' and entry.category.name != 'Viral triplet' %}
             <script>
                 const phyd3xml = "{{ url_for('static', filename=(entry.category.static_phylotree_path | string | replace(" ","_"))) }}";
+                
+                {# * use entire container area as link to open new tab with interactive Phylotree #}
+                document.querySelector("#phyd3-container").addEventListener('click', e => {
+                    e.preventDefault();
+                    const href = "/categories/viewer/{{entry.category.id}}";
+                    window.open(href, "_blank");
+                });
             </script>
             <script src="{{ url_for('static', filename = 'assets/js/custom/phy.js') }}" type="text/javascript"></script>
         {% endif %}
