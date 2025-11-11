@@ -16,7 +16,9 @@
 ======================
 |prohistonedb| website
 ======================
-[Description here]
+The |prohistonedb| database is a histone database developed at Leiden University by Samuel Schwab, 
+Tim Jansen, Michel Olsthoorn, and Remus Dame. It aims to give a complete overview of all histones in 
+archaea, bacteria, and bacteriophages.
 
 
 TL;DR
