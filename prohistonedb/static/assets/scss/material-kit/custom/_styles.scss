@@ -806,6 +806,11 @@ table th,
     z-index: 999;
     border-radius: 0;
     display: none;
+
+    .cb-buttons {
+        display: block;
+        margin-top: 1em;
+    }
 }
 
 .alert-dark {
